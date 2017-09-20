@@ -1,0 +1,20 @@
+{
+  "name": "aller-styleguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "author": "Dan Audne",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/react": "^3.2.8"
+  },
+  "dependencies": {
+    "polished": "^1.7.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.2"
+  }
+}
