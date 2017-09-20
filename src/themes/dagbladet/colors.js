@@ -12,7 +12,7 @@ const colorsToShade= {
   orange: '#E87E0A',
   navy: '#1C1837',
   burgundy: '#862547',
-  brown: '#9a663f', // borrowed sols brown
+  brown: '#9a663f',
 };
 
 const shadedColors = Object.keys(colorsToShade).map(color => ({
@@ -30,6 +30,7 @@ const colors = {
   grayTint: '#C0C0C0',
   grayTintLight: '#ECECEC',
   grayTintLightDark: '#C0C0C0',
+  grayTintLighter: '#f3f3f3',
   grayTintDark: '#767676',
 
   white: '#fff',

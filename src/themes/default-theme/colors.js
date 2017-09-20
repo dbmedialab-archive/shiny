@@ -26,6 +26,8 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const colors = {
   type: '#222222',
+  typeLight: '#555555',
+  typeDisabled: '#ccc',
 
   grayTint: '#C0C0C0',
   grayTintLight: '#ECECEC',
@@ -42,6 +44,23 @@ const colors = {
   },
 
   ...combinedShadedColors,
+
+  skinColors: {
+    sport: 'green',
+    helse: 'blue',
+    reise: 'purple',
+    mat: 'orange',
+    bolig: 'brown',
+    motor: 'yellow',
+    underholdning: 'pink',
+    meninger: 'teal',
+    redaksjonenanbefaler: 'burgundy',
+    anbefalt: 'burgundy',
+    solRed: 'primary',
+    solBlue: 'secondary',
+    primary: 'primary',
+    secondary: 'secondary',
+  },
 };
 
 export default colors;

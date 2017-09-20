@@ -76,21 +76,23 @@ const colors = {
 
   // Link color
   link: '#0E6BF5',
-};
 
-export const skinColors = {
-  sport: 'green',
-  helse: 'blue',
-  reise: 'purple',
-  mat: 'orange',
-  bolig: 'brown',
-  motor: 'yellow',
-  underholdning: 'pink',
-  meninger: 'teal',
-  redaksjonenanbefaler: 'burgundy',
-  anbefalt: 'burgundy',
-  solRed: 'solRed',
-  solBlue: 'solBlue',
+  skinColors: {
+    sport: 'green',
+    helse: 'blue',
+    reise: 'purple',
+    mat: 'orange',
+    bolig: 'brown',
+    motor: 'yellow',
+    underholdning: 'pink',
+    meninger: 'teal',
+    redaksjonenanbefaler: 'burgundy',
+    anbefalt: 'burgundy',
+    solRed: 'primary',
+    solBlue: 'secondary',
+    primary: 'primary',
+    secondary: 'secondary',
+  },
 };
 
 export default colors;

@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from '../src/atoms/Button';
-import ThemeSelector from './ThemeSelector';
+// import Button from '../src/atoms/Button';
+import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
+import Button from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 
-const Sticky = styled.div`
-  position: sticky;
-  top: 0;
-  width: 100%;
-`;
+import ThemeSelector from './ThemeSelector';
+import themes from '../src/themes';
 
 export default class extends React.Component {
   constructor() {
@@ -16,38 +14,43 @@ export default class extends React.Component {
 
     this.state = {
       selected: null,
+      theme: themes.defaultTheme,
     };
   }
-  buttonClick(e) {
+
+  handleButtonClick(e) {
     window.localStorage.setItem('theme', e.target.value);
-    this.setState({ selected: e.target.value });
+    this.setState({
+      selected: (e.target.value || null),
+      theme: (themes[e.target.value] || themes.defaultTheme),
+    });
   }
   render() {
     return (
       <ThemeSelector>
-        <Sticky>
-          <Button onClick={this.buttonClick.bind(this)} value="">
-						-
+        <HorizontalLinkBar background={this.state.theme.colors.grayTintLighter}>
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === null} value="">
+            -
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="dagbladet">
-						Dagbladet
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'dagbladet'} value="dagbladet">
+            Dagbladet
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="dinside">
-						Dinside
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'dinside'} value="dinside">
+            Dinside
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="kk">
-						KK
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'kk'} value="kk">
+            KK
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="seher">
-						Seher
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'seher'} value="seher">
+            Seher
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="sol">
-						SOL
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'sol'} value="sol">
+            SOL
           </Button>
-          <Button onClick={this.buttonClick.bind(this)} value="topp">
-						Topp
+          <Button onClick={e => this.handleButtonClick(e)} isActive={this.state.selected === 'topp'} value="topp">
+            Topp
           </Button>
-        </Sticky>
+        </HorizontalLinkBar>
         <div>{this.props.children}</div>
       </ThemeSelector>
     );
