@@ -12,6 +12,7 @@
     "@storybook/react": "^3.2.8"
   },
   "dependencies": {
+    "@aller/eslint-config-aller": "^0.3.0",
     "polished": "^1.7.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
