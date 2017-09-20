@@ -1,18 +1,8 @@
 import { darken, lighten } from 'polished';
 
 const colorsToShade= {
-  primary: '#cc3612',
-  secondary: '#0064b4',
-  pink: '#F35D67',
-  purple: '#5C3393',
-  blue: '#23ACCC',
-  teal: '#569091',
-  green: '#8ABA56',
-  yellow: '#F1CA3F',
-  orange: '#E87E0A',
-  navy: '#1C1837',
-  burgundy: '#862547',
-  brown: '#9a663f', // borrowed sols brown
+  primary: '#ff1c56',
+  secondary: '#0000ff',
 };
 
 const shadedColors = Object.keys(colorsToShade).map(color => ({

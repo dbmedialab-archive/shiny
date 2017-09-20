@@ -1,11 +1,12 @@
-import colors from './colors'
-import variables from './variables'
+import colors from './colors';
+import variables from './variables';
 
 const global = `
-`
+`;
 
 export default {
-	global,
-	colors,
-	variables
-}
+  name: 'SOL',
+  global,
+  colors,
+  variables,
+};

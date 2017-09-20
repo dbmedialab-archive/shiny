@@ -1,17 +1,14 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export default styled.button`
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	background-color: ${props =>
-		props.theme.colors && props.theme.colors.button
-			? props.theme.colors.button.background
-			: '#ECECEC'};
+    (props.theme.colors && props.theme.colors.button
+      ? props.theme.colors.button.background
+      : '#ECECEC')};
 	border-color: #bdbdbd;
-	color: ${props =>
-		props.theme.colors && props.theme.colors.button
-			? props.theme.colors.button.color
-			: '#333333'};
+	color: ${props => props.theme.colors.button.color}
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
@@ -31,15 +28,15 @@ export default styled.button`
 	transition: background-color 300ms ease-out;
 
 	${props =>
-		props.outline &&
-		css`
+    props.outline &&
+  css`
 			border: 1px solid
 				${props.theme.colors && props.theme.colors.button
-					? props.theme.colors.button.background
-					: '#333333'};
+    ? props.theme.colors.button.background
+    : '#333333'};
 			background: transparent;
 			color: ${props.theme.colors && props.theme.colors.button
-				? props.theme.colors.button.background
-				: '#333333'};
+    ? props.theme.colors.button.background
+    : '#333333'};
 		`};
-`
+`;

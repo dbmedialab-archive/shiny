@@ -1,5 +1,5 @@
-import colors from './colors'
-import grid from './grid'
+import colors from './colors';
+import grid from './grid';
 
 const global = `
 	background: #fff;
@@ -12,12 +12,13 @@ const global = `
 	line-height: 1.5;
 	position: relative;
 	cursor: auto;
-`
+`;
 
 const theme = {
-	global,
-	colors,
-	grid
-}
+  name: 'Dagbladet',
+  global,
+  colors,
+  grid,
+};
 
-export default theme
+export default theme;

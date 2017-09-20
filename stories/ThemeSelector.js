@@ -1,38 +1,53 @@
-import React from 'react'
-import styled, { ThemeProvider, injectGlobal } from 'styled-components'
+import React from 'react';
+import propTypes from 'prop-types';
+import { ThemeProvider, injectGlobal } from 'styled-components';
+import { merge } from 'aurora-deep-slice-merge';
 
-import GlobalStyle from '../src/atoms/GlobalStyle'
-import themes from '../src/themes'
-
-import sol from '../src/themes/sol'
+import GlobalStyle from '../src/atoms/GlobalStyle';
+import themes from '../src/themes';
 
 injectGlobal`
-	html {
-		font-size: 62.5%;
-	}
-	body {
-		font-size: 1.6rem;
-	}
-`
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.6rem;
+  }
+`;
 
-export default ({ children }) => {
-	let theme = {}
-	let Global = GlobalStyle
+const ThemeSelector = ({ children }) => {
+  let theme = themes.defaultTheme;
+  let Global = GlobalStyle;
 
-	if (window.localStorage && window.localStorage.getItem('theme')) {
-		let themeName = window.localStorage.getItem('theme')
-		if (themeName) {
-			theme = sol
+  if (window.localStorage && window.localStorage.getItem('theme')) {
+    const themeName = window.localStorage.getItem('theme');
 
-			if (theme && theme.global) {
-				Global = GlobalStyle.extend`${theme.global};`
-			}
-		}
-	}
+    if (themeName) {
+      theme = merge(themes.defaultTheme, themes[themeName]);
 
-	return (
-		<ThemeProvider theme={theme}>
-			<Global>{children}</Global>
-		</ThemeProvider>
-	)
-}
+      console.log(`Switching to the ${themeName} theme.`);
+      console.log('new theme', theme);
+
+      if (theme && theme.global) {
+        Global = GlobalStyle.extend`${theme.global};`;
+      }
+    }
+  }
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Global>{children}</Global>
+    </ThemeProvider>
+  );
+};
+ThemeSelector.propTypes = {
+  children: propTypes.oneOf([
+    propTypes.arrayOf(propTypes.node),
+    propTypes.node,
+  ]),
+};
+ThemeSelector.defaultProps = {
+  children: null,
+};
+
+export default ThemeSelector;

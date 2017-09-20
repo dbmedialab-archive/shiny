@@ -1,9 +1,10 @@
-import colors from './colors'
-import grid from './grid'
+import colors from './colors';
+import grid from './grid';
 
 const theme = {
-	colors,
-	grid
-}
+  name: 'KK',
+  colors,
+  grid,
+};
 
-export default theme
+export default theme;

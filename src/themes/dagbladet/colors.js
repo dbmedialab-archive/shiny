@@ -1,70 +1,47 @@
-import { darken } from 'polished'
+import { darken, lighten } from 'polished';
+
+const colorsToShade= {
+  primary: '#d60000',
+  secondary: '#ECECEC',
+  pink: '#F35D67',
+  purple: '#5C3393',
+  blue: '#23ACCC',
+  teal: '#569091',
+  green: '#8ABA56',
+  yellow: '#F1CA3F',
+  orange: '#E87E0A',
+  navy: '#1C1837',
+  burgundy: '#862547',
+  brown: '#9a663f', // borrowed sols brown
+};
+
+const shadedColors = Object.keys(colorsToShade).map(color => ({
+  [`${color}`]: colorsToShade[color],
+  [`${color}Dark`]: darken(0.05, colorsToShade[color]),
+  [`${color}Light`]: lighten(0.15, colorsToShade[color]),
+  [`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
+}));
+
+const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const colors = {
-	button: {
-		background: '#ececec',
-		color: '#3768c9'
-	},
-	primary: {
-		primary: '#d60000',
-		dark: darken(0.05, '#d60000')
-	},
-	secondary: {
-		primary: '#ECECEC',
-		dark: darken(0.05, '#ECECEC')
-	},
-	orange: {
-		primary: '#E87E0A',
-		dark: darken(0.05, '#E87E0A')
-	},
-	yellow: {
-		primary: '#F1CA3F',
-		dark: darken(0.05, '#F1CA3F')
-	},
-	green: {
-		primary: '#8ABA56',
-		dark: darken(0.05, '#8ABA56')
-	},
-	teal: {
-		primary: '#569091',
-		dark: darken(0.05, '#569091')
-	},
-	blue: {
-		primary: '#23ACCC',
-		dark: darken(0.05, '#23ACCC')
-	},
-	navy: {
-		primary: '#1C1837',
-		dark: darken(0.05, '#1C1837')
-	},
-	purple: {
-		primary: '#5C3393',
-		dark: darken(0.05, '#5C3393')
-	},
-	burgundy: {
-		primary: '#862547',
-		dark: darken(0.05, '#862547')
-	},
-	pink: {
-		primary: '#F35D67',
-		dark: darken(0.05, '#F35D67')
-	},
-	lightgrey: {
-		primary: '#ECECEC',
-		dark: darken(0.05, '#ECECEC')
-	},
-	grey: {
-		primary: '#C0C0C0',
-		dark: darken(0.05, '#C0C0C0')
-	},
-	darkGrey: {
-		primary: '#767676',
-		dark: darken(0.05, '#767676')
-	},
-	black: {
-		primary: '#222222',
-		dark: darken(0.05, '#222222')
-	}
-}
+  type: '#222222',
 
-export default colors
+  grayTint: '#C0C0C0',
+  grayTintLight: '#ECECEC',
+  grayTintLightDark: '#C0C0C0',
+  grayTintDark: '#767676',
+
+  white: '#fff',
+  darkness: '#222222',
+  darknessLight: '#453d3f',
+
+  button: {
+    background: '#ececec',
+    color: '#3768c9',
+  },
+
+  ...combinedShadedColors,
+};
+
+export default colors;

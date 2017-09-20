@@ -1,16 +1,17 @@
-import colors from './colors'
-import grid from './grid'
+import colors from './colors';
+import grid from './grid';
 
 const global = `
 	a {
 		color: #333;
 	}
-`
+`;
 
 const theme = {
-	global,
-	colors,
-	grid
-}
+  name: 'DinSide',
+  global,
+  colors,
+  grid,
+};
 
-export default theme
+export default theme;
