@@ -28,7 +28,7 @@ export default () => (
 				title="Person funnet død i vannet i Skien - 62-åring savnet i samme område"
 				subtitle="Det er ikke bekreftet om personen er en 62 år gammel mann som har vært savnet."
 				labels={[
-					{ text: 'Akkurat nå', color: 'primary' },
+					{ text: 'Akkurat nå' },
 					{ text: 'Trump', color: 'pink' }
 				]}
 				image="https://2.dbstatic.no/68712816.jpg?imageId=68712816&x=4.7222222222222&y=28.976572133169&cropw=90.740740740741&croph=60.419235511714&width=980&height=490&compression=60"

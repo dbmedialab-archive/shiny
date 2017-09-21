@@ -18,10 +18,10 @@ export default class extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       selected: window.localStorage.getItem('theme') || null,
-      theme: themes[window.localStorage.getItem('theme')] || themes.defaultTheme
+      theme: themes[window.localStorage.getItem('theme')] || themes.defaultTheme,
     });
   }
 

@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export default styled.span`
-	background-color: ${props =>
-		props.theme.colors ? props.theme.colors : '#ECECEC'};
+	background-color: ${props => props.theme.colors.primary};
 	color: #333;
 	display: inline-block;
 	font-family: 'Roboto', 'Helvetica', Helvetica, Arial, sans-serif;
