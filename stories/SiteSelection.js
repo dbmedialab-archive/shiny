@@ -18,6 +18,13 @@ export default class extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.setState({
+      selected: window.localStorage.getItem('theme') || null,
+      theme: themes[window.localStorage.getItem('theme')] || themes.defaultTheme
+    });
+  }
+
   handleButtonClick(e) {
     window.localStorage.setItem('theme', e.target.value);
     this.setState({
