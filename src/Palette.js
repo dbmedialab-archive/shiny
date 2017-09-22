@@ -1,20 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import ColorBox from './ColorBox';
+import LeetTextarea from './atoms/LeetTextarea';
 
 const H3 = styled.h3`flex: 1 0 100%;`;
 
 const FlexBox = styled.section`
   display: flex;
   flex-wrap: wrap;
-`;
-
-const Textarea = styled.textarea`
-  width: 60rem;
-  height: 21rem;
-  background: black;
-  color: #48bf48;
-  font-family: monospace;
 `;
 
 const Palette = () => {
@@ -24,7 +17,7 @@ const Palette = () => {
       <p>This is the palette definition for the Sol.no brand.</p>
 
       <h3>Usage</h3>
-      <Textarea>{`
+      <LeetTextarea>{`
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../shared-components/Base/Palette';
@@ -34,7 +27,7 @@ const MyHeading = styled.h3\`
   border: .1rem solid \${colors.solRedDark};
 \`;
 <MyHeading>Overskrift</MyHeading>
-      `}</Textarea>
+      `}</LeetTextarea>
 
       <FlexBox>
         <H3>Brand Colors</H3>
