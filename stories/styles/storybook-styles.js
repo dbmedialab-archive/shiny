@@ -9,14 +9,18 @@ export const StoryBox = styled.article`
 `;
 
 export const StoryTitle = styled.h1`
+	font-family: ${props => props.theme.variables.mainFont};
 	font-size: ${props => props.theme.variables.headingHugeSize};
+	line-height: ${props => props.theme.variables.headingHugeLineHeight};
 	border-bottom: 1px solid ${props => props.theme.colors.grayTint};
 	padding: 0 0 calc(${props => props.theme.variables.verticalBase} / 2);
 	margin: 0 0 calc(${props => props.theme.variables.verticalBase} * 1.5);
 `;
 
 export const StorySubtitle = styled.h2`
+	font-family: ${props => props.theme.variables.mainFont};
 	font-size: ${props => props.theme.variables.headingRegularSize};
+	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 	padding: 0;
 	font-weight: 600;
 	text-transform: uppercase;

@@ -14,11 +14,16 @@ const global = `
 	cursor: auto;
 `;
 
+const variables = {
+  mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+};
+
 const theme = {
   name: 'Dagbladet',
   global,
   colors,
   grid,
+  variables,
 };
 
 export default theme;

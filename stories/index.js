@@ -7,6 +7,7 @@ import Welcome from './Welcome';
 import Headlines from './ArticlePreview/Headlines';
 import Standfirst from './ArticlePreview/Standfirst';
 
+import loaders from './Loaders';
 import typography from './Typography';
 import horizontalLinkBar from './HorizontalLinkBar';
 
@@ -26,3 +27,4 @@ storiesOf('20 - Article Preview', module)
   .add('20.2 - Standfirst', () => <Standfirst showApp={linkTo('Button')} />);
 
 typography();
+loaders();

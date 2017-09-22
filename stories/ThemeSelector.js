@@ -7,6 +7,8 @@ import GlobalStyle from '../src/atoms/GlobalStyle';
 import themes from '../src/themes';
 
 injectGlobal`
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
   html {
     font-size: 62.5%;
   }
