@@ -8,6 +8,8 @@ import themes from '../src/themes';
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,800');
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
 
   html {
     font-size: 62.5%;

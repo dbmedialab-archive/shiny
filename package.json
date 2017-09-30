@@ -9,20 +9,20 @@
   "author": "Dan Audne",
   "license": "ISC",
   "devDependencies": {
-    "@storybook/react": "^3.2.8"
+    "babel-eslint": "8.0.0",
+    "eslint": "4.7.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.3.0"
   },
   "dependencies": {
-    "@aller/eslint-config-aller": "^0.3.0",
+    "@aller/eslint-config-aller": "0.3.0",
+    "@storybook/react": "3.2.8",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "babel-eslint": "^8.0.0",
-    "eslint": "^4.7.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
-    "polished": "^1.7.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "polished": "1.7.0",
+    "prop-types": "15.5.10",
+    "react": "15.6.1",
     "react-dom": "^15.6.1",
-    "styled-components": "^2.1.2"
+    "styled-components": "2.1.2"
   }
 }
