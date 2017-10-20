@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Label = styled.span`
   background-color: ${props => props.theme.colors[props.color] || props.theme.colors.primary};
@@ -18,7 +18,6 @@ const Label = styled.span`
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-
 `;
 
 Label.defaultProps = {

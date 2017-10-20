@@ -6,8 +6,8 @@ const Heading = styled.h1`
   color: ${props => props.theme.colors.type};
   font-weight: 700;
   font-family: ${props => props.theme.variables.mainFont};
+
   ${(props) => {
-    console.log('props', props);
     if (props.size === 'small') {
       return `
         font-size: ${props.theme.variables.headingSmallSize};
@@ -30,9 +30,12 @@ const Heading = styled.h1`
       font-size: ${props.theme.variables.headingRegularSize};
       line-height: ${props.theme.variables.headingRegularLineHeight};
     `;
-  }} a {
+  }}
+
+  a {
     color: inherit;
   }
+
   @media screen and (min-width: 750px) {
     ${(props) => {
     if (props.size === 'small') {
@@ -73,5 +76,10 @@ export const MediumHeading = props => <Heading size="medium" {...props} />;
 export const LargeHeading = props => <Heading {...props} />;
 export const XLargeHeading = props => <Heading size="xlarge" {...props} />;
 export const HugeHeading = props => <Heading size="huge" {...props} />;
+
+// import { LargeHeading } from Heading
+// and
+// import Heading from Heading
+// are equivalent
 
 export default Heading;

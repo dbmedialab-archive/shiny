@@ -1,26 +1,27 @@
 import React from 'react';
 
 import SiteSelection from '../SiteSelection';
+import Heading from '../../src/atoms/Heading';
 import Article from '../../src/molecules/ArticlePreview';
 
 export default () => (
   <SiteSelection>
     <div style={{ margin: '0 auto', maxWidth: '900px' }}>
-      <h1>20.2 - Standfirst!</h1>
+      <Heading>20.2 - Standfirst!</Heading>
       <Article
         id={1}
         link="#"
         title="Politiet vil fengsle SOS Rasisme-leder i fire uker"
         subtitle="Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen."
       />
-      <h2>20.2.1 - Icons!</h2>
+      <Heading>20.2.1 - Icons!</Heading>
       <Article
         id={1}
         link="#"
         title="Politiet vil fengsle SOS Rasisme-leder i fire uker"
         subtitle="Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen."
       />
-      <h2>20.2.2 - Labels!</h2>
+      <Heading>20.2.2 - Labels!</Heading>
       <Article
         id={2}
         link="#"

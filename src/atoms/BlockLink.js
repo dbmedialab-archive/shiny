@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.a`
+const BlockLink = styled.a`
   color: #222;
   text-decoration: none;
 
@@ -8,3 +8,5 @@ export default styled.a`
     text-decoration: underline;
   }
 `;
+
+export default BlockLink;
