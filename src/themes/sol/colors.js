@@ -25,7 +25,6 @@ const colors = {
   darkness: '#30282a',
   darknessLight: '#453d3f',
 
-
   // Supporting colors
   pink: '#ff5b7f',
   pinkDark: '#d94d6c',
@@ -72,7 +71,7 @@ const colors = {
   burgundyLight: '#ad7497',
   burgundyLighter: '#d5b8ca',
 
-  navy: '#1c1837', // borrowed dagbladet's navy
+  navy: '#1c1837',
 
   // Link color
   link: '#0E6BF5',

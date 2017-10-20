@@ -6,6 +6,8 @@ const colorsToShade= {
   pink: 'hotpink',
 };
 
+// Creates 4 shades of each color in colorsToShade
+// For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
 const shadedColors = Object.keys(colorsToShade).map(color => ({
   [`${color}`]: colorsToShade[color],
   [`${color}Dark`]: darken(0.1, colorsToShade[color]),
