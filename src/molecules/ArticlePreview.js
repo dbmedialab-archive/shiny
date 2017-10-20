@@ -13,9 +13,9 @@ export default ({ title, subtitle, image, labels }) => (
       <Heading headline>{title}</Heading>
       {subtitle && <p itemProp="description">{subtitle}</p>}
       {labels &&
-        labels.map(l => (
-          <Label key={l.text} color={l.color}>
-            {l.text}
+        labels.map(label => (
+          <Label key={label.text} color={label.color}>
+            {label.text}
           </Label>
         ))}
     </BlockLink>
