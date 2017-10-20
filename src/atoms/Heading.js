@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
-	padding: 0;
-	color: ${props => props.theme.colors.type};
-	font-weight: 700;
-	font-family: ${props => props.theme.variables.mainFont};
-	${(props) => {
+  padding: 0;
+  color: ${props => props.theme.colors.type};
+  font-weight: 700;
+  font-family: ${props => props.theme.variables.mainFont};
+  ${(props) => {
     console.log('props', props);
     if (props.size === 'small') {
       return `
@@ -31,10 +31,10 @@ const Heading = styled.h1`
       line-height: ${props.theme.variables.headingRegularLineHeight};
     `;
   }} a {
-		color: inherit;
-	}
-	@media screen and (min-width: 750px) {
-		${(props) => {
+    color: inherit;
+  }
+  @media screen and (min-width: 750px) {
+    ${(props) => {
     if (props.size === 'small') {
       return `
           font-size: ${props.theme.variables.headingSmallSize};
@@ -44,8 +44,7 @@ const Heading = styled.h1`
     if (props.size === 'medium') {
       return `
           font-size: ${props.theme.variables.headingRegularSize};
-          line-height: ${props =>
-    props.theme.variables.headingRegularLineHeight};
+          line-height: ${props => props.theme.variables.headingRegularLineHeight};
       `;
     }
     if (props.size === 'xlarge') {
@@ -66,7 +65,7 @@ const Heading = styled.h1`
         line-height: ${props.theme.variables.headingLargeLineHeight};
     `;
   }};
-	}
+}
   `;
 
 export const SmallHeading = props => <Heading size="small" {...props} />;
