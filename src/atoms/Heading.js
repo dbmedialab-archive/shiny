@@ -36,7 +36,7 @@ const Heading = styled.h1`
     color: inherit;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: ${props => props.theme.variables.largeSize}) {
     ${(props) => {
     if (props.size === 'small') {
       return `
