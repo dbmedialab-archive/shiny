@@ -16,7 +16,7 @@
     "eslint-plugin-react": "7.4.0"
   },
   "dependencies": {
-    "@aller/eslint-config-aller": "0.3.0",
+    "@aller/eslint-config-aller": "0.4.0",
     "@storybook/react": "3.2.14",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "polished": "1.8.1",
