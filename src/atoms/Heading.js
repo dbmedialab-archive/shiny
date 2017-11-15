@@ -60,4 +60,4 @@ export const HugeHeading = styled(Heading) `
   }
 `;
 
-export default Heading;
+export default LargeHeading;
