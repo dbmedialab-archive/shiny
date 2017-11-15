@@ -1,5 +1,7 @@
-import Styled from 'styled-components'
+import styled from 'styled-components';
 
-export default Styled.a`
-	color: #222;
-`
+const Link = styled.a`
+  color: #222;
+`;
+
+export default Link;

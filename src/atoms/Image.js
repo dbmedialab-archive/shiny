@@ -1,8 +1,10 @@
-import Styled from 'styled-components'
+import styled from 'styled-components';
 
-export default Styled.img`
-	max-width: none;
-	width: 100%;
-	padding: 0;
-	opacity: 1;
-`
+const Image = styled.img`
+max-width: none;
+width: 100%;
+padding: 0;
+opacity: 1;
+`;
+
+export default Image;
