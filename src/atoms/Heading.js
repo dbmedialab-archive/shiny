@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h1`
@@ -7,79 +6,66 @@ const Heading = styled.h1`
   font-weight: 700;
   font-family: ${props => props.theme.variables.mainFont};
 
-  ${(props) => {
-    if (props.size === 'small') {
-      return `
-        font-size: ${props.theme.variables.headingSmallSize};
-        line-height: ${props.theme.variables.headingSmallLineHeight};
-      `;
-    }
-    if (props.size === 'medium') {
-      return `
-        font-size: ${props.theme.variables.headingMediumSize};
-        line-height: ${props.theme.variables.headingMediumLineHeight};
-      `;
-    }
-    if (props.size === 'huge') {
-      return `
-        font-size: ${props.theme.variables.headingLargeSize};
-        line-height: ${props.theme.variables.headingLargeLineHeight};
-      `;
-    }
-    return `
-      font-size: ${props.theme.variables.headingRegularSize};
-      line-height: ${props.theme.variables.headingRegularLineHeight};
-    `;
-  }}
-
   a {
     color: inherit;
   }
+`;
 
-  @media screen and (min-width: ${props => props.theme.variables.largeSize}) {
-    ${(props) => {
-    if (props.size === 'small') {
-      return `
-          font-size: ${props.theme.variables.headingSmallSize};
-          line-height: ${props.theme.variables.headingSmallLineHeight};
-      `;
-    }
-    if (props.size === 'medium') {
-      return `
-          font-size: ${props.theme.variables.headingRegularSize};
-          line-height: ${props => props.theme.variables.headingRegularLineHeight};
-      `;
-    }
-    if (props.size === 'xlarge') {
-      return `
-          font-size: ${props.theme.variables.headingXlargeSize};
-          line-height: ${props =>
-    props.theme.variables.headingXlargeLineHeight};
-      `;
-    }
-    if (props.size === 'huge') {
-      return `
-        font-size: ${props.theme.variables.headingHugeSize};
-        line-height: ${props.theme.variables.headingHugeLineHeight};
-      `;
-    }
-    return `
-        font-size: ${props.theme.variables.headingLargeSize};
-        line-height: ${props.theme.variables.headingLargeLineHeight};
-    `;
-  }};
-}
-  `;
+const SmallHeading = styled(Heading)`
+  font-size: ${props => props.theme.variables.headingSmallSize};
+  line-height: ${props => props.theme.variables.headingSmallLineHeight};
 
-export const SmallHeading = props => <Heading size="small" {...props} />;
-export const MediumHeading = props => <Heading size="medium" {...props} />;
-export const LargeHeading = props => <Heading {...props} />;
-export const XLargeHeading = props => <Heading size="xlarge" {...props} />;
-export const HugeHeading = props => <Heading size="huge" {...props} />;
+  @media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+    font-size: ${props => props.theme.variables.headingRegularSize};
+    line-height: ${props => props.theme.variables.headingRegularLineHeight};
+  }
+`;
 
-// import { LargeHeading } from Heading
-// and
-// import Heading from Heading
-// are equivalent
+const MediumHeading = styled(Heading)`
+  font-size: ${props => props.theme.variables.headingMediumSize};
+  line-height: ${props => props.theme.variables.headingMediumLineHeight};
 
-export default Heading;
+  @media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+    font-size: ${props => props.theme.variables.headingRegularSize};
+    line-height: ${props => props.theme.variables.headingRegularLineHeight};
+  }
+`;
+
+const LargeHeading = styled(Heading)`
+  font-size: ${props => props.theme.variables.headingRegularSize};
+  line-height: ${props => props.theme.variables.headingRegularLineHeight};
+
+  @media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+    font-size: ${props => props.theme.variables.headingLargeSize};
+    line-height: ${props => props.theme.variables.headingLargeLineHeight};
+  }
+`;
+
+const XLargeHeading = styled(Heading)`
+  font-size: ${props => props.theme.variables.headingRegularSize};
+  line-height: ${props => props.theme.variables.headingRegularLineHeight};
+
+  @media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+    font-size: ${props => props.theme.variables.headingXlargeSize};
+    line-height: ${props => props.theme.variables.headingXlargeLineHeight};
+  }
+`;
+
+const HugeHeading = styled(Heading)`
+  font-size: ${props => props.theme.variables.headingLargeSize};
+  line-height: ${props => props.theme.variables.headingLargeLineHeight};
+
+  @media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+    font-size: ${props => props.theme.variables.headingHugeSize};
+    line-height: ${props => props.theme.variables.headingHugeLineHeight};
+  }
+`;
+
+export default LargeHeading;
+export {
+  SmallHeading,
+  MediumHeading,
+  LargeHeading,
+  XLargeHeading,
+  HugeHeading,
+};
