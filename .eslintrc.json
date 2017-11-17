@@ -3,6 +3,7 @@
     "@aller/eslint-config-aller"
   ],
   "rules": {
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "react/jsx-curly-brace-presence": 0
   }
 }
