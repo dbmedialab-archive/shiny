@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "babel src/ -d dist/",
+    "postinstall": "babel src/ -d lib/",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "Dan Audne",
