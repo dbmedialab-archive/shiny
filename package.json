@@ -9,11 +9,13 @@
   },
   "author": "Dan Audne",
   "license": "ISC",
-  "devDependencies": {
+  "peerDependencies": {
     "babel-cli": "6.26.0",
-    "babel-eslint": "8.0.1",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
+  },
+  "devDependencies": {
+    "babel-eslint": "8.0.1",
     "eslint": "4.10.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
