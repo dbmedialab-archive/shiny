@@ -15,15 +15,15 @@ const global = `
 `;
 
 const variables = {
-  mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 };
 
 const theme = {
-  name: 'Dagbladet',
-  global,
-  colors,
-  grid,
-  variables,
+	name: 'Dagbladet',
+	global,
+	colors,
+	grid,
+	variables,
 };
 
 export default theme;

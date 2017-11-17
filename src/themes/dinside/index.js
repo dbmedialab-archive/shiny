@@ -8,10 +8,10 @@ const global = `
 `;
 
 const theme = {
-  name: 'DinSide',
-  global,
-  colors,
-  grid,
+	name: 'DinSide',
+	global,
+	colors,
+	grid,
 };
 
 export default theme;

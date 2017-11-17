@@ -1,69 +1,71 @@
+/* eslint-disable max-len */
 import styled from 'styled-components';
 
 import BlockLink from '../../../atoms/BlockLink';
 
 export const VeryPrettyA = styled(BlockLink)`
-  display: inline-block;
+ 	display: inline-block;
 
-  ${(props) => {
-    if (props.size === 'small') {
-      return `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/2*${props.theme.variables.horizontalBase});`;
-    }
+	 ${(props) => {
+		return (props.size === 'small')
+			? `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/2*${props.theme.variables.horizontalBase});`
+			: `padding: calc(3/4*${props.theme.variables.verticalBase}) ${props.theme.variables.horizontalBase};`;
+	}}
 
-    return `padding: calc(3/4*${props.theme.variables.verticalBase}) ${props.theme.variables.horizontalBase};`;
-  }}
+	border: 0;
+	outline: none;
+	color: ${props => props.theme.colors.type};
+	font-size: ${props => props.theme.variables.uiRegularSize};
+	font-weight: ${props => (props.isActive ? '600' : '400')};
+	transition: padding .2s;
+	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
 
-  border: 0;
-  outline: none;
-  color: ${props => props.theme.colors.type};
-  font-size: ${props => props.theme.variables.uiRegularSize};
-  font-weight: ${props => (props.isActive ? '600' : '400')};
-  transition: padding .2s;
-  background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
+	:hover {
+		text-decoration: none;
+	}
 
-  :hover {
-    text-decoration: none;
-  }
+	&:hover {
+		background: ${props => (props.activeBackground)};
+	}
 
-  &:hover {
-    background: ${props => (props.activeBackground)};
-  }
+	&:focus {
+		background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
+		box-shadow: none;
+		&:hover {
+			background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
+		}
+	}
 
-  &:focus {
-    background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
-    box-shadow: none;
-    &:hover {
-      background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
-    }
-  }
+	&::after {
+		width: ${props => (props.isActive && props.useUnderline
+		? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
+		: '0px')
+};
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: .1rem;
+		margin: 0 ${props => props.theme.variables.horizontalBase};
+		background: ${props => (props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary)};
+		content: '';
+		transition: width .2s ease-in-out;
+	}
 
-  &::after {
-    width: ${props => (props.isActive && props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: .1rem;
-    margin: 0 ${props => props.theme.variables.horizontalBase};
-    background: ${props => (props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary)};
-    content: '';
-    transition: width .2s ease-in-out;
-  }
+	@media (min-width: ${props => props.theme.variables.largeWidth}) {
+		${(props) => {
+		if (props.size === 'small') {
+			return `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/4*${props.theme.variables.horizontalBase});`;
+		}
 
-  @media (min-width: ${props => props.theme.variables.largeWidth}) {
-  ${(props) => {
-    if (props.size === 'small') {
-      return `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/4*${props.theme.variables.horizontalBase});`;
-    }
+		return `padding: ${props.theme.variables.verticalBase} ${props.theme.variables.horizontalBase};`;
+	}}
 
-    return `padding: ${props.theme.variables.verticalBase} ${props.theme.variables.horizontalBase};`;
-  }}
-
-    &:hover::after{
-      width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
-    }
-  }
-  `;
+			&:hover::after{
+				width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
+			}
+	}
+	`;
 
 const Button = BlockLink.withComponent('button');
 const SomewhatPrettyButton = VeryPrettyA.withComponent(Button);
@@ -71,4 +73,4 @@ export const VeryPrettyButton = styled(SomewhatPrettyButton)`
   position: relative;
   padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
   padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
-  `;
+	`;

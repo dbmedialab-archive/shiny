@@ -16,11 +16,11 @@ const global = `
 `;
 
 const theme = {
-  name: 'Default',
-  global,
-  colors,
-  grid,
-  variables,
+	name: 'Default',
+	global,
+	colors,
+	grid,
+	variables,
 };
 
 export default theme;

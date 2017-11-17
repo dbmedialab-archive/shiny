@@ -7,11 +7,11 @@ import sol from './sol';
 import topp from './topp';
 
 export default {
-  defaultTheme,
-  dagbladet,
-  dinside,
-  kk,
-  seher,
-  sol,
-  topp,
+	defaultTheme,
+	dagbladet,
+	dinside,
+	kk,
+	seher,
+	sol,
+	topp,
 };

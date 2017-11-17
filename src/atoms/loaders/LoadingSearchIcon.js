@@ -29,11 +29,11 @@ const LoadingSearchIcon = styled.div`
 `;
 
 LoadingSearchIcon.defaultProps = {
-  color: '',
+	color: '',
 };
 
 LoadingSearchIcon.propTypes = {
-  color: propTypes.string,
+	color: propTypes.string,
 };
 
 export default LoadingSearchIcon;

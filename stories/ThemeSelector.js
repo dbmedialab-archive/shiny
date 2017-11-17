@@ -20,38 +20,38 @@ injectGlobal`
 `;
 
 const ThemeSelector = ({ children }) => {
-  let theme = themes.defaultTheme;
-  let Global = GlobalStyle;
+	let theme = themes.defaultTheme;
+	let Global = GlobalStyle;
 
-  if (window.localStorage && window.localStorage.getItem('theme')) {
-    const themeName = window.localStorage.getItem('theme');
+	if (window.localStorage && window.localStorage.getItem('theme')) {
+		const themeName = window.localStorage.getItem('theme');
 
-    if (themeName) {
-      theme = merge(themes.defaultTheme, themes[themeName]);
+		if (themeName) {
+			theme = merge(themes.defaultTheme, themes[themeName]);
 
-      console.log(`Switching to the ${themeName} theme.`);
-      console.log('new theme', theme);
+			// console.log(`Switching to the ${themeName} theme.`);
+			// console.log('new theme', theme);
 
-      if (theme && theme.global) {
-        Global = GlobalStyle.extend`${theme.global};`;
-      }
-    }
-  }
+			if (theme && theme.global) {
+				Global = GlobalStyle.extend`${theme.global};`;
+			}
+		}
+	}
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Global>{children}</Global>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<Global>{children}</Global>
+		</ThemeProvider>
+	);
 };
 ThemeSelector.propTypes = {
-  children: propTypes.oneOf([
-    propTypes.arrayOf(propTypes.node),
-    propTypes.node,
-  ]),
+	children: propTypes.oneOf([
+		propTypes.arrayOf(propTypes.node),
+		propTypes.node,
+	]),
 };
 ThemeSelector.defaultProps = {
-  children: null,
+	children: null,
 };
 
 export default ThemeSelector;

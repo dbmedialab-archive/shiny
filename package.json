@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "babel src/ -d lib/",
-    "start": "start-storybook -p 9001 -c .storybook"
+    "start": "start-storybook -p 9001 -c .storybook",
+    "test": "eslint . --max-warnings=0"
   },
-  "author": "Dan Audne",
+  "author": "Aller Media",
   "license": "ISC",
   "peerDependencies": {
     "babel-cli": "6.26.0",
@@ -24,7 +25,8 @@
     "eslint-plugin-react": "7.4.0"
   },
   "dependencies": {
-    "@aller/eslint-config-aller": "0.4.0",
+    "@aller/eslint-config-aller": "0.5.2",
+    "@storybook/addon-links": "^3.2.16",
     "@storybook/react": "3.2.16",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "polished": "1.9.0",
