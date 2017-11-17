@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "babel src/ -d lib/",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "start": "start-storybook -p 9001 -c .storybook"
   },
   "author": "Dan Audne",
   "license": "ISC",
@@ -15,20 +15,21 @@
     "babel-preset-react": "6.24.1"
   },
   "devDependencies": {
-    "babel-eslint": "8.0.1",
-    "eslint": "4.10.0",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "eslint": "4.11.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.4.0"
   },
   "dependencies": {
     "@aller/eslint-config-aller": "0.4.0",
-    "@storybook/react": "3.2.14",
+    "@storybook/react": "3.2.16",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "polished": "1.8.1",
+    "polished": "1.9.0",
     "prop-types": "15.6.0",
-    "react": "16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
     "styled-components": "2.2.3"
   }
 }
