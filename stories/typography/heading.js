@@ -44,7 +44,8 @@ export default () => (
       </DemoContainer>
 
       <StorySubtitle>Usage</StorySubtitle>
-      <LeetTextarea>{`
+      <LeetTextarea>
+        {`
 import {
   SmallHeading,
   MediumHeading,
@@ -58,18 +59,9 @@ import {
 <LargeHeading>Dette er en vanlig størrelse overskrift</LargeHeading>
 <XLargeHeading>Dette er en ekstra stor overskrift</XLargeHeading>
 <HugeHeading>Dette er en ekstra stor overskrift</HugeHeading>
-      `}</LeetTextarea>
+        `}
+      </LeetTextarea>
 
-      <StorySubtitle>Alternative usage</StorySubtitle>
-      <LeetTextarea>{`
-import Heading from '/path/to/shared-components/atoms/Heading';
-
-<Heading size="small">Dette er en liten overskrift</Heading>
-<Heading size="medium">Dette er en middels overskrift</Heading>
-<Heading>Dette er en vanlig størrelse overskrift</Heading>
-<Heading size="xlarge">Dette er en ekstra stor overskrift</Heading>
-<Heading size="huge">Dette er en ekstra stor overskrift</Heading>
-    `}</LeetTextarea>
     </section>
   </SiteSelection>
 );
