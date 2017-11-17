@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import SiteSelection from './SiteSelection'
+import SiteSelection from './SiteSelection';
 
 export default () => {
 	return (
@@ -8,5 +8,5 @@ export default () => {
 			<h1>WELCOME ADVENTURER!</h1>
 			<SiteSelection />
 		</div>
-	)
-}
+	);
+};

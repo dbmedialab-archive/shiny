@@ -55,7 +55,7 @@ const DotLoader = styled.div`
 `;
 
 export default () => (
-  <DotLoaderContainer>
-    <DotLoader />
-  </DotLoaderContainer>
+	<DotLoaderContainer>
+		<DotLoader />
+	</DotLoaderContainer>
 );

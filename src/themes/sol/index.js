@@ -5,8 +5,8 @@ const global = `
 `;
 
 export default {
-  name: 'SOL',
-  global,
-  colors,
-  variables,
+	name: 'SOL',
+	global,
+	colors,
+	variables,
 };

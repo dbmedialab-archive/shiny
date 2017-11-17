@@ -9,13 +9,13 @@ import DotLoader from '../src/atoms/loaders/DotLoader';
 import LoadingSearchIcon from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
-  storiesOf('Loaders', DotLoader)
-    .addDecorator(stories => (
-      <StoryBox>
-        {stories()}
-      </StoryBox>
-    ))
-  /*
+	storiesOf('Loaders', DotLoader)
+		.addDecorator(stories => (
+			<StoryBox>
+				{stories()}
+			</StoryBox>
+		))
+	/*
       .add('NoonLoader', () => {
         return (
           <section>
@@ -30,38 +30,40 @@ export default () => {
         );
       })
       */
-    .add('DotLoader', () => {
-      return (
-        <SiteSelection>
-          <section>
-            <StoryTitle>DotLoader</StoryTitle>
-            <p>Should be used when loading content that will fill a already defined space</p>
+		.add('DotLoader', () => {
+			return (
+				<SiteSelection>
+					<section>
+						<StoryTitle>DotLoader</StoryTitle>
+						<p>Should be used when loading content that will fill a already defined space</p>
 
-            <StorySubtitle>Usage</StorySubtitle>
-            <DemoContainer>
-              <DotLoader classes={'what-you-will'} />
-            </DemoContainer>
-          </section>
-        </SiteSelection>
-      );
-    })
-    .add('LoadingSearchIcon', () => {
-      return (
-        <SiteSelection>
-          <section>
-            <StoryTitle>LoadingSearchIcon</StoryTitle>
-            <p>This is used by the NewsSearch component when loading articles. Works well with the SearchIcon. Color defaults to primary.</p>
+						<StorySubtitle>Usage</StorySubtitle>
+						<DemoContainer>
+							<DotLoader classes={'what-you-will'} />
+						</DemoContainer>
+					</section>
+				</SiteSelection>
+			);
+		})
+		.add('LoadingSearchIcon', () => {
+			return (
+				<SiteSelection>
+					<section>
+						<StoryTitle>LoadingSearchIcon</StoryTitle>
+						<p>
+							This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
+							Color defaults to primary.
+						</p>
 
-            <StorySubtitle>Usage</StorySubtitle>
-            <DemoContainer>
-              <LoadingSearchIcon />
-            </DemoContainer>
-            <DemoContainer>
-              <LoadingSearchIcon color="hotpink" />
-            </DemoContainer>
-          </section>
-        </SiteSelection>
-      );
-    })
-  ;
+						<StorySubtitle>Usage</StorySubtitle>
+						<DemoContainer>
+							<LoadingSearchIcon />
+						</DemoContainer>
+						<DemoContainer>
+							<LoadingSearchIcon color="hotpink" />
+						</DemoContainer>
+					</section>
+				</SiteSelection>
+			);
+		});
 };

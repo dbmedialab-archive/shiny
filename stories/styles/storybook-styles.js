@@ -33,9 +33,9 @@ export const DemoContainer = styled.article`
 `;
 
 DemoContainer.defaultProps = {
-  background: '#f9f9f9',
+	background: '#f9f9f9',
 };
 
 DemoContainer.propTypes = {
-  background: propTypes.string,
+	background: propTypes.string,
 };

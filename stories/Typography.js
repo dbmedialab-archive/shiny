@@ -14,17 +14,17 @@ import heading from './typography/heading';
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';
 
 export default () => {
-  storiesOf('Typography', Heading)
-    .addDecorator(stories => <StoryBox>{stories()}</StoryBox>)
-    .add('Label', label)
-    .add('Heading', heading)
+	storiesOf('Typography', Heading)
+		.addDecorator(stories => <StoryBox>{stories()}</StoryBox>)
+		.add('Label', label)
+		.add('Heading', heading)
 
-    // @TODO Move Palette to somewhere it belongs
-    .add('Palette', () => {
-      return (
-        <SiteSelection>
-          <Palette />
-        </SiteSelection>
-      );
-    });
+	// @TODO Move Palette to somewhere it belongs
+		.add('Palette', () => {
+			return (
+				<SiteSelection>
+					<Palette />
+				</SiteSelection>
+			);
+		});
 };

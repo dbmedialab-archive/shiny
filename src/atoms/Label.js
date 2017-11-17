@@ -21,7 +21,7 @@ const Label = styled.span`
 `;
 
 Label.defaultProps = {
-  color: 'primary',
+	color: 'primary',
 };
 
 export default Label;

@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@aller/eslint-config-aller@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@aller/eslint-config-aller/-/eslint-config-aller-0.4.0.tgz#85c97c097f7183084ef530b02b6927bec743e8ba"
+"@aller/eslint-config-aller@0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@aller/eslint-config-aller/-/eslint-config-aller-0.5.2.tgz#a0a0b38b9ae800abb76eb9ca3b2fb20c01cc740c"
   dependencies:
     eslint-config-airbnb "^16.1.0"
 

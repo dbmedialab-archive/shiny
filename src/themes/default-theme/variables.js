@@ -31,5 +31,5 @@ export default {
 	headingXlargeSize: '3.8rem',
 	headingXlargeLineHeight: '5.2rem',
 	headingHugeSize: '4.8rem',
-	headingHugeLineHeight: '6.3rem'
-}
+	headingHugeLineHeight: '6.3rem',
+};

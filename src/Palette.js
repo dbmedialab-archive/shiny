@@ -11,13 +11,13 @@ const FlexBox = styled.section`
 `;
 
 const Palette = () => {
-  return (
-    <section>
-      <h2>Palette</h2>
-      <p>This is the palette definition for the Sol.no brand.</p>
+	return (
+		<section>
+			<h2>Palette</h2>
+			<p>This is the palette definition for the Sol.no brand.</p>
 
-      <h3>Usage</h3>
-      <LeetTextarea>{`
+			<h3>Usage</h3>
+			<LeetTextarea>{`
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../shared-components/Base/Palette';
@@ -27,98 +27,99 @@ const MyHeading = styled.h3\`
   border: .1rem solid \${colors.solRedDark};
 \`;
 <MyHeading>Overskrift</MyHeading>
-      `}</LeetTextarea>
+      `}
+			</LeetTextarea>
 
-      <FlexBox>
-        <H3>Brand Colors</H3>
-        <ColorBox textColor="light" displayColor="primaryDark" />
-        <ColorBox textColor="light" displayColor="primary" isMainShade />
-        <ColorBox textColor="dark" displayColor="primaryLight" />
-        <ColorBox textColor="dark" displayColor="primaryLighter" />
-      </FlexBox>
+			<FlexBox>
+				<H3>Brand Colors</H3>
+				<ColorBox textColor="light" displayColor="primaryDark" />
+				<ColorBox textColor="light" displayColor="primary" isMainShade />
+				<ColorBox textColor="dark" displayColor="primaryLight" />
+				<ColorBox textColor="dark" displayColor="primaryLighter" />
+			</FlexBox>
 
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="secondaryDark" />
-        <ColorBox textColor="light" displayColor="secondary" isMainShade />
-        <ColorBox textColor="dark" displayColor="secondaryLight" />
-        <ColorBox textColor="dark" displayColor="secondaryLighter" />
-      </FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="secondaryDark" />
+				<ColorBox textColor="light" displayColor="secondary" isMainShade />
+				<ColorBox textColor="dark" displayColor="secondaryLight" />
+				<ColorBox textColor="dark" displayColor="secondaryLighter" />
+			</FlexBox>
 
-      <FlexBox>
-        <H3>Type Colors</H3>
-        <ColorBox textColor="light" displayColor="type" isMainShade />
-        <ColorBox textColor="light" displayColor="typeLight" />
-        <ColorBox textColor="dark" displayColor="typeDisabled" />
-      </FlexBox>
+			<FlexBox>
+				<H3>Type Colors</H3>
+				<ColorBox textColor="light" displayColor="type" isMainShade />
+				<ColorBox textColor="light" displayColor="typeLight" />
+				<ColorBox textColor="dark" displayColor="typeDisabled" />
+			</FlexBox>
 
-      <FlexBox>
-        <H3>Gray Tints</H3>
-        <ColorBox displayColor="grayTint" isMainShade />
-        <ColorBox displayColor="grayTintLight" />
-        <ColorBox displayColor="grayTintLighter" />
-        <ColorBox displayColor="white" />
-      </FlexBox>
+			<FlexBox>
+				<H3>Gray Tints</H3>
+				<ColorBox displayColor="grayTint" isMainShade />
+				<ColorBox displayColor="grayTintLight" />
+				<ColorBox displayColor="grayTintLighter" />
+				<ColorBox displayColor="white" />
+			</FlexBox>
 
-      <h3>Supporting Colors</h3>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="pinkDark" />
-        <ColorBox textColor="dark" displayColor="pink" isMainShade />
-        <ColorBox textColor="dark" displayColor="pinkLight" />
-        <ColorBox textColor="dark" displayColor="pinkLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="purpleDark" />
-        <ColorBox textColor="light" displayColor="purple" isMainShade />
-        <ColorBox textColor="dark" displayColor="purpleLight" />
-        <ColorBox textColor="dark" displayColor="purpleLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="blueDark" />
-        <ColorBox textColor="dark" displayColor="blue" isMainShade />
-        <ColorBox textColor="dark" displayColor="blueLight" />
-        <ColorBox textColor="dark" displayColor="blueLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="tealDark" />
-        <ColorBox textColor="light" displayColor="teal" isMainShade />
-        <ColorBox textColor="dark" displayColor="tealLight" />
-        <ColorBox textColor="dark" displayColor="tealLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="greenDark" />
-        <ColorBox textColor="dark" displayColor="green" isMainShade />
-        <ColorBox textColor="dark" displayColor="greenLight" />
-        <ColorBox textColor="dark" displayColor="greenLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="yellowDark" />
-        <ColorBox textColor="dark" displayColor="yellow" isMainShade />
-        <ColorBox textColor="dark" displayColor="yellowLight" />
-        <ColorBox textColor="dark" displayColor="yellowLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="orangeDark" />
-        <ColorBox textColor="dark" displayColor="orange" isMainShade />
-        <ColorBox textColor="dark" displayColor="orangeLight" />
-        <ColorBox textColor="dark" displayColor="orangeLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="brownDark" />
-        <ColorBox textColor="light" displayColor="brown" isMainShade />
-        <ColorBox textColor="dark" displayColor="brownLight" />
-        <ColorBox textColor="dark" displayColor="brownLighter" />
-      </FlexBox>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="darkness" />
-        <ColorBox textColor="light" displayColor="darknessLight" />
-      </FlexBox>
+			<h3>Supporting Colors</h3>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="pinkDark" />
+				<ColorBox textColor="dark" displayColor="pink" isMainShade />
+				<ColorBox textColor="dark" displayColor="pinkLight" />
+				<ColorBox textColor="dark" displayColor="pinkLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="purpleDark" />
+				<ColorBox textColor="light" displayColor="purple" isMainShade />
+				<ColorBox textColor="dark" displayColor="purpleLight" />
+				<ColorBox textColor="dark" displayColor="purpleLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="blueDark" />
+				<ColorBox textColor="dark" displayColor="blue" isMainShade />
+				<ColorBox textColor="dark" displayColor="blueLight" />
+				<ColorBox textColor="dark" displayColor="blueLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="tealDark" />
+				<ColorBox textColor="light" displayColor="teal" isMainShade />
+				<ColorBox textColor="dark" displayColor="tealLight" />
+				<ColorBox textColor="dark" displayColor="tealLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="greenDark" />
+				<ColorBox textColor="dark" displayColor="green" isMainShade />
+				<ColorBox textColor="dark" displayColor="greenLight" />
+				<ColorBox textColor="dark" displayColor="greenLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="yellowDark" />
+				<ColorBox textColor="dark" displayColor="yellow" isMainShade />
+				<ColorBox textColor="dark" displayColor="yellowLight" />
+				<ColorBox textColor="dark" displayColor="yellowLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="orangeDark" />
+				<ColorBox textColor="dark" displayColor="orange" isMainShade />
+				<ColorBox textColor="dark" displayColor="orangeLight" />
+				<ColorBox textColor="dark" displayColor="orangeLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="brownDark" />
+				<ColorBox textColor="light" displayColor="brown" isMainShade />
+				<ColorBox textColor="dark" displayColor="brownLight" />
+				<ColorBox textColor="dark" displayColor="brownLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="darkness" />
+				<ColorBox textColor="light" displayColor="darknessLight" />
+			</FlexBox>
 
-      <h3>Link color</h3>
-      <FlexBox>
-        <ColorBox textColor="light" displayColor="link" />
-      </FlexBox>
-    </section>
-  );
+			<h3>Link color</h3>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="link" />
+			</FlexBox>
+		</section>
+	);
 };
 
 export default Palette;

@@ -9,12 +9,12 @@ const Primary = styled.div`
   background-color: ${props => props.theme.colors.secondary};
   color: ${props => props.theme.colors.white};
 `;
-const Secondary = styled.section``;
+// const Secondary = styled.section``;
 
 export default () => (
-  <Header>
-    <Primary>
-      <h1>Dagbladet</h1>
-    </Primary>
-  </Header>
+	<Header>
+		<Primary>
+			<h1>Dagbladet</h1>
+		</Primary>
+	</Header>
 );
