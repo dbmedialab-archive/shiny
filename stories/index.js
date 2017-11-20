@@ -8,6 +8,7 @@ import Standfirst from './TrysilPlug/Standfirst';
 
 import loaders from './Loaders';
 import typography from './Typography';
+import editorialMarking from './EditorialMarking';
 import horizontalLinkBar from './HorizontalLinkBar';
 
 import TopNav from './Navigation/TopNav';
@@ -26,4 +27,5 @@ storiesOf('20 - Trysil Plug', module)
 	.add('20.2 - Standfirst', () => <Standfirst />);
 
 typography();
+editorialMarking();
 loaders();
