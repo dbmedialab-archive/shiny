@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "babel src/ -d lib/",
     "start": "start-storybook -p 9001 -c .storybook",
-    "test": "eslint . --max-warnings=0"
+    "test": "eslint src stories --max-warnings=0"
   },
   "author": "Aller Media",
   "license": "ISC",
