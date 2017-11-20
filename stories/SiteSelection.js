@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // import Button from '../src/atoms/Button';
-import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
+import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
 import Button from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 
 import ThemeSelector from './ThemeSelector';
 import themes from '../src/themes';
+
 
 class SiteSelection extends React.Component {
 	constructor() {
@@ -39,7 +40,7 @@ class SiteSelection extends React.Component {
 
 		return (
 			<ThemeSelector>
-				<HorizontalLinkBar background={this.state.theme.colors.grayTintLighter}>
+				<FullWidthLinkBar fixed background={this.state.theme.colors.grayTintLighter}>
 					<Button onClick={e => this.handleButtonClick(e)} isActive={selected === null} value="">
             -
 					</Button>
@@ -61,7 +62,7 @@ class SiteSelection extends React.Component {
 					<Button onClick={e => this.handleButtonClick(e)} isActive={selected === 'topp'} value="topp">
             Topp
 					</Button>
-				</HorizontalLinkBar>
+				</FullWidthLinkBar>
 				<div>{children}</div>
 			</ThemeSelector>
 		);
