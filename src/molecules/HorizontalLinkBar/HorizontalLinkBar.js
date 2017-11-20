@@ -7,7 +7,7 @@ import DontPushTheAdBoundaries from '../../atoms/DontPushTheAdBoundaries';
 
 import LinkBarItem from './LinkBarItem';
 
-const StyledGradient = styled.div`
+const Gradient = styled.div`
   background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);
   position: absolute;
   top: 0;
@@ -39,6 +39,8 @@ const Bar = styled.ul`
    margin: ${props => (props.shouldAdjustForNestedPadding ? `0 -${props.theme.variables.horizontalBase}` : '0')};
    padding: ${props => (props.shouldHavePadding ? `0 calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
    font-family: ${props => props.theme.variables.mainFont};
+
+	background: ${props => props.background};
 
    white-space: nowrap;
    overflow: ${props => props.overflow};
@@ -91,7 +93,6 @@ NavWithOptionalConstrainer.propTypes = {
 };
 
 const HorizontalLinkBar = ({
-	background,
 	children,
 	shouldFadeOut,
 	width,
@@ -102,7 +103,6 @@ const HorizontalLinkBar = ({
 	return (
 		<NavWithOptionalConstrainer
 			width={width}
-			background={background}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
@@ -116,7 +116,7 @@ const HorizontalLinkBar = ({
 				})}
 			</Bar>
 			{shouldFadeOut &&
-			<StyledGradient />
+			<Gradient />
 			}
 		</NavWithOptionalConstrainer>
 	);
