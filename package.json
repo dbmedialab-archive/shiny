@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "babel src/ -d lib/",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0"
   },
