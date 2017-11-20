@@ -6,7 +6,6 @@ const Heading = styled.h1`
   font-weight: 700;
   font-family: ${props => props.theme.variables.mainFont};
   color: red;
-  background-color: cyan;
 
   a {
     color: inherit;
