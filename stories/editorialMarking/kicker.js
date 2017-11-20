@@ -5,7 +5,7 @@ import SiteSelection from '../SiteSelection';
 import {
 	StoryTitle,
 	StorySubtitle,
-    DemoContainer
+	DemoContainer,
 } from '../styles/storybook-styles';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
@@ -20,7 +20,7 @@ export default () => (
 
 			<StorySubtitle>Demo</StorySubtitle>
 			<DemoContainer>
-                <Kicker>Kicker</Kicker>
+				<Kicker>Kicker</Kicker>
 			</DemoContainer>
 
 			<StorySubtitle>Usage</StorySubtitle>

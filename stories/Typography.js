@@ -3,7 +3,7 @@ import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-
 
 import SiteSelection from './SiteSelection';
 import Palette from '../src/Palette';
-import Heading from '../src/atoms/Heading';
+// import Heading from '../src/atoms/Heading';
 
 import { StoryBox } from './styles/storybook-styles';
 
