@@ -1,29 +1,22 @@
 {
-  "name": "aller-styleguide",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
-  },
-  "author": "Dan Audne",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-eslint": "8.0.0",
-    "eslint": "4.7.1",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "7.3.0"
-  },
-  "dependencies": {
-    "@aller/eslint-config-aller": "0.3.0",
-    "@storybook/react": "3.2.8",
-    "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "polished": "1.7.0",
-    "prop-types": "15.5.10",
-    "react": "15.6.1",
-    "react-dom": "^15.6.1",
-    "react-native": "^0.50.3",
-    "styled-components": "2.1.2"
-  }
+	"name": "shiny",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"react": "16.0.0",
+		"react-native": "0.50.3"
+	},
+	"devDependencies": {
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"jest": "21.2.1",
+		"react-test-renderer": "16.0.0"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
 }
