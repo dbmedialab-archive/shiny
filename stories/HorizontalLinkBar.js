@@ -5,6 +5,7 @@ import SiteSelection from './SiteSelection';
 
 // HorizontalLinkBar
 import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
+import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
 import LinkBarLink from '../src/molecules/HorizontalLinkBar/LinkBarLink';
 import LinkBarButton, { SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 // import TagBar from '../shared-components/TagBar/TagBar';
@@ -33,6 +34,43 @@ export default () => {
 								<LinkBarLink linkText="Two" url="https://example.com" />
 								<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 							</HorizontalLinkBar>
+						</DemoContainer>
+
+
+						<StorySubtitle>Usage</StorySubtitle>
+						<pre>
+							<code>
+								{`
+  <HorizontalLinkBar background={colors.white}>
+    <LinkBarLink linkText="One" url="https://example.com" isActive />
+    <LinkBarLink linkText="Two" url="https://example.com" />
+    <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+  </HorizontalLinkBar>
+  								`}
+							</code>
+						</pre>
+					</section>
+				</SiteSelection>
+			);
+		})
+		.add('FullWidthLinkBar', () => {
+			return (
+				<SiteSelection>
+					<section>
+						<StoryTitle>FullWidthLinkBar</StoryTitle>
+						<p>A FullWidthLinkBar is a HorizontalLinkBar that uses 100% of the available space.</p>
+						<p>
+							By default, it is positioned absolutely. If you add a truthy <pre>fixed</pre> prop, it is
+							positioned fixed instead.
+						</p>
+
+						<StorySubtitle>Demo</StorySubtitle>
+						<DemoContainer>
+							<FullWidthLinkBar background={colors.white}>
+								<LinkBarLink linkText="One" url="https://example.com" isActive />
+								<LinkBarLink linkText="Two" url="https://example.com" />
+								<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+							</FullWidthLinkBar>
 						</DemoContainer>
 
 
