@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 // import { linkTo } from '@storybook/addon-links';
 import Welcome from './Welcome';
 
-import Headlines from './ArticlePreview/Headlines';
-import Standfirst from './ArticlePreview/Standfirst';
+import Headlines from './TrysilPlug/Headlines';
+import Standfirst from './TrysilPlug/Standfirst';
 
 import loaders from './Loaders';
 import typography from './Typography';
@@ -21,7 +21,7 @@ storiesOf('11 - Navigation', module).add('11.1 - Top nav', () => (
 ));
 horizontalLinkBar();
 
-storiesOf('20 - Article Preview', module)
+storiesOf('20 - Trysil Plug', module)
 	.add('20.1 - Headlines', () => <Headlines />)
 	.add('20.2 - Standfirst', () => <Standfirst />);
 

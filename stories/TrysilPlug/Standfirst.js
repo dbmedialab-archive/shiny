@@ -2,7 +2,7 @@ import React from 'react';
 
 import SiteSelection from '../SiteSelection';
 import Heading from '../../src/atoms/Heading';
-import Article from '../../src/molecules/ArticlePreview';
+import Article from '../../src/molecules/TrysilPlug';
 
 export default () => (
 	<SiteSelection>

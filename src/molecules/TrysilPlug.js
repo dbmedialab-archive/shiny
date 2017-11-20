@@ -7,7 +7,7 @@ import Label from '../atoms/Label';
 import BlockLink from '../atoms/BlockLink';
 import Image from '../atoms/Image';
 
-const ArticlePreview = ({
+const TrysilPlug = ({
 	title, subtitle, image, labels,
 }) => (
 	<Article>
@@ -25,17 +25,17 @@ const ArticlePreview = ({
 		</BlockLink>
 	</Article>
 );
-ArticlePreview.propTypes = {
+TrysilPlug.propTypes = {
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 	image: PropTypes.string,
 	labels: PropTypes.arrayOf(PropTypes.string),
 };
-ArticlePreview.defaultProps = {
+TrysilPlug.defaultProps = {
 	title: '',
 	subtitle: '',
 	image: '',
 	labels: [],
 };
 
-export default ArticlePreview;
+export default TrysilPlug;
