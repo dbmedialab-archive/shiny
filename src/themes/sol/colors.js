@@ -77,6 +77,8 @@ const colors = {
 	link: '#0E6BF5',
 
 	skinColors: {
+		splashBackground: 'secondary',
+		splashText: 'white',
 		nativeAd: 'pink',
 		sport: 'green',
 		helse: 'blue',

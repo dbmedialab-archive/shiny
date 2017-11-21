@@ -48,6 +48,8 @@ const colors = {
 
 	skinColors: {
 		nativeAd: 'green',
+		splashBackground: 'primary',
+		splashText: 'white',
 	},
 };
 

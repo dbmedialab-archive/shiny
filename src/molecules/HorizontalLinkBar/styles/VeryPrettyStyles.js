@@ -14,7 +14,11 @@ export const VeryPrettyA = styled(BlockLink)`
 
 	border: 0;
 	outline: none;
-	color: ${props => props.theme.colors.type};
+	color: ${props => (
+		props.textColor
+			? props.theme.colors[props.textColor]
+			: props.theme.colors.type
+	)};
 	font-size: ${props => props.theme.variables.uiRegularSize};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
