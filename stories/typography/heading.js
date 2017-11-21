@@ -44,12 +44,12 @@ export default () => (
 		<LeetTextarea>
 			{`
 import {
-SmallHeading,
-MediumHeading,
-LargeHeading,
-XLargeHeading,
-HugeHeading
-} from '/path/to/shared-components/atoms/Heading';
+	SmallHeading,
+	MediumHeading,
+	LargeHeading,
+	XLargeHeading,
+	HugeHeading
+} from '/path/to/shiny/atoms/Heading';
 
 <SmallHeading>Dette er en liten overskrift</SmallHeading>
 <MediumHeading>Dette er en middels overskrift</MediumHeading>
