@@ -3,7 +3,7 @@ import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-
 
 // import Heading from '../src/atoms/Heading';
 
-import { StoryBox } from './storybook-components';
+import { SiteSelection, StoryBox } from './storybook-components';
 
 import label from './typography/label';
 import heading from './typography/heading';
@@ -14,7 +14,7 @@ import publishedDate from './typography/publishedDate';
 
 export default () => {
 	storiesOf('Typography', module)
-		.addDecorator(stories => <StoryBox>{stories()}</StoryBox>)
+		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('Published date', publishedDate);
