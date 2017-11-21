@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { StoryBox, StoryTitle, StorySubtitle, DemoContainer } from './storybook-components';
-import SiteSelection from './SiteSelection';
+import { SiteSelection, StoryBox, StoryTitle, StorySubtitle, DemoContainer } from './storybook-components';
 
 // HorizontalLinkBar
 import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -15,13 +14,7 @@ const { colors } = theme;
 
 export default () => {
 	storiesOf('Horizontal bars', HorizontalLinkBar)
-		.addDecorator(stories => (
-			<StoryBox>
-				<SiteSelection>
-					{stories()}
-				</SiteSelection>
-			</StoryBox>
-		))
+		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
 		.add('HorizontalLinkBar', () => {
 			return (
 				<section>

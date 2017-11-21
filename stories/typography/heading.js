@@ -1,8 +1,7 @@
 import React from 'react';
 
-import SiteSelection from '../SiteSelection';
-
 import {
+	SiteSelection,
 	StoryTitle,
 	StorySubtitle,
 	DemoContainer,

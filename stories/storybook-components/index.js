@@ -3,6 +3,10 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
+import SiteSelection from './SiteSelection';
+
+export { SiteSelection };
+
 export const StoryBox = styled.section`
 	max-width: 110rem;
 	padding: 5rem 0 0 2rem;
