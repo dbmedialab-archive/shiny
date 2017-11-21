@@ -82,7 +82,7 @@ const NavWithOptionalConstrainer = ({
 };
 
 NavWithOptionalConstrainer.propTypes = {
-	background: propTypes.string.isRequired,
+	background: propTypes.string,
 	width: propTypes.string.isRequired,
 	zIndex: propTypes.number.isRequired,
 	isTopLevelComponent: propTypes.bool.isRequired,
@@ -90,6 +90,9 @@ NavWithOptionalConstrainer.propTypes = {
 		propTypes.arrayOf(propTypes.node),
 		propTypes.node,
 	]).isRequired,
+};
+NavWithOptionalConstrainer.defaultProps = {
+	background: 'transparent',
 };
 
 const HorizontalLinkBar = ({
@@ -140,7 +143,6 @@ HorizontalLinkBar.propTypes = {
 
 HorizontalLinkBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
-	barProps: {},
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,
