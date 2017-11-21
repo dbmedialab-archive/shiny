@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // import Button from '../src/atoms/Button';
-import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
-import Button from '../src/molecules/HorizontalLinkBar/LinkBarButton';
+import FullWidthLinkBar from '../../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
+import Button from '../../src/molecules/HorizontalLinkBar/LinkBarButton';
 
 import ThemeSelector from './ThemeSelector';
-import themes from '../src/themes';
+import themes from '../../src/themes';
 
 
 class SiteSelection extends React.Component {
