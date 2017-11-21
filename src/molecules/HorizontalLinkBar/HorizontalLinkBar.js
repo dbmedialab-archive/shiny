@@ -143,7 +143,6 @@ HorizontalLinkBar.propTypes = {
 
 HorizontalLinkBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
-	barProps: {},
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,
