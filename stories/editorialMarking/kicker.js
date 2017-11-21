@@ -10,6 +10,7 @@ import {
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
 import Kicker from '../../src/atoms/Kicker';
+import NativeAdKicker from '../../src/atoms/NativeAdKicker';
 
 export default () => (
 	<SiteSelection>
@@ -17,21 +18,26 @@ export default () => (
 			<StoryTitle>Kicker heading</StoryTitle>
 			<p>Also called deck, stikktittel.</p>
 
+			<p>There is also a <code>&lt;NativeAdKicker&gt;</code> with a predefined color.</p>
+
 			<StorySubtitle>Demo</StorySubtitle>
 			<DemoContainer>
 				<Kicker>Kicker</Kicker>
 				<Kicker color="teal">Kicker</Kicker>
 				<Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
+				<NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 			</DemoContainer>
 
 			<StorySubtitle>Usage</StorySubtitle>
 			<LeetTextarea>
 				{`
 import Kicker from '/path/to/shiny/atoms/Kicker';
+import NativeAdKicker from '/path/to/shiny/atoms/NativeAdKicker';
 
 <Kicker>Kicker</Kicker>
 <Kicker color="teal">Kicker</Kicker>
 <Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
+<NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 				`}
 			</LeetTextarea>
 			<p>

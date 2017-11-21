@@ -77,6 +77,7 @@ const colors = {
 	link: '#0E6BF5',
 
 	skinColors: {
+		nativeAd: 'pink',
 		sport: 'green',
 		helse: 'blue',
 		reise: 'purple',
