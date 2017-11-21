@@ -15,7 +15,7 @@ export default () => (
 
 			<SmallHeading>Usage</SmallHeading>
 			<LeetTextarea>{`
-import PublishedDate from '/path/to/src/atoms/PublishedDate';
+import PublishedDate from '/path/to/shiny/atoms/PublishedDate';
 
 <PublishedDate>Publisert 21. november 2017</PublishedDate>
 <PublishedDate hide>Publisert 21. november 2017</PublishedDate>
