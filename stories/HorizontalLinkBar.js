@@ -41,12 +41,12 @@ export default () => {
 						<pre>
 							<code>
 								{`
-  <HorizontalLinkBar background={colors.white}>
-    <LinkBarLink linkText="One" url="https://example.com" isActive />
-    <LinkBarLink linkText="Two" url="https://example.com" />
-    <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
-  </HorizontalLinkBar>
-  								`}
+<HorizontalLinkBar background={colors.white}>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+ 								`}
 							</code>
 						</pre>
 					</section>
@@ -60,7 +60,7 @@ export default () => {
 						<StoryTitle>FullWidthLinkBar</StoryTitle>
 						<p>A FullWidthLinkBar is a HorizontalLinkBar that uses 100% of the available space.</p>
 						<p>
-							By default, it is positioned absolutely. If you add a truthy <pre>fixed</pre> prop, it is
+							By default, it is positioned absolutely. If you add a truthy <code>fixed</code> prop, it is
 							positioned fixed instead.
 						</p>
 
@@ -78,12 +78,12 @@ export default () => {
 						<pre>
 							<code>
 								{`
-  <HorizontalLinkBar background={colors.white}>
-    <LinkBarLink linkText="One" url="https://example.com" isActive />
-    <LinkBarLink linkText="Two" url="https://example.com" />
-    <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
-  </HorizontalLinkBar>
-  								`}
+<FullWidthLinkBar background={colors.white}>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+</FullWidthLinkBar>
+								`}
 							</code>
 						</pre>
 					</section>
@@ -112,9 +112,9 @@ export default () => {
 							<code>
 								{`
 <HorizontalLinkBar background={colors.white}>
-  <LinkBarLink linkText="One" url="https://example.com" isActive />
-  <LinkBarLink linkText="Two" url="https://example.com" />
-  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 								`}
 							</code>
@@ -153,25 +153,25 @@ export default () => {
 							<code>
 								{`
 <HorizontalLinkBar background={colors.white}>
-  <LinkBarLink
-	  useUnderline={false}
-	  activeBackground={colors.pinkLight}
-	  linkText="One"
-	  url="https://example.com"
-	  isActive
-  />
-  <LinkBarLink
-	  useUnderline={false}
-	  activeBackground={colors.pinkLight}
-	  linkText="Two"
-	  url="https://example.com"
-  >
-  <LinkBarLink
-	  useUnderline={false}
-	  activeBackground={colors.pinkLight}
-	  linkText="Buckle My Shoe"
-	  url="https://example.com"
-  >
+ 	<LinkBarLink
+		useUnderline={false}
+		activeBackground={colors.pinkLight}
+		linkText="One"
+		url="https://example.com"
+		isActive
+	/>
+	<LinkBarLink
+		useUnderline={false}
+		activeBackground={colors.pinkLight}
+		linkText="Two"
+		url="https://example.com"
+	>
+	<LinkBarLink
+		useUnderline={false}
+		activeBackground={colors.pinkLight}
+		linkText="Buckle My Shoe"
+		url="https://example.com"
+		>
 </HorizontalLinkBar>
 								`}
 							</code>
@@ -240,34 +240,34 @@ import HorizontalLinkBar from '../shared-components/HorizontalLinkBar/Horizontal
 import LinkBarButton, { SmallLinkBarButton } from '../shared-components/HorizontalLinkBar/LinkBarButton';
 
 <HorizontalLinkBar background={colors.white}>
-  <LinkBarButton isActive onClick={(e) => { alert('You like clicking things'); }}>
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
-  </LinkBarButton>
-  <LinkBarButton>
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
-  </LinkBarButton>
-  <LinkBarButton>
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
-  </LinkBarButton>
+	<LinkBarButton isActive onClick={(e) => { alert('You like clicking things'); }}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
+	</LinkBarButton>
+	<LinkBarButton>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
+	</LinkBarButton>
+	<LinkBarButton>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
+	</LinkBarButton>
 </HorizontalLinkBar>
 
 <hr />
 
 <HorizontalLinkBar background={colors.white}>
-  <SmallLinkBarButton
-	  isActive
-	  useUnderline={false}
-	  activeBackground={colors.blueLight}
-	  onClick={(e) => { alert('You like clicking things'); }}
-  >
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
-  </SmallLinkBarButton>
-  <SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
-  </SmallLinkBarButton>
-  <SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
-    <img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
-  </SmallLinkBarButton>
+	<SmallLinkBarButton
+ 		isActive
+ 		useUnderline={false}
+		activeBackground={colors.blueLight}
+		onClick={(e) => { alert('You like clicking things'); }}
+	>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
+	</SmallLinkBarButton>
+	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
+	</SmallLinkBarButton>
+	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
+	</SmallLinkBarButton>
 </HorizontalLinkBar>
 								`}
 							</code>
