@@ -18,6 +18,7 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const colors = {
 	...combinedShadedColors,
+	skinColors: {},
 };
 
 export default colors;

@@ -19,6 +19,10 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const colors = {
 	...combinedShadedColors,
+	skinColors: {
+		splashBackground: 'white',
+		splashText: 'primary',
+	},
 };
 
 export default colors;

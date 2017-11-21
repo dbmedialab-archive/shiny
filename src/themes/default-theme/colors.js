@@ -13,6 +13,7 @@ const colorsToShade= {
 	navy: '#1C1837',
 	burgundy: '#862547',
 	brown: '#9a663f', // borrowed sols brown
+	sand: '#e5e1d9',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -48,6 +49,8 @@ const colors = {
 	...combinedShadedColors,
 
 	skinColors: {
+		splashBackground: 'orange',
+		splashText: 'purple',
 		nativeAd: 'orange',
 		sport: 'green',
 		helse: 'blue',
