@@ -45,6 +45,10 @@ const colors = {
 	},
 
 	...combinedShadedColors,
+
+	skinColors: {
+		nativeAd: 'green',
+	},
 };
 
 export default colors;

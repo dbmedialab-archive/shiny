@@ -48,6 +48,7 @@ const colors = {
 	...combinedShadedColors,
 
 	skinColors: {
+		nativeAd: 'orange',
 		sport: 'green',
 		helse: 'blue',
 		reise: 'purple',
