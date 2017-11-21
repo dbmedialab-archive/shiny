@@ -33,11 +33,11 @@ export default () => (
 
 		<StorySubtitle>Demo</StorySubtitle>
 		<DemoContainer>
-			<SmallHeading>Dette er en liten overskrift</SmallHeading>
-			<MediumHeading>Dette er en middels overskrift</MediumHeading>
-			<LargeHeading>Dette er en vanlig størrelse overskrift</LargeHeading>
-			<XLargeHeading>Dette er en ekstra stor overskrift</XLargeHeading>
-			<HugeHeading>Dette er en ekstra stor overskrift</HugeHeading>
+			<SmallHeading>This is a small heading</SmallHeading>
+			<MediumHeading>This is a medium heading</MediumHeading>
+			<LargeHeading>This is a large heading (default)</LargeHeading>
+			<XLargeHeading>This is an X large heading</XLargeHeading>
+			<HugeHeading>This is a huge heading</HugeHeading>
 		</DemoContainer>
 
 		<StorySubtitle>Usage</StorySubtitle>
@@ -56,7 +56,7 @@ HugeHeading
 <LargeHeading>Dette er en vanlig størrelse overskrift</LargeHeading>
 <XLargeHeading>Dette er en ekstra stor overskrift</XLargeHeading>
 <HugeHeading>Dette er en ekstra stor overskrift</HugeHeading>
-     `}
+			`}
 		</LeetTextarea>
 	</section>
 );
