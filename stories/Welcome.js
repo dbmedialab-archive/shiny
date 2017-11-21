@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SiteSelection from './SiteSelection';
+import { SiteSelection } from './storybook-components';
 
 export default () => {
 	return (

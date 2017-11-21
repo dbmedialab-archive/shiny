@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { StoryBox, StoryTitle, StorySubtitle, DemoContainer } from './styles/storybook-styles';
-import SiteSelection from './SiteSelection';
+import { StoryBox, StoryTitle, StorySubtitle, DemoContainer, SiteSelection } from './storybook-components';
 
 // Loaders
 import DotLoader from '../src/atoms/loaders/DotLoader';

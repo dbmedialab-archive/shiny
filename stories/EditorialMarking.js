@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 
-import { StoryBox } from './styles/storybook-styles';
+import { StoryBox, SiteSelection } from './storybook-components';
 
 import kicker from './editorialMarking/kicker';
 
@@ -10,6 +10,6 @@ import kicker from './editorialMarking/kicker';
 
 export default () => {
 	storiesOf('Editorial marking', module)
-		.addDecorator(stories => <StoryBox>{stories()}</StoryBox>)
+		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
 		.add('Kicker', kicker);
 };

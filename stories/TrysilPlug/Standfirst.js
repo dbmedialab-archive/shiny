@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SiteSelection from '../SiteSelection';
+import { SiteSelection } from '../storybook-components';
 import Heading from '../../src/atoms/Heading';
 import Article from '../../src/molecules/TrysilPlug';
 

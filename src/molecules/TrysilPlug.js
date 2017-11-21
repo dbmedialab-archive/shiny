@@ -8,7 +8,7 @@ import BlockLink from '../atoms/BlockLink';
 import Image from '../atoms/Image';
 
 const TrysilPlug = ({
-	title, subtitle, image, labels,
+	title, subtitle, image, labels, url,
 }) => (
 	<Article>
 		<BlockLink href="#">
@@ -30,6 +30,7 @@ TrysilPlug.propTypes = {
 	subtitle: PropTypes.string,
 	image: PropTypes.string,
 	labels: PropTypes.arrayOf(PropTypes.string),
+	url: PropTypes.string.isRequired,
 };
 TrysilPlug.defaultProps = {
 	title: '',
