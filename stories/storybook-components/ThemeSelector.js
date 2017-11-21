@@ -45,7 +45,7 @@ const ThemeSelector = ({ children }) => {
 	);
 };
 ThemeSelector.propTypes = {
-	children: propTypes.oneOf([
+	children: propTypes.oneOfType([
 		propTypes.arrayOf(propTypes.node),
 		propTypes.node,
 	]),
