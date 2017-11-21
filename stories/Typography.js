@@ -7,6 +7,7 @@ import { StoryBox } from './storybook-components';
 
 import label from './typography/label';
 import heading from './typography/heading';
+import publishedDate from './typography/publishedDate';
 
 // import BlockLink from '../shared-components/Typography/BlockLink';
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';
@@ -15,5 +16,6 @@ export default () => {
 	storiesOf('Typography', module)
 		.addDecorator(stories => <StoryBox>{stories()}</StoryBox>)
 		.add('Label', label)
-		.add('Heading', heading);
+		.add('Heading', heading)
+		.add('Published date', publishedDate);
 };
