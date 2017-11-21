@@ -11,21 +11,28 @@ import typography from './Typography';
 import editorialMarking from './EditorialMarking';
 import horizontalLinkBar from './HorizontalLinkBar';
 
-import TopNav from './Navigation/TopNav';
+import SiteSelection from './SiteSelection';
+import Palette from '../src/Palette';
 
-storiesOf('Welcome', module).add('Site selection', () => (
-	<Welcome />
-));
+storiesOf('Welcome', module)
+	.add('Site selection', () => (
+		<Welcome />
+	))
+	// @TODO Move Palette to somewhere it belongs
+	.add('Palette', () => {
+		return (
+			<SiteSelection>
+				<Palette />
+			</SiteSelection>
+		);
+	});
 
-storiesOf('11 - Navigation', module).add('11.1 - Top nav', () => (
-	<TopNav />
-));
 horizontalLinkBar();
-
-storiesOf('20 - Trysil Plug', module)
-	.add('20.1 - Headlines', () => <Headlines />)
-	.add('20.2 - Standfirst', () => <Standfirst />);
 
 typography();
 editorialMarking();
 loaders();
+
+storiesOf('Trysil Plug', module)
+	.add('20.1 - Headlines', () => <Headlines />)
+	.add('20.2 - Standfirst', () => <Standfirst />);

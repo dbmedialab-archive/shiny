@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 
-import { StoryBox } from './styles/storybook-styles';
+import { StoryBox } from './storybook-components';
 
 import kicker from './editorialMarking/kicker';
 

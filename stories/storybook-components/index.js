@@ -3,18 +3,17 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-export const StoryBox = styled.article`
+export const StoryBox = styled.section`
 	max-width: 110rem;
-	padding: 5rem 0 0 8rem;
+	padding: 5rem 0 0 2rem;
 `;
 
 export const StoryTitle = styled.h1`
 	font-family: ${props => props.theme.variables.mainFont};
 	font-size: ${props => props.theme.variables.headingHugeSize};
 	line-height: ${props => props.theme.variables.headingHugeLineHeight};
-	border-bottom: 1px solid ${props => props.theme.colors.grayTint};
-	padding: 0 0 calc(${props => props.theme.variables.verticalBase} / 2);
-	margin: 0 0 calc(${props => props.theme.variables.verticalBase} * 1.5);
+	border-bottom: .1rem solid ${props => props.theme.colors.grayTint};
+	margin: 0 0 ${props => props.theme.variables.verticalBase});
 `;
 
 export const StorySubtitle = styled.h2`
