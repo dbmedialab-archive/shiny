@@ -1,0 +1,36 @@
+import React from 'react';
+
+import {
+	StoryTitle,
+	StorySubtitle,
+	DemoContainer,
+	SiteSelection,
+} from '../storybook-components';
+
+import LeetTextarea from '../../src/atoms/LeetTextarea';
+
+import Kicker from '../../src/atoms/Kicker';
+
+export default () => (
+	<SiteSelection>
+		<section>
+			<StoryTitle>Kicker heading</StoryTitle>
+			<p>Also called deck, stikktittel.</p>
+
+			<StorySubtitle>Demo</StorySubtitle>
+			<DemoContainer>
+				<Kicker>Kicker</Kicker>
+			</DemoContainer>
+
+			<StorySubtitle>Usage</StorySubtitle>
+			<LeetTextarea>
+				{`
+import Kicker from '/path/to/shared-components/atoms/Kicker';
+
+<Kicker>Kicker</Kicker>
+        `}
+			</LeetTextarea>
+
+		</section>
+	</SiteSelection>
+);

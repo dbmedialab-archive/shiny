@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SiteSelection from '../SiteSelection';
+import { SiteSelection } from '../storybook-components';
 import TrysilPlug from '../../src/molecules/TrysilPlug';
 
 export default () => (

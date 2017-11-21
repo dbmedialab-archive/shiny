@@ -1,12 +1,11 @@
 import React from 'react';
 
-import SiteSelection from '../SiteSelection';
-
 import {
+	SiteSelection,
 	StoryTitle,
 	StorySubtitle,
 	DemoContainer,
-} from '../styles/storybook-styles';
+} from '../storybook-components';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 

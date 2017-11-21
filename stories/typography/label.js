@@ -2,7 +2,7 @@ import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import SiteSelection from '../SiteSelection';
+import { SiteSelection } from '../storybook-components';
 import Heading, { SmallHeading } from '../../src/atoms/Heading';
 import Label from '../../src/atoms/Label';
 
