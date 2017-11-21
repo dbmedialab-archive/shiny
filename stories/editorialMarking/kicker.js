@@ -20,17 +20,24 @@ export default () => (
 			<StorySubtitle>Demo</StorySubtitle>
 			<DemoContainer>
 				<Kicker>Kicker</Kicker>
+				<Kicker color="teal">Kicker</Kicker>
+				<Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
 			</DemoContainer>
 
 			<StorySubtitle>Usage</StorySubtitle>
 			<LeetTextarea>
 				{`
-import Kicker from '/path/to/shared-components/atoms/Kicker';
+import Kicker from '/path/to/shiny/atoms/Kicker';
 
 <Kicker>Kicker</Kicker>
-        `}
+<Kicker color="teal">Kicker</Kicker>
+<Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
+				`}
 			</LeetTextarea>
-
+			<p>
+				The <code>color</code> and <code>textColor</code> props can be any of the colors names in the palette.
+				They default to &quot;primary&quot; and &quot;white&quot;.
+			</p>
 		</section>
 	</SiteSelection>
 );
