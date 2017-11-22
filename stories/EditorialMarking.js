@@ -4,6 +4,7 @@ import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-
 import { StoryBox, SiteSelection } from './storybook-components';
 
 import kicker from './editorialMarking/kicker';
+import bylineImage from './editorialMarking/bylineImage';
 
 // import BlockLink from '../shared-components/Typography/BlockLink';
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';
@@ -11,5 +12,6 @@ import kicker from './editorialMarking/kicker';
 export default () => {
 	storiesOf('Editorial marking', module)
 		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
-		.add('Kicker', kicker);
+		.add('Kicker', kicker)
+		.add('Byline image', bylineImage);
 };
