@@ -51,6 +51,11 @@ const colors = {
 	skinColors: {
 		splashBackground: 'orange',
 		splashText: 'purple',
+
+		calmBackground: 'grayTintLight',
+		calmBorder: 'grayTintLight',
+		calmText: 'type',
+
 		nativeAd: 'orange',
 		sport: 'green',
 		helse: 'blue',
@@ -62,6 +67,7 @@ const colors = {
 		meninger: 'teal',
 		redaksjonenanbefaler: 'burgundy',
 		anbefalt: 'burgundy',
+
 		solRed: 'primary',
 		solBlue: 'secondary',
 		primary: 'primary',

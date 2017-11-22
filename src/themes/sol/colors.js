@@ -79,6 +79,11 @@ const colors = {
 	skinColors: {
 		splashBackground: 'secondary',
 		splashText: 'white',
+
+		calmBackground: 'grayTintLighter',
+		calmBorder: 'grayTintLighter',
+		calmText: 'type',
+
 		nativeAd: 'pink',
 		sport: 'green',
 		helse: 'blue',

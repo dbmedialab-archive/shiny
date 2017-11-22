@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Headlines from './TrysilPlug/Headlines';
 import Standfirst from './TrysilPlug/Standfirst';
 
+import grid from './grid';
 import introduction from './Introduction';
 import loaders from './Loaders';
 import typography from './Typography';
@@ -18,6 +19,7 @@ introduction();
 typography();
 editorialMarking();
 loaders();
+grid();
 
 // Molecules
 horizontalLinkBar();
