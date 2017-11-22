@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import { Grid, Row, Col as GridCol } from '../../src/atoms/Grid';
+import { Row, Col as GridCol } from '../../src/atoms/Grid';
 import BlueBox, { BluerBox } from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
