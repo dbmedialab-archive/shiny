@@ -34,7 +34,7 @@ export default () => (
 			<Col xs>
 				<TrysilPlug
 					title="Politiet vil fengsle SOS Rasisme-leder i fire uker"
-					subtitle="Det må meldes i avisa."
+					subtitle="Ifølge politiet tappet Kjell Gunnar Larsen SOS Rasisme for beløp i millionklassen."
 					image="https://2.dbstatic.no/68712816.jpg?imageId=68712816&x=4.7222222222222&y=28.976572133169&cropw=90.740740740741&croph=60.419235511714&width=980&height=490&compression=60"
 					url="https://example.com"
 					labels={[
@@ -52,18 +52,16 @@ export default () => (
 			<Col xs>
 				<TrysilPlug
 					title="Person funnet død i vannet i Skien - 62-åring savnet i samme område"
-					image="https://2.dbstatic.no/68712816.jpg?imageId=68712816&x=4.7222222222222&y=28.976572133169&cropw=90.740740740741&croph=60.419235511714&width=980&height=490&compression=60"
 					url="https://example.com"
+					subtitle="Det er ikke bekreftet om personen er en 62 år gammel mann som har vært savnet."
 					labels={[
+						{ text: 'Akkurat nå' },
 						{
-							text: 'Meninger',
-							color: 'orange',
-						},
-						{
-							text: 'I am label',
-							color: 'blue',
+							text: 'Trump',
+							color: 'pink',
 						},
 					]}
+					image="https://2.dbstatic.no/68712816.jpg?imageId=68712816&x=4.7222222222222&y=28.976572133169&cropw=90.740740740741&croph=60.419235511714&width=980&height=490&compression=60" // eslint-disable-line max-len
 				/>
 			</Col>
 		</Row>
