@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const BylineImage = styled.img`
 	width: 6.4rem;
-   height: 6.4rem;
+	height: 6.4rem;
 	border-radius: 50%;
 	display: inline-block;
 	margin: -3.2rem 0.8rem 0 1.5rem;
