@@ -25,6 +25,10 @@ const colors = {
 	skinColors: {
 		splashBackground: 'sand',
 		splashText: 'secondary',
+
+		calmBackground: 'sand',
+		calmBorder: 'sand',
+		calmText: 'secondary',
 	},
 };
 
