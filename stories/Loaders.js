@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { StoryBox, StoryTitle, StorySubtitle, DemoContainer, SiteSelection } from './storybook-components';
+import { StoryBox, DemoContainer, SiteSelection } from './storybook-components';
+
+import Heading, { HugeHeading } from '../src/atoms/Heading';
 
 // Loaders
 import DotLoader from '../src/atoms/loaders/DotLoader';
@@ -18,10 +20,10 @@ export default () => {
       .add('NoonLoader', () => {
         return (
           <section>
-            <StoryTitle>NoonLoader</StoryTitle>
+            <HugeHeading>NoonLoader</HugeHeading>
             <p>Should be used when loading content that will add to the height</p>
 
-            <StorySubtitle>Usage</StorySubtitle>
+            <Heading>Usage</Heading>
             <DemoContainer>
               <NoonLoader classes={'what-you-will'} />
             </DemoContainer>
@@ -33,10 +35,10 @@ export default () => {
 			return (
 				<SiteSelection>
 					<section>
-						<StoryTitle>DotLoader</StoryTitle>
+						<HugeHeading>DotLoader</HugeHeading>
 						<p>Should be used when loading content that will fill a already defined space</p>
 
-						<StorySubtitle>Usage</StorySubtitle>
+						<Heading>Usage</Heading>
 						<DemoContainer>
 							<DotLoader classes={'what-you-will'} />
 						</DemoContainer>
@@ -48,13 +50,13 @@ export default () => {
 			return (
 				<SiteSelection>
 					<section>
-						<StoryTitle>LoadingSearchIcon</StoryTitle>
+						<HugeHeading>LoadingSearchIcon</HugeHeading>
 						<p>
 							This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
 							Color defaults to primary.
 						</p>
 
-						<StorySubtitle>Usage</StorySubtitle>
+						<Heading>Usage</Heading>
 						<DemoContainer>
 							<LoadingSearchIcon />
 						</DemoContainer>

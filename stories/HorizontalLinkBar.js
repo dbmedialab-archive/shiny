@@ -1,6 +1,8 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { SiteSelection, StoryBox, StoryTitle, StorySubtitle, DemoContainer } from './storybook-components';
+import { SiteSelection, StoryBox, DemoContainer } from './storybook-components';
+
+import Heading, { HugeHeading } from '../src/atoms/Heading';
 
 // HorizontalLinkBar
 import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -8,7 +10,7 @@ import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBa
 import LinkBarLink from '../src/molecules/HorizontalLinkBar/LinkBarLink';
 import LinkBarButton, { SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 // import TagBar from '../shared-components/TagBar/TagBar';
-import theme from '../src/themes/default-theme';
+import theme from '../themes/default-theme';
 
 const { colors } = theme;
 
@@ -18,10 +20,10 @@ export default () => {
 		.add('HorizontalLinkBar', () => {
 			return (
 				<section>
-					<StoryTitle>HorizontalLinkBar</StoryTitle>
+					<HugeHeading>HorizontalLinkBar</HugeHeading>
 					<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
 
-					<StorySubtitle>Demo</StorySubtitle>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<HorizontalLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
@@ -31,7 +33,7 @@ export default () => {
 					</DemoContainer>
 
 
-					<StorySubtitle>Usage</StorySubtitle>
+					<Heading>Usage</Heading>
 					<pre>
 						<code>
 							{`
@@ -49,14 +51,14 @@ export default () => {
 		.add('FullWidthLinkBar', () => {
 			return (
 				<section>
-					<StoryTitle>FullWidthLinkBar</StoryTitle>
+					<HugeHeading>FullWidthLinkBar</HugeHeading>
 					<p>A FullWidthLinkBar is a HorizontalLinkBar that uses 100% of the available space.</p>
 					<p>
 						By default, it is positioned absolutely. If you add a truthy <code>fixed</code> prop, it is
 						positioned fixed instead.
 					</p>
 
-					<StorySubtitle>Demo</StorySubtitle>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<FullWidthLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
@@ -66,7 +68,7 @@ export default () => {
 					</DemoContainer>
 
 
-					<StorySubtitle>Usage</StorySubtitle>
+					<Heading>Usage</Heading>
 					<pre>
 						<code>
 							{`
@@ -84,11 +86,11 @@ export default () => {
 		.add('LinkBarLink', () => {
 			return (
 				<section>
-					<StoryTitle>LinkBarLink</StoryTitle>
+					<HugeHeading>LinkBarLink</HugeHeading>
 					<p>Provides links (<code>&lt;a&gt;</code> tags) for HorizontalLinkBar.</p>
 					<p>You can remove the underline and change the active background with props.</p>
 
-					<StorySubtitle>Demo</StorySubtitle>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<HorizontalLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
@@ -97,7 +99,7 @@ export default () => {
 						</HorizontalLinkBar>
 					</DemoContainer>
 
-					<StorySubtitle>Usage</StorySubtitle>
+					<Heading>Usage</Heading>
 					<pre>
 						<code>
 							{`
@@ -110,10 +112,10 @@ export default () => {
 						</code>
 					</pre>
 
-					<StorySubtitle>Alternative state indication</StorySubtitle>
+					<Heading>Alternative state indication</Heading>
 					<p>You can remove the underline and change the active background with props.</p>
 
-					<StorySubtitle>Demo</StorySubtitle>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<HorizontalLinkBar background={colors.white}>
 							<LinkBarLink
@@ -138,7 +140,7 @@ export default () => {
 						</HorizontalLinkBar>
 					</DemoContainer>
 
-					<StorySubtitle>Usage</StorySubtitle>
+					<Heading>Usage</Heading>
 					<pre>
 						<code>
 							{`
@@ -172,7 +174,7 @@ export default () => {
 		.add('LinkBarButton', () => {
 			return (
 				<section>
-					<StoryTitle>LinkBarButton</StoryTitle>
+					<HugeHeading>LinkBarButton</HugeHeading>
 					<p>
 						Provides buttons (<code>&lt;button&gt;</code> tags) that can contain a child (e.g. img) for
 						HorizontalLinkBar.
@@ -183,7 +185,7 @@ export default () => {
 					</p>
 					<p>Comes in two sizes, regular and small.</p>
 
-					<StorySubtitle>Demo</StorySubtitle>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<HorizontalLinkBar background={colors.white}>
 							<LinkBarButton
@@ -220,7 +222,7 @@ export default () => {
 						</HorizontalLinkBar>
 					</DemoContainer>
 
-					<StorySubtitle>Usage</StorySubtitle>
+					<Heading>Usage</Heading>
 					<pre>
 						<code>
 							{`
@@ -267,10 +269,10 @@ import LinkBarButton, { SmallLinkBarButton } from '../shared-components/Horizont
 	/*
     .add('TagBar', () => (
       <section>
-        <StoryTitle>TagBar</StoryTitle>
+        <HugeHeading>TagBar</HugeHeading>
         <p>Bar that display tags</p>
 
-        <StorySubtitle>Demo</StorySubtitle>
+        <Heading>Demo</Heading>
         <TagBar
           tags={[
             {
@@ -288,7 +290,7 @@ import LinkBarButton, { SmallLinkBarButton } from '../shared-components/Horizont
           ]}
         />
 
-        <StorySubtitle>Usage</StorySubtitle>
+        <Heading>Usage</Heading>
         <pre><code>
           {`
             <TagBar

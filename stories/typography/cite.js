@@ -2,19 +2,19 @@ import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import Heading, { SmallHeading } from '../../src/atoms/Heading';
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import Cite from '../../src/atoms/Cite';
 
 export default () => (
 	<section>
-		<Heading>Cite</Heading>
-		<SmallHeading>Preview</SmallHeading>
+		<HugeHeading>Cite</HugeHeading>
+		<Heading>Preview</Heading>
 		<p>
 			I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
 			er det krystallklare opplysninger om omfattende juks og svindel av offentlige.
 		</p>
 
-		<SmallHeading>Usage</SmallHeading>
+		<Heading>Usage</Heading>
 		<LeetTextarea>{`
 import Cite from '/path/to/shiny/atoms/Cite';
 
