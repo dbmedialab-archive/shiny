@@ -1,21 +1,17 @@
 import React from 'react';
 
-import {
-	StoryTitle,
-	StorySubtitle,
-	DemoContainer,
-} from '../storybook-components';
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
+import { DemoContainer } from '../storybook-components';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import Heading from '../../src/atoms/Heading';
 import FloatImage from '../../src/molecules/FloatImage';
 
 export default () => (
 	<section>
-		<StoryTitle>Float image (left)</StoryTitle>
+		<HugeHeading>Float image (left)</HugeHeading>
 
-		<StorySubtitle>Demo</StorySubtitle>
+		<Heading>Demo</Heading>
 		<p>
 			Images can be floated left or right with the <code>float</code> prop
 			but must be accompanied by a <code>width</code> prop with % units.
@@ -26,7 +22,7 @@ export default () => (
 			<Heading>Politiet vil fengsle SOS Rasisme-leder i fire uker</Heading>
 		</DemoContainer>
 
-		<StorySubtitle>Usage</StorySubtitle>
+		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
 import FloatImage from '/path/to/shiny/molecules/FloatImage';
