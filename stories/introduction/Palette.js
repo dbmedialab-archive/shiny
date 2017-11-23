@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import ColorBox from './ColorBox';
-import LeetTextarea from './atoms/LeetTextarea';
 
-const H3 = styled.h3`flex: 1 0 100%;`;
+import Heading, { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+
+import ThemeName from '../../src/atoms/ThemeName';
+import ColorBox from '../../src/atoms/ColorBox';
+import LeetTextarea from '../../src/atoms/LeetTextarea';
 
 const FlexBox = styled.section`
   display: flex;
@@ -13,10 +15,18 @@ const FlexBox = styled.section`
 const Palette = () => {
 	return (
 		<section>
-			<h2>Palette</h2>
-			<p>This is the palette definition for the Sol.no brand.</p>
+			<HugeHeading>Welcome, adventurer!</HugeHeading>
 
-			<h3>Usage</h3>
+			<p>You have arrived at the style definition for the <ThemeName /> brand.</p>
+
+			<Heading>Colors</Heading>
+			<p>
+            When you set out to create a component, you probably want to use some color, whether that is a background
+            color to fill your space or a text color to make your type visible.
+			</p>
+			<p>We use colors all the time. Here is how you can use the colors of your brand:</p>
+
+			<SmallHeading>Using colors</SmallHeading>
 			<LeetTextarea>{`
 import React from 'react';
 import styled from 'styled-components';
@@ -30,8 +40,8 @@ const MyHeading = styled.h3\`
       `}
 			</LeetTextarea>
 
+			<SmallHeading>Palette for the <ThemeName /> theme</SmallHeading>
 			<FlexBox>
-				<H3>Brand Colors</H3>
 				<ColorBox textColor="light" displayColor="primaryDark" />
 				<ColorBox textColor="light" displayColor="primary" isMainShade />
 				<ColorBox textColor="dark" displayColor="primaryLight" />
@@ -45,22 +55,22 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="dark" displayColor="secondaryLighter" />
 			</FlexBox>
 
+			<SmallHeading>Type Colors</SmallHeading>
 			<FlexBox>
-				<H3>Type Colors</H3>
 				<ColorBox textColor="light" displayColor="type" isMainShade />
 				<ColorBox textColor="light" displayColor="typeLight" />
 				<ColorBox textColor="dark" displayColor="typeDisabled" />
 			</FlexBox>
 
+			<SmallHeading>Gray Tints</SmallHeading>
 			<FlexBox>
-				<H3>Gray Tints</H3>
 				<ColorBox displayColor="grayTint" isMainShade />
 				<ColorBox displayColor="grayTintLight" />
 				<ColorBox displayColor="grayTintLighter" />
 				<ColorBox displayColor="white" />
 			</FlexBox>
 
-			<h3>Supporting Colors</h3>
+			<SmallHeading>Supporting Colors</SmallHeading>
 			<FlexBox>
 				<ColorBox textColor="light" displayColor="pinkDark" />
 				<ColorBox textColor="dark" displayColor="pink" isMainShade />
@@ -114,7 +124,7 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="light" displayColor="darknessLight" />
 			</FlexBox>
 
-			<h3>Link color</h3>
+			<SmallHeading>Link color</SmallHeading>
 			<FlexBox>
 				<ColorBox textColor="light" displayColor="link" />
 			</FlexBox>

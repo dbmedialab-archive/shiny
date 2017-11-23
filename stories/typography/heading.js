@@ -1,15 +1,11 @@
 import React from 'react';
 
-import {
-	StoryTitle,
-	StorySubtitle,
-	DemoContainer,
-} from '../storybook-components';
+import { DemoContainer } from '../storybook-components';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
 // Typography
-import {
+import Heading, {
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
@@ -19,7 +15,7 @@ import {
 
 export default () => (
 	<section>
-		<StoryTitle>Heading</StoryTitle>
+		<HugeHeading>Heading</HugeHeading>
 		<p>Also called headline, overskrift.</p>
 		<p>There are four sizes of headings:</p>
 		<ul>
@@ -31,7 +27,7 @@ export default () => (
 		</ul>
 		<p>The font-sizes will increase on large screens.</p>
 
-		<StorySubtitle>Demo</StorySubtitle>
+		<Heading>Demo</Heading>
 		<DemoContainer>
 			<SmallHeading>This is a small heading</SmallHeading>
 			<MediumHeading>This is a medium heading</MediumHeading>
@@ -40,7 +36,7 @@ export default () => (
 			<HugeHeading>This is a huge heading</HugeHeading>
 		</DemoContainer>
 
-		<StorySubtitle>Usage</StorySubtitle>
+		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
 import {
