@@ -7,6 +7,7 @@ import { SiteSelection, StoryBox } from './storybook-components';
 
 import label from './typography/label';
 import heading from './typography/heading';
+import cite from './typography/cite';
 import publishedDate from './typography/publishedDate';
 
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -17,5 +18,6 @@ export default () => {
 		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
 		.add('Label', label)
 		.add('Heading', heading)
+		.add('Cite', cite)
 		.add('Published date', publishedDate);
 };
