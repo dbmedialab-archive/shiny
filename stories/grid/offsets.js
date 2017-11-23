@@ -42,6 +42,8 @@ export default () => (
 
 		<LeetTextarea>
 			{`
+import { Row, Col } from 'shiny/src/atoms/Grid';
+
 <Row>
 	<Col xsOffset={11} xs={1}>offset-11 xs-1</Col>
 	<Col xsOffset={10} xs={2}>offset-10 xs-2</Col>
