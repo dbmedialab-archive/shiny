@@ -40,6 +40,8 @@ export default () => (
 
 		<LeetTextarea>
 			{`
+import { Row, Col } from 'shiny/src/atoms/Grid';
+
 <Row around="xs">
 	<Col xs={2}>around-row</Col>
 	<Col xs={2}>around-row</Col>
