@@ -2,7 +2,6 @@ import colors from './colors';
 import grid from './grid';
 
 const global = `
-  background: #fff;
   color: #222;
   padding: 0;
   margin: 0;

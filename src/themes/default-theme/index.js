@@ -1,9 +1,8 @@
 import variables from './variables';
 import colors from './colors';
-import grid from './grid';
+import flexboxgrid from './grid';
 
 const global = `
-  background: #fff;
   color: #222;
   padding: 0;
   margin: 0;
@@ -19,7 +18,7 @@ const theme = {
 	name: 'Default',
 	global,
 	colors,
-	grid,
+	flexboxgrid,
 	variables,
 };
 
