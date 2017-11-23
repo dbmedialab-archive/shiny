@@ -1,26 +1,24 @@
 import React from 'react';
 
 import {
-	StoryTitle,
-	StorySubtitle,
 	DemoContainer,
 	SiteSelection,
 } from '../storybook-components';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
-
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import Kicker from '../../src/atoms/Kicker';
 import NativeAdKicker from '../../src/atoms/NativeAdKicker';
 
 export default () => (
 	<SiteSelection>
 		<section>
-			<StoryTitle>Kicker heading</StoryTitle>
+			<HugeHeading>Kicker heading</HugeHeading>
 			<p>Also called deck, stikktittel.</p>
 
 			<p>There is also a <code>&lt;NativeAdKicker&gt;</code> with a predefined color.</p>
 
-			<StorySubtitle>Demo</StorySubtitle>
+			<Heading>Demo</Heading>
 			<DemoContainer>
 				<Kicker>Kicker</Kicker>
 				<Kicker color="teal">Kicker</Kicker>
@@ -28,7 +26,7 @@ export default () => (
 				<NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 			</DemoContainer>
 
-			<StorySubtitle>Usage</StorySubtitle>
+			<Heading>Usage</Heading>
 			<LeetTextarea>
 				{`
 import Kicker from '/path/to/shiny/atoms/Kicker';

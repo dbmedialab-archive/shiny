@@ -2,18 +2,18 @@ import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import Heading, { SmallHeading } from '../../src/atoms/Heading';
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import PublishedDate from '../../src/atoms/PublishedDate';
 
 export default () => (
 	<section>
-		<Heading>PublishedDate</Heading>
-		<SmallHeading>Preview</SmallHeading>
+		<HugeHeading>PublishedDate</HugeHeading>
+		<Heading>Preview</Heading>
 		<PublishedDate>Publisert 21. november 2017</PublishedDate>
 		<PublishedDate hide>Publisert 21. november 2017</PublishedDate>
 		<PublishedDate color="primary">Publisert 21. november 2017</PublishedDate>
 
-		<SmallHeading>Usage</SmallHeading>
+		<Heading>Usage</Heading>
 		<LeetTextarea>{`
 import PublishedDate from '/path/to/shiny/atoms/PublishedDate';
 

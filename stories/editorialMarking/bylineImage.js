@@ -1,27 +1,24 @@
 import React from 'react';
 
-import {
-	StoryTitle,
-	StorySubtitle,
-	DemoContainer,
-} from '../storybook-components';
+import { DemoContainer } from '../storybook-components';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
 
 import Image from '../../src/atoms/Image';
 import BylineImage from '../../src/atoms/BylineImage';
 
 export default () => (
 	<section>
-		<StoryTitle>Byline image</StoryTitle>
+		<HugeHeading>Byline image</HugeHeading>
 
-		<StorySubtitle>Demo</StorySubtitle>
+		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Image src="http://styleguide.dagbladet.no/assets/test/large-q60.jpg" />
 			<BylineImage src="http://www.dagbladet.no/meninger/assets/images/bylines/msi.png" />
 		</DemoContainer>
 
-		<StorySubtitle>Usage</StorySubtitle>
+		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
 import Image from '/path/to/shiny/atoms/Image';
