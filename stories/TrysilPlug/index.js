@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { StoryBox, SiteSelection } from '../storybook-components';
+import { SiteSelection } from '../storybook-components';
+import Grid from '../../src/atoms/Grid';
 
 import basicIssue from './basic-issue';
 import rowWithThreePlugs from './row-with-three-plugs';
@@ -8,7 +9,7 @@ import kicker from './kicker';
 
 export default () => {
 	storiesOf('TrysilPlug', module)
-		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('A typical plug', basicIssue)
 		.add('With Kicker', kicker)
 		.add('Row with three plugs', rowWithThreePlugs);

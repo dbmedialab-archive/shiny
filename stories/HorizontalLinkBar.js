@@ -1,8 +1,10 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { SiteSelection, StoryBox, DemoContainer } from './storybook-components';
+import { SiteSelection, DemoContainer } from './storybook-components';
 
 import Heading, { HugeHeading } from '../src/atoms/Heading';
+import Grid from '../src/atoms/Grid';
+import LeetTextarea from '../src/atoms/LeetTextarea';
 
 // HorizontalLinkBar
 import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -16,7 +18,7 @@ const { colors } = theme;
 
 export default () => {
 	storiesOf('Horizontal bars', HorizontalLinkBar)
-		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('HorizontalLinkBar', () => {
 			return (
 				<section>
@@ -34,17 +36,15 @@ export default () => {
 
 
 					<Heading>Usage</Heading>
-					<pre>
-						<code>
-							{`
+					<LeetTextarea>
+						{`
 <HorizontalLinkBar background={colors.white}>
 <LinkBarLink linkText="One" url="https://example.com" isActive />
 <LinkBarLink linkText="Two" url="https://example.com" />
 <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
-								`}
-						</code>
-					</pre>
+						`}
+					</LeetTextarea>
 				</section>
 			);
 		})
@@ -69,17 +69,15 @@ export default () => {
 
 
 					<Heading>Usage</Heading>
-					<pre>
-						<code>
-							{`
+					<LeetTextarea>
+						{`
 <FullWidthLinkBar background={colors.white}>
 <LinkBarLink linkText="One" url="https://example.com" isActive />
 <LinkBarLink linkText="Two" url="https://example.com" />
 <LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </FullWidthLinkBar>
-							`}
-						</code>
-					</pre>
+						`}
+					</LeetTextarea>
 				</section>
 			);
 		})
@@ -100,17 +98,15 @@ export default () => {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<pre>
-						<code>
-							{`
+					<LeetTextarea>
+						{`
 <HorizontalLinkBar background={colors.white}>
 <LinkBarLink linkText="One" url="https://example.com" isActive />
 <LinkBarLink linkText="Two" url="https://example.com" />
 <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
-							`}
-						</code>
-					</pre>
+						`}
+					</LeetTextarea>
 
 					<Heading>Alternative state indication</Heading>
 					<p>You can remove the underline and change the active background with props.</p>
@@ -141,9 +137,8 @@ export default () => {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<pre>
-						<code>
-							{`
+					<LeetTextarea>
+						{`
 <HorizontalLinkBar background={colors.white}>
 	<LinkBarLink
 	useUnderline={false}
@@ -165,9 +160,8 @@ export default () => {
 	url="https://example.com"
 	>
 </HorizontalLinkBar>
-							`}
-						</code>
-					</pre>
+						`}
+					</LeetTextarea>
 				</section>
 			);
 		})
@@ -223,9 +217,8 @@ export default () => {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<pre>
-						<code>
-							{`
+					<LeetTextarea>
+						{`
 import HorizontalLinkBar from '../shared-components/HorizontalLinkBar/HorizontalLinkBar';
 import LinkBarButton, { SmallLinkBarButton } from '../shared-components/HorizontalLinkBar/LinkBarButton';
 
@@ -259,9 +252,8 @@ import LinkBarButton, { SmallLinkBarButton } from '../shared-components/Horizont
 	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
 </SmallLinkBarButton>
 </HorizontalLinkBar>
-							`}
-						</code>
-					</pre>
+						`}
+					</LeetTextarea>
 				</section>
 			);
 		});
