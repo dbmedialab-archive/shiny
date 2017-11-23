@@ -10,7 +10,7 @@ import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBa
 import LinkBarLink from '../src/molecules/HorizontalLinkBar/LinkBarLink';
 import LinkBarButton, { SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 // import TagBar from '../shared-components/TagBar/TagBar';
-import theme from '../themes/default-theme';
+import theme from '../src/themes/default-theme';
 
 const { colors } = theme;
 
