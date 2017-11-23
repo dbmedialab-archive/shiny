@@ -4,7 +4,7 @@ import variables from './variables';
 const flexboxgrid = {
 	gridSize: 12,
 	gutterWidth: stripUnit(variables.horizontalBase), // rem
-	outerMargin: 2.0, // rem
+	outerMargin: 1.0, // rem
 	mediaQuery: 'only screen',
 	container: {
 		sm: 46.0, // rem

@@ -1,6 +1,6 @@
 import variables from './variables';
 import colors from './colors';
-import flexboxgrid from './grid';
+import flexboxgrid from './flexboxgrid';
 
 const global = `
   color: #222;
