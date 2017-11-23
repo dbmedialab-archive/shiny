@@ -12,11 +12,11 @@ const Figure = styled.figure`
 	`}
 
 	${props => props.float === 'left' && `
-		margin-right: 1.5rem;
+		margin-right: ${props => props.theme.variables.horizontalBase};
 	`}
 
 	${props => props.float === 'right' && `
-		margin-left: 1.5rem;
+		margin-left: ${props => props.theme.variables.horizontalBase};
 	`}
 `;
 
