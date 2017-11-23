@@ -4,6 +4,7 @@ const Kicker = styled.h1`
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
+	margin: 0;
 	padding: 0.6rem 0;
 	font-size: 1.3rem;
 	font-weight: bold;
