@@ -8,7 +8,7 @@ import FullWidthLinkBar from '../../src/molecules/HorizontalLinkBar/FullWidthLin
 import Button from '../../src/molecules/HorizontalLinkBar/LinkBarButton';
 
 import ThemeSelector from './ThemeSelector';
-import themes from '../../themes';
+import themes from '../../src/themes';
 
 class SiteSelection extends React.Component {
 	constructor() {
