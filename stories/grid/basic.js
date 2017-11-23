@@ -117,6 +117,8 @@ export default () => (
 
 		<LeetTextarea>
 			{`
+import { Row, Col } from 'shiny/src/atoms/Grid';
+
 <Row>
 	<Col xs={12}>xs-12</Col>
 </Row>
