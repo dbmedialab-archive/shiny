@@ -5,6 +5,7 @@ import typography from './Typography';
 import editorialMarking from './EditorialMarking';
 import horizontalLinkBar from './HorizontalLinkBar';
 import trysilPlug from './TrysilPlug';
+import floatImage from './FloatImage';
 
 introduction();
 
@@ -17,3 +18,4 @@ grid();
 // Molecules
 horizontalLinkBar();
 trysilPlug();
+floatImage();
