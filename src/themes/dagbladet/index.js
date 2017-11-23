@@ -1,5 +1,4 @@
 import colors from './colors';
-import grid from './grid';
 
 const global = `
   color: #222;
@@ -21,7 +20,6 @@ const theme = {
 	name: 'Dagbladet',
 	global,
 	colors,
-	grid,
 	variables,
 };
 
