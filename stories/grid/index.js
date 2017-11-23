@@ -12,10 +12,9 @@ import hide from './hide';
 import { SiteSelection } from '../storybook-components';
 import Grid from '../../src/atoms/Grid';
 
-
 export default () => {
 	storiesOf('Grid', module)
-		.addDecorator(stories => <SiteSelection><Grid flui>{stories()}</Grid></SiteSelection>)
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('Basic', basic)
 		.add('Responsive', responsive)
 		.add('Offsets', offsets)
