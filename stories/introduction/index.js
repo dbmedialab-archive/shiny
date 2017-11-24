@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { StoryBox, SiteSelection } from '../storybook-components';
+import Grid from '../../src/atoms/Grid';
+import { SiteSelection } from '../storybook-components';
 import Palette from './Palette';
 
 export default () => {
 	storiesOf('Welcome', module)
-		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('Palette', () => <Palette />);
 };
