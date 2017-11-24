@@ -8,6 +8,7 @@ import label from './typography/label';
 import heading from './typography/heading';
 import cite from './typography/cite';
 import publishedDate from './typography/publishedDate';
+import bodyText from './typography/bodyText';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -19,5 +20,6 @@ export default () => {
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('Cite', cite)
-		.add('Published date', publishedDate);
+		.add('Published date', publishedDate)
+		.add('Body text', bodyText);
 };
