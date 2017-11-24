@@ -1,7 +1,8 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 
-import { StoryBox, SiteSelection } from './storybook-components';
+import { SiteSelection } from './storybook-components';
+import Grid from '../src/atoms/Grid';
 
 import kicker from './editorialMarking/kicker';
 import bylineImage from './editorialMarking/bylineImage';
@@ -12,7 +13,7 @@ import bylineName from './editorialMarking/bylineName';
 
 export default () => {
 	storiesOf('Editorial marking', module)
-		.addDecorator(stories => <StoryBox><SiteSelection>{stories()}</SiteSelection></StoryBox>)
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('Kicker', kicker)
 		.add('Byline image', bylineImage)
 		.add('Byline name', bylineName);

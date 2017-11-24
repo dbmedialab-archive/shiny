@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { StoryBox, DemoContainer, SiteSelection } from './storybook-components';
+import { DemoContainer, SiteSelection } from './storybook-components';
+import Grid from '../src/atoms/Grid';
 
 import Heading, { HugeHeading } from '../src/atoms/Heading';
 
@@ -11,12 +12,9 @@ import LoadingSearchIcon from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
 	storiesOf('Loaders', DotLoader)
-		.addDecorator(stories => (
-			<StoryBox>
-				{stories()}
-			</StoryBox>
-		))
+		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 	/*
+	// @TODO Add story for NoonLoader
       .add('NoonLoader', () => {
         return (
           <section>

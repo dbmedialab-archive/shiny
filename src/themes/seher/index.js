@@ -20,6 +20,7 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 export default {
+	name: 'SeHer',
 	colors: {
 		type: '#272727',
 

@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import { Row, Col as GridCol } from '../../src/atoms/Grid';
+import Row from '../../src/atoms/Row';
+import GridCol from '../../src/atoms/Col';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
@@ -42,7 +43,8 @@ export default () => (
 
 		<LeetTextarea>
 			{`
-import { Row, Col } from 'shiny/src/atoms/Grid';
+import Row from 'shiny/src/atoms/Row';
+import Col from 'shiny/src/atoms/Col';
 
 <Row>
 	<Col xsOffset={11} xs={1}>offset-11 xs-1</Col>
