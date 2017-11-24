@@ -2,13 +2,13 @@ import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import Heading, { SmallHeading } from '../../src/atoms/Heading';
+import Heading, { HugeHeading } from '../../src/atoms/Heading';
 import BodyText from '../../src/atoms/BodyText';
 
 export default () => (
 	<section>
-		<Heading>Body text</Heading>
-		<SmallHeading>Preview</SmallHeading>
+		<HugeHeading>Body text</HugeHeading>
+		<Heading>Preview</Heading>
 		<BodyText>
 			SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske
 			barne- og ungdomsorganisasjoner (LNU). Dommen er anket. Rettssaken avdekket så omfattende juks
@@ -29,7 +29,7 @@ export default () => (
 			fortsatt lesbare sider, hvor kun det ytterste laget av papirark er ødelagt.
 		</BodyText>
 
-		<SmallHeading>Usage</SmallHeading>
+		<Heading>Usage</Heading>
 		<LeetTextarea>{`
 import BodyText from '/path/to/shiny/atoms/BodyText';
 
