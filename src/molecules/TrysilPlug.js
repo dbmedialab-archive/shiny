@@ -17,7 +17,7 @@ const TrysilPlug = ({
 	url,
 }) => (
 	<Article>
-		<BlockLink href="#">
+		<BlockLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
 			{image && <Image src={image} />}
 			<Heading headline>{title}</Heading>
