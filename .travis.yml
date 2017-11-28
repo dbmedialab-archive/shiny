@@ -8,7 +8,7 @@ before_install: yarn global add greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 
 script:
-  - "[[ $TRAVIS_PULL_REQUEST != "false" ]] && npm run snapshot"
-  - "npm test"
+  - [[ $TRAVIS_PULL_REQUEST != "false" ]] && npm run snapshot
+  - npm test
 
 after_script: greenkeeper-lockfile-upload
