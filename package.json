@@ -29,7 +29,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-styled-flexboxgrid": "^2.1.1",
-    "styled-components": "2.2.3"
+    "styled-components": "2.2.4"
   },
   "devDependencies": {
     "@percy-io/percy-storybook": "^1.2.6",
