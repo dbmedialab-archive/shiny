@@ -8,10 +8,13 @@ before_install: yarn global add greenkeeper-lockfile@1
 before_script: greenkeeper-lockfile-update
 
 script:
-  - echo $TRAVIS_NODE_VERSION
   - |
     if [ $TRAVIS_PULL_REQUEST == "false" ] && [ $TRAVIS_NODE_VERISON == "node" ]; then
       npm run snapshot;
+    else
+      echo "Skipping snapshot";
+      echo $TRAVIS_NODE_VERSION;
+      echo $TRAVIS_PULL_REQUEST;
     fi
   - npm test
 
