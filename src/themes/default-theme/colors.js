@@ -14,6 +14,8 @@ const colorsToShade= {
 	burgundy: '#862547',
 	brown: '#9a663f', // borrowed sols brown
 	sand: '#e5e1d9',
+	white: '#fff',
+	darkness: '#222222',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -36,10 +38,6 @@ const colors = {
 	grayTintLight: '#ECECEC',
 	grayTintLightDark: '#C0C0C0',
 	grayTintDark: '#767676',
-
-	white: '#fff',
-	darkness: '#222222',
-	darknessLight: '#453d3f',
 
 	button: {
 		background: '#ececec',

@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import BlockLink from '../../../atoms/BlockLink';
 
 export const VeryPrettyA = styled(BlockLink)`
- 	display: inline-block;
+	display: inline-block;
 
-	 ${(props) => {
+	${(props) => {
 		return (props.size === 'small')
 			? `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/2*${props.theme.variables.horizontalBase});`
 			: `padding: calc(3/4*${props.theme.variables.verticalBase}) ${props.theme.variables.horizontalBase};`;
@@ -74,7 +74,7 @@ export const VeryPrettyA = styled(BlockLink)`
 const Button = BlockLink.withComponent('button');
 const SomewhatPrettyButton = VeryPrettyA.withComponent(Button);
 export const VeryPrettyButton = styled(SomewhatPrettyButton)`
-  position: relative;
-  padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
-  padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
+	position: relative;
+	padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
+	padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
 	`;
