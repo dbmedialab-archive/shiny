@@ -5,11 +5,11 @@ import styled from 'styled-components';
 // Check out this syntax highlighter:
 // https://github.com/conorhastings/react-syntax-highlighter
 const LeetTextarea = styled.textarea`
-  width: 60rem;
-  height: 21rem;
-  background: black;
-  color: #48bf48;
-  font-family: monospace;
+	width: 60rem;
+	height: 21rem;
+	background: black;
+	color: #48bf48;
+	font-family: monospace;
 `;
 
 export default LeetTextarea;

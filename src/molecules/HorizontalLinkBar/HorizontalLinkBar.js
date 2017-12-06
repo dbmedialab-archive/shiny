@@ -8,58 +8,57 @@ import DontPushTheAdBoundaries from '../../atoms/DontPushTheAdBoundaries';
 import LinkBarItem from './LinkBarItem';
 
 const Gradient = styled.div`
-  background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: calc(100% - .1rem);
+	background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 3rem;
+	height: calc(100% - .1rem);
 `;
 
 const Nav = styled.nav`
-  background: ${props => props.background};
-  position: relative;
-  width: ${props => props.width};
+	background: ${props => props.background};
+	position: relative;
+	width: ${props => props.width};
 `;
 
 const Bar = styled.ul`
-   ${props => (props.shouldFlexChildren
+	${props => (props.shouldFlexChildren
 		? `
-      display: flex;
-      align-items: center;
-      ` : `
-      display: block;
-      `
-	)
-}
-   width: ${props => (props.shouldAdjustForNestedPadding
+			display: flex;
+			align-items: center;
+		` : `
+			display: block;
+		`
+	)}
+	width: ${props => (props.shouldAdjustForNestedPadding
 		? `calc(100% + 2*${props.theme.variables.horizontalBase})`
 		: '100%'
 	)};
-   margin: ${props => (props.shouldAdjustForNestedPadding ? `0 -${props.theme.variables.horizontalBase}` : '0')};
-   padding: ${props => (props.shouldHavePadding ? `0 calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
-   font-family: ${props => props.theme.variables.mainFont};
+	margin: ${props => (props.shouldAdjustForNestedPadding ? `0 -${props.theme.variables.horizontalBase}` : '0')};
+	padding: ${props => (props.shouldHavePadding ? `0 calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
+	font-family: ${props => props.theme.variables.mainFont};
 
 	background: ${props => props.background};
 
-   white-space: nowrap;
-   overflow: ${props => props.overflow};
+	white-space: nowrap;
+	overflow: ${props => props.overflow};
 
-   -webkit-overflow-scrolling: touch!important;
-   -ms-overflow-style: -ms-autohiding-scrollbar!important;
-   -ms-overflow-style: none;
-   position: relative;
+	-webkit-overflow-scrolling: touch!important;
+	-ms-overflow-style: -ms-autohiding-scrollbar!important;
+	-ms-overflow-style: none;
+	position: relative;
 
-   ::-webkit-scrollbar {
-      display: none;
-   }
+	::-webkit-scrollbar {
+		display: none;
+	}
 `;
 
 const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
-  padding-top: 0;
-  background: transparent;
-  align-items: center;
-  z-index: ${props => props.zIndex};
+padding-top: 0;
+background: transparent;
+align-items: center;
+z-index: ${props => props.zIndex};
 `;
 
 const NavWithOptionalConstrainer = ({
