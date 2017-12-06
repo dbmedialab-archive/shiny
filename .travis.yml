@@ -10,8 +10,6 @@ before_script: greenkeeper-lockfile-update
 script:
   - echo $TRAVIS_NODE_VERSION
   - |
-    # Only run percy on push builds
-    # Also, only run percy once per push
     if
       [ $TRAVIS_PULL_REQUEST == "false" ]
       && [ $TRAVIS_NODE_VERISON == "node" ]
