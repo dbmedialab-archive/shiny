@@ -9,7 +9,7 @@ before_script: greenkeeper-lockfile-update
 
 script:
   - |
-    if [ $TRAVIS_PULL_REQUEST != "false" ] && [ $TRAVIS_NODE_VERISON == "node" ]; then
+    if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERISON == "node" ]]; then
       npm run snapshot;
     else
       echo "Skipping snapshot";
