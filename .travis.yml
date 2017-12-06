@@ -10,7 +10,12 @@ before_script: greenkeeper-lockfile-update
 script:
   - echo $TRAVIS_NODE_VERSION
   - |
-    if [ $TRAVIS_PULL_REQUEST == "false"]; then
+    # Only run percy on push builds
+    # Also, only run percy once per push
+    if
+      [ $TRAVIS_PULL_REQUEST == "false" ]
+      && [ $TRAVIS_NODE_VERISON == "node" ]
+    ; then
       npm run snapshot;
     fi
   - npm test
