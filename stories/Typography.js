@@ -9,6 +9,7 @@ import heading from './typography/heading';
 import cite from './typography/cite';
 import publishedDate from './typography/publishedDate';
 import bodyText from './typography/bodyText';
+import lunchButton from './typography/lunch-button';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -21,5 +22,6 @@ export default () => {
 		.add('Heading', heading)
 		.add('Cite', cite)
 		.add('Published date', publishedDate)
-		.add('Body text', bodyText);
+		.add('Body text', bodyText)
+		.add('LunchButton', lunchButton);
 };
