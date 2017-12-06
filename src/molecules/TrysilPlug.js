@@ -32,6 +32,7 @@ const TrysilPlug = ({
 		</BlockLink>
 	</Article>
 );
+
 TrysilPlug.propTypes = {
 	kicker: PropTypes.string,
 	title: PropTypes.string,
