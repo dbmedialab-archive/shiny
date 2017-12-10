@@ -10,9 +10,13 @@ before_script: greenkeeper-lockfile-update
 script:
   - |
     if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
+      echo "Sending PR snapshots to Percy";
+      npm run snapshot;
+    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+      echo "Sending master build snapshots to Percy";
       npm run snapshot;
     else
-      echo "Skipping snapshot";
+      echo "Skipping snapshot. Node version and pull request:";
       echo $TRAVIS_NODE_VERSION;
       echo $TRAVIS_PULL_REQUEST;
     fi
