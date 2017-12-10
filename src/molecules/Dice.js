@@ -46,7 +46,7 @@ const Dice = ({
 	);
 };
 
-Dice.propTypes ={
+Dice.propTypes = {
 	borderRadius: PropTypes.string,
 	color: PropTypes.string,
 	faceShade: PropTypes.oneOf(['', 'Dark', 'Light', 'Lighter']),
