@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
@@ -13,8 +14,87 @@ export default () => (
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Dice</HugeHeading>
-				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphore.</p>
+				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphor.</p>
+				<SmallHeading>Usage</SmallHeading>
+				<LeetTextarea>
+					{`
+import Dice from '/path/to/shiny/atoms/Dice';
+
+<Dice value={1} />
+					`}
+				</LeetTextarea>
+				<SmallHeading>Props</SmallHeading>
+				<table>
+					<thead>
+						<th>Prop</th>
+						<th>Description</th>
+						<th>Required/optional</th>
+						<th>Type</th>
+						<th>default</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>value</td>
+							<td>How many pips there should be on the selected side of dice</td>
+							<td>Required</td>
+							<td>number (1-6)</td>
+							<td />
+						</tr>
+						<tr>
+							<td>color</td>
+							<td>The color of the backfill of the face. Could be any of the shaded colors defined in the
+								theme's color section.
+							</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"primary"</td>
+						</tr>
+						<tr>
+							<td>faceShade</td>
+							<td>The face of the dice has a shade. This prop allows you to specify which </td>
+							<td>optional</td>
+							<td>one of "", "Dark", "Light", "Lighter"</td>
+							<td>"Dark"</td>
+						</tr>
+						<tr>
+							<td>pipColor</td>
+							<td>The color of the pips (dots) on the dice. Could be any of the colors defined in your theme's
+								color section.
+							</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"white"</td>
+						</tr>
+						<tr>
+							<td>size</td>
+							<td>Width and height of the dice.</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"2.4rem"</td>
+						</tr>
+						<tr>
+							<td>borderRadius</td>
+							<td>You can specify a border-radius if you'd like your dice to have rounded corner. Include a as
+								well, for example ".4rem" or "10%".
+							</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"0"</td>
+						</tr>
+						<tr>
+							<td>theme</td>
+							<td>The theme prop will be provided by styled-components' ThemeProvider.</td>
+							<td>required</td>
+							<td>object</td>
+							<td>default theme</td>
+						</tr>
+					</tbody>
+				</table>
 			</Col>
+		</Row>
+
+		<Row>
+			<Col xs={12}><SmallHeading>Demo</SmallHeading></Col>
 		</Row>
 
 		<Row>
@@ -62,17 +142,5 @@ export default () => (
 		</Row>
 
 
-		<SmallHeading>Usage</SmallHeading>
-		<LeetTextarea>{`
- import Dice from '/path/to/shiny/atoms/Dice';
-
- <p>Og det faktum at den nå eksisterer som en kinofilm med et
- budsjett på 50 millioner dollar, er ugjendrivelig bevis på at vi
- lever i en tid der Hollywood langsomt og udramatisk er i ferd
- med å kveles av kommersialismens kalde dødsgrep.</p>
-
- <Dice value="1" />
-            `}
-		</LeetTextarea>
 	</section>
 );
