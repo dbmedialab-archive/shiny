@@ -2,27 +2,67 @@ import React from 'react';
 
 import LeetTextarea from '../../src/atoms/LeetTextarea';
 
-import Heading from '../../src/atoms/Heading';
-import Dice from '../../src/atoms/Dice';
+import Row from '../../src/atoms/Row';
+import Col from '../../src/atoms/Col';
+
+import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+import Dice from '../../src/molecules/Dice';
 
 export default () => (
 	<section>
-		<Heading>Dice</Heading>
+		<Row>
+			<Col xs={12}>
+				<HugeHeading>Dice</HugeHeading>
+				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphore.</p>
+			</Col>
+		</Row>
 
-		<Dice value={1} />
-		<Dice value={2} />
-		<Dice value={3} />
-		<Dice value={4} />
-		<Dice value={5} />
-		<Dice value={6} />
+		<Row>
+			<Col xs><Dice value={1} size="100%" /></Col>
+			<Col xs><Dice value={2} size="100%" /></Col>
+			<Col xs><Dice value={3} size="100%" /></Col>
+			<Col xs><Dice value={4} size="100%" /></Col>
+			<Col xs><Dice value={5} size="100%" /></Col>
+			<Col xs><Dice value={6} size="100%" /></Col>
 
-		<Dice value={1} size="20rem" />
-		<Dice value={2} size="20rem" color="yellowLighter" pipColor="purpleDark" />
-		<Dice value={3} size="20rem" color="secondary" />
-		<Dice value={4} size="20rem" color="teal" />
+			<Col xs><Dice value={1} size="100%" color="secondary" /></Col>
+			<Col xs><Dice value={2} size="100%" color="secondary" /></Col>
+			<Col xs><Dice value={3} size="100%" color="secondary" /></Col>
+			<Col xs><Dice value={4} size="100%" color="secondary" /></Col>
+			<Col xs><Dice value={5} size="100%" color="secondary" /></Col>
+			<Col xs><Dice value={6} size="100%" color="secondary" /></Col>
+		</Row>
+
+		<Row>
+			<Col xs><Dice value={1} color="pink"   size="100%" /></Col>
+			<Col xs><Dice value={2} color="purple" size="100%" /></Col>
+			<Col xs><Dice value={3} color="blue"   size="100%" /></Col>
+			<Col xs><Dice value={4} color="teal"   size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={5} color="green"  size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={6} color="yellow" size="100%" borderRadius="10%" /></Col>
+		</Row>
+
+		<Row>
+			<Col xs><Dice value={2} color="orange"   size="100%" /></Col>
+			<Col xs><Dice value={2} color="navy"     size="100%" /></Col>
+			<Col xs><Dice value={2} color="burgundy" size="100%" /></Col>
+			<Col xs><Dice value={2} color="brown"    size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={2} color="sand"     size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={2} color="darkness" size="100%" borderRadius="10%" /></Col>
+		</Row>
+
+		<Row>
+			<Col xs><Dice value={2} size="100%" color="yellowLight" faceShade="Lighter" pipColor="purpleDark" /></Col>
+			<Col xs><Dice value={3} size="100%" color="secondary"                       pipColor="primary" /></Col>
+			<Col xs><Dice value={4} size="100%" color="teal"                            pipColor="yellow" /></Col>
+		</Row>
+		<Row>
+			<Col xs={6}><Dice value={6} size="100%" borderRadius="10%" /></Col>
+			<Col xs={6}><Dice value={6} size="100%" borderRadius="10%" faceShade="Light" /></Col>
+		</Row>
 
 
-		<Heading>Usage</Heading>
+		<SmallHeading>Usage</SmallHeading>
 		<LeetTextarea>{`
  import Dice from '/path/to/shiny/atoms/Dice';
 
