@@ -1,8 +1,8 @@
 {
-  "name": "aller-styleguide",
+  "name": "@aller/shiny",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "build-storybook",
     "clean": "rm -rf storybook-static",
@@ -23,6 +23,7 @@
     "@aller/eslint-config-aller": "0.5.2",
     "@storybook/addon-links": "^3.2.16",
     "@storybook/react": "3.2.17",
+    "@types/react": "^16.0.28",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "polished": "1.9.0",
     "prop-types": "15.6.0",
@@ -39,5 +40,6 @@
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.2",
     "eslint-plugin-react": "7.5.1"
-  }
+  },
+  "types": "./types/index.d.ts"
 }
