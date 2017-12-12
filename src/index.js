@@ -1,3 +1,6 @@
+// Themes
+export { themes }                  from './themes';
+
 // Atoms
 export { Article                 } from './atoms/Article';
 export { BlockLink               } from './atoms/BlockLink';
