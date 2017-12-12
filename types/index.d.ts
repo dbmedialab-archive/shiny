@@ -1,37 +1,70 @@
 import * as React from 'react';
+import {
+	StatelessComponent,
+	ComponentClass,
+	PureComponent,
+	ReactElement,
+	Component,
+} from 'react';
 
-export = TrysilPlug;
-export as namespace TrysilPlug;
+import * as styled from 'styled-components'
 
-
-
-declare module TrysilPlug {
-    interface TrysilPlugProps {
-        kicker?: string,
-        title?: string,
-        subtitle?: string,
-        image?: string,
-        labels?: string[],
-        url: string,
-    }
-
-    type TrysilPlug = React.Component<TrysilPlugProps,{}>;
-    var TrysilPlug: React.ComponentClass<TrysilPlugProps>;
+interface Label {
+	text: string;
+	color: string;
 }
 
-/*
- * Why does this not work?
- */
-/*
-export = Col;
-export as namespace Col;
-
-declare namespace TrysilPlug {
-    interface DisplayProps {
-        text: string;
-    }
-
-    type Col = React.ClassicComponent<{},{}>;
-    var Col: React.ClassicComponentClass<void>;
+interface TrysilPlugProps {
+	kicker?: string;
+	title?: string;
+	subtitle?: string;
+	image?: string;
+	labels?: Label[];
+	url: string;
 }
-*/
+declare class TrysilPlug extends PureComponent<TrysilPlugProps> {}
+
+interface ColProps {
+	xs?: boolean | number;
+	sm?: boolean | number;
+	md?: boolean | number;
+	lg?: boolean | number;
+	reverse?: boolean;
+}
+declare class Col extends PureComponent<ColProps, any> {}
+
+interface RowProps {
+}
+declare class Row extends PureComponent<RowProps, any> {}
+
+interface GridProps {
+}
+declare class Grid extends PureComponent<GridProps, any> {}
+
+interface LinkBarLinkProps {
+	linkText?: string;
+	url?: string;
+	isActive?: boolean;
+	activeBackground?: string;
+	size?: string; // oneOf(['small', 'large']);
+	useUnderline?: boolean;
+}
+declare class LinkBarLink extends PureComponent<LinkBarLinkProps, any> {}
+
+interface HorizontalLinkBarProps {
+	background?: string;
+	overflow?: string;
+	shouldAdjustForNestedPadding?: boolean;
+	shouldFlexChildren?: boolean;
+	shouldFadeOut?: boolean;
+	width?: string;
+	shouldHavePadding?: boolean;
+	zIndex?: number;
+	isTopLevelComponent?: boolean;
+}
+declare class HorizontalLinkBar extends PureComponent<HorizontalLinkBarProps, any> {}
+
+interface FullWidthLinkBarProps extends HorizontalLinkBarProps {
+	fixed?: boolean;
+}
+declare class FullWidthLinkBar extends PureComponent<FullWidthLinkBarProps, any> {}
