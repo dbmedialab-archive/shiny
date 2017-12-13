@@ -62,7 +62,7 @@ const HugeHeading = styled(Heading)`
 `;
 
 export {
-	Heading,
+	LargeHeading as Heading,
 
 	SmallHeading,
 	MediumHeading,
