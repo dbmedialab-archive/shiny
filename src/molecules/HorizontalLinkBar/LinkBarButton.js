@@ -29,4 +29,4 @@ LinkBarButton.defaultProps = {
 };
 
 export const SmallLinkBarButton = props => <LinkBarButton size="small" {...props} />;
-export default LinkBarButton;
+export { LinkBarButton };

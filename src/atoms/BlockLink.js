@@ -10,4 +10,4 @@ const BlockLink = styled.a`
 	}
 `;
 
-export default BlockLink;
+export { BlockLink };

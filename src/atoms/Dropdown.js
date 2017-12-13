@@ -15,4 +15,4 @@ const Dropdown = styled.select`
 	font-family: inherit;
 `;
 
-export default Dropdown;
+export { Dropdown };

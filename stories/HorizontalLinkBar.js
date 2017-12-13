@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 import { SiteSelection, DemoContainer } from './storybook-components';
 
-import Heading, { HugeHeading } from '../src/atoms/Heading';
-import Grid from '../src/atoms/Grid';
-import LeetTextarea from '../src/atoms/LeetTextarea';
+import { Heading, HugeHeading } from '../src/atoms/Heading';
+import { Grid } from '../src/atoms/Grid';
+import { LeetTextarea } from '../src/atoms/LeetTextarea';
 
 // HorizontalLinkBar
 import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -39,9 +39,9 @@ export default () => {
 					<LeetTextarea>
 						{`
 <HorizontalLinkBar background={colors.white}>
-<LinkBarLink linkText="One" url="https://example.com" isActive />
-<LinkBarLink linkText="Two" url="https://example.com" />
-<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+  <LinkBarLink linkText="One" url="https://example.com" isActive />
+  <LinkBarLink linkText="Two" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
 					</LeetTextarea>

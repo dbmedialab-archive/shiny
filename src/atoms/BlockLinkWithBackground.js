@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { unshadeColorString } from '../utils/unshade-color-string';
 
 // Atoms
-import BlockLink from '../atoms/BlockLink';
+import { BlockLink } from '../atoms/BlockLink';
 
 const BlockLinkWithBackground = styled(BlockLink)`
 	flex: 1;
@@ -33,5 +33,4 @@ BlockLinkWithBackground.propTypes = {
 	}),
 };
 
-export default BlockLinkWithBackground;
 export { BlockLinkWithBackground };

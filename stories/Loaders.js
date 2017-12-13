@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 import { DemoContainer, SiteSelection } from './storybook-components';
-import Grid from '../src/atoms/Grid';
+import { Grid } from '../src/atoms/Grid';
 
-import Heading, { HugeHeading } from '../src/atoms/Heading';
+import { Heading, HugeHeading } from '../src/atoms/Heading';
 
 // Loaders
-import DotLoader from '../src/atoms/loaders/DotLoader';
-// import NoonLoader from '../shared-components/NoonLoader/NoonLoader';
-import LoadingSearchIcon from '../src/atoms/loaders/LoadingSearchIcon';
+import { DotLoader } from '../src/atoms/loaders/DotLoader';
+// import { NoonLoader } from '../shared-components/NoonLoader/NoonLoader';
+import { LoadingSearchIcon } from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
 	storiesOf('Loaders', DotLoader)

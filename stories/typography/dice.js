@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import Row from '../../src/atoms/Row';
-import Col from '../../src/atoms/Col';
+import { Row } from '../../src/atoms/Row';
+import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
 import Dice from '../../src/molecules/Dice';
@@ -18,7 +18,7 @@ export default () => (
 				<SmallHeading>Usage</SmallHeading>
 				<LeetTextarea>
 					{`
-import Dice from '/path/to/shiny/atoms/Dice';
+import { Dice } from '/path/to/shiny/atoms/Dice';
 
 <Dice value={1} />
 					`}

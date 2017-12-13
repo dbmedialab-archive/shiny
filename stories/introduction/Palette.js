@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Heading, { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+import { Heading, HugeHeading, SmallHeading } from '../../src/atoms/Heading';
 
-import ThemeName from '../../src/atoms/ThemeName';
-import ColorBox from '../../src/atoms/ColorBox';
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { ThemeName } from '../../src/atoms/ThemeName';
+import { ColorBox } from '../../src/atoms/ColorBox';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
 const FlexBox = styled.section`
   display: flex;

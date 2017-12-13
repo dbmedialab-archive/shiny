@@ -25,7 +25,7 @@ const FaceShade = withTheme(({ theme, color, faceShade }) => (<path
 	]}
 />));
 
-const Dice = ({
+const Dice = withTheme(({
 	borderRadius,
 	size,
 	theme,
@@ -44,7 +44,7 @@ const Dice = ({
 			</svg>
 		</InlineBlock>
 	);
-};
+});
 
 Dice.propTypes = {
 	borderRadius: PropTypes.string,
@@ -63,4 +63,4 @@ Dice.defaultProps = {
 	size: '2.4rem',
 };
 
-export default withTheme(Dice);
+export { Dice };

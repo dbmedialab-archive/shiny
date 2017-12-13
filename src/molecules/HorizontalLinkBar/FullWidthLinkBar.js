@@ -9,4 +9,4 @@ const FullWidthLinkBar = styled(HorizontalLinkBar)`
 	left: 0;
 `;
 
-export default FullWidthLinkBar;
+export { FullWidthLinkBar };

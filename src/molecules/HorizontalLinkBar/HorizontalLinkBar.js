@@ -1,9 +1,9 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
-import DontPushTheAdBoundaries from '../../atoms/DontPushTheAdBoundaries';
+import { DontPushTheAdBoundaries } from '../../atoms/DontPushTheAdBoundaries';
 
 import LinkBarItem from './LinkBarItem';
 
@@ -81,13 +81,13 @@ const NavWithOptionalConstrainer = ({
 };
 
 NavWithOptionalConstrainer.propTypes = {
-	background: propTypes.string,
-	width: propTypes.string.isRequired,
-	zIndex: propTypes.number.isRequired,
-	isTopLevelComponent: propTypes.bool.isRequired,
-	children: propTypes.oneOfType([
-		propTypes.arrayOf(propTypes.node),
-		propTypes.node,
+	background: PropTypes.string,
+	width: PropTypes.string.isRequired,
+	zIndex: PropTypes.number.isRequired,
+	isTopLevelComponent: PropTypes.bool.isRequired,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
 	]).isRequired,
 };
 NavWithOptionalConstrainer.defaultProps = {
@@ -125,19 +125,19 @@ const HorizontalLinkBar = ({
 };
 
 HorizontalLinkBar.propTypes = {
-	background: propTypes.string,
-	children: propTypes.oneOfType([
-		propTypes.arrayOf(propTypes.node),
-		propTypes.node,
+	background: PropTypes.string,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
 	]),
-	overflow: propTypes.string,
-	shouldAdjustForNestedPadding: propTypes.bool,
-	shouldFlexChildren: propTypes.bool,
-	shouldFadeOut: propTypes.bool,
-	width: propTypes.string,
-	shouldHavePadding: propTypes.bool,
-	zIndex: propTypes.number,
-	isTopLevelComponent: propTypes.bool,
+	overflow: PropTypes.string,
+	shouldAdjustForNestedPadding: PropTypes.bool,
+	shouldFlexChildren: PropTypes.bool,
+	shouldFadeOut: PropTypes.bool,
+	width: PropTypes.string,
+	shouldHavePadding: PropTypes.bool,
+	zIndex: PropTypes.number,
+	isTopLevelComponent: PropTypes.bool,
 };
 
 HorizontalLinkBar.defaultProps = {
@@ -153,4 +153,4 @@ HorizontalLinkBar.defaultProps = {
 	isTopLevelComponent: true,
 };
 
-export default HorizontalLinkBar;
+export { HorizontalLinkBar };

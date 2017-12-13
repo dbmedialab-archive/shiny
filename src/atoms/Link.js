@@ -4,4 +4,4 @@ const Link = styled.a`
 	color: #222;
 `;
 
-export default Link;
+export { Link };

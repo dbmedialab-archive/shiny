@@ -11,5 +11,4 @@ const LunchKicker = styled.span`
 	font-family: ${props => props.theme.variables.mainFont};
 `;
 
-export default LunchKicker;
 export { LunchKicker };

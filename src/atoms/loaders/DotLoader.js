@@ -54,8 +54,10 @@ const DotLoader = styled.div`
 	}
 `;
 
-export default () => (
+const RealDotLoader = () => (
 	<DotLoaderContainer>
 		<DotLoader />
 	</DotLoaderContainer>
 );
+
+export { RealDotLoader as DotLoader };

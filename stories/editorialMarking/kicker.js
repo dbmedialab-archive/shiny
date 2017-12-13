@@ -5,10 +5,10 @@ import {
 	SiteSelection,
 } from '../storybook-components';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import Kicker from '../../src/atoms/Kicker';
-import NativeAdKicker from '../../src/atoms/NativeAdKicker';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Kicker } from '../../src/atoms/Kicker';
+import { NativeAdKicker } from '../../src/atoms/NativeAdKicker';
 
 export default () => (
 	<SiteSelection>
@@ -29,8 +29,8 @@ export default () => (
 			<Heading>Usage</Heading>
 			<LeetTextarea>
 				{`
-import Kicker from '/path/to/shiny/atoms/Kicker';
-import NativeAdKicker from '/path/to/shiny/atoms/NativeAdKicker';
+import { Kicker } from '/path/to/shiny/atoms/Kicker';
+import { NativeAdKicker } from '/path/to/shiny/atoms/NativeAdKicker';
 
 <Kicker>Kicker</Kicker>
 <Kicker color="teal">Kicker</Kicker>

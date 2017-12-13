@@ -1,5 +1,5 @@
 // Themes
-export { themes }                  from './themes';
+export { themes                  } from './themes';
 
 // Atoms
 export { Article                 } from './atoms/Article';
@@ -34,6 +34,7 @@ export { Quote                   } from './atoms/Quote';
 export { Row                     } from './atoms/Row';
 export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
+export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
 
 // Molecules
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';

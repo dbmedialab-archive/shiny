@@ -2,10 +2,10 @@ import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
 // Typography
-import Heading, {
+import { Heading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,

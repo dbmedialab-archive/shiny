@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { merge } from 'aurora-deep-slice-merge';
 
-// import Button from '../src/atoms/Button';
+// import { Button } from '../src/atoms/Button';
 import FullWidthLinkBar from '../../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
 import Button from '../../src/molecules/HorizontalLinkBar/LinkBarButton';
 

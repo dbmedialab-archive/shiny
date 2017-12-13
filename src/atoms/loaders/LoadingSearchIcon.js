@@ -36,4 +36,4 @@ LoadingSearchIcon.propTypes = {
 	color: propTypes.string,
 };
 
-export default LoadingSearchIcon;
+export { LoadingSearchIcon };

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import Row from '../../src/atoms/Row';
-import GridCol from '../../src/atoms/Col';
+import { Row } from '../../src/atoms/Row';
+import { GridCol } from '../../src/atoms/Col';
 import BlueBox, { BluerBox } from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
@@ -84,8 +84,8 @@ export default () => (
 
 		<LeetTextarea>
 			{`
-import Row from 'shiny/src/atoms/Row';
-import Col from 'shiny/src/atoms/Col';
+import { Row } from 'shiny/src/atoms/Row';
+import { Col } from 'shiny/src/atoms/Col';
 
 <Row>
 	<Col xs={12}>

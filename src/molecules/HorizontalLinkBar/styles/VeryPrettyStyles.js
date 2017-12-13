@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
-import BlockLink from '../../../atoms/BlockLink';
+import { BlockLink } from '../../../atoms/BlockLink';
 
 export const VeryPrettyA = styled(BlockLink)`
 	display: inline-block;

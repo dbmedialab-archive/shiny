@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import Cite from '../../src/atoms/Cite';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Cite } from '../../src/atoms/Cite';
 
 export default () => (
 	<section>
@@ -16,7 +16,7 @@ export default () => (
 
 		<Heading>Usage</Heading>
 		<LeetTextarea>{`
-import Cite from '/path/to/shiny/atoms/Cite';
+import { Cite } from '/path/to/shiny/atoms/Cite';
 
 <p>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
 er det krystallklare opplysninger om omfattende juks og svindel av offentlige.</p>

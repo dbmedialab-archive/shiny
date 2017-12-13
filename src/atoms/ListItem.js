@@ -4,4 +4,4 @@ const ListItem = styled.li`
 
 `;
 
-export default ListItem;
+export { ListItem };

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
 import FloatImage from '../../src/molecules/FloatImage';
 

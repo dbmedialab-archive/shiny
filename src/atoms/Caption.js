@@ -4,4 +4,4 @@ const Caption = styled.caption`
 
 `;
 
-export default Caption;
+export { Caption };

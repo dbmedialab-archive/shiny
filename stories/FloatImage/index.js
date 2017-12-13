@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { SiteSelection } from '../storybook-components';
-import Grid from '../../src/atoms/Grid';
+import { Grid } from '../../src/atoms/Grid';
 
 import basic from './basic';
 import floatLeft from './floatLeft';

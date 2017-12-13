@@ -45,4 +45,4 @@ ColorBox.defaultProps = {
 	textColor: 'dark',
 };
 
-export default ColorBox;
+export { ColorBox };

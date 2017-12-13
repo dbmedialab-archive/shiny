@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import Label from '../../src/atoms/Label';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Label } from '../../src/atoms/Label';
 
 export default () => (
 	<section>
@@ -16,7 +16,7 @@ export default () => (
 		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
-import Label from '/path/to/src/atoms/Label';
+import { Label } from '/path/to/src/atoms/Label';
 
 <Label color="primary">Primary</Label>
 <Label color="teal">Teal</Label>

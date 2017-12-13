@@ -18,4 +18,4 @@ const DontPushTheAdBoundaries = styled.div`
 	}
 `;
 
-export default DontPushTheAdBoundaries;
+export { DontPushTheAdBoundaries };

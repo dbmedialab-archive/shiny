@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import { merge } from 'aurora-deep-slice-merge';
 
-import GlobalStyle from '../../src/atoms/GlobalStyle';
+import { GlobalStyle } from '../../src/atoms/GlobalStyle';
 import themes from '../../src/themes';
 
 injectGlobal`

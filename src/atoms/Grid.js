@@ -8,4 +8,4 @@ const Grid = styled(LibGrid)`
 	padding-left: ${props => props.theme.flexboxgrid.outerMargin};
 `;
 
-export default Grid;
+export { Grid };
