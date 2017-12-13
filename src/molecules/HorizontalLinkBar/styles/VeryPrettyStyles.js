@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 import { BlockLink } from '../../../atoms/BlockLink';
 

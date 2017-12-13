@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { merge } from 'aurora-deep-slice-merge';
 
 // import { Button } from '../src/atoms/Button';
-import FullWidthLinkBar from '../../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
-import Button from '../../src/molecules/HorizontalLinkBar/LinkBarButton';
+import { FullWidthLinkBar } from '../../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
+import { Button } from '../../src/molecules/HorizontalLinkBar/LinkBarButton';
 
-import ThemeSelector from './ThemeSelector';
-import themes from '../../src/themes';
+import { ThemeSelector } from './ThemeSelector';
+import { themes } from '../../src/themes';
 
 class SiteSelection extends React.Component {
 	constructor() {
@@ -122,4 +122,4 @@ SiteSelection.defaultProps = {
 	children: [],
 };
 
-export default SiteSelection;
+export { SiteSelection };

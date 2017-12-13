@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 import { DontPushTheAdBoundaries } from '../../atoms/DontPushTheAdBoundaries';
 
-import LinkBarItem from './LinkBarItem';
+import { LinkBarItem } from './LinkBarItem';
 
 const Gradient = styled.div`
 	background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);
