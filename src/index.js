@@ -35,6 +35,7 @@ export { Row                     } from './atoms/Row';
 export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
 export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
+export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
 
 // Molecules
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';
