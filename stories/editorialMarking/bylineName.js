@@ -2,7 +2,7 @@ import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 
 import { Image } from '../../src/atoms/Image';
@@ -23,7 +23,7 @@ export default () => (
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>
+		<Code>
 			{`
 import {
 	Image,
@@ -36,6 +36,6 @@ import {
 />
 <BylineName>Marie Simonsen</BylineName>
 			`}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

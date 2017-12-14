@@ -4,7 +4,7 @@ import { SiteSelection, DemoContainer } from './storybook-components';
 
 import { Heading, HugeHeading } from '../src/atoms/Heading';
 import { Grid } from '../src/atoms/Grid';
-import { LeetTextarea } from '../src/atoms/LeetTextarea';
+import { Code } from '../src/atoms/Code';
 
 // HorizontalLinkBar
 import { HorizontalLinkBar } from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -36,7 +36,7 @@ export default () => {
 
 
 					<Heading>Usage</Heading>
-					<LeetTextarea>
+					<Code>
 						{`
 import {
 	HorizontalLinkBar,
@@ -49,7 +49,7 @@ import {
   <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
-					</LeetTextarea>
+					</Code>
 				</section>
 			);
 		})
@@ -74,7 +74,7 @@ import {
 
 
 					<Heading>Usage</Heading>
-					<LeetTextarea>
+					<Code>
 						{`
 import {
 	HorizontalLinkBar,
@@ -87,7 +87,7 @@ import {
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </FullWidthLinkBar>
 						`}
-					</LeetTextarea>
+					</Code>
 				</section>
 			);
 		})
@@ -108,7 +108,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<LeetTextarea>
+					<Code>
 						{`
 import {
 	HorizontalLinkBar,
@@ -121,7 +121,7 @@ import {
 	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
-					</LeetTextarea>
+					</Code>
 
 					<Heading>Alternative state indication</Heading>
 					<p>You can remove the underline and change the active background with props.</p>
@@ -152,7 +152,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<LeetTextarea>
+					<Code>
 						{`
 import {
 	HorizontalLinkBar,
@@ -181,7 +181,7 @@ import {
 	/>
 </HorizontalLinkBar>
 						`}
-					</LeetTextarea>
+					</Code>
 				</section>
 			);
 		})
@@ -237,7 +237,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<LeetTextarea>
+					<Code>
 						{`
 import {
 	HorizontalLinkBar,
@@ -276,7 +276,7 @@ import {
 	</SmallLinkBarButton>
 </HorizontalLinkBar>
 						`}
-					</LeetTextarea>
+					</Code>
 				</section>
 			);
 		});

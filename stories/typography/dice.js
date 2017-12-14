@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
@@ -16,13 +16,13 @@ export default () => (
 				<HugeHeading>Dice</HugeHeading>
 				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphor.</p>
 				<SmallHeading>Usage</SmallHeading>
-				<LeetTextarea>
+				<Code>
 					{`
 import { Dice } from '@aller/shiny';
 
 <Dice value={1} />
 					`}
-				</LeetTextarea>
+				</Code>
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>

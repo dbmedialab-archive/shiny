@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { BodyText } from '../../src/atoms/BodyText';
@@ -30,7 +30,7 @@ export default () => (
 		</BodyText>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>{`
+		<Code>{`
 import { BodyText } from '@aller/shiny';
 
 <BodyText>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske
@@ -47,6 +47,6 @@ inneholdt ikke lenger lesbare dokumenter, men er omgjort til forvridde plastrest
 elva ligger små og store papirbiter omgjort til celluloseklumper. Men et par av permene har
 fortsatt lesbare sider, hvor kun det ytterste laget av papirark er ødelagt.</BodyText>
    `}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

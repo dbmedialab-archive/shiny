@@ -2,7 +2,7 @@ import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 // Typography
 import { Heading,
@@ -37,7 +37,7 @@ export default () => (
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>
+		<Code>
 			{`
 import {
 	SmallHeading,
@@ -53,6 +53,6 @@ import {
 <XLargeHeading>Dette er en ekstra stor overskrift</XLargeHeading>
 <HugeHeading>Dette er en ekstra stor overskrift</HugeHeading>
 			`}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

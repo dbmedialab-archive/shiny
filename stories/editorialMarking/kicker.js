@@ -5,7 +5,7 @@ import {
 	SiteSelection,
 } from '../storybook-components';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Kicker } from '../../src/atoms/Kicker';
 import { NativeAdKicker } from '../../src/atoms/NativeAdKicker';
@@ -30,7 +30,7 @@ export default () => (
 			</DemoContainer>
 
 			<Heading>Usage</Heading>
-			<LeetTextarea>
+			<Code>
 				{`
 import {
 	Kicker,
@@ -42,7 +42,7 @@ import {
 <Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
 <NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 				`}
-			</LeetTextarea>
+			</Code>
 			<p>
 				The <code>color</code> and <code>textColor</code> props can be any of the colors names in the palette.
 				They default to &quot;primary&quot; and &quot;white&quot;.
