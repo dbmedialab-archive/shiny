@@ -14,8 +14,8 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<Image src="http://styleguide.dagbladet.no/assets/test/large-q60.jpg" />
-			<BylineImage src="http://www.dagbladet.no/meninger/assets/images/bylines/msi.png" />
+			<Image src="https://styleguide.dagbladet.no/assets/test/large-q60.jpg" />
+			<BylineImage src="https://styleguide.dagbladet.no/assets/bylines/msi.png" />
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
@@ -26,8 +26,8 @@ import {
 	BylineImage,
 } from '@aller/shiny';
 
-<Image src="http://styleguide.dagbladet.no/assets/test/large-q60.jpg" />
-<BylineImage src="http://www.dagbladet.no/meninger/assets/images/bylines/msi.png" />
+<Image src="https://styleguide.dagbladet.no/assets/test/large-q60.jpg" />
+<BylineImage src="https://styleguide.dagbladet.no/assets/bylines/msi.png" />
 			`}
 		</LeetTextarea>
 	</section>
