@@ -45,7 +45,7 @@ import {
 	LargeHeading,
 	XLargeHeading,
 	HugeHeading
-} from '/path/to/shiny/atoms/Heading';
+} from '@aller/shiny';
 
 <SmallHeading>Dette er en liten overskrift</SmallHeading>
 <MediumHeading>Dette er en middels overskrift</MediumHeading>

@@ -15,7 +15,7 @@ export default () => (
 
 		<Heading>Usage</Heading>
 		<LeetTextarea>{`
-import { PublishedDate } from '/path/to/shiny/atoms/PublishedDate';
+import { PublishedDate } from '@aller/shiny';
 
 <PublishedDate>Publisert 21. november 2017</PublishedDate>
 <PublishedDate hide>Publisert 21. november 2017</PublishedDate>

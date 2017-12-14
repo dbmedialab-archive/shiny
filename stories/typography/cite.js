@@ -16,7 +16,7 @@ export default () => (
 
 		<Heading>Usage</Heading>
 		<LeetTextarea>{`
-import { Cite } from '/path/to/shiny/atoms/Cite';
+import { Cite } from '@aller/shiny';
 
 <p>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
 er det krystallklare opplysninger om omfattende juks og svindel av offentlige.</p>

@@ -18,7 +18,7 @@ export default () => (
 				<SmallHeading>Usage</SmallHeading>
 				<LeetTextarea>
 					{`
-import { Dice } from '/path/to/shiny/atoms/Dice';
+import { Dice } from '@aller/shiny';
 
 <Dice value={1} />
 					`}

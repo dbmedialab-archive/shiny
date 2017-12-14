@@ -47,8 +47,10 @@ export default () => (
 
 		<LeetTextarea>
 			{`
-import { Row } from 'shiny/src/atoms/Row';
-import { Col } from 'shiny/src/atoms/Col';
+import {
+	Row,
+	Col,
+} from '@aller/shiny';
 
 <Row>
 	<Col xs={12} sm={3} md={2} lg={1} />

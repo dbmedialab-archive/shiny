@@ -16,7 +16,7 @@ export default () => (
 		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
-import { Label } from '/path/to/src/atoms/Label';
+import { Label } from '@aller/shiny';
 
 <Label color="primary">Primary</Label>
 <Label color="teal">Teal</Label>

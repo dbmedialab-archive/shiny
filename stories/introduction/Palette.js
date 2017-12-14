@@ -28,14 +28,18 @@ const Palette = () => {
 
 			<SmallHeading>Using colors</SmallHeading>
 			<LeetTextarea>{`
+// Beware, this example is outdated :(
+
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../shared-components/Base/Palette';
+
 const MyHeading = styled.h3\`
   color: \${colors.typeDisabled};
   background-color: \${colors.solRed};
   border: .1rem solid \${colors.solRedDark};
 \`;
+
 <MyHeading>Overskrift</MyHeading>
       `}
 			</LeetTextarea>

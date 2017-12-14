@@ -10,6 +10,9 @@ import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Kicker } from '../../src/atoms/Kicker';
 import { NativeAdKicker } from '../../src/atoms/NativeAdKicker';
 
+// const Kicker = () => null;
+// const NativeAdKicker = () => null;
+
 export default () => (
 	<SiteSelection>
 		<section>
@@ -29,8 +32,10 @@ export default () => (
 			<Heading>Usage</Heading>
 			<LeetTextarea>
 				{`
-import { Kicker } from '/path/to/shiny/atoms/Kicker';
-import { NativeAdKicker } from '/path/to/shiny/atoms/NativeAdKicker';
+import {
+	Kicker,
+	NativeAdKicker,
+} from '@aller/shiny';
 
 <Kicker>Kicker</Kicker>
 <Kicker color="teal">Kicker</Kicker>

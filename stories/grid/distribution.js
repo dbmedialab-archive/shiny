@@ -41,8 +41,10 @@ export default () => (
 
 		<LeetTextarea>
 			{`
-import { Row } from 'shiny/src/atoms/Row';
-import { Col } from 'shiny/src/atoms/Col';
+import {
+	Row,
+	Col,
+} from '@aller/shiny';
 
 <Row around="xs">
 	<Col xs={2}>around-row</Col>

@@ -44,7 +44,7 @@ export default () => (
 		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
-import { LunchButton } from 'shiny/molecules/LunchButton';
+import { LunchButton } from '@aller/shiny';
 
 <Row>
 	<LunchButton

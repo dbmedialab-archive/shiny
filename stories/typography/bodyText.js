@@ -31,7 +31,7 @@ export default () => (
 
 		<Heading>Usage</Heading>
 		<LeetTextarea>{`
-import { BodyText } from '/path/to/shiny/atoms/BodyText';
+import { BodyText } from '@aller/shiny';
 
 <BodyText>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske
 barne- og ungdomsorganisasjoner (LNU). Dommen er anket. Rettssaken avdekket så omfattende juks

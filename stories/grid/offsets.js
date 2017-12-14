@@ -43,8 +43,10 @@ export default () => (
 
 		<LeetTextarea>
 			{`
-import { Row } from 'shiny/src/atoms/Row';
-import { Col } from 'shiny/src/atoms/Col';
+import {
+	Row,
+	Col,
+} from '@aller/shiny';
 
 <Row>
 	<Col xsOffset={11} xs={1}>offset-11 xs-1</Col>
