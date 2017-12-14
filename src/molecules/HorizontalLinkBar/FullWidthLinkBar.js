@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import HorizontalLinkBar from './HorizontalLinkBar';
+import { HorizontalLinkBar } from './HorizontalLinkBar';
 
 const FullWidthLinkBar = styled(HorizontalLinkBar)`
 	position: ${props => (props.fixed && 'fixed') || 'absolute'};
@@ -9,4 +9,4 @@ const FullWidthLinkBar = styled(HorizontalLinkBar)`
 	left: 0;
 `;
 
-export default FullWidthLinkBar;
+export { FullWidthLinkBar };

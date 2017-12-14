@@ -12,4 +12,4 @@ PublishedDate.defaultProps = {
 	colors: 'typeLight',
 };
 
-export default PublishedDate;
+export { PublishedDate };

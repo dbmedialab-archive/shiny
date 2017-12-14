@@ -2,15 +2,15 @@ import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 import { SiteSelection, DemoContainer } from './storybook-components';
 
-import Heading, { HugeHeading } from '../src/atoms/Heading';
-import Grid from '../src/atoms/Grid';
-import LeetTextarea from '../src/atoms/LeetTextarea';
+import { Heading, HugeHeading } from '../src/atoms/Heading';
+import { Grid } from '../src/atoms/Grid';
+import { LeetTextarea } from '../src/atoms/LeetTextarea';
 
 // HorizontalLinkBar
-import HorizontalLinkBar from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
-import FullWidthLinkBar from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
-import LinkBarLink from '../src/molecules/HorizontalLinkBar/LinkBarLink';
-import LinkBarButton, { SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
+import { HorizontalLinkBar } from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
+import { FullWidthLinkBar } from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
+import { LinkBarLink } from '../src/molecules/HorizontalLinkBar/LinkBarLink';
+import { LinkBarButton, SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
 // import TagBar from '../shared-components/TagBar/TagBar';
 import theme from '../src/themes/default-theme';
 
@@ -38,10 +38,15 @@ export default () => {
 					<Heading>Usage</Heading>
 					<LeetTextarea>
 						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
 <HorizontalLinkBar background={colors.white}>
-<LinkBarLink linkText="One" url="https://example.com" isActive />
-<LinkBarLink linkText="Two" url="https://example.com" />
-<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+  <LinkBarLink linkText="One" url="https://example.com" isActive />
+  <LinkBarLink linkText="Two" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
 					</LeetTextarea>
@@ -71,10 +76,15 @@ export default () => {
 					<Heading>Usage</Heading>
 					<LeetTextarea>
 						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
 <FullWidthLinkBar background={colors.white}>
-<LinkBarLink linkText="One" url="https://example.com" isActive />
-<LinkBarLink linkText="Two" url="https://example.com" />
-<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </FullWidthLinkBar>
 						`}
 					</LeetTextarea>
@@ -100,10 +110,15 @@ export default () => {
 					<Heading>Usage</Heading>
 					<LeetTextarea>
 						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
 <HorizontalLinkBar background={colors.white}>
-<LinkBarLink linkText="One" url="https://example.com" isActive />
-<LinkBarLink linkText="Two" url="https://example.com" />
-<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
 					</LeetTextarea>
@@ -139,6 +154,11 @@ export default () => {
 					<Heading>Usage</Heading>
 					<LeetTextarea>
 						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
 <HorizontalLinkBar background={colors.white}>
 	<LinkBarLink
 	useUnderline={false}
@@ -147,18 +167,18 @@ export default () => {
 	url="https://example.com"
 	isActive
 />
-<LinkBarLink
-	useUnderline={false}
-	activeBackground={colors.pinkLight}
-	linkText="Two"
-	url="https://example.com"
->
-<LinkBarLink
-	useUnderline={false}
-	activeBackground={colors.pinkLight}
-	linkText="Buckle My Shoe"
-	url="https://example.com"
-	>
+	<LinkBarLink
+		useUnderline={false}
+		activeBackground={colors.pinkLight}
+		linkText="Two"
+		url="https://example.com"
+	/>
+	<LinkBarLink
+		useUnderline={false}
+		activeBackground={colors.pinkLight}
+		linkText="Buckle My Shoe"
+		url="https://example.com"
+	/>
 </HorizontalLinkBar>
 						`}
 					</LeetTextarea>
@@ -219,38 +239,41 @@ export default () => {
 					<Heading>Usage</Heading>
 					<LeetTextarea>
 						{`
-import HorizontalLinkBar from '../shared-components/HorizontalLinkBar/HorizontalLinkBar';
-import LinkBarButton, { SmallLinkBarButton } from '../shared-components/HorizontalLinkBar/LinkBarButton';
+import {
+	HorizontalLinkBar,
+	LinkBarButton,
+	SmallLinkBarButton
+} from '@aller/shiny';
 
 <HorizontalLinkBar background={colors.white}>
-<LinkBarButton isActive onClick={(e) => { alert('You like clicking things'); }}>
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
-</LinkBarButton>
-<LinkBarButton>
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
-</LinkBarButton>
-<LinkBarButton>
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
-</LinkBarButton>
+	<LinkBarButton isActive onClick={(e) => { alert('You like clicking things'); }}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
+	</LinkBarButton>
+	<LinkBarButton>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
+	</LinkBarButton>
+	<LinkBarButton>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
+	</LinkBarButton>
 </HorizontalLinkBar>
 
 <hr />
 
 <HorizontalLinkBar background={colors.white}>
-<SmallLinkBarButton
+	<SmallLinkBarButton
 		isActive
 		useUnderline={false}
-	activeBackground={colors.blueLight}
-	onClick={(e) => { alert('You like clicking things'); }}
->
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
-</SmallLinkBarButton>
-<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
-</SmallLinkBarButton>
-<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
-	<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
-</SmallLinkBarButton>
+		activeBackground={colors.blueLight}
+		onClick={(e) => { alert('You like clicking things'); }}
+	>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
+	</SmallLinkBarButton>
+	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
+	</SmallLinkBarButton>
+	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
+	</SmallLinkBarButton>
 </HorizontalLinkBar>
 						`}
 					</LeetTextarea>

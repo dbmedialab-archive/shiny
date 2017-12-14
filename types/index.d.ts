@@ -5,9 +5,13 @@ import {
 	PureComponent,
 	ReactElement,
 	Component,
+	SFC,
 } from 'react';
 
 import * as styled from 'styled-components'
+import {
+	StyledComponentClass
+} from 'styled-components'
 
 interface Label {
 	text: string;
@@ -49,7 +53,7 @@ interface LinkBarLinkProps {
 	size?: string; // oneOf(['small', 'large']);
 	useUnderline?: boolean;
 }
-declare class LinkBarLink extends PureComponent<LinkBarLinkProps, any> {}
+export const LinkBarLink: StyledComponentClass<LinkBarLinkProps, any>
 
 interface HorizontalLinkBarProps {
 	background?: string;
@@ -62,9 +66,24 @@ interface HorizontalLinkBarProps {
 	zIndex?: number;
 	isTopLevelComponent?: boolean;
 }
-declare class HorizontalLinkBar extends PureComponent<HorizontalLinkBarProps, any> {}
+export const HorizontalLinkBar: StyledComponentClass<HorizontalLinkBarProps, any>
 
 interface FullWidthLinkBarProps extends HorizontalLinkBarProps {
 	fixed?: boolean;
 }
-declare class FullWidthLinkBar extends PureComponent<FullWidthLinkBarProps, any> {}
+
+export const FullWidthLinkBar: StyledComponentClass<FullWidthLinkBarProps, any>
+
+export const GlobalStyle: StyledComponentClass<{}, {}>
+
+export const themes : {
+	defaultTheme: theme
+}
+
+interface theme {
+	colors: {
+		primary: string,
+		secondary: string,
+	}
+}
+

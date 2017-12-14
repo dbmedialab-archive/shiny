@@ -25,4 +25,4 @@ Figure.defaultProps = {
 	paddingBottom: '0',
 };
 
-export default Figure;
+export { Figure };

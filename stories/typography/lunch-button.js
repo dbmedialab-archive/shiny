@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
-import Row from '../../src/atoms/Row';
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Row } from '../../src/atoms/Row';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { LunchButton } from '../../src/molecules/LunchButton';
 
 export default () => (
@@ -44,7 +44,7 @@ export default () => (
 		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
-import { LunchButton } from 'shiny/molecules/LunchButton';
+import { LunchButton } from '@aller/shiny';
 
 <Row>
 	<LunchButton

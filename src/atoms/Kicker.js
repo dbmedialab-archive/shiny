@@ -16,4 +16,4 @@ Kicker.defaultProps = {
 	textColor: 'white',
 };
 
-export default Kicker;
+export { Kicker };

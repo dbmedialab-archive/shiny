@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import FloatImage from '../../src/molecules/FloatImage';
+import { FloatImage } from '../../src/molecules/FloatImage';
 
 export default () => (
 	<section>
@@ -25,8 +25,10 @@ export default () => (
 		<Heading>Usage</Heading>
 		<LeetTextarea>
 			{`
-import FloatImage from '/path/to/shiny/molecules/FloatImage';
-import Heading from '/path/to/shiny/atoms/Heading';
+import {
+	FloatImage,
+	Heading,
+} from '@aller/shiny';
 
 <FloatImage float="left" width="50%" src="http://styleguide.dagbladet.no/assets/test/978x.jpg" />
 <Heading>Politiet vil fengsle SOS Rasisme-leder i fire uker</Heading>

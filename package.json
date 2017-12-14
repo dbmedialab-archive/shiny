@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "clean": "rm -rf storybook-static",
     "deploy": "./deploy.sh",
     "postinstall": "babel src/ -d lib/",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0"
   },

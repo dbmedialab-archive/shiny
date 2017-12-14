@@ -12,4 +12,4 @@ const LeetTextarea = styled.textarea`
 	font-family: monospace;
 `;
 
-export default LeetTextarea;
+export { LeetTextarea };

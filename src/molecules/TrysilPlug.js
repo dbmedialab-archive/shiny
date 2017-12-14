@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Article from '../atoms/Article';
-import Kicker from '../atoms/Kicker';
-import Heading from '../atoms/Heading';
-import Label from '../atoms/Label';
-import BlockLink from '../atoms/BlockLink';
-import Image from '../atoms/Image';
+import { Article } from '../atoms/Article';
+import { Kicker } from '../atoms/Kicker';
+import { Heading } from '../atoms/Heading';
+import { Label } from '../atoms/Label';
+import { BlockLink } from '../atoms/BlockLink';
+import { Image } from '../atoms/Image';
 
 const TrysilPlug = ({
 	kicker,
@@ -49,4 +49,4 @@ TrysilPlug.defaultProps = {
 	labels: [],
 };
 
-export default TrysilPlug;
+export { TrysilPlug };

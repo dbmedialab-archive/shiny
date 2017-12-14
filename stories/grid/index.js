@@ -10,7 +10,7 @@ import distribution from './distribution';
 import hide from './hide';
 
 import { SiteSelection } from '../storybook-components';
-import Grid from '../../src/atoms/Grid';
+import { Grid } from '../../src/atoms/Grid';
 
 export default () => {
 	storiesOf('Grid', module)

@@ -11,4 +11,4 @@ const BylineName = styled.span`
 	top: -1rem;
 `;
 
-export default BylineName;
+export { BylineName };

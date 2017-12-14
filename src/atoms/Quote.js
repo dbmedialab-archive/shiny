@@ -4,4 +4,4 @@ const Quote = styled.q`
 
 `;
 
-export default Quote;
+export { Quote };

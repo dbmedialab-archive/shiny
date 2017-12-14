@@ -33,4 +33,4 @@ LinkBarLink.defaultProps = {
 	useUnderline: true,
 };
 
-export default LinkBarLink;
+export { LinkBarLink };

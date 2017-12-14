@@ -3,8 +3,8 @@ import propTypes from 'prop-types';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import { merge } from 'aurora-deep-slice-merge';
 
-import GlobalStyle from '../../src/atoms/GlobalStyle';
-import themes from '../../src/themes';
+import { GlobalStyle } from '../../src/atoms/GlobalStyle';
+import { themes } from '../../src/themes';
 
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
@@ -54,4 +54,4 @@ ThemeSelector.defaultProps = {
 	children: null,
 };
 
-export default ThemeSelector;
+export { ThemeSelector };

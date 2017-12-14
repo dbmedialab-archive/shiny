@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 
-import Kicker from './Kicker';
+import { Kicker } from './Kicker';
 
-const NativeAdKicker = props => (
+const NativeAdKicker = withTheme(props => (
 	<Kicker
 		color={`${props.theme.colors.skinColors.nativeAd}Light`}
 		{...props}
 	/>
-);
+));
 
 NativeAdKicker.propTypes = {
 	theme: PropTypes.shape({
@@ -21,4 +21,4 @@ NativeAdKicker.propTypes = {
 	}).isRequired,
 };
 
-export default withTheme(NativeAdKicker);
+export { NativeAdKicker };

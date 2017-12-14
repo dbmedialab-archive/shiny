@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Figure from '../atoms/Figure';
-import Image from '../atoms/Image';
+import { Figure } from '../atoms/Figure';
+import { Image } from '../atoms/Image';
 
 const FloatImage = ({
 	float,
@@ -28,4 +28,4 @@ FloatImage.defaultProps = {
 	paddingBottom: '0',
 };
 
-export default FloatImage;
+export { FloatImage };
