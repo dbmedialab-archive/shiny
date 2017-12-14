@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 
-import Kicker from './Kicker';
+import { Kicker } from './Kicker';
 
 const NativeAdKicker = withTheme(props => (
 	<Kicker
