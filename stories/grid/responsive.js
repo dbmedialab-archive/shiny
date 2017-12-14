@@ -5,7 +5,7 @@ import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
 import { Row } from '../../src/atoms/Row';
-import { GridCol } from '../../src/atoms/Col';
+import { Col as GridCol } from '../../src/atoms/Col';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
