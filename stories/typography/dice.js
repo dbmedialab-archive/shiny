@@ -7,7 +7,7 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import Dice from '../../src/molecules/Dice';
+import { Dice } from '../../src/molecules/Dice';
 
 export default () => (
 	<section>

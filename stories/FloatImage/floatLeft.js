@@ -5,7 +5,7 @@ import { DemoContainer } from '../storybook-components';
 
 import { LeetTextarea } from '../../src/atoms/LeetTextarea';
 
-import FloatImage from '../../src/molecules/FloatImage';
+import { FloatImage } from '../../src/molecules/FloatImage';
 
 export default () => (
 	<section>

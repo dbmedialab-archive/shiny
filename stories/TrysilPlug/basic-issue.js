@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import TrysilPlug from '../../src/molecules/TrysilPlug';
+import { TrysilPlug } from '../../src/molecules/TrysilPlug';
 
 export default () => (
 	<section>
