@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Label } from '../../src/atoms/Label';
@@ -14,7 +14,7 @@ export default () => (
 		<Label>Default</Label>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>
+		<Code>
 			{`
 import { Label } from '@aller/shiny';
 
@@ -22,7 +22,7 @@ import { Label } from '@aller/shiny';
 <Label color="teal">Teal</Label>
 <Label>Default</Label>
 			`}
-		</LeetTextarea>
+		</Code>
 		<p>The «color» prop can be any of the colors names in the palette. Defaults to «primary».</p>
 	</section>
 );

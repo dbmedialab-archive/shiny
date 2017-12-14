@@ -5,7 +5,8 @@ import { Heading, HugeHeading, SmallHeading } from '../../src/atoms/Heading';
 
 import { ThemeName } from '../../src/atoms/ThemeName';
 import { ColorBox } from '../../src/atoms/ColorBox';
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+// import { Code } from '../../src/atoms/Code';
+import { Code } from '../../src/atoms/Code';
 
 const FlexBox = styled.section`
   display: flex;
@@ -27,7 +28,8 @@ const Palette = () => {
 			<p>We use colors all the time. Here is how you can use the colors of your brand:</p>
 
 			<SmallHeading>Using colors</SmallHeading>
-			<LeetTextarea>{`
+			<Code>
+				{`
 // Beware, this example is outdated :(
 
 import React from 'react';
@@ -41,8 +43,8 @@ const MyHeading = styled.h3\`
 \`;
 
 <MyHeading>Overskrift</MyHeading>
-      `}
-			</LeetTextarea>
+		      `}
+			</Code>
 
 			<SmallHeading>Palette for the <ThemeName /> theme</SmallHeading>
 			<FlexBox>

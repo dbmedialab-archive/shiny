@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 import { Row } from '../../src/atoms/Row';
 import { Col as GridCol } from '../../src/atoms/Col';
@@ -45,7 +45,7 @@ export default () => (
 			<Col xs={2} sm={6} md={4} lg={2}>xs-2 sm-6 md-4 lg-2</Col>
 		</Row>
 
-		<LeetTextarea>
+		<Code>
 			{`
 import {
 	Row,
@@ -66,6 +66,6 @@ import {
 	<Col xs={2} sm={6} md={4} lg={2} />
 </Row>
 			`}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

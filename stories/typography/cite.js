@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LeetTextarea } from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Cite } from '../../src/atoms/Cite';
@@ -15,12 +15,12 @@ export default () => (
 		</p>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>{`
+		<Code>{`
 import { Cite } from '@aller/shiny';
 
 <p>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
 er det krystallklare opplysninger om omfattende juks og svindel av offentlige.</p>
    `}
-		</LeetTextarea>
+		</Code>
 	</section>
 );
