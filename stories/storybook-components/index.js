@@ -3,8 +3,6 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-export { SiteSelection } from './SiteSelection';
-
 export const DemoContainer = styled.article`
 	padding: 3rem;
 	background: ${props => props.background};

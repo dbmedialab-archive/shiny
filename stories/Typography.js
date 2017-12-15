@@ -1,8 +1,4 @@
-import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-
-import { SiteSelection } from './storybook-components';
-import { Grid } from '../src/atoms/Grid';
 
 import label from './typography/label';
 import heading from './typography/heading';
@@ -18,7 +14,6 @@ import dice from './typography/dice';
 
 export default () => {
 	storiesOf('Typography', module)
-		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('Cite', cite)
