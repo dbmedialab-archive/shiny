@@ -3,9 +3,9 @@ node_js:
   - "node"
   - "8"
 
-# before_install: yarn global add greenkeeper-lockfile@1
+before_install: yarn global add greenkeeper-lockfile@1
 
-# before_script: greenkeeper-lockfile-update
+before_script: greenkeeper-lockfile-update
 
 script:
   - |
@@ -22,4 +22,4 @@ script:
     fi
   - npm test
 
-# after_script: greenkeeper-lockfile-upload
+after_script: greenkeeper-lockfile-upload
