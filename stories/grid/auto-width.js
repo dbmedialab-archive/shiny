@@ -37,7 +37,7 @@ export default () => (
 			<Col xs>xs</Col>
 			<Col xs>xs</Col>
 		</Row>
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

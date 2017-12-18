@@ -82,7 +82,7 @@ export default () => (
 			<Col xs={6} />
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

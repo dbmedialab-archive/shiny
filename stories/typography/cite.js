@@ -15,7 +15,7 @@ export default () => (
 		</p>
 
 		<Heading>Usage</Heading>
-		<Code>{`
+		<Code language="jsx">{`
 import { Cite } from '@aller/shiny';
 
 <p>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>

@@ -14,7 +14,7 @@ export default () => (
 		<Label>Default</Label>
 
 		<Heading>Usage</Heading>
-		<Code>
+		<Code language="jsx">
 			{`
 import { Label } from '@aller/shiny';
 

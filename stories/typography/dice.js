@@ -16,7 +16,7 @@ export default () => (
 				<HugeHeading>Dice</HugeHeading>
 				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphor.</p>
 				<SmallHeading>Usage</SmallHeading>
-				<Code>
+				<Code language="jsx">
 					{`
 import { Dice } from '@aller/shiny';
 

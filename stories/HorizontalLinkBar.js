@@ -34,7 +34,7 @@ export default () => {
 
 
 					<Heading>Usage</Heading>
-					<Code>
+					<Code language="jsx">
 						{`
 import {
 	HorizontalLinkBar,
@@ -72,7 +72,7 @@ import {
 
 
 					<Heading>Usage</Heading>
-					<Code>
+					<Code language="jsx">
 						{`
 import {
 	HorizontalLinkBar,
@@ -106,7 +106,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<Code>
+					<Code language="jsx">
 						{`
 import {
 	HorizontalLinkBar,
@@ -150,7 +150,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<Code>
+					<Code language="jsx">
 						{`
 import {
 	HorizontalLinkBar,
@@ -235,7 +235,7 @@ import {
 					</DemoContainer>
 
 					<Heading>Usage</Heading>
-					<Code>
+					<Code language="jsx">
 						{`
 import {
 	HorizontalLinkBar,
