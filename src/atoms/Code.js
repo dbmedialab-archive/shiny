@@ -5,20 +5,29 @@ import { default as PropTypes } from 'prop-types';
 
 import Prism from '@maji/react-prism';
 
-require('prismjs');
-require('prismjs/plugins/line-numbers/prism-line-numbers');
-require('prismjs/plugins/line-numbers/prism-line-numbers.css');
-require('prism-themes/themes/prism-hopscotch.css');
+import 'prismjs';
+
+// Other than javascript, we'll have to import
+// the language definition we need.
+// TODO: Consider creating a fork component and
+// a directory with language components. There is
+// close to 150 possible languages in prism,
+// we might need a prettier solution...
+import 'prismjs/components/prism-jsx';
+
+import 'prism-themes/themes/prism-hopscotch.css';
 
 const Code = ({
 	language,
 	children,
 	...rest
-}) => (
-	<Prism language={`${language} line-numbers`} {...rest}>
-		{children}
-	</Prism>
-);
+}) => {
+	return (
+		<Prism language={language} {...rest}>
+			{children}
+		</Prism>
+	);
+};
 Code.propTypes = {
 	children: PropTypes.oneOf([
 		PropTypes.arrayOf(PropTypes.node),
