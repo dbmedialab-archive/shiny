@@ -77,4 +77,5 @@ export const VeryPrettyButton = styled(SomewhatPrettyButton)`
 	position: relative;
 	padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
 	padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
+	cursor: pointer;
 	`;
