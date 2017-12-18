@@ -6,6 +6,8 @@ import { merge } from 'aurora-deep-slice-merge';
 import { GlobalStyle } from '../atoms/GlobalStyle';
 import { themes } from '../themes';
 
+const isClient = (typeof window !== 'undefined');
+
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,800');
@@ -23,10 +25,9 @@ const ThemeSelector = ({ children, themeSlug }) => {
 	let theme = themes.defaultTheme;
 	let Global = GlobalStyle;
 
-	const isClient = (typeof window !== 'undefined');
 	const hasThemeStoredInBrowser = (isClient && window.localStorage && window.localStorage.getItem('theme'));
 
-	const themeName = themeSlug
+	const themeName = themeSlug // eslint-disable-line no-nested-ternary
 		? themeSlug
 		: (hasThemeStoredInBrowser
 			? window.localStorage.getItem('theme')
