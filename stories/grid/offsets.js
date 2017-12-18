@@ -41,7 +41,7 @@ export default () => (
 			<Col xsOffset={1} xs={11}>offset-1 xs-11</Col>
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

@@ -42,7 +42,7 @@ export default () => (
 		</Row>
 
 		<Heading>Usage</Heading>
-		<Code>
+		<Code language="jsx">
 			{`
 import { LunchButton } from '@aller/shiny';
 

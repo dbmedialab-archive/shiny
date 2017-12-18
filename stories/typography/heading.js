@@ -37,7 +37,7 @@ export default () => (
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	SmallHeading,

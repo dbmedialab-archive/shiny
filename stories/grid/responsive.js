@@ -45,7 +45,7 @@ export default () => (
 			<Col xs={2} sm={6} md={4} lg={2}>xs-2 sm-6 md-4 lg-2</Col>
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,
