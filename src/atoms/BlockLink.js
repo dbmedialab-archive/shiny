@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const BlockLink = styled.a`
 	display: block;
-	color: #222;
+	color: ${props => this.props.theme.colors.textColor};
 	text-decoration: none;
 
 	&:hover {

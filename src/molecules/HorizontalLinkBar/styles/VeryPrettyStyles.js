@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { BlockLink } from '../../../atoms/BlockLink';
 
-export const VeryPrettyA = styled(BlockLink)`
+export const VeryPrettyA = styled.a`
 	display: inline-block;
 
 	${(props) => {
@@ -14,6 +14,7 @@ export const VeryPrettyA = styled(BlockLink)`
 
 	border: 0;
 	outline: none;
+	text-decoration: none;
 	color: ${props => (
 		props.textColor
 			? props.theme.colors[props.textColor]
