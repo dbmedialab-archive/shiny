@@ -17,7 +17,7 @@ export default () => (
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
-		<Code>
+		<Code language="jsx">
 			{`
 import { FloatImage } from '@aller/shiny';
 

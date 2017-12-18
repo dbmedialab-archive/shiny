@@ -30,7 +30,7 @@ export default () => (
 		</BodyText>
 
 		<Heading>Usage</Heading>
-		<Code>{`
+		<Code language="jsx">{`
 import { BodyText } from '@aller/shiny';
 
 <BodyText>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske
