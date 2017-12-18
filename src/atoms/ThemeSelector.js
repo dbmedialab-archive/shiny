@@ -19,22 +19,27 @@ injectGlobal`
   }
 `;
 
-const ThemeSelector = ({ children }) => {
+const ThemeSelector = ({ children, themeSlug }) => {
 	let theme = themes.defaultTheme;
 	let Global = GlobalStyle;
 
-	if (window.localStorage && window.localStorage.getItem('theme')) {
-		const themeName = window.localStorage.getItem('theme');
+	const hasThemeStoredInBrowser = (window && window.localStorage && window.localStorage.getItem('theme'));
 
-		if (themeName) {
-			theme = merge(themes.defaultTheme, themes[themeName]);
+	const themeName = themeSlug
+		? themeSlug
+		: (hasThemeStoredInBrowser
+			? window.localStorage.getItem('theme')
+			: ''
+		);
 
-			// console.log(`Switching to the ${themeName} theme.`);
-			// console.log('new theme', theme);
+	if (themeName) {
+		theme = merge(themes.defaultTheme, themes[themeName]);
 
-			if (theme && theme.global) {
-				Global = GlobalStyle.extend`${theme.global};`;
-			}
+		// console.log(`Switching to the ${themeName} theme.`);
+		// console.log('new theme', theme);
+
+		if (theme && theme.global) {
+			Global = GlobalStyle.extend`${theme.global};`;
 		}
 	}
 
@@ -49,9 +54,11 @@ ThemeSelector.propTypes = {
 		propTypes.arrayOf(propTypes.node),
 		propTypes.node,
 	]),
+	themeSlug: propTypes.string,
 };
 ThemeSelector.defaultProps = {
 	children: null,
+	themeSlug: null,
 };
 
 export { ThemeSelector };
