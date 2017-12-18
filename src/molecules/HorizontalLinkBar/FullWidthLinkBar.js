@@ -1,6 +1,8 @@
+import styled from 'styled-components';
+
 import { HorizontalLinkBar } from './HorizontalLinkBar';
 
-const FullWidthLinkBar = HorizontalLinkBar.extend`
+const FullWidthLinkBar = styled(HorizontalLinkBar)`
 	position: ${props => (props.fixed && 'fixed') || 'absolute'};
 	width: 100%;
 	top: 0;
