@@ -75,8 +75,10 @@ const sharedStyles = css`
 export const VeryPrettyA = styled.a`
 	${sharedStyles}
 	`;
+
 const Button = BlockLink.withComponent('button');
-export const VeryPrettyButton = styled(Button)`
+const SomewhatPrettyButton = VeryPrettyA.withComponent(Button);
+export const VeryPrettyButton = styled(SomewhatPrettyButton)`
 	${sharedStyles}
 	position: relative;
 	padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
