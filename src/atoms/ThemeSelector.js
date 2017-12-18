@@ -23,7 +23,8 @@ const ThemeSelector = ({ children, themeSlug }) => {
 	let theme = themes.defaultTheme;
 	let Global = GlobalStyle;
 
-	const hasThemeStoredInBrowser = (window && window.localStorage && window.localStorage.getItem('theme'));
+	const isClient = (typeof window !== 'undefined');
+	const hasThemeStoredInBrowser = (isClient && window.localStorage && window.localStorage.getItem('theme'));
 
 	const themeName = themeSlug
 		? themeSlug
