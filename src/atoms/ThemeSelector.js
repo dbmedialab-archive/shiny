@@ -6,6 +6,9 @@ import { merge } from 'aurora-deep-slice-merge';
 import { GlobalStyle } from '../atoms/GlobalStyle';
 import { themes } from '../themes';
 
+const isClient = (typeof window !== 'undefined');
+
+// @TODO Alle fontene inkluderes her - må fikses før vi går live!
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,800');
@@ -19,22 +22,29 @@ injectGlobal`
   }
 `;
 
-const ThemeSelector = ({ children }) => {
+const ThemeSelector = ({ children, themeSlug }) => {
 	let theme = themes.defaultTheme;
 	let Global = GlobalStyle;
 
-	if (window.localStorage && window.localStorage.getItem('theme')) {
-		const themeName = window.localStorage.getItem('theme');
+	const hasThemeStoredInBrowser = (isClient && window.localStorage && window.localStorage.getItem('theme'));
 
-		if (themeName) {
-			theme = merge(themes.defaultTheme, themes[themeName]);
+	// If the themeSlug was sent in, use it
+	// Failing that, try localStorage
+	const themeName = themeSlug // eslint-disable-line no-nested-ternary
+		? themeSlug
+		: (hasThemeStoredInBrowser
+			? window.localStorage.getItem('theme')
+			: ''
+		);
 
-			// console.log(`Switching to the ${themeName} theme.`);
-			// console.log('new theme', theme);
+	if (themeName) {
+		theme = merge(themes.defaultTheme, themes[themeName]);
 
-			if (theme && theme.global) {
-				Global = GlobalStyle.extend`${theme.global};`;
-			}
+		// console.log(`Switching to the ${themeName} theme.`);
+		// console.log('new theme', theme);
+
+		if (theme && theme.global) {
+			Global = GlobalStyle.extend`${theme.global};`;
 		}
 	}
 
@@ -49,9 +59,11 @@ ThemeSelector.propTypes = {
 		propTypes.arrayOf(propTypes.node),
 		propTypes.node,
 	]),
+	themeSlug: propTypes.string,
 };
 ThemeSelector.defaultProps = {
 	children: null,
+	themeSlug: null,
 };
 
 export { ThemeSelector };
