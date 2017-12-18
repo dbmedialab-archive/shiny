@@ -8,6 +8,7 @@ import { themes } from '../themes';
 
 const isClient = (typeof window !== 'undefined');
 
+// @TODO Alle fontene inkluderes her - må fikses før vi går live!
 injectGlobal`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,800');
@@ -27,6 +28,8 @@ const ThemeSelector = ({ children, themeSlug }) => {
 
 	const hasThemeStoredInBrowser = (isClient && window.localStorage && window.localStorage.getItem('theme'));
 
+	// If the themeSlug was sent in, use it
+	// Failing that, try localStorage
 	const themeName = themeSlug // eslint-disable-line no-nested-ternary
 		? themeSlug
 		: (hasThemeStoredInBrowser
