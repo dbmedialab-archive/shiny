@@ -14,7 +14,7 @@ export default () => (
 		<PublishedDate color="primary">Publisert 21. november 2017</PublishedDate>
 
 		<Heading>Usage</Heading>
-		<Code>{`
+		<Code language="jsx">{`
 import { PublishedDate } from '@aller/shiny';
 
 <PublishedDate>Publisert 21. november 2017</PublishedDate>

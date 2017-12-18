@@ -34,7 +34,7 @@ export default () => (
 			<Col xs={false} md={6}>xs-false md-6</Col>
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

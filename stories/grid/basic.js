@@ -116,7 +116,7 @@ export default () => (
 			<Col xs={1}>xs-1</Col>
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

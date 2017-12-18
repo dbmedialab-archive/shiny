@@ -39,7 +39,7 @@ export default () => (
 			<Col xs={2}>between-row</Col>
 		</Row>
 
-		<Code>
+		<Code language="jsx">
 			{`
 import {
 	Row,

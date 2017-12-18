@@ -28,7 +28,7 @@ const Palette = () => {
 			<p>We use colors all the time. Here is how you can use the colors of your brand:</p>
 
 			<SmallHeading>Using colors</SmallHeading>
-			<Code>
+			<Code language="jsx">
 				{`
 // Beware, this example is outdated :(
 
