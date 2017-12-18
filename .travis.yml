@@ -15,7 +15,7 @@ script:
     if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
       echo "Sending PR snapshots to Percy";
       npm run snapshot;
-    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
       echo "Sending master build snapshots to Percy";
       npm run snapshot;
     else
