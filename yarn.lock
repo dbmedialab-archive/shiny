@@ -65,9 +65,9 @@
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
-"@maji/react-prism@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@maji/react-prism/-/react-prism-1.0.0.tgz#af970b704883d4fb7357cf867033b43dc03aa98d"
+"@maji/react-prism@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@maji/react-prism/-/react-prism-1.0.1.tgz#2288d8c0f4a16abbf85f809a7ac223facf504ea4"
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.5.8"
@@ -279,8 +279,8 @@
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.28.tgz#eb0b31272528da8f20477ec27569c4f767315b33"
 
 "@types/react@^16.0.18":
-  version "16.0.30"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.30.tgz#cca9b180160004df574519c3d7c559fb181d545f"
+  version "16.0.31"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -356,8 +356,8 @@ ajv@^4.9.1:
     json-stable-stringify "^1.0.1"
 
 ajv@^5.0.0, ajv@^5.1.0, ajv@^5.1.5, ajv@^5.2.3, ajv@^5.3.0:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.1.tgz#b38bb8876d9e86bee994956a04e721e88b248eb2"
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-5.5.2.tgz#73b5eeca3fab653e3d3f9422b341ad42205dc965"
   dependencies:
     co "^4.6.0"
     fast-deep-equal "^1.0.0"
@@ -2528,8 +2528,8 @@ es5-ext@^0.10.14, es5-ext@^0.10.35, es5-ext@^0.10.9, es5-ext@~0.10.14:
     es6-symbol "~3.1.1"
 
 es5-shim@^4.5.9:
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/es5-shim/-/es5-shim-4.5.9.tgz#2a1e2b9e583ff5fed0c20a3ee2cbf3f75230a5c0"
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/es5-shim/-/es5-shim-4.5.10.tgz#b7e17ef4df2a145b821f1497b50c25cf94026205"
 
 es6-error@^4.0.2:
   version "4.0.2"
@@ -2951,8 +2951,8 @@ file-entry-cache@^2.0.0:
     object-assign "^4.0.1"
 
 file-loader@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.5.tgz#91c25b6b6fbe56dae99f10a425fd64933b5c9daa"
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-1.1.6.tgz#7b9a8f2c58f00a77fddf49e940f7ac978a3ea0e8"
   dependencies:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
@@ -5737,8 +5737,8 @@ slice-ansi@1.0.0:
     is-fullwidth-code-point "^2.0.0"
 
 slugify@^1.1.0:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.2.6.tgz#98c8f7e3c78f06af71e44670d8086715d86fc528"
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.2.7.tgz#49998fa5f26e001ca366298937ad25fb6e9742cf"
 
 sntp@1.x.x:
   version "1.0.9"
@@ -5943,9 +5943,9 @@ style-loader@^0.18.2:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
-styled-components@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.2.4.tgz#dd87fd3dafd359e7a0d570aec1bd07d691c0b5a2"
+styled-components@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.3.0.tgz#d9cf4574e140fea6426e48632ed0ca4494537718"
   dependencies:
     buffer "^5.0.3"
     css-to-react-native "^2.0.3"
