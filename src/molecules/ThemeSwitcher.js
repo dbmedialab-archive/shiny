@@ -7,7 +7,7 @@ import {
 	FullWidthLinkBar,
 	LinkBarButton as Button,
 	ThemeSelector,
-} from '../../src';
+} from '..';
 
 import { themes } from '../themes';
 
