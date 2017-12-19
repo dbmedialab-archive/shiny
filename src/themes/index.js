@@ -6,7 +6,7 @@ import seher from './seher';
 import sol from './sol';
 import topp from './topp';
 
-export default {
+const themes = {
 	defaultTheme,
 	dagbladet,
 	dinside,
@@ -15,3 +15,5 @@ export default {
 	sol,
 	topp,
 };
+
+export { themes };

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import PublishedDate from '../../src/atoms/PublishedDate';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { PublishedDate } from '../../src/atoms/PublishedDate';
 
 export default () => (
 	<section>
@@ -14,14 +14,14 @@ export default () => (
 		<PublishedDate color="primary">Publisert 21. november 2017</PublishedDate>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>{`
-import PublishedDate from '/path/to/shiny/atoms/PublishedDate';
+		<Code language="jsx">{`
+import { PublishedDate } from '@aller/shiny';
 
 <PublishedDate>Publisert 21. november 2017</PublishedDate>
 <PublishedDate hide>Publisert 21. november 2017</PublishedDate>
 <PublishedDate color="primary">Publisert 21. november 2017</PublishedDate>
    `}
-		</LeetTextarea>
+		</Code>
 		<p>
 			The <code>hide</code> prop hides the date.
 			The <code>color</code> prop can be any of the color names in the palette. Defaults to <code>typeLight</code>

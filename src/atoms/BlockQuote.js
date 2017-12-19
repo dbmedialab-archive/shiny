@@ -4,4 +4,4 @@ const BlockQuote = styled.blockquote`
 
 `;
 
-export default BlockQuote;
+export { BlockQuote };

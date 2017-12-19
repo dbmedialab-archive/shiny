@@ -1,5 +1,5 @@
 // Themes
-export { themes }                  from './themes';
+export { themes                  } from './themes';
 
 // Atoms
 export { Article                 } from './atoms/Article';
@@ -34,6 +34,10 @@ export { Quote                   } from './atoms/Quote';
 export { Row                     } from './atoms/Row';
 export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
+export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
+export { LinkBarButton           } from './molecules/HorizontalLinkBar/LinkBarButton';
+export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
+export { ThemeSelector           } from './atoms/ThemeSelector';
 
 // Molecules
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';
@@ -41,3 +45,4 @@ export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
 export { LunchButton             } from './molecules/LunchButton';
 export { TrysilPlug              } from './molecules/TrysilPlug';
+export { ThemeSwitcher           } from './molecules/ThemeSwitcher';

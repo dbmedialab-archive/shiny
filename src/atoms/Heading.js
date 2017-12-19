@@ -61,8 +61,9 @@ const HugeHeading = styled(Heading)`
 	}
 `;
 
-export default LargeHeading;
 export {
+	LargeHeading as Heading,
+
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,

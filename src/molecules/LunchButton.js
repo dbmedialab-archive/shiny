@@ -62,5 +62,4 @@ LunchButton.defaultProps = {
 	kickerShade: 'Light',
 };
 
-export default LunchButton;
 export { LunchButton };

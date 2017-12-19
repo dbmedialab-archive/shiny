@@ -3,16 +3,19 @@ node_js:
   - "node"
   - "8"
 
-before_install: yarn global add greenkeeper-lockfile@1
+before_install:
+  - yarn global add greenkeeper-lockfile@1
+  - export PATH=$PATH:`yarn global bin`
 
-before_script: greenkeeper-lockfile-update
+before_script:
+  - greenkeeper-lockfile-update
 
 script:
   - |
     if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
       echo "Sending PR snapshots to Percy";
       npm run snapshot;
-    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then
+    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
       echo "Sending master build snapshots to Percy";
       npm run snapshot;
     else

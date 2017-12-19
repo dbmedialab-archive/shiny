@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Heading, { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+import { Heading, HugeHeading, SmallHeading } from '../../src/atoms/Heading';
 
-import ThemeName from '../../src/atoms/ThemeName';
-import ColorBox from '../../src/atoms/ColorBox';
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { ThemeName } from '../../src/atoms/ThemeName';
+import { ColorBox } from '../../src/atoms/ColorBox';
+// import { Code } from '../../src/atoms/Code';
+import { Code } from '../../src/atoms/Code';
 
 const FlexBox = styled.section`
   display: flex;
@@ -27,18 +28,23 @@ const Palette = () => {
 			<p>We use colors all the time. Here is how you can use the colors of your brand:</p>
 
 			<SmallHeading>Using colors</SmallHeading>
-			<LeetTextarea>{`
+			<Code language="jsx">
+				{`
+// Beware, this example is outdated :(
+
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../shared-components/Base/Palette';
+
 const MyHeading = styled.h3\`
   color: \${colors.typeDisabled};
   background-color: \${colors.solRed};
   border: .1rem solid \${colors.solRedDark};
 \`;
+
 <MyHeading>Overskrift</MyHeading>
-      `}
-			</LeetTextarea>
+		      `}
+			</Code>
 
 			<SmallHeading>Palette for the <ThemeName /> theme</SmallHeading>
 			<FlexBox>

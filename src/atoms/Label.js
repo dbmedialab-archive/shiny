@@ -24,4 +24,4 @@ Label.defaultProps = {
 	color: 'primary',
 };
 
-export default Label;
+export { Label };

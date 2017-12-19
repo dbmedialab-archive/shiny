@@ -4,4 +4,4 @@ const Cite = styled.cite`
 	font-style: italic;
 `;
 
-export default Cite;
+export { Cite };

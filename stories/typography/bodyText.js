@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import BodyText from '../../src/atoms/BodyText';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { BodyText } from '../../src/atoms/BodyText';
 
 export default () => (
 	<section>
@@ -30,8 +30,8 @@ export default () => (
 		</BodyText>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>{`
-import BodyText from '/path/to/shiny/atoms/BodyText';
+		<Code language="jsx">{`
+import { BodyText } from '@aller/shiny';
 
 <BodyText>SOS Rasisme er dømt for medlemsjuks i et privatsrettslig søksmål fra Landsrådet for norske
 barne- og ungdomsorganisasjoner (LNU). Dommen er anket. Rettssaken avdekket så omfattende juks
@@ -47,6 +47,6 @@ inneholdt ikke lenger lesbare dokumenter, men er omgjort til forvridde plastrest
 elva ligger små og store papirbiter omgjort til celluloseklumper. Men et par av permene har
 fortsatt lesbare sider, hvor kun det ytterste laget av papirark er ødelagt.</BodyText>
    `}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

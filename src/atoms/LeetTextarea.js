@@ -10,6 +10,7 @@ const LeetTextarea = styled.textarea`
 	background: black;
 	color: #48bf48;
 	font-family: monospace;
+	tab-size: 2;
 `;
 
-export default LeetTextarea;
+export { LeetTextarea };

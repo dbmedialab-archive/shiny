@@ -8,4 +8,4 @@ const Image = styled.img`
 	opacity: 1;
 `;
 
-export default Image;
+export { Image };

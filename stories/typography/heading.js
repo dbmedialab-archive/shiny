@@ -2,10 +2,10 @@ import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
 // Typography
-import Heading, {
+import { Heading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
@@ -37,7 +37,7 @@ export default () => (
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>
+		<Code language="jsx">
 			{`
 import {
 	SmallHeading,
@@ -45,7 +45,7 @@ import {
 	LargeHeading,
 	XLargeHeading,
 	HugeHeading
-} from '/path/to/shiny/atoms/Heading';
+} from '@aller/shiny';
 
 <SmallHeading>Dette er en liten overskrift</SmallHeading>
 <MediumHeading>Dette er en middels overskrift</MediumHeading>
@@ -53,6 +53,6 @@ import {
 <XLargeHeading>Dette er en ekstra stor overskrift</XLargeHeading>
 <HugeHeading>Dette er en ekstra stor overskrift</HugeHeading>
 			`}
-		</LeetTextarea>
+		</Code>
 	</section>
 );

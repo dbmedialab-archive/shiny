@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.button`
+const Button = styled.button`
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	background-color: ${props => props.theme.colors.button.background}
@@ -30,3 +30,5 @@ export default styled.button`
 		color: ${props.theme.colors.button.background};
 		`}
 `;
+
+export { Button };

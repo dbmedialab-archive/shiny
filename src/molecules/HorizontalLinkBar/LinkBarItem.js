@@ -13,4 +13,4 @@ const LinkBarItem = styled.li`
 	}
 `;
 
-export default LinkBarItem;
+export { LinkBarItem };

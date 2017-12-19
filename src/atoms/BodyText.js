@@ -8,4 +8,4 @@ const BodyText = styled.p`
 	text-rendering: optimizeLegibility;
 `;
 
-export default BodyText;
+export { BodyText };

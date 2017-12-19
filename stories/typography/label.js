@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LeetTextarea from '../../src/atoms/LeetTextarea';
+import { Code } from '../../src/atoms/Code';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import Label from '../../src/atoms/Label';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Label } from '../../src/atoms/Label';
 
 export default () => (
 	<section>
@@ -14,15 +14,15 @@ export default () => (
 		<Label>Default</Label>
 
 		<Heading>Usage</Heading>
-		<LeetTextarea>
+		<Code language="jsx">
 			{`
-import Label from '/path/to/src/atoms/Label';
+import { Label } from '@aller/shiny';
 
 <Label color="primary">Primary</Label>
 <Label color="teal">Teal</Label>
 <Label>Default</Label>
 			`}
-		</LeetTextarea>
+		</Code>
 		<p>The «color» prop can be any of the colors names in the palette. Defaults to «primary».</p>
 	</section>
 );

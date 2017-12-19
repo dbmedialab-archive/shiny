@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../atoms/Header';
+import { Header } from '../atoms/Header';
 
 const Primary = styled.div`
 	height: calc(2 * ${props => props.theme.variables.verticalBase});
@@ -11,10 +11,12 @@ const Primary = styled.div`
 `;
 // const Secondary = styled.section``;
 
-export default () => (
+const SiteHeader = () => (
 	<Header>
 		<Primary>
 			<h1>Dagbladet</h1>
 		</Primary>
 	</Header>
 );
+
+export { SiteHeader };

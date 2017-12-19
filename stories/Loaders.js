@@ -1,18 +1,16 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
-import { DemoContainer, SiteSelection } from './storybook-components';
-import Grid from '../src/atoms/Grid';
+import { DemoContainer } from './storybook-components';
 
-import Heading, { HugeHeading } from '../src/atoms/Heading';
+import { Heading, HugeHeading } from '../src/atoms/Heading';
 
 // Loaders
-import DotLoader from '../src/atoms/loaders/DotLoader';
-// import NoonLoader from '../shared-components/NoonLoader/NoonLoader';
-import LoadingSearchIcon from '../src/atoms/loaders/LoadingSearchIcon';
+import { DotLoader } from '../src/atoms/loaders/DotLoader';
+// import { NoonLoader } from '../shared-components/NoonLoader/NoonLoader';
+import { LoadingSearchIcon } from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
 	storiesOf('Loaders', DotLoader)
-		.addDecorator(stories => <SiteSelection><Grid>{stories()}</Grid></SiteSelection>)
 	/*
 	// @TODO Add story for NoonLoader
       .add('NoonLoader', () => {
@@ -31,38 +29,34 @@ export default () => {
       */
 		.add('DotLoader', () => {
 			return (
-				<SiteSelection>
-					<section>
-						<HugeHeading>DotLoader</HugeHeading>
-						<p>Should be used when loading content that will fill a already defined space</p>
+				<section>
+					<HugeHeading>DotLoader</HugeHeading>
+					<p>Should be used when loading content that will fill a already defined space</p>
 
-						<Heading>Usage</Heading>
-						<DemoContainer>
-							<DotLoader classes={'what-you-will'} />
-						</DemoContainer>
-					</section>
-				</SiteSelection>
+					<Heading>Usage</Heading>
+					<DemoContainer>
+						<DotLoader classes={'what-you-will'} />
+					</DemoContainer>
+				</section>
 			);
 		})
 		.add('LoadingSearchIcon', () => {
 			return (
-				<SiteSelection>
-					<section>
-						<HugeHeading>LoadingSearchIcon</HugeHeading>
-						<p>
-							This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
-							Color defaults to primary.
-						</p>
+				<section>
+					<HugeHeading>LoadingSearchIcon</HugeHeading>
+					<p>
+						This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
+						Color defaults to primary.
+					</p>
 
-						<Heading>Usage</Heading>
-						<DemoContainer>
-							<LoadingSearchIcon />
-						</DemoContainer>
-						<DemoContainer>
-							<LoadingSearchIcon color="hotpink" />
-						</DemoContainer>
-					</section>
-				</SiteSelection>
+					<Heading>Usage</Heading>
+					<DemoContainer>
+						<LoadingSearchIcon />
+					</DemoContainer>
+					<DemoContainer>
+						<LoadingSearchIcon color="hotpink" />
+					</DemoContainer>
+				</section>
 			);
 		});
 };

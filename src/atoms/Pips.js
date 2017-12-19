@@ -81,5 +81,4 @@ Pips.propTypes = {
 	value: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
 };
 
-export default Pips;
 export { Pips };

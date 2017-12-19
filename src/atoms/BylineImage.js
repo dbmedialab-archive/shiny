@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
 const BylineImage = styled.img`
-	width: 6.4rem;
-	height: 6.4rem;
+	width: calc(3 * ${props => props.theme.variables.headingSmallLineHeight});
+	height: calc(3 * ${props => props.theme.variables.headingSmallLineHeight});
 	border-radius: 50%;
 	display: inline-block;
-	margin: -3.2rem 0.8rem 0 1.5rem;
+	margin: ${props => `
+		calc(-3/2 * ${props.theme.variables.headingSmallLineHeight})
+		calc(1/2 * ${props.theme.variables.horizontalBase})
+		0
+		${props.theme.variables.horizontalBase}
+	`};
 	position: relative;
-	border: 3px solid white;
 	box-sizing: border-box;
-	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+	box-shadow: 0 .1rem .4rem 0 rgba(0, 0, 0, 0.37);
 `;
 
-export default BylineImage;
+export { BylineImage };

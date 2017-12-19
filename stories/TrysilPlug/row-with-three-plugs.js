@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import Heading, { HugeHeading } from '../../src/atoms/Heading';
-import Row from '../../src/atoms/Row';
-import Col from '../../src/atoms/Col';
-import TrysilPlug from '../../src/molecules/TrysilPlug';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Row } from '../../src/atoms/Row';
+import { Col } from '../../src/atoms/Col';
+import { TrysilPlug } from '../../src/molecules/TrysilPlug';
 
 export default () => (
 	<section>
