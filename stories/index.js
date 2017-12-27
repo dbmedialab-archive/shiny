@@ -6,6 +6,7 @@ import editorialMarking from './EditorialMarking';
 import horizontalLinkBar from './HorizontalLinkBar';
 import trysilPlug from './TrysilPlug';
 import floatImage from './FloatImage';
+import ads from './Ads';
 
 introduction();
 
@@ -19,3 +20,4 @@ grid();
 horizontalLinkBar();
 trysilPlug();
 floatImage();
+ads();

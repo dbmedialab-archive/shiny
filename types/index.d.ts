@@ -28,6 +28,24 @@ interface TrysilPlugProps {
 }
 declare class TrysilPlug extends PureComponent<TrysilPlugProps> {}
 
+
+interface GenericAdProps {
+	width?: string;
+	height?: string;
+	children?: any;
+}
+declare class GenericAd extends PureComponent<GenericAdProps> {}
+
+interface StickyAdProps {
+	sticky?: string;
+	width?: string;
+	height?: string;
+	children?: any;
+}
+
+declare class StickyAd extends PureComponent<StickyAdProps> {}
+
+
 interface ColProps {
 	xs?: boolean | number;
 	sm?: boolean | number;

@@ -32,4 +32,9 @@ export default {
 	headingXlargeLineHeight: '5.2rem',
 	headingHugeSize: '4.8rem',
 	headingHugeLineHeight: '6.3rem',
+
+	adWrapperBackgroundColor: '#ececec',
+	adWrapperFontSize: '1.1rem',
+	adWrapperFontColor: '#767676',
+	adWrapperCase: 'uppercase',
 };
