@@ -3,6 +3,7 @@ export { themes                  } from './themes';
 
 // Atoms
 export { Article                 } from './atoms/Article';
+export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
 export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
 export { BlockQuote              } from './atoms/BlockQuote';
@@ -46,3 +47,5 @@ export { FloatImage              } from './molecules/FloatImage';
 export { LunchButton             } from './molecules/LunchButton';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
+export { GenericAd               } from './molecules/GenericAd';
+export { StickyAd                } from './molecules/StickyAd';
