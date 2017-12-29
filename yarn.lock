@@ -5234,12 +5234,22 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
+react-image@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-image/-/react-image-1.3.1.tgz#32af60126ea92f4860df46697eea42c1661cef87"
+  dependencies:
+    prop-types "15.6.0"
+
 react-inspector@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-2.2.2.tgz#c04f5248fa92ab6c23e37960e725fb7f48c34d05"
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-lazy@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-lazy/-/react-lazy-0.5.1.tgz#418f7684af86dded7c127ec49d5d8b22f6d2fe4e"
 
 react-modal@^3.1.8:
   version "3.1.8"
