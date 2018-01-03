@@ -283,7 +283,11 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@types/inline-style-prefixer/-/inline-style-prefixer-3.0.1.tgz#8541e636b029124b747952e9a28848286d2b5bf6"
 
-"@types/react@16.0.31", "@types/react@^16.0.18":
+"@types/react@16.0.32":
+  version "16.0.32"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.32.tgz#9f23e534d1c1b7ce8cb4f034b449cfc220375888"
+
+"@types/react@^16.0.18":
   version "16.0.31"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.31.tgz#5285da62f3ac62b797f6d0729a1d6181f3180c3e"
 
