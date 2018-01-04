@@ -7,6 +7,7 @@ import { Heading } from '../atoms/Heading';
 import { Label } from '../atoms/Label';
 import { BlockLink } from '../atoms/BlockLink';
 import { Image } from '../atoms/Image';
+import { LazyProgressiveImage } from '../molecules/LazyProgressiveImage';
 
 const TrysilPlug = ({
 	kicker,
@@ -15,11 +16,17 @@ const TrysilPlug = ({
 	image,
 	labels,
 	url,
+	width,
+	height,
+	placeholderUrl,
 }) => (
 	<Article>
 		<BlockLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{image && <Image src={image} />}
+			{(image && !placeholderUrl) && <Image src={image} />}
+			{(placeholderUrl && image && width && height)
+				&& <LazyProgressiveImage width={width} height={height} imageUrl={image} placeholderUrl={placeholderUrl} />
+			}
 			<Heading headline>{title}</Heading>
 			{subtitle && <p itemProp="description">{subtitle}</p>}
 			{labels &&
@@ -40,6 +47,9 @@ TrysilPlug.propTypes = {
 	image: PropTypes.string,
 	labels: PropTypes.arrayOf(PropTypes.string),
 	url: PropTypes.string.isRequired,
+	width: PropTypes.string,
+	height: PropTypes.string,
+	placeholderUrl: PropTypes.string,
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
@@ -47,6 +57,9 @@ TrysilPlug.defaultProps = {
 	subtitle: '',
 	image: '',
 	labels: [],
+	width: '',
+	height: '',
+	placeholderUrl: '',
 };
 
 export { TrysilPlug };

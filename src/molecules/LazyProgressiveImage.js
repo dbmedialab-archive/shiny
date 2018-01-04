@@ -1,21 +1,27 @@
 import React from 'react';
+import Styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Img from 'react-image';
 import { Lazy } from 'react-lazy';
+
+import { StyledProgressiveImage } from './StyledProgressiveImage';
+
+const StyledLazy = Styled(Lazy)`
+	height: ${props => props.height || 'auto'};
+	width: ${props => props.width || 'auto'};
+`;
 
 const LazyProgressiveImage = ({
 	width, height, placeholderUrl, imageUrl, offset,
 }) => (
-	<Lazy cushion={offset}>
-		<Img
+	<StyledLazy cushion={offset}>
+		<StyledProgressiveImage
 			width={width}
 			height={height}
 			src={imageUrl}
-			loader={
-				<img src={placeholderUrl} width={width} height={height} alt="" />
-			}
+			placeholder={placeholderUrl}
+			component="img"
 		/>
-	</Lazy>
+	</StyledLazy>
 );
 
 LazyProgressiveImage.propTypes = {
