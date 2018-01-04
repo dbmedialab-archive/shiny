@@ -110,7 +110,7 @@ const HorizontalLinkBar = ({
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar {...rest}>
+			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {
 					return (
 						<LinkBarItem key={i} {...child.props}>
