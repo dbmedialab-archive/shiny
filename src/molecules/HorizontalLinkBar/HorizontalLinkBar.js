@@ -95,6 +95,7 @@ NavWithOptionalConstrainer.defaultProps = {
 };
 
 const HorizontalLinkBar = ({
+	background,
 	children,
 	shouldFadeOut,
 	width,
@@ -104,6 +105,7 @@ const HorizontalLinkBar = ({
 }) => {
 	return (
 		<NavWithOptionalConstrainer
+			background={background}
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
