@@ -60,13 +60,6 @@ const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 		background: transparent;
 		align-items: center;
 		z-index: ${props => props.zIndex};
-
-		@media (min-width: ${props => props.theme.variables.largeWidth}){
-			padding-top: 0;
-			background: transparent;
-			align-items: center;
-			z-index: ${props => props.zIndex};
-		}
 	}
 `;
 
