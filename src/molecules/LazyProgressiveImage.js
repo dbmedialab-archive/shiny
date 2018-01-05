@@ -1,28 +1,52 @@
-import React from 'react';
-import Styled from 'styled-components';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Lazy } from 'react-lazy';
+import LazyLoad from 'react-lazyload';
 
 import { StyledProgressiveImage } from './StyledProgressiveImage';
 
-const StyledLazy = Styled(Lazy)`
-	height: ${props => props.height || 'auto'};
-	width: ${props => props.width || 'auto'};
+const MockImage = styled.div`
+	width: ${props => `${props.width}px` || '100%'};
+	height: ${props => `${props.height}px` || '100%'};
+`;
+
+const StyledPlaceholder = styled.img`
+	width: ${props => `${props.width}px`};
+	height: ${props => `${props.height}px`};
 `;
 
 const LazyProgressiveImage = ({
 	width, height, placeholderUrl, imageUrl, offset,
-}) => (
-	<StyledLazy cushion={offset}>
-		<StyledProgressiveImage
-			width={width}
-			height={height}
-			src={imageUrl}
-			placeholder={placeholderUrl}
-			component="img"
-		/>
-	</StyledLazy>
-);
+}) => {
+	if (typeof window !== 'undefined') {
+		return (
+			<LazyLoad
+				offset={offset}
+				height={parseInt(height)}
+				once
+				placeholder={<StyledPlaceholder height={height} width={width} />}
+			>
+				<StyledProgressiveImage
+					src={imageUrl}
+					placeholder={placeholderUrl}
+					component="img"
+				/>
+			</LazyLoad>
+		);
+	}
+
+	const staticMarkup = `<img src="${imageUrl}" width="${width}" height="${height} alt="" />`;
+
+	/* eslint-disable react/no-danger */
+	return (
+		<Fragment>
+			<MockImage width={width} height={height}>
+				<noscript dangerouslySetInnerHTML={{ __html: staticMarkup }} />
+			</MockImage>
+		</Fragment>
+	);
+	/* eslint-enable react/no-danger */
+};
 
 LazyProgressiveImage.propTypes = {
 	width:

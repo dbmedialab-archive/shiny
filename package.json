@@ -32,7 +32,7 @@
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-lazy": "^0.5.1",
+    "react-lazyload": "^2.3.0",
     "react-progressive-bg-image": "^2.1.1",
     "react-stickynode": "^1.4.0",
     "react-styled-flexboxgrid": "2.1.1",
