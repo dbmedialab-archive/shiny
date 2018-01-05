@@ -72,7 +72,7 @@ const sharedStyles = css`
 	}
 	`;
 
-export const VeryPrettyA = styled.a`
+export const VeryPrettyA = BlockLink.extend`
 	${sharedStyles}
 	`;
 
