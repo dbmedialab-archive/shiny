@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 
 import { BlockLink } from '../../..';
 
