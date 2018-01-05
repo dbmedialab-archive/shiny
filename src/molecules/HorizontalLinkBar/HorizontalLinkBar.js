@@ -55,7 +55,7 @@ const Bar = styled.ul`
 `;
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
-	& {
+	&& {
 		padding-top: 0;
 		background: transparent;
 		align-items: center;
