@@ -54,7 +54,7 @@ const Bar = styled.ul`
 	}
 `;
 
-const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
+const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	& {
 		padding-top: 0;
 		background: transparent;
