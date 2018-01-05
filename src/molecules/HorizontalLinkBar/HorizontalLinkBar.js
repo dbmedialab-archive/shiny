@@ -54,11 +54,11 @@ const Bar = styled.ul`
 	}
 `;
 
-const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
-padding-top: 0;
-background: transparent;
-align-items: center;
-z-index: ${props => props.zIndex};
+const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
+	padding-top: 0;
+	background: transparent;
+	align-items: center;
+	z-index: ${props => props.zIndex};
 `;
 
 const NavWithOptionalConstrainer = ({
