@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 // Utils
@@ -7,7 +6,7 @@ import { unshadeColorString } from '../utils/unshade-color-string';
 // Atoms
 import { BlockLink } from '../atoms/BlockLink';
 
-const BlockLinkWithBackground = styled(BlockLink)`
+const BlockLinkWithBackground = BlockLink.extend`
 	flex: 1;
 	margin:
 		0
