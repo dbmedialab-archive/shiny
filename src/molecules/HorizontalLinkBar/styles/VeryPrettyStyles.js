@@ -2,8 +2,6 @@
 import styled from 'styled-components';
 import { BlockLink } from '../../..';
 
-const isBrowser = typeof window !== 'undefined';
-
 export const VeryPrettyA = styled.a`
 	display: inline-block;
 
@@ -43,11 +41,9 @@ export const VeryPrettyA = styled.a`
 	}
 
 	&::after {
-		width: ${props => (
-		(props.isActive && props.useUnderline)
-			|| !isBrowser
-			? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
-			: '0px')
+		width: ${props => (props.isActive && props.useUnderline
+		? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
+		: '0px')
 };
 		display: block;
 		position: absolute;
