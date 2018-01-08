@@ -1,9 +1,7 @@
 /* eslint-disable max-len */
-import { css } from 'styled-components';
-
 import { BlockLink } from '../../..';
 
-const sharedStyles = css`
+export const VeryPrettyA = BlockLink.extend`
 	display: inline-block;
 
 	${(props) => {
@@ -70,10 +68,6 @@ const sharedStyles = css`
 				width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
 			}
 	}
-	`;
-
-export const VeryPrettyA = BlockLink.extend`
-	${sharedStyles}
 	`;
 
 const Button = BlockLink.withComponent('button');
