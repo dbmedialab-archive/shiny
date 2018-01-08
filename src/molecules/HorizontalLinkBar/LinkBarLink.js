@@ -8,7 +8,6 @@ const LinkBarLink = ({ linkText, url, ...rest }) => {
 		<VeryPrettyA
 			href={url}
 			skin={linkText.toLowerCase()}
-			useUnderline
 			{...rest}
 		>{linkText}
 		</VeryPrettyA>
