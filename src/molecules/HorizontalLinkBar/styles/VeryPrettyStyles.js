@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import { BlockLink } from '../../..';
+import styled from 'styled-components';
 
-export const VeryPrettyA = BlockLink.extend`
+export const VeryPrettyA = styled.a`
 	display: inline-block;
 
 	${(props) => {
