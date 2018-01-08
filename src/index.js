@@ -37,6 +37,7 @@ export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
 export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
 export { LinkBarButton           } from './molecules/HorizontalLinkBar/LinkBarButton';
+export { SmallLinkBarButton      } from './molecules/HorizontalLinkBar/LinkBarButton';
 export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 

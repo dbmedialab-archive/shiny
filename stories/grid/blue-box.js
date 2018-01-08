@@ -18,7 +18,7 @@ const BlueBox = styled.div`
 	;
 `;
 
-const BluerBox = styled(BlueBox)`
+const BluerBox = BlueBox.extend`
 	background: ${props => props.theme.colors[props.theme.colors.skinColors.nativeAd]};
 `;
 

@@ -4,6 +4,10 @@ import {
 	Grid,
 } from '..';
 
-const StorybookThemeSwitcher = stories => <ThemeSwitcher><Grid>{stories()}</Grid></ThemeSwitcher>;
+const PaddedGrid = Grid.extend`
+	padding-top: calc(2*${props => props.theme.variables.verticalBase});
+`;
+
+const StorybookThemeSwitcher = stories => <ThemeSwitcher><PaddedGrid>{stories()}</PaddedGrid></ThemeSwitcher>;
 
 export { StorybookThemeSwitcher };
