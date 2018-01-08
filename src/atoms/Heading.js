@@ -11,7 +11,7 @@ const Heading = styled.h1`
 	}
 `;
 
-const SmallHeading = styled(Heading)`
+const SmallHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingSmallSize};
 	line-height: ${props => props.theme.variables.headingSmallLineHeight};
 
@@ -21,7 +21,7 @@ const SmallHeading = styled(Heading)`
 	}
 `;
 
-const MediumHeading = styled(Heading)`
+const MediumHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	line-height: ${props => props.theme.variables.headingMediumLineHeight};
 
@@ -31,7 +31,7 @@ const MediumHeading = styled(Heading)`
 	}
 `;
 
-const LargeHeading = styled(Heading)`
+const LargeHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingRegularSize};
 	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 
@@ -41,7 +41,7 @@ const LargeHeading = styled(Heading)`
 	}
 `;
 
-const XLargeHeading = styled(Heading)`
+const XLargeHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingRegularSize};
 	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 
@@ -51,7 +51,7 @@ const XLargeHeading = styled(Heading)`
 	}
 `;
 
-const HugeHeading = styled(Heading)`
+const HugeHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingLargeSize};
 	line-height: ${props => props.theme.variables.headingLargeLineHeight};
 
