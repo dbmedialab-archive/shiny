@@ -1,7 +1,6 @@
 // Dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 // Utils
 import { removeFalsyValuesFromArray } from '../utils/remove-falsy-values-from-array';
@@ -11,7 +10,7 @@ import { BlockLinkWithBackground as Link } from '../atoms/BlockLinkWithBackgroun
 import { LunchKicker as Kicker } from '../atoms/LunchKicker';
 import { MediumHeading } from '../atoms/Heading';
 
-const Heading = styled(MediumHeading)`
+const Heading = MediumHeading.extend`
 	color: ${props => props.theme.colors[props.color]};
 	margin: 0;
 `;

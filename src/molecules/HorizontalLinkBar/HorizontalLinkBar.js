@@ -54,11 +54,13 @@ const Bar = styled.ul`
 	}
 `;
 
-const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
-padding-top: 0;
-background: transparent;
-align-items: center;
-z-index: ${props => props.zIndex};
+const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
+	&& {
+		padding-top: 0;
+		background: transparent;
+		align-items: center;
+		z-index: ${props => props.zIndex};
+	}
 `;
 
 const NavWithOptionalConstrainer = ({
@@ -110,7 +112,7 @@ const HorizontalLinkBar = ({
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar {...rest}>
+			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {
 					return (
 						<LinkBarItem key={i} {...child.props}>
