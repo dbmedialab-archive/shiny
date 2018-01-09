@@ -247,6 +247,16 @@ import {
 						<LinkBarLink linkText="Sport" />
 					</HorizontalLinkBar>
 				</DemoContainer>
+				<DemoContainer>
+					<HorizontalLinkBar
+						shouldHavePadding={false}
+						isTopLevelComponent={false}
+					>
+						<LinkBarLink linkText="Siste nytt" />
+						<LinkBarLink isActive linkText="Lokale nyheter" />
+						<LinkBarLink linkText="Sport" />
+					</HorizontalLinkBar>
+				</DemoContainer>
 				<Code language="jsx">
 					{`
 <HorizontalLinkBar shouldHavePadding={false} isTopLevelComponent={false}>
@@ -349,6 +359,46 @@ import {
 				</section>
 			);
 		})
+		.add('... with skinned bottom border', () => (
+			<section>
+				<HugeHeading>LinkBarLink</HugeHeading>
+
+				<Heading>Demo</Heading>
+				<p>If the <code>linkText</code> prop corresponds with a property that exists in your theme
+					under <code>colors.skinColors</code>, then that color will be used for the default state indicating bottom
+					border. Hover inactive items for an animated effect.
+				</p>
+				<DemoContainer>
+					<HorizontalLinkBar background={colors.white}>
+						<LinkBarLink linkText="Sport" url="https://example.com" />
+						<LinkBarLink linkText="Underholdning" url="https://example.com" />
+						<LinkBarLink linkText="Non-corresponding linkText defaults to primary color" url="https://example.com" />
+						<LinkBarLink isActive linkText="Sport" url="https://example.com" />
+						<LinkBarLink isActive linkText="Underholdning" url="https://example.com" />
+						<LinkBarLink isActive linkText="Primary" url="https://example.com" />
+					</HorizontalLinkBar>
+				</DemoContainer>
+
+				<Heading>Usage</Heading>
+				<Code language="jsx">
+					{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar background={colors.white}>
+	<LinkBarLink linkText="Sport" url="https://example.com" />
+	<LinkBarLink linkText="Underholdning" url="https://example.com" />
+	<LinkBarLink linkText="Non-corresponding linkText defaults to primary color" url="https://example.com" />
+	<LinkBarLink isActive linkText="Sport" url="https://example.com" />
+	<LinkBarLink isActive linkText="Underholdning" url="https://example.com" />
+	<LinkBarLink isActive linkText="Primary" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+				</Code>
+			</section>
+		))
 		.add('... with alt. state indication', () => (
 			<section>
 				<HugeHeading>LinkBarLink with alternative state indication</HugeHeading>
