@@ -42,6 +42,7 @@ const Bar = styled.ul`
 	background: ${props => props.background};
 
 	white-space: nowrap;
+	overflow: -moz-scrollbars-none;
 	overflow: ${props => props.overflow};
 
 	-webkit-overflow-scrolling: touch!important;
