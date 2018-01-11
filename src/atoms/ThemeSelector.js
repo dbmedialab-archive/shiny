@@ -1,9 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeProvider, injectGlobal } from 'styled-components';
+import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import { merge } from 'aurora-deep-slice-merge';
 
-import { GlobalStyle } from '../atoms/GlobalStyle';
 import { themes } from '../themes';
 
 const isClient = (typeof window !== 'undefined');
@@ -23,30 +22,20 @@ injectGlobal`
 `;
 
 const ThemeSelector = ({ children, themeSlug }) => {
-	let theme = themes.defaultTheme;
-	let Global = GlobalStyle;
-
 	const hasThemeStoredInBrowser = (isClient && window.localStorage && window.localStorage.getItem('theme'));
+	const themeSlugFromLocalStorage = hasThemeStoredInBrowser ? window.localStorage.getItem('theme') : 'defaultTheme';
 
 	// If the themeSlug was sent in, use it
 	// Failing that, try localStorage
-	const themeName = themeSlug // eslint-disable-line no-nested-ternary
-		? themeSlug
-		: (hasThemeStoredInBrowser
-			? window.localStorage.getItem('theme')
-			: ''
-		);
+	const themeName = themeSlug ? themeSlug : themeSlugFromLocalStorage;
 
-	if (themeName) {
-		theme = merge(themes.defaultTheme, themes[themeName]);
+	const theme = merge(themes.defaultTheme, themes[themeName]);
+	// console.log(`Switching to the ${themeName} theme.`);
+	// console.log('new theme', theme.name);
 
-		// console.log(`Switching to the ${themeName} theme.`);
-		// console.log('new theme', theme);
-
-		if (theme && theme.global) {
-			Global = GlobalStyle.extend`${theme.global};`;
-		}
-	}
+	const Global = styled.div`
+		${theme.global};
+	`;
 
 	return (
 		<ThemeProvider theme={theme}>
