@@ -23,7 +23,11 @@ import { Label } from '@aller/shiny';
 <Label>Default</Label>
 			`}
 		</Code>
-		<p>The <var>color</var> prop can be any of the color names in the palette. Defaults to &quot;splashBackground&quot;.</p>
-		<p>The <var>textColor</var> prop can be any of the color names in the palette. Defaults to &quot;splashText&quot;.</p>
+		<p>The <var>color</var> prop can be any of the color names in the palette.
+			Defaults to &quot;splashBackground&quot;.
+		</p>
+		<p>The <var>textColor</var> prop can be any of the color names in the palette.
+			Defaults to &quot;splashText&quot;.
+		</p>
 	</section>
 );
