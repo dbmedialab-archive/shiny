@@ -42,6 +42,7 @@ const Bar = styled.ul`
 	background: ${props => props.background};
 
 	white-space: nowrap;
+	overflow: -moz-scrollbars-none;
 	overflow: ${props => props.overflow};
 
 	-webkit-overflow-scrolling: touch!important;
@@ -54,11 +55,13 @@ const Bar = styled.ul`
 	}
 `;
 
-const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
-padding-top: 0;
-background: transparent;
-align-items: center;
-z-index: ${props => props.zIndex};
+const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
+	&& {
+		padding-top: 0;
+		background: transparent;
+		align-items: center;
+		z-index: ${props => props.zIndex};
+	}
 `;
 
 const NavWithOptionalConstrainer = ({

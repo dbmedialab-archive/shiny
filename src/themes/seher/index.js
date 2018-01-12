@@ -1,4 +1,6 @@
+import { css } from 'styled-components';
 import { darken, lighten } from 'polished';
+import { variables } from './variables';
 
 const colorsToShade= {
 	primary: '#d60000',
@@ -19,6 +21,10 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
+const global = css`
+	font-family: ${variables.mainFont};
+`;
+
 export default {
 	name: 'SeHer',
 	colors: {
@@ -36,7 +42,6 @@ export default {
 			splashText: 'tertiary',
 		},
 	},
-	variables: {
-		mainFont: '"Source Sans Pro", sans-serif',
-	},
+	global,
+	variables,
 };

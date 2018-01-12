@@ -1,9 +1,8 @@
 /* eslint-disable max-len */
-import styled, { css } from 'styled-components';
-
+import styled from 'styled-components';
 import { BlockLink } from '../../..';
 
-const sharedStyles = css`
+export const VeryPrettyA = styled.a`
 	display: inline-block;
 
 	${(props) => {
@@ -72,13 +71,9 @@ const sharedStyles = css`
 	}
 	`;
 
-export const VeryPrettyA = styled.a`
-	${sharedStyles}
-	`;
-
 const Button = BlockLink.withComponent('button');
 const SomewhatPrettyButton = VeryPrettyA.withComponent(Button);
-export const VeryPrettyButton = styled(SomewhatPrettyButton)`
+export const VeryPrettyButton = SomewhatPrettyButton.extend`
 	position: relative;
 	padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
 	padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
