@@ -1,7 +1,9 @@
 {
 	// Place your settings in this file to overwrite default and user settings.
 	"prettier.semi": false,
-	"prettier.useTabs": false,
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 3,
+	"prettier.printWidth": 80,
 	"prettier.singleQuote": true,
 	"editor.formatOnSave": false,
 	"eslint.autoFixOnSave": true

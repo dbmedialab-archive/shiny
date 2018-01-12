@@ -1,77 +1,147 @@
-import React, { Fragment } from 'react';
+import propTypes from 'prop-types';
+import React, { cloneElement, Component } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import LazyLoad from 'react-lazyload';
 
-import { StyledProgressiveImage } from './StyledProgressiveImage';
+import { Picture } from './Picture';
+import { Image } from '../atoms/Image';
 
-const MockImage = styled.div`
-	width: ${props => `${props.width}px` || '100%'};
-	height: ${props => `${props.height}px` || '100%'};
+
+const Container = styled.figure`
+	position: relative;
+	background-color: ${props => props.backgroundColor};
+	display: inline-block;
+	padding-bottom: ${props => `${props.paddingBottom}%`};
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
 `;
 
-const StyledPlaceholder = styled.img`
-	width: ${props => `${props.width}px`};
-	height: ${props => `${props.height}px`};
+const StyledImage = Image.extend`
+	height: ${props => props.height || '100%'};
 `;
 
-const LazyProgressiveImage = ({
-	width, height, placeholderUrl, imageUrl, offset,
-}) => {
-	if (typeof window !== 'undefined') {
-		return (
-			<LazyLoad
-				offset={offset}
-				height={parseInt(height)}
-				once
-				placeholder={<StyledPlaceholder height={height} width={width} />}
-			>
-				<StyledProgressiveImage
-					src={imageUrl}
-					placeholder={placeholderUrl}
-					component="img"
-				/>
-			</LazyLoad>
-		);
+class LazyProgressiveImage extends Component {
+	static propTypes = {
+		backgroundColor: propTypes.string,
+		height: propTypes.number,
+		src: propTypes.string.isRequired,
+		width: propTypes.number,
+		alt: propTypes.string,
+		offset: propTypes.number,
 	}
 
-	const staticMarkup = `<img src="${imageUrl}" width="${width}" height="${height} alt="" />`;
+	static defaultProps = {
+		backgroundColor: '#ececec',
+		height: null,
+		width: null,
+		alt: 'Artikkelbilde.',
+		offset: 0,
+	}
 
-	/* eslint-disable react/no-danger */
-	return (
-		<Fragment>
-			<MockImage width={width} height={height}>
-				<noscript dangerouslySetInnerHTML={{ __html: staticMarkup }} />
-			</MockImage>
-		</Fragment>
-	);
-	/* eslint-enable react/no-danger */
-};
+	constructor(props) {
+		super(props);
 
-LazyProgressiveImage.propTypes = {
-	width:
-		PropTypes
-			.string
-			.isRequired,
-	height:
-		PropTypes
-			.string
-			.isRequired,
-	placeholderUrl:
-		PropTypes.string,
-	imageUrl:
-		PropTypes
-			.string
-			.isRequired,
-	offset:
-		PropTypes
-			.number,
-};
+		this.props = props;
+	}
 
-LazyProgressiveImage.defaultProps = {
-	placeholderUrl:
-		'',
-	offset: 0,
-};
+	state = {
+		hasViewed: false,
+		isLoaded: false,
+	}
+
+	componentDidMount() {
+		if (!('IntersectionObserver' in window)) {
+			import('intersection-observer').then((module) => {
+			});
+		}
+		this.initObserver();
+	}
+
+	componentWillUnmount() {
+		if (this.img) {
+			this.img.removeEventListener('load', this.setLoadedStatus);
+		}
+
+		this.observer.unobserve(this.node);
+		this.observer = null;
+		this.node = null;
+	}
+
+
+	setLoadedStatus = () => {
+		this.setState({
+			isLoaded: true,
+		});
+	}
+
+	addImageListener = (img) => {
+		if (!img) {
+			return;
+		}
+
+		this.img = img;
+		this.img.addEventListener('load', this.setLoadedStatus);
+	}
+
+	initObserver = (offset) => {
+		if (!this.node) {
+			return;
+		}
+
+
+		if (!('IntersectionObserver' in window)) {
+			this.setState({
+				hasViewed: true,
+			});
+
+			return;
+		}
+
+		const callback = (entries) => {
+			entries.forEach((entry) => {
+				const hasViewed = this.state.hasViewed || entry.isIntersecting;
+
+				this.setState({
+					hasViewed,
+				});
+			});
+		};
+		const options = {
+			threshold: 0,
+			rootMargin: this.props.offset ? `${this.props.offset}px` : '0px',
+		};
+
+		this.observer = new IntersectionObserver(callback, options);
+		this.observer.observe(this.node);
+	}
+
+	render() {
+		const {
+			backgroundColor, height, width, src, alt,
+		} = this.props;
+
+		// Mount the picture element if no child components are set
+		const onMountPicture = (typeof this.props.children !== 'undefined' || !this.props.children)
+			? this.addImageListener
+			: () => {};
+
+		return (
+			<Container
+				backgroundColor={backgroundColor}
+				innerRef={node => this.node = node}
+				paddingBottom={(height / width) * 100}
+			>
+				<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
+					{this.state.hasViewed ?
+						React.Children.map(this.props.children, child => cloneElement(child, {
+							onMounted: this.addImageListener,
+						})) : null
+					}
+					<StyledImage src={src} alt={alt} />
+				</Picture>
+			</Container>
+		);
+	}
+}
 
 export { LazyProgressiveImage };

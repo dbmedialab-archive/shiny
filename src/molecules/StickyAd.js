@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { StatelessComponent } from 'react';
 import PropTypes from 'prop-types';
-import Sticky from 'react-stickynode';
+import styled from 'styled-components';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const StyledAdWrapper = AdWrapper.extend`
-  ${props => (props.sticky === 'right' ? 'left:calc(100% + 15px);' : 'right:calc(100% + 15px);')};
-  position: absolute;
+  position: sticky;
   top: 0;
 `;
 
-const StickyAd = ({
+const StickyWrapper = styled.div`
+	position: absolute;
+	top: 64px;
+	left: calc(50% + 490px + 15px);
+	height: 100%;
+	width: 300px;
+`;
+
+const StickyAd  = ({
 	children, width, height, sticky,
 }) => (
-	<Sticky>
-		<StyledAdWrapper height={height} width={width} sticky={sticky}>
+	<StickyWrapper sticky={sticky}>
+		<StyledAdWrapper height={height} width={width}>
 			{children}
 		</StyledAdWrapper>
-	</Sticky>
+	</StickyWrapper>
 );
 
 StickyAd.propTypes = {
@@ -31,5 +38,6 @@ StickyAd.defaultProps = {
 	width: '320px',
 	height: '250px',
 };
+
 
 export { StickyAd };

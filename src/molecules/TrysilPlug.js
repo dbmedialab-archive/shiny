@@ -7,6 +7,7 @@ import { Heading } from '../atoms/Heading';
 import { Label } from '../atoms/Label';
 import { BlockLink } from '../atoms/BlockLink';
 import { LazyProgressiveImage } from '../molecules/LazyProgressiveImage';
+import { Source } from '../molecules/Source';
 
 
 const TrysilPlug = ({
@@ -26,12 +27,14 @@ const TrysilPlug = ({
 			{kicker && <Kicker>{kicker}</Kicker>}
 			{placeholderUrl &&
 				<LazyProgressiveImage
-					width={width}
-					height={height}
-					imageUrl={image}
-					placeholderUrl={placeholderUrl}
+					width={parseInt(width)}
+					height={parseInt(height)}
+					alt={title}
+					src={placeholderUrl}
 					offset={offset}
-				/>
+				>
+					<Source srcSet={image} />
+				</LazyProgressiveImage>
 			}
 			<Heading headline>{title}</Heading>
 			{subtitle && <p itemProp="description">{subtitle}</p>}
