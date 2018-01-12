@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 const Label = styled.span`
-	background-color: ${props => props.theme.colors[props.color] || props.theme.colors[props.theme.colors.skinColors.splashBackground]};
-	color: ${props => props.theme.colors[props.textColor] || props.theme.colors[props.theme.colors.skinColors.splashText]};
+	background-color: ${props => (
+		props.theme.colors[props.color] || props.theme.colors[props.theme.colors.skinColors.splashBackground]
+	)};
+	color: ${props => (
+		props.theme.colors[props.textColor] || props.theme.colors[props.theme.colors.skinColors.splashText]
+	)};
 	display: inline-block;
 	font-family: ${props => props.theme.variables.headingsFont};
 	font-size: 1.1rem;
