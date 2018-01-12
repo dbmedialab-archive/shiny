@@ -1,6 +1,6 @@
 export default {
 	mainFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-	headingsFont: 'Georgia, serif',
+	headingsFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
 	horizontalBase: '1.4rem',
 	unitlessHorizontalBase: 1.4,

@@ -3,7 +3,6 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Open Sans', helvetica, arial, sans-serif",
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
-	verticlBase: '2.4rem',
 };
 
 const global = `
