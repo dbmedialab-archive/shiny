@@ -22,7 +22,11 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const global = css`
-	font-family: ${variables.mainFont};
+	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
+
+	body {
+		font-family: ${variables.mainFont};
+	}
 `;
 
 export default {
