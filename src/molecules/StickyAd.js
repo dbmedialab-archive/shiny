@@ -2,6 +2,7 @@ import React, { StatelessComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import stickyfill from './StickyFill';
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const StyledAdWrapper = AdWrapper.extend`
@@ -17,13 +18,18 @@ const StickyWrapper = styled.div`
 	width: 300px;
 `;
 
+
+const InnerAdWrapper = ({ height, width, children }) => (
+	<StyledAdWrapper height={height} width={width}>
+		{children}
+	</StyledAdWrapper>
+);
+
 const StickyAd  = ({
 	children, width, height, sticky,
 }) => (
 	<StickyWrapper sticky={sticky}>
-		<StyledAdWrapper height={height} width={width}>
-			{children}
-		</StyledAdWrapper>
+		{stickyfill(InnerAdWrapper)}
 	</StickyWrapper>
 );
 
