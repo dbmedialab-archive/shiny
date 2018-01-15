@@ -1,7 +1,9 @@
+import { css } from 'styled-components';
+
 import colors from './colors';
 import variables from './variables';
 
-const global = `
+const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 `;
 

@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import colors from './colors';
 
 const variables = {
@@ -5,13 +6,15 @@ const variables = {
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
 };
 
-const global = `
+const global = css`
+	body {
+		font-family: ${variables.mainFont};
+		line-height: ${variables.verticalBase};
+	}
+
 	a {
 		color: #333;
 	}
-
-	font-family: ${variables.mainFont};
-	line-height: ${variables.verticalBase};
 `;
 
 const theme = {
