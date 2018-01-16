@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import media from '../utils/media-queries';
 
 const setTextAlign = (sticky) => {
 	if (sticky === 'right') return 'left';

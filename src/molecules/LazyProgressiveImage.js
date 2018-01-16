@@ -25,9 +25,11 @@ class LazyProgressiveImage extends Component {
 		backgroundColor: propTypes.string,
 		height: propTypes.number,
 		src: propTypes.string.isRequired,
+		fallbackSrc: propTypes.string.isRequired,
 		width: propTypes.number,
 		alt: propTypes.string,
 		offset: propTypes.number,
+		children: propTypes.children.isRequired,
 	}
 
 	static defaultProps = {
@@ -128,7 +130,7 @@ class LazyProgressiveImage extends Component {
 		return (
 			<Container
 				backgroundColor={backgroundColor}
-				innerRef={node => this.node = node}
+				innerRef={(node) => { this.node = node; }}
 				paddingBottom={(height / width) * 100}
 			>
 				<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
