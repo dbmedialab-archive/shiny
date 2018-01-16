@@ -29,7 +29,7 @@ class LazyProgressiveImage extends Component {
 		width: propTypes.number,
 		alt: propTypes.string,
 		offset: propTypes.number,
-		children: propTypes.children.isRequired,
+		children: propTypes.node.isRequired,
 	}
 
 	static defaultProps = {

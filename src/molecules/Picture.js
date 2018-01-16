@@ -22,7 +22,7 @@ class Picture extends Component {
 	static propTypes = {
 		onMounted: propTypes.func.isRequired,
 		isLoaded: propTypes.bool.isRequired,
-		children: propTypes.children.isRequired,
+		children: propTypes.node.isRequired,
 		alt: propTypes.string,
 	}
 

@@ -3,13 +3,14 @@ import propTypes from 'prop-types';
 
 class Source extends Component {
 	static propTypes = {
-		onMounted: propTypes.func.isRequired,
+		onMounted: propTypes.func,
 		srcSet: propTypes.string.isRequired,
 		media: propTypes.string,
 	}
 
 	static defaultProps = {
 		media: '',
+		onMounted: undefined,
 	}
 
 	componentDidMount() {
