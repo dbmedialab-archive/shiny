@@ -6,6 +6,7 @@ import { Grid as LibGrid } from 'react-styled-flexboxgrid';
 
 const Grid = styled(LibGrid)`
 	padding-left: ${props => props.theme.flexboxgrid.outerMargin}rem;
+	padding-right: ${props => props.theme.flexboxgrid.outerMargin}rem;
 `;
 
 export { Grid };
