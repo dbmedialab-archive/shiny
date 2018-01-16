@@ -7,6 +7,7 @@ import horizontalLinkBar from './HorizontalLinkBar';
 import trysilPlug from './TrysilPlug';
 import floatImage from './FloatImage';
 import ads from './Ads';
+import lazyProgressiveImage from './LazyProgressiveImage';
 
 introduction();
 
@@ -21,3 +22,4 @@ horizontalLinkBar();
 trysilPlug();
 floatImage();
 ads();
+lazyProgressiveImage();

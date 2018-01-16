@@ -3,5 +3,9 @@
 		"env",
 		"react",
 		"stage-0"
-	]
+	],
+	"plugins": [
+		"system-import-transformer",
+		"transform-object-assign"
+    ]
 }
