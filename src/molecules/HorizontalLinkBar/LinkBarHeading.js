@@ -1,5 +1,5 @@
 import { VeryPrettyA } from './styles/VeryPrettyStyles';
 
-const LinkBarText = VeryPrettyA.withComponent('span');
+const LinkBarHeading = VeryPrettyA.withComponent('span');
 
-export { LinkBarText };
+export { LinkBarHeading };
