@@ -7,6 +7,7 @@ import publishedDate from './typography/publishedDate';
 import bodyText from './typography/bodyText';
 import lunchButton from './typography/lunch-button';
 import dice from './typography/dice';
+import icon from './typography/icon';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -20,5 +21,6 @@ export default () => {
 		.add('Published date', publishedDate)
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
-		.add('Dice', dice);
+		.add('Dice', dice)
+		.add('Icon', icon);
 };
