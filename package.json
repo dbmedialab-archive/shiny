@@ -10,7 +10,8 @@
     "postinstall": "babel src/ -d lib/",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
-    "test": "eslint src stories --max-warnings=0"
+	 "test": "eslint src stories --max-warnings=0",
+	 "dev": "babel src/ -w -d lib/"
   },
   "author": "Aller Media",
   "license": "ISC",
