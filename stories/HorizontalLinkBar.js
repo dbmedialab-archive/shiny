@@ -53,8 +53,8 @@ import {
 		.add('... with arrows for scrolling', () => {
 			return (
 				<section>
-					<HugeHeading>HorizontalLinkBar</HugeHeading>
-					<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+					<HugeHeading>HorizontalLinkBar with arrows for scrolling</HugeHeading>
+					<p>shouldUseScrollArrows will add clickable arrows if scrolling is needed.</p>
 
 					<Heading>Demo</Heading>
 					<DemoContainer>

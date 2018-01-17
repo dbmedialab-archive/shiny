@@ -11,11 +11,11 @@ const NavWithOptionalConstrainer = ({
 	if (isTopLevelComponent) {
 		return (
 			<Nav width={width} background={background}>
-				{shouldUseScrollArrows && <ScrollArrow pointTo="left">&#8826;</ScrollArrow>}
+				{shouldUseScrollArrows && <ScrollArrow pointTo="left" />}
 				<DesktopWidthConstrainer zIndex={zIndex}>
 					{children}
 				</DesktopWidthConstrainer>
-				{shouldUseScrollArrows && <ScrollArrow pointTo="right">&#8827;</ScrollArrow>}
+				{shouldUseScrollArrows && <ScrollArrow pointTo="right" />}
 			</Nav>
 		);
 	}

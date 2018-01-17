@@ -16,7 +16,6 @@ const HorizontalLinkBar = ({
 	isTopLevelComponent,
 	...rest
 }) => {
-	console.log('++++++++++++++++++++++++++++++', rest);
 	return (
 		<NavWithOptionalConstrainer
 			background={background}
