@@ -7,7 +7,7 @@ const variables = {
 };
 
 const global = css`
-	@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,800');
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
 
 	body {
 		color: #222;

@@ -1,6 +1,5 @@
 import Styled from 'styled-components';
 
-
 const setTextAlign = (sticky) => {
 	if (sticky === 'right') return 'left';
 	if (sticky === 'left') return 'right';
@@ -10,8 +9,8 @@ const setTextAlign = (sticky) => {
 const AdWrapper = Styled.div`
 	width: ${props => props.width || '320px'};
 	height: auto;
-	min-height: ${props => props.height || '250px'};
-	margin-bottom: 0.9375rem;
+	min-height: calc(${props => props.height || '250px'} + 2.63rem);
+	margin-bottom: 2.4rem;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
