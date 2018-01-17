@@ -10,17 +10,21 @@ const HorizontalLinkBar = ({
 	background,
 	children,
 	shouldFadeOut,
+	shouldUseScrollArrows,
 	width,
 	zIndex,
 	isTopLevelComponent,
 	...rest
 }) => {
+	console.log('++++++++++++++++++++++++++++++', rest);
 	return (
 		<NavWithOptionalConstrainer
 			background={background}
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
+			shouldUseScrollArrows={shouldUseScrollArrows}
+			{...rest}
 		>
 			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {
@@ -48,6 +52,7 @@ HorizontalLinkBar.propTypes = {
 	shouldAdjustForNestedPadding: PropTypes.bool,
 	shouldFlexChildren: PropTypes.bool,
 	shouldFadeOut: PropTypes.bool,
+	shouldUseScrollArrows: PropTypes.bool,
 	width: PropTypes.string,
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
@@ -61,6 +66,7 @@ HorizontalLinkBar.defaultProps = {
 	shouldAdjustForNestedPadding: false,
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
+	shouldUseScrollArrows: false,
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,

@@ -28,16 +28,9 @@ export default () => {
 						<HorizontalLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
-							<LinkBarLink linkText="Tree" url="https://example.com" />
-							<LinkBarLink linkText="Four" url="https://example.com" />
-							<LinkBarLink linkText="Five" url="https://example.com" />
-							<LinkBarLink linkText="Six" url="https://example.com" />
-							<LinkBarLink linkText="Seven" url="https://example.com" />
-							<LinkBarLink linkText="Eight" url="https://example.com" />
 							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 						</HorizontalLinkBar>
 					</DemoContainer>
-
 
 					<Heading>Usage</Heading>
 					<Code language="jsx">
@@ -50,6 +43,57 @@ import {
 <HorizontalLinkBar background={colors.white}>
   <LinkBarLink linkText="One" url="https://example.com" isActive />
   <LinkBarLink linkText="Two" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... with arrows for scrolling', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar</HugeHeading>
+					<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+						>
+							<LinkBarLink linkText="One" url="https://example.com" />
+							<LinkBarLink linkText="Two" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree" url="https://example.com" />
+							<LinkBarLink linkText="Four" url="https://example.com" />
+							<LinkBarLink linkText="Five" url="https://example.com" />
+							<LinkBarLink linkText="Six" url="https://example.com" />
+							<LinkBarLink linkText="Seven" url="https://example.com" />
+							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+>
+  <LinkBarLink linkText="One" url="https://example.com" />
+  <LinkBarLink linkText="Two" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree" url="https://example.com" />
+  <LinkBarLink linkText="Four" url="https://example.com" />
+  <LinkBarLink linkText="Five" url="https://example.com" />
+  <LinkBarLink linkText="Six" url="https://example.com" />
+  <LinkBarLink linkText="Seven" url="https://example.com" />
+  <LinkBarLink linkText="Eight" url="https://example.com" />
   <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}

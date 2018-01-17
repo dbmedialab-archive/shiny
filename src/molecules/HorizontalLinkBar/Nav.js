@@ -4,6 +4,7 @@ const Nav = styled.nav`
 	background: ${props => props.background};
 	position: relative;
 	width: ${props => props.width};
+	display: flex;
 `;
 
 export { Nav };
