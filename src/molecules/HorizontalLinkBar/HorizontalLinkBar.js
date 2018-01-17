@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
-
 import { LinkBarItem } from './LinkBarItem';
 import { Gradient } from './Gradient';
-import { Nav } from './Nav';
 import { Bar } from './Bar';
-import { DesktopWidthConstrainer } from './DesktopWidthConstrainer';
 import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
 
 const HorizontalLinkBar = ({
