@@ -17,25 +17,22 @@ const Container = styled.figure`
 `;
 
 const StyledImage = Image.extend`
-	height: ${props => props.height || '100%'};
+	height: 100%;
 `;
 
 class LazyProgressiveImage extends Component {
 	static propTypes = {
 		backgroundColor: propTypes.string,
-		height: propTypes.number,
 		src: propTypes.string.isRequired,
 		fallbackSrc: propTypes.string.isRequired,
-		width: propTypes.number,
 		alt: propTypes.string,
 		offset: propTypes.number,
 		children: propTypes.node.isRequired,
+		ratio: propTypes.number.isRequired,
 	}
 
 	static defaultProps = {
 		backgroundColor: '#ececec',
-		height: null,
-		width: null,
 		alt: 'Artikkelbilde.',
 		offset: 0,
 	}
@@ -119,7 +116,7 @@ class LazyProgressiveImage extends Component {
 
 	render() {
 		const {
-			backgroundColor, height, width, src, alt,
+			backgroundColor, src, alt, ratio,
 		} = this.props;
 
 		// Mount the picture element if no child components are set
@@ -131,11 +128,11 @@ class LazyProgressiveImage extends Component {
 			<Container
 				backgroundColor={backgroundColor}
 				innerRef={(node) => { this.node = node; }}
-				paddingBottom={(height / width) * 100}
+				paddingBottom={ratio * 100}
 			>
 				<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
 					{this.state.hasViewed ?
-						React.Children.map(this.props.children, child => cloneElement(child, {
+						React.Children.map(this.props.children, child => child && cloneElement(child, {
 							onMounted: this.addImageListener,
 						})) : null
 					}
