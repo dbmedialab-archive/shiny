@@ -1,5 +1,5 @@
-import { VeryPrettyA } from './styles/VeryPrettyStyles';
+import { LinkBarLinkBase } from '../..';
 
-const LinkBarHeading = VeryPrettyA.withComponent('span');
+const LinkBarHeading = LinkBarLinkBase.withComponent('span');
 
 export { LinkBarHeading };
