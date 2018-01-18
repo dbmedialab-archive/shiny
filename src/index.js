@@ -38,18 +38,19 @@ export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
 export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
 export { LinkBarNav              } from './atoms/LinkBarNav';
-export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
+export { LinkBarItem             } from './atoms/LinkBarItem';
+export { LinkBarLink             } from './atoms/LinkBarLink';
 export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
-export { LinkBarButton           } from './molecules/HorizontalLinkBar/LinkBarButton';
+export { LinkBarButton           } from './atoms/LinkBarButton';
 export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
-export { SmallLinkBarButton      } from './molecules/HorizontalLinkBar/LinkBarButton';
-export { LinkBarHeading          } from './molecules/HorizontalLinkBar/LinkBarHeading';
-export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
+export { SmallLinkBarButton      } from './atoms/LinkBarButton';
+export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';
+export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
 export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
 export { LunchButton             } from './molecules/LunchButton';

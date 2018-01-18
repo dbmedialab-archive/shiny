@@ -6,10 +6,13 @@ import { Heading, HugeHeading } from '../src/atoms/Heading';
 import { Code } from '../src/atoms/Code';
 
 // HorizontalLinkBar
-import { HorizontalLinkBar } from '../src/molecules/HorizontalLinkBar/HorizontalLinkBar';
-import { FullWidthLinkBar } from '../src/molecules/HorizontalLinkBar/FullWidthLinkBar';
-import { LinkBarLink } from '../src/molecules/HorizontalLinkBar/LinkBarLink';
-import { LinkBarButton, SmallLinkBarButton } from '../src/molecules/HorizontalLinkBar/LinkBarButton';
+import {
+	HorizontalLinkBar,
+	FullWidthLinkBar,
+	LinkBarLink,
+	LinkBarButton,
+	SmallLinkBarButton,
+} from '../src';
 // import TagBar from '../shared-components/TagBar/TagBar';
 import theme from '../src/themes/default-theme';
 
