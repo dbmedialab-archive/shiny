@@ -1,101 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styled from 'styled-components';
-
-import { DontPushTheAdBoundaries } from '../../atoms/DontPushTheAdBoundaries';
+import {
+	HorizontalOverflowGradient,
+	HorizontalFlexingList as Bar,
+	NavWithOptionalConstrainer,
+} from '../..';
 
 import { LinkBarItem } from './LinkBarItem';
-
-const Gradient = styled.div`
-	background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 3rem;
-	height: calc(100% - .1rem);
-`;
-
-const Nav = styled.nav`
-	background: ${props => props.background};
-	position: relative;
-	width: ${props => props.width};
-`;
-
-const Bar = styled.ul`
-	${props => (props.shouldFlexChildren
-		? `
-			display: flex;
-			align-items: center;
-		` : `
-			display: block;
-		`
-	)}
-	width: ${props => (props.shouldAdjustForNestedPadding
-		? `calc(100% + 2*${props.theme.variables.horizontalBase})`
-		: '100%'
-	)};
-	margin: ${props => (props.shouldAdjustForNestedPadding ? `0 -${props.theme.variables.horizontalBase}` : '0')};
-	padding: ${props => (props.shouldHavePadding ? `0 calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
-	font-family: ${props => props.theme.variables.mainFont};
-
-	background: ${props => props.background};
-
-	white-space: nowrap;
-	overflow: -moz-scrollbars-none;
-	overflow: ${props => props.overflow};
-
-	-webkit-overflow-scrolling: touch!important;
-	-ms-overflow-style: -ms-autohiding-scrollbar!important;
-	-ms-overflow-style: none;
-	position: relative;
-
-	::-webkit-scrollbar {
-		display: none;
-	}
-`;
-
-const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
-	&& {
-		padding-top: 0;
-		background: transparent;
-		align-items: center;
-		z-index: ${props => props.zIndex};
-	}
-`;
-
-const NavWithOptionalConstrainer = ({
-	width, background, zIndex, isTopLevelComponent, ...props
-}) => {
-	if (isTopLevelComponent) {
-		return (
-			<Nav width={width} background={background}>
-				<DesktopWidthConstrainer zIndex={zIndex}>
-					{props.children}
-				</DesktopWidthConstrainer>
-			</Nav>
-		);
-	}
-	return (
-		<Nav width={width} background={background}>
-			{props.children}
-		</Nav>
-	);
-};
-
-NavWithOptionalConstrainer.propTypes = {
-	background: PropTypes.string,
-	width: PropTypes.string.isRequired,
-	zIndex: PropTypes.number.isRequired,
-	isTopLevelComponent: PropTypes.bool.isRequired,
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node,
-	]).isRequired,
-};
-NavWithOptionalConstrainer.defaultProps = {
-	background: 'transparent',
-};
 
 const HorizontalLinkBar = ({
 	background,
@@ -123,7 +35,7 @@ const HorizontalLinkBar = ({
 				})}
 			</Bar>
 			{shouldFadeOut &&
-			<Gradient />
+			<HorizontalOverflowGradient />
 			}
 		</NavWithOptionalConstrainer>
 	);
