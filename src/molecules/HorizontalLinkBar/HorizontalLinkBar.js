@@ -4,10 +4,9 @@ import PropTypes from 'prop-types';
 import {
 	HorizontalOverflowGradient,
 	HorizontalFlexingList as Bar,
+	LinkBarItem,
 	NavWithOptionalConstrainer,
 } from '../..';
-
-import { LinkBarItem } from './LinkBarItem';
 
 const HorizontalLinkBar = ({
 	background,

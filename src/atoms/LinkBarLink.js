@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { LinkBarLinkBase } from '../..';
+import { LinkBarLinkBase } from '..';
 
 const LinkBarLink = ({ linkText, url, ...rest }) => {
 	return (

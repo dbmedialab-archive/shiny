@@ -1,4 +1,4 @@
-import { LinkBarLinkBase } from '../..';
+import { LinkBarLinkBase } from '..';
 
 const LinkBarHeading = LinkBarLinkBase.withComponent('span');
 
