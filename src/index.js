@@ -54,4 +54,4 @@ export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
 export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
-export { Source 						     } from './molecules/Source';
+export { Source                  } from './molecules/Source';
