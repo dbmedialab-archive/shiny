@@ -21,6 +21,7 @@ export { Figure                  } from './atoms/Figure';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
 export { Header                  } from './atoms/Header';
+export { HorizontalOverflowGradient } from './atoms/HorizontalOverflowGradient';
 export { Image                   } from './atoms/Image';
 export { Kicker                  } from './atoms/Kicker';
 export { Label                   } from './atoms/Label';
@@ -35,6 +36,8 @@ export { Quote                   } from './atoms/Quote';
 export { Row                     } from './atoms/Row';
 export { Standfirst              } from './atoms/Standfirst';
 export { ThemeName               } from './atoms/ThemeName';
+export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
+export { LinkBarNav              } from './atoms/LinkBarNav';
 export { LinkBarLink             } from './molecules/HorizontalLinkBar/LinkBarLink';
 export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
 export { LinkBarButton           } from './molecules/HorizontalLinkBar/LinkBarButton';
@@ -45,6 +48,7 @@ export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidth
 export { ThemeSelector           } from './atoms/ThemeSelector';
 
 // Molecules
+export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';
 export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
