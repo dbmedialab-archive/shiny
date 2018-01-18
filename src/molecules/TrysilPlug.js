@@ -17,29 +17,27 @@ const TrysilPlug = ({
 	image,
 	labels,
 	url,
-	width,
-	height,
 	placeholderUrl,
 	offset,
 	sources,
+	ratio,
 }) => (
 	<Article>
 		<BlockLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
 			{placeholderUrl &&
 				<LazyProgressiveImage
-					width={parseInt(width)}
-					height={parseInt(height)}
 					alt={title}
 					src={placeholderUrl}
 					offset={offset}
 					fallbackSrc={image}
+					ratio={ratio}
 				>
 					{sources.length === 0 &&
 						<Source srcSet={image} />
 					}
-					{sources.map(source =>
-						<Source srcSet={source.url} media={source.media} />)}
+					{sources.map((source, i) =>
+						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
 			<Heading headline>{title}</Heading>
@@ -62,19 +60,16 @@ TrysilPlug.propTypes = {
 	image: PropTypes.string.isRequired,
 	labels: PropTypes.arrayOf(PropTypes.string),
 	url: PropTypes.string.isRequired,
-	width: PropTypes.string,
-	height: PropTypes.string,
 	placeholderUrl: PropTypes.string.isRequired,
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
+	ratio: PropTypes.number.isRequired,
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
 	title: '',
 	subtitle: '',
 	labels: [],
-	width: '',
-	height: '',
 	offset: 0,
 	sources: [],
 };
