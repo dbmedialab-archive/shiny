@@ -1,15 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { VeryPrettyButton } from './styles/VeryPrettyStyles';
+import { LinkBarButtonBase } from '../..';
 
 const LinkBarButton = ({ children, ...rest }) => {
 	return (
-		<VeryPrettyButton
+		<LinkBarButtonBase
 			{...rest}
 		>
 			{children}
-		</VeryPrettyButton>
+		</LinkBarButtonBase>
 	);
 };
 
