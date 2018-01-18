@@ -7,6 +7,7 @@ import { LinkBarHeading } from './LinkBarHeading';
 const Arrow = styled(LinkBarHeading)`
 	line-height: 0;
 	font-weight: 800;
+	cursor: pointer;
 	padding-left: ${props => (props.pointsTo === 'left'
 		? `calc(1/4 * ${props.theme.variables.horizontalBase})`
 		: `calc(1/2 * ${props.theme.variables.horizontalBase})`
@@ -19,15 +20,17 @@ const Arrow = styled(LinkBarHeading)`
 
 const ScrollArrow = ({
 	pointsTo,
+	onClick,
 }) => {
 	if (pointsTo === 'left') {
-		return <Arrow pointsTo={pointsTo}>&#8826;</Arrow>;
+		return <Arrow onClick={onClick} pointsTo={pointsTo}>&#8826;</Arrow>;
 	}
-	return <Arrow pointsTo={pointsTo}>&#8827;</Arrow>;
+	return <Arrow onClick={onClick} pointsTo={pointsTo}>&#8827;</Arrow>;
 };
 
 ScrollArrow.propTypes = {
 	pointsTo: PropTypes.oneOf(['left', 'right']).isRequired,
+	onClick: PropTypes.func.isRequired,
 };
 
 export { ScrollArrow };

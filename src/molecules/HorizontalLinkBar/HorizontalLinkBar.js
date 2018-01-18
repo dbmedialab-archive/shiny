@@ -10,7 +10,6 @@ const HorizontalLinkBar = ({
 	background,
 	children,
 	shouldFadeOut,
-	shouldUseScrollArrows,
 	width,
 	zIndex,
 	isTopLevelComponent,
@@ -22,7 +21,6 @@ const HorizontalLinkBar = ({
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
-			shouldUseScrollArrows={shouldUseScrollArrows}
 			{...rest}
 		>
 			<Bar background={background} {...rest}>
@@ -34,9 +32,7 @@ const HorizontalLinkBar = ({
 					);
 				})}
 			</Bar>
-			{shouldFadeOut &&
-			<Gradient />
-			}
+			{shouldFadeOut && <Gradient />}
 		</NavWithOptionalConstrainer>
 	);
 };
@@ -52,6 +48,7 @@ HorizontalLinkBar.propTypes = {
 	shouldFlexChildren: PropTypes.bool,
 	shouldFadeOut: PropTypes.bool,
 	shouldUseScrollArrows: PropTypes.bool,
+	drawRightArrowInitially: PropTypes.bool,
 	width: PropTypes.string,
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
@@ -66,6 +63,7 @@ HorizontalLinkBar.defaultProps = {
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
 	shouldUseScrollArrows: false,
+	drawRightArrowInitially: false,
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,

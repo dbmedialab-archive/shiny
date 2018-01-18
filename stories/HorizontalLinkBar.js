@@ -61,6 +61,7 @@ import {
 						<HorizontalLinkBar
 							background={colors.white}
 							shouldUseScrollArrows
+							drawRightArrowInitially
 						>
 							<LinkBarLink linkText="One" url="https://example.com" />
 							<LinkBarLink linkText="Two" url="https://example.com" isActive />
@@ -85,6 +86,7 @@ import {
 <HorizontalLinkBar
 	background={colors.white}
 	shouldUseScrollArrows
+	drawRightArrowInitially
 >
   <LinkBarLink linkText="One" url="https://example.com" />
   <LinkBarLink linkText="Two" url="https://example.com" isActive />
