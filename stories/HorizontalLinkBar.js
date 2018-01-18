@@ -101,6 +101,59 @@ import {
 				</section>
 			);
 		})
+		.add('... which is not a top level component ', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar which is not a top level component</HugeHeading>
+					<p>This will not center the LinkBar and and padding.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+							isTopLevelComponent={false}
+						>
+							<LinkBarLink linkText="One" url="https://example.com" />
+							<LinkBarLink linkText="Two" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree" url="https://example.com" />
+							<LinkBarLink linkText="Four" url="https://example.com" />
+							<LinkBarLink linkText="Five" url="https://example.com" />
+							<LinkBarLink linkText="Six" url="https://example.com" />
+							<LinkBarLink linkText="Seven" url="https://example.com" />
+							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+	isTopLevelComponent={false}
+>
+  <LinkBarLink linkText="One" url="https://example.com" />
+  <LinkBarLink linkText="Two" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree" url="https://example.com" />
+  <LinkBarLink linkText="Four" url="https://example.com" />
+  <LinkBarLink linkText="Five" url="https://example.com" />
+  <LinkBarLink linkText="Six" url="https://example.com" />
+  <LinkBarLink linkText="Seven" url="https://example.com" />
+  <LinkBarLink linkText="Eight" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
 		.add('... with nested padding', () => (
 			<section>
 				<HugeHeading>HorizontalLinkBar with adjustment for nested padding</HugeHeading>
