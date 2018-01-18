@@ -58,7 +58,7 @@ TrysilPlug.propTypes = {
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 	image: PropTypes.string.isRequired,
-	labels: PropTypes.arrayOf(PropTypes.string),
+	labels: PropTypes.arrayOf(PropTypes.object),
 	url: PropTypes.string.isRequired,
 	placeholderUrl: PropTypes.string.isRequired,
 	offset: PropTypes.number,

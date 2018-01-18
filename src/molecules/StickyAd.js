@@ -12,7 +12,7 @@ const StyledAdWrapper = AdWrapper.extend`
 const StickyWrapper = styled.div`
 	position: absolute;
 	top: 0;
-	left: calc(50% + 490px + 15px);
+	${props => (props.sticky === 'right' ? 'left: calc(50% + 490px + 15px);' : 'right: calc(50% + 490px + 15px);')}
 	height: 100%;
 	width: 300px;
 `;
