@@ -6,7 +6,7 @@ const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 		background: transparent;
 		align-items: center;
 		z-index: ${props => props.zIndex};
-		overflow: hidden;
+		overflow-x: hidden;
 	}
 `;
 
