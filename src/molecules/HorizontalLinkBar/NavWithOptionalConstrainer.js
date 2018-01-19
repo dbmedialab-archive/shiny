@@ -27,23 +27,30 @@ class NavWithOptionalConstrainer extends Component {
 	}
 
 	componentDidMount() {
-		this.drawRightArrowIfNeeded();
+		if (this.container && this.firstChild) {
+			this.drawRightArrowIfNeeded();
+		}
 	}
 
 	drawRightArrowIfNeeded() {
-		if (!this.container || !this.firstChild) {
-			return;
-		}
-
-		const containerSize = this.container.offsetWidth;
-		const firstChildSize = this.firstChild.scrollWidth;
+		const { shouldDrawRightArrow } = this.state;
 
 		const {
-			shouldDrawRightArrow,
-		} = this.state;
+			offsetWidth: containerSize,
+		} = this.container;
+		const {
+			scrollWidth: firstChildFullSize,
+			offsetWidth: firstChildVisibleSize,
+			scrollLeft: leftScrollPosition,
+		} = this.firstChild;
 
-		if (firstChildSize > containerSize && !shouldDrawRightArrow) {
-			this.setState({ shouldDrawRightArrow: true });
+		const contentWiderThanContainer = firstChildFullSize > containerSize;
+		const allToTheFarRight = (leftScrollPosition + firstChildVisibleSize) === firstChildFullSize;
+
+		if (contentWiderThanContainer && !allToTheFarRight) {
+			!shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: true });
+		} else {
+			shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: false });
 		}
 	}
 
@@ -60,12 +67,14 @@ class NavWithOptionalConstrainer extends Component {
 		const { scrollLength } = this.props;
 		this.firstChild.scrollBy(-scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
+		this.drawRightArrowIfNeeded();
 	}
 
 	rightClick = (e) => {
 		const { scrollLength } = this.props;
 		this.firstChild.scrollBy(scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
+		this.drawRightArrowIfNeeded();
 	}
 
 	addInnerRefToFirstChild(children) {
