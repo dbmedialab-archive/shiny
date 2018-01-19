@@ -9,7 +9,7 @@ import {
 import { ScrollArrow } from './ScrollArrow';
 
 const Nav = LinkBarNav.extend`
-	display: ${props => (props.shouldUseScrollArrows? 'flex' : 'initial')};
+	display: ${props => (props.shouldUseScrollArrows? 'flex' : 'block')};
 `;
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
