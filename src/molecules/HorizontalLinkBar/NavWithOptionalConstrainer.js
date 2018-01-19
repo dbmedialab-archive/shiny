@@ -15,24 +15,24 @@ class NavWithOptionalConstrainer extends Component {
 	constructor(props) {
 		super(props);
 
-		const { drawRightArrowInitially } = props;
+		const { shouldUseScrollArrows, drawRightArrowInitially } = props;
 
 		this.container = null;
 		this.firstChild = null;
 
 		this.state = {
 			shouldDrawLeftArrow: false,
-			shouldDrawRightArrow: drawRightArrowInitially,
+			shouldDrawRightArrow: shouldUseScrollArrows && drawRightArrowInitially,
 		};
 	}
 
 	componentDidMount() {
 		if (this.container && this.firstChild) {
-			this.drawRightArrowIfNeeded();
+			this.drawRightArrowOnlyIfNeeded();
 		}
 	}
 
-	drawRightArrowIfNeeded() {
+	drawRightArrowOnlyIfNeeded() {
 		const { shouldDrawRightArrow } = this.state;
 
 		const {
@@ -67,14 +67,14 @@ class NavWithOptionalConstrainer extends Component {
 		const { scrollLength } = this.props;
 		this.firstChild.scrollBy(-scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
-		this.drawRightArrowIfNeeded();
+		this.drawRightArrowOnlyIfNeeded();
 	}
 
 	rightClick = (e) => {
 		const { scrollLength } = this.props;
 		this.firstChild.scrollBy(scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
-		this.drawRightArrowIfNeeded();
+		this.drawRightArrowOnlyIfNeeded();
 	}
 
 	addInnerRefToFirstChild(children) {
@@ -127,9 +127,9 @@ class NavWithOptionalConstrainer extends Component {
 				width={width}
 				background={background}
 			>
-				{shouldUseScrollArrows && shouldDrawLeftArrow && <ScrollArrow onClick={this.leftClick} pointsTo="left" />}
+				{shouldDrawLeftArrow && <ScrollArrow onClick={this.leftClick} pointsTo="left" />}
 				{content}
-				{shouldUseScrollArrows && shouldDrawRightArrow && <ScrollArrow onClick={this.rightClick} pointsTo="right" />}
+				{shouldDrawRightArrow && <ScrollArrow onClick={this.rightClick} pointsTo="right" />}
 			</Nav>
 		);
 	}
