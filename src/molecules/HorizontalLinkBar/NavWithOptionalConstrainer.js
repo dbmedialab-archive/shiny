@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 
 import {
 	DontPushTheAdBoundaries,
-	LinkBarNav,
+	LinkBarNav as Nav,
 } from '../..';
 
 import { ScrollArrow } from './ScrollArrow';
-
-const Nav = LinkBarNav.extend`
-	display: flex;
-`;
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	&& {
