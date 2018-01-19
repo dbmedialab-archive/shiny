@@ -35,6 +35,28 @@ class NavWithOptionalConstrainer extends Component {
 		};
 	}
 
+	addInnerRefToContent(children) {
+		const addInnerRef = (child, i) => {
+			if (!child) {
+				return null;
+			}
+
+			// only change the first child
+			if (i !== 0) {
+				return child;
+			}
+
+			return cloneElement(
+				child,
+				{
+					innerRef: (input) => { this.content = input; },
+				}
+			);
+		};
+
+		return Children.map(children, addInnerRef);
+	}
+
 	render() {
 		const {
 			width, background, zIndex, isTopLevelComponent, shouldUseScrollArrows, children,
@@ -44,16 +66,20 @@ class NavWithOptionalConstrainer extends Component {
 			shouldDrawLeftArrow, shouldDrawRightArrow,
 		} = this.state;
 
+		const childrenToDraw = shouldUseScrollArrows
+			? this.addInnerRefToContent(children)
+			: children;
+
 		const content = isTopLevelComponent
 			? (
 				<DesktopWidthConstrainer
 					zIndex={zIndex}
 					shouldUseScrollArrows={shouldUseScrollArrows}
 				>
-					{children}
+					{childrenToDraw}
 				</DesktopWidthConstrainer>
 			)
-			: children;
+			: childrenToDraw;
 
 		return (
 			<Nav
