@@ -1,16 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { VeryPrettyA } from './styles/VeryPrettyStyles';
+import { LinkBarLinkBase } from '..';
 
 const LinkBarLink = ({ linkText, url, ...rest }) => {
 	return (
-		<VeryPrettyA
+		<LinkBarLinkBase
 			href={url}
 			skin={linkText.toLowerCase()}
 			{...rest}
 		>{linkText}
-		</VeryPrettyA>
+		</LinkBarLinkBase>
 	);
 };
 

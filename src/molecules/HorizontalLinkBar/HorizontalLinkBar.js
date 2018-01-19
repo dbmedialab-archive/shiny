@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { LinkBarItem } from './LinkBarItem';
-import { Gradient } from './Gradient';
-import { Bar } from './Bar';
-import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
+import {
+	HorizontalOverflowGradient,
+	HorizontalFlexingList as Bar,
+	LinkBarItem,
+	NavWithOptionalConstrainer,
+} from '../..';
 
 const HorizontalLinkBar = ({
 	background,
@@ -32,7 +34,9 @@ const HorizontalLinkBar = ({
 					);
 				})}
 			</Bar>
-			{shouldFadeOut && <Gradient />}
+			{shouldFadeOut &&
+			<HorizontalOverflowGradient />
+			}
 		</NavWithOptionalConstrainer>
 	);
 };

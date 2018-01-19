@@ -1,8 +1,6 @@
-/* eslint-disable max-len */
 import styled from 'styled-components';
-import { BlockLink } from '../../..';
 
-export const VeryPrettyA = styled.a`
+export const LinkBarLinkBase = styled.a`
 	display: inline-block;
 
 	${(props) => {
@@ -41,9 +39,10 @@ export const VeryPrettyA = styled.a`
 	}
 
 	&::after {
-		width: ${props => (props.isActive && props.useUnderline
-		? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
-		: '0px')
+		width: ${props => (
+		props.isActive && props.useUnderline
+			? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
+			: '0px')
 };
 		display: block;
 		position: absolute;
@@ -51,7 +50,9 @@ export const VeryPrettyA = styled.a`
 		left: 0;
 		height: .1rem;
 		margin: 0 ${props => props.theme.variables.horizontalBase};
-		background: ${props => (props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary)};
+		background: ${props => (
+		props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary
+	)};
 		content: '';
 		transition: width .2s ease-in-out;
 	}
@@ -59,23 +60,20 @@ export const VeryPrettyA = styled.a`
 	@media (min-width: ${props => props.theme.variables.largeWidth}) {
 		${(props) => {
 		if (props.size === 'small') {
-			return `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/4*${props.theme.variables.horizontalBase});`;
+			return `padding:
+				calc(3/4*${props.theme.variables.verticalBase})
+				calc(1/4*${props.theme.variables.horizontalBase});
+			`;
 		}
 
-		return `padding: ${props.theme.variables.verticalBase} ${props.theme.variables.horizontalBase};`;
+		return `padding:
+			${props.theme.variables.verticalBase}
+			${props.theme.variables.horizontalBase};
+		`;
 	}}
 
-			&:hover::after{
-				width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
-			}
+	&:hover::after{
+		width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
 	}
-	`;
-
-const Button = BlockLink.withComponent('button');
-const SomewhatPrettyButton = VeryPrettyA.withComponent(Button);
-export const VeryPrettyButton = SomewhatPrettyButton.extend`
-	position: relative;
-	padding-top: calc(1/2*${props => props.theme.variables.verticalBase});
-	padding-bottom: calc(1/2*${props => props.theme.variables.verticalBase});
-	cursor: pointer;
+}
 	`;
