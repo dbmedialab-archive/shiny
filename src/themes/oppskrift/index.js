@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { stripUnit } from 'polished';
 import colors from './colors';
 import variables from './variables';
 
@@ -29,6 +30,10 @@ const theme = {
 	global,
 	colors,
 	variables,
+
+	flexboxgrid: {
+		gutterWidth: stripUnit(variables.horizontalBase), // rem
+	},
 };
 
 export default theme;
