@@ -16,6 +16,8 @@ const HorizontalLinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
+	shouldUseScrollArrows,
+	drawRightArrowInitially,
 	...rest
 }) => {
 	return (
@@ -24,7 +26,8 @@ const HorizontalLinkBar = ({
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
-			{...rest}
+			shouldUseScrollArrows={shouldUseScrollArrows}
+			drawRightArrowInitially={drawRightArrowInitially}
 		>
 			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {

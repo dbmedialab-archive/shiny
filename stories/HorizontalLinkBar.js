@@ -57,7 +57,7 @@ import {
 			return (
 				<section>
 					<HugeHeading>HorizontalLinkBar with arrows for scrolling</HugeHeading>
-					<p>shouldUseScrollArrows will add clickable arrows if scrolling is needed.</p>
+					<p>It will add clickable arrows if scrolling is needed. The right arrow is drawn Initially always.</p>
 
 					<Heading>Demo</Heading>
 					<DemoContainer>
@@ -110,7 +110,7 @@ import {
 			return (
 				<section>
 					<HugeHeading>HorizontalLinkBar which is not a top level component</HugeHeading>
-					<p>This will not center the LinkBar and and padding.</p>
+					<p>This will not center the LinkBar as is done on top level compontents.</p>
 
 					<Heading>Demo</Heading>
 					<DemoContainer>
