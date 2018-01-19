@@ -78,26 +78,25 @@ class NavWithOptionalConstrainer extends Component {
 	}
 
 	addInnerRefToContent(children) {
-		return Children.map(
-			children,
-			(child, i) => {
-				if (!child) {
-					return null;
-				}
+		const addInnerRef = (child, i) => {
+			if (!child) {
+				return null;
+			}
 
-				// only change the first child
-				if (i !== 0) {
-					return child;
-				}
+			// only change the first child
+			if (i !== 0) {
+				return child;
+			}
 
-				return cloneElement(
-					child,
-					{
-						innerRef: (input) => { this.content = input; },
-					}
-				);
-			},
-		);
+			return cloneElement(
+				child,
+				{
+					innerRef: (input) => { this.content = input; },
+				}
+			);
+		};
+
+		return Children.map(children, addInnerRef);
 	}
 
 	render() {
