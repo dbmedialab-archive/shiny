@@ -15,6 +15,8 @@ const HorizontalLinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
+	shouldUseScrollArrows,
+	drawRightArrowInitially,
 	...rest
 }) => {
 	return (
@@ -23,6 +25,8 @@ const HorizontalLinkBar = ({
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
+			shouldUseScrollArrows={shouldUseScrollArrows}
+			drawRightArrowInitially={drawRightArrowInitially}
 		>
 			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {
@@ -50,6 +54,8 @@ HorizontalLinkBar.propTypes = {
 	shouldAdjustForNestedPadding: PropTypes.bool,
 	shouldFlexChildren: PropTypes.bool,
 	shouldFadeOut: PropTypes.bool,
+	shouldUseScrollArrows: PropTypes.bool,
+	drawRightArrowInitially: PropTypes.bool,
 	width: PropTypes.string,
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
@@ -63,6 +69,8 @@ HorizontalLinkBar.defaultProps = {
 	shouldAdjustForNestedPadding: false,
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
+	shouldUseScrollArrows: false,
+	drawRightArrowInitially: false,
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,
