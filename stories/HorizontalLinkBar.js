@@ -76,6 +76,112 @@ import {
 				</section>
 			);
 		})
+		.add('... with arrows for scrolling', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar with arrows for scrolling</HugeHeading>
+					<p>It will add clickable arrows if scrolling is needed. The right arrow is drawn Initially always.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+							drawRightArrowInitially
+						>
+							<LinkBarLink linkText="One long link" url="https://example.com" />
+							<LinkBarLink linkText="Two long link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Three long link" url="https://example.com" />
+							<LinkBarLink linkText="Four long link" url="https://example.com" />
+							<LinkBarLink linkText="Five long link" url="https://example.com" />
+							<LinkBarLink linkText="Six long link" url="https://example.com" />
+							<LinkBarLink linkText="Seven long link" url="https://example.com" />
+							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+	drawRightArrowInitially
+>
+  <LinkBarLink linkText="One long link" url="https://example.com" />
+  <LinkBarLink linkText="Two long link" url="https://example.com" isActive />
+  <LinkBarLink linkText="Three long link" url="https://example.com" />
+  <LinkBarLink linkText="Four long link" url="https://example.com" />
+  <LinkBarLink linkText="Five long link" url="https://example.com" />
+  <LinkBarLink linkText="Six long link" url="https://example.com" />
+  <LinkBarLink linkText="Seven long link" url="https://example.com" />
+  <LinkBarLink linkText="Eight long link" url="https://example.com" />
+  <LinkBarLink linkText="Buckle long My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... which is not a top level component ', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar which is not a top level component</HugeHeading>
+					<p>This will not center the LinkBar as is done on top level compontents.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+							isTopLevelComponent={false}
+						>
+							<LinkBarLink linkText="One link" url="https://example.com" />
+							<LinkBarLink linkText="Two link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Three link" url="https://example.com" />
+							<LinkBarLink linkText="Four link" url="https://example.com" />
+							<LinkBarLink linkText="Five link" url="https://example.com" />
+							<LinkBarLink linkText="Six link" url="https://example.com" />
+							<LinkBarLink linkText="Seven link" url="https://example.com" />
+							<LinkBarLink linkText="Eight link" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+	isTopLevelComponent={false}
+>
+  <LinkBarLink linkText="One link" url="https://example.com" />
+  <LinkBarLink linkText="Two link" url="https://example.com" isActive />
+  <LinkBarLink linkText="Three link" url="https://example.com" />
+  <LinkBarLink linkText="Four link" url="https://example.com" />
+  <LinkBarLink linkText="Five link" url="https://example.com" />
+  <LinkBarLink linkText="Six link" url="https://example.com" />
+  <LinkBarLink linkText="Seven link" url="https://example.com" />
+  <LinkBarLink linkText="Eight link" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
 		.add('... with nested padding', () => (
 			<section>
 				<HugeHeading>HorizontalLinkBar with adjustment for nested padding</HugeHeading>
