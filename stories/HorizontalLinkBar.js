@@ -67,14 +67,14 @@ import {
 							shouldUseScrollArrows
 							drawRightArrowInitially
 						>
-							<LinkBarLink linkText="One" url="https://example.com" />
-							<LinkBarLink linkText="Two" url="https://example.com" isActive />
-							<LinkBarLink linkText="Tree" url="https://example.com" />
-							<LinkBarLink linkText="Four" url="https://example.com" />
-							<LinkBarLink linkText="Five" url="https://example.com" />
-							<LinkBarLink linkText="Six" url="https://example.com" />
-							<LinkBarLink linkText="Seven" url="https://example.com" />
-							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="One link" url="https://example.com" />
+							<LinkBarLink linkText="Two link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree link" url="https://example.com" />
+							<LinkBarLink linkText="Four link" url="https://example.com" />
+							<LinkBarLink linkText="Five link" url="https://example.com" />
+							<LinkBarLink linkText="Six link" url="https://example.com" />
+							<LinkBarLink linkText="Seven link" url="https://example.com" />
+							<LinkBarLink linkText="Eight link" url="https://example.com" />
 							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 						</HorizontalLinkBar>
 					</DemoContainer>
@@ -92,14 +92,14 @@ import {
 	shouldUseScrollArrows
 	drawRightArrowInitially
 >
-  <LinkBarLink linkText="One" url="https://example.com" />
-  <LinkBarLink linkText="Two" url="https://example.com" isActive />
-  <LinkBarLink linkText="Tree" url="https://example.com" />
-  <LinkBarLink linkText="Four" url="https://example.com" />
-  <LinkBarLink linkText="Five" url="https://example.com" />
-  <LinkBarLink linkText="Six" url="https://example.com" />
-  <LinkBarLink linkText="Seven" url="https://example.com" />
-  <LinkBarLink linkText="Eight" url="https://example.com" />
+  <LinkBarLink linkText="One link" url="https://example.com" />
+  <LinkBarLink linkText="Two link" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree link" url="https://example.com" />
+  <LinkBarLink linkText="Four link" url="https://example.com" />
+  <LinkBarLink linkText="Five link" url="https://example.com" />
+  <LinkBarLink linkText="Six link" url="https://example.com" />
+  <LinkBarLink linkText="Seven link" url="https://example.com" />
+  <LinkBarLink linkText="Eight link" url="https://example.com" />
   <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}
@@ -120,14 +120,14 @@ import {
 							shouldUseScrollArrows
 							isTopLevelComponent={false}
 						>
-							<LinkBarLink linkText="One" url="https://example.com" />
-							<LinkBarLink linkText="Two" url="https://example.com" isActive />
-							<LinkBarLink linkText="Tree" url="https://example.com" />
-							<LinkBarLink linkText="Four" url="https://example.com" />
-							<LinkBarLink linkText="Five" url="https://example.com" />
-							<LinkBarLink linkText="Six" url="https://example.com" />
-							<LinkBarLink linkText="Seven" url="https://example.com" />
-							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="One link" url="https://example.com" />
+							<LinkBarLink linkText="Two link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree link" url="https://example.com" />
+							<LinkBarLink linkText="Four link" url="https://example.com" />
+							<LinkBarLink linkText="Five link" url="https://example.com" />
+							<LinkBarLink linkText="Six link" url="https://example.com" />
+							<LinkBarLink linkText="Seven link" url="https://example.com" />
+							<LinkBarLink linkText="Eight link" url="https://example.com" />
 							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 						</HorizontalLinkBar>
 					</DemoContainer>
@@ -145,14 +145,14 @@ import {
 	shouldUseScrollArrows
 	isTopLevelComponent={false}
 >
-  <LinkBarLink linkText="One" url="https://example.com" />
-  <LinkBarLink linkText="Two" url="https://example.com" isActive />
-  <LinkBarLink linkText="Tree" url="https://example.com" />
-  <LinkBarLink linkText="Four" url="https://example.com" />
-  <LinkBarLink linkText="Five" url="https://example.com" />
-  <LinkBarLink linkText="Six" url="https://example.com" />
-  <LinkBarLink linkText="Seven" url="https://example.com" />
-  <LinkBarLink linkText="Eight" url="https://example.com" />
+  <LinkBarLink linkText="One link" url="https://example.com" />
+  <LinkBarLink linkText="Two link" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree link" url="https://example.com" />
+  <LinkBarLink linkText="Four link" url="https://example.com" />
+  <LinkBarLink linkText="Five link" url="https://example.com" />
+  <LinkBarLink linkText="Six link" url="https://example.com" />
+  <LinkBarLink linkText="Seven link" url="https://example.com" />
+  <LinkBarLink linkText="Eight link" url="https://example.com" />
   <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}

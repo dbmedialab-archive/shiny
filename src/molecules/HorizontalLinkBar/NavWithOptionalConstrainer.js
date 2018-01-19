@@ -1,5 +1,4 @@
-// Originally written for the HorizontalLinkBar molecule
-import React from 'react';
+import React, { Component, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -21,24 +20,42 @@ const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	}
 `;
 
-const NavWithOptionalConstrainer = ({
-	width, background, zIndex, isTopLevelComponent, ...props
-}) => {
-	if (isTopLevelComponent) {
+class NavWithOptionalConstrainer extends Component {
+	constructor(props) {
+		super(props);
+
+		const { shouldUseScrollArrows, drawRightArrowInitially } = props;
+
+		this.container = null;
+		this.content = null;
+
+		this.state = {
+			shouldDrawLeftArrow: false,
+			shouldDrawRightArrow: shouldUseScrollArrows && drawRightArrowInitially,
+		};
+	}
+
+	render() {
+		const {
+			width, background, zIndex, isTopLevelComponent, shouldUseScrollArrows, children,
+		} = this.props;
+
+		if (isTopLevelComponent) {
+			return (
+				<Nav width={width} background={background}>
+					<DesktopWidthConstrainer zIndex={zIndex}>
+						{children}
+					</DesktopWidthConstrainer>
+				</Nav>
+			);
+		}
 		return (
 			<Nav width={width} background={background}>
-				<DesktopWidthConstrainer zIndex={zIndex}>
-					{props.children}
-				</DesktopWidthConstrainer>
+				{children}
 			</Nav>
 		);
 	}
-	return (
-		<Nav width={width} background={background}>
-			{props.children}
-		</Nav>
-	);
-};
+}
 
 NavWithOptionalConstrainer.propTypes = {
 	background: PropTypes.string,
