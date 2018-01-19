@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const LinkBarItem = styled.li`
 	position: relative;
-	flex: ${props => (props.flex ? props.flex : 'initial')};
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 0;

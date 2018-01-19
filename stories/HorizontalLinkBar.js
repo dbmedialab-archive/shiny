@@ -16,10 +16,32 @@ import {
 // import TagBar from '../shared-components/TagBar/TagBar';
 import theme from '../src/themes/default-theme';
 
+import { VerticalLinkBar } from '../src/molecules/VerticalLinkBar';
+
 const { colors } = theme;
 
 export default () => {
-	storiesOf('Horizontal bars', HorizontalLinkBar)
+	storiesOf('Link bars', module)
+		.add('VerticalLinkBar', () => {
+			return (
+				<section>
+					<HugeHeading>VerticalLinkBar</HugeHeading>
+					<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<VerticalLinkBar>
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</VerticalLinkBar>
+					</DemoContainer>
+
+
+					<Heading>Usage</Heading>
+				</section>
+			);
+		})
 		.add('HorizontalLinkBar', () => {
 			return (
 				<section>
