@@ -5,8 +5,9 @@ import {
 	HorizontalOverflowGradient,
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
-	NavWithOptionalConstrainer,
 } from '../..';
+
+import { NavWithOptionalConstrainer } from  './NavWithOptionalConstrainer';
 
 const HorizontalLinkBar = ({
 	background,

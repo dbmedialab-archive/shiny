@@ -1,9 +1,15 @@
 import React, { Component, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { Nav } from './Nav';
+import { LinkBarNav } from '../..';
+
 import { DesktopWidthConstrainer } from './DesktopWidthConstrainer';
 import { ScrollArrow } from './ScrollArrow';
+
+const Nav = styled(LinkBarNav)`
+	display: flex;
+`;
 
 class NavWithOptionalConstrainer extends Component {
 	constructor(props) {

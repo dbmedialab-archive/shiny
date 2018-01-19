@@ -1,4 +1,4 @@
-import { DontPushTheAdBoundaries } from '../../atoms/DontPushTheAdBoundaries';
+import { DontPushTheAdBoundaries } from '../..';
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	&& {
