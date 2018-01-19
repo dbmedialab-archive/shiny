@@ -40,18 +40,28 @@ class NavWithOptionalConstrainer extends Component {
 			width, background, zIndex, isTopLevelComponent, shouldUseScrollArrows, children,
 		} = this.props;
 
-		if (isTopLevelComponent) {
-			return (
-				<Nav width={width} background={background}>
-					<DesktopWidthConstrainer zIndex={zIndex}>
-						{children}
-					</DesktopWidthConstrainer>
-				</Nav>
-			);
-		}
+		const {
+			shouldDrawLeftArrow, shouldDrawRightArrow,
+		} = this.state;
+
+		const content = isTopLevelComponent
+			? (
+				<DesktopWidthConstrainer
+					zIndex={zIndex}
+					shouldUseScrollArrows={shouldUseScrollArrows}
+				>
+					{children}
+				</DesktopWidthConstrainer>
+			)
+			: children;
+
 		return (
-			<Nav width={width} background={background}>
-				{children}
+			<Nav
+				innerRef={(input) => { this.container = input; }} // Must use 'innerRef' instead of 'ref' with styled-components
+				width={width}
+				background={background}
+			>
+				{content}
 			</Nav>
 		);
 	}
