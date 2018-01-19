@@ -35,6 +35,57 @@ class NavWithOptionalConstrainer extends Component {
 		};
 	}
 
+	componentDidMount() {
+		if (this.container && this.content) {
+			this.drawRightArrowOnlyIfNeeded();
+		}
+	}
+
+	drawRightArrowOnlyIfNeeded() {
+		const { shouldDrawRightArrow } = this.state;
+
+		const {
+			offsetWidth: containerSize,
+		} = this.container;
+		const {
+			scrollWidth: contentFullSize,
+			offsetWidth: contentVisibleSize,
+			scrollLeft: leftScrollPosition,
+		} = this.content;
+
+		const contentWiderThanContainer = contentFullSize > containerSize;
+		const allToTheFarRight = (leftScrollPosition + contentVisibleSize) === contentFullSize;
+
+		if (contentWiderThanContainer && !allToTheFarRight) {
+			!shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: true });
+		} else {
+			shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: false });
+		}
+	}
+
+	drawLeftArrowfOnlyIfNeeded() {
+		const { shouldDrawLeftArrow } = this.state;
+		if (this.content.scrollLeft && this.content.scrollLeft > 5) {
+			!shouldDrawLeftArrow && this.setState({ shouldDrawLeftArrow: true });
+		} else {
+			shouldDrawLeftArrow && this.setState({ shouldDrawLeftArrow: false });
+		}
+	}
+
+	leftClick = () => {
+		const { scrollLength } = this.props;
+		this.content.scrollBy(-scrollLength, 0);
+		this.drawLeftArrowfOnlyIfNeeded();
+		this.drawRightArrowOnlyIfNeeded();
+	}
+
+	rightClick = (e) => {
+		const { scrollLength } = this.props;
+		this.content.scrollBy(scrollLength, 0);
+		this.drawLeftArrowfOnlyIfNeeded();
+		this.drawRightArrowOnlyIfNeeded();
+	}
+
 	addInnerRefToContent(children) {
 		const addInnerRef = (child, i) => {
 			if (!child) {
@@ -98,6 +149,9 @@ NavWithOptionalConstrainer.propTypes = {
 	width: PropTypes.string.isRequired,
 	zIndex: PropTypes.number.isRequired,
 	isTopLevelComponent: PropTypes.bool.isRequired,
+	shouldUseScrollArrows: PropTypes.bool.isRequired,
+	drawRightArrowInitially: PropTypes.bool.isRequired,
+	scrollLength: PropTypes.number,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -105,6 +159,7 @@ NavWithOptionalConstrainer.propTypes = {
 };
 NavWithOptionalConstrainer.defaultProps = {
 	background: 'transparent',
+	scrollLength: 100,
 };
 
 export { NavWithOptionalConstrainer };
