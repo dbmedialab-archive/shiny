@@ -6,6 +6,8 @@ import {
 	LinkBarNav,
 } from '../..';
 
+import { ScrollArrow } from './ScrollArrow';
+
 const Nav = LinkBarNav.extend`
 	display: flex;
 `;
@@ -138,7 +140,9 @@ class NavWithOptionalConstrainer extends Component {
 				width={width}
 				background={background}
 			>
+				{shouldDrawLeftArrow && <ScrollArrow onClick={this.leftClick} pointsTo="left" />}
 				{content}
+				{shouldDrawRightArrow && <ScrollArrow onClick={this.rightClick} pointsTo="right" />}
 			</Nav>
 		);
 	}
