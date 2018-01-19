@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 
 import {
 	DontPushTheAdBoundaries,
-	LinkBarNav as Nav,
-} from '..';
+	LinkBarNav,
+} from '../..';
+
+const Nav = LinkBarNav.extend`
+	display: flex;
+`;
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	&& {
@@ -13,6 +17,7 @@ const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 		background: transparent;
 		align-items: center;
 		z-index: ${props => props.zIndex};
+		overflow: ${props => (props.shouldUseScrollArrows? 'hidden' : 'visible')};
 	}
 `;
 
