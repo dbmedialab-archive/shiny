@@ -13,3 +13,7 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
   1. wolverine (smart web app): Translates from what something *is* to what it should *look like*; handles state; renders pages
   1. wolverine-api] (smart API layer): Decides what we should display to the user; composes pages
   1. wolverine-fetcher (dumb API layer): Fetches data from backend systems
+
+## Relation to Firefly (the TV series)
+
+The name is very inspired.
