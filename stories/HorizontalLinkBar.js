@@ -35,7 +35,6 @@ export default () => {
 						</HorizontalLinkBar>
 					</DemoContainer>
 
-
 					<Heading>Usage</Heading>
 					<Code language="jsx">
 						{`
@@ -47,6 +46,112 @@ import {
 <HorizontalLinkBar background={colors.white}>
   <LinkBarLink linkText="One" url="https://example.com" isActive />
   <LinkBarLink linkText="Two" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... with arrows for scrolling', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar with arrows for scrolling</HugeHeading>
+					<p>It will add clickable arrows if scrolling is needed. The right arrow is drawn Initially always.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+							drawRightArrowInitially
+						>
+							<LinkBarLink linkText="One" url="https://example.com" />
+							<LinkBarLink linkText="Two" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree" url="https://example.com" />
+							<LinkBarLink linkText="Four" url="https://example.com" />
+							<LinkBarLink linkText="Five" url="https://example.com" />
+							<LinkBarLink linkText="Six" url="https://example.com" />
+							<LinkBarLink linkText="Seven" url="https://example.com" />
+							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+	drawRightArrowInitially
+>
+  <LinkBarLink linkText="One" url="https://example.com" />
+  <LinkBarLink linkText="Two" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree" url="https://example.com" />
+  <LinkBarLink linkText="Four" url="https://example.com" />
+  <LinkBarLink linkText="Five" url="https://example.com" />
+  <LinkBarLink linkText="Six" url="https://example.com" />
+  <LinkBarLink linkText="Seven" url="https://example.com" />
+  <LinkBarLink linkText="Eight" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... which is not a top level component ', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar which is not a top level component</HugeHeading>
+					<p>This will not center the LinkBar as is done on top level compontents.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar
+							background={colors.white}
+							shouldUseScrollArrows
+							isTopLevelComponent={false}
+						>
+							<LinkBarLink linkText="One" url="https://example.com" />
+							<LinkBarLink linkText="Two" url="https://example.com" isActive />
+							<LinkBarLink linkText="Tree" url="https://example.com" />
+							<LinkBarLink linkText="Four" url="https://example.com" />
+							<LinkBarLink linkText="Five" url="https://example.com" />
+							<LinkBarLink linkText="Six" url="https://example.com" />
+							<LinkBarLink linkText="Seven" url="https://example.com" />
+							<LinkBarLink linkText="Eight" url="https://example.com" />
+							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar
+	background={colors.white}
+	shouldUseScrollArrows
+	isTopLevelComponent={false}
+>
+  <LinkBarLink linkText="One" url="https://example.com" />
+  <LinkBarLink linkText="Two" url="https://example.com" isActive />
+  <LinkBarLink linkText="Tree" url="https://example.com" />
+  <LinkBarLink linkText="Four" url="https://example.com" />
+  <LinkBarLink linkText="Five" url="https://example.com" />
+  <LinkBarLink linkText="Six" url="https://example.com" />
+  <LinkBarLink linkText="Seven" url="https://example.com" />
+  <LinkBarLink linkText="Eight" url="https://example.com" />
   <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
 </HorizontalLinkBar>
 						`}

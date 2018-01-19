@@ -2,3 +2,7 @@
 node_modules/
 lib/
 storybook-static/
+
+# Shellscripts
+*.sh
+!deploy.sh
