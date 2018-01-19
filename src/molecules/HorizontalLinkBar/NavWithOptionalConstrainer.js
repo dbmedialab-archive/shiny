@@ -18,7 +18,7 @@ class NavWithOptionalConstrainer extends Component {
 		const { shouldUseScrollArrows, drawRightArrowInitially } = props;
 
 		this.container = null;
-		this.firstChild = null;
+		this.content = null;
 
 		this.state = {
 			shouldDrawLeftArrow: false,
@@ -27,7 +27,7 @@ class NavWithOptionalConstrainer extends Component {
 	}
 
 	componentDidMount() {
-		if (this.container && this.firstChild) {
+		if (this.container && this.content) {
 			this.drawRightArrowOnlyIfNeeded();
 		}
 	}
@@ -39,13 +39,13 @@ class NavWithOptionalConstrainer extends Component {
 			offsetWidth: containerSize,
 		} = this.container;
 		const {
-			scrollWidth: firstChildFullSize,
-			offsetWidth: firstChildVisibleSize,
+			scrollWidth: contentFullSize,
+			offsetWidth: contentVisibleSize,
 			scrollLeft: leftScrollPosition,
-		} = this.firstChild;
+		} = this.content;
 
-		const contentWiderThanContainer = firstChildFullSize > containerSize;
-		const allToTheFarRight = (leftScrollPosition + firstChildVisibleSize) === firstChildFullSize;
+		const contentWiderThanContainer = contentFullSize > containerSize;
+		const allToTheFarRight = (leftScrollPosition + contentVisibleSize) === contentFullSize;
 
 		if (contentWiderThanContainer && !allToTheFarRight) {
 			!shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: true });
@@ -56,7 +56,7 @@ class NavWithOptionalConstrainer extends Component {
 
 	drawLeftArrowfOnlyIfNeeded() {
 		const { shouldDrawLeftArrow } = this.state;
-		if (this.firstChild.scrollLeft && this.firstChild.scrollLeft > 5) {
+		if (this.content.scrollLeft && this.content.scrollLeft > 5) {
 			!shouldDrawLeftArrow && this.setState({ shouldDrawLeftArrow: true });
 		} else {
 			shouldDrawLeftArrow && this.setState({ shouldDrawLeftArrow: false });
@@ -65,19 +65,19 @@ class NavWithOptionalConstrainer extends Component {
 
 	leftClick = () => {
 		const { scrollLength } = this.props;
-		this.firstChild.scrollBy(-scrollLength, 0);
+		this.content.scrollBy(-scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
 		this.drawRightArrowOnlyIfNeeded();
 	}
 
 	rightClick = (e) => {
 		const { scrollLength } = this.props;
-		this.firstChild.scrollBy(scrollLength, 0);
+		this.content.scrollBy(scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
 		this.drawRightArrowOnlyIfNeeded();
 	}
 
-	addInnerRefToFirstChild(children) {
+	addInnerRefToContent(children) {
 		return Children.map(
 			children,
 			(child, i) => {
@@ -93,7 +93,7 @@ class NavWithOptionalConstrainer extends Component {
 				return cloneElement(
 					child,
 					{
-						innerRef: (input) => { this.firstChild = input; },
+						innerRef: (input) => { this.content = input; },
 					}
 				);
 			},
@@ -110,7 +110,7 @@ class NavWithOptionalConstrainer extends Component {
 		} = this.state;
 
 		const childrenToDraw = shouldUseScrollArrows
-			? this.addInnerRefToFirstChild(children)
+			? this.addInnerRefToContent(children)
 			: children;
 
 		const content = isTopLevelComponent
