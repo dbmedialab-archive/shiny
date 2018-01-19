@@ -114,7 +114,10 @@ class NavWithOptionalConstrainer extends Component {
 
 		const content = isTopLevelComponent
 			? (
-				<DesktopWidthConstrainer zIndex={zIndex}>
+				<DesktopWidthConstrainer
+					zIndex={zIndex}
+					shouldUseScrollArrows={shouldUseScrollArrows}
+				>
 					{childrenToDraw}
 				</DesktopWidthConstrainer>
 			)
