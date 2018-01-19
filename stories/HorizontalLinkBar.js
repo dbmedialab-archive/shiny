@@ -69,7 +69,7 @@ import {
 						>
 							<LinkBarLink linkText="One long link" url="https://example.com" />
 							<LinkBarLink linkText="Two long link" url="https://example.com" isActive />
-							<LinkBarLink linkText="Tree long link" url="https://example.com" />
+							<LinkBarLink linkText="Three long link" url="https://example.com" />
 							<LinkBarLink linkText="Four long link" url="https://example.com" />
 							<LinkBarLink linkText="Five long link" url="https://example.com" />
 							<LinkBarLink linkText="Six long link" url="https://example.com" />
@@ -94,7 +94,7 @@ import {
 >
   <LinkBarLink linkText="One long link" url="https://example.com" />
   <LinkBarLink linkText="Two long link" url="https://example.com" isActive />
-  <LinkBarLink linkText="Tree long link" url="https://example.com" />
+  <LinkBarLink linkText="Three long link" url="https://example.com" />
   <LinkBarLink linkText="Four long link" url="https://example.com" />
   <LinkBarLink linkText="Five long link" url="https://example.com" />
   <LinkBarLink linkText="Six long link" url="https://example.com" />
@@ -122,7 +122,7 @@ import {
 						>
 							<LinkBarLink linkText="One link" url="https://example.com" />
 							<LinkBarLink linkText="Two link" url="https://example.com" isActive />
-							<LinkBarLink linkText="Tree link" url="https://example.com" />
+							<LinkBarLink linkText="Three link" url="https://example.com" />
 							<LinkBarLink linkText="Four link" url="https://example.com" />
 							<LinkBarLink linkText="Five link" url="https://example.com" />
 							<LinkBarLink linkText="Six link" url="https://example.com" />
@@ -147,7 +147,7 @@ import {
 >
   <LinkBarLink linkText="One link" url="https://example.com" />
   <LinkBarLink linkText="Two link" url="https://example.com" isActive />
-  <LinkBarLink linkText="Tree link" url="https://example.com" />
+  <LinkBarLink linkText="Three link" url="https://example.com" />
   <LinkBarLink linkText="Four link" url="https://example.com" />
   <LinkBarLink linkText="Five link" url="https://example.com" />
   <LinkBarLink linkText="Six link" url="https://example.com" />

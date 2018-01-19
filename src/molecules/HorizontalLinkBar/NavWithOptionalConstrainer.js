@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 
 import {
 	DontPushTheAdBoundaries,
-	LinkBarNav as Nav,
+	LinkBarNav,
 } from '../..';
 
 import { ScrollArrow } from './ScrollArrow';
+
+const Nav = LinkBarNav.extend`
+	display: ${props => (props.shouldUseScrollArrows? 'flex' : 'initial')};
+`;
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	&& {
@@ -135,6 +139,7 @@ class NavWithOptionalConstrainer extends Component {
 				innerRef={(input) => { this.container = input; }} // Must use 'innerRef' instead of 'ref' with styled-components
 				width={width}
 				background={background}
+				shouldUseScrollArrows={shouldUseScrollArrows}
 			>
 				{shouldDrawLeftArrow && <ScrollArrow onClick={this.leftClick} pointsTo="left" />}
 				{content}
