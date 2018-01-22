@@ -7,11 +7,11 @@ import {
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
 	NavWithOptionalConstrainer,
-	ScrollArrow,
+	LeftScrollArrow,
+	RightScrollArrow,
 } from '../..';
 
 const Container = styled.div`
-	display: flex;
 	overflow: hidden;
 `;
 
@@ -112,7 +112,9 @@ class ScrollArrowsLinkBar extends Component {
 				isTopLevelComponent={isTopLevelComponent}
 			>
 				<Container innerRef={(input) => { this.container = input; }}>
-					{shouldDrawLeftArrow && <ScrollArrow onClick={this.leftClick} pointsTo="left" />}
+					{shouldDrawLeftArrow &&
+						<LeftScrollArrow onClick={this.leftClick} pointsTo="left" background={background} />
+					}
 					<Bar
 						innerRef={(input) => { this.content = input; }}
 						background={background}
@@ -126,7 +128,9 @@ class ScrollArrowsLinkBar extends Component {
 							);
 						})}
 					</Bar>
-					{shouldDrawRightArrow && <ScrollArrow onClick={this.rightClick} pointsTo="right" />}
+					{shouldDrawRightArrow &&
+						<RightScrollArrow onClick={this.rightClick} pointsTo="right" background={background} />
+					}
 					{shouldFadeOut && <HorizontalOverflowGradient />}
 				</Container>
 			</NavWithOptionalConstrainer>

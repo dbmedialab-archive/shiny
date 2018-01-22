@@ -406,6 +406,58 @@ import {
 				</section>
 			);
 		})
+		.add('... which should adjust for nested padding', () => {
+			return (
+				<section>
+					<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
+					<p>...which should adjust for nested padding.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<ScrollArrowsLinkBar
+							background={colors.white}
+							shouldAdjustForNestedPadding
+						>
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="Three long link" url="https://example.com" />
+							<LinkBarLink linkText="Four long link" url="https://example.com" />
+							<LinkBarLink linkText="Five long link" url="https://example.com" />
+							<LinkBarLink linkText="Six long link" url="https://example.com" />
+							<LinkBarLink linkText="Seven long link" url="https://example.com" />
+							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+						</ScrollArrowsLinkBar>
+					</DemoContainer>
+
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<ScrollArrowsLinkBar
+	background={colors.white}
+	shouldAdjustForNestedPadding
+>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Three long link" url="https://example.com" />
+	<LinkBarLink linkText="Four long link" url="https://example.com" />
+	<LinkBarLink linkText="Five long link" url="https://example.com" />
+	<LinkBarLink linkText="Six long link" url="https://example.com" />
+	<LinkBarLink linkText="Seven long link" url="https://example.com" />
+	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+</ScrollArrowsLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
 		.add('... which is not a top level component', () => {
 			return (
 				<section>
