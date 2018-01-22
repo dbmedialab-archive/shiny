@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '../..';
 
@@ -8,17 +7,6 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	line-height: 0;
 	font-weight: 800;
 	cursor: pointer;
-
-	&& {
-		padding-left: ${props => (props.pointsTo === 'left'
-		? `calc(1/2 * ${props.theme.variables.horizontalBase})`
-		: `calc(1/2 * ${props.theme.variables.horizontalBase})`
-	)};
-		padding-right: ${props => (props.pointTo === 'left'
-		? `calc(1/2 * ${props.theme.variables.horizontalBase})`
-		: `calc(1/2 * ${props.theme.variables.horizontalBase})`
-	)};
-	}
 	z-index: 1;
 	position: absolute;
 	top: 0;
