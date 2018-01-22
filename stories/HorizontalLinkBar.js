@@ -17,6 +17,7 @@ import {
 // import TagBar from '../shared-components/TagBar/TagBar';
 import theme from '../src/themes/default-theme';
 
+import { LinkBarDropdown } from '../src/atoms/LinkBarDropdown';
 import { VerticalLinkBar } from '../src/molecules/VerticalLinkBar';
 
 const { colors } = theme;
@@ -55,6 +56,45 @@ export default () => {
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
 							<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+						</HorizontalLinkBar>
+					</DemoContainer>
+
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<HorizontalLinkBar background={colors.white}>
+  <LinkBarLink linkText="One" url="https://example.com" isActive />
+  <LinkBarLink linkText="Two" url="https://example.com" />
+  <LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</HorizontalLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... with dropdowns', () => {
+			return (
+				<section>
+					<HugeHeading>HorizontalLinkBar</HugeHeading>
+					<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<HorizontalLinkBar overflow="visible">
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com">
+								<VerticalLinkBar background={colors.white}>
+									<LinkBarLink linkText="One" url="https://example.com" isActive />
+									<LinkBarLink linkText="Two" url="https://example.com" />
+								</VerticalLinkBar>
+							</LinkBarDropdown>
 						</HorizontalLinkBar>
 					</DemoContainer>
 
