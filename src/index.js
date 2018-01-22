@@ -47,12 +47,15 @@ export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
 export { SmallLinkBarButton      } from './atoms/LinkBarButton';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
+export { LeftScrollArrow         } from './atoms/ScrollArrow';
+export { RightScrollArrow        } from './atoms/ScrollArrow';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
 export { HorizontalLinkBar       } from './molecules/HorizontalLinkBar/HorizontalLinkBar';
 export { VerticalLinkBar         } from './molecules/VerticalLinkBar';
 export { FullWidthLinkBar        } from './molecules/HorizontalLinkBar/FullWidthLinkBar';
+export { ScrollArrowsLinkBar     } from './molecules/HorizontalLinkBar/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
 export { LunchButton             } from './molecules/LunchButton';
