@@ -9,6 +9,7 @@ import { Code } from '../src/atoms/Code';
 import {
 	HorizontalLinkBar,
 	FullWidthLinkBar,
+	ScrollArrowsLinkBar,
 	LinkBarLink,
 	LinkBarButton,
 	SmallLinkBarButton,
@@ -326,7 +327,7 @@ import {
 					<DemoContainer>
 						<FullWidthLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
-							<LinkBarLink isActive linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="Two" url="https://example.com" />
 							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 						</FullWidthLinkBar>
 					</DemoContainer>
@@ -345,6 +346,113 @@ import {
 	<LinkBarLink linkText="Two" url="https://example.com" />
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </FullWidthLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('ScrollArrowsLinkBar', () => {
+			return (
+				<section>
+					<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
+					<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
+					<p>
+						It will also scroll by touch.
+					</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<ScrollArrowsLinkBar
+							background={colors.white}
+							drawRightArrowInitially
+						>
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="Three long link" url="https://example.com" />
+							<LinkBarLink linkText="Four long link" url="https://example.com" />
+							<LinkBarLink linkText="Five long link" url="https://example.com" />
+							<LinkBarLink linkText="Six long link" url="https://example.com" />
+							<LinkBarLink linkText="Seven long link" url="https://example.com" />
+							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+						</ScrollArrowsLinkBar>
+					</DemoContainer>
+
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<ScrollArrowsLinkBar
+	background={colors.white}
+	drawRightArrowInitially
+>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Three long link" url="https://example.com" />
+	<LinkBarLink linkText="Four long link" url="https://example.com" />
+	<LinkBarLink linkText="Five long link" url="https://example.com" />
+	<LinkBarLink linkText="Six long link" url="https://example.com" />
+	<LinkBarLink linkText="Seven long link" url="https://example.com" />
+	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+</ScrollArrowsLinkBar>
+						`}
+					</Code>
+				</section>
+			);
+		})
+		.add('... which is not a top level component', () => {
+			return (
+				<section>
+					<HugeHeading>ScrollArrowsLinkBar which is not a top level component</HugeHeading>
+					<p>This will not center the LinkBar as is done on top level compontents.</p>
+
+					<Heading>Demo</Heading>
+					<DemoContainer>
+						<ScrollArrowsLinkBar
+							background={colors.white}
+							isTopLevelComponent={false}
+						>
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="Three long link" url="https://example.com" />
+							<LinkBarLink linkText="Four long link" url="https://example.com" />
+							<LinkBarLink linkText="Five long link" url="https://example.com" />
+							<LinkBarLink linkText="Six long link" url="https://example.com" />
+							<LinkBarLink linkText="Seven long link" url="https://example.com" />
+							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+						</ScrollArrowsLinkBar>
+					</DemoContainer>
+
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import {
+	HorizontalLinkBar,
+	LinkBarLink,
+} from '@aller/shiny';
+
+<ScrollArrowsLinkBar
+	background={colors.white}
+	isTopLevelComponent={false}
+>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Three long link" url="https://example.com" />
+	<LinkBarLink linkText="Four long link" url="https://example.com" />
+	<LinkBarLink linkText="Five long link" url="https://example.com" />
+	<LinkBarLink linkText="Six long link" url="https://example.com" />
+	<LinkBarLink linkText="Seven long link" url="https://example.com" />
+	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
+</ScrollArrowsLinkBar>
 						`}
 					</Code>
 				</section>
