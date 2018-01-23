@@ -113,7 +113,7 @@ class ScrollArrowsLinkBar extends Component {
 			>
 				<Container innerRef={(input) => { this.container = input; }}>
 					{shouldDrawLeftArrow &&
-						<LeftScrollArrow onClick={this.leftClick} pointsTo="left" background={background} />
+						<LeftScrollArrow onClick={this.leftClick} background={background} />
 					}
 					<Bar
 						innerRef={(input) => { this.content = input; }}
@@ -129,7 +129,7 @@ class ScrollArrowsLinkBar extends Component {
 						})}
 					</Bar>
 					{shouldDrawRightArrow &&
-						<RightScrollArrow onClick={this.rightClick} pointsTo="right" background={background} />
+						<RightScrollArrow onClick={this.rightClick} background={background} />
 					}
 					{shouldFadeOut && <HorizontalOverflowGradient />}
 				</Container>
@@ -164,7 +164,7 @@ ScrollArrowsLinkBar.defaultProps = {
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
 	drawRightArrowInitially: false,
-	scrollLength: 100,
+	scrollLength: 200,
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,

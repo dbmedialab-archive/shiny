@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import {
 	HorizontalOverflowGradient,
@@ -8,7 +9,7 @@ import {
 	NavWithOptionalConstrainer,
 } from '../..';
 
-const HorizontalLinkBar = ({
+const LinkBar = ({
 	background,
 	children,
 	shouldFadeOut,
@@ -40,7 +41,7 @@ const HorizontalLinkBar = ({
 	);
 };
 
-HorizontalLinkBar.propTypes = {
+LinkBar.propTypes = {
 	background: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
@@ -56,7 +57,7 @@ HorizontalLinkBar.propTypes = {
 	isTopLevelComponent: PropTypes.bool,
 };
 
-HorizontalLinkBar.defaultProps = {
+LinkBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
 	children: null,
 	overflow: 'auto',
@@ -68,5 +69,10 @@ HorizontalLinkBar.defaultProps = {
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
 };
+
+// When we export this as a styled component,
+// we can use it in interpoliations,
+// for example in other styled compontents
+const HorizontalLinkBar = styled(LinkBar)``;
 
 export { HorizontalLinkBar };
