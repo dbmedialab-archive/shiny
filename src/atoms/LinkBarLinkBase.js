@@ -5,8 +5,12 @@ export const LinkBarLinkBase = styled.a`
 
 	${(props) => {
 		return (props.size === 'small')
-			? `padding: calc(3/4*${props.theme.variables.verticalBase}) calc(1/2*${props.theme.variables.horizontalBase});`
-			: `padding: calc(3/4*${props.theme.variables.verticalBase}) ${props.theme.variables.horizontalBase};`;
+			? `padding:
+				calc(1/2 * (6/4*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
+				calc(1/2 * ${props.theme.variables.horizontalBase});`
+			: `padding:
+				calc(1/2 * (6/4*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
+				${props.theme.variables.horizontalBase};`;
 	}}
 
 	border: 0;
@@ -18,6 +22,7 @@ export const LinkBarLinkBase = styled.a`
 			: props.theme.colors.type
 	)};
 	font-size: ${props => props.theme.variables.uiRegularSize};
+	line-height: ${props => props.theme.variables.uiRegularLineHeight};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
@@ -61,13 +66,13 @@ export const LinkBarLinkBase = styled.a`
 		${(props) => {
 		if (props.size === 'small') {
 			return `padding:
-				calc(3/4*${props.theme.variables.verticalBase})
+				calc(1/2 * ( 6/4*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
 				calc(1/4*${props.theme.variables.horizontalBase});
 			`;
 		}
 
 		return `padding:
-			${props.theme.variables.verticalBase}
+			calc(1/2 * ( 2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
 			${props.theme.variables.horizontalBase};
 		`;
 	}}
