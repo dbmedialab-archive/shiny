@@ -53,6 +53,7 @@ export { LinkBarLink             } from './atoms/LinkBarLink';
 export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
 export { LinkBarButton           } from './atoms/LinkBarButton';
 export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
+export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
 export { SmallLinkBarButton      } from './atoms/LinkBarButton';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
