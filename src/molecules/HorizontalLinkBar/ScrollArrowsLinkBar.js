@@ -164,7 +164,7 @@ ScrollArrowsLinkBar.defaultProps = {
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
 	drawRightArrowInitially: false,
-	scrollLength: 100,
+	scrollLength: 200,
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,
