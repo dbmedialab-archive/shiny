@@ -1,0 +1,94 @@
+import React from 'react';
+
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Code } from '../../src/atoms/Code';
+import { DemoContainer } from '../storybook-components';
+
+import {
+	LinkBarLink,
+	HorizontalLinkBar,
+} from '../..';
+
+const NestedPaddingStory = () => (
+	<section>
+		<HugeHeading>HorizontalLinkBar with adjustment for nested padding</HugeHeading>
+		<p>The shouldAdjustForNestedPadding prop will add a negative margin to the left and right. This can make it
+			easier to put a menu line inside a grid.
+		</p>
+		<DemoContainer>
+			<HorizontalLinkBar shouldAdjustForNestedPadding>
+				<LinkBarLink
+					key={1}
+					linkText="Adjusted"
+					url="#adjusted"
+				/>
+				<LinkBarLink
+					key={2}
+					linkText="for"
+					url="#for"
+				/>
+				<LinkBarLink
+					key={3}
+					isActive
+					linkText="nested"
+					url="#nested"
+				/>
+				<LinkBarLink
+					key={4}
+					linkText="padding"
+					url="#padding"
+				/>
+			</HorizontalLinkBar>
+		</DemoContainer>
+		<DemoContainer>
+			<HorizontalLinkBar>
+				<LinkBarLink
+					key={1}
+					linkText="Not"
+					url="#not"
+				/>
+				<LinkBarLink
+					key={2}
+					linkText="adjusted"
+					url="#adjusted"
+				/>
+				<LinkBarLink
+					key={3}
+					linkText="for"
+					url="#for"
+				/>
+				<LinkBarLink
+					key={4}
+					isActive
+					linkText="nested"
+					url="#nested"
+				/>
+				<LinkBarLink
+					key={1}
+					linkText="padding"
+					url="#padding"
+				/>
+			</HorizontalLinkBar>
+		</DemoContainer>
+		<Code language="jsx">
+			{`
+<HorizontalLinkBar
+	shouldAdjustForNestedPadding
+>
+<LinkBarLink
+	key={1}
+	linkText="Adjusted"
+	url="#adjusted"
+/>
+<LinkBarLink
+	key={2}
+	linkText="for"
+	url="#for"
+/>
+</HorizontalLinkBar>
+			`}
+		</Code>
+	</section>
+);
+
+export { NestedPaddingStory };
