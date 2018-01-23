@@ -23,8 +23,17 @@ const VerticalLinkBarStory = () => (
 			</VerticalLinkBar>
 		</DemoContainer>
 
-
 		<Heading>Usage</Heading>
+
+		<Code language="jsx">
+			{`
+<VerticalLinkBar>
+	<LinkBarLink linkText="One" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+</VerticalLinkBar>
+			`}
+		</Code>
 	</section>
 );
 export { VerticalLinkBarStory };

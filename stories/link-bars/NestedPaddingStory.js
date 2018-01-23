@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
 
