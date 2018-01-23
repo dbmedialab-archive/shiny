@@ -7,9 +7,12 @@ import {
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
 	NavWithOptionalConstrainer,
+} from '../..';
+
+import {
 	LeftScrollArrow,
 	RightScrollArrow,
-} from '../..';
+} from '../atoms/ScrollArrow';
 
 const Container = styled.div`
 	overflow: hidden;
