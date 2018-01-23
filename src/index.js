@@ -2,6 +2,14 @@
 export { themes                  } from './themes';
 
 // Atoms
+export {
+	Heading,
+	SmallHeading,
+	MediumHeading,
+	LargeHeading,
+	XLargeHeading,
+	HugeHeading,
+}                                  from './atoms/Heading';
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
@@ -49,6 +57,7 @@ export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
