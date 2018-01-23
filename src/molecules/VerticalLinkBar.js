@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import {
 	LinkBarItem as Li,
 } from '../..';
 
-import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
+// import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 import { VerticalFlexingList as Bar } from '../atoms/VerticalFlexingList';
 
 const LinkBarItem = Li.extend`
@@ -18,7 +19,7 @@ const LinkBarItem = Li.extend`
 	}
 `;
 
-const VerticalLinkBar = ({
+const LinkBar = ({
 	background,
 	children,
 	shouldFadeOut,
@@ -26,29 +27,31 @@ const VerticalLinkBar = ({
 	zIndex,
 	isTopLevelComponent,
 	...rest
-}) => {
-	return (
-		<Nav
-			background={background}
-			width={width}
-			zIndex={zIndex}
-			isTopLevelComponent={isTopLevelComponent}
-			isVertical
-		>
-			<Bar background={background} {...rest}>
-				{children && children.map((child, i) => {
-					return (
-						<LinkBarItem key={i} {...child.props}>
-							{child}
-						</LinkBarItem>
-					);
-				})}
-			</Bar>
-		</Nav>
-	);
-};
+}) => (
+	<Bar background={background} {...rest}>
+		{children && children.map((child, i) => {
+			return (
+				<LinkBarItem key={i} {...child.props}>
+					{child}
+				</LinkBarItem>
+			);
+		})}
+	</Bar>
+);
+/*
+Wrap it in this?
 
-VerticalLinkBar.propTypes = {
+<Nav
+	background={background}
+	width={width}
+	zIndex={zIndex}
+	isTopLevelComponent={isTopLevelComponent}
+	isVertical
+>
+</Nav>
+*/
+
+LinkBar.propTypes = {
 	background: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
@@ -64,7 +67,7 @@ VerticalLinkBar.propTypes = {
 	isTopLevelComponent: PropTypes.bool,
 };
 
-VerticalLinkBar.defaultProps = {
+LinkBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
 	children: null,
 	overflow: 'auto',
@@ -77,4 +80,8 @@ VerticalLinkBar.defaultProps = {
 	isTopLevelComponent: true,
 };
 
+// When we export this as a styled component,
+// we can use it in interpoliations,
+// for example in other styled compontents
+const VerticalLinkBar = styled(LinkBar)``;
 export { VerticalLinkBar };
