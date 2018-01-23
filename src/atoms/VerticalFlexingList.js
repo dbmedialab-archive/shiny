@@ -16,6 +16,7 @@ const VerticalFlexingList = styled.ul`
 		position: absolute;
 		top: 100%;
 		left: 0;
+		box-shadow: 0 0 4rem 0 rgba(0,0,0,.15);
 
 		::before {
 			content: '';
