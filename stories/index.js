@@ -10,6 +10,7 @@ import ads from './Ads';
 import lazyProgressiveImage from './LazyProgressiveImage';
 import footer from './footer';
 import headers from './Headers';
+import matComponents from './MatComponents';
 
 introduction();
 
@@ -28,4 +29,4 @@ lazyProgressiveImage();
 footer();
 
 headers();
-
+matComponents();
