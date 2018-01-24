@@ -1,29 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import hexToRgba from  'hex-to-rgba';
 
 import { LinkBarLinkBase } from '../..';
-
-const hexToRgba = (hex, opacity) => {
-	// http://stackoverflow.com/a/5624139
-	const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-	hex = hex.replace(shorthandRegex, (m, r, g, b) => {
-		return r + r + g + g + b + b;
-	});
-
-	const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-	if (!result) {
-		return `rgba(255, 255, 255, ${opacity})`;
-	}
-
-	const rgb = result ? {
-		r: parseInt(result[1], 16),
-		g: parseInt(result[2], 16),
-		b: parseInt(result[3], 16),
-	} : null;
-
-	return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${opacity})`;
-};
 
 const Container = LinkBarLinkBase.withComponent('div').extend`
 	position: absolute;
@@ -44,8 +24,8 @@ const Gradient = styled.div`
 		);
 	position: absolute;
 	top: 0;
-	${props => (props.pointsTo === 'left' ? css`right: -70%` : css`left: -70%;`)};
-	width: 70%;
+	${props => (props.pointsTo === 'left' ? css`right: -60%` : css`left: -60%;`)};
+	width: 60%;
 	height: 100%;
 `;
 
