@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css, injectGlobal } from 'styled-components';
 
-const Icon = (props) => {
+const FontIcon = (props) => {
 	injectGlobal`
 		@font-face {
 			font-family: 'Helveticons';
@@ -10,10 +10,10 @@ const Icon = (props) => {
 			src: url('//styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
 		}
 	`;
-	return <IconSpan {...props} />;
+	return <Icon {...props} />;
 };
 
-const IconSpan = styled.span`
+const Icon = styled.span`
 	font-family: "Helveticons";
 	font-smoothing: antialiased;
 	speak: none;
@@ -684,5 +684,5 @@ const IconSpan = styled.span`
 
 
 export {
-	Icon,
+	FontIcon,
 };
