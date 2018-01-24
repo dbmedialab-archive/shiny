@@ -7,7 +7,7 @@ const Icon = (props) => {
 			font-family: 'Helveticons';
 			font-style: normal;
 			font-weight: normal;
-			src: url(//styleguide.dagbladet.no/fonts/helveticons.woff) format('woff');
+			src: url('//styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
 		}
 	`;
 	return <IconSpan {...props} />;
@@ -21,13 +21,13 @@ const IconSpan = styled.span`
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: inherit;
+	line-height: 1;
 
 	${props => props.size && css`
 		font-size: ${props.size}rem;
 	`}
 
-	&:before {
+	&::before {
 		content: "${(props) => {
 		switch (props.name) {
 		case 'Dagbladet': return '\\e883';
@@ -686,4 +686,3 @@ const IconSpan = styled.span`
 export {
 	Icon,
 };
-
