@@ -18,7 +18,6 @@ const FooterMat = styled.div`
 	&.col {
 		color: red;
 	}
-	
 `;
 
 
