@@ -25,7 +25,6 @@
     "@maji/react-prism": "1.0.1",
     "@storybook/addon-links": "3.3.11",
     "@storybook/react": "3.3.11",
-    "@types/react": "16.0.34",
 	 "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "babel-plugin-system-import-transformer": "^3.1.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -47,7 +46,12 @@
     "eslint": "4.16.0",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
+<<<<<<< HEAD
     "eslint-plugin-react": "7.6.0"
   },
   "types": "./types/index.d.ts"
+=======
+    "eslint-plugin-react": "7.5.1"
+  }
+>>>>>>> Remove types dependency
 }
