@@ -27,12 +27,13 @@ const Gradient = styled.div`
 	${props => (props.pointsTo === 'left' ? css`right: -60%` : css`left: -60%;`)};
 	width: 60%;
 	height: 100%;
+	cursor: default;
 `;
 
 const Arrow = props => (
 	<Container {...props}>
 		{props.content}
-		<Gradient {...props} />
+		<Gradient {...props} onClick={(e) => { e.stopPropagation(); }} />
 	</Container>
 );
 
