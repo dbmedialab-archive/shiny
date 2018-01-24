@@ -75,15 +75,36 @@ class ScrollArrowsLinkBar extends Component {
 		}
 	}
 
-	leftClick = () => {
+	calculateScrollLength() {
 		const { scrollLength } = this.props;
+
+		if (typeof scrollLength === 'number') {
+			return parseInt(scrollLength);
+		}
+
+		const lastChar = scrollLength.slice(-1);
+		if (lastChar !== '%') {
+			const aNumber = parseInt(scrollLength);
+			return (aNumber) ? aNumber : 200;
+		}
+
+		const {
+			offsetWidth: containerSize,
+		} = this.container;
+		const percent = parseInt(scrollLength) / 100;
+		const approximateArrowSize = 40 * 2;
+		return (containerSize * percent) - approximateArrowSize;
+	}
+
+	leftClick = () => {
+		const scrollLength = this.calculateScrollLength();
 		this.content.scrollBy(-scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
 		this.drawRightArrowOnlyIfNeeded();
 	}
 
 	rightClick = (e) => {
-		const { scrollLength } = this.props;
+		const scrollLength = this.calculateScrollLength();
 		this.content.scrollBy(scrollLength, 0);
 		this.drawLeftArrowfOnlyIfNeeded();
 		this.drawRightArrowOnlyIfNeeded();
@@ -149,7 +170,10 @@ ScrollArrowsLinkBar.propTypes = {
 	shouldFlexChildren: PropTypes.bool,
 	shouldFadeOut: PropTypes.bool,
 	drawRightArrowInitially: PropTypes.bool,
-	scrollLength: PropTypes.number,
+	scrollLength: PropTypes.oneOfType([
+		PropTypes.number,
+		PropTypes.string,
+	]),
 	width: PropTypes.string,
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
@@ -164,7 +188,7 @@ ScrollArrowsLinkBar.defaultProps = {
 	shouldFlexChildren: false,
 	shouldFadeOut: false,
 	drawRightArrowInitially: false,
-	scrollLength: 200,
+	scrollLength: '70%',
 	width: 'auto',
 	zIndex: 4,
 	shouldHavePadding: true,

@@ -415,6 +415,14 @@ import {
 							<LinkBarLink linkText="Seven long link" url="https://example.com" />
 							<LinkBarLink linkText="Eight long link" url="https://example.com" />
 							<LinkBarLink linkText="Nine long link" url="https://example.com" />
+							<LinkBarLink linkText="aaa long link" url="https://example.com" />
+							<LinkBarLink linkText="bbb long link" url="https://example.com" />
+							<LinkBarLink linkText="ccc long link" url="https://example.com" />
+							<LinkBarLink linkText="ddd long link" url="https://example.com" />
+							<LinkBarLink linkText="eee long link" url="https://example.com" />
+							<LinkBarLink linkText="fff long link" url="https://example.com" />
+							<LinkBarLink linkText="ggg long link" url="https://example.com" />
+							<LinkBarLink linkText="hhh long link" url="https://example.com" />
 							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 						</ScrollArrowsLinkBar>
 					</DemoContainer>
