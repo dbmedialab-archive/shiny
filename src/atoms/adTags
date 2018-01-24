@@ -1,0 +1,35 @@
+import styled, { css } from 'styled-components';
+
+const global = css`
+
+`;
+
+const Line = styled.span`
+	display: inline-block;
+	margin-left: 20px;
+	width: 445px;
+	height: 2px;
+    vertical-align: middle;
+    background: #ff790a;
+`;
+
+const LineShort = styled.span`
+	display: inline-block;
+	margin-left: 20px;
+	width: 360px;
+	height: 2px;
+    vertical-align: middle;
+    background: #ff790a;
+`;
+
+const Tags = styled.div`
+	& p {
+		display: inline-block;
+		margin-left: 40px;
+		font-size: 16px;
+	}
+`;
+
+export {
+	Line, LineShort, Tags
+};

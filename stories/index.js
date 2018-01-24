@@ -12,6 +12,7 @@ import footer from './footer';
 import steps from './steps';
 import headers from './Headers';
 import matComponents from './MatComponents';
+import adTags from "./adTags";
 
 introduction();
 
@@ -30,4 +31,5 @@ lazyProgressiveImage();
 footer();
 steps();
 headers();
+adTags();
 matComponents();
