@@ -18,7 +18,7 @@ const Container = LinkBarLinkBase.withComponent('div').extend`
 const Gradient = styled.div`
 	background:
 		linear-gradient(
-			to ${props => ((props.pointsTo === 'left') ? 'left' : 'right')},
+			to ${props => props.pointsTo},
 			${props => hexToRgba(props.background, 0.3)} 0%,
 			${props => hexToRgba(props.background, 1)} 100%
 		);
