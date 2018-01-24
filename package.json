@@ -10,8 +10,8 @@
     "postinstall": "babel src/ -d lib/",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
-	 "test": "eslint src stories --max-warnings=0",
-	 "dev": "babel src/ -w -d lib/"
+    "test": "eslint src stories --max-warnings=0",
+    "dev": "babel src/ -w -d lib/"
   },
   "author": "Aller Media",
   "license": "ISC",
@@ -26,7 +26,7 @@
     "@storybook/addon-links": "3.3.10",
     "@storybook/react": "3.3.10",
     "@types/react": "16.0.34",
-	 "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
+    "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "babel-plugin-system-import-transformer": "^3.1.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "intersection-observer": "^0.5.0",
