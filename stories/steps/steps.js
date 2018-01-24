@@ -5,10 +5,7 @@ import styled from 'styled-components';
 import { Row } from '../../src/atoms/Row';
 import { Col  } from '../../src/atoms/Col';
 import { Icon } from '../../src/atoms/Icon';
-import { Buttons } from '../../src/atoms/steps';
-import { Counter } from '../../src/atoms/steps';
-import { Pers } from '../../src/atoms/steps';
-import { RecipeSteps } from '../../src/atoms/steps';
+import { Quantity, AddCart, RecipeSteps, Pers, Counter, Buttons } from "../../src/atoms/steps";
 
 export default () => (
 	<section>
@@ -32,7 +29,30 @@ export default () => (
 				<Pers>
 					<span>PERSONER</span>
 				</Pers>
-
+				<Row>
+					<Col xs={3}>
+						<Quantity>
+							<li>1 stk</li>
+							<li>100 g</li>
+							<li>1.5 ts</li>
+							<li>1.5 ts</li>
+							<li>3 dl</li>
+						</Quantity>
+					</Col>
+					<Col xs={6}>
+						<Quantity>
+							<li>kalkun <i>(ca. fem kilo)</i></li>
+							<li>smør <i>(til pensling)</i></li>
+							<li>salt</li>
+							<li>svart pepper</li>
+							<li>vann</li>
+						</Quantity>
+					</Col>
+				</Row>
+				<AddCart>
+					<Icon name="Add" size={2.2} />
+					<span>LEGG I HANDLELISTE</span>
+				</AddCart>
 			</Col>
 
 

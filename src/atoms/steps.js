@@ -43,7 +43,6 @@ const RecipeSteps = styled.ol`
     & li {
 		counter-increment: item;
    		font-size: 16px;
-    	margin-bottom: 5px;
     	display: inline-block;
    	 	margin-bottom: 30px;
   		line-height: 1.63;
@@ -59,4 +58,28 @@ const RecipeSteps = styled.ol`
     }
 `;
 
-export { Buttons, Counter, Pers, RecipeSteps };
+const Quantity = styled.ul`
+	margin-top: 26px;
+	list-style: none;
+	padding: 0;
+	font-size: 16px;
+`;
+
+const AddCart = styled.div`
+	
+	> span:first-child {
+		color: #ff790a;
+		vertical-align: sub;
+		margin-right: 10px;
+		cursor: pointer;
+	}
+`;
+
+export {
+	Buttons,
+	Counter,
+	Pers,
+	RecipeSteps,
+	Quantity,
+	AddCart
+};
