@@ -5,6 +5,7 @@ import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
 import {
+	Code,
 	LinkBarLink,
 	LinkBarDropdown,
 	HorizontalLinkBar,
@@ -34,23 +35,28 @@ const DropdownStory = () => (
 			</HorizontalLinkBar>
 		</DemoContainer>
 
-		{/* }
 		<Heading>Usage</Heading>
 		<Code language="jsx">
 			{`
 import {
 	HorizontalLinkBar,
 	LinkBarLink,
+	LinkBarDropdown,
+	VerticalLinkBar,
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar overflow="visible">
 	<LinkBarLink linkText="One" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two" url="https://example.com" />
-	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
+	<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com">
+	<VerticalLinkBar background={colors.white}>
+		<LinkBarLink linkText="One" url="https://example.com" isActive />
+		<LinkBarLink linkText="Two" url="https://example.com" />
+	</VerticalLinkBar>
+</LinkBarDropdown>
 </HorizontalLinkBar>
 				`}
 		</Code>
-		{ */}
 	</section>
 );
 
