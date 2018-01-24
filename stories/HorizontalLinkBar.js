@@ -406,14 +406,15 @@ import {
 							background={colors.white}
 							drawRightArrowInitially
 						>
-							<LinkBarLink linkText="One" url="https://example.com" isActive />
-							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two long link" url="https://example.com" />
 							<LinkBarLink linkText="Three long link" url="https://example.com" />
 							<LinkBarLink linkText="Four long link" url="https://example.com" />
 							<LinkBarLink linkText="Five long link" url="https://example.com" />
 							<LinkBarLink linkText="Six long link" url="https://example.com" />
 							<LinkBarLink linkText="Seven long link" url="https://example.com" />
 							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Nine long link" url="https://example.com" />
 							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 						</ScrollArrowsLinkBar>
 					</DemoContainer>
@@ -423,7 +424,7 @@ import {
 					<Code language="jsx">
 						{`
 import {
-	HorizontalLinkBar,
+	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '@aller/shiny';
 
@@ -431,14 +432,15 @@ import {
 	background={colors.white}
 	drawRightArrowInitially
 >
-	<LinkBarLink linkText="One" url="https://example.com" isActive />
-	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two long link" url="https://example.com" />
 	<LinkBarLink linkText="Three long link" url="https://example.com" />
 	<LinkBarLink linkText="Four long link" url="https://example.com" />
 	<LinkBarLink linkText="Five long link" url="https://example.com" />
 	<LinkBarLink linkText="Six long link" url="https://example.com" />
 	<LinkBarLink linkText="Seven long link" url="https://example.com" />
 	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Nine long link" url="https://example.com" />
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </ScrollArrowsLinkBar>
 						`}
@@ -458,14 +460,15 @@ import {
 							background={colors.white}
 							shouldAdjustForNestedPadding
 						>
-							<LinkBarLink linkText="One" url="https://example.com" isActive />
-							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two long link" url="https://example.com" />
 							<LinkBarLink linkText="Three long link" url="https://example.com" />
 							<LinkBarLink linkText="Four long link" url="https://example.com" />
 							<LinkBarLink linkText="Five long link" url="https://example.com" />
 							<LinkBarLink linkText="Six long link" url="https://example.com" />
 							<LinkBarLink linkText="Seven long link" url="https://example.com" />
 							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Nine long link" url="https://example.com" />
 							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 						</ScrollArrowsLinkBar>
 					</DemoContainer>
@@ -475,7 +478,7 @@ import {
 					<Code language="jsx">
 						{`
 import {
-	HorizontalLinkBar,
+	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '@aller/shiny';
 
@@ -483,14 +486,15 @@ import {
 	background={colors.white}
 	shouldAdjustForNestedPadding
 >
-	<LinkBarLink linkText="One" url="https://example.com" isActive />
-	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two long link" url="https://example.com" />
 	<LinkBarLink linkText="Three long link" url="https://example.com" />
 	<LinkBarLink linkText="Four long link" url="https://example.com" />
 	<LinkBarLink linkText="Five long link" url="https://example.com" />
 	<LinkBarLink linkText="Six long link" url="https://example.com" />
 	<LinkBarLink linkText="Seven long link" url="https://example.com" />
 	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Nine long link" url="https://example.com" />
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </ScrollArrowsLinkBar>
 						`}
@@ -510,14 +514,15 @@ import {
 							background={colors.white}
 							isTopLevelComponent={false}
 						>
-							<LinkBarLink linkText="One" url="https://example.com" isActive />
-							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two long link" url="https://example.com" />
 							<LinkBarLink linkText="Three long link" url="https://example.com" />
 							<LinkBarLink linkText="Four long link" url="https://example.com" />
 							<LinkBarLink linkText="Five long link" url="https://example.com" />
 							<LinkBarLink linkText="Six long link" url="https://example.com" />
 							<LinkBarLink linkText="Seven long link" url="https://example.com" />
 							<LinkBarLink linkText="Eight long link" url="https://example.com" />
+							<LinkBarLink linkText="Nine long link" url="https://example.com" />
 							<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 						</ScrollArrowsLinkBar>
 					</DemoContainer>
@@ -527,7 +532,7 @@ import {
 					<Code language="jsx">
 						{`
 import {
-	HorizontalLinkBar,
+	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '@aller/shiny';
 
@@ -535,14 +540,15 @@ import {
 	background={colors.white}
 	isTopLevelComponent={false}
 >
-	<LinkBarLink linkText="One" url="https://example.com" isActive />
-	<LinkBarLink linkText="Two" url="https://example.com" />
+	<LinkBarLink linkText="One long link" url="https://example.com" isActive />
+	<LinkBarLink linkText="Two long link" url="https://example.com" />
 	<LinkBarLink linkText="Three long link" url="https://example.com" />
 	<LinkBarLink linkText="Four long link" url="https://example.com" />
 	<LinkBarLink linkText="Five long link" url="https://example.com" />
 	<LinkBarLink linkText="Six long link" url="https://example.com" />
 	<LinkBarLink linkText="Seven long link" url="https://example.com" />
 	<LinkBarLink linkText="Eight long link" url="https://example.com" />
+	<LinkBarLink linkText="Nine long link" url="https://example.com" />
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />
 </ScrollArrowsLinkBar>
 						`}
