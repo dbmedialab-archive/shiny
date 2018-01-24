@@ -29,7 +29,6 @@
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "babel-plugin-system-import-transformer": "^3.1.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
-    "hex-to-rgba": "1.0.1",
     "intersection-observer": "^0.5.0",
     "picturefill": "^3.0.2",
     "polished": "1.9.0",

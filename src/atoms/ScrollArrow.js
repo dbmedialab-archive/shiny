@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import hexToRgba from  'hex-to-rgba';
 
 import { LinkBarLinkBase } from '../..';
 
@@ -19,8 +18,8 @@ const Gradient = styled.div`
 	background:
 		linear-gradient(
 			to ${props => props.pointsTo},
-			${props => hexToRgba(props.background, 0.3)} 0%,
-			${props => hexToRgba(props.background, 1)} 100%
+			transparent -30%,
+			${props => props.background} 100%
 		);
 	position: absolute;
 	top: 0;
