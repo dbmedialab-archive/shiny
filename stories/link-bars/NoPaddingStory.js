@@ -61,9 +61,9 @@ const NoPaddingStory = () => (
 		<Code language="jsx">
 			{`
 <HorizontalLinkBar shouldHavePadding={false} isTopLevelComponent={false}>
-<LinkBarLink linkText="Siste nytt" />
-<LinkBarLink isActive linkText="Lokale nyheter" />
-<LinkBarLink linkText="Sport" />
+	<LinkBarLink linkText="Siste nytt" />
+	<LinkBarLink isActive linkText="Lokale nyheter" />
+	<LinkBarLink linkText="Sport" />
 </HorizontalLinkBar>
 			`}
 		</Code>

@@ -21,6 +21,7 @@ export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
+export { Code                    } from './atoms/Code';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';

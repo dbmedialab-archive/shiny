@@ -75,16 +75,16 @@ const NestedPaddingStory = () => (
 <HorizontalLinkBar
 	shouldAdjustForNestedPadding
 >
-<LinkBarLink
-	key={1}
-	linkText="Adjusted"
-	url="#adjusted"
-/>
-<LinkBarLink
-	key={2}
-	linkText="for"
-	url="#for"
-/>
+	<LinkBarLink
+		key={1}
+		linkText="Adjusted"
+		url="#adjusted"
+	/>
+	<LinkBarLink
+		key={2}
+		linkText="for"
+		url="#for"
+	/>
 </HorizontalLinkBar>
 			`}
 		</Code>
