@@ -7,7 +7,7 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { Icon } from '../../src/atoms/Icon';
+import { FontIcon } from '../../src/atoms/FontIcon';
 
 const icons = [
 	{ name: 'Dagbladet', code: 'e883' },
@@ -668,9 +668,9 @@ export default () => (
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
-import { Icon } from '@aller/shiny';
+import { FontIcon } from '@aller/shiny';
 
-<Icon name="Dagbladet-alt" size={1.8} />
+<FontIcon name="Dagbladet-alt" size={1.8} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
@@ -711,7 +711,7 @@ import { Icon } from '@aller/shiny';
 		<Row>
 			{icons.map(icon => (
 				<Col xs={2} key={icon.name}>
-					<Icon name={icon.name} size={4} />
+					<FontIcon name={icon.name} size={4} />
 					<div>{icon.name}</div>
 					<div>{icon.code}</div>
 				</Col>

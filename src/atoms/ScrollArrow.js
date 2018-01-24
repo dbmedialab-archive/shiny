@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '../..';
-import { Icon } from './Icon';
+import { FontIcon } from './FontIcon';
 
 const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	position: absolute;
@@ -14,5 +14,5 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	background: ${props => props.background};
 `;
 
-export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><Icon name="Arrow-alt-left" /></Arrow>;
-export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><Icon name="Arrow-alt-right" /></Arrow>;
+export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="Arrow-alt-left" /></Arrow>;
+export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="Arrow-alt-right" /></Arrow>;
