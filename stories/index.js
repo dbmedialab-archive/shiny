@@ -8,6 +8,7 @@ import trysilPlug from './TrysilPlug';
 import floatImage from './FloatImage';
 import ads from './Ads';
 import lazyProgressiveImage from './LazyProgressiveImage';
+import footer from './footer';
 import headers from './Headers';
 
 introduction();
@@ -24,6 +25,7 @@ trysilPlug();
 floatImage();
 ads();
 lazyProgressiveImage();
+footer();
 
 headers();
 
