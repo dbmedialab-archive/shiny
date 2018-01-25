@@ -2,6 +2,14 @@
 export { themes                  } from './themes';
 
 // Atoms
+export {
+	Heading,
+	SmallHeading,
+	MediumHeading,
+	LargeHeading,
+	XLargeHeading,
+	HugeHeading,
+}                                  from './atoms/Heading';
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
@@ -13,11 +21,13 @@ export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
+export { Code                    } from './atoms/Code';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { Dropdown                } from './atoms/Dropdown';
 export { Figure                  } from './atoms/Figure';
+export { FontIcon                } from './atoms/FontIcon';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
 export { Header                  } from './atoms/Header';
@@ -44,11 +54,13 @@ export { LinkBarLink             } from './atoms/LinkBarLink';
 export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
 export { LinkBarButton           } from './atoms/LinkBarButton';
 export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
+export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
 export { SmallLinkBarButton      } from './atoms/LinkBarButton';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';

@@ -1,19 +1,19 @@
 import React from 'react';
 import styled, { css, injectGlobal } from 'styled-components';
 
-const Icon = (props) => {
+const FontIcon = (props) => {
 	injectGlobal`
 		@font-face {
 			font-family: 'Helveticons';
 			font-style: normal;
 			font-weight: normal;
-			src: url(//styleguide.dagbladet.no/fonts/helveticons.woff) format('woff');
+			src: url('//styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
 		}
 	`;
-	return <IconSpan {...props} />;
+	return <Icon {...props} />;
 };
 
-const IconSpan = styled.span`
+const Icon = styled.span`
 	font-family: "Helveticons";
 	font-smoothing: antialiased;
 	speak: none;
@@ -21,13 +21,13 @@ const IconSpan = styled.span`
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
-	line-height: inherit;
+	line-height: 1;
 
 	${props => props.size && css`
 		font-size: ${props.size}rem;
 	`}
 
-	&:before {
+	&::before {
 		content: "${(props) => {
 		switch (props.name) {
 		case 'Dagbladet': return '\\e883';
@@ -684,6 +684,5 @@ const IconSpan = styled.span`
 
 
 export {
-	Icon,
+	FontIcon,
 };
-

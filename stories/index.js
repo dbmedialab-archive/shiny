@@ -3,11 +3,12 @@ import introduction from './introduction';
 import loaders from './Loaders';
 import typography from './Typography';
 import editorialMarking from './EditorialMarking';
-import horizontalLinkBar from './HorizontalLinkBar';
+import linkBars from './link-bars';
 import trysilPlug from './TrysilPlug';
 import floatImage from './FloatImage';
 import ads from './Ads';
 import lazyProgressiveImage from './LazyProgressiveImage';
+import logos from './logos';
 
 introduction();
 
@@ -18,8 +19,9 @@ loaders();
 grid();
 
 // Molecules
-horizontalLinkBar();
+linkBars();
 trysilPlug();
 floatImage();
 ads();
 lazyProgressiveImage();
+logos();

@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '../..';
+import { FontIcon } from './FontIcon';
 
 const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	position: absolute;
@@ -29,10 +30,5 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	}
 `;
 
-export const LeftScrollArrow = props => (
-	<Arrow {...props} pointsTo="left">&#8826;</Arrow>
-);
-
-export const RightScrollArrow = props => (
-	<Arrow {...props} pointsTo="right">&#8827;</Arrow>
-);
+export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="Arrow-alt-left" /></Arrow>;
+export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="Arrow-alt-right" /></Arrow>;
