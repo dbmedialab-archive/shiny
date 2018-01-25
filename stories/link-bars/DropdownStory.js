@@ -5,13 +5,13 @@ import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Code,
 	LinkBarLink,
 	LinkBarDropdown,
 	HorizontalLinkBar,
 	VerticalLinkBar,
 } from '../..';
 
+import { Code } from '../../src/atoms/Code';
 import theme from '../../src/themes/default-theme';
 
 const { colors } = theme;
