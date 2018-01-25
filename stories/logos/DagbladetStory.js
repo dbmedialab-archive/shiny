@@ -5,6 +5,8 @@ import {
 	Heading,
 	HugeHeading,
 	DagbladetLogo,
+	Row,
+	Col,
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';
@@ -17,6 +19,17 @@ const DagbladetStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<DagbladetLogo />
+		</DemoContainer>
+
+		<DemoContainer>
+			<Row>
+				<Col xs>
+					<DagbladetLogo background="darkness" />
+				</Col>
+				<Col xs>
+					<DagbladetLogo background="transparent" fill="type" />
+				</Col>
+			</Row>
 		</DemoContainer>
 
 		<Heading>Props</Heading>
@@ -52,6 +65,25 @@ const DagbladetStory = () => (
 import { DagladetLogo } from '@aller/shiny';
 
 <DagladetLogo />
+			`}
+		</Code>
+
+		<Code language="jsx">
+			{`
+import {
+	Row,
+	Col,
+	DagladetLogo,
+} from '@aller/shiny';
+
+<Row>
+	<Col xs>
+		<DagbladetLogo background="darkness" />
+	</Col>
+	<Col xs>
+		<DagbladetLogo background="transparent" fill="type" />
+	</Col>
+</Row>
 			`}
 		</Code>
 	</section>

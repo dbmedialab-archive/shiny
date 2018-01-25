@@ -1,10 +1,10 @@
 import React from 'react';
 
+import { Code } from '../../src/atoms/Code';
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Code,
 	LinkBarLink,
 	XSmallLinkBarLink,
 	LargeLinkBarLink,
