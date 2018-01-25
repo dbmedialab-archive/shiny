@@ -17,14 +17,14 @@ LinkBarButton.propTypes = {
 	isActive: propTypes.bool,
 	children: propTypes.node.isRequired,
 	activeBackground: propTypes.string,
-	size: propTypes.oneOf(['small', 'large']),
+	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
 	useUnderline: propTypes.bool,
 };
 
 LinkBarButton.defaultProps = {
 	isActive: false,
 	activeBackground: 'transparent',
-	size: 'large',
+	size: 'medium',
 	useUnderline: true,
 };
 
