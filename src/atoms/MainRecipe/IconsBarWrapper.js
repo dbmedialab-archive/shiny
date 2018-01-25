@@ -1,8 +1,7 @@
 import Styled from 'styled-components';
 
-const IconsBarWrapper = Styled.ul`
-	width: 200px;
-	height: 100px;
+const IconsBarWrapper = Styled.div`
+	position: relative
 `;
 
 export { IconsBarWrapper };
