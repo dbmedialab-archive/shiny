@@ -6,7 +6,7 @@ import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 const TotalTime = () => (
 	<MatIconWrapper>
 		<MatIconImageWrapper>
-			<svg width="100%" height="100%" viewBox="0 0 44 38">
+			<svg>
 				<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 					<g id="time-total" fill="#333333">
 						<g id="clock-copy" transform="translate(12.000000, 7.000000)">
@@ -17,8 +17,7 @@ const TotalTime = () => (
 				</g>
 			</svg>
 		</MatIconImageWrapper>
-		<div>totalt</div>
-		<div>2t 25min</div>
+		<div>title</div>
 	</MatIconWrapper>
 );
 

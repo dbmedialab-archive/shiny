@@ -11,17 +11,9 @@ class IconsBar extends React.Component {
 	render() {
 		return (
 			<IconsBarWrapper>
-				<Row>
-					<Col md={4}>
-						<EasyDifficulty />
-					</Col>
-					<Col md={4}>
-						<ActivityTime />
-					</Col>
-					<Col md={4}>
-						<TotalTime />
-					</Col>
-				</Row>
+				<EasyDifficulty />
+				<ActivityTime />
+				<TotalTime />
 			</IconsBarWrapper>
 		);
 	}
