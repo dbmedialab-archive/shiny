@@ -32,10 +32,12 @@ const MainRecipe = () => (
 			</Col>
 		</Row>
 		<Row>
-			<Col md={5}>
+			<Col md={6}>
 				<DetailsSection />
 			</Col>
-			<Col md={7}></Col>
+			<Col md={6}>
+				<div Style="border: 1px solid black;"></div>
+			</Col>
 		</Row>
 	</Wrapper>
 );

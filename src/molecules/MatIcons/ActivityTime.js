@@ -6,7 +6,7 @@ import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 const ActivityTime = () => (
 	<MatIconWrapper>
 		<MatIconImageWrapper>
-			<svg width="100%" height="100%" viewBox="0 0 35 38">
+			<svg>
 				<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 					<g id="time-active" fill="#000000">
 						<g id="Page-1-Copy" transform="translate(5.000000, 8.000000)">
@@ -17,8 +17,7 @@ const ActivityTime = () => (
 				</g>
 			</svg>
 		</MatIconImageWrapper>
-		<div>aktiv</div>
-		<div>15min</div>
+		<span>title</span>
 	</MatIconWrapper>
 );
 
