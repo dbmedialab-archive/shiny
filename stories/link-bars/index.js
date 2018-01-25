@@ -17,6 +17,8 @@ import { LinkStory } from './LinkStory';
 import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
 
+import { DagbladetStory } from './DagbladetStory';
+
 export default () => {
 	storiesOf('Link bars', module)
 		.add('VerticalLinkBar', VerticalLinkBarStory)
@@ -32,5 +34,6 @@ export default () => {
 		.add('LinkBarLink', LinkStory)
 		.add('... with skinned bottom border', SkinnedBorderStory)
 		.add('... with alt. state indication', StateIndicationStory)
-		.add('LinkBarButton', ButtonStory);
+		.add('LinkBarButton', ButtonStory)
+		.add('Dagbladet-like bar', DagbladetStory);
 };
