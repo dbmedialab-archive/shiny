@@ -28,5 +28,7 @@ LinkBarButton.defaultProps = {
 	useUnderline: true,
 };
 
+export const XSmallLinkBarButton = props => <LinkBarButton size="xsmall" {...props} />;
 export const SmallLinkBarButton = props => <LinkBarButton size="small" {...props} />;
 export { LinkBarButton };
+export const LargeLinkBarButton = props => <LinkBarButton size="large" {...props} />;

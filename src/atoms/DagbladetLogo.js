@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Svg = styled.svg`
 	box-sizing: border-box;
-	padding: 5% 8% 3%;
+	padding: 8% 4% 4.8%;
 	fill: ${props => (props.fill ? props.theme.colors[props.fill] : props.theme.colors.white)};
 	background: ${props => (props.background ? props.theme.colors[props.background] : props.theme.colors.primary)}
 `;
