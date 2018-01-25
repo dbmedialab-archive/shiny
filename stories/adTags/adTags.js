@@ -3,7 +3,8 @@ import React from 'react';
 
 import { Row } from '../../src/atoms/Row';
 import { Col  } from '../../src/atoms/Col';
-import { Line, LineShort, Tags } from "../../src/atoms/adTags";
+import { Icon } from '../../src/atoms/Icon';
+import { Line, LineShort, Tags, Social } from "../../src/atoms/adTags";
 
 export default () => (
 	<section>
@@ -28,10 +29,16 @@ export default () => (
 					<p>TRADISJON</p>
 					<p>GRUNNOPPSKRIFT</p>
 				</Tags>
-				<div Style="margin-top: 60px;">
+				<div Style="margin-top: 17px;">
 					<span>DEL OPPSKRIFTEN</span>
 					<LineShort />
 				</div>
+				<Social>
+					<Icon name="Facebook" size={5.2} />
+					<Icon name="Twitter" size={5.2} />
+					<Icon name="Linkedin" size={5.2} />
+					<Icon name="Sience" size={5.2} />
+				</Social>
 			</Col>
 		</Row>
 	</section>
