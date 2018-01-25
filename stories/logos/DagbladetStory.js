@@ -2,11 +2,12 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Code,
 	Heading,
 	HugeHeading,
 	DagbladetLogo,
 } from '../../src';
+
+import { Code } from '../../src/atoms/Code';
 
 const DagbladetStory = () => (
 	<section>

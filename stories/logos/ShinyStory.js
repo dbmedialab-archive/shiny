@@ -2,11 +2,12 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Code,
 	Heading,
 	HugeHeading,
 	ShinyLogo,
 } from '../../src';
+
+import { Code } from '../../src/atoms/Code';
 
 const ShinyStory = () => (
 	<section>
