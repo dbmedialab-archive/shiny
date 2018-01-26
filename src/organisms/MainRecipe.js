@@ -15,6 +15,7 @@ import { MainRecipeImage } from '../molecules/MainRecipe/MainRecipeImage';
 import { IconsBar } from '../molecules/MainRecipe/IconsBar';
 import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
 // Organisms
+import { Steps } from './Steps';
 
 const MainRecipe = () => (
 	<Wrapper>
@@ -39,6 +40,7 @@ const MainRecipe = () => (
 				</Description>
 			</Col>
 		</Row>
+		<Steps />
 	</Wrapper>
 );
 
