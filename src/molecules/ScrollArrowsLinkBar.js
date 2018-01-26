@@ -117,7 +117,6 @@ class ScrollArrowsLinkBar extends Component {
 		const {
 			background,
 			children,
-			shouldFadeOut,
 			width,
 			zIndex,
 			isTopLevelComponent,
@@ -155,7 +154,6 @@ class ScrollArrowsLinkBar extends Component {
 					{shouldDrawRightArrow &&
 						<RightScrollArrow onClick={this.rightClick} background={background} />
 					}
-					{shouldFadeOut && <HorizontalOverflowGradient />}
 				</Container>
 			</NavWithOptionalConstrainer>
 		);
@@ -171,7 +169,6 @@ ScrollArrowsLinkBar.propTypes = {
 	overflow: PropTypes.string,
 	shouldAdjustForNestedPadding: PropTypes.bool,
 	shouldFlexChildren: PropTypes.bool,
-	shouldFadeOut: PropTypes.bool,
 	drawRightArrowInitially: PropTypes.bool,
 	scrollLength: PropTypes.oneOfType([
 		PropTypes.number,
@@ -189,7 +186,6 @@ ScrollArrowsLinkBar.defaultProps = {
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,
 	shouldFlexChildren: false,
-	shouldFadeOut: false,
 	drawRightArrowInitially: false,
 	scrollLength: '70%',
 	width: 'auto',
