@@ -6,14 +6,14 @@ import React from 'react';
 import { Wrapper } from '../atoms/MainRecipe/Wrapper';
 import { ComplexitySection } from '../atoms/MainRecipe/ComplexitySection';
 import { ComplexitySectionHeader } from '../atoms/MainRecipe/ComplexitySectionHeader';
-import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
+import { Description } from '../atoms/MainRecipe/Description';
 import { Col } from '../atoms/Col';
 import { Row } from '../atoms/Row';
 
 // Molecules
 import { MainRecipeImage } from '../molecules/MainRecipe/MainRecipeImage';
 import { IconsBar } from '../molecules/MainRecipe/IconsBar';
-
+import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
 // Organisms
 
 const MainRecipe = () => (
@@ -24,10 +24,8 @@ const MainRecipe = () => (
 			</Col>
 			<Col md={5}>
 				<ComplexitySection>
-					<IconsBar />
-					<ComplexitySectionHeader>
-						Helstekt kalkun
-					</ComplexitySectionHeader>
+					<IconsBar entities={[{ name: 'difficulty' }, { name: 'activityTime' }, { name: 'totalTime' }]} />
+					<ComplexitySectionHeader>Helstekt kalkun</ComplexitySectionHeader>
 				</ComplexitySection>
 			</Col>
 		</Row>
@@ -36,7 +34,9 @@ const MainRecipe = () => (
 				<DetailsSection />
 			</Col>
 			<Col md={6}>
-				<div Style="border: 1px solid black;"></div>
+				<Description>
+					<span>Helstekt kalkun er en selvfølge på middagsbordet ved Thanksgiving, jul og nyttår! For en smakfull og saftig kalkun anbefaler vi denne oppskriften.</span>
+				</Description>
 			</Col>
 		</Row>
 	</Wrapper>

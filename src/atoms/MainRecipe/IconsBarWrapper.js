@@ -1,7 +1,8 @@
 import Styled from 'styled-components';
 
 const IconsBarWrapper = Styled.div`
-	position: relative
+	width: 200px;
+	margin: 0 auto;
 `;
 
 export { IconsBarWrapper };

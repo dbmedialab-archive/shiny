@@ -13,7 +13,7 @@ const ComplexitySectionHeader = Styled.div`
 		width: 50%;
 		left: 25%;
 		bottom: 0;
-		border-bottom: 1px solid #ff790a;
+		border-bottom: 2px solid #ff790a;
 	}
 `;
 
