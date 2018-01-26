@@ -30,6 +30,7 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const colors = {
+	transparent: 'transparent',
 	type: '#222222',
 	typeLight: '#555555',
 	typeDisabled: '#ccc',
@@ -72,6 +73,7 @@ const colors = {
 		solBlue: 'secondary',
 		primary: 'primary',
 		secondary: 'secondary',
+		transparent: 'transparent',
 	},
 };
 
