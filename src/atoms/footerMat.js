@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const FooterMat = styled.div`
-	width: 980px;
 	background: #515151;
 	padding: 50px;
 	box-sizing: border-box;
