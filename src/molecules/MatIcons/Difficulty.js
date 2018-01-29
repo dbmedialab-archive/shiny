@@ -1,21 +1,19 @@
 import React from 'react';
 
-import { MatIcon } from '../../atoms/MatIcon';
 import { EasyDifficulty } from './EasyDifficulty';
 import { MediumDifficulty } from './MediumDifficulty';
 import { HighDifficulty } from './HighDifficulty';
-
-
+import PropTypes from "prop-types";
 
 class Difficulty extends React.Component {
 
-	getIconImage(level) {
+	static getIcon(level) {
 		switch (level) {
-		case 'easy':
+		case 1:
 			return <EasyDifficulty />;
-		case 'medium':
+		case 2:
 			return <MediumDifficulty />;
-		case 'high':
+		case 3:
 			return <HighDifficulty />;
 		default:
 			return null;
@@ -23,16 +21,17 @@ class Difficulty extends React.Component {
 	}
 
 	render() {
-		return (
-			<MatIcon>
-				{this.getIconImage(this.props.level)}
-				<div>
-					nova
-				</div>
-			</MatIcon>
-		);
+		const {value} = this.props;
+		return Difficulty.getIcon(value);
 	}
-
 }
+
+Difficulty.defaultProps = {
+	value: 0,
+};
+
+Difficulty.propTypes = {
+	value: PropTypes.number,
+};
 
 export { Difficulty };
