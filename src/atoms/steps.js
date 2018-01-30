@@ -63,6 +63,10 @@ const Quantity = styled.ul`
 	list-style: none;
 	padding: 0;
 	font-size: 16px;
+	& span {
+   	 	width: 430px;
+    	float: right;
+	}
 `;
 
 const AddCart = styled.div`

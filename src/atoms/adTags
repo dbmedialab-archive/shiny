@@ -19,10 +19,14 @@ const LineShort = styled.span`
 `;
 
 const Tags = styled.div`
+	width: 600px;
 	& p {
 		display: inline-block;
-		margin-left: 40px;
+		margin-left: 30px;
 		font-size: 16px;
+	}
+	& p:nth-child(7n+1) {
+		margin-left: 5px;
 	}
 `;
 

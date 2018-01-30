@@ -18,144 +18,150 @@ import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
 import { Steps } from './Steps';
 
 const fakeProp = {
-	"title": "Bestemorbrød",
-	"timeTotal": 100,
-	"timeCooking": 60,
-	"difficulty": 1,
-	"description": "<p>6 - 8 br&oslash;d.</p>\n<p>Daglig leder ved kaffekjeden Nord i Oslo, Joakim Strand, vokste opp med dette br&oslash;det, som opprinnelig ble bakt av hans bestemor. I dag er br&oslash;det en av bestselgerne i kjedens filialer.&nbsp;Obs! Oppskriften kan gjerne halveres, for at deigen skal bli lettere &aring; h&aring;ndtere p&aring; hjemmekj&oslash;kkenet.&nbsp;</p>",
-	"images": [
-		{
-			"largeLandscape": "https://www.dagbladet.no/mat/bilder/c/l/1/251b508d-bestemors-brod.jpg"
-		}
-	],
-	"authors": [
-		{
-			"name": "Joakim Strand",
-			"email": "mat@dagbladet.no",
-			"profileImage": {
-				"seoFilename": "3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg",
-				"title": "Joakim Strand er daglig leder i Nord bakeri, Oslo",
-				"mediumPortrait": "https://www.dagbladet.no/mat/bilder/c/m/2/3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg"
+		"title": "Helstekt kalkun",
+		"timeTotal": 165,
+		"timeCooking": 15,
+		"difficulty": 1,
+		"description": "<p>Helstekt kalkun&nbsp;er en selvf&oslash;lge p&aring; middagsbordet ved Thanksgiving, jul og nytt&aring;r!&nbsp;For en smakfull og saftig kalkun anbefaler vi denne oppskriften.</p>",
+		"images": [
+			{
+				"mediumLandscape": "https://www.dagbladet.no/mat/bilder/c/m/1/f84b0f9c-helstekt-kalkun.jpg",
+				"largeLandscape": "https://www.dagbladet.no/mat/bilder/c/l/1/f84b0f9c-helstekt-kalkun.jpg",
+				"smallProfile": "https://www.dagbladet.no/mat/bilder/c/s/3/f84b0f9c-helstekt-kalkun.jpg"
 			}
-		}
-	],
-	"rating": 0,
-	"preferences": [
-		{
-			"title": "Vegan",
-			"slug": "vegan"
-		},
-		{
-			"title": "Vegetar",
-			"slug": "vegetar"
-		},
-		{
-			"title": "Uten svinekjøtt",
-			"slug": "uten-svinekjott"
-		}
-	],
-	"allergies": [
-		{
-			"slug": "gluten"
-		}
-	],
-	"ingredients": [
-		{
-			"title": "Sammalt hvete",
-			"description": "<p>At melet er sammalt betyr at man bruker hele kornet &ndash; b&aring;de skall og kjerne &ndash; og maler det sammen til mel. Sammalt mel produseres i mange varierende finhetsgrader, for eksempel fint, mellomgrovt og grovt. Sammalt mel inneholder mer kostfiber, mineraler og vitaminer (som finnes i skallet p&aring; kornet) enn siktet mel.</p>\n<p>Sammalt mel brukes til grovere bakst, som grove br&oslash;dtyper, rundstykker, flatbr&oslash;d og knekkebr&oslash;d.</p>",
-			"pivot": {
-				"amount": 1
+		],
+		"authors": [
+			{
+				"name": "Matprat",
+				"email": "mat@dagbladet.no",
+				"profileImage": {
+					"seoFilename": "3e67492f-matprat-logo.jpg",
+					"title": "Matprat logo"
+				}
 			}
-		},
-		{
-			"title": "Sammalt rug",
-			"description": "<p>Av rugmeltyper finner du siktet rugmel, sammalt rug grov og sammalt rug fin.&nbsp;Rug gir en fyldig smak til br&oslash;d. Det gj&oslash;r dessuten br&oslash;det saftig og gir lengre holdbarhet. Fordi proteinet i rug har d&aring;rlig bakeevne, blir br&oslash;d bakt med rugmel tunge og kompakte. Men rug inneholder mye fiber som binder vann, og dette gj&oslash;r det mulig &aring; bake br&oslash;d basert p&aring; bare rug.&nbsp;</p>",
-			"pivot": {
-				"amount": 1.5
+		],
+		"rating": 4.05,
+		"preferences": [
+			{
+				"title": "Uten svinekjøtt",
+				"slug": "uten-svinekjott"
 			}
-		},
-		{
-			"title": "Hvetemel",
-			"description": "<p>Hvetemel er finmalt og siktet hvete.</p>",
-			"pivot": {
-				"amount": 2
+		],
+		"allergies": [],
+		"ingredients": [
+			{
+				"title": "Kalkun",
+				"description": "<p>Kalkunkj&oslash;tt h&oslash;rer hjemme i kategorien hvitt kj&oslash;tt sammen med kylling, og er b&aring;de sunt og magert. Kj&oslash;ttet er mildt og m&oslash;rt, med litt mer tyggemotstand enn kylling. Likt som hos kylling er det litt forskjell i kj&oslash;ttet p&aring; bryst og l&aring;r. Brystkj&oslash;ttet er helt lyst og mildt i smak, mens l&aring;rkj&oslash;ttet har mer markant smak og er m&oslash;rkere i fargen. M&oslash;rheten gj&oslash;r kj&oslash;ttet anvendelig, b&aring;de som festmat og til travle hverdager.&nbsp;P&aring; grunn av den milde smaken, passer kalkunkj&oslash;ttet til de fleste krydder og tilbeh&oslash;r.</p>",
+				"pivot": {
+					"amount": 1,
+					"type": "stk"
+				}
+			},
+			{
+				"title": "Smør",
+				"description": "<p>Sm&oslash;r er et naturprodukt basert p&aring; fl&oslash;te. Sm&oslash;rtilberedning er utviklet som en konserveringsmetode og er kjent i alle kulturer som har holdt husdyr.&nbsp;I melk og fl&oslash;te finnes fett i sm&aring; kuler. Det er disse sm&aring; fettkulene som utvinnes i sm&oslash;rproduksjon. Mesteparten av sm&oslash;ret blir produsert av &ldquo;s&oslash;t&rdquo; fl&oslash;te.&nbsp;Sm&oslash;r passer meget godt til alle typer matlaging; steking, baking, sauser, supper og br&oslash;dmat.</p>",
+				"pivot": {
+					"amount": 100,
+					"type": "g"
+				}
+			},
+			{
+				"title": "Salt",
+				"description": "<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>",
+				"pivot": {
+					"amount": 1.5,
+					"type": "ts"
+				}
+			},
+			{
+				"title": "Svart pepper",
+				"description": "<p>Svart pepper er et krydder fremstilt av fermenterte, t&oslash;rkede og umodne r&oslash;de b&aelig;r, kalt pepperkorn, fra planten Piper nigrum.&nbsp;Svart pepper er ett av de vanligste krydder i det europeiske og de europeiskinspirerte kj&oslash;kken. Smaken er sterk og brennende.</p>",
+				"pivot": {
+					"amount": 1.5,
+					"type": "ts"
+				}
+			},
+			{
+				"title": "Vann",
+				"description": "<p>Vann&nbsp;er en fargel&oslash;s v&aelig;ske med&nbsp;kjemisk forbindelse mellom hydrogen og oksygen, H₂O. Vann viser som regel fargen p&aring; stoffene bak eller rundt, eller reflekterer lyset som treffer vannoverflaten.&nbsp;De kjemiske egenskapene til vann er godt egnet til mange funksjoner i levende organismer. Vann har en rekke livsviktige funksjoner i menneskekroppen.&nbsp;Rent vann g&aring;r aldri ut p&aring; dato, s&aring;fremt det oppbevares i tett emballasje,&nbsp;men kan f&oslash;les litt flatt</p>",
+				"pivot": {
+					"amount": 3,
+					"type": "dl"
+				}
 			}
-		},
-		{
-			"title": "Salt",
-			"description": "<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>",
-			"pivot": {
-				"amount": 3
+		],
+		"steps": [
+			{
+				"videoId": "",
+				"description": "<p>Ta ut innmaten. Dette er god basis for saus, s&aring; ta vare p&aring; det.&nbsp;</p>",
+				"sortOrder": 0,
+				"images": []
+			},
+			{
+				"videoId": "",
+				"description": "<p>Bind l&aring;rene sammen ved benknokene. Sitter vingespissene p&aring;, f&oslash;r dem bak ryggen inn mot halsen. Slik at vingene hviler under og st&oslash;tter kalkunen.</p>",
+				"sortOrder": 1,
+				"images": []
+			},
+			{
+				"videoId": "",
+				"description": "<p>Legg kalkunen over i en langpanne eller ildfast form. Smelt sm&oslash;r, tilsett salt og pepper og pensle kalkunen med blandingen.</p>",
+				"sortOrder": 2,
+				"images": []
+			},
+			{
+				"videoId": "",
+				"description": "<p>Hell p&aring; vann og sett kalkunen inn i en forvarmet stekeovn p&aring; 180 &deg;C.&nbsp;Beregn ca. en halv time pr. kilo. Pensle kalkunen med smeltet sm&oslash;r eller kraften som har dannet seg i formen flere ganger under steketiden. Det vil gi ekstra smak og flott gyllen farge p&aring; skinnet.</p>",
+				"sortOrder": 3,
+				"images": []
+			},
+			{
+				"videoId": "",
+				"description": "<p>Stikk en spiss kniv inn ved l&aring;rfestet. Kommer det klar kraft ut er kalkunen ferdig.&nbsp;La kalkunen hvile i minst 20 minutter f&oslash;r du skj&aelig;rer i den. Flytt etter noen minutter kalkunen over p&aring; en fj&oslash;l eller et fat, og pakk den inn i&nbsp;aluminiumfolie&nbsp;dersom den skal serveres varm.</p>",
+				"sortOrder": 4,
+				"images": []
 			}
-		},
-		{
-			"title": "Solsikkekjerner",
-			"description": "<p>Solsikkekjerner kalles ogs&aring; solsikkefr&oslash;.&nbsp;</p>\n<p>Solsikkekjerner har en god n&oslash;ttesmak, og smaken fremheves ved varmebehandling.</p>\n<p>Vanligvis brukes de i bakverk, b&aring;de i deigen og som pynt. De er fine som tilsetning i blant annet havregryner og yoghurt, men kan ogs&aring; brukes til panering av fisk og kylling.</p>\n<p>Du kan riste solsikkekjerner ved &aring; ha de p&aring; bakepapir i ovnen eller i t&oslash;rr stekepanne.</p>",
-			"pivot": {
-				"amount": 200
+		],
+		"tags": [
+			{
+				"title": "Fugl",
+				"url": "https://www.dagbladet.no/mat/oppskrifter/tag/fugl"
+			},
+			{
+				"title": "Tradisjon",
+				"url": "https://www.dagbladet.no/mat/oppskrifter/tag/tradisjon"
+			},
+			{
+				"title": "Grunnoppskrift",
+				"url": "https://www.dagbladet.no/mat/oppskrifter/tag/grunnoppskrift"
+			},
+			{
+				"title": "Fest",
+				"url": "https://www.dagbladet.no/mat/oppskrifter/tag/fest"
+			},
+			{
+				"title": "Festmat",
+				"url": "https://www.dagbladet.no/mat/oppskrifter/tag/festmat"
 			}
-		},
-		{
-			"title": "Tørrgjær",
-			"description": "<p>T&oslash;rrgj&aelig;r er gj&aelig;r i pulverform med lang holdbarhet. Brukes blant annet i baking, vinlegging og &oslash;lbrygging.&nbsp;Gj&aelig;r er levende, og som alt annet levende trenger gj&aelig;rsoppen mat, vann og oksygen.&nbsp;I en deig f&aring;r gj&aelig;rsoppen mat fra stivelsen i melet, vann f&aring;r den fra deigv&aelig;sken, og oksygen f&aring;r den ved at deigen blir knadd. Gj&aelig;r puster ut karbondioksid.&nbsp;Gassen gj&oslash;r at deigen hever.</p>\n<p>Fersk gj&aelig;r hever raskest, mens t&oslash;rrgj&aelig;r trenger lenger tid.&nbsp;<a href=\"http://www.dinside.no/921512/torr-eller-fersk-gjaer-er-forskjellen\" target=\"_blank\">De har de samme egenskapene</a>, men mange bakere opplever bedre resultat med den ferske gj&aelig;ren.</p>",
-			"pivot": {
-				"amount": 3
-			}
-		},
-		{
-			"title": "Vann",
-			"description": "<p>Vann&nbsp;er en fargel&oslash;s v&aelig;ske med&nbsp;kjemisk forbindelse mellom hydrogen og oksygen, H₂O. Vann viser som regel fargen p&aring; stoffene bak eller rundt, eller reflekterer lyset som treffer vannoverflaten.&nbsp;De kjemiske egenskapene til vann er godt egnet til mange funksjoner i levende organismer. Vann har en rekke livsviktige funksjoner i menneskekroppen.&nbsp;Rent vann g&aring;r aldri ut p&aring; dato, s&aring;fremt det oppbevares i tett emballasje,&nbsp;men kan f&oslash;les litt flatt</p>",
-			"pivot": {
-				"amount": 2
-			}
-		}
-	],
-	"steps": [
-		{
-			"videoId": "",
-			"description": "<p>Bland alt det t&oslash;rre i en bolle.&nbsp;Hell romtemperert vann i bollen, ca. 23 grader.&nbsp;</p>",
-			"sortOrder": 0
-		},
-		{
-			"videoId": "",
-			"description": "<p>Elt deigen godt samme i ca. 10 minutter, gjerne i en maskin til en smidig deig.&nbsp;Sett deigen til heving i vanlig romtemperatur et par timer.</p>",
-			"sortOrder": 1
-		},
-		{
-			"videoId": "",
-			"description": "<p>Sm&oslash;r formene med en god olje &nbsp;og fordel deigen i br&oslash;dformene.&nbsp;Pensle litt olje p&aring; toppen av br&oslash;dene og dryss p&aring; litt havsalt. Etterhev br&oslash;dene i ca. 30 minutter.&nbsp;</p>",
-			"sortOrder": 2
-		},
-		{
-			"videoId": "",
-			"description": "<p>Steke br&oslash;dene p&aring; nederste rille i varmluftsovn ved 170 grader i ca. 50 minutter.&nbsp;Ta br&oslash;dene ut av formene og avkj&oslash;l p&aring; rist.&nbsp;</p>\n<p>Obs! Oppskriften kan gjerne halveres, for at deigen skal bli lettere &aring; h&aring;ndtere p&aring; hjemmekj&oslash;kkenet.&nbsp;</p>\n<p>&nbsp;</p>",
-			"sortOrder": 3
-		}
-	],
-	"tags": [
-		{
-			"title": "Brød",
-			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
-		}
-	]
+		]
 };
 
-const MainRecipe = props => (
+const MainRecipe = (props) => (
 	<Wrapper>
 		<Row>
 			<Col md={7}>
-				<MainRecipeImage src={fakeProp.images[0].largeLandscape} />
+				<MainRecipeImage src={ fakeProp.images[0].url_l_landscape } />
 			</Col>
 			<Col md={5}>
 				<ComplexitySection>
-					<IconsBar entities={[{ slug: 'difficulty', value: fakeProp.difficulty }, { slug: 'activityTime', value: fakeProp.timeCooking }, { slug: 'totalTime', value: fakeProp.timeTotal }]} />
+					<IconsBar entities={[{ name: 'difficulty' }, { name: 'activityTime' }, { name: 'totalTime' }]} />
 					<ComplexitySectionHeader>{fakeProp.title}</ComplexitySectionHeader>
 				</ComplexitySection>
 			</Col>
 		</Row>
 		<Row>
 			<Col md={6}>
-				<DetailsSection preferences={fakeProp.preferences} allergies={fakeProp.allergies} author={fakeProp.authors[0]} raiting={fakeProp.rating}/>
+				<DetailsSection  />
 			</Col>
 			<Col md={6}>
 				<Description>
@@ -164,9 +170,8 @@ const MainRecipe = props => (
 				</Description>
 			</Col>
 		</Row>
-		<Steps />
+		<Steps  />
 	</Wrapper>
 );
-
 
 export { MainRecipe };
