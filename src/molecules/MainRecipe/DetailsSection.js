@@ -57,7 +57,7 @@ DetailsSection.defaultProps = {
 	allergies: [],
 	preferences: [],
 	author: {},
-	rating: 0
+	rating: 0,
 };
 
 DetailsSection.propTypes = {

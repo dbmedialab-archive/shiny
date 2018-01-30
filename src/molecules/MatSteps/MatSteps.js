@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
@@ -14,12 +15,15 @@ import {
 
 export default class MatSteps extends React.Component {
 	render() {
-		const steps = this.props.steps.map( (item, index) => {
+		let steps = this.props.steps || [];
+		let ingredients = this.props.ingredients || [];
+
+		steps = steps.map( (item, index) => {
 			return (
 				<li key={index} > {item.description.replace(/<\/?[^>]+>/g,'')} </li>
 			);
 		});
-		const ingredients = this.props.ingredients.map( (item, index) => {
+		ingredients = ingredients.map( (item, index) => {
 			return (
 				<li key={index}> {item.pivot.amount + " " + item.pivot.type} <span key={index}>{item.title}</span></li>
 			);
