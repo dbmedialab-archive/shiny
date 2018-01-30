@@ -16,6 +16,10 @@ import { Vegetarian      } from '../MatIcons/Vegetarian';
 
 class IconsBar extends React.Component {
 	static getIcons(entityList) {
+		if (!entityList) {
+			return '';
+		}
+
 		function getComponent(entity) {
 			switch (entity.slug) {
 			case 'difficulty':
