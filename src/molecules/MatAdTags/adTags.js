@@ -8,7 +8,6 @@ import { Line, LineShort, Tags, Social } from "../../atoms/adTags";
 
 export default class extends React.Component {
 	render() {
-		console.log(this.props.tags);
 		const tags = this.props.tags.map((item, index) => {
 			return <p key={index}> <a key={index} href={item.url}>{item.title.toUpperCase()}</a></p>
 		});

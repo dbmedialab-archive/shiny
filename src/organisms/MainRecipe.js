@@ -5,9 +5,9 @@ import { Description } from '../atoms/MainRecipe/Description';
 import { Col } from '../atoms/Col';
 import { Row } from '../atoms/Row';
 import { MainRecipeImage } from '../molecules/MainRecipe/MainRecipeImage';
-import { IconsBar } from '../molecules/MainRecipe/IconsBar';
 import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
 import { ComplexitySection } from '../molecules/MainRecipe/ComplexitySection';
+import { IngredientsSection } from '../molecules/MainRecipe/IngredientsSection';
 import { Steps } from './Steps';
 import { AdTags } from './adTags';
 import { Footer } from './Footer';
@@ -18,6 +18,7 @@ const fakeProp = {
 	"timeTotal": 100,
 	"timeCooking": 60,
 	"difficulty": 1,
+	"servings": 4,
 	"description": "<p>6 - 8 br&oslash;d.</p>\n<p>Daglig leder ved kaffekjeden Nord i Oslo, Joakim Strand, vokste opp med dette br&oslash;det, som opprinnelig ble bakt av hans bestemor. I dag er br&oslash;det en av bestselgerne i kjedens filialer.&nbsp;Obs! Oppskriften kan gjerne halveres, for at deigen skal bli lettere &aring; h&aring;ndtere p&aring; hjemmekj&oslash;kkenet.&nbsp;</p>",
 	"images": [
 		{
@@ -85,7 +86,7 @@ const fakeProp = {
 			"description": "<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>",
 			"pivot": {
 				"amount": 3,
-				"type": "kg"
+				"type": "ts"
 			}
 		},
 		{
@@ -93,7 +94,7 @@ const fakeProp = {
 			"description": "<p>Solsikkekjerner kalles ogs&aring; solsikkefr&oslash;.&nbsp;</p>\n<p>Solsikkekjerner har en god n&oslash;ttesmak, og smaken fremheves ved varmebehandling.</p>\n<p>Vanligvis brukes de i bakverk, b&aring;de i deigen og som pynt. De er fine som tilsetning i blant annet havregryner og yoghurt, men kan ogs&aring; brukes til panering av fisk og kylling.</p>\n<p>Du kan riste solsikkekjerner ved &aring; ha de p&aring; bakepapir i ovnen eller i t&oslash;rr stekepanne.</p>",
 			"pivot": {
 				"amount": 200,
-				"type": "kg"
+				"type": "g"
 			}
 		},
 		{
@@ -101,7 +102,7 @@ const fakeProp = {
 			"description": "<p>T&oslash;rrgj&aelig;r er gj&aelig;r i pulverform med lang holdbarhet. Brukes blant annet i baking, vinlegging og &oslash;lbrygging.&nbsp;Gj&aelig;r er levende, og som alt annet levende trenger gj&aelig;rsoppen mat, vann og oksygen.&nbsp;I en deig f&aring;r gj&aelig;rsoppen mat fra stivelsen i melet, vann f&aring;r den fra deigv&aelig;sken, og oksygen f&aring;r den ved at deigen blir knadd. Gj&aelig;r puster ut karbondioksid.&nbsp;Gassen gj&oslash;r at deigen hever.</p>\n<p>Fersk gj&aelig;r hever raskest, mens t&oslash;rrgj&aelig;r trenger lenger tid.&nbsp;<a href=\"http://www.dinside.no/921512/torr-eller-fersk-gjaer-er-forskjellen\" target=\"_blank\">De har de samme egenskapene</a>, men mange bakere opplever bedre resultat med den ferske gj&aelig;ren.</p>",
 			"pivot": {
 				"amount": 3,
-				"type": "kg"
+				"type": "pose(r)"
 			}
 		},
 		{
@@ -109,7 +110,7 @@ const fakeProp = {
 			"description": "<p>Vann&nbsp;er en fargel&oslash;s v&aelig;ske med&nbsp;kjemisk forbindelse mellom hydrogen og oksygen, H₂O. Vann viser som regel fargen p&aring; stoffene bak eller rundt, eller reflekterer lyset som treffer vannoverflaten.&nbsp;De kjemiske egenskapene til vann er godt egnet til mange funksjoner i levende organismer. Vann har en rekke livsviktige funksjoner i menneskekroppen.&nbsp;Rent vann g&aring;r aldri ut p&aring; dato, s&aring;fremt det oppbevares i tett emballasje,&nbsp;men kan f&oslash;les litt flatt</p>",
 			"pivot": {
 				"amount": 2,
-				"type": "kg"
+				"type": "l"
 			}
 		}
 	],
@@ -178,7 +179,7 @@ const fakeProp = {
 	]
 };
 
-const MainRecipe = () => (
+const MainRecipe = props => (
 	<Wrapper>
 		<Row>
 			<Col md={7}>
@@ -194,12 +195,15 @@ const MainRecipe = () => (
 			</Col>
 			<Col md={6}>
 				<Description>
-					<span>{ fakeProp.description.replace(/<\/?[^>]+>/g,'') }
-					</span>
+					<span>{ fakeProp.description.replace(/<\/?[^>]+>/g, '') }</span>
 				</Description>
 			</Col>
 		</Row>
-		<Steps steps={fakeProp.steps} ingredients={fakeProp.ingredients} />
+		<Row>
+			<Col md={6}>
+				<IngredientsSection servings={fakeProp.servings} ingredients={fakeProp.ingredients} />
+			</Col>
+		</Row>
 		<AdTags tags={fakeProp.tags} />
 		<Related entities={[{ slug: 'difficulty', value: fakeProp.difficulty }, { slug: 'activityTime', value: fakeProp.timeCooking }, { slug: 'totalTime', value: fakeProp.timeTotal }]}  headerTitle={fakeProp.title}/>
 		<Footer />

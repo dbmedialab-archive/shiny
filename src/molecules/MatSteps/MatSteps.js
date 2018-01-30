@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
@@ -20,7 +19,7 @@ export default class MatSteps extends React.Component {
 
 		steps = steps.map( (item, index) => {
 			return (
-				<li key={index} > {item.description.replace(/<\/?[^>]+>/g,'')} </li>
+				<li key={index} > {item.description.replace(/<\/?[^>]+>/g, '')} </li>
 			);
 		});
 		ingredients = ingredients.map( (item, index) => {
@@ -62,9 +61,6 @@ export default class MatSteps extends React.Component {
 							<span>LEGG I HANDLELISTE</span>
 						</AddCart>
 					</Col>
-
-
-
 					<Col xs={6}>
 						<h1>SLIK GJØR DU</h1>
 						<RecipeSteps>
