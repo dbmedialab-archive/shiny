@@ -1,17 +1,17 @@
 import React from 'react';
 
-import { Wrapper } from '../atoms/MainRecipe/Wrapper';
-import { Description } from '../atoms/MainRecipe/Description';
-import { Col } from '../atoms/Col';
-import { Row } from '../atoms/Row';
-import { MainRecipeImage } from '../molecules/MainRecipe/MainRecipeImage';
-import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
-import { ComplexitySection } from '../molecules/MainRecipe/ComplexitySection';
+import { Wrapper            } from '../atoms/MainRecipe/Wrapper';
+import { Description        } from '../atoms/MainRecipe/Description';
+import { Col                } from '../atoms/Col';
+import { Row                } from '../atoms/Row';
+import { MainRecipeImage    } from '../molecules/MainRecipe/MainRecipeImage';
+import { DetailsSection     } from '../molecules/MainRecipe/DetailsSection';
+import { ComplexitySection  } from '../molecules/MainRecipe/ComplexitySection';
 import { IngredientsSection } from '../molecules/MainRecipe/IngredientsSection';
-import { Steps } from './Steps';
-import { AdTags } from './adTags';
-import { Footer } from './Footer';
-import Related from "../molecules/MatRelated/MatRelated";
+import { StepsSection       } from '../molecules/MainRecipe/StepsSection';
+import { AdTags             } from './adTags';
+import { Footer             } from './Footer';
+import Related from '../molecules/MatRelated/MatRelated';
 
 const fakeProp = {
 	"title": "Bestemorbrød",
@@ -202,6 +202,9 @@ const MainRecipe = props => (
 		<Row>
 			<Col md={6}>
 				<IngredientsSection servings={fakeProp.servings} ingredients={fakeProp.ingredients} />
+			</Col>
+			<Col md={6}>
+				<StepsSection steps={fakeProp.steps} />
 			</Col>
 		</Row>
 		<AdTags tags={fakeProp.tags} />

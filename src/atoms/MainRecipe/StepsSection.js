@@ -21,6 +21,4 @@ const RecipeSteps = styled.ol`
     }
 `;
 
-export {
-	RecipeSteps,
-};
+export { RecipeSteps };

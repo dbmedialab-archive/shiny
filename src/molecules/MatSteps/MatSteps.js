@@ -10,7 +10,7 @@ import {
 		Pers,
 		Counter,
 		Buttons
-	} from "../../atoms/steps";
+	} from "../../atoms/MainRecipe/StepsSection";
 
 export default class MatSteps extends React.Component {
 	render() {
