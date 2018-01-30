@@ -21,7 +21,7 @@ class IconsBar extends React.Component {
 		}
 
 		function getComponent(entity) {
-			switch (entity.slug) {
+			switch (entity.Slug) {
 			case 'difficulty':
 				return <Difficulty value={entity.value} />;
 			case 'activityTime':

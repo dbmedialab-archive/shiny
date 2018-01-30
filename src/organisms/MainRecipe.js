@@ -19,7 +19,7 @@ const MainRecipe = props => (
 				<MainRecipeImage src={props.images[0].LargeLandscape || 'https://ih1.redbubble.net/image.202504306.6869/sticker,375x360-bg,ffffff.u2.png'} />
 			</Col>
 			<Col md={5}>
-				<ComplexitySection headerTitle={props.title} entities={[{ slug: 'difficulty', value: props.difficulty }, { slug: 'activityTime', value: props.timeCooking }, { slug: 'totalTime', value: props.timeTotal }]} />
+				<ComplexitySection headerTitle={props.title} entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]} />
 			</Col>
 		</Row>
 		<Row>
@@ -41,7 +41,7 @@ const MainRecipe = props => (
 			</Col>
 		</Row>
 		<AdTags tags={props.tags} />
-		<Related entities={[{ slug: 'difficulty', value: props.difficulty }, { slug: 'activityTime', value: props.timeCooking }, { slug: 'totalTime', value: props.timeTotal }]}  headerTitle={props.title}/>
+		<Related entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]}  headerTitle={props.title}/>
 	</Wrapper>
 );
 
