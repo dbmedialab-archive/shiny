@@ -8,7 +8,6 @@ import { ComplexitySectionHeader } from '../../atoms/MainRecipe/ComplexitySectio
 
 export default class Related extends React.Component {
 	render() {
-		console.log(this.props);
 		return (
 			<section style={{ width: 1122, margin: '0 auto'}}>
 				<h1>Related Section</h1>
@@ -20,7 +19,7 @@ export default class Related extends React.Component {
 							</Col>
 							<Col md={5}>
 								<IconsBar entities={this.props.entities} />
-								<ComplexitySectionHeader style={{ 'font-size': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
+								<ComplexitySectionHeader style={{ 'fontSize': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
 							</Col>
 						</Row>
 					</Col>
@@ -31,12 +30,12 @@ export default class Related extends React.Component {
 							</Col>
 							<Col md={5}>
 								<IconsBar entities={this.props.entities} />
-								<ComplexitySectionHeader style={{ 'font-size': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
+								<ComplexitySectionHeader style={{ 'fontSize': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
 							</Col>
 						</Row>
 					</Col>
 				</Row>
-				<Row style={{ 'margin-bottom': 20 }}>
+				<Row style={{ 'marginBottom': 20 }}>
 					<Col md={6}>
 						<Row>
 							<Col md={5}>
@@ -44,7 +43,7 @@ export default class Related extends React.Component {
 							</Col>
 							<Col md={5}>
 								<IconsBar entities={this.props.entities} />
-								<ComplexitySectionHeader style={{ 'font-size': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
+								<ComplexitySectionHeader style={{ 'fontSize': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
 							</Col>
 						</Row>
 					</Col>
@@ -55,7 +54,7 @@ export default class Related extends React.Component {
 							</Col>
 							<Col md={5}>
 								<IconsBar entities={this.props.entities} />
-								<ComplexitySectionHeader style={{ 'font-size': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
+								<ComplexitySectionHeader style={{ 'fontSize': 18 }}>{this.props.headerTitle}</ComplexitySectionHeader>
 							</Col>
 						</Row>
 					</Col>

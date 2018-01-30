@@ -8,6 +8,7 @@ import { Buttons, Counter, Pers, Quantity, AddCart } from '../../atoms/MainRecip
 class IngredientsSection extends React.Component {
 	constructor(props) {
 		super(props);
+		
 		this.state = {
 			servings: props.servings || 0,
 			ingredients: props.ingredients || [],
@@ -22,7 +23,7 @@ class IngredientsSection extends React.Component {
 
 		return ingredients.map((item, index) => {
 			return (
-				<li key={index}> {`${this.calculateAmount(item.pivot.amount)} ${item.pivot.type}`} <span>{item.title}</span></li>
+				<li key={index}> {`${this.calculateAmount(item.Pivot.Amount)} ${item.Pivot.Type}`} <span>{item.Title}</span></li>
 			);
 		});
 	}

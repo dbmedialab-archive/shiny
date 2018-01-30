@@ -6,10 +6,10 @@ import { Col  } from '../../atoms/Col';
 import { Icon } from '../../atoms/Icon';
 import { Line, LineShort, Tags, Social } from "../../atoms/adTags";
 
-export default class extends React.Component {
+export default class adTags extends React.Component {
 	render() {
 		const tags = this.props.tags.map((item, index) => {
-			return <p key={index}> <a key={index} href={item.url}>{item.title.toUpperCase()}</a></p>
+			return <p key={index}> <a key={index} href={item.Url}>{item.Title.toUpperCase()}</a></p>
 		});
 		return (
 			<section>

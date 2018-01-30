@@ -10,7 +10,7 @@ const Author = props => (
 	<AuthorWrapper>
 		<Row>
 			<Col md={3}>
-				<AuthorPhoto src={props.authorData.profileImage.mediumPortrait} />
+				<AuthorPhoto src={props.authorData.ProfileImage.MediumPortrait} />
 			</Col>
 			<Col md={9}>
 				<Row>
