@@ -8,12 +8,15 @@ import { Line, LineShort, Tags, Social } from "../../atoms/adTags";
 
 export default class extends React.Component {
 	render() {
+		console.log(this.props.tags);
+		const tags = this.props.tags.map((item, index) => {
+			return <p key={index}> {item.title.toUpperCase()}</p>
+		});
 		return (
 			<section>
-				<h1>Ad & Tags</h1>
 				<Row>
 					<Col xs={4}>
-						<div><img src="https://dummyimage.com/320x250/000/fff"/></div>
+						<div><img src="http://www.eatsouthbank.com.au/wp-content/uploads/2017/03/Plough-Inn-Buffalo-wings-2-320x250-c-default.jpg"/></div>
 					</Col>
 					<Col xs={8}>
 						<div  style={{ marginBottom: 10 }}>
@@ -21,15 +24,7 @@ export default class extends React.Component {
 							<Line/>
 						</div>
 						<Tags>
-							<p>MIDDAG</p>
-							<p>KJØTT</p>
-							<p>HELG</p>
-							<p>FULG</p>
-							<p>FEST</p>
-							<p>HELSTEKT</p>
-							<p>FESTMAT</p>
-							<p>TRADISJON</p>
-							<p>GRUNNOPPSKRIFT</p>
+							{tags}
 						</Tags>
 						<div style={{ marginTop: 17 }}>
 							<span>DEL OPPSKRIFTEN</span>

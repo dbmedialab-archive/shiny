@@ -9,6 +9,8 @@ import { IconsBar } from '../molecules/MainRecipe/IconsBar';
 import { DetailsSection } from '../molecules/MainRecipe/DetailsSection';
 import { ComplexitySection } from '../molecules/MainRecipe/ComplexitySection';
 import { Steps } from './Steps';
+import { AdTags } from './adTags';
+import { Footer } from './Footer';
 
 const fakeProp = {
 	"title": "Bestemorbrød",
@@ -136,11 +138,46 @@ const fakeProp = {
 		{
 			"title": "Brød",
 			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Tag1",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},		{
+			"title": "Brød3",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød5",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød6",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød8",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød7",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
+		},
+		{
+			"title": "Brød9",
+			"url": "https://www.dagbladet.no/mat/oppskrifter/tag/brod"
 		}
 	]
 };
 
-const MainRecipe = (props) => (
+const MainRecipe = () => (
 	<Wrapper>
 		<Row>
 			<Col md={7}>
@@ -162,6 +199,8 @@ const MainRecipe = (props) => (
 			</Col>
 		</Row>
 		<Steps steps={fakeProp.steps} ingredients={fakeProp.ingredients} />
+		<AdTags tags={fakeProp.tags} />
+		<Footer />
 	</Wrapper>
 );
 

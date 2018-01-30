@@ -13,7 +13,8 @@ const SubCategoryHeaderWrapper = Styled.div`
 		width: 100%;
 		margin-left: 10px;
 		display: inline-block;
-		border: 2px solid #ff790a;
+		border: 1px solid #ff790a;
+		vertical-align: middle;
 	}
 `;
 

@@ -31,7 +31,6 @@ export default class MatSteps extends React.Component {
 
 		return(
 			<section>
-				<h1>Steps</h1>
 				<Row>
 					<Col xs={6}>
 						<h1>DETTE TRENGER DU</h1>

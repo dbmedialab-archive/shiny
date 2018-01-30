@@ -9,7 +9,6 @@ export default class Footer extends React.Component {
 	render() {
 		return (
 			<section>
-				<h1>FOOTER</h1>
 				<FooterMat>
 					<Row>
 						<Col xs={3}>

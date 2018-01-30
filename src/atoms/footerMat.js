@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const FooterMat = styled.div`
 	background: #515151;
+	margin-top: 30px;
 	padding: 50px;
 	box-sizing: border-box;
 	color: #fff;
