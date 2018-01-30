@@ -11,6 +11,7 @@ import { ComplexitySection } from '../molecules/MainRecipe/ComplexitySection';
 import { Steps } from './Steps';
 import { AdTags } from './adTags';
 import { Footer } from './Footer';
+import Related from "../molecules/MatRelated/MatRelated";
 
 const fakeProp = {
 	"title": "Bestemorbrød",
@@ -200,6 +201,7 @@ const MainRecipe = () => (
 		</Row>
 		<Steps steps={fakeProp.steps} ingredients={fakeProp.ingredients} />
 		<AdTags tags={fakeProp.tags} />
+		<Related entities={[{ slug: 'difficulty', value: fakeProp.difficulty }, { slug: 'activityTime', value: fakeProp.timeCooking }, { slug: 'totalTime', value: fakeProp.timeTotal }]}  headerTitle={fakeProp.title}/>
 		<Footer />
 	</Wrapper>
 );
