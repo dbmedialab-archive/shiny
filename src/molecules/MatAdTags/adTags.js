@@ -10,7 +10,7 @@ export default class extends React.Component {
 	render() {
 		console.log(this.props.tags);
 		const tags = this.props.tags.map((item, index) => {
-			return <p key={index}> {item.title.toUpperCase()}</p>
+			return <p key={index}> <a key={index} href={item.url}>{item.title.toUpperCase()}</a></p>
 		});
 		return (
 			<section>
