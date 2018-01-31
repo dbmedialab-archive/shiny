@@ -32,7 +32,7 @@ export const LinkBarLinkBase = styled.a`
 			: props.theme.colors.type
 	)};
 	font-size: ${props => props.theme.variables.uiRegularSize};
-	line-height: ${props => props.theme.variables.uiRegularLineHeight};
+	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
