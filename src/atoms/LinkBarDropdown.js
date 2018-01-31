@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
@@ -11,6 +11,8 @@ const Button = LinkBarLinkBase.withComponent('button').extend`
 const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
+
+const ThisOughtToBeAFragment = styled.div``;
 
 class Dropdown extends React.Component {
 	constructor() {
@@ -33,12 +35,12 @@ class Dropdown extends React.Component {
 		const { hide } = this.state;
 
 		return (
-			<Fragment>
+			<ThisOughtToBeAFragment>
 				<Button onClick={e => this.handleClick()} {...rest}>{linkText}</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
-			</Fragment>
+			</ThisOughtToBeAFragment>
 		);
 	}
 }
