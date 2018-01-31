@@ -27,7 +27,7 @@ const ScrollArrowsGradientBackground = () => (
 				background={`linear-gradient(0deg, ${colors.grayTint}, ${colors.white} .1rem)`}
 				shouldAdjustForNestedPadding
 				drawRightArrowInitially
-				arrowGradientBackground={`${colors.white}`}
+				arrowGradientBackground={colors.white}
 				arrowGradientHeight="97%"
 			>
 				<LinkBarLink linkText="One long link" url="https://example.com" isActive />
@@ -61,8 +61,11 @@ import {
 } from '@aller/shiny';
 
 <ScrollArrowsLinkBar
-	background={colors.white}
+	background={\`linear-gradient(0deg, \${colors.grayTint}, \${colors.white} .1rem)\`}
+	shouldAdjustForNestedPadding
 	drawRightArrowInitially
+	arrowGradientBackground={colors.white}
+	arrowGradientHeight="97%"
 >
 	<LinkBarLink linkText="One long link" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two long link" url="https://example.com" />
