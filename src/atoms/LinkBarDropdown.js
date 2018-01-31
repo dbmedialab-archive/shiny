@@ -12,6 +12,8 @@ const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
 
+const ThisOughtToBeAFragment = styled.div``;
+
 class Dropdown extends React.Component {
 	constructor() {
 		super();
@@ -33,12 +35,12 @@ class Dropdown extends React.Component {
 		const { hide } = this.state;
 
 		return (
-			<Fragment>
+			<ThisOughtToBeAFragment>
 				<Button onClick={e => this.handleClick()} {...rest}>{linkText}</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
-			</Fragment>
+			</ThisOughtToBeAFragment>
 		);
 	}
 }
