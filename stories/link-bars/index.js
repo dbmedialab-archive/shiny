@@ -11,6 +11,7 @@ import { FullWidthStory } from './FullWidthStory';
 import { ScrollArrowsStory } from './ScrollArrowsStory';
 import { ScrollArrowsNestedPaddingStory } from './ScrollArrowsNestedPaddingStory';
 import { ScrollArrowsSubLevelStory } from './ScrollArrowsSubLevelStory';
+import { ScrollArrowsGradientBackground } from './ScrollArrowsGradientBackgroundStory';
 import { SkinnedBorderStory } from './SkinnedBorderStory';
 import { StateIndicationStory } from './StateIndicationStory';
 import { LinkStory } from './LinkStory';
@@ -32,6 +33,7 @@ export default () => {
 		.add('ScrollArrowsLinkBar', ScrollArrowsStory)
 		.add('... which should adjust for nested padding', ScrollArrowsNestedPaddingStory)
 		.add('... which is not a top level component', ScrollArrowsSubLevelStory)
+		.add('... which have gradient background', ScrollArrowsGradientBackground)
 		.add('LinkBarLink', LinkStory)
 		.add('... with skinned bottom border', SkinnedBorderStory)
 		.add('... with alt. state indication', StateIndicationStory)
