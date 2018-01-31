@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { FontIcon } from './FontIcon';
 
 const Button = LinkBarLinkBase.withComponent('button').extend`
 	cursor: pointer;
@@ -34,9 +35,14 @@ class Dropdown extends React.Component {
 		} = this.props;
 		const { hide } = this.state;
 
+		const updown = (hide === true) ? 'down' : 'up';
+
 		return (
 			<ThisOughtToBeAFragment>
-				<Button onClick={e => this.handleClick()} {...rest}>{linkText}</Button>
+				<Button onClick={e => this.handleClick()} {...rest}>
+					{`${linkText} `}
+					<FontIcon name={`arrow-alt-${updown}`} />
+				</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
