@@ -31,5 +31,5 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	}
 `;
 
-export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="Arrow-alt-left" /></Arrow>;
-export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="Arrow-alt-right" /></Arrow>;
+export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="arrow-alt-left" /></Arrow>;
+export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="arrow-alt-right" /></Arrow>;
