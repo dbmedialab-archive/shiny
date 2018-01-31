@@ -33,6 +33,10 @@ export default () => (
 			<Col xs={12} md={6}>xs-12 md-6</Col>
 			<Col xs={false} md={6}>xs-false md-6</Col>
 		</Row>
+		<Row>
+			<Col xs={false}>xs-false</Col>
+			<Col xs={false} md={12}>xs-false md-12</Col>
+		</Row>
 
 		<Code language="jsx">
 			{`
@@ -44,6 +48,10 @@ import {
 <Row>
 	<Col xs={12} md={6}>xs-12 md-6</Col>
 	<Col xs={false} md={6}>xs-false md-6</Col>
+</Row>
+<Row>
+	<Col xs={false}>xs-false</Col>
+	<Col xs={false} md={12}>xs-false md-12</Col>
 </Row>
 			`}
 		</Code>

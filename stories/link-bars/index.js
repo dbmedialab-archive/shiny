@@ -17,6 +17,7 @@ import { StateIndicationStory } from './StateIndicationStory';
 import { LinkStory } from './LinkStory';
 import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
+import { HideStory } from './HideStory';
 
 import { DagbladetStory } from './DagbladetStory';
 
@@ -37,5 +38,6 @@ export default () => {
 		.add('... with skinned bottom border', SkinnedBorderStory)
 		.add('... with alt. state indication', StateIndicationStory)
 		.add('LinkBarButton', ButtonStory)
+		.add('Hidden LinkBar elements', HideStory)
 		.add('Dagbladet-like bar', DagbladetStory);
 };

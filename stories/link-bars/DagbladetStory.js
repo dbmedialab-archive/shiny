@@ -42,10 +42,10 @@ const DagbladetStory = () => (
 				background="#d60000"
 				overflow="visible"
 			>
-				<XSmallLinkBarLink style={{ maxWidth: '16.6rem' }}>
+				<XSmallLinkBarLink {...linkProps} style={{ maxWidth: '16.6rem' }}>
 					<DagbladetLogo background="transparent" />
 				</XSmallLinkBarLink>
-				<LargeLinkBarDropdown {...linkProps} linkText="Innhold">
+				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} md>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
@@ -57,8 +57,8 @@ const DagbladetStory = () => (
 						<LinkBarLink {...dropDownLinkProps} linkText="Meninger" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive	/>
-				<LargeLinkBarDropdown {...linkProps} linkText="Pluss">
+				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} md />
+				<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} md>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
@@ -71,7 +71,7 @@ const DagbladetStory = () => (
 						<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice"  url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier">
+				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} md>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
@@ -125,10 +125,10 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 	background="#d60000"
 	overflow="visible"
 >
-	<XSmallLinkBarLink style={{ maxWidth: '16.6rem' }}>
+	<XSmallLinkBarLink {...linkProps} style={{ maxWidth: '16.6rem' }}>
 		<DagbladetLogo background="transparent" />
 	</XSmallLinkBarLink>
-	<LargeLinkBarDropdown {...linkProps} linkText="Innhold">
+	<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} md>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
@@ -140,8 +140,8 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 			<LinkBarLink {...dropDownLinkProps} linkText="Meninger" url="#" />
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
-	<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive	/>
-	<LargeLinkBarDropdown {...linkProps} linkText="Pluss">
+	<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} md />
+	<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} md>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
@@ -154,12 +154,15 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 			<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice"  url="#" />
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
-	<LargeLinkBarDropdown {...linkProps} linkText="Snarveier">
+	<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} md>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
-			<LinkBarLink {...dropDownLinkProps} linkText="FourFourTwo"                 url="#"
+			<LinkBarLink
+				{...dropDownLinkProps}
+				linkText="FourFourTwo"
+				url="#"
 				isActive
 			/>
 			<LinkBarLink {...dropDownLinkProps} linkText="Mat"                         url="#" />
