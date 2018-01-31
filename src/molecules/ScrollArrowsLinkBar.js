@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import {
-	HorizontalOverflowGradient,
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
 	NavWithOptionalConstrainer,
@@ -120,6 +119,8 @@ class ScrollArrowsLinkBar extends Component {
 			width,
 			zIndex,
 			isTopLevelComponent,
+			arrowGradientBackground,
+			arrowGradientHeight,
 			...rest
 		} = this.props;
 
@@ -136,7 +137,12 @@ class ScrollArrowsLinkBar extends Component {
 			>
 				<Container innerRef={(input) => { this.container = input; }}>
 					{shouldDrawLeftArrow &&
-						<LeftScrollArrow onClick={this.leftClick} background={background} />
+						<LeftScrollArrow
+							onClick={this.leftClick}
+							background={background}
+							arrowGradientBackground={arrowGradientBackground}
+							arrowGradientHeight={arrowGradientHeight}
+						/>
 					}
 					<Bar
 						innerRef={(input) => { this.content = input; }}
@@ -152,7 +158,12 @@ class ScrollArrowsLinkBar extends Component {
 						})}
 					</Bar>
 					{shouldDrawRightArrow &&
-						<RightScrollArrow onClick={this.rightClick} background={background} />
+						<RightScrollArrow
+							onClick={this.rightClick}
+							background={background}
+							arrowGradientBackground={arrowGradientBackground}
+							arrowGradientHeight={arrowGradientHeight}
+						/>
 					}
 				</Container>
 			</NavWithOptionalConstrainer>
@@ -178,6 +189,8 @@ ScrollArrowsLinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
+	arrowGradientBackground: PropTypes.string,
+	arrowGradientHeight: PropTypes.string,
 };
 
 ScrollArrowsLinkBar.defaultProps = {
@@ -192,6 +205,8 @@ ScrollArrowsLinkBar.defaultProps = {
 	zIndex: 4,
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
+	arrowGradientBackground: '', // if not given, the parameter 'background' is used
+	arrowGradientHeight: '',
 };
 
 export { ScrollArrowsLinkBar };

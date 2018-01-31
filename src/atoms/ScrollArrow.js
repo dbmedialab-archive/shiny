@@ -13,18 +13,19 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	z-index: 1;
 	background: ${props => props.background};
 
+	/* ::before is used to add gradient shading beside the arrow */
 	&&::before {
 		background:
 			linear-gradient(
 				to ${props => props.pointsTo},
 				transparent -30%,
-				${props => props.background} 100%
+				${props => (props.arrowGradientBackground ? props.arrowGradientBackground : props.background)} 100%
 			);
 		position: absolute;
 		top: 0;
 		${props => (props.pointsTo === 'left' ? css`right: -60%` : css`left: -60%;`)};
 		width: 60%;
-		height: 100%;
+		height: ${props => (props.arrowGradientHeight ? props.arrowGradientHeight : '100%')};
 		cursor: default;
 		content: '';
 	}

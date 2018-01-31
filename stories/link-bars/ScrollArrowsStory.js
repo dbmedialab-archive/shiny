@@ -19,9 +19,7 @@ const ScrollArrowsStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
 		<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
-		<p>
-			It will also scroll by touch.
-		</p>
+		<p>It will also scroll by touch.</p>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
