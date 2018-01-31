@@ -6,7 +6,7 @@ import { DemoContainer } from '../storybook-components';
 
 import {
 	LinkBarLink,
-	XSmallLinkBarLink,
+	SmallLinkBarLink,
 	LargeLinkBarLink,
 	LargeLinkBarDropdown,
 	HorizontalLinkBar,
@@ -42,9 +42,9 @@ const DagbladetStory = () => (
 				background="#d60000"
 				overflow="visible"
 			>
-				<XSmallLinkBarLink {...linkProps} style={{ maxWidth: '16.6rem' }}>
+				<SmallLinkBarLink {...linkProps} isBlockLink style={{ maxWidth: '14.6rem' }}>
 					<DagbladetLogo background="transparent" />
-				</XSmallLinkBarLink>
+				</SmallLinkBarLink>
 				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} md>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
