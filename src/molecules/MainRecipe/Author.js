@@ -14,10 +14,10 @@ const Author = props => (
 			</Col>
 			<Col md={9}>
 				<Row>
-					<Col>{props.authorData.name}</Col>
+					<Col>{props.authorData.Name}</Col>
 				</Row>
 				<Row>
-					<Col>{props.authorData.email}</Col>
+					<Col>{props.authorData.Email}</Col>
 				</Row>
 			</Col>
 		</Row>

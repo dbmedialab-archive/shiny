@@ -16,7 +16,7 @@ const MainRecipe = props => (
 	<Wrapper>
 		<Row>
 			<Col md={7}>
-				<MainRecipeImage src={props.images[0].LargeLandscape || 'https://ih1.redbubble.net/image.202504306.6869/sticker,375x360-bg,ffffff.u2.png'} />
+				<MainRecipeImage src={props.images[0].LargeLandscape} />
 			</Col>
 			<Col md={5}>
 				<ComplexitySection headerTitle={props.title} entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]} />
