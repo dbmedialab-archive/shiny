@@ -9,6 +9,7 @@ const LinkBarItem = styled.li`
 	vertical-align: middle;
 	line-height: 0;
 	margin: 0;
+	flex: ${props => (props.flex)}
 
 	&:last-child {
 		margin-right: calc(2 * ${props => props.theme.variables.horizontalBase});
@@ -44,6 +45,7 @@ LinkBarItem.propTypes = {
 	sm: propTypes.bool,
 	md: propTypes.bool,
 	lg: propTypes.bool,
+	flex: propTypes.string,
 };
 
 LinkBarItem.defaultProps = {
@@ -51,6 +53,7 @@ LinkBarItem.defaultProps = {
 	sm: null,
 	md: null,
 	lg: null,
+	flex: '1 0 auto',
 };
 
 export { LinkBarItem };
