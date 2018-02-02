@@ -18,8 +18,18 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 		background:
 			linear-gradient(
 				to ${props => props.pointsTo},
-				transparent -30%,
-				${props => (props.arrowGradientBackground ? props.arrowGradientBackground : props.background)} 100%
+				${props => (`rgba(
+					${props.arrowGradientRgbBackgroundValues[0] || 255},
+					${props.arrowGradientRgbBackgroundValues[1] || 255},
+					${props.arrowGradientRgbBackgroundValues[2] || 255},
+					.3) 0%,`)
+}
+				${props => (`rgba(
+					${props.arrowGradientRgbBackgroundValues[0] || 255},
+					${props.arrowGradientRgbBackgroundValues[1] || 255},
+					${props.arrowGradientRgbBackgroundValues[2] || 255},
+					1) 70%`)
+}
 			);
 		position: absolute;
 		top: 0;
