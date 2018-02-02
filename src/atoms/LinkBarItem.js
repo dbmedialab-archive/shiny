@@ -10,6 +10,7 @@ const LinkBarItem = styled.li`
 	line-height: 0;
 	margin: 0;
 	flex: ${props => (props.flex)}
+	z-index: 9;
 
 	&:last-child {
 		margin-right: calc(2 * ${props => props.theme.variables.horizontalBase});
