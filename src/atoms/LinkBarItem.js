@@ -9,7 +9,7 @@ const LinkBarItem = styled.li`
 	vertical-align: middle;
 	line-height: 0;
 	margin: 0;
-	flex: ${props => (props.flex)}
+	flex: ${props => (props.flex)};
 	z-index: 9;
 
 	&:last-child {
