@@ -10,7 +10,7 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	${props => (props.pointsTo === 'left' ? css`left: 0` : css`right: 0;`)};
 	font-weight: 800;
 	cursor: pointer;
-	z-index: 1;
+	z-index: 9;
 	background: ${props => props.background};
 
 	/* ::before is used to add gradient shading beside the arrow */
