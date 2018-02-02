@@ -119,7 +119,7 @@ class ScrollArrowsLinkBar extends Component {
 			width,
 			zIndex,
 			isTopLevelComponent,
-			arrowGradientBackground,
+			arrowGradientRgbBackgroundValues,
 			arrowGradientHeight,
 			...rest
 		} = this.props;
@@ -140,7 +140,7 @@ class ScrollArrowsLinkBar extends Component {
 						<LeftScrollArrow
 							onClick={this.leftClick}
 							background={background}
-							arrowGradientBackground={arrowGradientBackground}
+							arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 							arrowGradientHeight={arrowGradientHeight}
 						/>
 					}
@@ -161,7 +161,7 @@ class ScrollArrowsLinkBar extends Component {
 						<RightScrollArrow
 							onClick={this.rightClick}
 							background={background}
-							arrowGradientBackground={arrowGradientBackground}
+							arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 							arrowGradientHeight={arrowGradientHeight}
 						/>
 					}
@@ -189,7 +189,9 @@ ScrollArrowsLinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
-	arrowGradientBackground: PropTypes.string,
+	arrowGradientRgbBackgroundValues: PropTypes.arrayOf([
+		PropTypes.number,
+	]),
 	arrowGradientHeight: PropTypes.string,
 };
 
@@ -205,7 +207,7 @@ ScrollArrowsLinkBar.defaultProps = {
 	zIndex: 4,
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
-	arrowGradientBackground: '', // if not given, the parameter 'background' is used
+	arrowGradientRgbBackgroundValues: [255, 255, 255],
 	arrowGradientHeight: '',
 };
 
