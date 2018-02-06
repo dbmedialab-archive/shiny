@@ -2,9 +2,11 @@ import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-
 
 import { DagbladetStory } from './DagbladetStory';
 import { ShinyStory } from './ShinyStory';
+import { MatStory } from './MatStory';
 
 export default () => {
 	storiesOf('Logos', module)
 		.add('ShinyLogo', ShinyStory)
-		.add('DagbladetLogo', DagbladetStory);
+		.add('DagbladetLogo', DagbladetStory)
+		.add('MatLogo', MatStory);
 };
