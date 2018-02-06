@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { EasyDifficulty } from './EasyDifficulty';
 import { MediumDifficulty } from './MediumDifficulty';
 import { HighDifficulty } from './HighDifficulty';
-import PropTypes from 'prop-types';
 
 class Difficulty extends React.Component {
 	static getIcon(level) {

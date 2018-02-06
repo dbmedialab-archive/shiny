@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Logo } from '../../atoms/MatHeader/Logo';
 
+/* eslint-disable max-len */
 export default () => (
 	<Logo>
 		<polygon id="Fill-1" fill="#FF790A" points="0 0 0 135 0.001 135 31.251 122.753 62.501 110.505 93.751 122.753 125 135 125 0" />
@@ -19,3 +20,4 @@ export default () => (
 		</g>
 	</Logo>
 );
+/* eslint-enable max-len */
