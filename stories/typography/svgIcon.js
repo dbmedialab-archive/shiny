@@ -7,7 +7,12 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { ActivityTime } from '../../src/atoms/SvgIcon';
+import { 
+	ActivityTime,
+	EasyDifficulty,
+	MediumDifficulty,
+	HighDifficulty,
+ } from '../../src/atoms/SvgIcon';
 
 export default () => (
 	<section>
@@ -53,8 +58,20 @@ import { ActivityTime } from '@aller/shiny';
 
 		<Row>
 				<Col xs={2}>
+					<EasyDifficulty />
+					<div>EasyDifficulty</div>
+				</Col>
+				<Col xs={2}>
+					<MediumDifficulty />
+					<div>MediumDifficulty</div>
+				</Col>
+				<Col xs={2}>
+					<HighDifficulty />
+					<div>HighDifficulty</div>
+				</Col>
+				<Col xs={2}>
 					<ActivityTime />
-					<div>a</div>
+					<div>ActivityTime</div>
 				</Col>
 		</Row>
 	</section>

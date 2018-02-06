@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from "prop-types";
 import SvgIconWrapper from './SvgIconWrapper';
 
 const EasyDifficulty = props => (
@@ -20,4 +19,4 @@ const EasyDifficulty = props => (
 	</SvgIconWrapper>
 );
 
-export default  EasyDifficulty;
+export {EasyDifficulty};

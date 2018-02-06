@@ -1,9 +1,10 @@
 import React from 'react';
+import SvgIconWrapper from './SvgIconWrapper';
 
-import { MatIconWrapper } from '../../atoms/MatIconWrapper';
 
-const Fish = () => (
-	<MatIconWrapper>
+
+const Fish = props => (
+	<SvgIconWrapper size={props.size}>
 		<svg width="100%" height="100%" viewBox="-7 0 50 30" >
 			<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<g id="info/allergi/fisk" fill="#000000">
@@ -11,8 +12,7 @@ const Fish = () => (
 				</g>
 			</g>
 		</svg>
-		<span>Fisk</span>
-	</MatIconWrapper>
+	</SvgIconWrapper>
 );
 
-export { Fish };
+export {Fish};

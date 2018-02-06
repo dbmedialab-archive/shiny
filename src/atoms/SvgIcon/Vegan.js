@@ -1,10 +1,10 @@
 import React from 'react';
+import SvgIconWrapper from './SvgIconWrapper';
 
-import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 
-const Vegan = () => (
-	<MatIconWrapper>
+
+const Vegan = props => (
+	<SvgIconWrapper size={props.size}>
 		<svg width="100%" height="100%" viewBox="-7 0 50 30" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/preferanse/vegan" fill="#333333">
@@ -15,8 +15,7 @@ const Vegan = () => (
 				</g>
 			</g>
 		</svg>
-		<span>Vegan</span>
-	</MatIconWrapper>
+	</SvgIconWrapper>
 );
 
-export { Vegan };
+export {Vegan};

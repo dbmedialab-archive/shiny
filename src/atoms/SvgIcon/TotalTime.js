@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import SvgIconWrapper from './SvgIconWrapper';
 
-import { getTimeFromMins } from '../../utils/helpers';
-import { MatIconWrapper  } from '../../atoms/MatIconWrapper';
+
 
 const TotalTime = props => (
-	<MatIconWrapper>
+	<SvgIconWrapper size={props.size}>
 		<svg width="100%" height="100%" viewBox="-1 -10 50 50">
 			<g fill="none" fillRule="evenodd">
 				<g id="time-total" fill="#333333">
@@ -16,17 +15,7 @@ const TotalTime = props => (
 				</g>
 			</g>
 		</svg>
-		<div>totalt</div>
-		<div>{ getTimeFromMins(props.value) }</div>
-	</MatIconWrapper>
+	</SvgIconWrapper>
 );
 
-TotalTime.defaultProps = {
-	value: 0,
-};
-
-TotalTime.propTypes = {
-	value: PropTypes.number,
-};
-
-export { TotalTime };
+export {TotalTime};

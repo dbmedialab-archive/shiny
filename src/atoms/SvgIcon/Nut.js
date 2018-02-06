@@ -1,10 +1,10 @@
 import React from 'react';
+import SvgIconWrapper from './SvgIconWrapper';
 
-import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 
-const Nut = () => (
-	<MatIconWrapper>
+
+const Nut = props => (
+	<SvgIconWrapper size={props.size}>
 		<svg width="100%" height="100%" viewBox="-7 0 50 29" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/allergi/nøtter" fill="#333333">
@@ -12,8 +12,7 @@ const Nut = () => (
 				</g>
 			</g>
 		</svg>
-		<span>Nøtter</span>
-	</MatIconWrapper>
+	</SvgIconWrapper>
 );
 
-export { Nut };
+export {Nut};

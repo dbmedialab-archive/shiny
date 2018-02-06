@@ -1,10 +1,10 @@
 import React from 'react';
+import SvgIconWrapper from './SvgIconWrapper';
 
-import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 
-const Pork = () => (
-	<MatIconWrapper>
+
+const Pork = props => (
+	<SvgIconWrapper size={props.size}>
 		<svg width="100%" height="100%" viewBox="-9 0 50 30" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/preferanse/pork" fill="#333333">
@@ -12,8 +12,7 @@ const Pork = () => (
 				</g>
 			</g>
 		</svg>
-		<span>Uten Svin</span>
-	</MatIconWrapper>
+	</SvgIconWrapper>
 );
 
-export { Pork };
+export {Pork};

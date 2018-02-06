@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Styled, { css } from 'styled-components';
 import SvgIconWrapper from './SvgIconWrapper';
 
 
@@ -20,4 +18,4 @@ const ActivityTime = props => (
 	</SvgIconWrapper>
 );
 
-export default  ActivityTime;
+export {ActivityTime};
