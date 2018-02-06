@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { FontIcon } from './FontIcon';
 
 const Button = LinkBarLinkBase.withComponent('button').extend`
 	cursor: pointer;
@@ -11,6 +12,8 @@ const Button = LinkBarLinkBase.withComponent('button').extend`
 const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
+
+const ThisOughtToBeAFragment = styled.div``;
 
 class Dropdown extends React.Component {
 	constructor() {
@@ -32,13 +35,18 @@ class Dropdown extends React.Component {
 		} = this.props;
 		const { hide } = this.state;
 
+		const updown = (hide === true) ? 'down' : 'up';
+
 		return (
-			<Fragment>
-				<Button onClick={e => this.handleClick()} {...rest}>{linkText}</Button>
+			<ThisOughtToBeAFragment>
+				<Button onClick={e => this.handleClick()} {...rest}>
+					{`${linkText} `}
+					<FontIcon name={`arrow-alt-${updown}`} />
+				</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
-			</Fragment>
+			</ThisOughtToBeAFragment>
 		);
 	}
 }
@@ -56,4 +64,7 @@ Dropdown.propTypes = {
 const LinkBarDropdown = styled(Dropdown)``;
 LinkBarDropdown.displayName = 'LinkBarDropdown';
 
+export const XSmallLinkBarDropdown = props => <LinkBarDropdown size="xsmall" {...props} />;
+export const SmallLinkBarDropdown = props => <LinkBarDropdown size="small" {...props} />;
 export { LinkBarDropdown };
+export const LargeLinkBarDropdown = props => <LinkBarDropdown size="large" {...props} />;

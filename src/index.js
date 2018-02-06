@@ -2,6 +2,14 @@
 export { themes                  } from './themes';
 
 // Atoms
+export {
+	Heading,
+	SmallHeading,
+	MediumHeading,
+	LargeHeading,
+	XLargeHeading,
+	HugeHeading,
+}                                  from './atoms/Heading';
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
@@ -18,6 +26,7 @@ export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { Dropdown                } from './atoms/Dropdown';
 export { Figure                  } from './atoms/Figure';
+export { FontIcon                } from './atoms/FontIcon';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
 export { Header                  } from './atoms/Header';
@@ -40,15 +49,25 @@ export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
 export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
 export { LinkBarNav              } from './atoms/LinkBarNav';
 export { LinkBarItem             } from './atoms/LinkBarItem';
+export { XSmallLinkBarLink       } from './atoms/LinkBarLink';
+export { SmallLinkBarLink        } from './atoms/LinkBarLink';
 export { LinkBarLink             } from './atoms/LinkBarLink';
+export { LargeLinkBarLink        } from './atoms/LinkBarLink';
 export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
 export { LinkBarButton           } from './atoms/LinkBarButton';
-export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
 export { SmallLinkBarButton      } from './atoms/LinkBarButton';
+export { XSmallLinkBarButton     } from './atoms/LinkBarButton';
+export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
+export { XSmallLinkBarDropdown   } from './atoms/LinkBarDropdown';
+export { SmallLinkBarDropdown    } from './atoms/LinkBarDropdown';
+export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
+export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
+export { ShinyLogo               } from './atoms/ShinyLogo';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
