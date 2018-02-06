@@ -2,7 +2,7 @@ import React from 'react';
 
 import { MatIconWrapper } from '../../atoms/MatIconWrapper';
 import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
-
+/* eslint-disable max-len */
 const Pork = () => (
 	<MatIconWrapper>
 		<svg width="100%" height="100%" viewBox="-9 0 50 30" >
@@ -15,5 +15,5 @@ const Pork = () => (
 		<span>Uten Svin</span>
 	</MatIconWrapper>
 );
-
+/* eslint-enable max-len */
 export { Pork };

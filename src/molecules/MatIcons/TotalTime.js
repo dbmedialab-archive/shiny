@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { getTimeFromMins } from '../../utils/helpers';
 import { MatIconWrapper  } from '../../atoms/MatIconWrapper';
-
+/* eslint-disable max-len */
 const TotalTime = props => (
 	<MatIconWrapper>
 		<svg width="100%" height="100%" viewBox="-1 -10 50 50">
@@ -20,7 +20,7 @@ const TotalTime = props => (
 		<div>{ getTimeFromMins(props.value) }</div>
 	</MatIconWrapper>
 );
-
+/* eslint-enable max-len */
 TotalTime.defaultProps = {
 	value: 0,
 };

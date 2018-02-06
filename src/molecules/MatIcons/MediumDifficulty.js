@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-
+/* eslint-disable max-len */
 const MediumDifficulty = () => (
 	<MatIconWrapper>
 		<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -17,5 +17,5 @@ const MediumDifficulty = () => (
 		</g>
 	</MatIconWrapper>
 );
-
+/* eslint-enable max-len */
 export { MediumDifficulty };

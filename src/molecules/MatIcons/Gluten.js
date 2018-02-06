@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-
+/* eslint-disable max-len */
 const Gluten = () => (
 	<MatIconWrapper>
 		<svg width="100%" height="100%" viewBox="-7 0 50 30" >
@@ -14,5 +14,5 @@ const Gluten = () => (
 		<span>Gluten</span>
 	</MatIconWrapper>
 );
-
+/* eslint-enable max-len */
 export { Gluten };
