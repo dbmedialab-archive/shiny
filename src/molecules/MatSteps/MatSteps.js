@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
-import { Icon } from '../../atoms/Icon';
+import { FontIcon as Icon }  from '../../atoms/FontIcon';
 import {
 	Quantity,
 	AddCart,
@@ -12,7 +12,7 @@ import {
 	Buttons,
 } from '../../atoms/MainRecipe/StepsSection';
 
-export const MatSteps = props => {
+export const MatSteps = (props) => {
 	let steps = this.props.steps || [];
 	let ingredients = this.props.ingredients || [];
 
