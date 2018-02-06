@@ -5,6 +5,7 @@ import SvgIconWrapper from './SvgIconWrapper';
 
 const Pork = props => (
 	<SvgIconWrapper size={props.size}>
+		{/* eslint-disable max-len */}
 		<svg width="100%" height="100%" viewBox="-9 -10 50 50" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/preferanse/pork" fill="#333333">
@@ -12,6 +13,7 @@ const Pork = props => (
 				</g>
 			</g>
 		</svg>
+		{/* eslint-enable max-len */}
 	</SvgIconWrapper>
 );
 

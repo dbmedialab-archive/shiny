@@ -5,6 +5,7 @@ import SvgIconWrapper from './SvgIconWrapper';
 
 const Fish = props => (
 	<SvgIconWrapper size={props.size}>
+		{/* eslint-disable max-len */}
 		<svg width="100%" height="100%" viewBox="-7 -10 50 50" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/allergi/fisk" fill="#000000">
@@ -12,6 +13,7 @@ const Fish = props => (
 				</g>
 			</g>
 		</svg>
+		{/* eslint-enable max-len */}
 	</SvgIconWrapper>
 );
 
