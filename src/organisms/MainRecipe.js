@@ -11,7 +11,7 @@ import { ComplexitySection  } from '../molecules/MainRecipe/ComplexitySection';
 import { IngredientsSection } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection       } from '../molecules/MainRecipe/StepsSection';
 import { AdTags             } from './adTags';
-import Related from '../molecules/MatRelated/MatRelated';
+import { Related } from '../molecules/MatRelated/MatRelated';
 
 const MainRecipe = props => (
 	<Wrapper>
