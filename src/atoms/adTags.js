@@ -1,8 +1,4 @@
-import styled, { css } from 'styled-components';
-
-const global = css`
-
-`;
+import styled from 'styled-components';
 
 const Line = styled.span`
 	display: inline-block;
@@ -23,13 +19,24 @@ const LineShort = styled.span`
 `;
 
 const Tags = styled.div`
+	width: 550px;
 	& p {
 		display: inline-block;
-		margin-left: 40px;
+		margin-left: 30px;
 		font-size: 16px;
+	}
+	& p:nth-child(7n+1) {
+		margin-left: 5px;
+	}
+`;
+
+const Social = styled.div`
+	& span {
+		display: inline-block;
+		border-radius: 50%;
 	}
 `;
 
 export {
-	Line, LineShort, Tags
+	Line, LineShort, Tags, Social
 };

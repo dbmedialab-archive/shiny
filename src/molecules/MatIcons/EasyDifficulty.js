@@ -1,11 +1,10 @@
 import React from 'react';
 
 import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
 
 const EasyDifficulty = () => (
 	<MatIconWrapper>
-		<svg>
+		<svg width="100%" height="100%" viewBox="-10 -20 50 50">
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="nivå-stor/enkel">
 					<g id="nivå" transform="translate(12.500000, 11.000000) scale(-1, 1) translate(-12.500000, -11.000000) ">
@@ -18,7 +17,8 @@ const EasyDifficulty = () => (
 				</g>
 			</g>
 		</svg>
-		<span>title</span>
+		<div>nivå</div>
+		<div>avansert</div>
 	</MatIconWrapper>
 );
 

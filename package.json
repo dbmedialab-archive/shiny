@@ -37,6 +37,7 @@
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "react-stars": "^2.2.5",
     "react-styled-flexboxgrid": "2.1.1",
     "styled-components": "3.0.2"
   },

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { MatIconImage } from '../../atoms/MatIconImageWrapper';
+import { MatIconWrapper } from '../../atoms/MatIconWrapper';
 
 const MediumDifficulty = () => (
-	<MatIconImage>
+	<MatIconWrapper>
 		<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="nivå-stor/middels">
 				<g id="nivå" transform="translate(12.500000, 11.000000) scale(-1, 1) translate(-12.500000, -11.000000) ">
@@ -15,7 +15,7 @@ const MediumDifficulty = () => (
 				</g>
 			</g>
 		</g>
-	</MatIconImage>
+	</MatIconWrapper>
 );
 
 export { MediumDifficulty };
