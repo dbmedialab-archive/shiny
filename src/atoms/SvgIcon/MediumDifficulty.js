@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
 
@@ -19,4 +20,11 @@ const MediumDifficulty = props => (
 	</SvgIconWrapper>
 );
 
-export {MediumDifficulty};
+MediumDifficulty.propTypes = {
+	size: PropTypes.number,
+};
+MediumDifficulty.defaultProps = {
+	size: 5,
+};
+
+export { MediumDifficulty };

@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
-
 
 
 const Vegan = props => (
@@ -18,4 +18,11 @@ const Vegan = props => (
 	</SvgIconWrapper>
 );
 
-export {Vegan};
+Vegan.propTypes = {
+	size: PropTypes.number,
+};
+Vegan.defaultProps = {
+	size: 5,
+};
+
+export { Vegan };

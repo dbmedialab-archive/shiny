@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
-
 
 
 const TotalTime = props => (
@@ -18,4 +18,11 @@ const TotalTime = props => (
 	</SvgIconWrapper>
 );
 
-export {TotalTime};
+TotalTime.propTypes = {
+	size: PropTypes.number,
+};
+TotalTime.defaultProps = {
+	size: 5,
+};
+
+export { TotalTime };

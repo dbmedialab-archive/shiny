@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
-
 
 
 const Gluten = props => (
@@ -15,4 +15,11 @@ const Gluten = props => (
 	</SvgIconWrapper>
 );
 
-export {Gluten};
+Gluten.propTypes = {
+	size: PropTypes.number,
+};
+Gluten.defaultProps = {
+	size: 5,
+};
+
+export { Gluten };

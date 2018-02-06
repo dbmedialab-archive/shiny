@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
-
 
 
 const Nut = props => (
@@ -15,4 +15,11 @@ const Nut = props => (
 	</SvgIconWrapper>
 );
 
-export {Nut};
+Nut.propTypes = {
+	size: PropTypes.number,
+};
+Nut.defaultProps = {
+	size: 5,
+};
+
+export { Nut };

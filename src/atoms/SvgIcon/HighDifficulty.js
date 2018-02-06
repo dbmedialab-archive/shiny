@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import SvgIconWrapper from './SvgIconWrapper';
 
@@ -19,4 +20,11 @@ const HighDifficulty = props => (
 	</SvgIconWrapper>
 );
 
-export {HighDifficulty};
+HighDifficulty.propTypes = {
+	size: PropTypes.number,
+};
+HighDifficulty.defaultProps = {
+	size: 5,
+};
+
+export { HighDifficulty };
