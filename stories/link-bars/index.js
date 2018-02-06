@@ -18,6 +18,7 @@ import { LinkStory } from './LinkStory';
 import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
 import { HideStory } from './HideStory';
+import { MatStory } from './MatStory';
 
 import { DagbladetStory } from './DagbladetStory';
 
@@ -39,5 +40,6 @@ export default () => {
 		.add('... with alt. state indication', StateIndicationStory)
 		.add('LinkBarButton', ButtonStory)
 		.add('Hidden LinkBar elements', HideStory)
-		.add('Dagbladet-like bar', DagbladetStory);
+		.add('Dagbladet-like bar', DagbladetStory)
+		.add('MatStory link bar', MatStory);
 };
