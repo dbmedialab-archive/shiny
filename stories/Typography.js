@@ -8,6 +8,7 @@ import bodyText from './typography/bodyText';
 import lunchButton from './typography/lunch-button';
 import dice from './typography/dice';
 import icon from './typography/icon';
+import underlinedHeading from './typography/underlined-heading';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -17,6 +18,7 @@ export default () => {
 	storiesOf('Typography', module)
 		.add('Label', label)
 		.add('Heading', heading)
+		.add('Underlined Heading', underlinedHeading)
 		.add('Cite', cite)
 		.add('Published date', publishedDate)
 		.add('Body text', bodyText)

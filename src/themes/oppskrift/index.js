@@ -12,7 +12,7 @@ const global = css`
 		text-align: left;
 		letter-spacing: normal;
 		font-family: ${variables.mainFont};
-		font-size: 18px;
+		font-size: 10px;
 		font-weight: 600;
 		font-style: normal;
 		line-height: 1.22;
