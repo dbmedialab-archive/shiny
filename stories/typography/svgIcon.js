@@ -12,7 +12,17 @@ import {
 	EasyDifficulty,
 	MediumDifficulty,
 	HighDifficulty,
+	Nut,
+	Fish,
+	Gluten,
+	Pork,
+	TotalTime,
+	Vegan,
+	Vegetarian,
  } from '../../src/atoms/SvgIcon';
+
+
+
 
 export default () => (
 	<section>
@@ -72,6 +82,34 @@ import { ActivityTime } from '@aller/shiny';
 				<Col xs={2}>
 					<ActivityTime />
 					<div>ActivityTime</div>
+				</Col>
+				<Col xs={2}>
+					<Nut />
+					<div>Nut</div>
+				</Col>
+				<Col xs={2}>
+					<Fish />
+					<div>Fish</div>
+				</Col>
+				<Col xs={2}>
+					<Gluten />
+					<div>Gluten</div>
+				</Col>
+				<Col xs={2}>
+					<Pork />
+					<div>Pork</div>
+				</Col>
+				<Col xs={2}>
+					<TotalTime />
+					<div>TotalTime</div>
+				</Col>
+				<Col xs={2}>
+					<Vegan />
+					<div>Vegan</div>
+				</Col>
+				<Col xs={2}>
+					<Vegetarian />
+					<div>Vegetarian</div>
 				</Col>
 		</Row>
 	</section>

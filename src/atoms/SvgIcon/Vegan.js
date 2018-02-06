@@ -5,7 +5,7 @@ import SvgIconWrapper from './SvgIconWrapper';
 
 const Vegan = props => (
 	<SvgIconWrapper size={props.size}>
-		<svg width="100%" height="100%" viewBox="-7 0 50 30" >
+		<svg width="100%" height="100%" viewBox="-7 -10 50 50" >
 			<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="info/preferanse/vegan" fill="#333333">
 					<g id="Page-1" transform="translate(4.000000, 5.000000)">
