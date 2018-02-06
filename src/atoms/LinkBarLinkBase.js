@@ -1,5 +1,14 @@
 import styled, { css } from 'styled-components';
 
+const getTextColor = ({
+	theme, isActive, activeTextColor, textColor,
+}) =>
+	(theme.colors[
+		(isActive && activeTextColor) ?
+			activeTextColor :
+			textColor
+	]);
+
 export const LinkBarLinkBase = styled.a`
 	display: inline-block;
 
@@ -26,7 +35,7 @@ export const LinkBarLinkBase = styled.a`
 	border: 0;
 	outline: none;
 	text-decoration: none;
-	color: ${props => (props.isActive ? props.theme.colors[props.activeTextColor] : props.theme.colors[props.textColor])};
+	color: ${getTextColor};
 	font-size: ${props => props.theme.variables.uiRegularSize};
 	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
@@ -39,7 +48,7 @@ export const LinkBarLinkBase = styled.a`
 
 	&:hover {
 		background: ${props => (props.activeBackground)};
-		color: ${props => props.theme.colors[props.activeTextColor]};
+		color: ${props => props.theme.colors[props.activeTextColor || props.textColor]};
 	}
 
 	&:focus {
@@ -105,6 +114,5 @@ export const LinkBarLinkBase = styled.a`
 }
 	`;
 LinkBarLinkBase.defaultProps = {
-	activeTextColor: 'type',
 	textColor: 'type',
 };
