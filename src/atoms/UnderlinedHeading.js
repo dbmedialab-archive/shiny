@@ -11,6 +11,7 @@ import {
 
 const CenteredContent = styled.div`
 text-align: center;
+display: inline-block;
 `;
 
 const StyledLine = styled.div`

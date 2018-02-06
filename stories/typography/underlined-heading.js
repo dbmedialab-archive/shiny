@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
+import { Row } from '../../src/atoms/Row';
+import { Col } from '../../src/atoms/Col';
 
 import { Code } from '../../src/atoms/Code';
 import { HugeHeading, Heading } from '../../src/atoms/Heading';
@@ -30,12 +32,36 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<UnderlinedHeading>This is the default underlined heading</UnderlinedHeading>
-			<UnderlinedSmallHeading>This is a small underlined heading</UnderlinedSmallHeading>
-			<UnderlinedMediumHeading>This is a medium underlined heading</UnderlinedMediumHeading>
-			<UnderlinedLargeHeading>This is a large underlined heading (default)</UnderlinedLargeHeading>
-			<UnderlinedXLargeHeading>This is an X large underlined heading</UnderlinedXLargeHeading>
-			<UnderlinedHugeHeading>This is a huge underlined heading</UnderlinedHugeHeading>
+			<Row>
+				<Col>
+					<UnderlinedHeading>This is the default underlined heading</UnderlinedHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedSmallHeading>This is a small underlined heading</UnderlinedSmallHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedMediumHeading>This is a medium underlined heading</UnderlinedMediumHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedLargeHeading>This is a large underlined heading (default)</UnderlinedLargeHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedXLargeHeading>This is an X large underlined heading</UnderlinedXLargeHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedHugeHeading>This is a huge underlined heading</UnderlinedHugeHeading>
+				</Col>
+			</Row>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
