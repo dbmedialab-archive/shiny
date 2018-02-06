@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { MatIconWrapper } from '../../atoms/MatIconWrapper';
-import { MatIconImageWrapper } from '../../atoms/MatIconImageWrapper';
+
 /* eslint-disable max-len */
 const Nut = () => (
 	<MatIconWrapper>
