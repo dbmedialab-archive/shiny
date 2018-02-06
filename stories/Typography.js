@@ -8,6 +8,7 @@ import bodyText from './typography/bodyText';
 import lunchButton from './typography/lunch-button';
 import dice from './typography/dice';
 import icon from './typography/icon';
+import svgIcon from './typography/svgIcon';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -22,5 +23,6 @@ export default () => {
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
 		.add('Dice', dice)
-		.add('Icon', icon);
+		.add('Font Icon', icon)
+		.add('Svg Icon', svgIcon);
 };
