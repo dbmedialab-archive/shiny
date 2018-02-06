@@ -29,7 +29,6 @@ export default () => (
 			<li>Huge</li>
 		</ul>
 		<p>The font-sizes will increase on large screens.</p>
-
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Row>
