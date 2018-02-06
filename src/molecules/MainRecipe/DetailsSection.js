@@ -12,7 +12,9 @@ import { StarsRating } from '../../atoms/StarsRating';
 
 class DetailsSection extends React.Component {
 	render() {
-		const { allergies, preferences, author, rating } = this.props;
+		const {
+			allergies, preferences, author, rating,
+		} = this.props;
 		return (
 			<DetailsSectionWrapper>
 				<Row>

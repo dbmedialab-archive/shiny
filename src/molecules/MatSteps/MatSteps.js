@@ -4,47 +4,47 @@ import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
 import { Icon } from '../../atoms/Icon';
 import {
-		Quantity,
-		AddCart,
-		RecipeSteps,
-		Pers,
-		Counter,
-		Buttons
-	} from "../../atoms/MainRecipe/StepsSection";
+	Quantity,
+	AddCart,
+	RecipeSteps,
+	Pers,
+	Counter,
+	Buttons,
+} from '../../atoms/MainRecipe/StepsSection';
 
 export default class MatSteps extends React.Component {
 	render() {
 		let steps = this.props.steps || [];
 		let ingredients = this.props.ingredients || [];
 
-		steps = steps.map( (item, index) => {
+		steps = steps.map((item, index) => {
 			return (
 				<li key={index} > {item.description.replace(/<\/?[^>]+>/g, '')} </li>
 			);
 		});
-		ingredients = ingredients.map( (item, index) => {
+		ingredients = ingredients.map((item, index) => {
 			return (
-				<li key={index}> {item.pivot.amount + " " + item.pivot.type} <span key={index}>{item.title}</span></li>
+				<li key={index}> {`${item.pivot.amount} ${item.pivot.type}`} <span key={index}>{item.title}</span></li>
 			);
-		} );
+		});
 
-		return(
+		return (
 			<section>
 				<Row>
 					<Col xs={6}>
 						<h1>DETTE TRENGER DU</h1>
 						<Buttons>
-					<span>
-						<Icon name="Remove" size={2.2} />
-					</span>
+							<span>
+								<Icon name="Remove" size={2.2} />
+							</span>
 						</Buttons>
 						<Counter>
 							<span>10</span>
 						</Counter>
 						<Buttons>
-					<span>
-						<Icon name="Add" size={2.2} />
-					</span>
+							<span>
+								<Icon name="Add" size={2.2} />
+							</span>
 						</Buttons>
 						<Pers>
 							<span>PERSONER</span>

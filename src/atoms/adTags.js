@@ -38,5 +38,5 @@ const Social = styled.div`
 `;
 
 export {
-	Line, LineShort, Tags, Social
+	Line, LineShort, Tags, Social,
 };

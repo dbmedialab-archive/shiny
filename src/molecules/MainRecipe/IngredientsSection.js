@@ -8,7 +8,7 @@ import { Buttons, Counter, Pers, Quantity, AddCart } from '../../atoms/MainRecip
 class IngredientsSection extends React.Component {
 	constructor(props) {
 		super(props);
-		
+
 		this.state = {
 			servings: props.servings || 0,
 			ingredients: props.ingredients || [],
@@ -62,7 +62,7 @@ class IngredientsSection extends React.Component {
 	decrementServings() {
 		const servings = this.state.servings > 0 ? --this.state.servings : 0;
 		this.setState({
-			servings: servings,
+			servings,
 		});
 	}
 

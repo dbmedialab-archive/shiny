@@ -24,7 +24,7 @@ const MainRecipe = props => (
 		</Row>
 		<Row>
 			<Col md={6}>
-				<DetailsSection preferences={props.preferences} allergies={props.allergies} author={props.authors[0]} raiting={props.rating}/>
+				<DetailsSection preferences={props.preferences} allergies={props.allergies} author={props.authors[0]} raiting={props.rating} />
 			</Col>
 			<Col md={6}>
 				<Description>
@@ -41,7 +41,7 @@ const MainRecipe = props => (
 			</Col>
 		</Row>
 		<AdTags tags={props.tags} />
-		<Related entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]}  headerTitle={props.title}/>
+		<Related entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]}  headerTitle={props.title} />
 	</Wrapper>
 );
 

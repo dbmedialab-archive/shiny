@@ -21,4 +21,4 @@ const FooterMat = styled.div`
 `;
 
 
-export { FooterMat, };
+export { FooterMat };
