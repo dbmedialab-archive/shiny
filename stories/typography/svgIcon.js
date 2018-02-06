@@ -7,7 +7,7 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { 
+import {
 	ActivityTime,
 	EasyDifficulty,
 	MediumDifficulty,
@@ -19,9 +19,7 @@ import {
 	TotalTime,
 	Vegan,
 	Vegetarian,
- } from '../../src/atoms/SvgIcon';
-
-
+} from '../../src/atoms/SvgIcon';
 
 
 export default () => (
@@ -67,50 +65,50 @@ import { ActivityTime } from '@aller/shiny';
 		</Row>
 
 		<Row>
-				<Col xs={2}>
-					<EasyDifficulty />
-					<div>EasyDifficulty</div>
-				</Col>
-				<Col xs={2}>
-					<MediumDifficulty />
-					<div>MediumDifficulty</div>
-				</Col>
-				<Col xs={2}>
-					<HighDifficulty />
-					<div>HighDifficulty</div>
-				</Col>
-				<Col xs={2}>
-					<ActivityTime />
-					<div>ActivityTime</div>
-				</Col>
-				<Col xs={2}>
-					<Nut />
-					<div>Nut</div>
-				</Col>
-				<Col xs={2}>
-					<Fish />
-					<div>Fish</div>
-				</Col>
-				<Col xs={2}>
-					<Gluten />
-					<div>Gluten</div>
-				</Col>
-				<Col xs={2}>
-					<Pork />
-					<div>Pork</div>
-				</Col>
-				<Col xs={2}>
-					<TotalTime />
-					<div>TotalTime</div>
-				</Col>
-				<Col xs={2}>
-					<Vegan />
-					<div>Vegan</div>
-				</Col>
-				<Col xs={2}>
-					<Vegetarian />
-					<div>Vegetarian</div>
-				</Col>
+			<Col xs={2}>
+				<EasyDifficulty />
+				<div>EasyDifficulty</div>
+			</Col>
+			<Col xs={2}>
+				<MediumDifficulty />
+				<div>MediumDifficulty</div>
+			</Col>
+			<Col xs={2}>
+				<HighDifficulty />
+				<div>HighDifficulty</div>
+			</Col>
+			<Col xs={2}>
+				<ActivityTime />
+				<div>ActivityTime</div>
+			</Col>
+			<Col xs={2}>
+				<Nut />
+				<div>Nut</div>
+			</Col>
+			<Col xs={2}>
+				<Fish />
+				<div>Fish</div>
+			</Col>
+			<Col xs={2}>
+				<Gluten />
+				<div>Gluten</div>
+			</Col>
+			<Col xs={2}>
+				<Pork />
+				<div>Pork</div>
+			</Col>
+			<Col xs={2}>
+				<TotalTime />
+				<div>TotalTime</div>
+			</Col>
+			<Col xs={2}>
+				<Vegan />
+				<div>Vegan</div>
+			</Col>
+			<Col xs={2}>
+				<Vegetarian />
+				<div>Vegetarian</div>
+			</Col>
 		</Row>
 	</section>
 );
