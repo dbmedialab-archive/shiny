@@ -5,7 +5,8 @@ import { DemoContainer } from '../storybook-components';
 import { Code } from '../../src/atoms/Code';
 import { HugeHeading, Heading } from '../../src/atoms/Heading';
 // Typography
-import { UnderlinedHeading,
+import {
+	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
 	UnderlinedLargeHeading,
@@ -29,6 +30,7 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
+			<UnderlinedHeading>This is the default underlined heading</UnderlinedHeading>
 			<UnderlinedSmallHeading>This is a small underlined heading</UnderlinedSmallHeading>
 			<UnderlinedMediumHeading>This is a medium underlined heading</UnderlinedMediumHeading>
 			<UnderlinedLargeHeading>This is a large underlined heading (default)</UnderlinedLargeHeading>
