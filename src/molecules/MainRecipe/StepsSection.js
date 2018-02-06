@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import { RecipeSteps } from '../../atoms/MainRecipe/StepsSection';
 
@@ -21,5 +22,12 @@ class StepsSection extends React.Component {
 		);
 	}
 }
+
+StepsSection.propTypes = {
+	steps: propTypes.array, // eslint-disable-line react/forbid-prop-types
+};
+StepsSection.defaultProps = {
+	steps: [],
+};
 
 export { StepsSection };
