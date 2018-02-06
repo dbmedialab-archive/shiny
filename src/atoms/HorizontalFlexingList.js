@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 // Originally written for the HorizontalLinkBar molecule
 const HorizontalFlexingList = styled.ul`
+	box-sizing: border-box;
 	${props => (props.shouldFlexChildren
 		? `
 			display: flex;
