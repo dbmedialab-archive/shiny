@@ -1,67 +1,97 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
-import {Heading,
-		SmallHeading,
-		MediumHeading,
-		LargeHeading,
-		XLargeHeading,
-		HugeHeading,
+import {
+	SmallHeading,
+	MediumHeading,
+	LargeHeading,
+	XLargeHeading,
+	HugeHeading,
 } from './Heading';
 
 const CenteredContent = styled.div`
 text-align: center;
-`
+`;
 
 const StyledLine = styled.div`
 width: 80%;
 border-bottom: 1px solid ${props => props.theme.colors.primary};
 margin-left: auto;
 margin-right: auto;
-`
+`;
 const ThickStyledLine = StyledLine.extend`
 border-width: 2px;
-`
+`;
 
-const UnderlinedHeading = ({children}) => (
-	<CenteredContent>
-		<Heading>{children}</Heading>
-		<StyledLine/>
-	</CenteredContent>
-);
-
-const UnderlinedSmallHeading = ({children}) => (
+const UnderlinedSmallHeading = ({ children }) => (
 	<CenteredContent>
 		<SmallHeading>{children}</SmallHeading>
-		<StyledLine/>
+		<StyledLine />
 	</CenteredContent>
 );
 
-const UnderlinedMediumHeading = ({children}) => (
+const UnderlinedMediumHeading = ({ children }) => (
 	<CenteredContent>
 		<MediumHeading>{children}</MediumHeading>
-		<StyledLine/>
+		<StyledLine />
 	</CenteredContent>
 );
 
-const UnderlinedLargeHeading = ({children}) => (
+const UnderlinedLargeHeading = ({ children }) => (
 	<CenteredContent>
 		<LargeHeading>{children}</LargeHeading>
-		<StyledLine/>
+		<StyledLine />
 	</CenteredContent>
 );
-const UnderlinedXLargeHeading = ({children}) => (
+const UnderlinedXLargeHeading = ({ children }) => (
 	<CenteredContent>
 		<XLargeHeading>{children}</XLargeHeading>
-		<ThickStyledLine/>
+		<ThickStyledLine />
 	</CenteredContent>
 );
 
-const UnderlinedHugeHeading = ({children}) => (
+const UnderlinedHugeHeading = ({ children }) => (
 	<CenteredContent>
 		<HugeHeading>{children}</HugeHeading>
-		<ThickStyledLine/>
+		<ThickStyledLine />
 	</CenteredContent>
 );
+
+UnderlinedLargeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+UnderlinedSmallHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+UnderlinedMediumHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+UnderlinedXLargeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+
+UnderlinedHugeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
 
 export {
 	UnderlinedLargeHeading as UnderlinedHeading,
@@ -71,3 +101,4 @@ export {
 	UnderlinedXLargeHeading,
 	UnderlinedHugeHeading,
 };
+

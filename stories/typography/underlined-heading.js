@@ -3,7 +3,7 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
-import { HugeHeading, Heading} from '../../src/atoms/Heading';
+import { HugeHeading, Heading } from '../../src/atoms/Heading';
 // Typography
 import { UnderlinedHeading,
 	UnderlinedSmallHeading,
