@@ -7,12 +7,7 @@ import { FontIcon } from '../..';
 
 const Search = styled.div`
   position: relative;
-  margin-bottom: calc(1 / 2 * ${props => props.theme.variables.verticalBase});
-  border-top: .1rem solid ${props => props.theme.colors.grayTint}};
-  background-color: ${props => props.theme.colors.white};
-  font-size: 1.6rem;
-  box-shadow: 0 0.3rem 0.3rem ${props => props.theme.colors.grayTint};
-  overflow: hidden;
+  outline: .1rem solid ${props => props.theme.colors.grayTintLight};
   box-sizing: border-box;
   
   * {
@@ -24,9 +19,13 @@ const SearchIcon = styled(FontIcon)`
 	color: ${props => props.theme.colors[props.color]}
 `;
 
+
 const SearchFieldInput = styled.input`
 	 width: 80%;
-	 padding: ${props => props.theme.variables.horizontalBase};
+	 padding:
+	 	calc(1/2 * ${props => props.theme.variables.verticalBase}) 
+	 	${props => props.theme.variables.horizontalBase}
+	 ;
 	 border: 0;
 	 outline: none;
 	 font-size: inherit;
@@ -35,7 +34,10 @@ const SearchFieldInput = styled.input`
 const IconContainer = styled.button`
 	 width: 20%;
 	 height: 100%;
-	 padding: ${props => props.theme.variables.horizontalBase};
+	 padding:
+	 	calc(1/2 * ${props => props.theme.variables.verticalBase}) 
+	 	${props => props.theme.variables.horizontalBase}
+	 ;
 	 border: 0;
 	 outline: none;
 	 background-color: ${props => props.theme.colors.primary};
