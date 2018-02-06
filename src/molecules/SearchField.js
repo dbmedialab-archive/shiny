@@ -14,7 +14,7 @@ const Search = styled.div`
   box-shadow: 0 0.3rem 0.3rem ${props => props.theme.colors.grayTint};
   overflow: hidden;
   box-sizing: border-box;
-  
+
   * {
   	box-sizing: border-box;
   }
@@ -89,7 +89,7 @@ class SearchField extends React.Component {
 				<SearchFieldInput
 					type="text"
 					value={value}
-					placeholder="SØK I NYHETER"
+					placeholder="Søk..."
 					onChange={this.handleTextChange}
 					onKeyDown={this.searchNowIfEnter}
 				/>
