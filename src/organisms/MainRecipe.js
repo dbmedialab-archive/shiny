@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import { Wrapper            } from '../atoms/MainRecipe/Wrapper';
 import { Description        } from '../atoms/MainRecipe/Description';
@@ -19,12 +20,24 @@ const MainRecipe = props => (
 				<MainRecipeImage src={props.images[0].LargeLandscape} />
 			</Col>
 			<Col md={5}>
-				<ComplexitySection headerTitle={props.title} entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]} />
+				<ComplexitySection
+					headerTitle={props.title}
+					entities={[
+						{ Slug: 'difficulty', value: props.difficulty },
+						{ Slug: 'activityTime', value: props.timeCooking },
+						{ Slug: 'totalTime', value: props.timeTotal },
+					]}
+				/>
 			</Col>
 		</Row>
 		<Row>
 			<Col md={6}>
-				<DetailsSection preferences={props.preferences} allergies={props.allergies} author={props.authors[0]} raiting={props.rating} />
+				<DetailsSection
+					preferences={props.preferences}
+					allergies={props.allergies}
+					author={props.authors[0]}
+					raiting={props.rating}
+				/>
 			</Col>
 			<Col md={6}>
 				<Description>
@@ -41,9 +54,32 @@ const MainRecipe = props => (
 			</Col>
 		</Row>
 		<AdTags tags={props.tags} />
-		<Related entities={[{ Slug: 'difficulty', value: props.difficulty }, { Slug: 'activityTime', value: props.timeCooking }, { Slug: 'totalTime', value: props.timeTotal }]}  headerTitle={props.title} />
+		<Related
+			entities={[
+				{ Slug: 'difficulty', value: props.difficulty },
+				{ Slug: 'activityTime', value: props.timeCooking },
+				{ Slug: 'totalTime', value: props.timeTotal },
+			]}
+			headerTitle={props.title}
+		/>
 	</Wrapper>
 );
 
+MainRecipe.propTypes = {
+	preferences: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+	images: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+	ingredients: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+	description: propTypes.string.isRequired,
+	title: propTypes.string.isRequired,
+	steps: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+	servings: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+	difficulty: propTypes.number.isRequired,
+	timeCooking: propTypes.number.isRequired,
+	rating: propTypes.number.isRequired,
+	timeTotal: propTypes.number.isRequired,
+	tags: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+	allergies: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+	authors: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+};
 
 export { MainRecipe };
