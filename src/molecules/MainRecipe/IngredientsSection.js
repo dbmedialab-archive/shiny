@@ -1,8 +1,9 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
-import { Icon } from '../../atoms/Icon';
+import { Icon } from '../../atoms/FontIcon';
 import { Buttons, Counter, Pers, Quantity, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 class IngredientsSection extends React.Component {
@@ -23,7 +24,10 @@ class IngredientsSection extends React.Component {
 
 		return ingredients.map((item, index) => {
 			return (
-				<li key={index}> {`${this.calculateAmount(item.Pivot.Amount)} ${item.Pivot.Type}`} <span>{item.Title}</span></li>
+				<li
+					key={index}
+				>{`${this.calculateAmount(item.Pivot.Amount)} ${item.Pivot.Type}`} <span>{item.Title}</span>
+				</li>
 			);
 		});
 	}
@@ -55,12 +59,14 @@ class IngredientsSection extends React.Component {
 
 	incrementServings() {
 		this.setState({
-			servings: ++this.state.servings,
+			servings: this.state.servings + 1,
 		});
 	}
 
 	decrementServings() {
-		const servings = this.state.servings > 0 ? --this.state.servings : 0;
+		const servings = this.state.servings > 0
+			? this.state.servings - 1
+			: 0;
 		this.setState({
 			servings,
 		});
@@ -101,5 +107,27 @@ class IngredientsSection extends React.Component {
 		);
 	}
 }
+
+// TODO Keep this in sync with wolverine-api
+IngredientsSection.propTypes = {
+	servings: propTypes.number,
+	baseServings: propTypes.number,
+	ingredients: propTypes.arrayOf(propTypes.shape({
+		title: propTypes.string,
+		ingredients: propTypes.arrayOf(propTypes.shape({
+			title: propTypes.string,
+			slug: propTypes.string,
+			pivot: propTypes.shape({
+				amount: propTypes.number,
+				type: propTypes.string,
+			}),
+		})),
+	})),
+};
+IngredientsSection.defaultProps = {
+	servings: 1,
+	baseServings: 1,
+	ingredients: [],
+};
 
 export { IngredientsSection };

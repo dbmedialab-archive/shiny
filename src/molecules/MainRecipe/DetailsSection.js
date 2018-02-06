@@ -10,45 +10,43 @@ import { IconsBar } from './IconsBar';
 import { Author } from './Author';
 import { StarsRating } from '../../atoms/StarsRating';
 
-class DetailsSection extends React.Component {
-	render() {
-		const {
-			allergies, preferences, author, rating,
-		} = this.props;
-		return (
-			<DetailsSectionWrapper>
-				<Row>
-					<Col md={12}>
-						<DetailsSectionInfo>
+const DetailsSection  = ({
+	allergies,
+	preferences,
+	author,
+	rating,
+}) => (
+	<DetailsSectionWrapper>
+		<Row>
+			<Col md={12}>
+				<DetailsSectionInfo>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley
-						</DetailsSectionInfo>
-					</Col>
-				</Row>
-				<Row>
-					<Col md={5}>
-						<SubCategoryHeader text="Inneholder" />
-						<IconsBar entities={allergies} />
-					</Col>
-					<Col md={5} mdOffset={2} >
-						<SubCategoryHeader text="Oppskrift" />
-						<Author authorData={author} />
-					</Col>
-				</Row>
-				<Row>
-					<Col md={5}>
-						<SubCategoryHeader text="Passer For" />
-						<IconsBar entities={preferences} />
-					</Col>
-					<Col md={5} mdOffset={2}>
-						<SubCategoryHeader text="Vurdering" />
-						<StarsRating count={5} size={45} value={rating} />
-					</Col>
-				</Row>
-			</DetailsSectionWrapper>
-		);
-	}
-}
+				</DetailsSectionInfo>
+			</Col>
+		</Row>
+		<Row>
+			<Col md={5}>
+				<SubCategoryHeader text="Inneholder" />
+				<IconsBar entities={allergies} />
+			</Col>
+			<Col md={5} mdOffset={2} >
+				<SubCategoryHeader text="Oppskrift" />
+				<Author authorData={author} />
+			</Col>
+		</Row>
+		<Row>
+			<Col md={5}>
+				<SubCategoryHeader text="Passer For" />
+				<IconsBar entities={preferences} />
+			</Col>
+			<Col md={5} mdOffset={2}>
+				<SubCategoryHeader text="Vurdering" />
+				<StarsRating count={5} size={45} value={rating} />
+			</Col>
+		</Row>
+	</DetailsSectionWrapper>
+);
 
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
