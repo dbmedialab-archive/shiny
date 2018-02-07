@@ -14,8 +14,9 @@ import { TotalTime } from './TotalTime';
 import { Vegan } from './Vegan';
 import { Vegetarian } from './Vegetarian';
 
+
 const SvgIcon = props => (
-	<SvgIconWrapper iconSize={props.size}>
+	<SvgIconWrapper size={props.size}>
 		{
 			(() => {
 				switch (props.name) {

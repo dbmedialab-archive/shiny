@@ -7,21 +7,20 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { SvgIcon } from '../../src/atoms/SvgIcon';
-
+import { IconWithText } from '../../src/atoms/IconWithText';
 
 export default () => (
 	<section>
 		<Row>
 			<Col xs={12}>
-				<HugeHeading>Icon</HugeHeading>
-				<p>ICONS.</p>
+				<HugeHeading>Icon with text</HugeHeading>
+				<p>SVG ICONS WITH BOTTOM TEXT</p>
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
-import { SvgIcon } from '@aller/shiny';
+import { IconWithText } from '@aller/shiny';
 
-<SvgIcon name="easy-difficulty" size={5} />
+<IconWithText name="gluten" text="I'm an icon" iconSize={6} textSize={2} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
@@ -37,17 +36,30 @@ import { SvgIcon } from '@aller/shiny';
 					</thead>
 					<tbody>
 						<tr>
+							<td>text</td>
+							<td>Text</td>
+							<td>required</td>
+							<td>string</td>
+						</tr>
+						<tr>
 							<td>name</td>
 							<td>The name of the Icon</td>
 							<td>required</td>
 							<td>string</td>
 						</tr>
 						<tr>
-							<td>size</td>
+							<td>iconSize</td>
 							<td>The size of the Icon in rem</td>
 							<td>optional</td>
 							<td>int</td>
 							<td>5</td>
+						</tr>
+						<tr>
+							<td>textSize</td>
+							<td>The size of the text in rem</td>
+							<td>optional</td>
+							<td>int</td>
+							<td>1.6</td>
 						</tr>
 					</tbody>
 				</table>
@@ -59,51 +71,20 @@ import { SvgIcon } from '@aller/shiny';
 		</Row>
 
 		<Row>
-			<Col xs={2}>
-				<SvgIcon name="activity" />
-				<div>activity</div>
-			</Col>
 
 			<Col xs={2}>
-				<SvgIcon name="easy-difficulty" />
-				<div>easy-difficulty</div>
+				<IconWithText iconSize={3} textSize={1} text="It's a tiny icon" name="gluten" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="medium-difficulty" />
-				<div>medium-difficulty</div>
+				<IconWithText iconSize={5} textSize={2} text="It's a small icon" name="gluten" />
 			</Col>
-			<Col xs={2}>
-				<SvgIcon name="high-difficulty" />
-				<div>high-difficulty</div>
+			<Col xs={3}>
+				<IconWithText iconSize={8} textSize={3} text="It's a medium icon" name="gluten" />
 			</Col>
-			<Col xs={2}>
-				<SvgIcon name="nut" />
-				<div>nut</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="fish" />
-				<div>fish</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="gluten" />
-				<div>gluten</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="pork" />
-				<div>pork</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="total-time" />
-				<div>total-time</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="vegan" />
-				<div>vegan</div>
-			</Col>
-			<Col xs={2}>
-				<SvgIcon name="vegetarian" />
-				<div>vegetarian</div>
+			<Col xs={5}>
+				<IconWithText iconSize={15} textSize={5} text="It's a big icon" name="gluten" />
 			</Col>
 		</Row>
+
 	</section>
 );
