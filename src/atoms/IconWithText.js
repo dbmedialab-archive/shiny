@@ -6,8 +6,8 @@ import { SvgIcon } from './SvgIcon';
 const IconBlock = Styled.div`
 text-align: center;
 display: inline-block;
-
 `;
+
 const BottomText = Styled.div`
     width: 100%;
     font-size: ${(props) => {
@@ -15,13 +15,13 @@ const BottomText = Styled.div`
 	}}rem;
 `;
 
-const IconWithText = props => (
-	<IconBlock>
-		<SvgIcon size={props.iconSize} name={props.name} />
-		<BottomText  textSize={props.textSize}>{props.text}</BottomText>
+const IconWithText = ({
+	name, text, iconSize, textSize, ...rest
+}) => (
+	<IconBlock {...rest}>
+		<SvgIcon size={iconSize} name={name} />
+		<BottomText  textSize={textSize}>{text}</BottomText>
 	</IconBlock>
-
-
 );
 
 IconWithText.propTypes = {
@@ -37,4 +37,5 @@ IconWithText.defaultProps = {
 	name: '',
 	text: '',
 };
+
 export { IconWithText };
