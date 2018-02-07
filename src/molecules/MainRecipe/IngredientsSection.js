@@ -3,8 +3,9 @@ import propTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
-import { Icon } from '../../atoms/FontIcon';
+import { FontIcon } from '../../atoms/FontIcon';
 import { Buttons, Counter, Pers, Quantity, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
+
 
 class IngredientsSection extends React.Component {
 	constructor(props) {
@@ -26,7 +27,7 @@ class IngredientsSection extends React.Component {
 			return (
 				<li
 					key={index}
-				>{`${this.calculateAmount(item.Pivot.Amount)} ${item.Pivot.Type}`} <span>{item.Title}</span>
+				>{`${this.calculateAmount(item.pivot.amount)} ${item.pivot.type}`} <span>{item.title}</span>
 				</li>
 			);
 		});
@@ -78,7 +79,7 @@ class IngredientsSection extends React.Component {
 				<h1>DETTE TRENGER DU</h1>
 				<Buttons>
 					<span>
-						<Icon name="Remove" size={2.2} onClick={this.decrementServings} />
+						<FontIcon name="remove" size={2.2} onClick={this.decrementServings} />
 					</span>
 				</Buttons>
 				<Counter>
@@ -86,7 +87,7 @@ class IngredientsSection extends React.Component {
 				</Counter>
 				<Buttons>
 					<span>
-						<Icon name="Add" size={2.2} onClick={this.incrementServings} />
+						<FontIcon name="add" size={2.2} onClick={this.incrementServings} />
 					</span>
 				</Buttons>
 				<Pers>
@@ -100,7 +101,7 @@ class IngredientsSection extends React.Component {
 					</Col>
 				</Row>
 				<AddCart>
-					<Icon name="Add" size={2.2} />
+					<FontIcon name="add" size={2.2} />
 					<span>LEGG I HANDLELISTE</span>
 				</AddCart>
 			</div>

@@ -17,15 +17,15 @@ const MainRecipe = props => (
 	<Wrapper>
 		<Row>
 			<Col md={7}>
-				<MainRecipeImage src={props.images[0].LargeLandscape} />
+				<MainRecipeImage src={props.recipe.images[0].largeLandscape} />
 			</Col>
 			<Col md={5}>
 				<ComplexitySection
-					headerTitle={props.title}
+					headerTitle={props.recipe.title}
 					entities={[
-						{ Slug: 'difficulty', value: props.difficulty },
-						{ Slug: 'activityTime', value: props.timeCooking },
-						{ Slug: 'totalTime', value: props.timeTotal },
+						{ slug: 'difficulty', value: props.recipe.difficulty },
+						{ slug: 'activityTime', value: props.recipe.timeCooking },
+						{ slug: 'totalTime', value: props.recipe.timeTotal },
 					]}
 				/>
 			</Col>
@@ -33,53 +33,40 @@ const MainRecipe = props => (
 		<Row>
 			<Col md={6}>
 				<DetailsSection
-					preferences={props.preferences}
-					allergies={props.allergies}
-					author={props.authors[0]}
-					raiting={props.rating}
+					preferences={props.recipe.preferences}
+					allergies={props.recipe.allergies}
+					author={props.recipe.authors[0]}
+					raiting={props.recipe.rating}
 				/>
 			</Col>
 			<Col md={6}>
 				<Description>
-					<span>{ props.description.replace(/<\/?[^>]+>/g, '') }</span>
+					<span>{ props.recipe.description.replace(/<\/?[^>]+>/g, '') }</span>
 				</Description>
 			</Col>
 		</Row>
 		<Row>
 			<Col md={6}>
-				<IngredientsSection servings={props.servings} ingredients={props.ingredients} />
+				<IngredientsSection servings={props.recipe.servings} ingredients={props.recipe.ingredients} />
 			</Col>
 			<Col md={6}>
-				<StepsSection steps={props.steps} />
+				<StepsSection steps={props.recipe.steps} />
 			</Col>
 		</Row>
-		<AdTags tags={props.tags} />
+		<AdTags tags={props.recipe.tags} />
 		<Related
 			entities={[
-				{ Slug: 'difficulty', value: props.difficulty },
-				{ Slug: 'activityTime', value: props.timeCooking },
-				{ Slug: 'totalTime', value: props.timeTotal },
+				{ slug: 'difficulty', value: props.recipe.difficulty },
+				{ slug: 'activityTime', value: props.recipe.timeCooking },
+				{ slug: 'totalTime', value: props.recipe.timeTotal },
 			]}
-			headerTitle={props.title}
+			headerTitle={props.recipe.title}
 		/>
 	</Wrapper>
 );
 
 MainRecipe.propTypes = {
-	preferences: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-	images: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
-	ingredients: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-	description: propTypes.string.isRequired,
-	title: propTypes.string.isRequired,
-	steps: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-	servings: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-	difficulty: propTypes.number.isRequired,
-	timeCooking: propTypes.number.isRequired,
-	rating: propTypes.number.isRequired,
-	timeTotal: propTypes.number.isRequired,
-	tags: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
-	allergies: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
-	authors: propTypes.array.isRequired, // eslint-disable-line react/forbid-prop-types
+	recipe: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export { MainRecipe };

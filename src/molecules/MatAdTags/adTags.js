@@ -4,12 +4,12 @@ import propTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
-import { Icon } from '../../atoms/FontIcon';
+import { FontIcon } from '../../atoms/FontIcon';
 import { Line, LineShort, Tags, Social } from '../../atoms/adTags';
 
 const AdTags = ({ tags }) => {
 	const resolvedTags = tags.map((item, index) => (
-		<p key={index}> <a key={index} href={item.Url}>{item.Title.toUpperCase()}</a></p>
+		<p key={index}> <a key={index} href={item.Url}>{item.title.toUpperCase()}</a></p>
 	));
 
 	return (
@@ -36,10 +36,10 @@ const AdTags = ({ tags }) => {
 						<LineShort />
 					</div>
 					<Social>
-						<Icon name="Facebook" size={5.2} />
-						<Icon name="Twitter" size={5.2} />
-						<Icon name="Linkedin" size={5.2} />
-						<Icon name="Sience" size={5.2} />
+						<FontIcon name="Facebook" size={5.2} />
+						<FontIcon name="Twitter" size={5.2} />
+						<FontIcon name="Linkedin" size={5.2} />
+						<FontIcon name="Sience" size={5.2} />
 					</Social>
 				</Col>
 			</Row>
