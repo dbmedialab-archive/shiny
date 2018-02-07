@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
@@ -60,3 +61,18 @@ export const Related = props => (
 		</Row>
 	</section>
 );
+
+Related.propTypes = {
+	entities: PropTypes.shape({
+		name: PropTypes.string,
+		value: PropTypes.number,
+	}),
+	headerTitle: PropTypes.string.isRequired,
+};
+
+Related.defaultProps = {
+	entities: {
+		name: '',
+		value: 0,
+	},
+};
