@@ -10,6 +10,15 @@ export {
 	XLargeHeading,
 	HugeHeading,
 }                                  from './atoms/Heading';
+export {
+	UnderlinedHeading,
+	UnderlinedSmallHeading,
+	UnderlinedMediumHeading,
+	UnderlinedLargeHeading,
+	UnderlinedXLargeHeading,
+	UnderlinedHugeHeading,
+}                                  from './atoms/UnderlinedHeading';
+
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
