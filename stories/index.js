@@ -11,6 +11,7 @@ import lazyProgressiveImage from './LazyProgressiveImage';
 import headers from './Headers';
 import matComponents from './MatComponents';
 import logos from './logos';
+import forms from './forms';
 
 introduction();
 
@@ -29,3 +30,5 @@ lazyProgressiveImage();
 headers();
 matComponents();
 logos();
+forms();
+
