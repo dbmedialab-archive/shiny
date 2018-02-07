@@ -77,52 +77,52 @@ const mockRecipe = {
 				amount: 200,
 			},
 		},
-	  {
+		{
 			title: 'Tørrgjær',
 			description: '<p>T&oslash;rrgj&aelig;r er gj&aelig;r i pulverform med lang holdbarhet. Brukes blant annet i baking, vinlegging og &oslash;lbrygging.&nbsp;Gj&aelig;r er levende, og som alt annet levende trenger gj&aelig;rsoppen mat, vann og oksygen.&nbsp;I en deig f&aring;r gj&aelig;rsoppen mat fra stivelsen i melet, vann f&aring;r den fra deigv&aelig;sken, og oksygen f&aring;r den ved at deigen blir knadd. Gj&aelig;r puster ut karbondioksid.&nbsp;Gassen gj&oslash;r at deigen hever.</p>\n<p>Fersk gj&aelig;r hever raskest, mens t&oslash;rrgj&aelig;r trenger lenger tid.&nbsp;<a href="http://www.dinside.no/921512/torr-eller-fersk-gjaer-er-forskjellen" target="_blank">De har de samme egenskapene</a>, men mange bakere opplever bedre resultat med den ferske gj&aelig;ren.</p>',
 			pivot: {
-			  amount: 3,
+				amount: 3,
 			},
-		  },
-		  {
+		},
+		{
 			title: 'Vann',
 			description: '<p>Vann&nbsp;er en fargel&oslash;s v&aelig;ske med&nbsp;kjemisk forbindelse mellom hydrogen og oksygen, H₂O. Vann viser som regel fargen p&aring; stoffene bak eller rundt, eller reflekterer lyset som treffer vannoverflaten.&nbsp;De kjemiske egenskapene til vann er godt egnet til mange funksjoner i levende organismer. Vann har en rekke livsviktige funksjoner i menneskekroppen.&nbsp;Rent vann g&aring;r aldri ut p&aring; dato, s&aring;fremt det oppbevares i tett emballasje,&nbsp;men kan f&oslash;les litt flatt</p>',
 			pivot: {
-			  amount: 2,
+				amount: 2,
 			},
-		  },
+		},
 	],
 	steps: [
-		  {
+		{
 			videoId: '',
 			description: '<p>Bland alt det t&oslash;rre i en bolle.&nbsp;Hell romtemperert vann i bollen, ca. 23 grader.&nbsp;</p>',
 			sortOrder: 0,
 			images: [],
-		  },
-		  {
+		},
+		{
 			videoId: '',
 			description: '<p>Elt deigen godt samme i ca. 10 minutter, gjerne i en maskin til en smidig deig.&nbsp;Sett deigen til heving i vanlig romtemperatur et par timer.</p>',
 			sortOrder: 1,
 			images: [],
-		  },
-		  {
+		},
+		{
 			videoId: '',
 			description: '<p>Sm&oslash;r formene med en god olje &nbsp;og fordel deigen i br&oslash;dformene.&nbsp;Pensle litt olje p&aring; toppen av br&oslash;dene og dryss p&aring; litt havsalt. Etterhev br&oslash;dene i ca. 30 minutter.&nbsp;</p>',
 			sortOrder: 2,
 			images: [],
-		  },
-		  {
+		},
+		{
 			videoId: '',
 			description: '<p>Steke br&oslash;dene p&aring; nederste rille i varmluftsovn ved 170 grader i ca. 50 minutter.&nbsp;Ta br&oslash;dene ut av formene og avkj&oslash;l p&aring; rist.&nbsp;</p>\n<p>Obs! Oppskriften kan gjerne halveres, for at deigen skal bli lettere &aring; h&aring;ndtere p&aring; hjemmekj&oslash;kkenet.&nbsp;</p>\n<p>&nbsp; @</p>',
 			sortOrder: 3,
 			images: [],
-		  },
+		},
 	],
 	tags: [
-		  {
+		{
 			title: 'Brød',
 			url: 'https://www.dagbladet.no/mat/oppskrifter/tag/brod',
-		  },
+		},
 	],
 };
 /* eslint-enable max-len */
