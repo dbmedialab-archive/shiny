@@ -21,7 +21,7 @@ export default () => (
 					{`
 import { SvgIcon } from '@aller/shiny';
 
-<SvgIcon name="easy-difficulty" iconSize={5} />
+<SvgIcon name="easy-difficulty" size={5} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
