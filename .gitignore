@@ -3,6 +3,8 @@
 node_modules/
 lib/
 storybook-static/
+.idea
+dsgit
 
 # Shellscripts
 *.sh

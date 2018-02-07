@@ -8,6 +8,8 @@ import trysilPlug from './TrysilPlug';
 import floatImage from './FloatImage';
 import ads from './Ads';
 import lazyProgressiveImage from './LazyProgressiveImage';
+import headers from './Headers';
+import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
 
@@ -25,6 +27,8 @@ trysilPlug();
 floatImage();
 ads();
 lazyProgressiveImage();
+headers();
+matComponents();
 logos();
 forms();
 
