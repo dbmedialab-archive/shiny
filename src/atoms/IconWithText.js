@@ -2,7 +2,6 @@ import React from 'react';
 import Styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { SvgIcon } from './SvgIcon';
-import { FontIcon } from './FontIcon';
 
 const IconBlock = Styled.div`
 text-align: center;
