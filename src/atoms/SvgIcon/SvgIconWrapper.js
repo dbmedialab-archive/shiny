@@ -4,7 +4,7 @@ const SvgIconWrapper = Styled.div`
 	display: inline-block;
 	text-align: center;
 	width: ${(props) => {
-		return props.size || 5;
+		return props.size;
 	}}rem;
 `;
 

@@ -10,6 +10,7 @@ import dice from './typography/dice';
 import icon from './typography/icon';
 import underlinedHeading from './typography/underlined-heading';
 import svgIcon from './typography/svgIcon';
+import iconWithText from './typography/iconWithText';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -26,5 +27,6 @@ export default () => {
 		.add('LunchButton', lunchButton)
 		.add('Dice', dice)
 		.add('Font Icon', icon)
-		.add('Svg Icon', svgIcon);
+		.add('Svg Icon', svgIcon)
+		.add('Icon with text', iconWithText);
 };
