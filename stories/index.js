@@ -9,6 +9,7 @@ import floatImage from './FloatImage';
 import ads from './Ads';
 import lazyProgressiveImage from './LazyProgressiveImage';
 import logos from './logos';
+import forms from './forms';
 
 introduction();
 
@@ -25,3 +26,5 @@ floatImage();
 ads();
 lazyProgressiveImage();
 logos();
+forms();
+
