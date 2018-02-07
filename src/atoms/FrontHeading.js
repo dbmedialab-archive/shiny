@@ -7,10 +7,10 @@ import {
 	LargeHeading,
 	XLargeHeading,
 	HugeHeading,
-} from "./Heading";
+} from './Heading';
 
 const Fhead = styled.div`
-    white-space: nowrap;
+	white-space: nowrap;
     overflow: hidden;
     & h1 {
     	display: block;
@@ -60,5 +60,5 @@ export {
 	FrontMediumHeading,
 	FrontLargeHeading,
 	FrontXLargeHeading,
-	FrontHugeHeading
+	FrontHugeHeading,
 };
