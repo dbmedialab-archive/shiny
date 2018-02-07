@@ -1,10 +1,33 @@
-import React from 'react';
+import React from "react";
 
-import { DemoContainer } from '../storybook-components';
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
 import { Code } from '../../src/atoms/Code';
+import { FrontSmallHeading, FrontMediumHeading, FrontLargeHeading, FrontXLargeHeading, FrontHugeHeading } from "../../src/atoms/FrontHeading";
 
 export default () => (
-	<h1>Test</h1>
+	<section>
+		<FrontSmallHeading>This is a small front line heading</FrontSmallHeading>
+		<FrontMediumHeading>This is a medium front line heading</FrontMediumHeading>
+		<FrontLargeHeading>This is a large front line heading</FrontLargeHeading>
+		<FrontXLargeHeading>This is a large front line heading</FrontXLargeHeading>
+		<FrontHugeHeading>This is a large front line heading</FrontHugeHeading>
+
+		<Code language="jsx">
+			{`
+				import {
+					FrontSmallHeading,
+					FrontMediumHeading,
+					FrontLargeHeading,
+					FrontXLargeHeading,
+					FrontHugeHeading
+				} from '@aller/shiny';
+
+				<FrontSmallHeading>This is a small front line heading</FrontSmallHeading>
+				<FrontMediumHeading>This is a medium front line heading</FrontMediumHeading>
+				<FrontLargeHeading>This is a large front line heading</FrontLargeHeading>
+				<FrontXLargeHeading>This is a large front line heading</FrontXLargeHeading>
+				<FrontHugeHeading>This is a large front line heading</FrontHugeHeading>
+			`}
+		</Code>
+	</section>
 );
+
