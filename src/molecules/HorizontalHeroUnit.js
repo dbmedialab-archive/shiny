@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes, { number } from 'prop-types';
+import styled, { withTheme } from 'styled-components';
 
 import { Row                     } from '../atoms/Row';
 import { Col 					 } from '../atoms/Col';
 import { LazyProgressiveImage    } from './LazyProgressiveImage';
-import { UnderlinedXLargeHeading } from '../atoms/UnderlinedHeading';
+import { UnderlinedLargeHeading  } from '../atoms/UnderlinedHeading';
 import { Source             	 } from '../../src/molecules/Source';
-import { HorizontalLinkBar 		 } from './HorizontalLinkBar';
 import { IconBar                 } from './IconBar';
+
+const PaddedCol = withTheme(styled(Col)`
+	padding: ${props => props.theme.variables.verticalBase} 0;
+`);
 
 const HorizontalHeroUnit = props => (
 	<Row>
@@ -18,14 +22,18 @@ const HorizontalHeroUnit = props => (
 		</Col>
 		<Col xs={5}>
 			<Row center="xs">
-				<Col xs>
-					<IconBar entities={[{ name: 'fish' }, { name: 'activityTime' }, { name: 'totalTime' }]} />
-					<Row>
-						<Col xs>
-							<UnderlinedXLargeHeading>Biff med potetpuré, soppsaus og asparges</UnderlinedXLargeHeading>
+				<PaddedCol xs>
+					<Row center="xs">
+						<Col xs={8}>
+							<IconBar entities={[{ name: 'difficulty', text: 'hello', value: 1 }, { name: 'activity' }, { name: 'total-time' }]} />
 						</Col>
 					</Row>
-				</Col>
+					<Row>
+						<Col xs>
+							<UnderlinedLargeHeading>Biff med potetpuré, soppsaus og asparges</UnderlinedLargeHeading>
+						</Col>
+					</Row>
+				</PaddedCol>
 			</Row>
 		</Col>
 	</Row>

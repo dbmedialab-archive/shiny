@@ -2,33 +2,20 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { Row } from '../atoms/Row';
 import { Col } from '../atoms/Col';
-
-// Icons
-import { ActivityTime } from '../atoms/SvgIcon/ActivityTime';
-import { TotalTime    } from '../atoms/SvgIcon/TotalTime';
-import { Fish         } from '../atoms/SvgIcon/Fish';
+import { IconWithText } from '../atoms/IconWithText';
 
 class IconBar extends React.Component {
-	static getIcon({ name, value }) {
-		switch (name) {
-		case 'activityTime':
-			return <ActivityTime />;
-		case 'totalTime':
-			return <TotalTime />;
-		case 'fish':
-			return <Fish />;
-		default:
-			return null;
-		}
-	}
-
 	static renderIcons(entities) {
 		if (!entities) {
 			return null;
 		}
 
 		return entities.map((entity) => {
-			return <Col xs={4}>{ IconBar.getIcon(entity) }</Col>;
+			return (
+				<Col xs={4}>
+					<IconWithText {...entity} textSize={1.6} />
+				</Col>
+			);
 		});
 	}
 
