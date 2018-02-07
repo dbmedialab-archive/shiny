@@ -3,6 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Palette from './Palette';
+import ThemeVariables from './ThemeVariables';
 
 // import { StorybookThemeSwitcher } from '../../src/storybook-decorators/ThemeSwitcher';
 
@@ -11,5 +12,6 @@ import Palette from './Palette';
 export default () => {
 	storiesOf('Welcome', module)
 
-		.add('Palette', () => <Palette />);
+		.add('Palette', () => <Palette />)
+		.add('Theme Variables', () => <ThemeVariables />);
 };
