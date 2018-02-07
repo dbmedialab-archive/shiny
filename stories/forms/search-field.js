@@ -25,7 +25,8 @@ export default () => (
 					handleSearchTextChange={() => {}}
 					handleUserTypedSearch={() => {}}
 					isLoading={false}
-					searchTextVisible/>
+					searchTextVisible
+				/>
 			</Col>
 		</Row>
 		<Row>
@@ -35,7 +36,8 @@ export default () => (
 					handleSearchTextChange={() => {}}
 					handleUserTypedSearch={() => {}}
 					isLoading={false}
-					searchTextVisible/>
+					searchTextVisible
+				/>
 			</Col>
 		</Row>
 		<Row>
@@ -45,7 +47,8 @@ export default () => (
 					handleSearchTextChange={() => {}}
 					handleUserTypedSearch={() => {}}
 					isLoading={false}
-					searchTextVisible/>
+					searchTextVisible
+				/>
 			</Col>
 		</Row>
 	</section>
