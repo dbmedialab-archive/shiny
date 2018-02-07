@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
-import { FrontSmallHeading, FrontMediumHeading, FrontLargeHeading, FrontXLargeHeading, FrontHugeHeading } from '../../src/atoms/FrontHeading';
+import { FrontSmallHeading,
+	FrontMediumHeading,
+	FrontLargeHeading,
+	FrontXLargeHeading,
+	FrontHugeHeading } from '../../src/atoms/FrontHeading';
 
 export default () => (
 	<section>

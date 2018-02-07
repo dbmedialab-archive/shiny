@@ -55,6 +55,42 @@ const FrontHugeHeading = ({ children }) => (
 	</Fhead>
 );
 
+FrontSmallHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+FrontMediumHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+FrontLargeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+FrontXLargeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
+
+FrontHugeHeading.propTypes = {
+	children: propTypes.oneOfType([
+		propTypes.node,
+		propTypes.arrayOf(propTypes.node),
+	]).isRequired,
+};
+
 export {
 	FrontSmallHeading,
 	FrontMediumHeading,
