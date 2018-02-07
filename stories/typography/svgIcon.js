@@ -7,19 +7,7 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import {
-	ActivityTime,
-	EasyDifficulty,
-	MediumDifficulty,
-	HighDifficulty,
-	Nut,
-	Fish,
-	Gluten,
-	Pork,
-	TotalTime,
-	Vegan,
-	Vegetarian,
-} from '../../src/atoms/SvgIcon';
+import { SvgIcon } from '../../src/atoms/SvgIcon';
 
 
 export default () => (
@@ -31,9 +19,9 @@ export default () => (
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
-import { ActivityTime } from '@aller/shiny';
+import { SvgIcon } from '@aller/shiny';
 
-<ActivityTime size={10} />
+<SvgIcon name="easy-difficulty" size={5} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
@@ -66,48 +54,49 @@ import { ActivityTime } from '@aller/shiny';
 
 		<Row>
 			<Col xs={2}>
-				<EasyDifficulty />
-				<div>EasyDifficulty</div>
+				<SvgIcon name="activity" />
+				<div>activity</div>
+			</Col>
+
+			<Col xs={2}>
+				<SvgIcon name="easy-difficulty" />
+				<div>easy-difficulty</div>
 			</Col>
 			<Col xs={2}>
-				<MediumDifficulty />
-				<div>MediumDifficulty</div>
+				<SvgIcon name="medium-difficulty" />
+				<div>medium-difficulty</div>
 			</Col>
 			<Col xs={2}>
-				<HighDifficulty />
-				<div>HighDifficulty</div>
+				<SvgIcon name="high-difficulty" />
+				<div>high-difficulty</div>
 			</Col>
 			<Col xs={2}>
-				<ActivityTime />
-				<div>ActivityTime</div>
+				<SvgIcon name="nut" />
+				<div>nut</div>
 			</Col>
 			<Col xs={2}>
-				<Nut />
-				<div>Nut</div>
+				<SvgIcon name="fish" />
+				<div>fish</div>
 			</Col>
 			<Col xs={2}>
-				<Fish />
-				<div>Fish</div>
+				<SvgIcon name="gluten" />
+				<div>gluten</div>
 			</Col>
 			<Col xs={2}>
-				<Gluten />
-				<div>Gluten</div>
+				<SvgIcon name="pork" />
+				<div>pork</div>
 			</Col>
 			<Col xs={2}>
-				<Pork />
-				<div>Pork</div>
+				<SvgIcon name="total-time" />
+				<div>total-time</div>
 			</Col>
 			<Col xs={2}>
-				<TotalTime />
-				<div>TotalTime</div>
+				<SvgIcon name="vegan" />
+				<div>vegan</div>
 			</Col>
 			<Col xs={2}>
-				<Vegan />
-				<div>Vegan</div>
-			</Col>
-			<Col xs={2}>
-				<Vegetarian />
-				<div>Vegetarian</div>
+				<SvgIcon name="vegetarian" />
+				<div>vegetarian</div>
 			</Col>
 		</Row>
 	</section>
