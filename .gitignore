@@ -1,8 +1,13 @@
 .DS_Store
+.idea
 node_modules/
 lib/
 storybook-static/
+.idea
+dsgit
 
 # Shellscripts
 *.sh
 !deploy.sh
+
+

@@ -10,6 +10,15 @@ export {
 	XLargeHeading,
 	HugeHeading,
 }                                  from './atoms/Heading';
+export {
+	UnderlinedHeading,
+	UnderlinedSmallHeading,
+	UnderlinedMediumHeading,
+	UnderlinedLargeHeading,
+	UnderlinedXLargeHeading,
+	UnderlinedHugeHeading,
+}                                  from './atoms/UnderlinedHeading';
+
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { BlockLink               } from './atoms/BlockLink';
@@ -84,3 +93,7 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
+
+export { MatHeader               } from  './organisms/MatHeader';
+export { Footer               } from  './organisms/Footer';
+export { MainRecipe               } from  './organisms/MainRecipe';
