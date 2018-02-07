@@ -21,7 +21,7 @@ const LinkBarLink = ({
 
 LinkBarLink.propTypes = {
 	isActive: propTypes.bool,
-	linkText: propTypes.string,
+	linkText: propTypes.string.isRequired,
 	children: propTypes.oneOf([
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
@@ -35,7 +35,6 @@ LinkBarLink.propTypes = {
 LinkBarLink.defaultProps = {
 	children: null,
 	isActive: false,
-	linkText: 'Manglende lenketekst',
 	activeBackground: 'transparent',
 	size: 'medium',
 	url: '#',
