@@ -31,6 +31,13 @@ const LinkBarBleedingLogo = LinkBarItem.extend`
 	z-index: 9;
 `;
 
+const linkProps = {
+	useUnderline: false,
+	activeBackground: 'transparent',
+	activeTextColor: 'primary',
+	textColor: 'type',
+};
+
 const MatStory = () => (
 	<section>
 		<HugeHeading>Mat-like header</HugeHeading>
@@ -57,9 +64,9 @@ const MatStory = () => (
 				textColor="white"
 			>
 				<VerticalLinkBar background="white">
-					<LinkBarLink linkText="Test" url="#" />
-					<LinkBarLink linkText="Test" url="#" />
-					<LinkBarLink linkText="Test" url="#" />
+					<LinkBarLink linkText="Test" url="#" {...linkProps} />
+					<LinkBarLink linkText="Test" url="#" {...linkProps} />
+					<LinkBarLink linkText="Test" url="#" {...linkProps} />
 				</VerticalLinkBar>
 			</LinkBarDropdown>
 		</HorizontalLinkBar>
@@ -70,43 +77,31 @@ const MatStory = () => (
 			justifyContent="center"
 		>
 			<LinkBarLink
-				useUnderline={false}
-				activeBackground="white"
 				linkText="Oppskrifter"
-				activeTextColor="primary"
 				url="#"
-				textColor="type"
+				{...linkProps}
 				isActive
 				xs={false}
 				md
 			/>
 			<LinkBarLink
-				useUnderline={false}
-				activeBackground="white"
-				linkText="Train-For-Trinn-Video"
+				linkText="Trinn-for-trinn-video"
 				url="#"
-				textColor="type"
-				activeTextColor="primary"
+				{...linkProps}
 				xs={false}
 				md
 			/>
 			<LinkBarLink
-				useUnderline={false}
-				activeBackground="white"
-				linkText="Bli Inspirert"
+				linkText="Bli inspirert"
 				url="https://example.com"
-				textColor="type"
-				activeTextColor="primary"
+				{...linkProps}
 				xs={false}
-				lg
+				md
 			/>
 			<LinkBarLink
-				useUnderline={false}
-				activeBackground="white"
-				linkText="Populært Nå"
+				linkText="Populært nå"
 				url="https://example.com"
-				textColor="type"
-				activeTextColor="primary"
+				{...linkProps}
 				xs={false}
 				lg
 			/>
