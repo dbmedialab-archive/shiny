@@ -8,8 +8,6 @@ import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
 import { IconWithText } from '../../src/atoms/IconWithText';
-import { SvgIcon } from '../../src/atoms/SvgIcon';
-
 
 export default () => (
 	<section>
