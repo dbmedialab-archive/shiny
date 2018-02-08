@@ -7,6 +7,7 @@ import {
 	DagbladetLogo,
 	Row,
 	Col,
+	ThemeSelector as ShinyThemeProvider,
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';
@@ -15,10 +16,13 @@ const DagbladetStory = () => (
 	<section>
 		<HugeHeading>DagbladetLogo</HugeHeading>
 		<p>This svg beauty grabs all the space it can get, before displaying the Dagladet logo in all its red glory.</p>
+		<p>To use Dagbladet colors even on a non-Dagbladet site, you can wrap the logo in a Dagbladet theme provider.</p>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<DagbladetLogo />
+			<ShinyThemeProvider themeSlug="dagbladet">
+				<DagbladetLogo />
+			</ShinyThemeProvider>
 		</DemoContainer>
 
 		<DemoContainer>
@@ -28,6 +32,22 @@ const DagbladetStory = () => (
 				</Col>
 				<Col xs>
 					<DagbladetLogo background="transparent" fill="type" />
+				</Col>
+			</Row>
+		</DemoContainer>
+
+		<DemoContainer>
+			<Row>
+				<Col xs>
+					<DagbladetLogo />
+				</Col>
+				<Col xs>
+					<ShinyThemeProvider themeSlug="dagbladet">
+						<DagbladetLogo background="transparent" fill="primary" />
+					</ShinyThemeProvider>
+				</Col>
+				<Col xs>
+					<DagbladetLogo background="secondary" fill="white" />
 				</Col>
 			</Row>
 		</DemoContainer>
@@ -74,6 +94,7 @@ import {
 	Row,
 	Col,
 	DagladetLogo,
+	ThemeSelector as ShinyThemeProvider,
 } from '@aller/shiny';
 
 <Row>
@@ -82,6 +103,14 @@ import {
 	</Col>
 	<Col xs>
 		<DagbladetLogo background="transparent" fill="type" />
+	</Col>
+</Row>
+
+<Row>
+	<Col xs>
+		<ShinyThemeProvider themeSlug="dagbladet">
+			<DagbladetLogo background="transparent" fill="primary" />
+		</ShinyThemeProvider>
 	</Col>
 </Row>
 			`}
