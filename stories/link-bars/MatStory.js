@@ -14,10 +14,17 @@ import {
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 
+const BoxShadowLinkBar = HorizontalLinkBar.extend`
+	box-shadow: 0 .2rem .4rem 0 rgba(203, 203, 203, 0.5);
+`;
+
 const LogoLink = styled(XSmallLinkBarLink)`
 	position: absolute;
 	top:0;
-	width: 14.6rem;
+	width: 10.6rem;
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		width: 14.6rem;
+	}
 `;
 
 const SearchField = TopBarSearchField.extend`
@@ -64,13 +71,14 @@ const MatStory = () => (
 				textColor="white"
 			>
 				<VerticalLinkBar background="white">
-					<LinkBarLink linkText="Test" url="#" {...linkProps} />
-					<LinkBarLink linkText="Test" url="#" {...linkProps} />
-					<LinkBarLink linkText="Test" url="#" {...linkProps} />
+					<LinkBarLink linkText="Oppskrifter" url="#" {...linkProps} />
+					<LinkBarLink linkText="Trinn-for-trinn-video" url="#" {...linkProps} />
+					<LinkBarLink linkText="Bli inspirert" url="#" {...linkProps} />
+					<LinkBarLink linkText="Populært nå" url="#" {...linkProps} />
 				</VerticalLinkBar>
 			</LinkBarDropdown>
 		</HorizontalLinkBar>
-		<HorizontalLinkBar
+		<BoxShadowLinkBar
 			background="white"
 			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
@@ -105,7 +113,7 @@ const MatStory = () => (
 				xs={false}
 				lg
 			/>
-		</HorizontalLinkBar>
+		</BoxShadowLinkBar>
 	</section>
 );
 
