@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Styled, { withTheme } from 'styled-components';
 
-import { Row } from '../atoms/Row';
-import { Col } from '../atoms/Col';
-import { LazyProgressiveImage } from './LazyProgressiveImage';
-import { UnderlinedLargeHeading, UnderlinedMediumHeading, UnderlinedSmallHeading } from '../atoms/UnderlinedHeading';
-import { Source } from '../../src/molecules/Source';
-import { IconBar } from './IconBar';
+import {
+	Row,
+	Col,
+	LazyProgressiveImage,
+	Source,
+	IconBar,
+	UnderlinedLargeHeading,
+	UnderlinedMediumHeading,
+	UnderlinedSmallHeading,
+} from '../..';
 
 const LineWithoutBreak = Styled.div`
 	white-space: nowrap;

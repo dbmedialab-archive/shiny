@@ -10,6 +10,7 @@ export {
 	XLargeHeading,
 	HugeHeading,
 }                                  from './atoms/Heading';
+
 export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
@@ -97,6 +98,7 @@ export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
+export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
@@ -106,6 +108,7 @@ export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
 export { HorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
 
+// Organisms
 export { MatHeader               } from  './organisms/MatHeader';
-export { Footer               } from  './organisms/Footer';
-export { MainRecipe               } from  './organisms/MainRecipe';
+export { Footer                  } from  './organisms/Footer';
+export { MainRecipe              } from  './organisms/MainRecipe';
