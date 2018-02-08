@@ -55,11 +55,38 @@ const FrontHugeHeading = ({ children }) => (
 	</Fhead>
 );
 
+FrontSmallHeading.defaultProps = {
+	text: 5,
+	color: '',
+};
+
+FrontMediumHeading.defaultProps = {
+	text: 5,
+	color: '',
+};
+
+FrontLargeHeading.defaultProps = {
+	text: 5,
+	color: '',
+};
+
+FrontXLargeHeading.defaultProps = {
+	text: 5,
+	color: '',
+};
+
+FrontHugeHeading.defaultProps = {
+	text: 5,
+	color: '',
+};
+
 FrontSmallHeading.propTypes = {
 	children: propTypes.oneOfType([
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	text: propTypes.string.isRequired,
+	color: propTypes.string.isRequired,
 };
 
 FrontMediumHeading.propTypes = {
@@ -67,6 +94,8 @@ FrontMediumHeading.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	text: propTypes.string.isRequired,
+	color: propTypes.string.isRequired,
 };
 
 FrontLargeHeading.propTypes = {
@@ -74,6 +103,8 @@ FrontLargeHeading.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	text: propTypes.string.isRequired,
+	color: propTypes.string.isRequired,
 };
 
 FrontXLargeHeading.propTypes = {
@@ -81,6 +112,8 @@ FrontXLargeHeading.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	text: propTypes.string.isRequired,
+	color: propTypes.string.isRequired,
 };
 
 
@@ -89,6 +122,8 @@ FrontHugeHeading.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	text: propTypes.string.isRequired,
+	color: propTypes.string.isRequired,
 };
 
 export {
