@@ -9,7 +9,6 @@ import { UnderlinedLargeHeading, UnderlinedMediumHeading, UnderlinedSmallHeading
 import { Source } from '../../src/molecules/Source';
 import { IconBar } from './IconBar';
 
-
 const LineWithoutBreak = Styled.div`
 	white-space: nowrap;
 `;

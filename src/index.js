@@ -94,6 +94,7 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
+export { HorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
 
 export { MatHeader               } from  './organisms/MatHeader';
 export { Footer               } from  './organisms/Footer';

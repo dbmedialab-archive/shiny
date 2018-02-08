@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsTypes from 'prop-types';
 
 const Difficulty = props => (
 	<svg width="100%" height="100%" viewBox="-10 -20 50 50">
@@ -48,5 +49,9 @@ const Difficulty = props => (
 		</g>
 	</svg>
 );
+
+Difficulty.propTypes = {
+	value: PropsTypes.number.isRequired,
+};
 
 export { Difficulty };

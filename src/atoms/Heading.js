@@ -14,6 +14,11 @@ const Heading = styled.h1`
 const SmallHeading = Heading.extend`
 	font-size: ${props => props.theme.variables.headingSmallSize};
 	line-height: ${props => props.theme.variables.headingSmallLineHeight};
+
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		font-size: ${props => props.theme.variables.headingRegularSize};
+ 		line-height: ${props => props.theme.variables.headingRegularLineHeight};
+ 	}
 `;
 
 const MediumHeading = Heading.extend`
