@@ -33,7 +33,7 @@ IconWithText.propTypes = {
 
 IconWithText.defaultProps = {
 	iconSize: 5,
-	textSize: 5,
+	textSize: 1.6,
 	name: '',
 	text: '',
 };

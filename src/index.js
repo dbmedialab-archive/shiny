@@ -18,6 +18,13 @@ export {
 	UnderlinedXLargeHeading,
 	UnderlinedHugeHeading,
 }                                  from './atoms/UnderlinedHeading';
+export {
+	FrontSmallHeading,
+	FrontMediumHeading,
+	FrontLargeHeading,
+	FrontXLargeHeading,
+	FrontHugeHeading,
+}                                  from './atoms/FrontHeading';
 
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
@@ -28,6 +35,7 @@ export { BodyText                } from './atoms/BodyText';
 export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
+export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
 export { Col                     } from './atoms/Col';
@@ -36,7 +44,8 @@ export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { Dropdown                } from './atoms/Dropdown';
 export { Figure                  } from './atoms/Figure';
 export { FontIcon                } from './atoms/FontIcon';
-export { SvgIcon                } from './atoms/SvgIcon';
+export { SvgIcon                 } from './atoms/SvgIcon';
+export { IconWithText            } from './atoms/IconWithText';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
 export { Header                  } from './atoms/Header';
@@ -48,6 +57,7 @@ export { LeetTextarea            } from './atoms/LeetTextarea';
 export { Link                    } from './atoms/Link';
 export { ListItem                } from './atoms/ListItem';
 export { LunchKicker             } from './atoms/LunchKicker';
+export { MatLogo                 } from './atoms/MatLogo';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { Pips                    } from './atoms/Pips';
 export { PublishedDate           } from './atoms/PublishedDate';

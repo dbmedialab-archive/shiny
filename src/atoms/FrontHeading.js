@@ -1,6 +1,4 @@
-import React from 'react';
-import propTypes from 'prop-types';
-import styled from 'styled-components';
+import { css } from 'styled-components';
 import {
 	SmallHeading,
 	MediumHeading,
@@ -9,92 +7,34 @@ import {
 	HugeHeading,
 } from './Heading';
 
-const Fhead = styled.div`
-	white-space: nowrap;
+const FheadStyle = props => css`
+    color: ${props.theme.colors[props.textColor]};
+    display: block;
+    white-space: nowrap;
     overflow: hidden;
-    & h1 {
-    	display: block;
-    }
-    & h1:after {
+    &:after {
 		content: '';
 		width: 100%;
-		margin-left: 10px;
+		margin-left: ${props.theme.variables.headingSmallSize};
 		display: inline-block;
-		border-bottom: 3px solid ${props => props.theme.colors.primary};
+		border-bottom: 3px solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
     }
 `;
 
-const FrontSmallHeading = ({ children }) => (
-	<Fhead>
-		<SmallHeading>{children}</SmallHeading>
-	</Fhead>
-);
+export const FrontSmallHeading = SmallHeading.extend`${FheadStyle}`;
+export const FrontMediumHeading = MediumHeading.extend`${FheadStyle}`;
+export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;
+export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
+export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;
 
-const FrontMediumHeading = ({ children }) => (
-	<Fhead>
-		<MediumHeading>{children}</MediumHeading>
-	</Fhead>
-);
-
-const FrontLargeHeading = ({ children }) => (
-	<Fhead>
-		<LargeHeading>{children}</LargeHeading>
-	</Fhead>
-);
-
-const FrontXLargeHeading = ({ children }) => (
-	<Fhead>
-		<XLargeHeading>{children}</XLargeHeading>
-	</Fhead>
-);
-
-const FrontHugeHeading = ({ children }) => (
-	<Fhead>
-		<HugeHeading>{children}</HugeHeading>
-	</Fhead>
-);
-
-FrontSmallHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
+const defaultProps = {
+	textColor: 'type',
+	lineColor: 'primary',
 };
 
-FrontMediumHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-FrontLargeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-FrontXLargeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-
-FrontHugeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-export {
-	FrontSmallHeading,
-	FrontMediumHeading,
-	FrontLargeHeading,
-	FrontXLargeHeading,
-	FrontHugeHeading,
-};
+FrontSmallHeading.defaultProps = defaultProps;
+FrontMediumHeading.defaultProps = defaultProps;
+FrontLargeHeading.defaultProps = defaultProps;
+FrontXLargeHeading.defaultProps = defaultProps;
+FrontHugeHeading.defaultProps = defaultProps;

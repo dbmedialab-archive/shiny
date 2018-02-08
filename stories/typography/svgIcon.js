@@ -7,8 +7,7 @@ import { Row } from '../../src/atoms/Row';
 import { Col } from '../../src/atoms/Col';
 
 import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { SvgIcon } from '../../src/atoms/SvgIcon';
-
+import { IconWithText } from '../../src/atoms/IconWithText';
 
 export default () => (
 	<section>
@@ -67,40 +66,32 @@ export default () => (
 
 		<Row>
 			<Col xs={2}>
-				<SvgIcon name="activity" />
-				<div>activity</div>
+				<IconWithText name="activity" text="activity" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="difficulty" value={1} />
+				<IconWithText name="difficulty" value={1} />
 				<div>difficulty</div>
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="nut" />
-				<div>nut</div>
+				<IconWithText name="nut" text="nut" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="fish" />
-				<div>fish</div>
+				<IconWithText name="fish" text="fish" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="gluten" />
-				<div>gluten</div>
+				<IconWithText name="gluten" text="gluten" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="pork" />
-				<div>pork</div>
+				<IconWithText name="pork" text="pork" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="total-time" />
-				<div>total-time</div>
+				<IconWithText name="total-time" text="total-time" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="vegan" />
-				<div>vegan</div>
+				<IconWithText name="vegan" text="vegan" />
 			</Col>
 			<Col xs={2}>
-				<SvgIcon name="vegetarian" />
-				<div>vegetarian</div>
+				<IconWithText name="vegetarian" text="vegetarian" />
 			</Col>
 		</Row>
 	</section>
