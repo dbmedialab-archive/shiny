@@ -9,10 +9,8 @@ import {
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
+	TopBarSearchField,
 } from '../..';
-
-import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
-
 
 const BoxShadowLinkBar = HorizontalLinkBar.extend`
 	box-shadow: 0 .2rem .4rem 0 rgba(203, 203, 203, 0.5);

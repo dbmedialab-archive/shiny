@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { LoadingSearchIcon } from '../../src/atoms/loaders/LoadingSearchIcon';
-import { FontIcon } from '../..';
+import {
+	LoadingSearchIcon,
+	FontIcon,
+} from '../..';
 
 const Search = styled.div`
   position: relative;
