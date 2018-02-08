@@ -10,7 +10,6 @@ import {
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
-	FontIcon,
 } from '../../src/';
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
