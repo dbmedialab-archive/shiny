@@ -17,8 +17,8 @@ const SmallHeading = Heading.extend`
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingRegularSize};
-		line-height: ${props => props.theme.variables.headingRegularLineHeight};
-	}
+ 		line-height: ${props => props.theme.variables.headingRegularLineHeight};
+ 	}
 `;
 
 const MediumHeading = Heading.extend`

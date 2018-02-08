@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import SvgIconWrapper from './SvgIconWrapper';
 
 import { ActivityTime } from './ActivityTime';
-import { EasyDifficulty } from './EasyDifficulty';
-import { MediumDifficulty } from './MediumDifficulty';
-import { HighDifficulty } from './HighDifficulty';
+import { Difficulty } from './Difficulty';
 import { Nut } from './Nut';
 import { Fish } from './Fish';
 import { Gluten } from './Gluten';
@@ -22,12 +20,8 @@ const SvgIcon = props => (
 				switch (props.name) {
 				case 'activity':
 					return <ActivityTime {...props} />;
-				case 'easy-difficulty':
-					return <EasyDifficulty {...props} />;
-				case 'medium-difficulty':
-					return <MediumDifficulty {...props} />;
-				case 'high-difficulty':
-					return <HighDifficulty {...props} />;
+				case 'difficulty':
+					return <Difficulty {...props} />;
 				case 'nut':
 					return <Nut {...props} />;
 				case 'fish':

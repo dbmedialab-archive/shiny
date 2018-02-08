@@ -18,9 +18,16 @@ export default () => (
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
-import { SvgIcon } from '@aller/shiny';
+						import { SvgIcon } from '@aller/shiny';
 
-<SvgIcon name="easy-difficulty" size={5} />
+						<SvgIcon name="nut" size={5} />
+					`}
+				</Code>
+				<Code language="jsx">
+					{`
+						import { SvgIcon } from '@aller/shiny';
+
+						<SvgIcon name="difficulty" value={1} size={5} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
@@ -61,15 +68,9 @@ import { SvgIcon } from '@aller/shiny';
 			<Col xs={2}>
 				<IconWithText name="activity" text="activity" />
 			</Col>
-
 			<Col xs={2}>
-				<IconWithText name="easy-difficulty" text="easy-difficulty" />
-			</Col>
-			<Col xs={2}>
-				<IconWithText name="medium-difficulty" text="medium-difficulty" />
-			</Col>
-			<Col xs={2}>
-				<IconWithText name="high-difficulty" text="high-difficulty" />
+				<IconWithText name="difficulty" value={1} />
+				<div>difficulty</div>
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="nut" text="nut" />
