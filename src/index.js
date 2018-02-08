@@ -57,6 +57,7 @@ export { LeetTextarea            } from './atoms/LeetTextarea';
 export { Link                    } from './atoms/Link';
 export { ListItem                } from './atoms/ListItem';
 export { LunchKicker             } from './atoms/LunchKicker';
+export { MatLogo                 } from './atoms/MatLogo';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { Pips                    } from './atoms/Pips';
 export { PublishedDate           } from './atoms/PublishedDate';

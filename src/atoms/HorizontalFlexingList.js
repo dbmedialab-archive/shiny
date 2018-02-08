@@ -7,6 +7,7 @@ const HorizontalFlexingList = styled.ul`
 		? `
 			display: flex;
 			align-items: center;
+			justify-content: ${props.justifyContent};
 		` : `
 			display: block;
 		`
@@ -34,5 +35,9 @@ const HorizontalFlexingList = styled.ul`
 		display: none;
 	}
 `;
+HorizontalFlexingList.defaultProps = {
+	shouldFlexChildren: false,
+	justifyContent: 'initial',
+};
 
 export { HorizontalFlexingList };

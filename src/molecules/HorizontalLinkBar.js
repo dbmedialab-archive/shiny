@@ -27,6 +27,9 @@ const LinkBar = ({
 		>
 			<Bar background={background} {...rest}>
 				{children && children.map((child, i) => {
+					if (child.props && child.props.isListItem) {
+						return child;
+					}
 					return (
 						<LinkBarItem key={i} {...child.props}>
 							{child}
@@ -34,9 +37,7 @@ const LinkBar = ({
 					);
 				})}
 			</Bar>
-			{shouldFadeOut &&
-			<HorizontalOverflowGradient />
-			}
+			{shouldFadeOut && <HorizontalOverflowGradient />}
 		</NavWithOptionalConstrainer>
 	);
 };
