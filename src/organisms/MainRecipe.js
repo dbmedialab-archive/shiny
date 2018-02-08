@@ -1,20 +1,22 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Wrapper            } from '../atoms/MainRecipe/Wrapper';
 import { Description        } from '../atoms/MainRecipe/Description';
-import { Col                } from '../atoms/Col';
-import { Row                } from '../atoms/Row';
+import {
+	Grid,
+	Row,
+	Col,
+} from '..';
 import { MainRecipeImage    } from '../molecules/MainRecipe/MainRecipeImage';
 import { DetailsSection     } from '../molecules/MainRecipe/DetailsSection';
 import { ComplexitySection  } from '../molecules/MainRecipe/ComplexitySection';
 import { IngredientsSection } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection       } from '../molecules/MainRecipe/StepsSection';
+import { Related            } from '../molecules/MatRelated/MatRelated';
 import { AdTags             } from './adTags';
-import { Related } from '../molecules/MatRelated/MatRelated';
 
 const MainRecipe = props => (
-	<Wrapper>
+	<Grid>
 		<Row>
 			<Col md={7}>
 				<MainRecipeImage src={props.recipe.images[0].largeLandscape} />
@@ -62,7 +64,7 @@ const MainRecipe = props => (
 			]}
 			headerTitle={props.recipe.title}
 		/>
-	</Wrapper>
+	</Grid>
 );
 
 MainRecipe.propTypes = {
