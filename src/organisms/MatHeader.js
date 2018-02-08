@@ -9,10 +9,8 @@ import {
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
+	TopBarSearchField,
 } from '../..';
-
-import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
-
 
 const BoxShadowLinkBar = HorizontalLinkBar.extend`
 	box-shadow: 0 .2rem .4rem 0 rgba(203, 203, 203, 0.5);
@@ -22,6 +20,8 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	position: absolute;
 	top:0;
 	width: 10.6rem;
+	transition: width .2s;
+
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		width: 14.6rem;
 	}
