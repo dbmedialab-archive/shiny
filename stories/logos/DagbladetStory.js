@@ -94,6 +94,7 @@ import {
 	Row,
 	Col,
 	DagladetLogo,
+	ThemeSelector as ShinyThemeProvider,
 } from '@aller/shiny';
 
 <Row>
@@ -102,6 +103,14 @@ import {
 	</Col>
 	<Col xs>
 		<DagbladetLogo background="transparent" fill="type" />
+	</Col>
+</Row>
+
+<Row>
+	<Col xs>
+		<ShinyThemeProvider themeSlug="dagbladet">
+			<DagbladetLogo background="transparent" fill="primary" />
+		</ShinyThemeProvider>
 	</Col>
 </Row>
 			`}
