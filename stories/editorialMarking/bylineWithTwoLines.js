@@ -5,7 +5,6 @@ import { DemoContainer } from '../storybook-components';
 import { Code } from '../../src/atoms/Code';
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 
-import { Image } from '../../src/atoms/Image';
 import { BylineWithTwoLines } from '../../src/atoms/BylineWithTwoLines';
 
 export default () => (
