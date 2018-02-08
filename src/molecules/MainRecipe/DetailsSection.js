@@ -1,14 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Styled from 'styled-components';
 
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
-import { DetailsSectionWrapper } from '../../atoms/MainRecipe/DetailsSectionWrapper';
-import { SubCategoryHeader } from './SubCategoryHeader';
-import { DetailsSectionInfo } from '../../atoms/MainRecipe/DetailsSectionInfo';
-import { IconsBar } from './IconsBar';
-import { Author } from './Author';
+import { FrontSmallHeading } from '../../atoms/FrontHeading';
+
+// import { IconsBar } from './IconsBar';
 import { StarsRating } from '../../atoms/StarsRating';
+import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
+
+const DetailsSectionInfo = Styled.div`
+	font-size: 1.4rem;
+	margin-bottom: 3.0rem;
+`;
+
+const DetailsSectionWrapper = Styled.div`
+	padding: 1% 10%;
+	margin: 0 auto;
+`;
 
 const DetailsSection  = ({
 	allergies,
@@ -26,23 +36,23 @@ const DetailsSection  = ({
 			</Col>
 		</Row>
 		<Row>
-			<Col md={5}>
-				<SubCategoryHeader text="Inneholder" />
-				<IconsBar entities={allergies} />
+			<Col xs={12} md={12} lg={6}>
+				<FrontSmallHeading>Inneholder</FrontSmallHeading>
+				{/* <IconsBar entities={allergies} /> */}
 			</Col>
-			<Col md={5} mdOffset={2} >
-				<SubCategoryHeader text="Oppskrift" />
-				<Author authorData={author} />
+			<Col xs={12} md={12} lg={6}>
+				<FrontSmallHeading>Oppskrift</FrontSmallHeading>
+				<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.urlMPortrait} />
 			</Col>
 		</Row>
 		<Row>
-			<Col md={5}>
-				<SubCategoryHeader text="Passer For" />
-				<IconsBar entities={preferences} />
+			<Col xs={12} md={12} lg={6}>
+				<FrontSmallHeading>Passer For</FrontSmallHeading>
+				{/* <IconsBar entities={preferences} /> */}
 			</Col>
-			<Col md={5} mdOffset={2}>
-				<SubCategoryHeader text="Vurdering" />
-				<StarsRating count={5} size={45} value={rating} />
+			<Col xs={12} md={12} lg={6}>
+				<FrontSmallHeading>Vurdering</FrontSmallHeading>
+				{/* <StarsRating count={5} size={45} value={rating} /> */}
 			</Col>
 		</Row>
 	</DetailsSectionWrapper>

@@ -8,8 +8,8 @@ const BylineImage = Styled.img.attrs({
 	src: ({ src }) => src,
 })`
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     overflow: hidden;
     border-radius: 999px;
     margin-right: 10px;

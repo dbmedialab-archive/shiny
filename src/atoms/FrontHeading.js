@@ -20,7 +20,7 @@ const Fhead = styled.div`
 		width: 100%;
 		margin-left: 10px;
 		display: inline-block;
-		border-bottom: 3px solid ${props => props.theme.colors.primary};
+		border-bottom: 2px solid ${props => props.theme.colors.primary};
 		vertical-align: middle;
     }
 `;
