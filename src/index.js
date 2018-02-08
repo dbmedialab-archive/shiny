@@ -87,7 +87,7 @@ export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
 export { ShinyLogo               } from './atoms/ShinyLogo';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
-export { TopBarSearcField        } from './atoms/MatHeader/TopBarSearchField';
+export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
