@@ -35,7 +35,7 @@ const Footer = props => (
 				<Col xs={12} md={3}>
 					<p>Postadresse:</p>
 					<p>Boks 1184 Sentrum, 0107 Oslo</p>
-					<br/>
+					<br />
 					<p>Besøksadresse: </p>
 					<p>Karvesvingen 1, 0579 Oslo</p>
 					<p>Sentralbord: 24 00 10 00</p>

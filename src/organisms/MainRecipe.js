@@ -14,6 +14,7 @@ import { Related            	 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { AdTags                  } from './adTags';
 
+
 const MainRecipe = props => (
 	<Grid>
 		<LargeHorizontalHeroUnit
@@ -37,7 +38,9 @@ const MainRecipe = props => (
 			</Col>
 			<Col md={6}>
 				<Description>
+					{/* eslint-disable react/no-danger */}
 					<span  dangerouslySetInnerHTML={{ __html: props.recipe.description }} />
+					{/* eslint-enable react/no/danger */}
 				</Description>
 			</Col>
 		</Row>
@@ -60,6 +63,7 @@ const MainRecipe = props => (
 		/>
 	</Grid>
 );
+/* eslint-enable react/no/danger */
 
 MainRecipe.propTypes = {
 	recipe: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
