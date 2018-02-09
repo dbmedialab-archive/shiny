@@ -18,8 +18,8 @@ import { LinkStory } from './LinkStory';
 import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
 import { HideStory } from './HideStory';
+import { SeHerStory } from './SeHerStory';
 import { MatStory } from './MatStory';
-// import { SeHerStory } from './SeHerStory';
 
 import { DagbladetStory } from './DagbladetStory';
 
@@ -42,6 +42,6 @@ export default () => {
 		.add('LinkBarButton', ButtonStory)
 		.add('Hidden LinkBar elements', HideStory)
 		.add('Dagbladet-like bar', DagbladetStory)
-		// .add('SeHer-like bar', SeHerStory)
+		.add('SeHer-like bar', SeHerStory)
 		.add('MatStory link bar', MatStory);
 };
