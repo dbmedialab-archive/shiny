@@ -5,16 +5,16 @@ import kk from './kk';
 import seher from './seher';
 import sol from './sol';
 import topp from './topp';
-import oppskrift from './oppskrift';
+import mat from './mat';
 
 const themes = {
 	defaultTheme,
-	oppskrift,
 	dagbladet,
 	dinside,
 	kk,
 	seher,
 	sol,
+	mat,
 	topp,
 };
 
