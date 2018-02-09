@@ -16,11 +16,11 @@ const BottomText = Styled.div`
 `;
 
 const IconWithText = ({
-	name, text, iconSize, textSize, ...rest
+	text, iconSize, textSize, ...rest
 }) => (
-	<IconBlock {...rest}>
-		<SvgIcon size={iconSize} name={name} />
-		<BottomText  textSize={textSize}>{text}</BottomText>
+	<IconBlock>
+		<SvgIcon size={iconSize} {...rest} />
+		<BottomText textSize={textSize}>{text}</BottomText>
 	</IconBlock>
 );
 

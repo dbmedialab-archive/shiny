@@ -10,6 +10,7 @@ export {
 	XLargeHeading,
 	HugeHeading,
 }                                  from './atoms/Heading';
+
 export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
@@ -56,7 +57,9 @@ export { Label                   } from './atoms/Label';
 export { LeetTextarea            } from './atoms/LeetTextarea';
 export { Link                    } from './atoms/Link';
 export { ListItem                } from './atoms/ListItem';
+export { LoadingSearchIcon       } from './atoms/loaders/LoadingSearchIcon';
 export { LunchKicker             } from './atoms/LunchKicker';
+export { MatLogo                 } from './atoms/MatLogo';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { Pips                    } from './atoms/Pips';
 export { PublishedDate           } from './atoms/PublishedDate';
@@ -84,6 +87,7 @@ export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
 export { ShinyLogo               } from './atoms/ShinyLogo';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { ThemeSelector           } from './atoms/ThemeSelector';
+export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
@@ -96,6 +100,7 @@ export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
 export { FloatImage              } from './molecules/FloatImage';
+export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
@@ -103,7 +108,11 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
+export { SmallHorizontalHeroUnit,
+	MediumHorizontalHeroUnit,
+	LargeHorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
 
+// Organisms
 export { MatHeader               } from  './organisms/MatHeader';
-export { Footer               } from  './organisms/Footer';
-export { MainRecipe               } from  './organisms/MainRecipe';
+export { Footer                  } from  './organisms/Footer';
+export { MainRecipe              } from  './organisms/MainRecipe';

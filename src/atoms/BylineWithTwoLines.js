@@ -8,11 +8,11 @@ const BylineImage = Styled.img.attrs({
 	src: ({ src }) => src,
 })`
     float: left;
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     overflow: hidden;
-    border-radius: 999px;
-    margin-right: 10px;
+    border-radius: 50%;
+    margin-right: ${props => props.theme.variables.horizontalBase};
 `;
 
 const TextBlock = Styled.div`
@@ -22,18 +22,17 @@ const TextBlock = Styled.div`
 `;
 
 const Name = Styled.div`
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-size: ${props => props.theme.variables.uiRegularSize};
+    line-height: ${props => props.theme.variables.uiRegularLineHeight};
     font-weight: 300;
 `;
 
 const Email = Styled.a.attrs({
 	href: ({ email }) => `mailto:${email}`,
 })`
-    font-size: 1.4rem;
+    font-size: ${props => props.theme.variables.uiSmallSize};
     font-weight: 300;
     color: ${props => props.theme.colors.type};
-    &:hover
 `;
 
 const BylineWithTwoLines = ({ src, name, email }) => (

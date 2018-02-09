@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { LoadingSearchIcon } from '../../src/atoms/loaders/LoadingSearchIcon';
-import { FontIcon } from '../..';
+import {
+	LoadingSearchIcon,
+	FontIcon,
+} from '../..';
 
 const Search = styled.div`
   position: relative;
   margin-bottom: calc(1 / 2 * ${props => props.theme.variables.verticalBase});
-  border-top: .1rem solid ${props => props.theme.colors.grayTint}};
   background-color: ${props => props.theme.colors.white};
   font-size: 1.6rem;
   box-shadow: 0 0.3rem 0.3rem ${props => props.theme.colors.grayTint};

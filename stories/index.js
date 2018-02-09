@@ -12,6 +12,7 @@ import headers from './Headers';
 import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
+import heroes from './Heroes';
 
 introduction();
 
@@ -31,4 +32,4 @@ headers();
 matComponents();
 logos();
 forms();
-
+heroes();

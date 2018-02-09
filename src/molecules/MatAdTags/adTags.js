@@ -18,6 +18,7 @@ const AdTags = ({ tags }) => {
 				<Col xs={4}>
 					<div>
 						<img
+							style={{ maxWidth: '100%' }}
 							alt="Alt text goes here"
 							src="http://www.eatsouthbank.com.au/wp-content/uploads/2017/03/Plough-Inn-Buffalo-wings-2-320x250-c-default.jpg"
 						/>

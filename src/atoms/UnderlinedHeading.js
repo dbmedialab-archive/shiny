@@ -9,6 +9,13 @@ import {
 	HugeHeading,
 } from './Heading';
 
+const XSmallHeading = SmallHeading.extend`
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		font-size: ${props => props.theme.variables.headingSmallSize};
+		line-height: ${props => props.theme.variables.headingSmallLineHeight};
+	}
+`;
+
 const CenteredContent = styled.div`
 text-align: center;
 display: inline-block;
@@ -26,7 +33,7 @@ border-width: 2px;
 
 const UnderlinedSmallHeading = ({ children }) => (
 	<CenteredContent>
-		<SmallHeading>{children}</SmallHeading>
+		<XSmallHeading>{children}</XSmallHeading>
 		<StyledLine />
 	</CenteredContent>
 );
