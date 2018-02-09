@@ -1,19 +1,25 @@
 import Styled from 'styled-components';
 
 const Description = Styled.div`
-	color: #fff;
+	color: ${props => props.theme.colors[props.textColor]};
 	text-align: center;
-	background-color: #ff790a;
+	margin: ${props => props.theme.variables.headingMediumSize} 0;
+	background-color: ${props => props.theme.colors[props.bgColor]};
 	height: 100%;
 	width: 100%;
 	
 	& span {
 		display: inline-block;
-		margin-top: 10%;
+		margin: ${props => props.theme.variables.headingHugeSize} 0;
 		width: 60%;
 		font-size: 20px;
 		font-weight: 500;
 	}
 `;
+
+Description.defaultProps = {
+	textColor: 'white',
+	bgColor: 'primary',
+};
 
 export { Description };
