@@ -8,12 +8,11 @@ import {
 	Col,
 } from '..';
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
-import { IngredientsSection 	 } from '../molecules/MainRecipe/IngredientsSection';
-import { StepsSection       	 } from '../molecules/MainRecipe/StepsSection';
-import { Related            	 } from '../molecules/MatRelated/MatRelated';
+import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
+import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
+import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { AdTags                  } from './adTags';
-
 
 const MainRecipe = props => (
 	<Grid>
@@ -36,13 +35,9 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Col md={6}>
-				<Description>
-					{/* eslint-disable react/no-danger */}
-					<span  dangerouslySetInnerHTML={{ __html: props.recipe.description }} />
-					{/* eslint-enable react/no/danger */}
-				</Description>
-			</Col>
+			<Description md={6}>
+				{ props.recipe.description.replace(/<\/?[^>]+>/g, '') }
+			</Description>
 		</Row>
 		<Row>
 			<Col md={6}>
