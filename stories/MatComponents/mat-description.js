@@ -16,7 +16,7 @@ export default () => (
 		<Code language="jsx">
 			{`import { Description } from '@aller/shiny';
 
-		<Description>
+		<Description textColor="white" bgColor="primary">
 			<span>
 				Lorem ipsum dolor sit amet,
 				consectetur adipisicing elit.

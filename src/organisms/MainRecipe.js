@@ -63,7 +63,6 @@ const MainRecipe = props => (
 		/>
 	</Grid>
 );
-/* eslint-enable react/no/danger */
 
 MainRecipe.propTypes = {
 	recipe: propTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types

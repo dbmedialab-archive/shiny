@@ -9,7 +9,7 @@ const Footer = props => (
 		<Grid>
 			<Row>
 				<Col xs={12} md={3}>
-					<p style={{ fontSize: 25 }}>Oppskrift.no</p>
+					<p>Oppskrift.no</p>
 					<p>
 						<img className="Aller-logo" src="allers-logo.png" width={69} height={19} alt="" />
 						<svg width="45px" height="43" viewBox="0 0 234 211" version="1.1">
@@ -52,7 +52,6 @@ const Footer = props => (
 					<p>Personvern</p>
 				</Col>
 			</Row>
-			<div className="ddd" />
 		</Grid>
 	</FooterMat>
 );

@@ -12,9 +12,6 @@ import underlinedHeading from './typography/underlined-heading';
 import svgIcon from './typography/svgIcon';
 import iconWithText from './typography/iconWithText';
 import frontHeading from './typography/front-heading';
-import description from './typography/mat-description';
-import matSteps from './typography/mat-steps';
-
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -26,8 +23,6 @@ export default () => {
 		.add('Heading', heading)
 		.add('Underlined Heading', underlinedHeading)
 		.add('Front Heading', frontHeading)
-		.add('Mat Description', description)
-		.add('Mat Steps', matSteps)
 		.add('Cite', cite)
 		.add('Published date', publishedDate)
 		.add('Body text', bodyText)

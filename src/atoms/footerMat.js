@@ -2,24 +2,20 @@ import styled from 'styled-components';
 
 const FooterMat = styled.div`
     background-color: #4a4a4a;
-    color: #fff;
+    color: ${props => props.theme.colors.white};
     & p {
-        font-size: 14px;
+        font-size: ${props => props.theme.variables.uiSmallSize};
     }
     
     .Aller-logo {
-        margin-bottom: 15px;
+        margin-bottom: ${props => props.theme.variables.uiSmallSize};
     }
     
-    @media (max-width: 800px) {
+    @media (max-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
         p, img {
             text-align: center;
         }
     }
-    & .ddd {
-        
-    }
 `;
-
 
 export { FooterMat };
