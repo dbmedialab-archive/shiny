@@ -7,31 +7,25 @@ import {
 	Row,
 	Col,
 } from '..';
-import { MainRecipeImage    } from '../molecules/MainRecipe/MainRecipeImage';
-import { DetailsSection     } from '../molecules/MainRecipe/DetailsSection';
-import { ComplexitySection  } from '../molecules/MainRecipe/ComplexitySection';
-import { IngredientsSection } from '../molecules/MainRecipe/IngredientsSection';
-import { StepsSection       } from '../molecules/MainRecipe/StepsSection';
-import { Related            } from '../molecules/MatRelated/MatRelated';
-import { AdTags             } from './adTags';
+import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
+import { IngredientsSection 	 } from '../molecules/MainRecipe/IngredientsSection';
+import { StepsSection       	 } from '../molecules/MainRecipe/StepsSection';
+import { Related            	 } from '../molecules/MatRelated/MatRelated';
+import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
+import { AdTags                  } from './adTags';
 
 const MainRecipe = props => (
 	<Grid>
-		<Row>
-			<Col md={7}>
-				<MainRecipeImage src={props.recipe.images[0].largeLandscape} />
-			</Col>
-			<Col md={5}>
-				<ComplexitySection
-					headerTitle={props.recipe.title}
-					entities={[
-						{ slug: 'difficulty', value: props.recipe.difficulty },
-						{ slug: 'activityTime', value: props.recipe.timeCooking },
-						{ slug: 'totalTime', value: props.recipe.timeTotal },
-					]}
-				/>
-			</Col>
-		</Row>
+		<LargeHorizontalHeroUnit
+			image={{
+				src: props.recipe.images[0].largeLandscape,
+				placeholder: props.recipe.images[0].largeLandscape,
+			}}
+			difficulty={props.recipe.difficulty}
+			timeCooking={props.recipe.timeCooking}
+			timeTotal={props.recipe.timeCooking}
+			title={props.recipe.title}
+		/>
 		<Row>
 			<Col md={6}>
 				<DetailsSection

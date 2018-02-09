@@ -102,7 +102,7 @@ const createHeroUnit = (size) => {
 								</Col>
 							</Row>
 							<Row center="xs">
-								<Col xs={iconBarWidth}><Heading>{ props.title }{size}</Heading></Col>
+								<Col xs={iconBarWidth}><Heading>{ props.title }</Heading></Col>
 							</Row>
 						</PaddedCol>
 					</Row>
