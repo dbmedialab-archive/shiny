@@ -14,7 +14,7 @@ export default () => (
 			</span>
 		</Description>
 		<Code language="jsx">
-			{`import { Description } from '../../src/atoms/MainRecipe/Description';
+			{`import { Description } from '@aller/shiny';
 
 		<Description>
 			<span>
