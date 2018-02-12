@@ -68,16 +68,5 @@ export const Related = props => (
 );
 
 Related.propTypes = {
-	entities: PropTypes.shape({
-		name: PropTypes.string,
-		value: PropTypes.number,
-	}),
 	headerTitle: PropTypes.string.isRequired,
-};
-
-Related.defaultProps = {
-	entities: {
-		name: '',
-		value: 0,
-	},
 };
