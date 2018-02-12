@@ -29,21 +29,30 @@ const mockRecipe = {
 	rating: 0,
 	preferences: [
 		{
-			title: 'Vegan',
-			slug: 'vegan',
+			text: 'Vegan',
+			name: 'vegan',
 		},
 		{
-			title: 'Vegetar',
-			slug: 'vegetar',
+			text: 'Vegetar',
+			name: 'vegetarian',
 		},
 		{
-			title: 'Uten svinekjøtt',
-			slug: 'uten-svinekjott',
+			text: 'Uten svin',
+			name: 'pork',
 		},
 	],
 	allergies: [
 		{
-			slug: 'gluten',
+			name: 'nut',
+			text: 'Nøtter',
+		},
+		{
+			name: 'gluten',
+			text: 'Gluten',
+		},
+		{
+			name: 'fish',
+			text: 'Fisk',
 		},
 	],
 	ingredients: [
