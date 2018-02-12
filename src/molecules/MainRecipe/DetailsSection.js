@@ -7,7 +7,8 @@ import { Col } from '../../atoms/Col';
 import { FrontSmallHeading } from '../../atoms/FrontHeading';
 
 import { IconBar } from '../IconBar';
-import { StarsRating } from '../../atoms/StarsRating';
+// TODO uncomment after rating will be added
+// import { StarsRating } from '../../atoms/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
 const DetailsSectionInfo = Styled.div`
@@ -48,7 +49,7 @@ const DetailsSection  = ({
 		<Row>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Passer For</FrontSmallHeading>
-				{ <IconBar entities={preferences}  textSize={1.2}	iconSize={4} /> }
+				{ <IconBar entities={preferences}  textSize={1.2} iconSize={4} /> }
 			</Col>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Vurdering</FrontSmallHeading>

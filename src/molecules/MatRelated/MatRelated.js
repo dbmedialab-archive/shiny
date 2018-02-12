@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import { Row } from '../../atoms/Row';
 import { Col  } from '../../atoms/Col';
-// import { IconsBar } from '../MainRecipe/IconsBar';
+// import { IconBar } from '../IconBar';
 import { ComplexitySectionHeader } from '../../atoms/MainRecipe/ComplexitySectionHeader';
 
 const Img = styled.img`
@@ -23,7 +23,7 @@ export const Related = props => (
 						<div><Img width="230" src="https://i.pinimg.com/474x/7a/15/a4/7a15a4ca174f15f533b79b2672befb2b--lunch-recipes-paleo-recipes.jpg" alt="" /></div>
 					</Col>
 					<Col md={5}>
-						{/* <IconsBar entities={props.entities} /> */}
+						{/* <IconBar entities={props.entities} /> */}
 						<ComplexitySectionHeader style={{ fontSize: 18 }}>{props.headerTitle}</ComplexitySectionHeader>
 					</Col>
 				</Row>
