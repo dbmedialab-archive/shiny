@@ -52,9 +52,9 @@ const MainRecipe = props => (
 		<AdTags tags={props.recipe.tags} />
 		<Related
 			entities={[
-				{ slug: 'difficulty', value: props.recipe.difficulty },
-				{ slug: 'activityTime', value: props.recipe.timeCooking },
-				{ slug: 'totalTime', value: props.recipe.timeTotal },
+				{ name: 'difficulty', value: props.recipe.difficulty },
+				{ name: 'activity', value: props.recipe.timeCooking },
+				{ name: 'total-time', value: props.recipe.timeTotal },
 			]}
 			headerTitle={props.recipe.title}
 		/>
