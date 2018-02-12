@@ -17,6 +17,7 @@ const SvgIcon = props => (
 	<SvgIconWrapper size={props.size}>
 		{
 			(() => {
+				console.log(props.name);
 				switch (props.name) {
 				case 'activity':
 					return <ActivityTime {...props} />;

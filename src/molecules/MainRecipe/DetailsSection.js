@@ -6,7 +6,7 @@ import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
 import { FrontSmallHeading } from '../../atoms/FrontHeading';
 
-// import { IconsBar } from './IconsBar';
+import { IconBar } from '../IconBar';
 import { StarsRating } from '../../atoms/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
@@ -38,7 +38,7 @@ const DetailsSection  = ({
 		<Row>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Inneholder</FrontSmallHeading>
-				{/* <IconsBar entities={allergies} /> */}
+				{ <IconBar entities={allergies} textSize={1.2}	iconSize={4} /> }
 			</Col>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Oppskrift</FrontSmallHeading>
@@ -48,7 +48,7 @@ const DetailsSection  = ({
 		<Row>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Passer For</FrontSmallHeading>
-				{/* <IconsBar entities={preferences} /> */}
+				{ <IconBar entities={preferences}  textSize={1.2}	iconSize={4} /> }
 			</Col>
 			<Col xs={12} md={12} lg={6}>
 				<FrontSmallHeading>Vurdering</FrontSmallHeading>

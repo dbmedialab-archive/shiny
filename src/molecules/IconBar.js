@@ -6,6 +6,7 @@ import { IconWithText } from '../atoms/IconWithText';
 
 const IconBar = props => (
 	<Row>
+		{console.log(props.entities)}
 		{
 			props.entities.map(entity => (
 				<Col xs={4}>
