@@ -17,11 +17,10 @@ const FheadStyle = props => css`
 		width: 100%;
 		margin-left: ${props.theme.variables.headingSmallSize};
 		display: inline-block;
-		border-bottom: 3px solid ${props.theme.colors[props.lineColor]};
+		border-bottom: 2px solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
     }
 `;
-
 export const FrontSmallHeading = SmallHeading.extend`${FheadStyle}`;
 export const FrontMediumHeading = MediumHeading.extend`${FheadStyle}`;
 export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;
