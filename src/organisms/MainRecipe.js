@@ -35,9 +35,7 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Description md={6}>
-				{ props.recipe.description.replace(/<\/?[^>]+>/g, '') }
-			</Description>
+			<Description md={6} dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
 		</Row>
 		<Row>
 			<Col md={6}>
