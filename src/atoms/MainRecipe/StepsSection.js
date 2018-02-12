@@ -5,19 +5,17 @@ const RecipeSteps = styled.ol`
     padding: 0;
     & li {
 		counter-increment: item;
-   		font-size: 16px;
-    	display: inline-block;
-   	 	margin-bottom: 30px;
-  		line-height: 1.63;
+   	 	margin-bottom: ${props => props.theme.variables.headingMediumLineHeight};
+  		line-height: ${props => props.theme.variables.headingMediumLineHeight};
   		position: relative;
  	}
     & li:before {
 		content: counter(item);
-		font-size: 36px;
+		font-size: ${props => props.theme.variables.headingXlargeSize};
 		display: inline-block;
 		position: absolute;
-    	left: -45px;
-    	top: -10px;
+    	left: -3.5rem;
+    	top: 0.5rem;
     }
 `;
 
