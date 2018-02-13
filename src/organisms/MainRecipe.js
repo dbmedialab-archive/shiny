@@ -27,7 +27,7 @@ const MainRecipe = props => (
 			title={props.recipe.title}
 		/>
 		<Row>
-			<Col md={6}>
+			<Col md={12} lg={6} sx={12}>
 				<DetailsSection
 					preferences={props.recipe.preferences}
 					allergies={props.recipe.allergies}
@@ -35,7 +35,9 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Description md={6} dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
+			<Col md={12} lg={6} sx={12}>
+				<Description dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
+			</Col>
 		</Row>
 		<Row>
 			<Col md={6}>
