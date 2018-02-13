@@ -23,8 +23,8 @@
   "dependencies": {
     "@aller/eslint-config-aller": "0.5.2",
     "@maji/react-prism": "1.0.1",
-    "@storybook/addon-links": "3.3.12",
-    "@storybook/react": "3.3.12",
+    "@storybook/addon-links": "3.3.13",
+    "@storybook/react": "3.3.13",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "babel-plugin-system-import-transformer": "^3.1.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
@@ -38,7 +38,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-stars": "^2.2.5",
-    "react-styled-flexboxgrid": "2.1.1",
+    "react-styled-flexboxgrid": "2.2.0",
     "styled-components": "3.1.6"
   },
   "devDependencies": {

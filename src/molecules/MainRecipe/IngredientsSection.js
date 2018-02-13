@@ -4,7 +4,8 @@ import propTypes from 'prop-types';
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
 import { FontIcon } from '../../atoms/FontIcon';
-import { Buttons, Counter, Pers, Quantity, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
+import { Quantity } from '../../atoms/MainRecipe/quantity';
+import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 
 class IngredientsSection extends React.Component {
@@ -25,10 +26,12 @@ class IngredientsSection extends React.Component {
 
 		return ingredients.map((item, index) => {
 			return (
-				<li
+				<Quantity
 					key={index}
-				>{`${this.calculateAmount(item.pivot.amount)} ${item.pivot.type}`} <span>{item.title}</span>
-				</li>
+					amount={this.calculateAmount(item.pivot.amount)}
+					type={item.pivot.type}
+					title={item.title}
+				/>
 			);
 		});
 	}
@@ -95,9 +98,7 @@ class IngredientsSection extends React.Component {
 				</Pers>
 				<Row>
 					<Col xs={9}>
-						<Quantity>
-							{ this.getIngredients() }
-						</Quantity>
+						{ this.getIngredients() }
 					</Col>
 				</Row>
 				<AddCart>
