@@ -17,8 +17,11 @@ const DetailsSectionInfo = Styled.div`
 `;
 
 const DetailsSectionWrapper = Styled.div`
-	padding: 1% 10%;
+	padding: 0;
 	margin: 0 auto;
+	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
+		padding: 1% 10%;
+	}
 `;
 
 const DetailsSection  = ({
