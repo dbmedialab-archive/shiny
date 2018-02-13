@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { MainRecipe } from '../../src/organisms/MainRecipe';
 
 /* eslint-disable max-len */
@@ -150,8 +149,6 @@ const mockRecipe = {
 
 export default () => (
 	<section>
-		<HugeHeading>Mat</HugeHeading>
-		<Heading>Main Recipe</Heading>
 		<MainRecipe recipe={mockRecipe} />
 	</section>
 );

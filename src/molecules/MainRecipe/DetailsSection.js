@@ -8,7 +8,7 @@ import { FrontSmallHeading } from '../../atoms/FrontHeading';
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added
-// import { StarsRating } from '../../atoms/StarsRating';
+import { StarsRating } from '../../atoms/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
 const DetailsSectionInfo = Styled.div`
@@ -40,23 +40,23 @@ const DetailsSection  = ({
 			</Col>
 		</Row>
 		<Row>
-			<Col xs={12} md={12} lg={6}>
+			<Col xs={12} md={5} lg={5}>
 				<FrontSmallHeading>Inneholder</FrontSmallHeading>
 				{ <IconBar entities={allergies} textSize={1.2}	iconSize={4} /> }
 			</Col>
-			<Col xs={12} md={12} lg={6}>
+			<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
 				<FrontSmallHeading>Oppskrift</FrontSmallHeading>
 				<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.urlMPortrait} />
 			</Col>
 		</Row>
 		<Row>
-			<Col xs={12} md={12} lg={6}>
+			<Col xs={12} md={5} lg={5}>
 				<FrontSmallHeading>Passer For</FrontSmallHeading>
 				{ <IconBar entities={preferences}  textSize={1.2} iconSize={4} /> }
 			</Col>
-			<Col xs={12} md={12} lg={6}>
+			<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
 				<FrontSmallHeading>Vurdering</FrontSmallHeading>
-				{/* <StarsRating count={5} size={45} value={rating} /> */}
+				<StarsRating count={5} size={45} value={rating} />
 			</Col>
 		</Row>
 	</DetailsSectionWrapper>

@@ -5,11 +5,10 @@ import description from './mat-description';
 import matSteps from './mat-steps';
 import MainRecipe from './MainRecipe';
 
-
 export default () => {
 	storiesOf('Mat Components', module)
 		.add('Footer', Footer)
+		.add('MainRecipe', MainRecipe)
 		.add('Mat Description', description)
-		.add('Mat Steps', matSteps)
-		.add('Main recipe', MainRecipe);
+		.add('Mat Steps', matSteps);
 };

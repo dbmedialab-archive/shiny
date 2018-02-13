@@ -38,7 +38,10 @@ const theme = {
 			md: 61.0, // rem
 			lg: 144.0,  // rem
 		},
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 	},
 };
 
