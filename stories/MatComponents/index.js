@@ -10,5 +10,6 @@ export default () => {
 		.add('Footer', Footer)
 		.add('MainRecipe', MainRecipe)
 		.add('Mat Description', description)
-		.add('Mat Steps', matSteps);
+		.add('Mat Steps', matSteps)
+		.add('Main Recipe', MainRecipe);
 };
