@@ -22,9 +22,9 @@ export const Quantity = props => (
 );
 
 Quantity.defaultProps = {
-	amount: '1',
-	title: 'margarin',
-	type: 'st',
+	amount: '',
+	title: '',
+	type: '',
 };
 
 Quantity.propTypes = {
