@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Col } from '../../atoms/Col';
 import { Row } from '../../atoms/Row';
@@ -17,3 +18,14 @@ export const Quantity = props => (
 		</Row>
 	</section>
 );
+
+Quantity.defaultProps = {
+	amount: '1 st',
+	name: 'margarin',
+};
+
+Quantity.propTypes = {
+	amount: PropTypes.number,
+	name: PropTypes.string,
+};
+
