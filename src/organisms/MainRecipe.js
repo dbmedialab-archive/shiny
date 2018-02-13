@@ -1,18 +1,19 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Description        } from '../atoms/MainRecipe/Description';
+import { Description             } from '../atoms/MainRecipe/Description';
 import {
 	Grid,
 	Row,
 	Col,
+	TagSection,
 } from '..';
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
-import { IngredientsSection 	 } from '../molecules/MainRecipe/IngredientsSection';
-import { StepsSection       	 } from '../molecules/MainRecipe/StepsSection';
-import { Related            	 } from '../molecules/MatRelated/MatRelated';
+import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
+import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
+import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
-import { AdTags                  } from './adTags';
+import { FrontLargeHeading } from '../atoms/FrontHeading';
 
 const MainRecipe = props => (
 	<Grid>
@@ -27,7 +28,7 @@ const MainRecipe = props => (
 			title={props.recipe.title}
 		/>
 		<Row>
-			<Col md={6}>
+			<Col md={12} lg={6} sx={12}>
 				<DetailsSection
 					preferences={props.recipe.preferences}
 					allergies={props.recipe.allergies}
@@ -35,10 +36,8 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Col md={6}>
-				<Description>
-					<span>{ props.recipe.description.replace(/<\/?[^>]+>/g, '') }</span>
-				</Description>
+			<Col md={12} lg={6} sx={12}>
+				<Description dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
 			</Col>
 		</Row>
 		<Row>
@@ -46,10 +45,32 @@ const MainRecipe = props => (
 				<IngredientsSection servings={props.recipe.servings} ingredients={props.recipe.ingredients} />
 			</Col>
 			<Col md={6}>
-				<StepsSection steps={props.recipe.steps} />
+				<Row>
+					<StepsSection steps={props.recipe.steps} />
+				</Row>
+				<Row>
+					<Col xs={12}>
+						<FrontLargeHeading textColor="primary" >Trinn-for-trinn-video</FrontLargeHeading>
+					</Col>
+				</Row>
+				<Row>
+					<iframe
+						title="video"
+						width="100%"
+						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
+					/>
+
+				</Row>
+				<Row>
+					<Col xs={12}>
+						<FrontLargeHeading textColor="primary" lineColor="primary">TAGGER</FrontLargeHeading>
+					</Col>
+				</Row>
+				<Row>
+					<TagSection tags={props.recipe.tags} />
+				</Row>
 			</Col>
 		</Row>
-		<AdTags tags={props.recipe.tags} />
 		<Related
 			entities={[
 				{ name: 'difficulty', value: props.recipe.difficulty },

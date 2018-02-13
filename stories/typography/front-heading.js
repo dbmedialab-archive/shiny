@@ -24,8 +24,9 @@ export default () => (
 					FrontXLargeHeading,
 					FrontHugeHeading
 				} from '@aller/shiny';
-
-				<FrontSmallHeading>This is a small front line heading</FrontSmallHeading>
+				${{ /* eslint-disable max-len */ }}
+				<FrontSmallHeading textColor="type" lineColor="primary">This is a small front line heading</FrontSmallHeading>
+				${{ /* eslint-enable max-len */ }}
 				<FrontMediumHeading>This is a medium front line heading</FrontMediumHeading>
 				<FrontLargeHeading>This is a large front line heading</FrontLargeHeading>
 				<FrontXLargeHeading>This is a Xlarge front line heading</FrontXLargeHeading>

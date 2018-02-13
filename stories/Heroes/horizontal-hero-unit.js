@@ -18,7 +18,7 @@ const image = {
 const difficulty = 2;
 const timeCooking = 100;
 const timeTotal = 80;
-const title = 'Chilibiffer med grillet halloumi og kikertrøre';
+const title = 'Stekt kjøtt';
 /* eslint-enable max-len */
 
 export default () => (

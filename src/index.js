@@ -39,6 +39,7 @@ export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
+export { Tag                    } from './atoms/Tag';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
@@ -90,6 +91,7 @@ export { ThemeSelector           } from './atoms/ThemeSelector';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules
@@ -99,6 +101,7 @@ export { VerticalLinkBar         } from './molecules/VerticalLinkBar';
 export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
+export { TagSection                    } from './molecules/TagSection';
 export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';

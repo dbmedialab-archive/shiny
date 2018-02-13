@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { MainRecipe } from '../../src/organisms/MainRecipe';
 
 /* eslint-disable max-len */
@@ -141,8 +140,48 @@ const mockRecipe = {
 	],
 	tags: [
 		{
-			title: 'Brød',
-			url: 'https://www.dagbladet.no/mat/oppskrifter/tag/brod',
+			title: 'Middag',
+			url: '#',
+		},
+		{
+			title: 'Kjøtt',
+			url: '#',
+		},
+		{
+			title: 'Helg',
+			url: '#',
+		},
+		{
+			title: 'Biff',
+			url: '#',
+		},
+		{
+			title: 'Grill',
+			url: '#',
+		},
+		{
+			title: 'Saus',
+			url: '#',
+		},
+		{
+			title: 'Asparges',
+			url: '#',
+		},
+		{
+			title: 'Sopp',
+			url: '#',
+		},
+		{
+			title: 'Potet',
+			url: '#',
+		},
+		{
+			title: 'Puré',
+			url: '#',
+		},
+		{
+			title: 'Storfe',
+			url: '#',
 		},
 	],
 };
@@ -150,8 +189,6 @@ const mockRecipe = {
 
 export default () => (
 	<section>
-		<HugeHeading>Mat</HugeHeading>
-		<Heading>Main Recipe</Heading>
 		<MainRecipe recipe={mockRecipe} />
 	</section>
 );

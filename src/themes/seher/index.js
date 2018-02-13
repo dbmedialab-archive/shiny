@@ -3,7 +3,7 @@ import { darken, lighten } from 'polished';
 import { variables } from './variables';
 
 const colorsToShade= {
-	primary: '#d60000',
+	primary: '#e3000b',
 	secondary: '#f1ca3f',
 	tertiary: '#222222',
 
@@ -43,6 +43,7 @@ export default {
 
 		skinColors: {
 			splashBackground: 'grayTintLight',
+			splashBorder: 'darkness',
 			splashText: 'tertiary',
 		},
 	},
