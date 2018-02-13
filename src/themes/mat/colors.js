@@ -5,6 +5,8 @@ const colorsToShade= {
 	secondary: '#0096a3',
 	grey: '#4a4a4a',
 	type: '#333333',
+	white: '#ffffff',
+	red: '#ff5500',
 };
 
 // Creates 4 shades of each color in colorsToShade

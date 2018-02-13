@@ -11,7 +11,8 @@ const FheadStyle = props => css`
     color: ${props.theme.colors[props.textColor]};
     display: block;
     white-space: nowrap;
-    overflow: hidden;
+	overflow: hidden;
+	text-transform: uppercase;
     &:after {
 		content: '';
 		width: 100%;
@@ -21,8 +22,20 @@ const FheadStyle = props => css`
 		vertical-align: middle;
     }
 `;
-export const FrontSmallHeading = SmallHeading.extend`${FheadStyle}`;
-export const FrontMediumHeading = MediumHeading.extend`${FheadStyle}`;
+
+
+export const FrontSmallHeading = SmallHeading.extend`
+	${FheadStyle}
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		font-size: ${props => props.theme.variables.headingSmallSize};
+	}
+`;
+export const FrontMediumHeading = MediumHeading.extend`
+	${FheadStyle}
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		font-size: ${props => props.theme.variables.headingMediumSize};
+	}
+`;
 export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;
 export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
 export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;

@@ -13,7 +13,6 @@ import svgIcon from './typography/svgIcon';
 import iconWithText from './typography/iconWithText';
 import frontHeading from './typography/front-heading';
 
-
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';

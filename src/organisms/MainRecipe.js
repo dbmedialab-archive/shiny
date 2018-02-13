@@ -1,16 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Description        } from '../atoms/MainRecipe/Description';
+import { Description             } from '../atoms/MainRecipe/Description';
 import {
 	Grid,
 	Row,
 	Col,
 } from '..';
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
-import { IngredientsSection 	 } from '../molecules/MainRecipe/IngredientsSection';
-import { StepsSection       	 } from '../molecules/MainRecipe/StepsSection';
-import { Related            	 } from '../molecules/MatRelated/MatRelated';
+import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
+import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
+import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { AdTags                  } from './adTags';
 
@@ -27,7 +27,7 @@ const MainRecipe = props => (
 			title={props.recipe.title}
 		/>
 		<Row>
-			<Col md={6}>
+			<Col md={12} lg={6} sx={12}>
 				<DetailsSection
 					preferences={props.recipe.preferences}
 					allergies={props.recipe.allergies}
@@ -35,10 +35,8 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Col md={6}>
-				<Description>
-					<span>{ props.recipe.description.replace(/<\/?[^>]+>/g, '') }</span>
-				</Description>
+			<Col md={12} lg={6} sx={12}>
+				<Description dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
 			</Col>
 		</Row>
 		<Row>
