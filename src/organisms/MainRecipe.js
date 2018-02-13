@@ -13,7 +13,7 @@ import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSect
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
-import { FrontLargeHeading, FrontMediumHeading } from '../../lib/atoms/FrontHeading';
+import { FrontLargeHeading } from '../atoms/FrontHeading';
 
 const MainRecipe = props => (
 	<Grid>
