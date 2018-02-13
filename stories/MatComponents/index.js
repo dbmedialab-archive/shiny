@@ -8,6 +8,7 @@ import MainRecipe from './MainRecipe';
 export default () => {
 	storiesOf('Mat Components', module)
 		.add('Footer', Footer)
+		.add('MainRecipe', MainRecipe)
 		.add('Mat Description', description)
 		.add('Mat Steps', matSteps)
 		.add('Main Recipe', MainRecipe);

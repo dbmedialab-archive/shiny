@@ -11,6 +11,7 @@ const FheadStyle = props => css`
     color: ${props.theme.colors[props.textColor]};
     display: block;
     white-space: nowrap;
+    text-transform: uppercase;
     overflow: hidden;
     &:after {
 		content: '';
