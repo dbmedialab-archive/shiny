@@ -14,14 +14,11 @@ import {
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 
-const BoxShadowLinkBar = HorizontalLinkBar.extend`
-	box-shadow: 0 .2rem .4rem 0 rgba(203, 203, 203, 0.5);
-`;
-
 const LogoLink = styled(XSmallLinkBarLink)`
 	position: absolute;
 	top:0;
-	width: 10.6rem;
+	width: calc(2 * ${props => props.theme.variables.verticalBase});
+	transition: .2s width;
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		width: calc(4 * ${props => props.theme.variables.verticalBase});
@@ -40,10 +37,10 @@ const LinkBarBleedingLogo = LinkBarItem.extend`
 `;
 
 const linkProps = {
-	useUnderline: false,
+	useUnderline: true,
 	activeBackground: 'transparent',
-	activeTextColor: 'primary',
 	textColor: 'type',
+	skin: 'splashBorder',
 };
 
 const SeHerStory = () => (
@@ -61,60 +58,103 @@ const SeHerStory = () => (
 					<SeHerLogo />
 				</LogoLink>
 			</LinkBarBleedingLogo>
-			<SearchField
-				placeholder="Søk i oppskrifter..."
-				xs={false}
-				md
-			/>
+			<form action="https://www.seher.no/tekstarkiv/">
+				<SearchField
+					type="search"
+					name="q"
+					placeholder="Søk i Se&Hør..."
+					xs={false}
+					md
+				/>
+			</form>
 			<LinkBarDropdown
+				xs
 				md={false}
 				linkText="☰"
-				textColor="white"
+				textColor="type"
 			>
 				<VerticalLinkBar background="white">
-					<LinkBarLink linkText="Oppskrifter" url="#" {...linkProps} />
-					<LinkBarLink linkText="Trening" url="#" {...linkProps} />
-					<LinkBarLink linkText="Bli inspirert" url="#" {...linkProps} />
-					<LinkBarLink linkText="Populært nå" url="#" {...linkProps} />
+					<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
+					<LinkBarLink linkText="Reality" url="#" {...linkProps} />
+					<LinkBarLink linkText="Brudd & bryllup" url="#" {...linkProps} />
+					<LinkBarLink linkText="Hollywood" url="#" {...linkProps} />
+					<LinkBarLink linkText="Regal" url="#" {...linkProps} />
+					<LinkBarLink linkText="Video" url="#" {...linkProps} />
+					<LinkBarLink linkText="Sterke historier" url="#" {...linkProps} />
 				</VerticalLinkBar>
 			</LinkBarDropdown>
 		</HorizontalLinkBar>
-		<BoxShadowLinkBar
-			background="#eee"
+		<HorizontalLinkBar
+			background="#ececec"
 			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
-			justifyContent="center"
+			justifyContent="flex-end"
 		>
 			<LinkBarLink
-				linkText="Bryllup & brudd"
+				linkText="Rød løper"
+				url="#"
+				{...linkProps}
+				xs={false}
+				sm
+			/>
+			<LinkBarLink
+				linkText="Reality"
+				url="#"
+				{...linkProps}
+				xs={false}
+				sm
+			/>
+			<LinkBarLink
+				linkText="Brudd & bryllup"
 				url="#"
 				{...linkProps}
 				isActive
 				xs={false}
-				md
+				sm
 			/>
 			<LinkBarLink
-				linkText="Trinn-for-trinn-video"
+				linkText="Hollywood"
 				url="#"
 				{...linkProps}
 				xs={false}
 				md
 			/>
 			<LinkBarLink
-				linkText="Bli inspirert"
-				url="https://example.com"
+				linkText="Regal"
+				url="#"
 				{...linkProps}
 				xs={false}
-				md
+				lg
 			/>
 			<LinkBarLink
-				linkText="Populært nå"
+				linkText="Video"
+				url="#"
+				{...linkProps}
+				xs={false}
+				lg
+			/>
+			<LinkBarLink
+				linkText="Sterke historier"
 				url="https://example.com"
 				{...linkProps}
 				xs={false}
 				lg
 			/>
-		</BoxShadowLinkBar>
+			<LinkBarLink
+				linkText="Reise"
+				url="https://example.com"
+				{...linkProps}
+				xs={false}
+				lg
+			/>
+			<LinkBarLink
+				linkText="Rabattkoder"
+				url="https://example.com"
+				{...linkProps}
+				xs={false}
+				lg
+			/>
+		</HorizontalLinkBar>
 	</section>
 );
 
