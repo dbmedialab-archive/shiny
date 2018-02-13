@@ -7,12 +7,14 @@ import { Row } from '../../atoms/Row';
 export const Quantity = props => (
 	<section>
 		<Row>
-			<Col xs={3} md={2} lg={1}>
-				<span> {props.amount} </span>
-			</Col>
-			<Col xs={9} md={10} lg={11}>
+			<Col xs={3} md={3} lg={2}>
 				<span>
-					{props.name}
+					{props.amount} {props.type}
+				</span>
+			</Col>
+			<Col xs={9} md={9} lg={10}>
+				<span>
+					{props.title}
 				</span>
 			</Col>
 		</Row>
@@ -20,12 +22,14 @@ export const Quantity = props => (
 );
 
 Quantity.defaultProps = {
-	amount: '1 st',
-	name: 'margarin',
+	amount: '1',
+	title: 'margarin',
+	type: 'st',
 };
 
 Quantity.propTypes = {
 	amount: PropTypes.number,
-	name: PropTypes.string,
+	title: PropTypes.string,
+	type: PropTypes.string,
 };
 
