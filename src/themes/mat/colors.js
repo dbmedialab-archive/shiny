@@ -3,7 +3,7 @@ import { darken, lighten } from 'polished';
 const colorsToShade= {
 	primary: '#ff790a',
 	secondary: '#0096a3',
-	grey: '#4a4a4a',
+	grey: '#7a7a7a',
 	type: '#333333',
 	white: '#ffffff',
 	red: '#ff5500',

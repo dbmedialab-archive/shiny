@@ -140,8 +140,48 @@ const mockRecipe = {
 	],
 	tags: [
 		{
-			title: 'Brød',
-			url: 'https://www.dagbladet.no/mat/oppskrifter/tag/brod',
+			title: 'Middag',
+			url: '#',
+		},
+		{
+			title: 'Kjøtt',
+			url: '#',
+		},
+		{
+			title: 'Helg',
+			url: '#',
+		},
+		{
+			title: 'Biff',
+			url: '#',
+		},
+		{
+			title: 'Grill',
+			url: '#',
+		},
+		{
+			title: 'Saus',
+			url: '#',
+		},
+		{
+			title: 'Asparges',
+			url: '#',
+		},
+		{
+			title: 'Sopp',
+			url: '#',
+		},
+		{
+			title: 'Potet',
+			url: '#',
+		},
+		{
+			title: 'Puré',
+			url: '#',
+		},
+		{
+			title: 'Storfe',
+			url: '#',
 		},
 	],
 };

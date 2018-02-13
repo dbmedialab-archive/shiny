@@ -6,13 +6,14 @@ import {
 	Grid,
 	Row,
 	Col,
+	TagSection,
 } from '..';
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
 import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
-import { AdTags                  } from './adTags';
+import { FrontLargeHeading, FrontMediumHeading } from '../../lib/atoms/FrontHeading';
 
 const MainRecipe = props => (
 	<Grid>
@@ -44,10 +45,32 @@ const MainRecipe = props => (
 				<IngredientsSection servings={props.recipe.servings} ingredients={props.recipe.ingredients} />
 			</Col>
 			<Col md={6}>
-				<StepsSection steps={props.recipe.steps} />
+				<Row>
+					<StepsSection steps={props.recipe.steps} />
+				</Row>
+				<Row>
+					<Col xs={12}>
+						<FrontLargeHeading textColor="primary" >Trinn-for-trinn-video</FrontLargeHeading>
+					</Col>
+				</Row>
+				<Row>
+					<iframe
+						title="video"
+						width="100%"
+						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc"
+					/>
+
+				</Row>
+				<Row>
+					<Col xs={12}>
+						<FrontLargeHeading textColor="primary" lineColor="primary">TAGGER</FrontLargeHeading>
+					</Col>
+				</Row>
+				<Row>
+					<TagSection tags={props.recipe.tags} />
+				</Row>
 			</Col>
 		</Row>
-		<AdTags tags={props.recipe.tags} />
 		<Related
 			entities={[
 				{ name: 'difficulty', value: props.recipe.difficulty },
