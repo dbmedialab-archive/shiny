@@ -90,6 +90,7 @@ export { ThemeSelector           } from './atoms/ThemeSelector';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules

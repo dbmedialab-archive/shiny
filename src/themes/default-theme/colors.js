@@ -51,6 +51,7 @@ const colors = {
 
 	skinColors: {
 		splashBackground: 'primary',
+		splashBorder: 'primary',
 		splashText: 'white',
 
 		calmBackground: 'grayTintLight',

@@ -12,6 +12,14 @@ const getTextColor = ({
 export const LinkBarLinkBase = styled.a`
 	display: inline-block;
 
+	/*
+	 * With the 'xsmall', 'small', '' (default) and 'large' variants,
+	 * LinkBar items like LinkBarLinks, LinkBarButtons and LinkBarDropdowns
+	 * all take up the same vertical space. That way, you can stuff in
+	 * another item without changing the height of your LinkBar.
+	 *
+	 * Also used in media query overrides.
+	 */
 	${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
@@ -54,11 +62,13 @@ export const LinkBarLinkBase = styled.a`
 	&:focus {
 		background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
 		box-shadow: none;
+
 		&:hover {
 			background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
 		}
 	}
 
+	/* This is the underline feature */
 	&::after {
 		width: ${props =>
 		(
