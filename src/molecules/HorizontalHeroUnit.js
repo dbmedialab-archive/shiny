@@ -18,7 +18,7 @@ const LineWithoutBreak = Styled.div`
 `;
 
 const PaddedCol = withTheme(Styled(Col)`
-	padding: 10rem 0;
+	padding: 8rem 0;
 `);
 
 const difficulty = {
