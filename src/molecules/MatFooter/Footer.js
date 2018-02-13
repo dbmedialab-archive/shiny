@@ -4,7 +4,24 @@ import styled from 'styled-components';
 
 import { Row, Col, Grid } from '../..';
 import { Description } from '../../atoms/MainRecipe/Description';
-import { FooterMat } from '../../atoms/footerMat';
+
+const FooterMat = styled.div`
+    background-color: #4a4a4a;
+    color: ${props => props.theme.colors.white};
+    & p {
+        font-size: ${props => props.theme.variables.uiSmallSize};
+    }
+    
+    .Aller-logo {
+        margin-bottom: ${props => props.theme.variables.uiSmallSize};
+    }
+    
+    @media (max-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
+        p, img {
+            text-align: center;
+        }
+    }
+`;
 
 const LogoWrapper = styled(Description)`
 	padding: 0;
@@ -12,7 +29,8 @@ const LogoWrapper = styled(Description)`
 	height: auto;
 	& span {
 		display: inline-block;
-		background-color: #ff5500;
+		background-color: #D60000;
+		line-height: 0;
 	}
 `;
 

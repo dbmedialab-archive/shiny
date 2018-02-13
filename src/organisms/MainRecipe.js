@@ -57,7 +57,7 @@ const MainRecipe = props => (
 					<iframe
 						title="video"
 						width="100%"
-						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc"
+						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
 					/>
 
 				</Row>
