@@ -8,7 +8,7 @@ import {
 	LazyProgressiveImage,
 	Source,
 	IconBar,
-	UnderlinedLargeHeading,
+	UnderlinedHugeHeading,
 	UnderlinedMediumHeading,
 	UnderlinedSmallHeading,
 } from '../..';
@@ -18,7 +18,7 @@ const LineWithoutBreak = Styled.div`
 `;
 
 const PaddedCol = withTheme(Styled(Col)`
-	padding: ${props => props.theme.variables.verticalBase} 0;
+	padding: 8rem 0;
 `);
 
 const difficulty = {
@@ -68,7 +68,7 @@ const createHeroUnit = (size) => {
 		iconBarWidth = 9;
 		break;
 	case 'lg':
-		Heading = UnderlinedLargeHeading;
+		Heading = UnderlinedHugeHeading;
 		iconSize = 5;
 		textSize = 1.6;
 		iconBarWidth = 9;

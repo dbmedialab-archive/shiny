@@ -7,14 +7,14 @@ export default {
 	headingSmallLineHeight: '2.3rem',
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.9rem',
-	headingRegularSize: '2.2rem',
-	headingRegularLineHeight: '2.7rem',
-	headingLargeSize: '2.8rem',
-	headingLargeLineHeight: '3.3rem',
+	headingRegularSize: '2.0rem',
+	headingRegularLineHeight: '2.3rem',
+	headingLargeSize: '2.2rem',
+	headingLargeLineHeight: '2.7rem',
 
 
-	headingXlargeSize: '3.8rem',
-	headingXlargeLineHeight: '6.4rem',
-	headingHugeSize: '4.8rem',
-	headingHugeLineHeight: '6.3rem',
+	headingXlargeSize: '2.8rem',
+	headingXlargeLineHeight: '3.3rem',
+	headingHugeSize: '3.8rem',
+	headingHugeLineHeight: '6.4rem',
 };

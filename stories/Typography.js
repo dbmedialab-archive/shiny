@@ -3,6 +3,7 @@ import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-
 import label from './typography/label';
 import heading from './typography/heading';
 import cite from './typography/cite';
+import tag from './typography/tag';
 import publishedDate from './typography/publishedDate';
 import bodyText from './typography/bodyText';
 import lunchButton from './typography/lunch-button';
@@ -24,6 +25,7 @@ export default () => {
 		.add('Underlined Heading', underlinedHeading)
 		.add('Front Heading', frontHeading)
 		.add('Cite', cite)
+		.add('Tag', tag)
 		.add('Published date', publishedDate)
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
