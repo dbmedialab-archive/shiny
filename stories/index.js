@@ -14,6 +14,7 @@ import logos from './logos';
 import forms from './forms';
 import heroes from './Heroes';
 import raiting from './Raiting';
+import lists from './Lists';
 
 introduction();
 
@@ -35,3 +36,4 @@ matComponents();
 logos();
 forms();
 heroes();
+lists();
