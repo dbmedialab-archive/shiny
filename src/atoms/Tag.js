@@ -14,8 +14,10 @@ const TagItem = styled.a.attrs({
 	letter-spacing: 0.05rem;
 	text-align: center;
 	text-transform: uppercase;
-	text-decoration: none;
-	color: ${props => props.theme.colors.grey};
+	&, &:active, &:visited, &:hover {
+		text-decoration: none;
+		color: ${props => props.theme.colors.grey};
+	}
 `;
 
 const Tag = ({ url, title }) => <TagItem url={url}>{title}</TagItem>;
