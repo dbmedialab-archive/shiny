@@ -9,7 +9,7 @@ import { FooterMat } from '../../atoms/footerMat';
 const LogoWrapper = styled(Description)`
 	padding: 0;
 	background-color: inherit;
-	
+	height: auto;
 	& span {
 		display: inline-block;
 		background-color: #ff5500;
