@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Col } from '../..';
 
 const Description = styled(Col)`
-	padding: 0 10rem;
+	padding: 2rem 10rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
