@@ -21,7 +21,7 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	transition: .2s width;
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		width: calc(4 * ${props => props.theme.variables.verticalBase});
+		width: calc(4 * ${props => props.theme.variables.verticalBase} - .2rem);
 	}
 `;
 
