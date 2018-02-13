@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/react';
 
-import MainRecipe from './MainRecipe';
 import { Footer } from '../../src/organisms/Footer';
-import { AdTags } from '../../src/organisms/adTags';
-import { Steps } from '../../src/organisms/Steps';
+import description from './mat-description';
+import matSteps from './mat-steps';
+import MainRecipe from './MainRecipe';
 
 export default () => {
 	storiesOf('Mat Components', module)
-		.add('Main Recipe', MainRecipe)
 		.add('Footer', Footer)
-		.add('Ad and Tags', AdTags)
-		.add('Steps Recipe', Steps);
+		.add('MainRecipe', MainRecipe)
+		.add('Mat Description', description)
+		.add('Mat Steps', matSteps);
 };

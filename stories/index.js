@@ -13,6 +13,7 @@ import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
 import heroes from './Heroes';
+import raiting from './Raiting';
 
 introduction();
 
@@ -21,6 +22,7 @@ typography();
 editorialMarking();
 loaders();
 grid();
+raiting();
 
 // Molecules
 linkBars();
