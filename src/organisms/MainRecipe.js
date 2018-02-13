@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Description        } from '../atoms/MainRecipe/Description';
+import { Description             } from '../atoms/MainRecipe/Description';
 import {
 	Grid,
 	Row,

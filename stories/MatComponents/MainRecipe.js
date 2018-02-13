@@ -150,8 +150,6 @@ const mockRecipe = {
 
 export default () => (
 	<section>
-		<HugeHeading>Mat</HugeHeading>
-		<Heading>Main Recipe</Heading>
 		<MainRecipe recipe={mockRecipe} />
 	</section>
 );
