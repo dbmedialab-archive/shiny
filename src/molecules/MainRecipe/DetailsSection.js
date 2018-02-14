@@ -51,8 +51,12 @@ const DetailsSection  = ({
 		</Row>
 		<Row>
 			<Col xs={12} md={5} lg={5}>
-				<FrontSmallHeading>Passer For</FrontSmallHeading>
-				{ <IconBar entities={preferences}  textSize={1.2} iconSize={4} /> }
+				{ preferences.length ?
+					<React.Fragment>
+						<FrontSmallHeading>Passer For</FrontSmallHeading>
+						<IconBar entities={preferences}  textSize={1.2} iconSize={4} />
+					</React.Fragment>
+					:null}
 			</Col>
 			<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
 				<FrontSmallHeading>Vurdering</FrontSmallHeading>

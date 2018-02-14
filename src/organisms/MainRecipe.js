@@ -42,7 +42,7 @@ const MainRecipe = props => (
 		</Row>
 		<Row>
 			<Col md={6}>
-				<IngredientsSection servings={props.recipe.servings} ingredients={props.recipe.ingredients} />
+				<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
 			</Col>
 			<Col md={6}>
 				<Row>
