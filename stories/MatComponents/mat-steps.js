@@ -2,47 +2,52 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 import { RecipeStep } from '../../src/atoms/MainRecipe/RecipeStep';
+import { Row } from '../../src/atoms/Row';
+import { Col } from '../../src/atoms/Col';
 
 export default () => (
 	<section>
+		<Row>
+			<Col xs={12}>
+				<RecipeStep>
+						Ta ut innmaten. Dette er god basis
+						for saus, så ta vare på det.
+				</RecipeStep>
+				<RecipeStep>
+						Bind lårene sammen ved benknokene.
+						Sitter vingespissene på, før dem bak
+						ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+				</RecipeStep>
+				<RecipeStep>
+						Ta ut innmaten. Dette er god basis for saus,
+						så ta vare på det. Bind lårene sammen ved
+						benknokene. Sitter vingespissene på, før
+						dem bak ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+				</RecipeStep>
+				<RecipeStep>
+						Bind lårene sammen ved benknokene.
+						Sitter vingespissene på, før dem bak
+						ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+				</RecipeStep>
+				<RecipeStep>
+						Ta ut innmaten. Dette er god basis
+						for saus, så ta vare på det.
+						hviler under og støtter kalkunen.
+				</RecipeStep>
 
-		<RecipeStep>
-				Ta ut innmaten. Dette er god basis
-				for saus, så ta vare på det.
-		</RecipeStep>
-		<RecipeStep>
-				Bind lårene sammen ved benknokene.
-				Sitter vingespissene på, før dem bak
-				ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-		</RecipeStep>
-		<RecipeStep>
-				Ta ut innmaten. Dette er god basis for saus,
-				så ta vare på det. Bind lårene sammen ved
-				benknokene. Sitter vingespissene på, før
-				dem bak ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-		</RecipeStep>
-		<RecipeStep>
-				Bind lårene sammen ved benknokene.
-				Sitter vingespissene på, før dem bak
-				ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-		</RecipeStep>
-		<RecipeStep>
-				Ta ut innmaten. Dette er god basis
-				for saus, så ta vare på det.
-				hviler under og støtter kalkunen.
-		</RecipeStep>
+				<Code language="jsx">
+					{`import { RecipeSteps } from '@aller/shiny';
 
-		<Code language="jsx">
-			{`import { RecipeSteps } from '@aller/shiny';
-
-		<RecipeStep>
-			Some Text
-		</RecipeStep>
-			`}
-		</Code>
+				<RecipeStep>
+					Some Text
+				</RecipeStep>
+					`}
+				</Code>
+			</Col>
+		</Row>
 	</section>
 );
 
