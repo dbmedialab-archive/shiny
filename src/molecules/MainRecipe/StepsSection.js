@@ -1,33 +1,28 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-import { RecipeSteps } from '../../atoms/MainRecipe/StepsSection';
-
-class StepsSection extends React.Component {
-	getSteps() {
-		const { steps } = this.props;
-		return steps.map((item, index) => {
-			return <li key={index} > {item.description.replace(/<\/?[^>]+>/g, '')} </li>;
-		});
-	}
-
-	render() {
-		return (
-			<div>
-				<h1>SLIK GJØR DU</h1>
-				<RecipeSteps>
-					{ this.getSteps() }
-				</RecipeSteps>
-			</div>
-		);
-	}
-}
+import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
+/* eslint-disable max-len */
+const StepsSection  = ({ steps }) => (
+	<div>
+		<h1>SLIK GJØR DU</h1>
+		{
+			steps.map((item, index) => {
+				return <RecipeStep key={index} dangerouslySetInnerHTML={{ __html: item.description.replace(/<\/?[^>]+>/g, '') }} />;
+			})
+		}
+	</div>
+);
+/* eslint-enable max-len */
 
 StepsSection.propTypes = {
-	steps: propTypes.array, // eslint-disable-line react/forbid-prop-types
+	steps: PropTypes.arrayOf(PropTypes.shape({
+		description: PropTypes.string,
+	})),
 };
 StepsSection.defaultProps = {
 	steps: [],
 };
+
 
 export { StepsSection };
