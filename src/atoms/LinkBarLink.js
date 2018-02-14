@@ -22,10 +22,7 @@ const LinkBarLink = ({
 LinkBarLink.propTypes = {
 	isActive: propTypes.bool,
 	linkText: propTypes.string,
-	children: propTypes.oneOf([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]),
+	children: propTypes.node,
 	activeBackground: propTypes.string,
 	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
 	url: propTypes.string,
