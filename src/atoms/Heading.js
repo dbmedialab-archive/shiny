@@ -1,10 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Heading = styled.h1`
 	padding: 0;
 	color: ${props => props.theme.colors.type};
 	font-weight: 700;
 	font-family: ${props => props.theme.variables.headingsFont};
+	${props => props.ALLCAPS && css`
+		text-transform: uppercase;
+	`}
 
 	a {
 		color: inherit;
