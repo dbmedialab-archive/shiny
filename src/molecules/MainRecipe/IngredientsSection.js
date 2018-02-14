@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
 import { FontIcon } from '../../atoms/FontIcon';
-import { Quantity, Wrapper } from '../../atoms/MainRecipe/quantity';
+import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
 import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 
