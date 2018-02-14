@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DoubleArrow = props => (
-	<svg width="100%" height="100%" viewBox={props.viewBox} >
+	<svg width="100%" height="100%" viewBox="0 0 16 16" >
 		{/* eslint-disable max-len */}
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g fill={props.color}>
@@ -15,12 +15,10 @@ const DoubleArrow = props => (
 
 DoubleArrow.propTypes = {
 	color: PropTypes.string,
-	viewBox: PropTypes.string,
 };
 
 DoubleArrow.defaultProps = {
 	color: '#000',
-	viewBox: '-17 -35 50 50',
 };
 
 export { DoubleArrow };

@@ -94,7 +94,7 @@ export default () => (
 				<IconWithText name="vegetarian" text="vegetarian" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="doubleArrow" color="#000" viewBox="-17 -35 50 50" />
+				<IconWithText name="double-arrow" text="double-arrow" />
 			</Col>
 		</Row>
 	</section>

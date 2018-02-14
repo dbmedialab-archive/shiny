@@ -37,7 +37,7 @@ const SvgIcon = props => (
 					return <Vegan {...props} />;
 				case 'vegetarian':
 					return <Vegetarian {...props} />;
-				case 'doubleArrow':
+				case 'double-arrow':
 					return <DoubleArrow {...props} />;
 				default:
 					return null;
@@ -50,13 +50,11 @@ SvgIcon.propTypes = {
 	size: PropTypes.number,
 	name: PropTypes.string,
 	color: PropTypes.string,
-	viewBox: PropTypes.string,
 };
 SvgIcon.defaultProps = {
 	size: 5,
 	name: '',
 	color: '#000',
-	viewBox: '-17 -35 50 50',
 };
 
 export { SvgIcon };
