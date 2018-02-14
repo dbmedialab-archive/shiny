@@ -15,7 +15,7 @@ const Counter = Styled.span`
 	width: 38px;
 	display: inline-block;
 	height: 37px;
-	
+	text-align: center;
 	margin: 0 10px;
 	vertical-align: top;
 	border-radius: 2px;
