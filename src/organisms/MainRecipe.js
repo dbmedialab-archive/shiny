@@ -14,6 +14,8 @@ import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading } from '../atoms/FrontHeading';
+import { UnderlinedMediumHeading } from '../atoms/UnderlinedHeading';
+import { IconWithText } from '../atoms/IconWithText';
 
 const MainRecipe = props => (
 	<Grid>
@@ -79,6 +81,17 @@ const MainRecipe = props => (
 			]}
 			headerTitle={props.recipe.title}
 		/>
+		<Row center="xs">
+			<Col xs={6}>
+				<UnderlinedMediumHeading>
+					<span>VIS FLERE</span>
+				</UnderlinedMediumHeading>
+				<Col xs>
+					<IconWithText name="doubleArrow" color="#ff790a" viewBox="-15 -15 50 50" />
+				</Col>
+			</Col>
+		</Row>
+
 	</Grid>
 );
 

@@ -93,6 +93,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="vegetarian" text="vegetarian" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="doubleArrow" color="#000" viewBox="-17 -35 50 50" />
+			</Col>
 		</Row>
 	</section>
 );

@@ -11,10 +11,11 @@ import { Pork } from './Pork';
 import { TotalTime } from './TotalTime';
 import { Vegan } from './Vegan';
 import { Vegetarian } from './Vegetarian';
+import { DoubleArrow } from './DoubleArrow';
 
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size}>
+	<SvgIconWrapper size={props.size} fill={props.color} viewBox={props.viewBox} >
 		{
 			(() => {
 				switch (props.name) {
@@ -36,6 +37,8 @@ const SvgIcon = props => (
 					return <Vegan {...props} />;
 				case 'vegetarian':
 					return <Vegetarian {...props} />;
+				case 'doubleArrow':
+					return <DoubleArrow {...props} />;
 				default:
 					return null;
 				}
@@ -46,11 +49,14 @@ const SvgIcon = props => (
 SvgIcon.propTypes = {
 	size: PropTypes.number,
 	name: PropTypes.string,
-
+	color: PropTypes.string,
+	viewBox: PropTypes.string,
 };
 SvgIcon.defaultProps = {
 	size: 5,
 	name: '',
+	color: '#000',
+	viewBox: '-17 -35 50 50',
 };
 
 export { SvgIcon };
