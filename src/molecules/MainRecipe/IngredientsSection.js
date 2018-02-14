@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import { Row } from '../../atoms/Row';
 import { Col } from '../../atoms/Col';
 import { FontIcon } from '../../atoms/FontIcon';
-import { Quantity } from '../../atoms/MainRecipe/quantity';
+import { Quantity, Wrapper } from '../../atoms/MainRecipe/quantity';
 import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 
@@ -98,7 +98,7 @@ class IngredientsSection extends React.Component {
 				</Pers>
 				<Row>
 					<Col xs={9}>
-						{ this.getIngredients() }
+						<Wrapper> { this.getIngredients() } </Wrapper>
 					</Col>
 				</Row>
 				<AddCart>
