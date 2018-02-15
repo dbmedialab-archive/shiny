@@ -11,9 +11,9 @@ import {
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
 import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
-import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
-import { FrontLargeHeading } from '../atoms/FrontHeading';
+import { FrontLargeHeading       } from '../atoms/FrontHeading';
+import { MoreComponent                } from '../atoms/MainRecipe/MoreLine';
 
 const MainRecipe = props => (
 	<Grid>
@@ -71,14 +71,11 @@ const MainRecipe = props => (
 				</Row>
 			</Col>
 		</Row>
-		<Related
-			entities={[
-				{ name: 'difficulty', value: props.recipe.difficulty },
-				{ name: 'activity', value: props.recipe.timeCooking },
-				{ name: 'total-time', value: props.recipe.timeTotal },
-			]}
-			headerTitle={props.recipe.title}
-		/>
+		<Row center="xs">
+			<Col xs={12} md={6} lg={4}>
+				<MoreComponent />
+			</Col>
+		</Row>
 	</Grid>
 );
 
