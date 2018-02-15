@@ -5,10 +5,8 @@ import {
 } from '..';
 
 const PaddedGrid = Grid.extend`
-	padding:
-		calc(2*${props => props.theme.variables.verticalBase})
-		calc(1/2*${props => props.theme.variables.verticalBase})
-	;
+	padding-top: calc(2*${props => props.theme.variables.verticalBase});
+	padding-bottom: calc(2*${props => props.theme.variables.verticalBase});
 `;
 
 const StorybookThemeSwitcher = stories => <ThemeSwitcher><PaddedGrid>{stories()}</PaddedGrid></ThemeSwitcher>;
