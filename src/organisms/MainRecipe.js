@@ -13,8 +13,7 @@ import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSect
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
-import { UnderlinedMediumHeading } from '../atoms/UnderlinedHeading';
-import { SvgIcon                 } from '../atoms/SvgIcon';
+import { MoreComponent                } from '../atoms/MainRecipe/MoreLine';
 
 const MainRecipe = props => (
 	<Grid>
@@ -73,13 +72,8 @@ const MainRecipe = props => (
 			</Col>
 		</Row>
 		<Row center="xs">
-			<Col xs={6}>
-				<UnderlinedMediumHeading>
-					<span>VIS FLERE</span>
-				</UnderlinedMediumHeading>
-				<Col xs>
-					<SvgIcon name="double-arrow" size="2" color="#ff790a"  />
-				</Col>
+			<Col xs={12} md={6} lg={4}>
+				<MoreComponent />
 			</Col>
 		</Row>
 	</Grid>
