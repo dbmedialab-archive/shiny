@@ -15,7 +15,7 @@ import { DoubleArrow } from './DoubleArrow';
 
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size} fill={props.color} viewBox={props.viewBox} >
+	<SvgIconWrapper size={props.size} >
 		{
 			(() => {
 				switch (props.name) {
@@ -49,12 +49,10 @@ const SvgIcon = props => (
 SvgIcon.propTypes = {
 	size: PropTypes.number,
 	name: PropTypes.string,
-	color: PropTypes.string,
 };
 SvgIcon.defaultProps = {
 	size: 5,
 	name: '',
-	color: '#000',
 };
 
 export { SvgIcon };
