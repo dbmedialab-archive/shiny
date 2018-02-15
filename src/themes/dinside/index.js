@@ -7,6 +7,10 @@ const variables = {
 };
 
 const global = css`
+	html, html * {
+		box-sizing: border-box;
+	}
+
 	body {
 		font-family: ${variables.mainFont};
 		line-height: ${variables.verticalBase};
