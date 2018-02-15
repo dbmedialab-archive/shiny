@@ -21,6 +21,7 @@ const TrysilPlug = ({
 	offset,
 	sources,
 	ratio,
+	ALLCAPS,
 }) => (
 	<Article>
 		<BlockLink href={url}>
@@ -40,7 +41,7 @@ const TrysilPlug = ({
 						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
-			<Heading headline>{title}</Heading>
+			<Heading headline ALLCAPS={ALLCAPS}>{title}</Heading>
 			{subtitle && <p itemProp="description">{subtitle}</p>}
 			{labels &&
 				labels.map(label => (
@@ -64,6 +65,7 @@ TrysilPlug.propTypes = {
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
+	ALLCAPS: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
@@ -72,6 +74,7 @@ TrysilPlug.defaultProps = {
 	labels: [],
 	offset: 0,
 	sources: [],
+	ALLCAPS: false,
 };
 
 export { TrysilPlug };
