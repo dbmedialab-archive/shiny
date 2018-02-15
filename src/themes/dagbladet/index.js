@@ -9,7 +9,7 @@ const variables = {
 const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
 
-	html, html * {
+	* {
 		box-sizing: border-box;
 	}
 

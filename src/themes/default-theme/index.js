@@ -4,7 +4,7 @@ import colors from './colors';
 import flexboxgrid from './flexboxgrid';
 
 const global = css`
-	html, html * {
+	* {
 		box-sizing: border-box;
 	}
 

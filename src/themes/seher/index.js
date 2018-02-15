@@ -24,7 +24,7 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
 
-	html, html * {
+	* {
 		box-sizing: border-box;
 	}
 

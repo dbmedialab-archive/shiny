@@ -6,7 +6,7 @@ import variables from './variables';
 const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Cabin:600');
 
-	html, html * {
+	* {
 		box-sizing: border-box;
 	}
 

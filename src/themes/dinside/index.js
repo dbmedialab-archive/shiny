@@ -7,7 +7,7 @@ const variables = {
 };
 
 const global = css`
-	html, html * {
+	* {
 		box-sizing: border-box;
 	}
 
