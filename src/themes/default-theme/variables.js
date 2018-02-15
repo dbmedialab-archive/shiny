@@ -25,7 +25,6 @@ export default {
 	headingSmallLineHeight: '2.2rem',
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.4rem',
-	headingMediumLineHeight: '2.4rem',
 	headingRegularSize: '2.0rem',
 	headingRegularLineHeight: '2.7rem',
 	headingLargeSize: '2.4rem',
