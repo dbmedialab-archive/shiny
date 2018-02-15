@@ -17,18 +17,18 @@ const XSmallHeading = SmallHeading.extend`
 `;
 
 const CenteredContent = styled.div`
-text-align: center;
-display: inline-block;
+	text-align: center;
+	display: inline-block;
 `;
 
 const StyledLine = styled.div`
-width: 80%;
-border-bottom: 1px solid ${props => props.theme.colors.primary};
-margin-left: auto;
-margin-right: auto;
+	width: 80%;
+	border-bottom: 0.2rem solid ${props => props.theme.colors.primary};
+	margin-left: auto;
+	margin-right: auto;
 `;
 const ThickStyledLine = StyledLine.extend`
-border-width: 2px;
+	border-width: 0.2rem;
 `;
 
 const UnderlinedSmallHeading = ({ children }) => (
