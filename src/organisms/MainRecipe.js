@@ -12,7 +12,8 @@ import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection'
 import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
-import { FrontLargeHeading } from '../atoms/FrontHeading';
+import { FrontLargeHeading       } from '../atoms/FrontHeading';
+import { MoreComponent                } from '../atoms/MainRecipe/MoreLine';
 
 const MainRecipe = props => (
 	<Grid>
@@ -70,6 +71,13 @@ const MainRecipe = props => (
 				</Row>
 			</Col>
 		</Row>
+
+		<Row center="xs">
+			<Col xs={12} md={6} lg={4}>
+				<MoreComponent />
+			</Col>
+		</Row>
+
 	</Grid>
 );
 
