@@ -12,10 +12,10 @@ export const Wrapper = styled.div`
 export const Quantity = props => (
 	<section>
 		<Row>
-			<Col xs={3} md={3} lg={2}>
+			<Col xs={3} md={3} lg={3}>
 				<span>{props.amount} {props.type}</span>
 			</Col>
-			<Col xs={9} md={9} lg={10}>
+			<Col xs={9} md={9} lg={9}>
 				<span>
 					{props.title}
 				</span>

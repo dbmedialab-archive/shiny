@@ -28,16 +28,16 @@ const mockRecipe = {
 	rating: 0,
 	preferences: [
 		{
-			slug: 'Vegan',
-			title: 'vegan',
+			slug: 'vegan',
+			title: 'Vegan',
 		},
 		{
-			slug: 'Vegetar',
-			title: 'vegetarian',
+			slug: 'vegetarian',
+			title: 'Vegetar',
 		},
 		{
-			slug: 'Uten svin',
-			title: 'uten-svinekjott',
+			slug: 'uten-svinekjott',
+			title: 'Uten svin',
 		},
 	],
 	allergies: [
@@ -46,8 +46,8 @@ const mockRecipe = {
 			title: 'Gluten',
 		},
 		{
-			slug: 'skalldyr',
-			title: 'Skalldyr',
+			slug: 'fisk',
+			title: 'Fisk',
 		},
 	],
 	parts: [
