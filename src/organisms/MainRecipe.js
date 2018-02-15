@@ -11,7 +11,6 @@ import {
 import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
 import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
-import { Related                 } from '../molecules/MatRelated/MatRelated';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading } from '../atoms/FrontHeading';
 
@@ -71,14 +70,6 @@ const MainRecipe = props => (
 				</Row>
 			</Col>
 		</Row>
-		<Related
-			entities={[
-				{ name: 'difficulty', value: props.recipe.difficulty },
-				{ name: 'activity', value: props.recipe.timeCooking },
-				{ name: 'total-time', value: props.recipe.timeTotal },
-			]}
-			headerTitle={props.recipe.title}
-		/>
 	</Grid>
 );
 

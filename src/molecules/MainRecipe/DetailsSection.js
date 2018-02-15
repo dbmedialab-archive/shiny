@@ -29,42 +29,56 @@ const DetailsSection  = ({
 	preferences,
 	author,
 	rating,
-}) => (
-	<DetailsSectionWrapper>
-		<Row>
-			<Col md={12}>
-				<DetailsSectionInfo>
+}) => {
+	allergies = allergies.map((allergyItem) => {
+		return {
+			text: allergyItem.title,
+			name: allergyItem.slug,
+		};
+	});
+	preferences = preferences.map((preferenceItem) => {
+		return {
+			text: preferenceItem.title,
+			name: preferenceItem.slug,
+		};
+	});
+	return (
+		<DetailsSectionWrapper>
+			<Row>
+				<Col md={12}>
+					<DetailsSectionInfo>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley
-				</DetailsSectionInfo>
-			</Col>
-		</Row>
-		<Row>
-			<Col xs={12} md={5} lg={5}>
-				<FrontSmallHeading>Inneholder</FrontSmallHeading>
-				{ <IconBar entities={allergies} textSize={1.2}	iconSize={4} /> }
-			</Col>
-			<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
-				<FrontSmallHeading>Oppskrift</FrontSmallHeading>
-				<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.urlMPortrait} />
-			</Col>
-		</Row>
-		<Row>
-			<Col xs={12} md={5} lg={5}>
-				{ preferences.length ?
-					<React.Fragment>
-						<FrontSmallHeading>Passer For</FrontSmallHeading>
-						<IconBar entities={preferences}  textSize={1.2} iconSize={4} />
-					</React.Fragment>
-					:null}
-			</Col>
-			<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
-				<FrontSmallHeading>Vurdering</FrontSmallHeading>
-				<StarsRating count={5} size={45} value={rating} />
-			</Col>
-		</Row>
-	</DetailsSectionWrapper>
-);
+					</DetailsSectionInfo>
+				</Col>
+			</Row>
+			<Row>
+				<Col xs={12} md={5} lg={5}>
+					<FrontSmallHeading>Inneholder</FrontSmallHeading>
+					<IconBar entities={allergies} textSize={1.2} iconSize={5} />
+				</Col>
+				<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
+					<FrontSmallHeading>Oppskrift</FrontSmallHeading>
+					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
+				</Col>
+			</Row>
+			<Row>
+				<Col xs={12} md={5} lg={5}>
+					{ preferences.length ?
+						<React.Fragment>
+							<FrontSmallHeading>Passer For</FrontSmallHeading>
+							<IconBar entities={preferences}  textSize={1.2} iconSize={5} />
+						</React.Fragment>
+						:null}
+				</Col>
+				<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
+					<FrontSmallHeading>Vurdering</FrontSmallHeading>
+					<StarsRating count={5} size={45} value={rating} />
+				</Col>
+			</Row>
+		</DetailsSectionWrapper>
+	);
+};
 
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,

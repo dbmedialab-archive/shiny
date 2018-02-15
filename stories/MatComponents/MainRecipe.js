@@ -16,7 +16,7 @@ const mockRecipe = {
 			profileImage: {
 				seoFilename: '3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
 				title: 'Joakim Strand er daglig leder i Nord bakeri, Oslo',
-				urlMPortrait: 'https://www.dagbladet.no/mat/bilder/c/m/3/3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
+				mediumPortrait: 'https://www.dagbladet.no/mat/bilder/c/m/3/3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
 			},
 		},
 	],
@@ -28,16 +28,16 @@ const mockRecipe = {
 	rating: 0,
 	preferences: [
 		{
-			text: 'Vegan',
-			name: 'vegan',
+			slug: 'Vegan',
+			title: 'vegan',
 		},
 		{
-			text: 'Vegetar',
-			name: 'vegetarian',
+			slug: 'Vegetar',
+			title: 'vegetarian',
 		},
 		{
-			text: 'Uten svin',
-			name: 'pork',
+			slug: 'Uten svin',
+			title: 'uten-svinekjott',
 		},
 	],
 	allergies: [
