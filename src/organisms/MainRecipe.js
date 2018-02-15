@@ -71,13 +71,6 @@ const MainRecipe = props => (
 				</Row>
 			</Col>
 		</Row>
-
-		<Row center="xs">
-			<Col xs={12} md={6} lg={4}>
-				<MoreComponent />
-			</Col>
-		</Row>
-
 	</Grid>
 );
 
