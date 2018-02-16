@@ -76,13 +76,13 @@ export default () => (
 				<IconWithText name="nut" text="nut" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="fish" text="fish" />
+				<IconWithText name="fish" text="fish (fisk)" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="gluten" text="gluten" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="pork" text="pork" />
+				<IconWithText name="pork" text="pork (uten-svinekjott)" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="total-time" text="total-time" />

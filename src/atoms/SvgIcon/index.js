@@ -26,10 +26,12 @@ const SvgIcon = props => (
 				case 'nut':
 					return <Nut {...props} />;
 				case 'fish':
+				case 'fisk':
 					return <Fish {...props} />;
 				case 'gluten':
 					return <Gluten {...props} />;
 				case 'pork':
+				case 'uten-svinekjott':
 					return <Pork {...props} />;
 				case 'total-time':
 					return <TotalTime {...props} />;

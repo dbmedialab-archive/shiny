@@ -13,7 +13,6 @@ import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSect
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
-import { MoreComponent                } from '../atoms/MainRecipe/MoreLine';
 
 const MainRecipe = props => (
 	<Grid>
@@ -42,7 +41,7 @@ const MainRecipe = props => (
 		</Row>
 		<Row>
 			<Col md={6}>
-				<IngredientsSection servings={props.recipe.servings} ingredients={props.recipe.ingredients} />
+				<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
 			</Col>
 			<Col md={6}>
 				<Row>
@@ -69,11 +68,6 @@ const MainRecipe = props => (
 				<Row>
 					<TagSection tags={props.recipe.tags} />
 				</Row>
-			</Col>
-		</Row>
-		<Row center="xs">
-			<Col xs={12} md={6} lg={4}>
-				<MoreComponent />
 			</Col>
 		</Row>
 	</Grid>
