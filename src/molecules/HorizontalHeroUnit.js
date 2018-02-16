@@ -80,12 +80,12 @@ const createHeroUnit = (size) => {
 	const HeroUnit = (props) => {
 		return (
 			<Row>
-				<Col xs={8}>
+				<Col xs={12} md={8} lg={8}>
 					<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
 						<Source srcSet={props.image.placeholder} />
 					</LazyProgressiveImage>
 				</Col>
-				<Col xs={4}>
+				<Col xs={12} md={4} lg={4}>
 					<Row center="xs">
 						<PaddedCol xs>
 							<Row center="xs">

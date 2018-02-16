@@ -45,7 +45,7 @@ const DetailsSection  = ({
 	return (
 		<DetailsSectionWrapper>
 			<Row>
-				<Col md={12}>
+				<Col md={12} xs={12} lg={8}>
 					<DetailsSectionInfo>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley

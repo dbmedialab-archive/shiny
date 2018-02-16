@@ -16,16 +16,20 @@ import { FrontLargeHeading       } from '../atoms/FrontHeading';
 
 const MainRecipe = props => (
 	<Grid>
-		<LargeHorizontalHeroUnit
-			image={{
-				src: props.recipe.images[0].largeLandscape,
-				placeholder: props.recipe.images[0].largeLandscape,
-			}}
-			difficulty={props.recipe.difficulty}
-			timeCooking={props.recipe.timeCooking}
-			timeTotal={props.recipe.timeCooking}
-			title={props.recipe.title}
-		/>
+		<Row>
+			<Col xs={12}>
+				<LargeHorizontalHeroUnit
+					image={{
+						src: props.recipe.images[0].largeLandscape,
+						placeholder: props.recipe.images[0].largeLandscape,
+					}}
+					difficulty={props.recipe.difficulty}
+					timeCooking={props.recipe.timeCooking}
+					timeTotal={props.recipe.timeCooking}
+					title={props.recipe.title}
+				/>
+			</Col>
+		</Row>
 		<Row>
 			<Col md={6} lg={6} xs={12}>
 				<DetailsSection
@@ -55,12 +59,13 @@ const MainRecipe = props => (
 					</Col>
 				</Row>
 				<Row>
-					<iframe
-						title="video"
-						width="100%"
-						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
-					/>
-
+					<Col>
+						<iframe
+							title="video"
+							width="100%"
+							src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
+						/>
+					</Col>
 				</Row>
 				<Row>
 					<Col xs={12}>
