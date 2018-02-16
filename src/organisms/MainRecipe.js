@@ -58,8 +58,8 @@ const MainRecipe = props => (
 						<FrontLargeHeading textColor="primary" >Trinn-for-trinn-video</FrontLargeHeading>
 					</Col>
 				</Row>
-				<Row>
-					<Col>
+				<Row center="xs">
+					<Col xs={12} md={6} lg={6}>
 						<iframe
 							title="video"
 							width="100%"
