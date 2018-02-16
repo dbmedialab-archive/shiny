@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Col } from '../..';
 
 const Description = styled(Col)`
-	padding: 2rem 10rem;
+	padding: 2rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -13,9 +13,9 @@ const Description = styled(Col)`
 	text-align: center;
 	color: ${props => props.theme.colors[props.textColor]};
 	background-color: ${props => props.theme.colors[props.bgColor]};
-	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
-		padding: 0 1rem;
-	}
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
+		padding: 2rem 10rem;
+ 	}
 `;
 
 Description.defaultProps = {

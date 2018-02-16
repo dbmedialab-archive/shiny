@@ -38,9 +38,15 @@ const theme = {
 		gutterWidth: stripUnit(variables.horizontalBase), // rem
 		outerMargin: 2, // rem
 		container: {
-			sm: 50.0, // rem
-			md: 66.0, // rem
-			lg: 148.0,  // rem
+			sm: 71, // rem
+			md: 120.0, // rem
+			lg: 144.0,  // rem
+		},
+		breakpoints: {
+			xs: 0,  // em
+			sm: 48, // em 768px
+			md: 75, // em 1200px
+			lg: 90,  // em 1440px
 		},
 	},
 };

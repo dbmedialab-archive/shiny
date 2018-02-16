@@ -16,7 +16,7 @@ import { FrontLargeHeading       } from '../atoms/FrontHeading';
 import { Container } from '../atoms/MainRecipe/youtubeFrame';
 
 const MainRecipe = props => (
-	<Grid>
+	<Grid fluid>
 		<Row>
 			<Col xs={12}>
 				<LargeHorizontalHeroUnit
