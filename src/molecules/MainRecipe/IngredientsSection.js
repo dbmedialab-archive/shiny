@@ -98,7 +98,7 @@ class IngredientsSection extends React.Component {
 					<span>PERSONER</span>
 				</Pers>
 				<Row>
-					<Col xs={9}>
+					<Col xs={12} md={6} lg={6}>
 						<Wrapper> { this.getIngredients() } </Wrapper>
 					</Col>
 				</Row>
