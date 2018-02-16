@@ -14,7 +14,7 @@ class IngredientsSection extends React.Component {
 
 		this.state = {
 			servings: props.servings || 0,
-			ingredients: props.ingredients || [],
+			parts: props.parts || [],
 		};
 
 		this.incrementServings = this.incrementServings.bind(this);
@@ -22,17 +22,18 @@ class IngredientsSection extends React.Component {
 	}
 
 	getIngredients() {
-		const { ingredients } = this.state;
-
-		return ingredients.map((item, index) => {
-			return (
-				<Quantity
-					key={index}
-					amount={this.calculateAmount(item.pivot.amount)}
-					type={item.pivot.type}
-					title={item.title}
-				/>
-			);
+		const { parts } = this.state;
+		return parts.map((ingredientList) => {
+			return ingredientList.ingredients.map((item, index) => {
+				return (
+					<Quantity
+						key={index}
+						amount={this.calculateAmount(item.amount)}
+						type={item.type}
+						title={item.title}
+					/>
+				);
+			});
 		});
 	}
 
@@ -114,7 +115,7 @@ class IngredientsSection extends React.Component {
 IngredientsSection.propTypes = {
 	servings: propTypes.number,
 	baseServings: propTypes.number,
-	ingredients: propTypes.arrayOf(propTypes.shape({
+	parts: propTypes.arrayOf(propTypes.arrayOf(propTypes.shape({
 		title: propTypes.string,
 		ingredients: propTypes.arrayOf(propTypes.shape({
 			title: propTypes.string,
@@ -124,12 +125,12 @@ IngredientsSection.propTypes = {
 				type: propTypes.string,
 			}),
 		})),
-	})),
+	}))),
 };
 IngredientsSection.defaultProps = {
 	servings: 1,
 	baseServings: 1,
-	ingredients: [],
+	parts: [],
 };
 
 export { IngredientsSection };
