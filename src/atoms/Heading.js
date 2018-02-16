@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
-const Heading = styled.h1`
+const ProtoHeading = styled.h1`
 	padding: 0;
 	color: ${props => props.theme.colors.type};
 	font-weight: 700;
@@ -15,7 +16,7 @@ const Heading = styled.h1`
 	}
 `;
 
-const SmallHeading = Heading.extend`
+const SmallHeading = ProtoHeading.extend`
 	font-size: ${props => props.theme.variables.headingSmallSize};
 	line-height: ${props => props.theme.variables.headingSmallLineHeight};
 
@@ -25,7 +26,7 @@ const SmallHeading = Heading.extend`
  	}
 `;
 
-const MediumHeading = Heading.extend`
+const MediumHeading = ProtoHeading.extend`
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	line-height: ${props => props.theme.variables.headingMediumLineHeight};
 
@@ -35,7 +36,7 @@ const MediumHeading = Heading.extend`
 	}
 `;
 
-const LargeHeading = Heading.extend`
+const LargeHeading = ProtoHeading.extend`
 	font-size: ${props => props.theme.variables.headingRegularSize};
 	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 
@@ -45,7 +46,7 @@ const LargeHeading = Heading.extend`
 	}
 `;
 
-const XLargeHeading = Heading.extend`
+const XLargeHeading = ProtoHeading.extend`
 	font-size: ${props => props.theme.variables.headingRegularSize};
 	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 
@@ -55,7 +56,7 @@ const XLargeHeading = Heading.extend`
 	}
 `;
 
-const HugeHeading = Heading.extend`
+const HugeHeading = ProtoHeading.extend`
 	font-size: ${props => props.theme.variables.headingLargeSize};
 	line-height: ${props => props.theme.variables.headingLargeLineHeight};
 
@@ -65,8 +66,25 @@ const HugeHeading = Heading.extend`
 	}
 `;
 
+const Heading = ({ size, ...rest }) => {
+	switch (size) {
+	case 'small':
+		return <SmallHeading {...rest} />;
+	case 'medium':
+		return <MediumHeading {...rest} />;
+	case 'large':
+		return <LargeHeading {...rest} />;
+	case 'xlarge':
+		return <XLargeHeading {...rest} />;
+	case 'huge':
+		return <HugeHeading {...rest} />;
+	default:
+		return <LargeHeading {...rest} />;
+	}
+};
+
 export {
-	LargeHeading as Heading,
+	Heading,
 
 	SmallHeading,
 	MediumHeading,
