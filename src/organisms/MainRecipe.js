@@ -13,6 +13,7 @@ import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSect
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
+import { Container } from '../atoms/MainRecipe/Iframe';
 
 const MainRecipe = props => (
 	<Grid>
@@ -59,12 +60,15 @@ const MainRecipe = props => (
 					</Col>
 				</Row>
 				<Row center="xs">
-					<Col xs={12} md={6} lg={6}>
-						<iframe
-							title="video"
-							width="100%"
-							src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
-						/>
+					<Col xs>
+						<Container>
+							<iframe
+								title="video"
+								width="100%"
+								src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
+							/>
+						</Container>
+
 					</Col>
 				</Row>
 				<Row>
