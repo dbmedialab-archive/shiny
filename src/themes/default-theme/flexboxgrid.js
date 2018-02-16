@@ -7,9 +7,9 @@ const flexboxgrid = {
 	outerMargin: 1.5, // rem
 	mediaQuery: 'only screen',
 	container: {
-		sm: 46.0, // rem
-		md: 61.0, // rem
-		lg: 98.0,  // rem
+		sm: 49.0, // rem
+		md: 64.0, // rem
+		lg: 101.0,  // rem
 	},
 	breakpoints: {
 		xs: 0,  // em

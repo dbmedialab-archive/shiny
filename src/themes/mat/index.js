@@ -6,6 +6,10 @@ import variables from './variables';
 const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Cabin:600');
 
+	* {
+		box-sizing: border-box;
+	}
+
 	body {
 		padding: 0;
 		margin: 0;
@@ -34,9 +38,9 @@ const theme = {
 		gutterWidth: stripUnit(variables.horizontalBase), // rem
 		outerMargin: 2, // rem
 		container: {
-			sm: 46.0, // rem
-			md: 61.0, // rem
-			lg: 144.0,  // rem
+			sm: 50.0, // rem
+			md: 66.0, // rem
+			lg: 148.0,  // rem
 		},
 	},
 };

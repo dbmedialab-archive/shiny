@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
@@ -12,10 +12,26 @@ const StyledAdWrapper = AdWrapper.extend`
 const StickyWrapper = styled.div`
 	position: absolute;
 	top: 0;
-	${props => (props.sticky === 'right' ? 'left: calc(50% + 490px + 15px);' : 'right: calc(50% + 490px + 15px);')}
+
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
+		${props => (
+		props.sticky === 'right'
+			? 'left: 100%;'
+			: 'right: 100%;'
+	)}}
+	${props => ['sm', 'md', 'lg'].map(size => css`
+		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
+			${props => (
+		props.sticky === 'right'
+			? `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+			: `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+	)}}
+
+		`)}
+
 	height: 100%;
-	width: 300px;
-`;
+	width: 30.0rem;
+	`;
 
 
 class StickyAd extends Component {
