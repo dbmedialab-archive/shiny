@@ -13,21 +13,26 @@ import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSect
 import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
+import { Container } from '../atoms/MainRecipe/youtubeFrame';
 
 const MainRecipe = props => (
 	<Grid>
-		<LargeHorizontalHeroUnit
-			image={{
-				src: props.recipe.images[0].largeLandscape,
-				placeholder: props.recipe.images[0].largeLandscape,
-			}}
-			difficulty={props.recipe.difficulty}
-			timeCooking={props.recipe.timeCooking}
-			timeTotal={props.recipe.timeCooking}
-			title={props.recipe.title}
-		/>
 		<Row>
-			<Col md={12} lg={6} sx={12}>
+			<Col xs={12}>
+				<LargeHorizontalHeroUnit
+					image={{
+						src: props.recipe.images[0].largeLandscape,
+						placeholder: props.recipe.images[0].largeLandscape,
+					}}
+					difficulty={props.recipe.difficulty}
+					timeCooking={props.recipe.timeCooking}
+					timeTotal={props.recipe.timeCooking}
+					title={props.recipe.title}
+				/>
+			</Col>
+		</Row>
+		<Row>
+			<Col md={6} lg={6} xs={12}>
 				<DetailsSection
 					preferences={props.recipe.preferences}
 					allergies={props.recipe.allergies}
@@ -35,30 +40,36 @@ const MainRecipe = props => (
 					raiting={props.recipe.rating}
 				/>
 			</Col>
-			<Col md={12} lg={6} sx={12}>
+			<Col md={6} lg={6} xs={12}>
 				<Description dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
 			</Col>
 		</Row>
 		<Row>
-			<Col md={6}>
+			<Col md={6} xs={12} lg={6}>
 				<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
 			</Col>
-			<Col md={6}>
+			<Col md={6} xs={12} lg={6}>
 				<Row>
-					<StepsSection steps={props.recipe.steps} />
+					<Col xs={12} >
+						<StepsSection steps={props.recipe.steps} />
+					</Col>
 				</Row>
 				<Row>
 					<Col xs={12}>
 						<FrontLargeHeading textColor="primary" >Trinn-for-trinn-video</FrontLargeHeading>
 					</Col>
 				</Row>
-				<Row>
-					<iframe
-						title="video"
-						width="100%"
-						src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
-					/>
+				<Row center="xs">
+					<Col xs>
+						<Container>
+							<iframe
+								title="video"
+								width="100%"
+								src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
+							/>
+						</Container>
 
+					</Col>
 				</Row>
 				<Row>
 					<Col xs={12}>
