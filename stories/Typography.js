@@ -1,4 +1,5 @@
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
+import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../src/storybook-decorators/PaddedGrid';
 
 import label from './typography/label';
 import heading from './typography/heading';
@@ -20,6 +21,7 @@ import frontHeading from './typography/front-heading';
 
 export default () => {
 	storiesOf('Typography', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('Underlined Heading', underlinedHeading)

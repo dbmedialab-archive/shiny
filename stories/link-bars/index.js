@@ -1,5 +1,6 @@
 // Dependencies
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
+import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 // Stories
 import { VerticalLinkBarStory } from './VerticalLinkBarStory';
@@ -25,6 +26,7 @@ import { DagbladetStory } from './DagbladetStory';
 
 export default () => {
 	storiesOf('Link bars', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('VerticalLinkBar', VerticalLinkBarStory)
 		.add('HorizontalLinkBar', HorizontalLinkBarStory)
 		.add('... with dropdowns', DropdownStory)
