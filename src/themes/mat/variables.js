@@ -1,5 +1,5 @@
 export default {
-	mainFont: '"Cabin",sans-serif',
+	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Cabin",sans-serif',
 	horizontalBase: '1rem',
 
