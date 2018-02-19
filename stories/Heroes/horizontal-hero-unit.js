@@ -23,7 +23,6 @@ const image = {
 };
 
 const title = 'Stekt kjøtt';
-/* eslint-enable max-len */
 
 export default () => (
 	<section>
@@ -32,6 +31,10 @@ export default () => (
 				<Col xs={12}>
 					<HugeHeading>Recipe Hero Unit</HugeHeading>
 					<p>Showcase a large preview image and a header with an optional IconBar.</p>
+					<p>
+						This component returns a <code>Row</code>, so you might want to use it inside a <code>Grid</code> or
+						<code>Col</code> element.
+					</p>
 
 					<Heading>Demo</Heading>
 					<LargeHorizontalHeroUnit
