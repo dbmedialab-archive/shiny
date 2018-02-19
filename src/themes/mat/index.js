@@ -13,12 +13,7 @@ const global = css`
 	body {
 		padding: 0;
 		margin: 0;
-		text-align: left;
-		letter-spacing: normal;
 		font-family: ${variables.mainFont};
-		font-weight: 600;
-		font-style: normal;
-		line-height: 1.22;
 		position: relative;
 		cursor: auto;
 	}
