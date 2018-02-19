@@ -17,6 +17,11 @@ import { Container } from '../atoms/MainRecipe/youtubeFrame';
 
 const Fragment = ({ children }) => children;
 
+const StepsGrid = Grid.extend`
+	padding-top: calc(3 * ${props => props.theme.variables.verticalBase});
+	padding-bottom: calc(3 * ${props => props.theme.variables.verticalBase});
+`;
+
 const MainRecipe = props => (
 	<Fragment>
 		<Grid fluid>
@@ -48,7 +53,7 @@ const MainRecipe = props => (
 				</Col>
 			</Row>
 		</Grid>
-		<Grid>
+		<StepsGrid>
 			<Row>
 				<Col md={6} xs={12} lg={6}>
 					<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
@@ -86,7 +91,7 @@ const MainRecipe = props => (
 					</Row>
 				</Col>
 			</Row>
-		</Grid>
+		</StepsGrid>
 	</Fragment>
 );
 

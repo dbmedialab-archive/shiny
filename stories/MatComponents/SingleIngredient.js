@@ -1,12 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import { Grid, Row, Col, HugeHeading, Heading } from '../..';
-import { PaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
+import {
+	Grid,
+	Row,
+	Col,
+	HugeHeading,
+	Heading,
+	FigCaption,
+	SmallHorizontalHeroUnit,
+	LargeHorizontalHeroUnit,
+	FrontSmallHeading,
+	FrontLargeHeading,
+} from '../..';
+import { Description } from '../../src/atoms/MainRecipe/Description';
+import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
+
+const description = 'Mandelpotet er en delikatessepotet som dyrkes over store deler av landet, også langt oppe i ' +
+	'fjellbygdene og nordpå. Knollene er små og avlange og oftest litt bøyd. Skallet er hvitt og jevnt med grunne ' +
+	'grohull. Kjøttet er gult med karakteristisk smak. Mandelpotet er en selvfølge til rakfisk, lutefisk, ribbe, ' +
+	'vilt og spesielt godt egnet til bakst og potetmos.';
+
+const DetailsCol = Col.extend`
+	padding-bottom: calc(2 * ${props => props.theme.variables.verticalBase});
+`;
+
+const RelatedSection = styled.section`
+	padding-top: calc(3 * ${props => props.theme.variables.verticalBase});
+	padding-bottom: calc(3 * ${props => props.theme.variables.verticalBase});
+
+	background-color: ${props => props.theme.colors.grayTintLight};
+`;
 
 const SingleIngredientStory = ({ ...rest }) => (
 	<section>
-		<PaddedGrid>
+		<StorybookGrid>
 			<Row>
 				<Col xs={12}>
 					<HugeHeading>Single Ingredient</HugeHeading>
@@ -14,17 +43,118 @@ const SingleIngredientStory = ({ ...rest }) => (
 					<Heading>Demo</Heading>
 				</Col>
 			</Row>
-		</PaddedGrid>
+		</StorybookGrid>
 
 		<Grid fluid>
+			<LargeHorizontalHeroUnit
+				image={{
+					placeholderImage: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
+					src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
+				}}
+				title="Mandelpotet"
+			/>
 			<Row>
-				<Col xs={12} md={6} />
+				<DetailsCol xs>
+					<Row>
+						<Col xs md={8} mdOffset={2}>
+							<FigCaption>Foto: BON APPETIT / NTB SCANPIX.</FigCaption>
+						</Col>
+					</Row>
+					<Row>
+						<Col xs md={3} mdOffset={2}>
+							<FrontSmallHeading>Oppbevaring</FrontSmallHeading>
+							<p>Kjølig, ved 4–8 °C.</p>
+							<FrontSmallHeading>Holdbarhet</FrontSmallHeading>
+							<p>Lang holdbarhet.</p>
+							<FrontSmallHeading>Opprinnelse</FrontSmallHeading>
+							<p>Mellom-Amerika</p>
+						</Col>
+						<Col xs md={3} mdOffset={2}>
+							<FrontSmallHeading>Næringsinnhold</FrontSmallHeading>
+							<ul>
+								<li>kcal 78</li>
+								<li>Proteiner 0.1</li>
+								<li>Fett 1.8</li>
+								<li>Karbohydrater</li>
+							</ul>
+							<FrontSmallHeading>Norsk sesong</FrontSmallHeading>
+							<p>Juli – november.</p>
+						</Col>
+					</Row>
+				</DetailsCol>
+				<Col xs>
+					<Description>{description}</Description>
+				</Col>
 			</Row>
 		</Grid>
 
-		<Grid>
+		<RelatedSection>
+			<Grid>
+				<Row>
+					<Col xs>
+						<FrontLargeHeading
+							textColor="secondary"
+							lineColor="secondary"
+						>Oppskrifter med mandelpotet
+						</FrontLargeHeading>
+					</Col>
+				</Row>
+				<Row>
+					<Col xs={12} sm>
+						<SmallHorizontalHeroUnit
+							image={{
+								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
+							}}
+							title="Mandelpotetmos med timian"
+							difficulty={1}
+							timeTotal={40}
+							verticalPadding
+						/>
+					</Col>
+					<Col xs={12} sm>
+						<SmallHorizontalHeroUnit
+							image={{
+								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
+							}}
+							title="Biff med asparges, soppsaus og potetpuré"
+							timeCooking={30}
+							timeTotal={40}
+							difficulty={2}
+							verticalPadding
+						/>
+					</Col>
+				</Row>
+				<Row>
+					<Col xs={12} sm>
+						<SmallHorizontalHeroUnit
+							image={{
+								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
+							}}
+							title="Biff med asparges, soppsaus og potetpuré"
+							timeCooking={30}
+							timeTotal={40}
+							difficulty={2}
+							verticalPadding
+						/>
+					</Col>
+					<Col xs={12} sm>
+						<SmallHorizontalHeroUnit
+							image={{
+								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
+							}}
+							title="Mandelpotetmos med timian"
+							difficulty={1}
+							timeTotal={40}
+							verticalPadding
+						/>
+					</Col>
+				</Row>
+			</Grid>
+		</RelatedSection>
+
+		<StorybookGrid>
 			<Row>
-				<Col xs={12}>
+				<Col xs>
 					<Heading>Usage</Heading>
 					<Code language="jsx">
 						{`
@@ -33,7 +163,7 @@ import { Grid, Row, Col } from '@aller/shiny';
 					</Code>
 				</Col>
 			</Row>
-		</Grid>
+		</StorybookGrid>
 	</section>
 );
 
