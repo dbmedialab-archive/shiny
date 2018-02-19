@@ -1,5 +1,6 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
+import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../src/storybook-decorators/PaddedGrid';
 import { DemoContainer } from './storybook-components';
 
 import { Heading, HugeHeading } from '../src/atoms/Heading';
@@ -11,6 +12,7 @@ import { LoadingSearchIcon } from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
 	storiesOf('Loaders', DotLoader)
+		.addDecorator(StorybookPaddedGrid)
 	/*
 	// @TODO Add story for NoonLoader
       .add('NoonLoader', () => {

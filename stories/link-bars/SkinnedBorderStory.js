@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
 import { DemoContainer } from '../storybook-components';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
