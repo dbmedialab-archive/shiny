@@ -29,10 +29,7 @@ const Code = ({
 	);
 };
 Code.propTypes = {
-	children: PropTypes.oneOf([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node,
-	]),
+	children: PropTypes.node,
 	language: PropTypes.string,
 };
 Code.defaultProps = {

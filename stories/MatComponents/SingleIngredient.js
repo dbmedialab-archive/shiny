@@ -50,8 +50,9 @@ const SingleIngredientStory = ({ ...rest }) => (
 		<Grid fluid>
 			<LargeHorizontalHeroUnit
 				image={{
-					placeholderImage: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
+					placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
 					src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
+					fallbackSrc: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
 				}}
 				title="Mandelpotet"
 			/>
@@ -105,7 +106,9 @@ const SingleIngredientStory = ({ ...rest }) => (
 					<Col xs={12} sm>
 						<SmallHorizontalHeroUnit
 							image={{
+								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
+								fallbackSrc: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 							}}
 							title="Mandelpotetmos med timian"
 							difficulty={1}
@@ -116,7 +119,9 @@ const SingleIngredientStory = ({ ...rest }) => (
 					<Col xs={12} sm>
 						<SmallHorizontalHeroUnit
 							image={{
+								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
+								fallbackSrc: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 							}}
 							title="Biff med asparges, soppsaus og potetpuré"
 							timeCooking={30}
@@ -130,7 +135,9 @@ const SingleIngredientStory = ({ ...rest }) => (
 					<Col xs={12} sm>
 						<SmallHorizontalHeroUnit
 							image={{
+								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
+								fallbackSrc: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 							}}
 							title="Biff med asparges, soppsaus og potetpuré"
 							timeCooking={30}
@@ -142,7 +149,9 @@ const SingleIngredientStory = ({ ...rest }) => (
 					<Col xs={12} sm>
 						<SmallHorizontalHeroUnit
 							image={{
+								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
+								fallbackSrc: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 							}}
 							title="Mandelpotetmos med timian"
 							difficulty={1}

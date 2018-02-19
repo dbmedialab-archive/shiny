@@ -35,9 +35,9 @@ const MaybePaddedRow = Row.extend`
 `;
 
 const difficulty = {
-	1: 'easy',
-	2: 'middle',
-	3: 'hard',
+	1: 'Lett',
+	2: 'Middels',
+	3: 'Vanskelig',
 };
 
 const formatTime = (mins) => {
@@ -66,6 +66,7 @@ const HeroUnit = (props) => {
 	props.difficulty && icons.push({
 		name: 'difficulty',
 		text: getIconTitle('nivå', difficulty[props.difficulty] || ''),
+		value: props.difficulty,
 	});
 
 	props.timeCooking && icons.push({
