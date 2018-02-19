@@ -1,5 +1,5 @@
 export default {
-	mainFont: '"Cabin",sans-serif',
+	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Cabin",sans-serif',
 	horizontalBase: '1rem',
 
@@ -8,7 +8,7 @@ export default {
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.9rem',
 	headingRegularSize: '2.0rem',
-	headingRegularLineHeight: '1.4rem',
+	headingRegularLineHeight: '2.7rem',
 	headingLargeSize: '2.2rem',
 	headingLargeLineHeight: '2.7rem',
 
