@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row } from '../atoms/Row';
-import { Col } from '../atoms/Col';
-import { IconWithText } from '../atoms/IconWithText';
+import {
+	Row,
+	Col,
+	IconWithText,
+} from '..';
 
 const IconBar = props => (
 	<Row>
 		{
-			props.entities.map(entity => (
-				<Col xs={4}>
+			props.entities.map((entity, i) => (
+				<Col xs key={i}>
 					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
 				</Col>
 			))
@@ -17,10 +19,10 @@ const IconBar = props => (
 );
 
 IconBar.propTypes = {
-	entities: PropTypes.arrayOf({
+	entities: PropTypes.arrayOf(PropTypes.shape({
 		name: PropTypes.string.isRequired,
 		value: PropTypes.number,
-	}),
+	})),
 	textSize: PropTypes.number.isRequired,
 	iconSize: PropTypes.number.isRequired,
 };

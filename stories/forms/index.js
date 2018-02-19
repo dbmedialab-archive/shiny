@@ -6,5 +6,5 @@ import SearchField from './search-field';
 export default () => {
 	storiesOf('Forms', module)
 		.addDecorator(StorybookPaddedGrid)
-		.add('SearchField', SearchField);
+		.add('Managed SearchField', SearchField);
 };

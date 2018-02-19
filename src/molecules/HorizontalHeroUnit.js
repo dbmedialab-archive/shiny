@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 
 import {
 	Row,
@@ -13,18 +13,31 @@ import {
 	UnderlinedSmallHeading,
 } from '../..';
 
-const LineWithoutBreak = Styled.div`
+const Fragment = ({ children }) => children;
+
+const NoWrap = styled.div`
 	white-space: nowrap;
 `;
 
-const PaddedCol = withTheme(Styled(Col)`
-	padding: 8rem 0;
-`);
+const TitleCol = Col.extend`
+	&& {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	padding: ${props => props.theme.variables.verticalBase} 0;
+`;
+
+const MaybePaddedRow = Row.extend`
+	padding-top:    calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
+	padding-bottom: calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
+`;
 
 const difficulty = {
-	1: 'easy',
-	2: 'middle',
-	3: 'hard',
+	1: 'Lett',
+	2: 'Middels',
+	3: 'Vanskelig',
 };
 
 const formatTime = (mins) => {
@@ -41,97 +54,102 @@ const formatTime = (mins) => {
 
 const getIconTitle = (name, value) => {
 	return (
-		<React.Fragment>
-			<LineWithoutBreak>{name}</LineWithoutBreak>
-			<LineWithoutBreak>{value}</LineWithoutBreak>
-		</React.Fragment>
+		<Fragment>
+			<NoWrap>{name}</NoWrap>
+			<NoWrap>{value}</NoWrap>
+		</Fragment>
 	);
 };
 
-const createHeroUnit = (size) => {
-	let Heading;
-	let iconSize;
-	let textSize;
-	let iconBarWidth;
+const HeroUnit = (props) => {
+	const icons = [];
+	props.difficulty && icons.push({
+		name: 'difficulty',
+		text: getIconTitle('nivå', difficulty[props.difficulty] || ''),
+		value: props.difficulty,
+	});
 
-	switch (size) {
-	case 'sm':
-		Heading = UnderlinedSmallHeading;
-		iconSize = 2;
-		textSize = 1;
-		iconBarWidth = 10;
-		break;
-	case 'md':
-		Heading = UnderlinedMediumHeading;
-		iconSize = 3;
-		textSize = 1.3;
-		iconBarWidth = 9;
-		break;
-	case 'lg':
-		Heading = UnderlinedHugeHeading;
-		iconSize = 5;
-		textSize = 1.6;
-		iconBarWidth = 9;
-		break;
-	default:
-		break;
-	}
+	props.timeCooking && icons.push({
+		name: 'activity',
+		text: getIconTitle('aktiv', formatTime(props.timeCooking)),
+	});
 
-	const HeroUnit = (props) => {
-		return (
-			<Row>
-				<Col xs={12} md={8} lg={8}>
-					<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
-						<Source srcSet={props.image.placeholder} />
-					</LazyProgressiveImage>
-				</Col>
-				<Col xs={12} md={4} lg={4}>
-					<Row center="xs">
-						<PaddedCol xs>
-							<Row center="xs">
-								<Col xs={iconBarWidth}>
-									<IconBar
-										entities={[
-											{ name: 'difficulty', text: getIconTitle('nivå', difficulty[props.difficulty] || '') },
-											{ name: 'activity', text: getIconTitle('aktiv', formatTime(props.timeCooking)) },
-											{ name: 'total-time', text: getIconTitle('totalt', formatTime(props.timeTotal)) },
-										]}
-										textSize={textSize}
-										iconSize={iconSize}
-									/>
-								</Col>
-							</Row>
-							<Row center="xs">
-								<Col xs={iconBarWidth}><Heading>{ props.title }</Heading></Col>
-							</Row>
-						</PaddedCol>
-					</Row>
-				</Col>
-			</Row>
-		);
-	};
+	props.timeTotal && icons.push({
+		name: 'total-time',
+		text: getIconTitle('totalt', formatTime(props.timeTotal)),
+	});
 
-	HeroUnit.propTypes = {
-		image: PropTypes.shape({
-			src: PropTypes.string.isRequired,
-			ratio: PropTypes.number,
-			fallbackSrc: PropTypes.string.isRequired,
-			placeholder: PropTypes.string.isRequired,
-			difficulty: PropTypes.number,
-			activityTime: PropTypes.number,
-			totalTime: PropTypes.number,
-		}).isRequired,
-		difficulty: PropTypes.number.isRequired,
-		timeCooking: PropTypes.number.isRequired,
-		timeTotal: PropTypes.number.isRequired,
-		title: PropTypes.string.isRequired,
-	};
-
-	return HeroUnit;
+	return (
+		<MaybePaddedRow verticalPadding={props.verticalPadding}>
+			<Col xs={12} md={7}>
+				<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
+					<Source srcSet={props.image.placeholder} />
+				</LazyProgressiveImage>
+			</Col>
+			<TitleCol xs={12} md={5}>
+				{(props.difficulty || props.timeCooking || props.timeTotal) &&
+				<Row center="xs">
+					<Col xs={props.iconBarWidth}>
+						<IconBar
+							entities={icons}
+							textSize={props.textSize}
+							iconSize={props.iconSize}
+						/>
+					</Col>
+				</Row>
+				}
+				<Row center="xs">
+					<Col xs={props.iconBarWidth}><props.Heading>{ props.title }</props.Heading></Col>
+				</Row>
+			</TitleCol>
+		</MaybePaddedRow>
+	);
 };
 
-const SmallHorizontalHeroUnit = createHeroUnit('sm');
-const MediumHorizontalHeroUnit = createHeroUnit('md');
-const LargeHorizontalHeroUnit = createHeroUnit('lg');
+HeroUnit.propTypes = {
+	image: PropTypes.shape({
+		src: PropTypes.string.isRequired,
+		ratio: PropTypes.number,
+		fallbackSrc: PropTypes.string.isRequired,
+		placeholder: PropTypes.string.isRequired,
+	}).isRequired,
+	difficulty: PropTypes.oneOf([1, 2, 3]),
+	timeCooking: PropTypes.number,
+	timeTotal: PropTypes.number,
+	title: PropTypes.string.isRequired,
+	iconBarWidth: PropTypes.number.isRequired,
+	iconSize: PropTypes.number.isRequired,
+	textSize: PropTypes.number.isRequired,
+	verticalPadding: PropTypes.bool,
+};
+
+HeroUnit.defaultProps = {
+	difficulty: null,
+	timeCooking: null,
+	timeTotal: null,
+	verticalPadding: false,
+};
+
+const SmallHorizontalHeroUnit = props => (<HeroUnit
+	Heading={UnderlinedSmallHeading}
+	iconSize={2}
+	textSize={1}
+	iconBarWidth={10}
+	{...props}
+/>);
+const MediumHorizontalHeroUnit = props => (<HeroUnit
+	Heading={UnderlinedMediumHeading}
+	iconSize={3}
+	textSize={1.3}
+	iconBarWidth={9}
+	{...props}
+/>);
+const LargeHorizontalHeroUnit = props => (<HeroUnit
+	Heading={UnderlinedHugeHeading}
+	iconSize={5}
+	textSize={1.6}
+	iconBarWidth={9}
+	{...props}
+/>);
 
 export { SmallHorizontalHeroUnit, MediumHorizontalHeroUnit, LargeHorizontalHeroUnit };

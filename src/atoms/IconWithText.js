@@ -28,7 +28,7 @@ IconWithText.propTypes = {
 	iconSize: PropTypes.number,
 	textSize: PropTypes.number,
 	name: PropTypes.string,
-	text: PropTypes.string,
+	text: PropTypes.node,
 };
 
 IconWithText.defaultProps = {

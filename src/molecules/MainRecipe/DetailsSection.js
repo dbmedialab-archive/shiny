@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-import { Row } from '../../atoms/Row';
-import { Col } from '../../atoms/Col';
-import { FrontSmallHeading } from '../../atoms/FrontHeading';
+import {
+	Row,
+	Col,
+	FigCaption,
+	FrontSmallHeading,
+} from '../..';
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added
 import { StarsRating } from '../../atoms/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
-const DetailsSectionInfo = Styled.div`
-	font-size: 1.4rem;
-	margin-bottom: 3.0rem;
-`;
-
-const DetailsSectionWrapper = Styled.div`
+const DetailsSectionWrapper = styled.div`
 	padding: 0;
 	margin: 0 auto;
 	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
@@ -42,38 +40,39 @@ const DetailsSection  = ({
 			name: preferenceItem.slug,
 		};
 	});
+
 	return (
 		<DetailsSectionWrapper>
 			<Row>
-				<Col md={12} xs={12} lg={8}>
-					<DetailsSectionInfo>
+				<Col xs md={8} mdOffset={2}>
+					<FigCaption>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley
-					</DetailsSectionInfo>
+					</FigCaption>
 				</Col>
 			</Row>
 			<Row>
-				<Col xs={12} md={5} lg={5}>
+				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading>Inneholder</FrontSmallHeading>
 					<IconBar entities={allergies} textSize={1.2} iconSize={5} />
 				</Col>
-				<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
+				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading>Oppskrift</FrontSmallHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
 			</Row>
 			<Row>
-				<Col xs={12} md={5} lg={5}>
-					{ preferences.length ?
+				<Col xs={12} md={3} mdOffset={2}>
+					{preferences.length ?
 						<React.Fragment>
 							<FrontSmallHeading>Passer For</FrontSmallHeading>
-							<IconBar entities={preferences}  textSize={1.2} iconSize={5} />
+							<IconBar entities={preferences} textSize={1.2} iconSize={5} />
 						</React.Fragment>
-						:null}
+						: null}
 				</Col>
-				<Col xs={12} md={5} lg={5} mdOffset={2} lgOffset={2}>
+				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading>Vurdering</FrontSmallHeading>
-					<StarsRating count={5} size={45} value={rating} />
+					<StarsRating count={5} size={29} value={rating} />
 				</Col>
 			</Row>
 		</DetailsSectionWrapper>
