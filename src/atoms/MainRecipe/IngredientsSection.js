@@ -6,6 +6,7 @@ const Buttons = Styled.button`
 	height: 3.7rem;
 	display: inline-block;
 	border-radius: 10%;
+
 	> span {
 		color: #fff;
 	}
@@ -21,6 +22,7 @@ const Counter = Styled.span`
 	border-radius: .2rem;
 	background-color: #ffffff;
 	box-shadow: inset 0 0 .2rem 0 rgba(111, 108, 108, 0.5);
+
 	> span {
 		color: #949494;
 		font-size: 2.4rem;
@@ -38,7 +40,6 @@ const Pers = Styled.span`
 `;
 
 const AddCart = Styled.div`
-
 	> span:first-child {
 		color: #ff790a;
 		vertical-align: sub;
@@ -52,6 +53,7 @@ const Quantity = Styled.ul`
 	list-style: none;
 	padding: 0;
 	font-size: 1.6rem;
+
 	& span {
    	 	width: 43.0rem;
     	float: right;

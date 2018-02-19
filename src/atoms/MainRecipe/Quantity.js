@@ -9,9 +9,12 @@ export const Wrapper = styled.div`
 	margin: 3rem 0;
 `;
 
+const LeftAlignedRow = Row.extend`&&{text-align: left;}`;
+const LeftAlignedCenteredRow = props => <LeftAlignedRow {...props} center="xs" />;
+
 export const Quantity = props => (
 	<section>
-		<Row center="xs">
+		<LeftAlignedCenteredRow>
 			<Col xs={3} md={3} lg={3}>
 				<span>{props.amount} {props.type}</span>
 			</Col>
@@ -20,7 +23,7 @@ export const Quantity = props => (
 					{props.title}
 				</span>
 			</Col>
-		</Row>
+		</LeftAlignedCenteredRow>
 	</section>
 );
 
@@ -35,4 +38,3 @@ Quantity.propTypes = {
 	title: PropTypes.string,
 	type: PropTypes.string,
 };
-
