@@ -43,8 +43,8 @@ class StickyAd extends Component {
 	}
 
 	static defaultProps = {
-		width: '320px',
-		height: '250px',
+		width: '32.0rem',
+		height: '25.0rem',
 	}
 
 	constructor(props) {
