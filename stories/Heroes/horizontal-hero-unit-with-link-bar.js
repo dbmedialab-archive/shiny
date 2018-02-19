@@ -15,6 +15,9 @@ const image = {
 	fallbackSrc: '',
 };
 
+const difficulty = 2;
+const timeCooking = 100;
+const timeTotal = 80;
 const title = 'Stekt kjøtt';
 /* eslint-enable max-len */
 
@@ -25,6 +28,9 @@ export default () => (
 			<Col xs>
 				<LargeHorizontalHeroUnit
 					image={image}
+					difficulty={difficulty}
+					timeCooking={timeCooking}
+					timeTotal={timeTotal}
 					title={title}
 				/>
 			</Col>
@@ -33,6 +39,9 @@ export default () => (
 			<Col xs={8}>
 				<MediumHorizontalHeroUnit
 					image={image}
+					difficulty={difficulty}
+					timeCooking={timeCooking}
+					timeTotal={timeTotal}
 					title={title}
 				/>
 			</Col>
@@ -41,6 +50,9 @@ export default () => (
 			<Col xs={6}>
 				<SmallHorizontalHeroUnit
 					image={image}
+					difficulty={difficulty}
+					timeCooking={timeCooking}
+					timeTotal={timeTotal}
 					title={title}
 				/>
 			</Col>

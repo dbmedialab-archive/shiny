@@ -88,19 +88,21 @@ const createHeroUnit = (size) => {
 				<Col xs={12} md={4} lg={4}>
 					<Row center="xs">
 						<PaddedCol xs>
-							<Row center="xs">
-								<Col xs={iconBarWidth}>
-									<IconBar
-										entities={[
-											{ name: 'difficulty', text: getIconTitle('nivå', difficulty[props.difficulty] || '') },
-											{ name: 'activity', text: getIconTitle('aktiv', formatTime(props.timeCooking)) },
-											{ name: 'total-time', text: getIconTitle('totalt', formatTime(props.timeTotal)) },
-										]}
-										textSize={textSize}
-										iconSize={iconSize}
-									/>
-								</Col>
-							</Row>
+							{(props.difficulty || props.timeCooking || props.timeTotal) &&
+								<Row center="xs">
+									<Col xs={iconBarWidth}>
+										<IconBar
+											entities={[
+												{ name: 'difficulty', text: getIconTitle('nivå', difficulty[props.difficulty] || '') },
+												{ name: 'activity', text: getIconTitle('aktiv', formatTime(props.timeCooking)) },
+												{ name: 'total-time', text: getIconTitle('totalt', formatTime(props.timeTotal)) },
+											]}
+											textSize={textSize}
+											iconSize={iconSize}
+										/>
+									</Col>
+								</Row>
+							}
 							<Row center="xs">
 								<Col xs={iconBarWidth}><Heading>{ props.title }</Heading></Col>
 							</Row>
@@ -117,14 +119,17 @@ const createHeroUnit = (size) => {
 			ratio: PropTypes.number,
 			fallbackSrc: PropTypes.string.isRequired,
 			placeholder: PropTypes.string.isRequired,
-			difficulty: PropTypes.number,
-			activityTime: PropTypes.number,
-			totalTime: PropTypes.number,
 		}).isRequired,
-		difficulty: PropTypes.number.isRequired,
-		timeCooking: PropTypes.number.isRequired,
-		timeTotal: PropTypes.number.isRequired,
+		difficulty: PropTypes.oneOf([1, 2, 3]),
+		timeCooking: PropTypes.number,
+		timeTotal: PropTypes.number,
 		title: PropTypes.string.isRequired,
+	};
+
+	HeroUnit.defaultProps = {
+		difficulty: null,
+		timeCooking: null,
+		timeTotal: null,
 	};
 
 	return HeroUnit;
