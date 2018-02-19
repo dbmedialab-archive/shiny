@@ -74,7 +74,7 @@ export const LinkBarLinkBase = styled.a`
 		(
 			props.isActive && props.useUnderline
 				? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
-				: '0px'
+				: '0'
 		)};
 		display: block;
 		position: absolute;
@@ -119,7 +119,7 @@ export const LinkBarLinkBase = styled.a`
 	}}
 
 	&:hover::after{
-		width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0px')};
+		width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0')};
 	}
 }
 	`;

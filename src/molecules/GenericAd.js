@@ -16,8 +16,8 @@ GenericAd.propTypes = {
 };
 
 GenericAd.defaultProps = {
-	width: '320px',
-	height: '250px',
+	width: '32.0rem',
+	height: '25.0rem',
 };
 
 export { GenericAd };

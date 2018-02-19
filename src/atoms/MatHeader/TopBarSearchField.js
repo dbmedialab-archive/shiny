@@ -2,11 +2,11 @@ import Styled from 'styled-components';
 import { hideWithFlexboxgridSyntax } from '../../utils/hide-with-flexboxgrid-syntax';
 
 const TopBarSearchField = Styled.input`
-	height: 38px;
-	width: 564px;
+	height: 3.8rem;
+	width: 56.4rem;
 	float: right;
-	padding: 11px 15px 9px;
-	font-size: 15px;
+	padding: 1.1rem 1.5rem .9rem;
+	font-size: 1.5rem;
 
 	&::placeholder {
 		color: gray;

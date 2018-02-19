@@ -7,9 +7,9 @@ const setTextAlign = (sticky) => {
 };
 
 const AdWrapper = Styled.div`
-	width: ${props => props.width || '320px'};
+	width: ${props => props.width || '32.0rem'};
 	height: auto;
-	min-height: calc(${props => props.height || '250px'} + 2.63rem);
+	min-height: calc(${props => props.height || '25.0rem'} + 2.63rem);
 	margin-bottom: 2.4rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,7 +27,7 @@ const AdWrapper = Styled.div`
 		width: 100%;
 		background: ${props => (props.sticky ? '#fff' : props.theme.variables.adWrapperBackgroundColor)};
 		line-height: 2.63rem;
-		padding: ${props => (props.sticky ? '0 10px' : '0')};
+		padding: ${props => (props.sticky ? '0 1.0rem' : '0')};
 		box-sizing: border-box;
 	}
 `;

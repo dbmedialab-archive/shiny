@@ -18,7 +18,7 @@ const FheadStyle = props => css`
 		width: 100%;
 		margin-left: ${props.theme.variables.headingSmallSize};
 		display: inline-block;
-		border-bottom: 2px solid ${props.theme.colors[props.lineColor]};
+		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
     }
 `;
