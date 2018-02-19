@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 import basic from './basic';
 import responsive from './responsive';
@@ -10,6 +11,7 @@ import hide from './hide';
 
 export default () => {
 	storiesOf('Grid', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Basic', basic)
 		.add('Responsive', responsive)
 		.add('Offsets', offsets)
