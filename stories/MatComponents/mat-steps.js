@@ -1,53 +1,58 @@
 import React from 'react';
 
+import { Row, Col, HugeHeading, Heading } from '../..';
+import { PaddedGrid as Grid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 import { RecipeStep } from '../../src/atoms/MainRecipe/RecipeStep';
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
 
 export default () => (
 	<section>
-		<Row>
-			<Col xs={12}>
-				<RecipeStep>
+		<Grid>
+			<HugeHeading>RecipeStep</HugeHeading>
+			<Heading>Demo</Heading>
+			<Row>
+				<Col xs={12}>
+					<RecipeStep>
 						Ta ut innmaten. Dette er god basis
 						for saus, så ta vare på det.
-				</RecipeStep>
-				<RecipeStep>
+					</RecipeStep>
+					<RecipeStep>
 						Bind lårene sammen ved benknokene.
 						Sitter vingespissene på, før dem bak
 						ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
-				</RecipeStep>
-				<RecipeStep>
+					</RecipeStep>
+					<RecipeStep>
 						Ta ut innmaten. Dette er god basis for saus,
 						så ta vare på det. Bind lårene sammen ved
 						benknokene. Sitter vingespissene på, før
 						dem bak ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
-				</RecipeStep>
-				<RecipeStep>
+					</RecipeStep>
+					<RecipeStep>
 						Bind lårene sammen ved benknokene.
 						Sitter vingespissene på, før dem bak
 						ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
-				</RecipeStep>
-				<RecipeStep>
+					</RecipeStep>
+					<RecipeStep>
 						Ta ut innmaten. Dette er god basis
 						for saus, så ta vare på det.
 						hviler under og støtter kalkunen.
-				</RecipeStep>
+					</RecipeStep>
 
-				<Code language="jsx">
-					{`import { RecipeSteps } from '@aller/shiny';
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import { RecipeStep } from '@aller/shiny';
 
-				<RecipeStep>
-					Some Text
-				</RecipeStep>
-					`}
-				</Code>
-			</Col>
-		</Row>
+<RecipeStep>
+	Some Text
+</RecipeStep>
+							`}
+					</Code>
+				</Col>
+			</Row>
+		</Grid>
 	</section>
 );
-
