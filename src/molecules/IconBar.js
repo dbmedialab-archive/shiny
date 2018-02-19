@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row } from '../atoms/Row';
-import { Col } from '../atoms/Col';
-import { IconWithText } from '../atoms/IconWithText';
+import {
+	Row,
+	Col,
+	IconWithText,
+} from '..';
 
 const IconBar = props => (
 	<Row>
 		{
 			props.entities.map(entity => (
-				<Col xs={4}>
+				<Col xs>
 					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
 				</Col>
 			))
