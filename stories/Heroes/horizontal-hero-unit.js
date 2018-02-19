@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { SmallHorizontalHeroUnit,
+import {
+	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit } from '../../src/molecules/HorizontalHeroUnit';
+	LargeHorizontalHeroUnit,
+} from '../../src/molecules/HorizontalHeroUnit';
 import { PaddedGrid  } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 import {

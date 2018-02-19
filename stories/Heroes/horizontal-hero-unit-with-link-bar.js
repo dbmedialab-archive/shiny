@@ -1,11 +1,18 @@
 import React from 'react';
 
-import { SmallHorizontalHeroUnit,
+import {
+	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit } from '../../src/molecules/HorizontalHeroUnit';
-import { HugeHeading 		  } from '../../src/atoms/Heading';
-import { Row 				  } from '../../src/atoms/Row';
-import { Col 				  } from '../../src/atoms/Col';
+	LargeHorizontalHeroUnit,
+} from '../../src/molecules/HorizontalHeroUnit';
+import { PaddedGrid  } from '../../src/storybook-decorators/PaddedGrid';
+import { Code } from '../../src/atoms/Code';
+import {
+	HugeHeading,
+	Heading,
+	Row,
+	Col,
+} from '../..';
 
 /* eslint-disable max-len */
 const image = {
@@ -16,46 +23,46 @@ const image = {
 };
 
 const difficulty = 2;
-const timeCooking = 100;
-const timeTotal = 80;
+const timeCooking = 80;
+const timeTotal = 100;
 const title = 'Stekt kjøtt';
-/* eslint-enable max-len */
 
 export default () => (
 	<section>
-		<HugeHeading>Recipe Hero Unit</HugeHeading>
-		<Row>
-			<Col xs>
-				<LargeHorizontalHeroUnit
-					image={image}
-					difficulty={difficulty}
-					timeCooking={timeCooking}
-					timeTotal={timeTotal}
-					title={title}
-				/>
-			</Col>
-		</Row>
-		<Row>
-			<Col xs={8}>
-				<MediumHorizontalHeroUnit
-					image={image}
-					difficulty={difficulty}
-					timeCooking={timeCooking}
-					timeTotal={timeTotal}
-					title={title}
-				/>
-			</Col>
-		</Row>
-		<Row>
-			<Col xs={6}>
-				<SmallHorizontalHeroUnit
-					image={image}
-					difficulty={difficulty}
-					timeCooking={timeCooking}
-					timeTotal={timeTotal}
-					title={title}
-				/>
-			</Col>
-		</Row>
+		<PaddedGrid>
+			<Row>
+				<Col xs={12}>
+					<HugeHeading>Recipe Hero Unit with IconBar</HugeHeading>
+					<p>Showcase a large preview image and a header with an optional IconBar.</p>
+
+					<Heading>Demo</Heading>
+					<LargeHorizontalHeroUnit
+						image={image}
+						difficulty={difficulty}
+						timeCooking={timeCooking}
+						timeTotal={timeTotal}
+						title={title}
+					/>
+				</Col>
+				<Col xs={8}>
+					<MediumHorizontalHeroUnit
+						image={image}
+						difficulty={difficulty}
+						timeCooking={timeCooking}
+						timeTotal={timeTotal}
+						title={title}
+					/>
+				</Col>
+				<Col xs={6}>
+					<SmallHorizontalHeroUnit
+						image={image}
+						difficulty={difficulty}
+						timeCooking={timeCooking}
+						timeTotal={timeTotal}
+						title={title}
+					/>
+				</Col>
+			</Row>
+		</PaddedGrid>
 	</section>
 );
