@@ -7,7 +7,7 @@ const FontIcon = (props) => {
 			font-family: 'Helveticons';
 			font-style: normal;
 			font-weight: normal;
-			src: url('//styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
+			src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
 		}
 	`;
 	return <Icon {...props} />;
