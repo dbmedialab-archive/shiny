@@ -13,32 +13,37 @@ export default () => (
 			<Row>
 				<Col xs={12}>
 					<RecipeStep>
-						Ta ut innmaten. Dette er god basis
+						<p>Ta ut innmaten. Dette er god basis
 						for saus, så ta vare på det.
+						</p>
 					</RecipeStep>
 					<RecipeStep>
-						Bind lårene sammen ved benknokene.
+						<p>Bind lårene sammen ved benknokene.
 						Sitter vingespissene på, før dem bak
 						ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
+						</p>
 					</RecipeStep>
 					<RecipeStep>
-						Ta ut innmaten. Dette er god basis for saus,
+						<p>Ta ut innmaten. Dette er god basis for saus,
 						så ta vare på det. Bind lårene sammen ved
 						benknokene. Sitter vingespissene på, før
 						dem bak ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
+						</p>
 					</RecipeStep>
 					<RecipeStep>
-						Bind lårene sammen ved benknokene.
+						<p>Bind lårene sammen ved benknokene.
 						Sitter vingespissene på, før dem bak
 						ryggen inn mot halsen. Slik at vingene
 						hviler under og støtter kalkunen.
+						</p>
 					</RecipeStep>
 					<RecipeStep>
-						Ta ut innmaten. Dette er god basis
+						<p>Ta ut innmaten. Dette er god basis
 						for saus, så ta vare på det.
 						hviler under og støtter kalkunen.
+						</p>
 					</RecipeStep>
 
 					<Heading>Usage</Heading>
