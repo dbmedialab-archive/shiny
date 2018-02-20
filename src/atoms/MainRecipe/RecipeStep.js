@@ -10,7 +10,7 @@ const RecipeStep = styled.div`
 	position: relative;
 	padding-left: 5rem;
 
-	&&::before {
+	> *::before {
 		content: counter(item);
 		font-family: Cabin;
 		font-size: ${props => props.theme.variables.headingHugeSize};
