@@ -112,9 +112,11 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
-export { SmallHorizontalHeroUnit,
+export {
+	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
+	LargeHorizontalHeroUnit,
+} from './molecules/HorizontalHeroUnit';
 
 // Organisms
 export { MatHeader               } from  './organisms/MatHeader';

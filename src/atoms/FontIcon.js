@@ -683,6 +683,4 @@ const Icon = styled.span`
 `;
 
 
-export {
-	FontIcon,
-};
+export { FontIcon };

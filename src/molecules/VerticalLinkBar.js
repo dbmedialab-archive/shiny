@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	LinkBarItem as Li,
-} from '../..';
+import { LinkBarItem as Li } from '../..';
 
 // import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 import { VerticalFlexingList as Bar } from '../atoms/VerticalFlexingList';
