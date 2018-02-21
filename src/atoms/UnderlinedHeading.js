@@ -19,7 +19,7 @@ const StyledLine = styled.div`
 const UnderlinedHeading = ({ size, ...rest }) => (
 	<CenteredContent>
 		<Heading size={size} {...rest} />
-		<StyledLine thick={['xlarge', 'huge'].contains(size)} />
+		<StyledLine thick={['xlarge', 'huge'].includes(size)} />
 	</CenteredContent>
 );
 UnderlinedHeading.propTypes = {
