@@ -8,8 +8,8 @@ import {
 	HugeHeading,
 	Heading,
 	FigCaption,
-	SmallHorizontalHeroUnit,
-	LargeHorizontalHeroUnit,
+	MediumHorizontalHeroUnit as RelatedHero,
+	LargeHorizontalHeroUnit as Hero,
 	FrontSmallHeading,
 	FrontLargeHeading,
 } from '../..';
@@ -48,7 +48,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 		</StorybookGrid>
 
 		<Grid fluid>
-			<LargeHorizontalHeroUnit
+			<Hero
 				image={{
 					placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
 					src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
@@ -104,7 +104,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 				</Row>
 				<Row>
 					<Col xs={12} sm>
-						<SmallHorizontalHeroUnit
+						<RelatedHero
 							image={{
 								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
@@ -117,7 +117,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 						/>
 					</Col>
 					<Col xs={12} sm>
-						<SmallHorizontalHeroUnit
+						<RelatedHero
 							image={{
 								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
@@ -133,7 +133,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 				</Row>
 				<Row>
 					<Col xs={12} sm>
-						<SmallHorizontalHeroUnit
+						<RelatedHero
 							image={{
 								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
@@ -147,7 +147,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 						/>
 					</Col>
 					<Col xs={12} sm>
-						<SmallHorizontalHeroUnit
+						<RelatedHero
 							image={{
 								placeholder: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 								src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
@@ -174,8 +174,8 @@ import {
 	Row,
 	Col,
 	FigCaption,
-	SmallHorizontalHeroUnit,
-	LargeHorizontalHeroUnit,
+	MediumHorizontalHeroUnit as RelatedHero,
+	LargeHorizontalHeroUnit as Hero,
 	FrontSmallHeading,
 	FrontLargeHeading,
 } from '@aller/shiny'
@@ -200,7 +200,7 @@ const RelatedSection = styled.section\`
 \`;
 
 <Grid fluid>
-	<LargeHorizontalHeroUnit
+	<Hero
 		image={{
 			placeholderImage: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
 			src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/fe409e89-mandelpotet.jpg',
@@ -255,7 +255,7 @@ const RelatedSection = styled.section\`
 		</Row>
 		<Row>
 			<Col xs={12} sm>
-				<SmallHorizontalHeroUnit
+				<RelatedHero
 					image={{
 						src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 					}}
@@ -266,7 +266,7 @@ const RelatedSection = styled.section\`
 				/>
 			</Col>
 			<Col xs={12} sm>
-				<SmallHorizontalHeroUnit
+				<RelatedHero
 					image={{
 						src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 					}}
@@ -280,7 +280,7 @@ const RelatedSection = styled.section\`
 		</Row>
 		<Row>
 			<Col xs={12} sm>
-				<SmallHorizontalHeroUnit
+				<RelatedHero
 					image={{
 						src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/bcff2fea-biff-med-asparges-og-soppsaus.jpg',
 					}}
@@ -292,7 +292,7 @@ const RelatedSection = styled.section\`
 				/>
 			</Col>
 			<Col xs={12} sm>
-				<SmallHorizontalHeroUnit
+				<RelatedHero
 					image={{
 						src: 'https://www.dagbladet.no/mat/bilder/c/xl/1/52dcc8a0-mandelpotetmos.jpg',
 					}}
