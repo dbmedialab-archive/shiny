@@ -1,4 +1,5 @@
 import React from 'react';
+import { linkTo } from '@storybook/addon-links';
 
 import { DemoContainer } from '../storybook-components';
 
@@ -27,7 +28,7 @@ const skin = {
 export default () => (
 	<section>
 		<HugeHeading>DymoHeading</HugeHeading>
-		<p>Also called headline, overskrift.</p>
+		<p>A variant of the <button onClick={linkTo('Typography', 'Heading')}>Heading</button> component.</p>
 		<p>There are four sizes of headings:</p>
 		<ul>
 			<li>Small</li>
@@ -40,11 +41,11 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<SmallDymoHeading {...{ skin }}>This is lots and lots of text in a small heading</SmallDymoHeading>
-			<MediumDymoHeading {...{ skin }}>This is lots and lots of text in a medium heading</MediumDymoHeading>
-			<LargeDymoHeading {...{ skin }}>This is lots and lots of text in a large heading (default) lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </LargeDymoHeading>
-			<XLargeDymoHeading {...{ skin }}>This is lots and lots of text in an X large heading</XLargeDymoHeading>
-			<HugeDymoHeading {...{ skin }}>This is lots and lots of text in a huge heading</HugeDymoHeading>
+			<SmallDymoHeading {...{ skin }}>This is lots and lots of text in a small dymo heading</SmallDymoHeading>
+			<MediumDymoHeading {...{ skin }}>This is lots and lots of text in a medium dymo heading</MediumDymoHeading>
+			<LargeDymoHeading {...{ skin }}>This is lots and lots of text in a large dymo heading (default)</LargeDymoHeading>
+			<XLargeDymoHeading {...{ skin }}>This is lots and lots of text in an X large dymo heading</XLargeDymoHeading>
+			<HugeDymoHeading {...{ skin }}>This is lots and lots of text in a huge dymo heading</HugeDymoHeading>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
