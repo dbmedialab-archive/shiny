@@ -268,6 +268,10 @@
     react-treebeard "^2.1.0"
     redux "^3.7.2"
 
+"Stickyfill@git+https://github.com/seleckis/stickyfill.git":
+  version "1.1.5"
+  resolved "git+https://github.com/seleckis/stickyfill.git#59644ed8c03f29aa212a6c1228b3ece0bb24c2b6"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -2282,6 +2286,10 @@ css-selector-tokenizer@^0.7.0:
     cssesc "^0.1.0"
     fastparse "^1.1.1"
     regexpu-core "^1.0.0"
+
+css-supports@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/css-supports/-/css-supports-0.1.1.tgz#9ae201f952beb65f00c5e4b249ebce8ef58a013d"
 
 css-to-react-native@^2.0.3:
   version "2.1.1"
@@ -5625,6 +5633,20 @@ react-stars@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
 
+react-sticky-fill@^0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/react-sticky-fill/-/react-sticky-fill-0.8.4.tgz#8870a71b1c356b5caf2c451ff0010fdfa0de6111"
+  dependencies:
+    css-supports "^0.1.1"
+    stickyfill "^1.1.1"
+
+react-stickyfill@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.3.tgz#a1241a16b8d6fd39f77832d9cc69fa2998e58d44"
+  dependencies:
+    Stickyfill "git+https://github.com/seleckis/stickyfill.git"
+    prop-types "^15.5.10"
+
 react-style-proptype@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-style-proptype/-/react-style-proptype-3.2.0.tgz#be5de15358b890d83aecfaf6634cc033aa2b1483"
@@ -6262,6 +6284,14 @@ statuses@~1.3.1:
 stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+
+stickybits@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/stickybits/-/stickybits-3.0.4.tgz#a6b33557c3cab2a3a2b598741df9e9e019ee6052"
+
+stickyfill@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/stickyfill/-/stickyfill-1.1.1.tgz#39413fee9d025c74a7e59ceecb23784cc0f17f02"
 
 stream-browserify@^2.0.1:
   version "2.0.1"

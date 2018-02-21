@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
@@ -34,55 +35,28 @@ const StickyWrapper = styled.div`
 	`;
 
 
-class StickyAd extends Component {
-	static propTypes = {
-		width: PropTypes.string,
-		height: PropTypes.string,
-		sticky: PropTypes.string.isRequired,
-		children: PropTypes.node.isRequired,
-	}
+const StickyAd = ({
+	children, width, height, sticky,
+}) => (
+	<StickyWrapper sticky={sticky}>
+		<Sticker>
+			<StyledAdWrapper height={height} width={width}>
+				{children}
+			</StyledAdWrapper>
+		</Sticker>
+	</StickyWrapper>
+);
 
-	static defaultProps = {
-		width: '32.0rem',
-		height: '25.0rem',
-	}
+StickyAd.propTypes = {
+	width: PropTypes.string,
+	height: PropTypes.string,
+	sticky: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
+};
 
-	constructor(props) {
-		super(props);
-
-		this.props = props;
-	}
-
-	componentDidMount() {
-		if (this.node) {
-			import('../utils/sticky-fill').then((module) => {
-				this.stickyFill = module;
-				this.stickyFill.addOne(this.node);
-			}).catch((e) => {
-			});
-		}
-	}
-
-	componentWillUnmount() {
-		if (this.stickyFill && this.node) {
-			this.stickyFill.removeOne(this.node);
-		}
-	}
-
-	render() {
-		const {
-			children, width, height, sticky,
-		} = this.props;
-
-		return (
-			<StickyWrapper sticky={sticky}>
-				<StyledAdWrapper height={height} width={width} innerRef={(node) => { this.node = node; }}>
-					{children}
-				</StyledAdWrapper>
-			</StickyWrapper>
-		);
-	}
-}
-
+StickyAd.defaultProps = {
+	width: '32.0rem',
+	height: '25.0rem',
+};
 
 export { StickyAd };
