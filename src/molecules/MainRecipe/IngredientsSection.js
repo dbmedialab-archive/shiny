@@ -1,9 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Row } from '../../atoms/Row';
-import { Col } from '../../atoms/Col';
-import { FontIcon } from '../../atoms/FontIcon';
+import {
+	Row,
+	Col,
+	FontIcon,
+	LargeHeading as Heading,
+} from '../..';
 import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
 import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
@@ -80,7 +83,7 @@ class IngredientsSection extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>DETTE TRENGER DU</h1>
+				<Heading>DETTE TRENGER DU</Heading>
 				<Buttons>
 					<span>
 						<FontIcon name="remove" size={2.2} onClick={this.decrementServings} />
