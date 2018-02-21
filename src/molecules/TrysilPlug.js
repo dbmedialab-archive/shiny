@@ -9,7 +9,6 @@ import { BlockLink } from '../atoms/BlockLink';
 import { LazyProgressiveImage } from '../molecules/LazyProgressiveImage';
 import { Source } from '../molecules/Source';
 
-
 const TrysilPlug = ({
 	kicker,
 	title,
@@ -41,7 +40,7 @@ const TrysilPlug = ({
 						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
-			<Heading headline ALLCAPS={ALLCAPS}>{title}</Heading>
+			<Heading ALLCAPS={ALLCAPS}>{title}</Heading>
 			{subtitle && <p itemProp="description">{subtitle}</p>}
 			{labels &&
 				labels.map(label => (
