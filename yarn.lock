@@ -118,14 +118,8 @@
     prop-types "^15.6.0"
     react-inspector "^2.2.2"
     uuid "^3.1.0"
-  version "3.3.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.3.13.tgz#ea27db37e609a9036e4e6164ed52edf768b99eef"
-  dependencies:
-    "@storybook/components" "^3.3.13"
-    global "^4.3.2"
-    prop-types "^15.5.10"
 
-"@storybook/addon-links@^3.3.14":
+"@storybook/addon-links@3.3.14", "@storybook/addon-links@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.3.14.tgz#1de63e9b3819927fbb2f963fdabc65f86fde33cc"
   dependencies:
@@ -152,14 +146,6 @@
 "@storybook/client-logger@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.14.tgz#03d5bc6036a8e82351a349bec11a8c89f06c901e"
-
-"@storybook/components@^3.3.13":
-  version "3.3.13"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.13.tgz#003addacf9c98d61a35246eb7c76908d38d323c4"
-  dependencies:
-    glamor "^2.20.40"
-    glamorous "^4.11.2"
-    prop-types "^15.6.0"
 
 "@storybook/components@^3.3.14":
   version "3.3.14"
