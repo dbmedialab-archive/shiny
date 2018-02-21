@@ -10,16 +10,13 @@ const FormattedHeading = styled(Heading)`
   margin: 0 0 calc(2/3*${props => props.theme.variables.verticalBase});
   ${props => (props.hasImage ? 'max-width: 90%;' : `max-width: calc(100% - ${props.theme.variables.horizontalBase});`)}
 
-  @media (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-		${props => ((props.flexingSize === 'full')
-		? css`
+	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
+		${props => ((props.flexingSize === 'full') ? css`
 			margin-top: 0;
 			font-size: ${props.theme.variables.headingXlargeSize};
 			line-height: ${props.theme.variables.headingXlargeLineHeight};
-			`
-		:	''
-	)};
-		}
+		` :	'')};
+	}
 `;
 
 const PaddedText = styled.span`
@@ -60,8 +57,7 @@ PaddedText.defaultProps = {
 	},
 };
 
-
-const SkinHeading = (props) => {
+const DymoHeading = (props) => {
 	const {
 		children,
 		skin,
@@ -88,7 +84,7 @@ const SkinHeading = (props) => {
 	);
 };
 
-SkinHeading.propTypes = {
+DymoHeading.propTypes = {
 	children: propTypes.node,
 	flexingSize: propTypes.string,
 	hasImage: propTypes.bool,
@@ -101,7 +97,7 @@ SkinHeading.propTypes = {
 	title: propTypes.string,
 };
 
-SkinHeading.defaultProps = {
+DymoHeading.defaultProps = {
 	children: null,
 	flexingSize: 'small',
 	hasImage: false,
@@ -114,9 +110,9 @@ SkinHeading.defaultProps = {
 	title: '',
 };
 
-export { SkinHeading };
-export const SmallSkinHeading = props => <SkinHeading size="small" {...props} />;
-export const MediumSkinHeading = props => <SkinHeading size="medium" {...props} />;
-export const LargeSkinHeading = props => <SkinHeading size="large" {...props} />;
-export const XLargeSkinHeading = props => <SkinHeading size="xlarge" {...props} />;
-export const HugeSkinHeading = props => <SkinHeading size="huge" {...props} />;
+export { DymoHeading };
+export const SmallDymoHeading = props => <DymoHeading size="small" {...props} />;
+export const MediumDymoHeading = props => <DymoHeading size="medium" {...props} />;
+export const LargeDymoHeading = props => <DymoHeading size="large" {...props} />;
+export const XLargeDymoHeading = props => <DymoHeading size="xlarge" {...props} />;
+export const HugeDymoHeading = props => <DymoHeading size="huge" {...props} />;
