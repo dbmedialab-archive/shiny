@@ -4,6 +4,7 @@ import { StorybookPaddedGrid } from '../src/storybook-decorators/PaddedGrid';
 import { DemoContainer } from './storybook-components';
 
 import { Heading, HugeHeading } from '../src/atoms/Heading';
+import { Code } from '../src/atoms/Code';
 
 // Loaders
 import { DotLoader } from '../src/atoms/loaders/DotLoader';
@@ -35,10 +36,19 @@ export default () => {
 					<HugeHeading>DotLoader</HugeHeading>
 					<p>Should be used when loading content that will fill a already defined space</p>
 
-					<Heading>Usage</Heading>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<DotLoader classes={'what-you-will'} />
 					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import { DotLoader } from '@aller/shiny';
+
+<DotLoader />
+						`}
+					</Code>
 				</section>
 			);
 		})

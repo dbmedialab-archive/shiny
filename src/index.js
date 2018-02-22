@@ -43,6 +43,7 @@ export { Tag                     } from './atoms/Tag';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
+export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
 export { Figure                  } from './atoms/Figure';
 export { FigCaption              } from './atoms/FigCaption';
