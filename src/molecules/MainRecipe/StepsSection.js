@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { LargeHeading as Heading } from '../..';
 import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
 
 const StepsSection  = ({ steps }) => (
 	<div>
-		<h1>SLIK GJØR DU</h1>
+		<Heading>SLIK GJØR DU</Heading>
 		{
 			steps.map((item, index) => {
 				return <RecipeStep key={index} dangerouslySetInnerHTML={{ __html: item.description }} />;

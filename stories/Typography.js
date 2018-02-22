@@ -11,6 +11,7 @@ import lunchButton from './typography/lunch-button';
 import dice from './typography/dice';
 import icon from './typography/icon';
 import underlinedHeading from './typography/underlined-heading';
+import dymoHeading from './typography/dymo-heading';
 import svgIcon from './typography/svgIcon';
 import iconWithText from './typography/iconWithText';
 import frontHeading from './typography/front-heading';
@@ -25,6 +26,7 @@ export default () => {
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('Underlined Heading', underlinedHeading)
+		.add('DymoHeading', dymoHeading)
 		.add('Front Heading', frontHeading)
 		.add('Cite', cite)
 		.add('Tag', tag)

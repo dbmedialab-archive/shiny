@@ -3,8 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Row } from '../../atoms/Row';
-import { Col  } from '../../atoms/Col';
+import {
+	Row,
+	Col,
+	LargeHeading as Heading,
+} from '../..';
 // import { IconBar } from '../IconBar';
 import { ComplexitySectionHeader } from '../../atoms/MainRecipe/ComplexitySectionHeader';
 
@@ -15,7 +18,7 @@ const Img = styled.img`
 
 export const Related = props => (
 	<section>
-		<h1>Related Section</h1>
+		<Heading>Related Section</Heading>
 		<Row>
 			<Col md={6}>
 				<Row>

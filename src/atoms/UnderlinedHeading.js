@@ -1,20 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
-import {
-	SmallHeading,
-	MediumHeading,
-	LargeHeading,
-	XLargeHeading,
-	HugeHeading,
-} from './Heading';
-
-const XSmallHeading = SmallHeading.extend`
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingSmallSize};
-		line-height: ${props => props.theme.variables.headingSmallLineHeight};
-	}
-`;
+import styled, { css } from 'styled-components';
+import { Heading } from './Heading';
 
 const CenteredContent = styled.div`
 	text-align: center;
@@ -23,89 +10,28 @@ const CenteredContent = styled.div`
 
 const StyledLine = styled.div`
 	width: 80%;
-	border-bottom: 0.2rem solid ${props => props.theme.colors.primary};
+	border-bottom: 0.1rem solid ${props => props.theme.colors.primary};
 	margin-left: auto;
 	margin-right: auto;
-`;
-const ThickStyledLine = StyledLine.extend`
-	border-width: 0.2rem;
+	${props => props.thick && css`border-width: .2rem`}
 `;
 
-const UnderlinedSmallHeading = ({ children }) => (
+const UnderlinedHeading = ({ size, ...rest }) => (
 	<CenteredContent>
-		<XSmallHeading>{children}</XSmallHeading>
-		<StyledLine />
+		<Heading size={size} {...rest} />
+		<StyledLine thick={['xlarge', 'huge'].includes(size)} />
 	</CenteredContent>
 );
-
-const UnderlinedMediumHeading = ({ children }) => (
-	<CenteredContent>
-		<MediumHeading>{children}</MediumHeading>
-		<StyledLine />
-	</CenteredContent>
-);
-
-const UnderlinedLargeHeading = ({ children }) => (
-	<CenteredContent>
-		<LargeHeading>{children}</LargeHeading>
-		<StyledLine />
-	</CenteredContent>
-);
-const UnderlinedXLargeHeading = ({ children }) => (
-	<CenteredContent>
-		<XLargeHeading>{children}</XLargeHeading>
-		<ThickStyledLine />
-	</CenteredContent>
-);
-
-const UnderlinedHugeHeading = ({ children }) => (
-	<CenteredContent>
-		<HugeHeading>{children}</HugeHeading>
-		<ThickStyledLine />
-	</CenteredContent>
-);
-
-UnderlinedLargeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
+UnderlinedHeading.propTypes = {
+	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
+};
+UnderlinedHeading.defaultProps = {
+	size: 'large',
 };
 
-UnderlinedSmallHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-UnderlinedMediumHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-UnderlinedXLargeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-
-UnderlinedHugeHeading.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
-	]).isRequired,
-};
-
-export {
-	UnderlinedLargeHeading as UnderlinedHeading,
-	UnderlinedLargeHeading,
-	UnderlinedSmallHeading,
-	UnderlinedMediumHeading,
-	UnderlinedXLargeHeading,
-	UnderlinedHugeHeading,
-};
+export { UnderlinedHeading };
+export const UnderlinedSmallHeading = props => <UnderlinedHeading size="small" {...props} />;
+export const UnderlinedMediumHeading = props => <UnderlinedHeading size="medium" {...props} />;
+export const UnderlinedLargeHeading = props => <UnderlinedHeading size="large" {...props} />;
+export const UnderlinedXLargeHeading = props => <UnderlinedHeading size="xlarge" {...props} />;
+export const UnderlinedHugeHeading = props => <UnderlinedHeading size="huge" {...props} />;

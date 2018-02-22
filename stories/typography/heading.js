@@ -5,7 +5,8 @@ import { DemoContainer } from '../storybook-components';
 import { Code } from '../../src/atoms/Code';
 
 // Typography
-import { Heading,
+import {
+	Heading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
