@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Sticky from 'react-sticky-fill';
+import styled, { css } from 'styled-components';
+import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
@@ -11,7 +11,21 @@ const LeftAndRight = styled.div`
 	width: 455px;
 
 	top: ${props => props.top};
-	left: calc(${props => (props.left ? '50% - (101rem / 2) - 45.5rem' : '50% + 50.5rem')});
+  @media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
+		${props => (
+		props.left
+			? 'right: 100%;'
+			: 'left: 100%;'
+	)}}
+	${props => ['sm', 'md', 'lg'].map(size => css`
+		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
+			${props => (
+		props.left
+			? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+			: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+	)}}
+
+		`)}
 
 	& a {
 		${props => (props.sticky ? 'position:sticky;top:0;' : '')} background-repeat: no-repeat;
@@ -72,22 +86,19 @@ class WallpaperAd extends Component {
 		window.removeEventListener('message', this.handlePostMessage.bind(this));
 	}
 
-	/* eslint-disable react/no-unused-state */
-	onSlotRenderEnded(slot) {
-		if (slot.size && slot.size[0] === 980) {
+	onMediaQueryChange(data) {
+		if (data.media === '(min-width: 1280px)' && !data.matches) {
 			this.setState({
-				showSkyscraper: true,
+				isWallpaper: false,
 			});
 		}
 	}
-	/* eslint-enable react/no-unused-state */
 
 	setWallpaper(data) {
 		const frame = document.querySelector(`iframe[name="${data.frame}"]`);
 		const main = document.querySelector('main');
 
 		if (frame === null) {
-			// console.warn('am.libs.ads.setWallpaper > Adunit iframe missing name attribute.');
 			return;
 		}
 
@@ -106,6 +117,7 @@ class WallpaperAd extends Component {
 		});
 	}
 
+
 	handlePostMessage(event) {
 		if (event.data.callback === 'db.libs.ads.setWallpaper') {
 			this.setWallpaper(event.data);
@@ -115,8 +127,7 @@ class WallpaperAd extends Component {
 	render() {
 		const { height } = this.props;
 
-
-		/* eslint-disable */
+		/* eslint-disable jsx-a11y/anchor-has-content */
 		const left = (
 			<LeftAndRight
 				key={'left'}
@@ -125,9 +136,9 @@ class WallpaperAd extends Component {
 				sticky={this.state.sticky}
 				left
 			>
-        <Sticky>
-				  <a href={this.state.href} />
-        </Sticky>
+				<Sticker>
+					<a href={this.state.href} />
+				</Sticker>
 			</LeftAndRight>
 		);
 
@@ -138,19 +149,19 @@ class WallpaperAd extends Component {
 				top={this.state.top}
 				sticky={this.state.sticky}
 			>
-        <Sticky>
-				  <a href={this.state.href} />
-        </Sticky>
+				<Sticker>
+					<a href={this.state.href} />
+				</Sticker>
 			</LeftAndRight>
-    );
-    /* eslint-enable */
+		);
+		/* eslint-enable jsx-a11y/anchor-has-content */
 
 		return (
 			<Fragment>
 				{this.state.isWallpaper && [left, right]}
 				<WallpaperWrapper height={height} width={this.state.isWallpaper ? '1010px' : '980px'}>
 					{React.cloneElement(this.props.children, {
-						onSlotRenderEnded: this.onSlotRenderEnded.bind(this),
+						onMediaQueryChange: this.onMediaQueryChange.bind(this),
 						width: this.state.isWallpaper ? '1010px' : '980px',
 					})}
 				</WallpaperWrapper>

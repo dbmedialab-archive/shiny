@@ -15,6 +15,11 @@ injectGlobal`
   body {
     font-size: 1.6rem;
   }
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section, main {
+    display: block;
+	}
 `;
 
 /**
