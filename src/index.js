@@ -116,7 +116,8 @@ export { Source                  } from './molecules/Source';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
+	LargeHorizontalHeroUnit,
+} from './molecules/HorizontalHeroUnit';
 export { WallpaperAd 						} from './molecules/WallpaperAd';
 
 // Organisms
