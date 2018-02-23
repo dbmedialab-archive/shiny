@@ -13,11 +13,13 @@ export default () => (
 	<section>
 		<HugeHeading>TrysilPlug with ALL CAPS</HugeHeading>
 		<p>Sometimes editors will prefer it if we scream out the news. Online, we do that with ALL CAPS.</p>
-		<p>Set the <var>ALLCAPS</var> prop, and you will achieve what you want.</p>
+		<p>Set the <var>headingProps.ALLCAPS</var> prop, and you will achieve what you want.</p>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug
-			ALLCAPS
+			headingProps={{
+				ALLCAPS: true,
+			}}
 			kicker="Ny dag, ny nyhet"
 			title="Hva skal vi plugge i dag, da?"
 			subtitle="Det blir vel en nyhetsartikkel igjen, tenker jeg."
@@ -48,7 +50,9 @@ import {
 } from '@aller/shiny';
 
 <TrysilPlug
-	ALLCAPS
+	headingProps={{
+		ALLCAPS: true,
+	}}
 	kicker="Ny dag, ny nyhet"
 	title="Hva skal vi plugge i dag, da?"
 	subtitle="Det blir vel en nyhetsartikkel igjen, tenker jeg."

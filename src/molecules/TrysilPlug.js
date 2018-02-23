@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Article } from '../atoms/Article';
 import { Kicker } from '../atoms/Kicker';
-import { Heading } from '../atoms/Heading';
+import { Heading as DefaultHeading } from '../atoms/Heading';
 import { Label } from '../atoms/Label';
 import { BlockLink } from '../atoms/BlockLink';
 import { LazyProgressiveImage } from '../molecules/LazyProgressiveImage';
@@ -20,7 +20,8 @@ const TrysilPlug = ({
 	offset,
 	sources,
 	ratio,
-	ALLCAPS,
+	Heading,
+	headingProps,
 }) => (
 	<Article>
 		<BlockLink href={url}>
@@ -40,7 +41,7 @@ const TrysilPlug = ({
 						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
-			<Heading ALLCAPS={ALLCAPS}>{title}</Heading>
+			<Heading {...headingProps}>{title}</Heading>
 			{subtitle && <p itemProp="description">{subtitle}</p>}
 			{labels &&
 				labels.map(label => (
@@ -64,7 +65,14 @@ TrysilPlug.propTypes = {
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
-	ALLCAPS: PropTypes.bool,
+	Heading: PropTypes.element,
+	headingProps: PropTypes.shape({
+		skin: PropTypes.shape({
+			backgroundColor: PropTypes.string,
+			textColor: PropTypes.string,
+			needsPadding: PropTypes.bool,
+		}),
+	}),
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
@@ -73,7 +81,8 @@ TrysilPlug.defaultProps = {
 	labels: [],
 	offset: 0,
 	sources: [],
-	ALLCAPS: false,
+	Heading: DefaultHeading,
+	headingProps: {},
 };
 
 export { TrysilPlug };

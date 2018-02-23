@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { Heading } from '..';
 
@@ -9,14 +8,6 @@ const FormattedHeading = styled(Heading)`
   display: inline-block;
   margin: 0 0 calc(2/3*${props => props.theme.variables.verticalBase});
   ${props => (props.hasImage ? 'max-width: 90%;' : `max-width: calc(100% - ${props.theme.variables.horizontalBase});`)}
-
-	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-		${props => ((props.flexingSize === 'full') ? css`
-			margin-top: 0;
-			font-size: ${props.theme.variables.headingXlargeSize};
-			line-height: ${props.theme.variables.headingXlargeLineHeight};
-		` :	'')};
-	}
 `;
 
 const PaddedText = styled.span`
@@ -86,7 +77,6 @@ const DymoHeading = (props) => {
 
 DymoHeading.propTypes = {
 	children: propTypes.node,
-	flexingSize: propTypes.string,
 	hasImage: propTypes.bool,
 	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
 	skin: propTypes.shape({
@@ -99,7 +89,6 @@ DymoHeading.propTypes = {
 
 DymoHeading.defaultProps = {
 	children: null,
-	flexingSize: 'small',
 	hasImage: false,
 	size: 'large',
 	skin: {
