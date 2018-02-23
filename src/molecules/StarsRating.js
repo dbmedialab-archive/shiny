@@ -6,7 +6,6 @@ const StarsRating = props => (
 	<ReactRating
 		fullSymbol={<SvgIcon name="star" color="#f4d300" />}
 		emptySymbol={<SvgIcon name="star" color="#cccccc" />}
-		placeholderSymbol={<SvgIcon name="star" color="yellow" />}
 		{...props}
 	/>
 );
