@@ -12,6 +12,7 @@ import { TotalTime } from './TotalTime';
 import { Vegan } from './Vegan';
 import { Vegetarian } from './Vegetarian';
 import { DoubleArrow } from './DoubleArrow';
+import { Star } from './Star';
 
 
 const SvgIcon = props => (
@@ -41,6 +42,8 @@ const SvgIcon = props => (
 					return <Vegetarian {...props} />;
 				case 'double-arrow':
 					return <DoubleArrow {...props} />;
+				case 'star':
+					return <Star {...props} />;
 				default:
 					return null;
 				}

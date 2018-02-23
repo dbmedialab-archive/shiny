@@ -96,6 +96,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="double-arrow" text="double-arrow" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="star" text="star" color="red" />
+			</Col>
 		</Row>
 	</section>
 );
