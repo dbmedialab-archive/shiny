@@ -120,3 +120,4 @@ export { SmallHorizontalHeroUnit,
 export { MatHeader               } from  './organisms/MatHeader';
 export { Footer                  } from  './organisms/Footer';
 export { MainRecipe              } from  './organisms/MainRecipe';
+export { RelatedRecipe           } from  './organisms/RelatedRecipe';
