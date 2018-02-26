@@ -41,7 +41,7 @@ const Footer = props => (
 				<Col xs={12} md={3}>
 					<p>Oppskrift.no</p>
 					<p>
-						<img className="Aller-logo" src="allers-logo.png" width={69} height={19} alt="" />
+						<img className="Aller-logo" src="/allers-logo.png" width={69} height={19} alt="" />
 						<svg width="4.5rem" height="43" viewBox="0 0 234 211">
 							<g stroke="none"  fill="none">
 								<g>
