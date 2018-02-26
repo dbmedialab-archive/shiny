@@ -292,6 +292,10 @@
     react-treebeard "^2.1.0"
     redux "^3.7.2"
 
+"Stickyfill@git+https://github.com/seleckis/stickyfill.git":
+  version "1.1.5"
+  resolved "git+https://github.com/seleckis/stickyfill.git#59644ed8c03f29aa212a6c1228b3ece0bb24c2b6"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
