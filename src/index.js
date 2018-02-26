@@ -118,7 +118,8 @@ export {
 	MediumHorizontalHeroUnit,
 	LargeHorizontalHeroUnit,
 } from './molecules/HorizontalHeroUnit';
-export { StarsRating  	         } from './molecules/StarsRating';
+export { WallpaperAd             } from './molecules/WallpaperAd';
+export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
 export { MatHeader               } from  './organisms/MatHeader';

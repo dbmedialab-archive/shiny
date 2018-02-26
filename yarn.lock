@@ -292,6 +292,10 @@
     react-treebeard "^2.1.0"
     redux "^3.7.2"
 
+"Stickyfill@git+https://github.com/seleckis/stickyfill.git":
+  version "1.1.5"
+  resolved "git+https://github.com/seleckis/stickyfill.git#59644ed8c03f29aa212a6c1228b3ece0bb24c2b6"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -5638,6 +5642,13 @@ react-split-pane@^0.1.74:
 react-stars@2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
+
+react-stickyfill@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.3.tgz#a1241a16b8d6fd39f77832d9cc69fa2998e58d44"
+  dependencies:
+    Stickyfill "git+https://github.com/seleckis/stickyfill.git"
+    prop-types "^15.5.10"
 
 react-style-proptype@^3.0.0:
   version "3.2.0"
