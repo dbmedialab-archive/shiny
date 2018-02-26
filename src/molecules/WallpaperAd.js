@@ -8,10 +8,10 @@ import { AdWrapper } from '../atoms/AdWrapper';
 const LeftAndRight = styled.div`
 	position: absolute;
 	height: 100%;
-	width: 455px;
+	width: 455px; /* Used for positioning of background ad so we use px */
 
 	top: ${props => props.top};
-  @media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
+  	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
 		${props => (
 		props.left
 			? 'right: 100%;'
@@ -32,8 +32,8 @@ const LeftAndRight = styled.div`
 		background-image: url(${props => props.backgroundImage});
 		background-position: ${props => (props.left ? '' : 'right top')};
 		display: block;
-		height: 1200px;
-		width: 455px;
+		height: 1200px; /* Use px instead of rem beause this is used to position */
+		width: 455px; /*  a background image from DFP so we need absolute values */
 	}
 
 	&:before {
