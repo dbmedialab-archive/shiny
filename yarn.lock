@@ -5631,6 +5631,10 @@ react-modal@^3.1.10:
     prop-types "^15.5.10"
     warning "^3.0.0"
 
+react-rating@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.0.5.tgz#46804b5be4a0c68df561054add35106cbbb179c2"
+
 react-split-pane@^0.1.74:
   version "0.1.77"
   resolved "https://registry.yarnpkg.com/react-split-pane/-/react-split-pane-0.1.77.tgz#f0c8cd18d076bbac900248dcf6dbcec02d5340db"
@@ -5638,17 +5642,6 @@ react-split-pane@^0.1.74:
     inline-style-prefixer "^3.0.6"
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
-
-react-stars@2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/react-stars/-/react-stars-2.2.5.tgz#911852018e1574a0f9a2c1dfa4f0bc9af071b921"
-
-react-stickyfill@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.3.tgz#a1241a16b8d6fd39f77832d9cc69fa2998e58d44"
-  dependencies:
-    Stickyfill "git+https://github.com/seleckis/stickyfill.git"
-    prop-types "^15.5.10"
 
 react-style-proptype@^3.0.0:
   version "3.2.0"
