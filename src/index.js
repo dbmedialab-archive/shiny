@@ -12,6 +12,15 @@ export {
 }                                  from './atoms/Heading';
 
 export {
+	DymoHeading,
+	SmallDymoHeading,
+	MediumDymoHeading,
+	LargeDymoHeading,
+	XLargeDymoHeading,
+	HugeDymoHeading,
+}                                  from './atoms/DymoHeading';
+
+export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
