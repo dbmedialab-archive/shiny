@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const YoutubeFrame = styled.div`
 	position: relative;
     width: 100%;
     height: 0;
@@ -15,4 +15,4 @@ const Container = styled.div`
     }
 `;
 
-export { Container };
+export { YoutubeFrame };

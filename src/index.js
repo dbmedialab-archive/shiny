@@ -46,8 +46,8 @@ export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
-export { Description             } from './atoms/MainRecipe/Description';
-export { Container               } from './atoms/MainRecipe/youtubeFrame';
+export { ColorTextBox            } from './atoms/MainRecipe/ColorTextBox';
+export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
 export { Tag                     } from './atoms/Tag';
@@ -124,9 +124,9 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
-export { DetailsSection          } from './molecules/MainRecipe/DetailsSection';
-export { IngredientsSection      } from './molecules/MainRecipe/IngredientsSection';
-export { StepsSection            } from './molecules/MainRecipe/StepsSection';
+export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
+export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
+export { RecipeSteps             } from './molecules/MainRecipe/RecipeSteps';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,

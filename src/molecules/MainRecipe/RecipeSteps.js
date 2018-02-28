@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeHeading as Heading } from '../..';
 import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
 
-const StepsSection  = ({ steps }) => (
+const RecipeSteps  = ({ steps }) => (
 	<div>
 		<Heading>SLIK GJØR DU</Heading>
 		{
@@ -16,14 +16,14 @@ const StepsSection  = ({ steps }) => (
 );
 /* eslint-enable max-len */
 
-StepsSection.propTypes = {
+RecipeSteps.propTypes = {
 	steps: PropTypes.arrayOf(PropTypes.shape({
 		description: PropTypes.string,
 	})),
 };
-StepsSection.defaultProps = {
+RecipeSteps.defaultProps = {
 	steps: [],
 };
 
 
-export { StepsSection };
+export { RecipeSteps };

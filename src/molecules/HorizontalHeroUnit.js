@@ -110,7 +110,7 @@ HeroUnit.propTypes = {
 	image: PropTypes.shape({
 		src: PropTypes.string.isRequired,
 		ratio: PropTypes.number,
-		fallbackSrc: PropTypes.string.isRequired,
+		fallbackSrc: PropTypes.string,
 		placeholder: PropTypes.string.isRequired,
 	}).isRequired,
 	difficulty: PropTypes.oneOf([1, 2, 3]),

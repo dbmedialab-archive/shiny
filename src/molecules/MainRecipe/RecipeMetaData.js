@@ -14,7 +14,7 @@ import { IconBar } from '../IconBar';
 import { StarsRating } from '../../molecules/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
-const DetailsSectionWrapper = styled.div`
+const RecipeMetaDataWrapper = styled.div`
 	padding: 0;
 	margin: 0 auto;
 	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
@@ -22,7 +22,7 @@ const DetailsSectionWrapper = styled.div`
 	}
 `;
 
-const DetailsSection  = ({
+const RecipeMetaData  = ({
 	allergies,
 	preferences,
 	author,
@@ -42,7 +42,7 @@ const DetailsSection  = ({
 	});
 
 	return (
-		<DetailsSectionWrapper>
+		<RecipeMetaDataWrapper>
 			<Row>
 				<Col xs md={8} mdOffset={2}>
 					<FigCaption>
@@ -75,7 +75,7 @@ const DetailsSection  = ({
 					<StarsRating count={5} size={29} value={rating} />
 				</Col>
 			</Row>
-		</DetailsSectionWrapper>
+		</RecipeMetaDataWrapper>
 	);
 };
 
@@ -84,14 +84,14 @@ const IconValues = PropTypes.shape({
 	value: PropTypes.number,
 });
 
-DetailsSection.defaultProps = {
+RecipeMetaData.defaultProps = {
 	allergies: [],
 	preferences: [],
 	author: {},
 	rating: 0,
 };
 
-DetailsSection.propTypes = {
+RecipeMetaData.propTypes = {
 	allergies: PropTypes.arrayOf(IconValues),
 	preferences: PropTypes.arrayOf(IconValues),
 	author: PropTypes.shape({
@@ -107,4 +107,4 @@ DetailsSection.propTypes = {
 };
 
 
-export { DetailsSection };
+export { RecipeMetaData };

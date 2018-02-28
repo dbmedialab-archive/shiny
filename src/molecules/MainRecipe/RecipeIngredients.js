@@ -12,11 +12,11 @@ import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
 import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 
-const RecipePartHeading = FrontSmallHeading.extend`
+const RecipeIngredientsHeading = FrontSmallHeading.extend`
 	font-weight: 600;
 `;
 
-class IngredientsSection extends React.Component {
+class RecipeIngredients extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -34,7 +34,7 @@ class IngredientsSection extends React.Component {
 		return parts.map((ingredientsList, index) => {
 			return (
 				<React.Fragment key={index}>
-					{ingredientsList.title ? <RecipePartHeading textColor="primary">{ingredientsList.title}</RecipePartHeading> : null }
+					{ingredientsList.title ? <RecipeIngredientsHeading textColor="primary">{ingredientsList.title}</RecipeIngredientsHeading> : null }
 					{ingredientsList.ingredients.map((item, index) => {
 						return (<Quantity
 							key={index}
@@ -122,7 +122,7 @@ class IngredientsSection extends React.Component {
 }
 
 // TODO Keep this in sync with wolverine-api
-IngredientsSection.propTypes = {
+RecipeIngredients.propTypes = {
 	servings: propTypes.number,
 	baseServings: propTypes.number,
 	parts: propTypes.arrayOf(propTypes.shape({
@@ -137,10 +137,10 @@ IngredientsSection.propTypes = {
 		})),
 	})),
 };
-IngredientsSection.defaultProps = {
+RecipeIngredients.defaultProps = {
 	servings: 1,
 	baseServings: 1,
 	parts: [],
 };
 
-export { IngredientsSection };
+export { RecipeIngredients };

@@ -13,7 +13,7 @@ import {
 	FrontSmallHeading,
 	FrontLargeHeading,
 } from '../..';
-import { Description } from '../../src/atoms/MainRecipe/Description';
+import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
 import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 
@@ -86,7 +86,7 @@ const SingleIngredientStory = ({ ...rest }) => (
 					</Row>
 				</DetailsCol>
 				<Col xs>
-					<Description bgColor="secondary">{description}</Description>
+					<ColorTextBox bgColor="secondary">{description}</ColorTextBox>
 				</Col>
 			</Row>
 		</Grid>
@@ -237,7 +237,7 @@ const RelatedSection = styled.section\`
 			</Row>
 		</DetailsCol>
 		<Col xs>
-			<Description>{description}</Description>
+			<ColorTextBox>{description}</ColorTextBox>
 		</Col>
 	</Row>
 </Grid>

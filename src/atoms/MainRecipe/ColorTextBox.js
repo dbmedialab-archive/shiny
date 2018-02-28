@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Col } from '../../atoms/Col';
 
-const Description = styled(Col)`
+const ColorTextBox = styled(Col)`
 	padding: 2rem;
 	width: 100%;
 	height: 100%;
@@ -20,10 +20,10 @@ const Description = styled(Col)`
  	}
 `;
 
-Description.defaultProps = {
+ColorTextBox.defaultProps = {
 	textColor: 'white',
 	bgColor: 'primary',
 };
 
 
-export { Description };
+export { ColorTextBox };
