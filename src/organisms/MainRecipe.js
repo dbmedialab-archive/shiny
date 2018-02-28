@@ -55,10 +55,10 @@ const MainRecipe = props => (
 		</Grid>
 		<StepsGrid>
 			<Row>
-				<Col md={6} xs={12} lg={6}>
+				<Col xs={12} md={6}>
 					<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
 				</Col>
-				<Col md={6} xs={12} lg={6}>
+				<Col xs={12} md={6}>
 					<Row>
 						<Col xs={12} >
 							<StepsSection steps={props.recipe.steps} />

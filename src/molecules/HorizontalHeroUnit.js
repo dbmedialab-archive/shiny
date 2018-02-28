@@ -146,9 +146,9 @@ const MediumHorizontalHeroUnit = props => (<HeroUnit
 />);
 const LargeHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedHugeHeading}
-	iconSize={5}
+	iconSize={6}
 	textSize={1.6}
-	iconBarWidth={9}
+	iconBarWidth={6}
 	{...props}
 />);
 

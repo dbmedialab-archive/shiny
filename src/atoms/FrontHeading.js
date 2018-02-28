@@ -13,6 +13,7 @@ const FheadStyle = props => css`
     white-space: nowrap;
 	overflow: hidden;
 	text-transform: uppercase;
+	letter-spacing: 0.5px;
     &:after {
 		content: '';
 		width: 100%;

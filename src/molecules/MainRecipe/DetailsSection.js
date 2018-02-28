@@ -70,7 +70,7 @@ const DetailsSection  = ({
 						</React.Fragment>
 						: null}
 				</Col>
-				<Col xs={12} md={3} mdOffset={2}>
+				<Col xs={12} md={4} mdOffset={1}>
 					<FrontSmallHeading>Vurdering</FrontSmallHeading>
 					<StarsRating count={5} size={29} value={rating} />
 				</Col>
