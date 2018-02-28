@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Col } from '../..';
+import { Col } from '../../atoms/Col';
 
 const Description = styled(Col)`
 	padding: 2rem;

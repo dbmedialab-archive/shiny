@@ -135,6 +135,7 @@ const SmallHorizontalHeroUnit = props => (<HeroUnit
 	iconSize={2}
 	textSize={1}
 	iconBarWidth={10}
+	fallbackSrc=""
 	{...props}
 />);
 const MediumHorizontalHeroUnit = props => (<HeroUnit
@@ -142,6 +143,7 @@ const MediumHorizontalHeroUnit = props => (<HeroUnit
 	iconSize={3}
 	textSize={1.3}
 	iconBarWidth={9}
+	fallbackSrc=""
 	{...props}
 />);
 const LargeHorizontalHeroUnit = props => (<HeroUnit
@@ -149,6 +151,7 @@ const LargeHorizontalHeroUnit = props => (<HeroUnit
 	iconSize={6}
 	textSize={1.6}
 	iconBarWidth={6}
+	fallbackSrc=""
 	{...props}
 />);
 

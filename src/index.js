@@ -46,6 +46,8 @@ export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
+export { Description             } from './atoms/MainRecipe/Description';
+export { Container               } from './atoms/MainRecipe/youtubeFrame';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
 export { Tag                     } from './atoms/Tag';
@@ -112,7 +114,7 @@ export { VerticalLinkBar         } from './molecules/VerticalLinkBar';
 export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
-export { TagSection                    } from './molecules/TagSection';
+export { TagSection              } from './molecules/TagSection';
 export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';
@@ -122,6 +124,9 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
+export { DetailsSection          } from './molecules/MainRecipe/DetailsSection';
+export { IngredientsSection      } from './molecules/MainRecipe/IngredientsSection';
+export { StepsSection            } from './molecules/MainRecipe/StepsSection';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
