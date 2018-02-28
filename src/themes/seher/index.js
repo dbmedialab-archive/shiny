@@ -46,9 +46,12 @@ export default {
 		...combinedShadedColors,
 
 		skinColors: {
-			splashBackground: 'grayTintLight',
+			splashBackground: 'primary',
 			splashBorder: 'darkness',
-			splashText: 'tertiary',
+			splashText: 'white',
+			calmBackground: 'grayTintLight',
+			calmBorder: 'darkness',
+			calmText: 'tertiary',
 		},
 	},
 	global,

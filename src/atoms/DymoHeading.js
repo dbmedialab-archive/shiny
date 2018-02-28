@@ -48,6 +48,8 @@ PaddedText.defaultProps = {
 	},
 };
 
+const Hgroup = styled.hgroup``;
+
 const DymoHeading = (props) => {
 	const {
 		children,
@@ -62,7 +64,7 @@ const DymoHeading = (props) => {
 
 	/* eslint-disable react/no-danger */
 	return (
-		<hgroup>
+		<Hgroup>
 			<FormattedHeading
 				{...rest}
 			>
@@ -71,7 +73,7 @@ const DymoHeading = (props) => {
 					dangerouslySetInnerHTML={{ __html: children || title }}
 				/>
 			</FormattedHeading>
-		</hgroup>
+		</Hgroup>
 	);
 };
 
