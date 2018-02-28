@@ -34,7 +34,9 @@ class RecipeIngredients extends React.Component {
 		return parts.map((ingredientsList, index) => {
 			return (
 				<React.Fragment key={index}>
-					{ingredientsList.title ? <RecipeIngredientsHeading textColor="primary">{ingredientsList.title}</RecipeIngredientsHeading> : null }
+					{ingredientsList.title ?
+						<RecipeIngredientsHeading textColor="primary">{ingredientsList.title}</RecipeIngredientsHeading>
+						: null }
 					{ingredientsList.ingredients.map((item, index) => {
 						return (<Quantity
 							key={index}
