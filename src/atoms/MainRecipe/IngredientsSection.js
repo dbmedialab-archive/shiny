@@ -36,7 +36,7 @@ const Pers = Styled.span`
 	color: #333333;
 	font-weight: normal;
 	margin-left: 1.4rem;
-	letter-spacing: 1px;
+	letter-spacing: .0625rem;
 `;
 
 const AddCart = Styled.div`
