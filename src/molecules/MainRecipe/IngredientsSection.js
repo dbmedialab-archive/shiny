@@ -118,7 +118,7 @@ class IngredientsSection extends React.Component {
 IngredientsSection.propTypes = {
 	servings: propTypes.number,
 	baseServings: propTypes.number,
-	parts: propTypes.arrayOf(propTypes.arrayOf(propTypes.shape({
+	parts: propTypes.arrayOf(propTypes.shape({
 		title: propTypes.string,
 		ingredients: propTypes.arrayOf(propTypes.shape({
 			title: propTypes.string,
@@ -128,7 +128,7 @@ IngredientsSection.propTypes = {
 				type: propTypes.string,
 			}),
 		})),
-	}))),
+	})),
 };
 IngredientsSection.defaultProps = {
 	servings: 1,
