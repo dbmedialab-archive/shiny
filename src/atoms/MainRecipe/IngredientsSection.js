@@ -47,7 +47,7 @@ const AddCart = Styled.div`
 		cursor: pointer;
 	}
 	> span {
-		letter-spacing: 1px;
+		letter-spacing: .0625rem;
 		font-size: 2rem;
 	}
 `;
