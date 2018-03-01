@@ -14,6 +14,7 @@ import { RecipeSteps             } from '../molecules/MainRecipe/RecipeSteps';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
 import { YoutubeFrame            } from '../atoms/MainRecipe/youtubeFrame';
+import { SvgIcon                 } from '../atoms/SvgIcon';
 
 const Fragment = ({ children }) => children;
 
@@ -88,6 +89,13 @@ const MainRecipe = props => (
 					</Row>
 					<Row>
 						<TagSection tags={props.recipe.tags} />
+					</Row>
+					<Row>
+						<Col xs={12}>
+							<FrontLargeHeading textColor="primary" lineColor="primary">DEL OPPSKRIFTEN</FrontLargeHeading>
+							<SvgIcon name={'mail'} size={5} />
+							<SvgIcon name={'pinterest'} size={5} />
+						</Col>
 					</Row>
 				</Col>
 			</Row>

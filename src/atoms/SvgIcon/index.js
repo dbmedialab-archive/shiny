@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import SvgIconWrapper from './SvgIconWrapper';
 
 import { ActivityTime } from './ActivityTime';
-import { Difficulty } from './Difficulty';
-import { Nut } from './Nut';
-import { Fish } from './Fish';
-import { Gluten } from './Gluten';
-import { Pork } from './Pork';
-import { TotalTime } from './TotalTime';
-import { Vegan } from './Vegan';
-import { Vegetarian } from './Vegetarian';
-import { DoubleArrow } from './DoubleArrow';
-import { Star } from './Star';
-import { Lactose } from './Lactose';
-import { Egg } from './Egg';
-import { ShellFish } from './ShellFish';
+import { Difficulty   } from './Difficulty';
+import { Nut          } from './Nut';
+import { Fish         } from './Fish';
+import { Gluten       } from './Gluten';
+import { Pork         } from './Pork';
+import { TotalTime    } from './TotalTime';
+import { Vegan        } from './Vegan';
+import { Vegetarian   } from './Vegetarian';
+import { DoubleArrow  } from './DoubleArrow';
+import { Star         } from './Star';
+import { Lactose      } from './Lactose';
+import { Egg          } from './Egg';
+import { ShellFish    } from './ShellFish';
+import { Mail         } from './Mail';
+import { Pinterest    } from './Pinterest';
 
 
 const SvgIcon = props => (
@@ -23,6 +25,10 @@ const SvgIcon = props => (
 		{
 			(() => {
 				switch (props.name) {
+				case 'pinterest':
+					return <Pinterest {...props} />;
+				case 'mail':
+					return <Mail {...props} />;
 				case 'skalldyr':
 					return <ShellFish {...props} />;
 				case 'egg':
