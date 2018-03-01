@@ -150,7 +150,7 @@ const LargeHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedHugeHeading}
 	iconSize={6}
 	textSize={1.6}
-	iconBarWidth={6}
+	iconBarWidth={7}
 	fallbackSrc=""
 	{...props}
 />);
