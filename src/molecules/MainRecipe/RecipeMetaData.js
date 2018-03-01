@@ -66,7 +66,7 @@ const RecipeMetaData  = ({
 					{preferences.length ?
 						<React.Fragment>
 							<FrontSmallHeading>Passer For</FrontSmallHeading>
-							<IconBar entities={preferences} textSize={1.2} iconSize={5} />
+							<IconBar entities={preferences} textSize={1.2} iconSize={4} />
 						</React.Fragment>
 						: null}
 				</Col>
