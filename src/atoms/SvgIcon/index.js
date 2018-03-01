@@ -13,6 +13,9 @@ import { Vegan } from './Vegan';
 import { Vegetarian } from './Vegetarian';
 import { DoubleArrow } from './DoubleArrow';
 import { Star } from './Star';
+import { Lactose } from './Lactose';
+import { Egg } from './Egg';
+import { ShellFish } from './ShellFish';
 
 
 const SvgIcon = props => (
@@ -20,6 +23,12 @@ const SvgIcon = props => (
 		{
 			(() => {
 				switch (props.name) {
+				case 'skalldyr':
+					return <ShellFish {...props} />;
+				case 'egg':
+					return <Egg {...props} />;
+				case 'laktose':
+					return <Lactose {...props} />;
 				case 'activity':
 					return <ActivityTime {...props} />;
 				case 'difficulty':
@@ -38,6 +47,7 @@ const SvgIcon = props => (
 					return <TotalTime {...props} />;
 				case 'vegan':
 					return <Vegan {...props} />;
+				case 'vegetar':
 				case 'vegetarian':
 					return <Vegetarian {...props} />;
 				case 'double-arrow':
