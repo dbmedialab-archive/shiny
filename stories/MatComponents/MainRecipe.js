@@ -42,12 +42,12 @@ const mockRecipe = {
 	],
 	allergies: [
 		{
-			slug: 'gluten',
-			title: 'Gluten',
+			slug: 'egg',
+			title: 'Egg',
 		},
 		{
-			slug: 'fisk',
-			title: 'Fisk',
+			slug: 'laktose',
+			title: 'Laktose',
 		},
 	],
 	parts: [
