@@ -6,12 +6,17 @@ import {
 	Col,
 	FontIcon,
 	LargeHeading as Heading,
+	FrontSmallHeading,
 } from '../..';
 import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
 import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
 
 
-class IngredientsSection extends React.Component {
+const RecipeIngredientsHeading = FrontSmallHeading.extend`
+	font-weight: 600;
+`;
+
+class RecipeIngredients extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -24,19 +29,23 @@ class IngredientsSection extends React.Component {
 		this.decrementServings = this.decrementServings.bind(this);
 	}
 
-	getIngredients() {
+	getIngredientsParts() {
 		const { parts } = this.state;
-		return parts.map((ingredientList) => {
-			return ingredientList.ingredients.map((item, index) => {
-				return (
-					<Quantity
-						key={index}
-						amount={this.calculateAmount(item.amount)}
-						type={item.type}
-						title={item.title}
-					/>
-				);
-			});
+		return parts.map((ingredientsList, index) => {
+			return (
+				<React.Fragment key={index}>
+					{ingredientsList.title ?
+						<RecipeIngredientsHeading textColor="primary">{ingredientsList.title}</RecipeIngredientsHeading>
+						: null }
+					{ingredientsList.ingredients.map((item, index) => {
+						return (<Quantity
+							key={index}
+							amount={this.calculateAmount(item.amount)}
+							type={item.type}
+							title={item.title}
+						/>);
+					})}
+				</React.Fragment>);
 		});
 	}
 
@@ -102,7 +111,7 @@ class IngredientsSection extends React.Component {
 				</Pers>
 				<Row>
 					<Col xs={12} md={6} lg={6}>
-						<Wrapper> { this.getIngredients() } </Wrapper>
+						<Wrapper> { this.getIngredientsParts() } </Wrapper>
 					</Col>
 				</Row>
 				<AddCart>
@@ -115,10 +124,10 @@ class IngredientsSection extends React.Component {
 }
 
 // TODO Keep this in sync with wolverine-api
-IngredientsSection.propTypes = {
+RecipeIngredients.propTypes = {
 	servings: propTypes.number,
 	baseServings: propTypes.number,
-	parts: propTypes.arrayOf(propTypes.arrayOf(propTypes.shape({
+	parts: propTypes.arrayOf(propTypes.shape({
 		title: propTypes.string,
 		ingredients: propTypes.arrayOf(propTypes.shape({
 			title: propTypes.string,
@@ -128,12 +137,12 @@ IngredientsSection.propTypes = {
 				type: propTypes.string,
 			}),
 		})),
-	}))),
+	})),
 };
-IngredientsSection.defaultProps = {
+RecipeIngredients.defaultProps = {
 	servings: 1,
 	baseServings: 1,
 	parts: [],
 };
 
-export { IngredientsSection };
+export { RecipeIngredients };

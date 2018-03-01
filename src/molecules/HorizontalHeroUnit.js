@@ -110,7 +110,7 @@ HeroUnit.propTypes = {
 	image: PropTypes.shape({
 		src: PropTypes.string.isRequired,
 		ratio: PropTypes.number,
-		fallbackSrc: PropTypes.string.isRequired,
+		fallbackSrc: PropTypes.string,
 		placeholder: PropTypes.string.isRequired,
 	}).isRequired,
 	difficulty: PropTypes.oneOf([1, 2, 3]),
@@ -135,6 +135,7 @@ const SmallHorizontalHeroUnit = props => (<HeroUnit
 	iconSize={2}
 	textSize={1}
 	iconBarWidth={10}
+	fallbackSrc=""
 	{...props}
 />);
 const MediumHorizontalHeroUnit = props => (<HeroUnit
@@ -142,13 +143,15 @@ const MediumHorizontalHeroUnit = props => (<HeroUnit
 	iconSize={3}
 	textSize={1.3}
 	iconBarWidth={9}
+	fallbackSrc=""
 	{...props}
 />);
 const LargeHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedHugeHeading}
-	iconSize={5}
+	iconSize={6}
 	textSize={1.6}
-	iconBarWidth={9}
+	iconBarWidth={7}
+	fallbackSrc=""
 	{...props}
 />);
 

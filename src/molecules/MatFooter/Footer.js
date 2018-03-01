@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Row, Col, Grid } from '../..';
-import { Description } from '../../atoms/MainRecipe/Description';
+import { ColorTextBox } from '../../atoms/MainRecipe/ColorTextBox';
 
 const FooterMat = styled.div`
     background-color: #4a4a4a;
@@ -23,7 +23,7 @@ const FooterMat = styled.div`
     }
 `;
 
-const LogoWrapper = styled(Description)`
+const LogoWrapper = styled(ColorTextBox)`
 	padding: 0;
 	background-color: inherit;
 	height: auto;

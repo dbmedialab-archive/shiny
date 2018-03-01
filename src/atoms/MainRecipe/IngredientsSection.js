@@ -32,11 +32,11 @@ const Counter = Styled.span`
 `;
 
 const Pers = Styled.span`
-	font-family: Roboto;
 	font-size: 1.8rem;
 	color: #333333;
 	font-weight: normal;
 	margin-left: 1.4rem;
+	letter-spacing: .0625rem;
 `;
 
 const AddCart = Styled.div`
@@ -45,6 +45,10 @@ const AddCart = Styled.div`
 		vertical-align: sub;
 		margin-right: 1.0rem;
 		cursor: pointer;
+	}
+	> span {
+		letter-spacing: .0625rem;
+		font-size: 2rem;
 	}
 `;
 

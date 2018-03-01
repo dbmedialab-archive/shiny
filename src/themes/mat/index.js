@@ -4,7 +4,7 @@ import colors from './colors';
 import variables from './variables';
 
 const global = css`
-	@import url('https://fonts.googleapis.com/css?family=Cabin:600');
+	@import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
 
 	* {
 		box-sizing: border-box;
@@ -34,8 +34,8 @@ const theme = {
 		outerMargin: 2, // rem
 		container: {
 			sm: 71, // rem
-			md: 120.0, // rem
-			lg: 144.0,  // rem
+			md: 100.0, // rem
+			lg: 110.0,  // rem
 		},
 		breakpoints: {
 			xs: 0,  // em

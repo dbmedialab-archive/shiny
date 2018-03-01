@@ -18,7 +18,7 @@ const BylineImage = Styled.img.attrs({
 const TextBlock = Styled.div`
     float: left;
     color: ${props => props.theme.colors.type};
-    font-family: 'Roboto';
+    font-family: ${props => props.theme.variables.mainFont};
 `;
 
 const Name = Styled.div`
