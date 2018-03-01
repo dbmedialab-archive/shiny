@@ -24,7 +24,7 @@ const SvgIcon = props => (
 			(() => {
 				switch (props.name) {
 				case 'skalldyr':
-					return <ShellFish {...props} />
+					return <ShellFish {...props} />;
 				case 'egg':
 					return <Egg {...props} />;
 				case 'laktose':

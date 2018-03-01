@@ -5,7 +5,7 @@ const Lactose = props => (
 	<svg width="19px" height="30px" viewBox="0 0 19 30">
 		<g id="Index" stroke="none" fill="none">
 			<g id="Desktop-HD" transform="translate(-636.000000, -194.000000)" fill="#767676">
-				<g id="allergies-and-preferences"transform="translate(216.000000, 121.000000)">
+				<g id="allergies-and-preferences" transform="translate(216.000000, 121.000000)">
 					<g id="allergies" transform="translate(21.000000, 29.000000)">
 						<g id="allergy-laktose" transform="translate(383.000000, 39.000000)">
 							{/* eslint-disable max-len */}
