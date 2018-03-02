@@ -8,7 +8,7 @@ import {
 
 const PaddingLess = Col.extend`
 	padding: 0;
-`
+`;
 
 const IconBar = props => (
 	<Row>
