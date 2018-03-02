@@ -17,11 +17,11 @@ import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 const LogoLink = styled(XSmallLinkBarLink)`
 	position: absolute;
 	top:0;
-	width: calc(2 * ${props => props.theme.variables.verticalBase});
+	width: calc(2.5 * ${props => props.theme.variables.verticalBase});
 	transition: .2s width;
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		width: calc(4 * ${props => props.theme.variables.verticalBase} - .2rem);
+		width: calc(4 * ${props => props.theme.variables.verticalBase} + 1.1rem);
 	}
 `;
 
