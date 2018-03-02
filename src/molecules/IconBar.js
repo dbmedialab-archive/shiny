@@ -6,13 +6,17 @@ import {
 	IconWithText,
 } from '..';
 
+const PaddingLess = Col.extend`
+	padding: 0;
+`
+
 const IconBar = props => (
 	<Row>
 		{
 			props.entities.map((entity, i) => (
-				<Col xs key={i}>
+				<PaddingLess xs key={i}>
 					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
-				</Col>
+				</PaddingLess>
 			))
 		}
 	</Row>

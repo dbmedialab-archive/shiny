@@ -7,11 +7,11 @@ import {
 	Col,
 	LazyProgressiveImage,
 	Source,
-	IconBar,
 	UnderlinedHugeHeading,
 	UnderlinedMediumHeading,
 	UnderlinedSmallHeading,
-} from '../..';
+} from '../../';
+import { IconBar } from '../molecules/IconBar';
 
 const Fragment = ({ children }) => children;
 
@@ -88,8 +88,9 @@ const HeroUnit = (props) => {
 			</Col>
 			<TitleCol xs={12} md={5}>
 				{(props.difficulty || props.timeCooking || props.timeTotal) &&
-				<Row center="xs">
-					<Col xs={props.iconBarWidth}>
+				<Row center="xs" className="JOPA1">
+					<Col xs={props.iconBarWidth} className="JOPA1">
+						<h1>ZAlupa</h1>
 						<IconBar
 							entities={icons}
 							textSize={props.textSize}
