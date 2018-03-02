@@ -2,8 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Row, Col, Grid } from '../..';
+import { Row, Col, Grid } from '../../';
 import { ColorTextBox } from '../../atoms/MainRecipe/ColorTextBox';
+
 
 const FooterMat = styled.div`
     background-color: #4a4a4a;
@@ -17,8 +18,9 @@ const FooterMat = styled.div`
     }
 
     @media (max-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-        p, img {
+        p, img, div {
             text-align: center;
+            justify-content: center;
         }
     }
 `;
@@ -36,7 +38,7 @@ const LogoWrapper = styled(ColorTextBox)`
 
 const Footer = props => (
 	<FooterMat>
-		<Grid>
+		<Grid fluid>
 			<Row>
 				<Col xs={12} md={3}>
 					<p>Oppskrift.no</p>

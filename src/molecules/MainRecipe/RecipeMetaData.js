@@ -22,6 +22,10 @@ const RecipeMetaDataWrapper = styled.div`
 	}
 `;
 
+const PaddedCol = Col.extend`
+	margin-top: 2rem;
+`;
+
 const RecipeMetaData  = ({
 	allergies,
 	preferences,
@@ -44,25 +48,25 @@ const RecipeMetaData  = ({
 	return (
 		<RecipeMetaDataWrapper>
 			<Row>
-				<Col xs md={8} mdOffset={2}>
+				<PaddedCol xs md={8} mdOffset={2}>
 					<FigCaption>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley
 					</FigCaption>
-				</Col>
+				</PaddedCol>
 			</Row>
 			<Row>
-				<Col xs={12} md={3} mdOffset={2}>
+				<Col xs={12} md={5} mdOffset={1}>
 					<FrontSmallHeading>Inneholder</FrontSmallHeading>
 					<IconBar entities={allergies} textSize={1.2} iconSize={5} />
 				</Col>
-				<Col xs={12} md={3} mdOffset={2}>
+				<Col xs={12} md={5} mdOffset={1}>
 					<FrontSmallHeading>Oppskrift</FrontSmallHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
 			</Row>
 			<Row>
-				<Col xs={12} md={3} mdOffset={2}>
+				<Col xs={12} md={5} mdOffset={1}>
 					{preferences.length ?
 						<React.Fragment>
 							<FrontSmallHeading>Passer For</FrontSmallHeading>
@@ -70,7 +74,7 @@ const RecipeMetaData  = ({
 						</React.Fragment>
 						: null}
 				</Col>
-				<Col xs={12} md={4} mdOffset={1}>
+				<Col xs={12} md={5} mdOffset={1}>
 					<FrontSmallHeading>Vurdering</FrontSmallHeading>
 					<StarsRating count={5} size={29} value={rating} />
 				</Col>

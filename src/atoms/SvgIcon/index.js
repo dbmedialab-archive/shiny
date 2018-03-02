@@ -72,7 +72,7 @@ SvgIcon.propTypes = {
 	name: PropTypes.string,
 };
 SvgIcon.defaultProps = {
-	size: 3.5,
+	size: 3.2,
 	name: '',
 };
 
