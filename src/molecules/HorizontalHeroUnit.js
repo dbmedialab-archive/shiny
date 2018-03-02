@@ -7,11 +7,11 @@ import {
 	Col,
 	LazyProgressiveImage,
 	Source,
-	IconBar,
 	UnderlinedHugeHeading,
 	UnderlinedMediumHeading,
 	UnderlinedSmallHeading,
-} from '../..';
+} from '../../';
+import { IconBar } from '../molecules/IconBar';
 
 const Fragment = ({ children }) => children;
 
