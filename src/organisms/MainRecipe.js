@@ -23,9 +23,13 @@ const StepsGrid = Grid.extend`
 	padding-bottom: calc(3 * ${props => props.theme.variables.verticalBase});
 `;
 
+const PaddedCol = Col.extend`
+	margin-bottom: 5rem;
+`;
+
 const MainRecipe = props => (
 	<Fragment>
-		<Grid fluid>
+		<Grid>
 			<Row>
 				<Col xs={12}>
 					<LargeHorizontalHeroUnit
@@ -91,11 +95,11 @@ const MainRecipe = props => (
 						<TagSection tags={props.recipe.tags} />
 					</Row>
 					<Row>
-						<Col xs={12}>
+						<PaddedCol xs={12}>
 							<FrontLargeHeading textColor="primary" lineColor="primary">DEL OPPSKRIFTEN</FrontLargeHeading>
 							<SvgIcon name={'mail'} size={5} />
 							<SvgIcon name={'pinterest'} size={5} />
-						</Col>
+						</PaddedCol>
 					</Row>
 				</Col>
 			</Row>
