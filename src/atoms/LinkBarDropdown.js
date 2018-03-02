@@ -9,6 +9,9 @@ const Button = LinkBarLinkBase.withComponent('button').extend`
 	cursor: pointer;
 `;
 
+// I just met you,
+// And this is crazy.
+// Here's my Dropdown... so
 const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
