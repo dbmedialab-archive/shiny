@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Avatar = props => (
+const User = props => (
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		x="0px"
@@ -33,4 +33,4 @@ const Avatar = props => (
 	</svg>
 );
 
-export { Avatar };
+export { User };

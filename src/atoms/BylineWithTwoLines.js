@@ -50,7 +50,7 @@ const BylineWithTwoLines = ({ src, name, email }) => (
 	<BylineBlock>
 		{ src ?  <BylineImage
 			src={src}
-		/> : <WrapAvatar><SvgIcon name="avatar" /></WrapAvatar>}
+		/> : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
 			<Name>
 				{name}

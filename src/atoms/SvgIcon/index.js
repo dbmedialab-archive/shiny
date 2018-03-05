@@ -18,7 +18,7 @@ import { Egg          } from './Egg';
 import { ShellFish    } from './ShellFish';
 import { Mail         } from './Mail';
 import { Pinterest    } from './Pinterest';
-import { Avatar       } from './Avatar';
+import { User       } from './Avatar';
 
 
 const SvgIcon = props => (
@@ -61,8 +61,8 @@ const SvgIcon = props => (
 					return <DoubleArrow {...props} />;
 				case 'star':
 					return <Star {...props} />;
-				case 'avatar':
-					return <Avatar {...props} />;
+				case 'user':
+					return <User {...props} />;
 				default:
 					return null;
 				}
