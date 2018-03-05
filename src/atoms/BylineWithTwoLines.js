@@ -1,6 +1,7 @@
 import Styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SvgIcon } from './SvgIcon';
 
 const BylineBlock = Styled.div`
 `;
@@ -13,6 +14,16 @@ const BylineImage = Styled.img.attrs({
     overflow: hidden;
     border-radius: 50%;
     margin-right: ${props => props.theme.variables.horizontalBase};
+`;
+
+const WrapAvatar = Styled.div`
+	float: left;
+    width: 4.5rem;
+    height: 4.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: ${props => props.theme.variables.horizontalBase};
+    text-align: center;
 `;
 
 const TextBlock = Styled.div`
@@ -37,9 +48,9 @@ const Email = Styled.a.attrs({
 
 const BylineWithTwoLines = ({ src, name, email }) => (
 	<BylineBlock>
-		<BylineImage
+		{ src ?  <BylineImage
 			src={src}
-		/>
+		/> : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
 			<Name>
 				{name}
