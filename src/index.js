@@ -21,6 +21,15 @@ export {
 }                                  from './atoms/DymoHeading';
 
 export {
+	PlugHeading,
+	SmallPlugHeading,
+	MediumPlugHeading,
+	LargePlugHeading,
+	XLargePlugHeading,
+	HugePlugHeading,
+}                                  from './atoms/PlugHeading';
+
+export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
