@@ -73,7 +73,7 @@ const SeHerStory = () => (
 				linkText="☰"
 				textColor="type"
 			>
-				<VerticalLinkBar background="white">
+				<VerticalLinkBar background="white" align="right">
 					<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
 					<LinkBarLink linkText="Reality" url="#" {...linkProps} />
 					<LinkBarLink linkText="Brudd & bryllup" url="#" {...linkProps} />
