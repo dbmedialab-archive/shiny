@@ -1,4 +1,6 @@
+import propTypes from 'prop-types';
 import styled from 'styled-components';
+
 import { LinkBarDropdown } from './LinkBarDropdown';
 
 // Originally written for the VerticalLinkBar molecule
@@ -15,7 +17,8 @@ const VerticalFlexingList = styled.ul`
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
-		left: 0;
+		left: ${props => (props.align === 'left' ? 0 : 'initial')};
+		right: ${props => (props.align === 'right' ? 0 : 'initial')};
 		box-shadow: 0 0 4rem 0 rgba(0,0,0,.15);
 
 		::before {
@@ -25,10 +28,17 @@ const VerticalFlexingList = styled.ul`
 			height: ${props => props.theme.variables.verticalBase};
 			background: ${props => props.background};
 			position: absolute;
-			left: calc(1/4 * ${props => props.theme.variables.verticalBase});
+			left: ${props => (props.align === 'left' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'inital')};
+			right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'inital')};
 			transform: rotate(45deg);
 		}
 	}
 `;
+VerticalFlexingList.propTypes = {
+	align: propTypes.oneOf(['left', 'right']),
+};
+VerticalFlexingList.defaultProps = {
+	align: 'left',
+};
 
 export { VerticalFlexingList };
