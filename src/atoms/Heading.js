@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const ProtoHeading = styled.h1`
@@ -15,57 +16,66 @@ const ProtoHeading = styled.h1`
 		color: inherit;
 	}
 `;
+ProtoHeading.propTypes = {
+	marginTopFactor: propTypes.number,
+	marginBottomFactor: propTypes.number,
+};
+ProtoHeading.defaultProps = {
+	marginTopFactor: 3/4,
+	marginBottomFactor: 1/2,
+};
 
-const getSizes = ({ size }) => {
+const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
+
 	return css`
 		font-size: ${props => props.theme.variables[`heading${capSize}Size`]};
 		line-height: ${props => props.theme.variables[`heading${capSize}LineHeight`]};
 		margin:
-			calc(1/4 * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
+			calc(${marginTopFactor} * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
 			0
-			calc(1/2 * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
+			calc(${marginBottomFactor} * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
 		;
 	`;
 };
 
 const SmallHeading = ProtoHeading.extend`
-	${getSizes({ size: 'small' })}
+	${props => getSizes({ size: 'small', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${getSizes({ size: 'regular' })}
+		${props => getSizes({ size: 'regular', ...props })}
  	}
 `;
 
 const MediumHeading = ProtoHeading.extend`
-	${getSizes({ size: 'medium' })}
+	${props => getSizes({ size: 'medium', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${getSizes({ size: 'regular' })}
+		${props => getSizes({ size: 'regular', ...props })}
 	}
 `;
 
 const LargeHeading = ProtoHeading.extend`
-	${getSizes({ size: 'regular' })}
+	${props => getSizes({ size: 'regular', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${getSizes({ size: 'large' })}
+		${props => getSizes({ size: 'large', ...props })}
 	}
 `;
 
 const XLargeHeading = ProtoHeading.extend`
-	${getSizes({ size: 'regular' })}
+	${props => getSizes({ size: 'regular', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${getSizes({ size: 'xlarge' })}
+		${props => getSizes({ size: 'xlarge', ...props })}
 	}
 `;
 
 const HugeHeading = ProtoHeading.extend`
-	${getSizes({ size: 'large' })}
+	${props => getSizes({ size: 'large', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${getSizes({ size: 'huge' })}
+		${props => getSizes({ size: 'huge', ...props })}
 	}
 `;
 
