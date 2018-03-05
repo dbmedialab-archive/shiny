@@ -16,53 +16,56 @@ const ProtoHeading = styled.h1`
 	}
 `;
 
+const getSizes = ({ size }) => {
+	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
+	return css`
+		font-size: ${props => props.theme.variables[`heading${capSize}Size`]};
+		line-height: ${props => props.theme.variables[`heading${capSize}LineHeight`]};
+		margin:
+			calc(1/4 * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
+			0
+			calc(1/2 * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
+		;
+	`;
+};
+
 const SmallHeading = ProtoHeading.extend`
-	font-size: ${props => props.theme.variables.headingSmallSize};
-	line-height: ${props => props.theme.variables.headingSmallLineHeight};
+	${getSizes({ size: 'small' })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingRegularSize};
- 		line-height: ${props => props.theme.variables.headingRegularLineHeight};
+		${getSizes({ size: 'regular' })}
  	}
 `;
 
 const MediumHeading = ProtoHeading.extend`
-	font-size: ${props => props.theme.variables.headingMediumSize};
-	line-height: ${props => props.theme.variables.headingMediumLineHeight};
+	${getSizes({ size: 'medium' })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingRegularSize};
-		line-height: ${props => props.theme.variables.headingRegularLineHeight};
+		${getSizes({ size: 'regular' })}
 	}
 `;
 
 const LargeHeading = ProtoHeading.extend`
-	font-size: ${props => props.theme.variables.headingRegularSize};
-	line-height: ${props => props.theme.variables.headingRegularLineHeight};
+	${getSizes({ size: 'regular' })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingLargeSize};
-		line-height: ${props => props.theme.variables.headingLargeLineHeight};
+		${getSizes({ size: 'large' })}
 	}
 `;
 
 const XLargeHeading = ProtoHeading.extend`
-	font-size: ${props => props.theme.variables.headingRegularSize};
-	line-height: ${props => props.theme.variables.headingRegularLineHeight};
+	${getSizes({ size: 'regular' })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingXlargeSize};
-		line-height: ${props => props.theme.variables.headingXlargeLineHeight};
+		${getSizes({ size: 'xlarge' })}
 	}
 `;
 
 const HugeHeading = ProtoHeading.extend`
-	font-size: ${props => props.theme.variables.headingLargeSize};
-	line-height: ${props => props.theme.variables.headingLargeLineHeight};
+	${getSizes({ size: 'large' })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingHugeSize};
-		line-height: ${props => props.theme.variables.headingHugeLineHeight};
+		${getSizes({ size: 'huge' })}
 	}
 `;
 
