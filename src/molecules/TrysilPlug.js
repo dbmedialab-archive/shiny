@@ -95,7 +95,7 @@ TrysilPlug.propTypes = {
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
-	Heading: PropTypes.element,
+	Heading: PropTypes.func,
 	headingProps: PropTypes.shape({
 		skin: PropTypes.shape({
 			backgroundColor: PropTypes.string,
