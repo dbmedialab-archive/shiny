@@ -8,9 +8,9 @@ const setTextAlign = (sticky) => {
 };
 
 const AdWrapper = Styled.div`
-	width: ${props => props.width || '32.0rem'};
+	width: ${props => props.width};
 	height: auto;
-	min-height: calc(${props => props.height || '25.0rem'} + 2.63rem);
+	min-height: calc(${props => props.height} + 2.63rem);
 	margin-bottom: 2.4rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -37,14 +37,19 @@ const AdWrapper = Styled.div`
 	}
 `;
 
+
 AdWrapper.propTypes = {
+	width: PropTypes.string,
+	height: PropTypes.string,
+	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
 	sticky: PropTypes.string,
-	shouldHideAttribution: PropTypes.bool,
 };
 
 AdWrapper.defaultProps = {
 	sticky: '',
-	shouldHideAttribution: true,
+	width: '32.0rem',
+	height: '25.0rem',
 };
 
 export { AdWrapper };
