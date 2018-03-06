@@ -18,8 +18,10 @@ import { Egg          } from './Egg';
 import { ShellFish    } from './ShellFish';
 import { Mail         } from './Mail';
 import { Pinterest    } from './Pinterest';
-import { User       } from './Avatar';
-
+import { User         } from './Avatar';
+import { KK    		  } from './KK';
+import { Aller        } from './Aller';
+import { Dagbladet        } from './Dagbladet';
 
 const SvgIcon = props => (
 	<SvgIconWrapper size={props.size} >
@@ -63,6 +65,12 @@ const SvgIcon = props => (
 					return <Star {...props} />;
 				case 'user':
 					return <User {...props} />;
+				case 'kk':
+					return <KK {...props} />;
+				case 'aller':
+					return <Aller {...props} />;
+				case 'dagbladet':
+					return <Dagbladet {...props} />;
 				default:
 					return null;
 				}

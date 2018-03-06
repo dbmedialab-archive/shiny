@@ -69,8 +69,7 @@ export default () => (
 				<IconWithText name="activity" text="activity" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="difficulty" value={1} />
-				<div>difficulty</div>
+				<IconWithText name="difficulty" text="difficulty" value={1} />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="nut" text="nut" />
@@ -98,6 +97,15 @@ export default () => (
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="star" text="star" color="red" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="oppskrift" text="oppskrift" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="aller" text="aller" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="dagbladet" text="dagbladet" />
 			</Col>
 		</Row>
 	</section>
