@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
@@ -152,7 +152,11 @@ class WallpaperAd extends Component {
 		return (
 			<Fragment>
 				{this.state.isWallpaper && [left, right]}
-				<WallpaperWrapper height={height} width={this.state.isWallpaper ? '1010px' : '980px'} shouldHideAttribution={shouldHideAttribution}>
+				<WallpaperWrapper
+					height={height}
+					width={this.state.isWallpaper ? '1010px' : '980px'}
+					shouldHideAttribution={shouldHideAttribution}
+				>
 					{React.cloneElement(this.props.children, {
 						onMediaQueryChange: this.onMediaQueryChange.bind(this),
 						width: this.state.isWallpaper ? '1010px' : '980px',
