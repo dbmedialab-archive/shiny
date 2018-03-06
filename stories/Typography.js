@@ -14,6 +14,7 @@ import underlinedHeading from './typography/underlined-heading';
 import dymoHeading from './typography/dymo-heading';
 import svgIcon from './typography/svgIcon';
 import iconWithText from './typography/iconWithText';
+import plugHeading from './typography/plug-heading';
 import frontHeading from './typography/front-heading';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
@@ -25,6 +26,7 @@ export default () => {
 		.addDecorator(StorybookPaddedGrid)
 		.add('Label', label)
 		.add('Heading', heading)
+		.add('PlugHeading', plugHeading)
 		.add('Underlined Heading', underlinedHeading)
 		.add('DymoHeading', dymoHeading)
 		.add('Front Heading', frontHeading)

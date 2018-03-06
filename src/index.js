@@ -21,6 +21,15 @@ export {
 }                                  from './atoms/DymoHeading';
 
 export {
+	PlugHeading,
+	SmallPlugHeading,
+	MediumPlugHeading,
+	LargePlugHeading,
+	XLargePlugHeading,
+	HugePlugHeading,
+}                                  from './atoms/PlugHeading';
+
+export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
@@ -136,6 +145,5 @@ export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
-export { MatHeader               } from  './organisms/MatHeader';
 export { Footer                  } from  './organisms/Footer';
 export { MainRecipe              } from  './organisms/MainRecipe';
