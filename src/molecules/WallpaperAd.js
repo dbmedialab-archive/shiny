@@ -5,7 +5,7 @@ import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
-const LeftAndRight = styled.div`
+const LeftAndRight = AdWrapper.extend`
 	position: absolute;
 	height: 100%;
 	width: 455px; /* Used for positioning of background ad so we use px */
@@ -36,19 +36,12 @@ const LeftAndRight = styled.div`
 		width: 455px; /*  a background image from DFP so we need absolute values */
 	}
 
-	&:before {
-		content: 'Annonse';
-		text-transform: uppercase;
-		color: #ececec;
-		font-size: 1.1rem;
-		text-align: center;
-		display: block;
-		width: 100%;
-		background: #ececec;
-		line-height: 2.63rem;
+	&&::before {
+		opacity: 1;
 		padding: 0;
-		box-sizing: border-box;
 		position: absolute;
+		color: ${props => props.theme.variables.adWrapperBackgroundColor};
+		background: ${props => props.theme.variables.adWrapperBackgroundColor};
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%) translateY(-2.63rem);
@@ -65,13 +58,13 @@ LeftAndRight.propTypes = {
 
 const WallpaperWrapper = AdWrapper.extend`
 	height: calc(300px + 2.63rem);
-  position: relative;
+  	position: relative;
 `;
 
 class WallpaperAd extends Component {
 	state = {
 		backgroundImage: '',
-		top: '2.63rem',
+		top: '2.6rem',
 		href: '',
 		sticky: false,
 		isWallpaper: false,
@@ -125,7 +118,7 @@ class WallpaperAd extends Component {
 	}
 
 	render() {
-		const { height } = this.props;
+		const { height, shouldHideAttribution } = this.props;
 
 		/* eslint-disable jsx-a11y/anchor-has-content */
 		const left = (
@@ -159,7 +152,7 @@ class WallpaperAd extends Component {
 		return (
 			<Fragment>
 				{this.state.isWallpaper && [left, right]}
-				<WallpaperWrapper height={height} width={this.state.isWallpaper ? '1010px' : '980px'}>
+				<WallpaperWrapper height={height} width={this.state.isWallpaper ? '1010px' : '980px'} shouldHideAttribution={shouldHideAttribution}>
 					{React.cloneElement(this.props.children, {
 						onMediaQueryChange: this.onMediaQueryChange.bind(this),
 						width: this.state.isWallpaper ? '1010px' : '980px',
@@ -173,6 +166,7 @@ class WallpaperAd extends Component {
 WallpaperAd.propTypes = {
 	height: PropTypes.string,
 	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
 };
 
 WallpaperAd.defaultProps = {

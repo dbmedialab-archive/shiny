@@ -38,11 +38,11 @@ const StickyWrapper = styled.div`
 
 
 const StickyAd = ({
-	children, width, height, sticky,
+	children, width, height, sticky, shouldHideAttribution,
 }) => (
 	<StickyWrapper sticky={sticky}>
 		<Sticker>
-			<StyledAdWrapper height={height} width={width}>
+			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution}>
 				{children}
 			</StyledAdWrapper>
 		</Sticker>
@@ -54,6 +54,7 @@ StickyAd.propTypes = {
 	height: PropTypes.string,
 	sticky: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
 };
 
 StickyAd.defaultProps = {
