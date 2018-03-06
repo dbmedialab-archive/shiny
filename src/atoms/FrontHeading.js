@@ -16,7 +16,7 @@ const FheadStyle = props => css`
 	letter-spacing: .03125rem;
     &:after {
 		content: '';
-		width: 100%;
+		width: ${props.lineWidth ? `${props.lineWidth}rem` : '100%'};
 		margin-left: ${props.theme.variables.headingSmallSize};
 		display: inline-block;
 		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
