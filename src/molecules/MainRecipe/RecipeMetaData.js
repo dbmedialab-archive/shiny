@@ -56,26 +56,30 @@ const RecipeMetaData  = ({
 				</PaddedCol>
 			</Row>
 			<Row>
-				<Col xs={12} md={5} mdOffset={1}>
-					<FrontSmallHeading>Inneholder</FrontSmallHeading>
-					<IconBar entities={allergies} textSize={1.2} iconSize={5} />
+				<Col xs={12} md={3} mdOffset={2}>
+					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
+					<Col md={10} >
+						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
+					</Col>
 				</Col>
-				<Col xs={12} md={5} mdOffset={1}>
-					<FrontSmallHeading>Oppskrift</FrontSmallHeading>
+				<Col xs={12} md={3} mdOffset={1}>
+					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
 			</Row>
 			<Row>
-				<Col xs={12} md={5} mdOffset={1}>
+				<Col xs={12} md={3} mdOffset={2}>
 					{preferences.length ?
 						<React.Fragment>
-							<FrontSmallHeading>Passer For</FrontSmallHeading>
-							<IconBar entities={preferences} textSize={1.2} iconSize={4} />
+							<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
+							<Col md={10} >
+								<IconBar entities={preferences} textSize={1.2} iconSize={4} />
+							</Col>
 						</React.Fragment>
 						: null}
 				</Col>
-				<Col xs={12} md={5} mdOffset={1}>
-					<FrontSmallHeading>Vurdering</FrontSmallHeading>
+				<Col xs={12} md={3} mdOffset={1}>
+					<FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading>
 					<StarsRating count={5} size={29} value={rating} />
 				</Col>
 			</Row>

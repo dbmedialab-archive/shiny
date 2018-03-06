@@ -89,7 +89,7 @@ const HeroUnit = (props) => {
 			<TitleCol xs={12} md={5}>
 				{(props.difficulty || props.timeCooking || props.timeTotal) &&
 				<Row center="xs">
-					<Col xs={props.iconBarWidth}>
+					<Col xs={props.iconBarWidth} md={4} >
 						<IconBar
 							entities={icons}
 							textSize={props.textSize}
