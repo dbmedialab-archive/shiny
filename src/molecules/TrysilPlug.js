@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import stripTags from 'striptags';
 
 import {
 	Article,
@@ -71,7 +72,7 @@ const TrysilPlug = ({
 						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
-			<Heading {...headingProps}>{title}</Heading>
+			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}
 			{labels &&
 				labels.map(label => (
