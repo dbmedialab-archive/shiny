@@ -6075,9 +6075,9 @@ react-modal@^3.1.10:
     prop-types "^15.5.10"
     warning "^3.0.0"
 
-react-rating@1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.0.5.tgz#46804b5be4a0c68df561054add35106cbbb179c2"
+react-rating@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.0.6.tgz#6e832dca20312bb695c4b909e49848c6c7240b8d"
 
 react-split-pane@^0.1.74:
   version "0.1.77"
