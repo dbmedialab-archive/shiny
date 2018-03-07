@@ -69,14 +69,10 @@ const RecipeMetaData  = ({
 			</Row>
 			<Row>
 				<Col xs={12} md={3} mdOffset={2}>
-					{preferences.length ?
-						<React.Fragment>
-							<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
-							<Col md={10} >
-								<IconBar entities={preferences} textSize={1.2} iconSize={4} />
-							</Col>
-						</React.Fragment>
-						: null}
+					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
+					<Col md={10} >
+						<IconBar entities={preferences} textSize={1.2} iconSize={4} />
+					</Col>
 				</Col>
 				<Col xs={12} md={3} mdOffset={1}>
 					<FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading>
