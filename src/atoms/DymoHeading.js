@@ -28,10 +28,10 @@ const PaddedText = styled.span`
 			color: ${getColor('red')};
 		}
 
-		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2*${props.theme.variables.horizontalBase})` : '0')};
+		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
 
 		a:hover & {
-			padding-left: ${props => (props.skin.needsPadding ? `calc(1/2*${props.theme.variables.horizontalBase})` : '0')};
+			padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
 		}
 `;
 PaddedText.propTypes = {
