@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col, HugeHeading, Heading } from '../..';
 import { PaddedGrid as Grid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
-import { Description } from '../../src/atoms/MainRecipe/Description';
+import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
 
 export default () => (
 	<section>
@@ -12,21 +12,21 @@ export default () => (
 				<Col xs={12}>
 					<HugeHeading>Description</HugeHeading>
 					<Heading>Demo</Heading>
-					<Description>
+					<ColorTextBox>
 						<span>
 						Helstekt kalkun er en selvfølge på
 						middagsbordet ved Thanksgiving, jul
 						og nyttår! For en smakfull og saftig
 						kalkun anbefaler vi denne oppskriften.
 						</span>
-					</Description>
+					</ColorTextBox>
 
 					<Heading>Usage</Heading>
 					<Code language="jsx">
 						{`
-import { Description } from '@aller/shiny';
+import { ColorTextBox } from '@aller/shiny';
 
-<Description textColor="white" bgColor="primary">
+<ColorTextBox textColor="white" bgColor="primary">
 	<span>
 		Lorem ipsum dolor sit amet,
 		consectetur adipisicing elit.
@@ -37,7 +37,7 @@ import { Description } from '@aller/shiny';
 		labore non officia pariatur
 		quaerat similique ut.
 	</span>
-</Description>
+</ColorTextBox>
 				`}
 					</Code>
 				</Col>

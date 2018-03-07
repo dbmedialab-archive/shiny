@@ -14,7 +14,7 @@ import { IconBar } from '../IconBar';
 import { StarsRating } from '../../molecules/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
-const DetailsSectionWrapper = styled.div`
+const RecipeMetaDataWrapper = styled.div`
 	padding: 0;
 	margin: 0 auto;
 	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
@@ -22,7 +22,11 @@ const DetailsSectionWrapper = styled.div`
 	}
 `;
 
-const DetailsSection  = ({
+const PaddedCol = Col.extend`
+	margin-top: 2rem;
+`;
+
+const RecipeMetaData  = ({
 	allergies,
 	preferences,
 	author,
@@ -42,40 +46,40 @@ const DetailsSection  = ({
 	});
 
 	return (
-		<DetailsSectionWrapper>
+		<RecipeMetaDataWrapper>
 			<Row>
-				<Col xs md={8} mdOffset={2}>
+				<PaddedCol xs md={8} mdOffset={2}>
 					<FigCaption>
 							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
 							super Foto: matrat.no / studio dreyer-hensley
 					</FigCaption>
-				</Col>
+				</PaddedCol>
 			</Row>
 			<Row>
 				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading>Inneholder</FrontSmallHeading>
-					<IconBar entities={allergies} textSize={1.2} iconSize={5} />
+					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
+					<Col md={10} >
+						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
+					</Col>
 				</Col>
-				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading>Oppskrift</FrontSmallHeading>
+				<Col xs={12} md={3} mdOffset={1}>
+					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
 			</Row>
 			<Row>
 				<Col xs={12} md={3} mdOffset={2}>
-					{preferences.length ?
-						<React.Fragment>
-							<FrontSmallHeading>Passer For</FrontSmallHeading>
-							<IconBar entities={preferences} textSize={1.2} iconSize={5} />
-						</React.Fragment>
-						: null}
+					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
+					<Col md={10} >
+						<IconBar entities={preferences} textSize={1.2} iconSize={4} />
+					</Col>
 				</Col>
-				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading>Vurdering</FrontSmallHeading>
+				<Col xs={12} md={3} mdOffset={1}>
+					<FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading>
 					<StarsRating count={5} size={29} value={rating} />
 				</Col>
 			</Row>
-		</DetailsSectionWrapper>
+		</RecipeMetaDataWrapper>
 	);
 };
 
@@ -84,14 +88,14 @@ const IconValues = PropTypes.shape({
 	value: PropTypes.number,
 });
 
-DetailsSection.defaultProps = {
+RecipeMetaData.defaultProps = {
 	allergies: [],
 	preferences: [],
 	author: {},
 	rating: 0,
 };
 
-DetailsSection.propTypes = {
+RecipeMetaData.propTypes = {
 	allergies: PropTypes.arrayOf(IconValues),
 	preferences: PropTypes.arrayOf(IconValues),
 	author: PropTypes.shape({
@@ -107,4 +111,4 @@ DetailsSection.propTypes = {
 };
 
 
-export { DetailsSection };
+export { RecipeMetaData };

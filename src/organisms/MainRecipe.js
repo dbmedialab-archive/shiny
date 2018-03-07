@@ -1,19 +1,20 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { Description             } from '../atoms/MainRecipe/Description';
+import { ColorTextBox            } from '../atoms/MainRecipe/ColorTextBox';
 import {
 	Grid,
 	Row,
 	Col,
 	TagSection,
 } from '..';
-import { DetailsSection          } from '../molecules/MainRecipe/DetailsSection';
-import { IngredientsSection      } from '../molecules/MainRecipe/IngredientsSection';
-import { StepsSection            } from '../molecules/MainRecipe/StepsSection';
+import { RecipeMetaData          } from '../molecules/MainRecipe/RecipeMetaData';
+import { RecipeIngredients       } from '../molecules/MainRecipe/RecipeIngredients';
+import { RecipeSteps             } from '../molecules/MainRecipe/RecipeSteps';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
-import { Container } from '../atoms/MainRecipe/youtubeFrame';
+import { YoutubeFrame            } from '../atoms/MainRecipe/youtubeFrame';
+import { SvgIcon                 } from '../atoms/SvgIcon';
 
 const Fragment = ({ children }) => children;
 
@@ -22,9 +23,13 @@ const StepsGrid = Grid.extend`
 	padding-bottom: calc(3 * ${props => props.theme.variables.verticalBase});
 `;
 
+const PaddedCol = Col.extend`
+	margin-bottom: 5rem;
+`;
+
 const MainRecipe = props => (
 	<Fragment>
-		<Grid fluid>
+		<Grid>
 			<Row>
 				<Col xs={12}>
 					<LargeHorizontalHeroUnit
@@ -41,7 +46,7 @@ const MainRecipe = props => (
 			</Row>
 			<Row>
 				<Col md={6} lg={6} xs={12}>
-					<DetailsSection
+					<RecipeMetaData
 						preferences={props.recipe.preferences}
 						allergies={props.recipe.allergies}
 						author={props.recipe.authors[0]}
@@ -49,19 +54,19 @@ const MainRecipe = props => (
 					/>
 				</Col>
 				<Col md={6} lg={6} xs={12}>
-					<Description dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
+					<ColorTextBox dangerouslySetInnerHTML={{ __html: props.recipe.description.replace(/<\/?[^>]+>/g, '') }} />
 				</Col>
 			</Row>
 		</Grid>
 		<StepsGrid>
 			<Row>
-				<Col md={6} xs={12} lg={6}>
-					<IngredientsSection servings={props.recipe.servings} parts={props.recipe.parts} />
+				<Col xs={12} md={6}>
+					<RecipeIngredients servings={props.recipe.servings} parts={props.recipe.parts} />
 				</Col>
-				<Col md={6} xs={12} lg={6}>
+				<Col xs={12} md={6}>
 					<Row>
 						<Col xs={12} >
-							<StepsSection steps={props.recipe.steps} />
+							<RecipeSteps steps={props.recipe.steps} />
 						</Col>
 					</Row>
 					<Row>
@@ -71,13 +76,13 @@ const MainRecipe = props => (
 					</Row>
 					<Row center="xs">
 						<Col xs>
-							<Container>
+							<YoutubeFrame>
 								<iframe
 									title="video"
 									width="100%"
 									src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
 								/>
-							</Container>
+							</YoutubeFrame>
 
 						</Col>
 					</Row>
@@ -88,6 +93,13 @@ const MainRecipe = props => (
 					</Row>
 					<Row>
 						<TagSection tags={props.recipe.tags} />
+					</Row>
+					<Row>
+						<PaddedCol xs={12}>
+							<FrontLargeHeading textColor="primary" lineColor="primary">DEL OPPSKRIFTEN</FrontLargeHeading>
+							<SvgIcon name={'mail'} size={5} />
+							<SvgIcon name={'pinterest'} size={5} />
+						</PaddedCol>
 					</Row>
 				</Col>
 			</Row>

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { SvgIcon } from './SvgIcon';
 
 const IconBlock = Styled.div`
-text-align: center;
-display: inline-block;
+	text-align: center;
+	display: inline-block;
 `;
 
 const BottomText = Styled.div`

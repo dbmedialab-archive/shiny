@@ -21,6 +21,15 @@ export {
 }                                  from './atoms/DymoHeading';
 
 export {
+	PlugHeading,
+	SmallPlugHeading,
+	MediumPlugHeading,
+	LargePlugHeading,
+	XLargePlugHeading,
+	HugePlugHeading,
+}                                  from './atoms/PlugHeading';
+
+export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
@@ -46,6 +55,8 @@ export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
+export { ColorTextBox            } from './atoms/MainRecipe/ColorTextBox';
+export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
 export { Tag                     } from './atoms/Tag';
@@ -112,7 +123,7 @@ export { VerticalLinkBar         } from './molecules/VerticalLinkBar';
 export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
-export { TagSection                    } from './molecules/TagSection';
+export { TagSection              } from './molecules/TagSection';
 export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';
@@ -122,6 +133,9 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
+export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
+export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
+export { RecipeSteps             } from './molecules/MainRecipe/RecipeSteps';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
@@ -131,6 +145,5 @@ export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
-export { MatHeader               } from  './organisms/MatHeader';
-export { Footer                  } from  './organisms/Footer';
+export { MatFooter               } from  './molecules/Footers/MatFooter';
 export { MainRecipe              } from  './organisms/MainRecipe';

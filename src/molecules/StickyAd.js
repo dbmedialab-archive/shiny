@@ -6,8 +6,10 @@ import Sticker from 'react-stickyfill';
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const StyledAdWrapper = AdWrapper.extend`
-  position: sticky;
-  top: 0;
+	position: sticky;
+	top: 0;
+	margin-left: 0;
+	margin-right: 0;
 `;
 
 const StickyWrapper = styled.div`
@@ -36,11 +38,11 @@ const StickyWrapper = styled.div`
 
 
 const StickyAd = ({
-	children, width, height, sticky,
+	children, width, height, sticky, shouldHideAttribution,
 }) => (
 	<StickyWrapper sticky={sticky}>
 		<Sticker>
-			<StyledAdWrapper height={height} width={width}>
+			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution}>
 				{children}
 			</StyledAdWrapper>
 		</Sticker>
@@ -52,6 +54,7 @@ StickyAd.propTypes = {
 	height: PropTypes.string,
 	sticky: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
 };
 
 StickyAd.defaultProps = {

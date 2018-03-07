@@ -1,4 +1,5 @@
 import Styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const setTextAlign = (sticky) => {
 	if (sticky === 'right') return 'left';
@@ -7,9 +8,9 @@ const setTextAlign = (sticky) => {
 };
 
 const AdWrapper = Styled.div`
-	width: ${props => props.width || '32.0rem'};
+	width: ${props => props.width};
 	height: auto;
-	min-height: calc(${props => props.height || '25.0rem'} + 2.63rem);
+	min-height: calc(${props => props.height} + 2.63rem);
 	margin-bottom: 2.4rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -17,7 +18,8 @@ const AdWrapper = Styled.div`
 	clear: both;
 	text-align: ${props => setTextAlign(props.sticky)};
 
-	&:before {
+
+	&::before {
 		content: 'Annonse';
 		text-transform: ${props => props.theme.variables.adWrapperCase};
 		color: ${props => props.theme.variables.adWrapperFontColor};
@@ -29,6 +31,25 @@ const AdWrapper = Styled.div`
 		line-height: 2.63rem;
 		padding: ${props => (props.sticky ? '0 1.0rem' : '0')};
 		box-sizing: border-box;
+		opacity: ${props => (props.shouldHideAttribution ? '0' : '1')};
+		transition: opacity .3s;
+		will-change: opacity;
 	}
 `;
+
+
+AdWrapper.propTypes = {
+	width: PropTypes.string,
+	height: PropTypes.string,
+	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
+	sticky: PropTypes.string,
+};
+
+AdWrapper.defaultProps = {
+	sticky: '',
+	width: '32.0rem',
+	height: '25.0rem',
+};
+
 export { AdWrapper };
