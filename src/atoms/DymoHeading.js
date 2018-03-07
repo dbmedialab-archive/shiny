@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
+import { getColor, getVariable } from '../utils';
 
 import { Heading } from '..';
 
@@ -15,16 +16,16 @@ const PaddedText = styled.span`
 	 	margin: 0;
 		padding-top: 0;
 		box-shadow:
-			calc(1/2*${props => props.theme.variables.horizontalBase})
+			calc(1/2 * ${getVariable('horizontalBase')})
 			0
-		  ${props           => props.theme.colors[props.theme.colors.skinColors[props.skin.backgroundColor]]}
+		  ${props => getColor(props.skin.backgroundColor)}
 		;
-		background: ${props => props.theme.colors[props.theme.colors.skinColors[props.skin.backgroundColor]]};
-		color:      ${props => props.theme.colors[props.theme.colors.skinColors[props.skin.textColor]]};
+		background: ${props => getColor(props.skin.backgroundColor)};
+		color:      ${props => getColor(props.skin.textColor)};
 		-webkit-box-decoration-break: clone;
 
 		span.highlighted {
-			color: ${props => props.theme.colors.red};
+			color: ${getColor('red')};
 		}
 
 		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2*${props.theme.variables.horizontalBase})` : '0')};
