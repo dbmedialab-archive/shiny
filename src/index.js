@@ -12,6 +12,24 @@ export {
 }                                  from './atoms/Heading';
 
 export {
+	DymoHeading,
+	SmallDymoHeading,
+	MediumDymoHeading,
+	LargeDymoHeading,
+	XLargeDymoHeading,
+	HugeDymoHeading,
+}                                  from './atoms/DymoHeading';
+
+export {
+	PlugHeading,
+	SmallPlugHeading,
+	MediumPlugHeading,
+	LargePlugHeading,
+	XLargePlugHeading,
+	HugePlugHeading,
+}                                  from './atoms/PlugHeading';
+
+export {
 	UnderlinedHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
@@ -37,13 +55,18 @@ export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
+export { ColorTextBox            } from './atoms/MainRecipe/ColorTextBox';
+export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
+export { Tag                     } from './atoms/Tag';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
+export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
 export { Figure                  } from './atoms/Figure';
+export { FigCaption              } from './atoms/FigCaption';
 export { FontIcon                } from './atoms/FontIcon';
 export { SvgIcon                 } from './atoms/SvgIcon';
 export { IconWithText            } from './atoms/IconWithText';
@@ -90,6 +113,7 @@ export { ThemeSelector           } from './atoms/ThemeSelector';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
+export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 
 // Molecules
@@ -99,6 +123,7 @@ export { VerticalLinkBar         } from './molecules/VerticalLinkBar';
 export { FullWidthLinkBar        } from './molecules/FullWidthLinkBar';
 export { ScrollArrowsLinkBar     } from './molecules/ScrollArrowsLinkBar';
 export { Dice                    } from './molecules/Dice';
+export { TagSection              } from './molecules/TagSection';
 export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { LunchButton             } from './molecules/LunchButton';
@@ -108,11 +133,17 @@ export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
-export { SmallHorizontalHeroUnit,
+export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
+export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
+export { RecipeSteps             } from './molecules/MainRecipe/RecipeSteps';
+export {
+	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit      } from './molecules/HorizontalHeroUnit';
+	LargeHorizontalHeroUnit,
+} from './molecules/HorizontalHeroUnit';
+export { WallpaperAd             } from './molecules/WallpaperAd';
+export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
-export { MatHeader               } from  './organisms/MatHeader';
-export { Footer                  } from  './organisms/Footer';
+export { MatFooter               } from  './molecules/Footers/MatFooter';
 export { MainRecipe              } from  './organisms/MainRecipe';

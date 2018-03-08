@@ -1,5 +1,5 @@
 import React from 'react';
-import { StarsRating } from '../../src/atoms/StarsRating';
+import { StarsRating } from '../../src/molecules/StarsRating';
 import { Row } from '../../lib/atoms/Row';
 import { Col } from '../../lib/atoms/Col';
 import { HugeHeading } from '../../src/atoms/Heading';

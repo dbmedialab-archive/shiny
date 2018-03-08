@@ -69,20 +69,19 @@ export default () => (
 				<IconWithText name="activity" text="activity" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="difficulty" value={1} />
-				<div>difficulty</div>
+				<IconWithText name="difficulty" text="difficulty" value={1} />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="nut" text="nut" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="fish" text="fish" />
+				<IconWithText name="fish" text="fish (fisk)" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="gluten" text="gluten" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText name="pork" text="pork" />
+				<IconWithText name="pork" text="pork (uten-svinekjott)" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="total-time" text="total-time" />
@@ -92,6 +91,21 @@ export default () => (
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="vegetarian" text="vegetarian" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="double-arrow" text="double-arrow" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="star" text="star" color="red" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="oppskrift" text="oppskrift" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="aller" text="aller" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="dagbladet" text="dagbladet" />
 			</Col>
 		</Row>
 	</section>

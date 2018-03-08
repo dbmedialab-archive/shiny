@@ -25,7 +25,7 @@ const DotLoader = styled.div`
 	transform: translateZ( 0 );
 	border-radius: 50%;
 	color: ${props => props.theme.colors.typeDisabled};
-	font-size: 10px;
+	font-size: 1.0rem;
 	text-indent: -9999em;
 	content: '';
 	animation-fill-mode: both;

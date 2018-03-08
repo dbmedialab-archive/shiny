@@ -1,5 +1,6 @@
 // Dependencies
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
+import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 // Stories
 import { VerticalLinkBarStory } from './VerticalLinkBarStory';
@@ -18,13 +19,14 @@ import { LinkStory } from './LinkStory';
 import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
 import { HideStory } from './HideStory';
+import { SeHerStory } from './SeHerStory';
 import { MatStory } from './MatStory';
-// import { SeHerStory } from './SeHerStory';
 
 import { DagbladetStory } from './DagbladetStory';
 
 export default () => {
 	storiesOf('Link bars', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('VerticalLinkBar', VerticalLinkBarStory)
 		.add('HorizontalLinkBar', HorizontalLinkBarStory)
 		.add('... with dropdowns', DropdownStory)
@@ -42,6 +44,6 @@ export default () => {
 		.add('LinkBarButton', ButtonStory)
 		.add('Hidden LinkBar elements', HideStory)
 		.add('Dagbladet-like bar', DagbladetStory)
-		// .add('SeHer-like bar', SeHerStory)
+		.add('SeHer-like bar', SeHerStory)
 		.add('MatStory link bar', MatStory);
 };

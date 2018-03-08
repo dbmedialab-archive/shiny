@@ -1,48 +1,63 @@
 import React from 'react';
 
+import { Row, Col, HugeHeading, Heading } from '../..';
+import { PaddedGrid as Grid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
-import { RecipeSteps } from '../../src/atoms/MainRecipe/StepsSection';
+import { RecipeStep } from '../../src/atoms/MainRecipe/RecipeStep';
 
 export default () => (
 	<section>
-		<RecipeSteps>
-			<li>
-				Ta ut innmaten. Dette er god basis
-				for saus, så ta vare på det.
-			</li>
-			<li>
-				Bind lårene sammen ved benknokene.
-				Sitter vingespissene på, før dem bak
-				ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-			</li>
-			<li>
-				Ta ut innmaten. Dette er god basis for saus,
-				så ta vare på det. Bind lårene sammen ved
-				benknokene. Sitter vingespissene på, før
-				dem bak ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-			</li>
-			<li>
-				Bind lårene sammen ved benknokene.
-				Sitter vingespissene på, før dem bak
-				ryggen inn mot halsen. Slik at vingene
-				hviler under og støtter kalkunen.
-			</li>
-			<li>
-				Ta ut innmaten. Dette er god basis
-				for saus, så ta vare på det.
-				hviler under og støtter kalkunen.
-			</li>
-		</RecipeSteps>
-		<Code language="jsx">
-			{`import { RecipeSteps } from '@aller/shiny';
+		<Grid>
+			<HugeHeading>RecipeStep</HugeHeading>
+			<Heading>Demo</Heading>
+			<Row>
+				<Col xs={12}>
+					<RecipeStep>
+						<p>Ta ut innmaten. Dette er god basis
+						for saus, så ta vare på det.
+						</p>
+					</RecipeStep>
+					<RecipeStep>
+						<p>Bind lårene sammen ved benknokene.
+						Sitter vingespissene på, før dem bak
+						ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+						</p>
+					</RecipeStep>
+					<RecipeStep>
+						<p>Ta ut innmaten. Dette er god basis for saus,
+						så ta vare på det. Bind lårene sammen ved
+						benknokene. Sitter vingespissene på, før
+						dem bak ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+						</p>
+					</RecipeStep>
+					<RecipeStep>
+						<p>Bind lårene sammen ved benknokene.
+						Sitter vingespissene på, før dem bak
+						ryggen inn mot halsen. Slik at vingene
+						hviler under og støtter kalkunen.
+						</p>
+					</RecipeStep>
+					<RecipeStep>
+						<p>Ta ut innmaten. Dette er god basis
+						for saus, så ta vare på det.
+						hviler under og støtter kalkunen.
+						</p>
+					</RecipeStep>
 
-		<RecipeSteps>
-			<li>Some Text</li>
-		</RecipeSteps>
-			`}
-		</Code>
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import { RecipeStep } from '@aller/shiny';
+
+<RecipeStep>
+	Some Text
+</RecipeStep>
+							`}
+					</Code>
+				</Col>
+			</Row>
+		</Grid>
 	</section>
 );
-

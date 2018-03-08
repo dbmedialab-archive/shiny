@@ -6,10 +6,10 @@ import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
 
-const Container = styled.figure`
+const Figure = styled.figure`
 	position: relative;
 	background-color: ${props => props.backgroundColor};
-	display: inline-block;
+	display: block;
 	padding-bottom: ${props => `${props.paddingBottom}%`};
 	width: 100%;
 	overflow: hidden;
@@ -125,7 +125,7 @@ class LazyProgressiveImage extends Component {
 			: () => {};
 
 		return (
-			<Container
+			<Figure
 				backgroundColor={backgroundColor}
 				innerRef={(node) => { this.node = node; }}
 				paddingBottom={ratio * 100}
@@ -138,7 +138,7 @@ class LazyProgressiveImage extends Component {
 					}
 					<StyledImage src={src} alt={alt} />
 				</Picture>
-			</Container>
+			</Figure>
 		);
 	}
 }

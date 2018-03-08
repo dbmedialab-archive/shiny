@@ -3,9 +3,9 @@ import Styled from 'styled-components';
 const ComplexitySectionHeader = Styled.div`
 	text-align: center;
 	position: relative;
-	font-size: 38px;
+	font-size: 3.8rem;
 	font-weight: 600;
-	
+
 	&:before {
 		content: '';
 		display: block;
@@ -13,7 +13,7 @@ const ComplexitySectionHeader = Styled.div`
 		width: 50%;
 		left: 25%;
 		bottom: 0;
-		border-bottom: 2px solid #ff790a;
+		border-bottom: .2rem solid #ff790a;
 	}
 `;
 

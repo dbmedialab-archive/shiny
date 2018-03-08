@@ -6,7 +6,7 @@ const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-	filter: blur(50px);
+	filter: blur(5.0rem);
 	& img {
 		display: block;
 		max-width: 100%;

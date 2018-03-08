@@ -1,8 +1,10 @@
 import React from 'react';
-import { storiesOf, action, linkTo } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies,no-unused-vars
+import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../src/storybook-decorators/PaddedGrid';
 import { DemoContainer } from './storybook-components';
 
 import { Heading, HugeHeading } from '../src/atoms/Heading';
+import { Code } from '../src/atoms/Code';
 
 // Loaders
 import { DotLoader } from '../src/atoms/loaders/DotLoader';
@@ -11,6 +13,7 @@ import { LoadingSearchIcon } from '../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
 	storiesOf('Loaders', DotLoader)
+		.addDecorator(StorybookPaddedGrid)
 	/*
 	// @TODO Add story for NoonLoader
       .add('NoonLoader', () => {
@@ -33,10 +36,19 @@ export default () => {
 					<HugeHeading>DotLoader</HugeHeading>
 					<p>Should be used when loading content that will fill a already defined space</p>
 
-					<Heading>Usage</Heading>
+					<Heading>Demo</Heading>
 					<DemoContainer>
 						<DotLoader classes={'what-you-will'} />
 					</DemoContainer>
+
+					<Heading>Usage</Heading>
+					<Code language="jsx">
+						{`
+import { DotLoader } from '@aller/shiny';
+
+<DotLoader />
+						`}
+					</Code>
 				</section>
 			);
 		})

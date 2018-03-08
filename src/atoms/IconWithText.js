@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { SvgIcon } from './SvgIcon';
 
 const IconBlock = Styled.div`
-text-align: center;
-display: inline-block;
+	text-align: center;
+	display: inline-block;
 `;
 
 const BottomText = Styled.div`
@@ -28,7 +28,7 @@ IconWithText.propTypes = {
 	iconSize: PropTypes.number,
 	textSize: PropTypes.number,
 	name: PropTypes.string,
-	text: PropTypes.string,
+	text: PropTypes.node,
 };
 
 IconWithText.defaultProps = {

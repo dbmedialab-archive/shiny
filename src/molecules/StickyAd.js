@@ -1,72 +1,65 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const StyledAdWrapper = AdWrapper.extend`
-  position: sticky;
-  top: 0;
+	position: sticky;
+	top: 0;
+	margin-left: 0;
+	margin-right: 0;
 `;
 
 const StickyWrapper = styled.div`
 	position: absolute;
 	top: 0;
-	${props => (props.sticky === 'right' ? 'left: calc(50% + 490px + 15px);' : 'right: calc(50% + 490px + 15px);')}
+
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
+		${props => (
+		props.sticky === 'right'
+			? 'left: 100%;'
+			: 'right: 100%;'
+	)}}
+	${props => ['sm', 'md', 'lg'].map(size => css`
+		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
+			${props => (
+		props.sticky === 'right'
+			? `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+			: `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+	)}}
+
+		`)}
+
 	height: 100%;
-	width: 300px;
-`;
+	width: 30.0rem;
+	`;
 
 
-class StickyAd extends Component {
-	static propTypes = {
-		width: PropTypes.string,
-		height: PropTypes.string,
-		sticky: PropTypes.string.isRequired,
-		children: PropTypes.node.isRequired,
-	}
+const StickyAd = ({
+	children, width, height, sticky, shouldHideAttribution,
+}) => (
+	<StickyWrapper sticky={sticky}>
+		<Sticker>
+			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution}>
+				{children}
+			</StyledAdWrapper>
+		</Sticker>
+	</StickyWrapper>
+);
 
-	static defaultProps = {
-		width: '320px',
-		height: '250px',
-	}
+StickyAd.propTypes = {
+	width: PropTypes.string,
+	height: PropTypes.string,
+	sticky: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
+	shouldHideAttribution: PropTypes.bool.isRequired,
+};
 
-	constructor(props) {
-		super(props);
-
-		this.props = props;
-	}
-
-	componentDidMount() {
-		if (this.node) {
-			import('../utils/sticky-fill').then((module) => {
-				this.stickyFill = module;
-				this.stickyFill.addOne(this.node);
-			}).catch((e) => {
-			});
-		}
-	}
-
-	componentWillUnmount() {
-		if (this.stickyFill && this.node) {
-			this.stickyFill.removeOne(this.node);
-		}
-	}
-
-	render() {
-		const {
-			children, width, height, sticky,
-		} = this.props;
-
-		return (
-			<StickyWrapper sticky={sticky}>
-				<StyledAdWrapper height={height} width={width} innerRef={(node) => { this.node = node; }}>
-					{children}
-				</StyledAdWrapper>
-			</StickyWrapper>
-		);
-	}
-}
-
+StickyAd.defaultProps = {
+	width: '32.0rem',
+	height: '25.0rem',
+};
 
 export { StickyAd };

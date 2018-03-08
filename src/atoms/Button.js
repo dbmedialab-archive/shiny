@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-	letter-spacing: 1px;
+	letter-spacing: .1rem;
 	text-transform: uppercase;
 	background-color: ${props => props.theme.colors.button.background}
 	border-color: #bdbdbd;
@@ -25,7 +25,7 @@ const Button = styled.button`
 	transition: background-color 300ms ease-out;
 
 	${props => props.outline && `
-		border: 1px solid ${props.theme.colors.button.background};
+		border: .1rem solid ${props.theme.colors.button.background};
 		background: transparent;
 		color: ${props.theme.colors.button.background};
 		`}

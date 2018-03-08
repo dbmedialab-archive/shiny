@@ -4,17 +4,16 @@ import colors from './colors';
 import variables from './variables';
 
 const global = css`
-	@import url('https://fonts.googleapis.com/css?family=Cabin:600');
+	@import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
+
+	* {
+		box-sizing: border-box;
+	}
 
 	body {
 		padding: 0;
 		margin: 0;
-		text-align: left;
-		letter-spacing: normal;
 		font-family: ${variables.mainFont};
-		font-weight: 600;
-		font-style: normal;
-		line-height: 1.22;
 		position: relative;
 		cursor: auto;
 	}
@@ -34,9 +33,15 @@ const theme = {
 		gutterWidth: stripUnit(variables.horizontalBase), // rem
 		outerMargin: 2, // rem
 		container: {
-			sm: 46.0, // rem
-			md: 61.0, // rem
-			lg: 144.0,  // rem
+			sm: 71, // rem
+			md: 100.0, // rem
+			lg: 110.0,  // rem
+		},
+		breakpoints: {
+			xs: 0,  // em
+			sm: 48, // em 768px
+			md: 75, // em 1200px
+			lg: 90,  // em 1440px
 		},
 	},
 };

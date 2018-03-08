@@ -16,7 +16,7 @@ const mockRecipe = {
 			profileImage: {
 				seoFilename: '3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
 				title: 'Joakim Strand er daglig leder i Nord bakeri, Oslo',
-				urlMPortrait: 'https://www.dagbladet.no/mat/bilder/c/m/3/3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
+				mediumPortrait: 'https://www.dagbladet.no/mat/bilder/c/m/3/3cd250ed-joakim-strand-er-daglig-leder-i-nord-bakeri-oslo.jpg',
 			},
 		},
 	],
@@ -28,120 +28,246 @@ const mockRecipe = {
 	rating: 0,
 	preferences: [
 		{
-			text: 'Vegan',
-			name: 'vegan',
+			slug: 'vegan',
+			title: 'Vegan',
 		},
 		{
-			text: 'Vegetar',
-			name: 'vegetarian',
+			slug: 'vegetarian',
+			title: 'Vegetar',
 		},
 		{
-			text: 'Uten svin',
-			name: 'pork',
+			slug: 'uten-svinekjott',
+			title: 'Uten svin',
 		},
 	],
 	allergies: [
 		{
-			name: 'nut',
-			text: 'Nøtter',
+			slug: 'egg',
+			title: 'Egg',
 		},
 		{
-			name: 'gluten',
-			text: 'Gluten',
-		},
-		{
-			name: 'fish',
-			text: 'Fisk',
+			slug: 'laktose',
+			title: 'Laktose',
 		},
 	],
-	ingredients: [
+	parts: [
 		{
-			title: 'Sammalt hvete',
-			description: '<p>At melet er sammalt betyr at man bruker hele kornet &ndash; b&aring;de skall og kjerne &ndash; og maler det sammen til mel. Sammalt mel produseres i mange varierende finhetsgrader, for eksempel fint, mellomgrovt og grovt. Sammalt mel inneholder mer kostfiber, mineraler og vitaminer (som finnes i skallet p&aring; kornet) enn siktet mel.</p>\n<p>Sammalt mel brukes til grovere bakst, som grove br&oslash;dtyper, rundstykker, flatbr&oslash;d og knekkebr&oslash;d.</p>',
-			pivot: {
-				type: 'kg',
-				amount: 1,
-			},
+			title: 'Kjøttkakene',
+			ingredients: [
+				{
+					title: 'Kjøttdeig',
+					description: '<p>Kj&oslash;ttdeig er kvernet, malt eller hakket kj&oslash;tt av storfe, svin eller kylling som er delvis sk&aring;ret fritt for sener og fett.&nbsp;Deigen skal ikke v&aelig;re finere delt enn at kj&oslash;ttstrukturen er synlig. Brukes til kj&oslash;ttkaker, kj&oslash;ttboller, karbonader, gryter, pastasauser og taco for &aring; nevne noe.</p>',
+					amount: 1,
+					type: 'kg',
+				},
+				{
+					title: 'Salt',
+					description: '<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>',
+					amount: 2,
+					type: 'ts',
+				},
+				{
+					title: 'Svart pepper',
+					description: '<p>Svart pepper er et krydder fremstilt av fermenterte, t&oslash;rkede og umodne r&oslash;de b&aelig;r, kalt pepperkorn, fra planten Piper nigrum.&nbsp;Svart pepper er ett av de vanligste krydder i det europeiske og de europeiskinspirerte kj&oslash;kken. Smaken er sterk og brennende.</p>',
+					amount: 1,
+					type: 'ts',
+				},
+				{
+					title: 'Muskatnøtt',
+					description: '<p>Muskatn&oslash;tten&nbsp;kommer fra muskattreet, som har store, p&aelig;reformede frukter med et tykt, kj&oslash;ttfullt lag.&nbsp;Ved modning sprekker det kj&oslash;ttfulle laget og avdekker det valn&oslash;ttstore&nbsp;fr&oslash;et vi kaller muskatn&oslash;tt.&nbsp;Muskattn&oslash;tten t&oslash;rkes, og rives direkte over maten, eller kan kj&oslash;pes ferdig malt. Muskat er et sterkt aromatisk krydder med en&nbsp;skarp brennende smak,&nbsp;som gjerne brukes i moderate mengder. Brukes ofte i kj&oslash;ttprodukter, stuinger, fisk- og kj&oslash;ttsauser, til fiskegrateng eller epledessert.</p>',
+					amount: 0.25,
+					type: 'ts',
+				},
+				{
+					title: 'Ingefær',
+					description: 'Ingefær er en jordstengel, som brukes fersk eller tørket. Stengelen er lysbrun på utsiden, og lys gul med et grønnaktig skjær på innsiden. Smaken er parfymert, søtlig og brenner litt på tungen. Brukes som krydder eller smakstilsetting under matlaging, også til bruk ved sår hals eller kvalme.',
+					amount: 0.5,
+					type: 'ts',
+				},
+				{
+					title: 'Potetmel',
+					description: '<p>Potetmel er stivelse utvunnet av poteter.&nbsp;Potetknollenes stivelseskorn ligger innesluttet i celler som m&aring; rives i stykker, hvor stivelsen deretter vaskes ut med vann eller med potetenes egen saft, og s&aring; t&oslash;rkes.&nbsp;Potetmel brukes i matlaging til jevning&nbsp;av sauser&nbsp;og til andre matretter&nbsp;som har behov for et bindemiddel.&nbsp;</p>',
+					amount: 2,
+					type: 'ss',
+				},
+				{
+					title: 'Egg',
+					description: 'Egg i vår dagligtale er som regel hønseegg. Egget er magert, rikt på næringsstoffer, og en god kilde til proteiner, men har også et høyt innhold av kolesterol. Fargen på eggeskallet varierer fra hønserase til hønserase, og har ingen betydning for kvaliteten på eggehvite og -plomme.',
+					amount: 1,
+					type: 'stk',
+				},
+				{
+					title: 'Smør',
+					description: '<p>Sm&oslash;r er et naturprodukt basert p&aring; fl&oslash;te. Sm&oslash;rtilberedning er utviklet som en konserveringsmetode og er kjent i alle kulturer som har holdt husdyr.&nbsp;I melk og fl&oslash;te finnes fett i sm&aring; kuler. Det er disse sm&aring; fettkulene som utvinnes i sm&oslash;rproduksjon. Mesteparten av sm&oslash;ret blir produsert av &ldquo;s&oslash;t&rdquo; fl&oslash;te.&nbsp;Sm&oslash;r passer meget godt til alle typer matlaging; steking, baking, sauser, supper og br&oslash;dmat.</p>',
+					amount: 1,
+					type: 'ss',
+				},
+			],
 		},
 		{
-			title: 'Sammalt rug',
-			description: '<p>Av rugmeltyper finner du siktet rugmel, sammalt rug grov og sammalt rug fin.&nbsp;Rug gir en fyldig smak til br&oslash;d. Det gj&oslash;r dessuten br&oslash;det saftig og gir lengre holdbarhet. Fordi proteinet i rug har d&aring;rlig bakeevne, blir br&oslash;d bakt med rugmel tunge og kompakte. Men rug inneholder mye fiber som binder vann, og dette gj&oslash;r det mulig &aring; bake br&oslash;d basert p&aring; bare rug.&nbsp;</p>',
-			pivot: {
-				type: 'kg',
-				amount: 1.5,
-			},
+			title: 'Saus',
+			ingredients: [
+				{
+					title: 'Kraft',
+					description: '<p>Den klare v&aelig;sken som blir igjen etter kj&oslash;tt, fisk eller gr&oslash;nnsaker er kokt i vann, kalles kraft. Den lages med tilsetning av fett, salt og krydder, og brukes som smakstilsetning.&nbsp;Industrielt fremstilte produkter for kraft heter buljong.&nbsp;</p>',
+					amount: 6,
+					type: 'dl',
+				},
+				{
+					title: 'Salt',
+					description: '<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>',
+					amount: 1,
+					type: 'klype(r)',
+				},
+				{
+					title: 'Hvetemel',
+					description: '<p>Hvetemel er finmalt og siktet hvete.</p>',
+					amount: 3,
+					type: 'ss',
+				},
+				{
+					title: 'Svart pepper',
+					description: '<p>Svart pepper er et krydder fremstilt av fermenterte, t&oslash;rkede og umodne r&oslash;de b&aelig;r, kalt pepperkorn, fra planten Piper nigrum.&nbsp;Svart pepper er ett av de vanligste krydder i det europeiske og de europeiskinspirerte kj&oslash;kken. Smaken er sterk og brennende.</p>',
+					amount: 1,
+					type: 'klype(r)',
+				},
+				{
+					title: 'Fløte',
+					description: '<p>Fl&oslash;te er den fettrike delen av melken. N&aring;r den nysilte melken har st&aring;tt en stund, blir det dannet et fl&oslash;telag. Fl&oslash;te og skummet melk skilles fra hverandre.</p>',
+					amount: 2,
+					type: 'dl',
+				},
+				{
+					title: 'Smør',
+					description: '<p>Sm&oslash;r er et naturprodukt basert p&aring; fl&oslash;te. Sm&oslash;rtilberedning er utviklet som en konserveringsmetode og er kjent i alle kulturer som har holdt husdyr.&nbsp;I melk og fl&oslash;te finnes fett i sm&aring; kuler. Det er disse sm&aring; fettkulene som utvinnes i sm&oslash;rproduksjon. Mesteparten av sm&oslash;ret blir produsert av &ldquo;s&oslash;t&rdquo; fl&oslash;te.&nbsp;Sm&oslash;r passer meget godt til alle typer matlaging; steking, baking, sauser, supper og br&oslash;dmat.</p>',
+					amount: 3,
+					type: 'ss',
+				},
+			],
 		},
 		{
-			title: 'Hvetemel',
-			description: '<p>Hvetemel er finmalt og siktet hvete.</p>',
-			pivot: {
-				type: 'kg',
-				amount: 2,
-			},
+			title: 'Tilbehør',
+			ingredients: [
+				{
+					title: 'Tyttebær',
+					description: '<p>Tytteb&aelig;r vokser vilt i mesteparten av Norge. &Oslash;konomisk sett er tytteb&aelig;ret det viktigste av v&aring;re viltvoksende b&aelig;r. I sesongen plukkes det b&aring;de til privat konsum og kommersiell omsetning. B&aelig;rene har en syrlig og litt besk smak som skyldes innholdet av benzosyre. Benzosyre gj&oslash;r at tytteb&aelig;r har lenger holdbarhet uten konserveringsmidler.</p>',
+					amount: 4,
+					type: 'ss',
+				},
+			],
 		},
 		{
-			title: 'Salt',
-			description: '<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>',
-			pivot: {
-				type: 'ts',
-				amount: 3,
-			},
-		},
-		{
-			title: 'Solsikkekjerner',
-			description: '<p>Solsikkekjerner kalles ogs&aring; solsikkefr&oslash;.&nbsp;</p>\n<p>Solsikkekjerner har en god n&oslash;ttesmak, og smaken fremheves ved varmebehandling.</p>\n<p>Vanligvis brukes de i bakverk, b&aring;de i deigen og som pynt. De er fine som tilsetning i blant annet havregryner og yoghurt, men kan ogs&aring; brukes til panering av fisk og kylling.</p>\n<p>Du kan riste solsikkekjerner ved &aring; ha de p&aring; bakepapir i ovnen eller i t&oslash;rr stekepanne.</p>',
-			pivot: {
-				type: 'g',
-				amount: 200,
-			},
-		},
-		{
-			title: 'Tørrgjær',
-			description: '<p>T&oslash;rrgj&aelig;r er gj&aelig;r i pulverform med lang holdbarhet. Brukes blant annet i baking, vinlegging og &oslash;lbrygging.&nbsp;Gj&aelig;r er levende, og som alt annet levende trenger gj&aelig;rsoppen mat, vann og oksygen.&nbsp;I en deig f&aring;r gj&aelig;rsoppen mat fra stivelsen i melet, vann f&aring;r den fra deigv&aelig;sken, og oksygen f&aring;r den ved at deigen blir knadd. Gj&aelig;r puster ut karbondioksid.&nbsp;Gassen gj&oslash;r at deigen hever.</p>\n<p>Fersk gj&aelig;r hever raskest, mens t&oslash;rrgj&aelig;r trenger lenger tid.&nbsp;<a href="http://www.dinside.no/921512/torr-eller-fersk-gjaer-er-forskjellen" target="_blank">De har de samme egenskapene</a>, men mange bakere opplever bedre resultat med den ferske gj&aelig;ren.</p>',
-			pivot: {
-				type: 'pose(r)',
-				amount: 3,
-			},
-		},
-		{
-			title: 'Vann',
-			description: '<p>Vann&nbsp;er en fargel&oslash;s v&aelig;ske med&nbsp;kjemisk forbindelse mellom hydrogen og oksygen, H₂O. Vann viser som regel fargen p&aring; stoffene bak eller rundt, eller reflekterer lyset som treffer vannoverflaten.&nbsp;De kjemiske egenskapene til vann er godt egnet til mange funksjoner i levende organismer. Vann har en rekke livsviktige funksjoner i menneskekroppen.&nbsp;Rent vann g&aring;r aldri ut p&aring; dato, s&aring;fremt det oppbevares i tett emballasje,&nbsp;men kan f&oslash;les litt flatt</p>',
-			pivot: {
-				type: 'l',
-				amount: 2,
-			},
+			title: 'Kålstuing',
+			ingredients: [
+				{
+					title: 'Hodekål (hvitkål)',
+					description: '<p>Hvitk&aring;l kalles ogs&aring; for hodek&aring;l, og best&aring;r av et hode dannet av tettpakkede blader.&nbsp;Konsistensen er spr&oslash; og saftig, smaken fyldig og litt s&oslash;t.&nbsp;Hvitk&aring;l kan brukes r&aring;, finsk&aring;ret i salat eller i r&aring;kost. Den kan kokes, sm&oslash;rdampes, stekes, wokes, syltes, brukes til surk&aring;l, stuing eller supper.&nbsp;Det er en hardf&oslash;r gr&oslash;nnsak som t&aring;ler v&aring;rt klima godt og den egner seg godt til langtidslagring, noe som skyldes et tynt voksbelegg p&aring; bladene.</p>',
+					amount: 1,
+					type: 'stk',
+				},
+				{
+					title: 'Hvetemel',
+					description: '<p>Hvetemel er finmalt og siktet hvete.</p>',
+					amount: 5,
+					type: 'ss',
+				},
+				{
+					title: 'Smør',
+					description: '<p>Sm&oslash;r er et naturprodukt basert p&aring; fl&oslash;te. Sm&oslash;rtilberedning er utviklet som en konserveringsmetode og er kjent i alle kulturer som har holdt husdyr.&nbsp;I melk og fl&oslash;te finnes fett i sm&aring; kuler. Det er disse sm&aring; fettkulene som utvinnes i sm&oslash;rproduksjon. Mesteparten av sm&oslash;ret blir produsert av &ldquo;s&oslash;t&rdquo; fl&oslash;te.&nbsp;Sm&oslash;r passer meget godt til alle typer matlaging; steking, baking, sauser, supper og br&oslash;dmat.</p>',
+					amount: 5,
+					type: 'ss',
+				},
+				{
+					title: 'Salt',
+					description: '<p>Koksalt eller natriumklorid er et salt, og er en kombinasjon av grunnstoffene natrium og klor, og er kjent som vanlig bordsalt.&nbsp;Salt brukes som smakstilsetning i mat og som det mest utbredte konserveringsmiddel for kj&oslash;tt, fisk og meieriprodukter.&nbsp;</p>',
+					amount: 1,
+					type: 'klype(r)',
+				},
+				{
+					title: 'Helmelk',
+					description: 'Vi bruker melk fra forskjellige dyr, men melk i vår dagligtale betyr som regel kumelk. Melk og melkeprodukter er gode kilder for protein, kalsium, fosfor, jod og B-vitamin. Det finnes en rekke forskjellige meieriprodukter i Norge, noen er syrnet, har høy eller lav fettprosent eller er tilsatt smak. Helmelk er lavpasteurisert og homogenisert melk, der fløten ikke er fjernet som gir et naturlig fettinnhold på ca. 3,9 % fett. ',
+					amount: 7,
+					type: 'dl',
+				},
+				{
+					title: 'Muskatnøtt',
+					description: '<p>Muskatn&oslash;tten&nbsp;kommer fra muskattreet, som har store, p&aelig;reformede frukter med et tykt, kj&oslash;ttfullt lag.&nbsp;Ved modning sprekker det kj&oslash;ttfulle laget og avdekker det valn&oslash;ttstore&nbsp;fr&oslash;et vi kaller muskatn&oslash;tt.&nbsp;Muskattn&oslash;tten t&oslash;rkes, og rives direkte over maten, eller kan kj&oslash;pes ferdig malt. Muskat er et sterkt aromatisk krydder med en&nbsp;skarp brennende smak,&nbsp;som gjerne brukes i moderate mengder. Brukes ofte i kj&oslash;ttprodukter, stuinger, fisk- og kj&oslash;ttsauser, til fiskegrateng eller epledessert.</p>',
+					amount: 0.5,
+					type: 'ts',
+				},
+			],
 		},
 	],
 	steps: [
 		{
-			videoId: '',
-			description: '<p>Bland alt det t&oslash;rre i en bolle.&nbsp;Hell romtemperert vann i bollen, ca. 23 grader.&nbsp;</p>',
+			description: '<p>Bland alt til kj&oslash;ttfarsen godt sammen til en jevn og glatt deig. Form store eller sm&aring; boller.</p>',
 			sortOrder: 0,
-			images: [],
+			images: null,
+			videoId: '',
 		},
 		{
-			videoId: '',
-			description: '<p>Elt deigen godt samme i ca. 10 minutter, gjerne i en maskin til en smidig deig.&nbsp;Sett deigen til heving i vanlig romtemperatur et par timer.</p>',
+			description: '<p>Stek i sm&oslash;r p&aring; litt under middels varme. Stek pent og forsiktig p&aring; hver side til de er gjennomstekt.</p>',
 			sortOrder: 1,
-			images: [],
+			images: null,
+			videoId: '',
 		},
 		{
-			videoId: '',
-			description: '<p>Sm&oslash;r formene med en god olje &nbsp;og fordel deigen i br&oslash;dformene.&nbsp;Pensle litt olje p&aring; toppen av br&oslash;dene og dryss p&aring; litt havsalt. Etterhev br&oslash;dene i ca. 30 minutter.&nbsp;</p>',
+			description: '<p>Smelt sm&oslash;r i en kjele p&aring; middels lav varme. R&oslash;r inn melet litt etter litt. R&oslash;r jevnt til du har en fin og n&oslash;ttebrun sausbruning.&nbsp;</p>',
 			sortOrder: 2,
-			images: [],
+			images: null,
+			videoId: '',
 		},
 		{
-			videoId: '',
-			description: '<p>Steke br&oslash;dene p&aring; nederste rille i varmluftsovn ved 170 grader i ca. 50 minutter.&nbsp;Ta br&oslash;dene ut av formene og avkj&oslash;l p&aring; rist.&nbsp;</p>\n<p>Obs! Oppskriften kan gjerne halveres, for at deigen skal bli lettere &aring; h&aring;ndtere p&aring; hjemmekj&oslash;kkenet.&nbsp;</p>\n<p>&nbsp; @</p>',
+			description: '<p>Spe med kraft og r&oslash;r godt. Kok opp mens du r&oslash;rer. La sausen koke i 15 minutter mens du r&oslash;rer jevnlig.&nbsp;</p>',
 			sortOrder: 3,
-			images: [],
+			images: null,
+			videoId: '',
 		},
 	],
 	tags: [
 		{
-			title: 'Brød',
-			url: 'https://www.dagbladet.no/mat/oppskrifter/tag/brod',
+			title: 'Middag',
+			url: '#',
+		},
+		{
+			title: 'Kjøtt',
+			url: '#',
+		},
+		{
+			title: 'Helg',
+			url: '#',
+		},
+		{
+			title: 'Biff',
+			url: '#',
+		},
+		{
+			title: 'Grill',
+			url: '#',
+		},
+		{
+			title: 'Saus',
+			url: '#',
+		},
+		{
+			title: 'Asparges',
+			url: '#',
+		},
+		{
+			title: 'Sopp',
+			url: '#',
+		},
+		{
+			title: 'Potet',
+			url: '#',
+		},
+		{
+			title: 'Puré',
+			url: '#',
+		},
+		{
+			title: 'Storfe',
+			url: '#',
 		},
 	],
 };

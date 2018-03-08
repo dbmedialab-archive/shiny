@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { merge } from 'aurora-deep-slice-merge';
 
 import {
 	FullWidthLinkBar,
 	LinkBarButton as Button,
-	ThemeSelector,
+	ThemeSelector as ShinyThemeProvider,
 } from '..';
 
 import { themes } from '../themes';
+
+const ThemeSelector = styled(ShinyThemeProvider)`
+	padding-top: calc(2 * ${props => (props.theme.variables || {}).verticalBase});
+`;
 
 class ThemeSwitcher extends React.Component {
 	constructor() {

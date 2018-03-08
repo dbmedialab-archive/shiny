@@ -3,7 +3,7 @@ import { darken, lighten } from 'polished';
 import { variables } from './variables';
 
 const colorsToShade= {
-	primary: '#d60000',
+	primary: '#e3000b',
 	secondary: '#f1ca3f',
 	tertiary: '#222222',
 
@@ -24,6 +24,10 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
 
+	* {
+		box-sizing: border-box;
+	}
+
 	body {
 		font-family: ${variables.mainFont};
 	}
@@ -42,8 +46,12 @@ export default {
 		...combinedShadedColors,
 
 		skinColors: {
-			splashBackground: 'grayTintLight',
-			splashText: 'tertiary',
+			splashBackground: 'primary',
+			splashBorder: 'darkness',
+			splashText: 'white',
+			calmBackground: 'grayTintLight',
+			calmBorder: 'darkness',
+			calmText: 'tertiary',
 		},
 	},
 	global,

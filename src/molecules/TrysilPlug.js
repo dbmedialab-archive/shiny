@@ -1,14 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import stripTags from 'striptags';
 
-import { Article } from '../atoms/Article';
-import { Kicker } from '../atoms/Kicker';
-import { Heading } from '../atoms/Heading';
-import { Label } from '../atoms/Label';
-import { BlockLink } from '../atoms/BlockLink';
-import { LazyProgressiveImage } from '../molecules/LazyProgressiveImage';
-import { Source } from '../molecules/Source';
+import {
+	Article,
+	Kicker,
+	PlugHeading as DefaultHeading,
+	Label,
+	BlockLink,
+	LazyProgressiveImage,
+	Source,
+} from '..';
 
+const PlugLink = BlockLink.extend`
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 .3rem .1rem #08e;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	&:hover, &:focus {
+		text-decoration: none;
+
+		h1 {
+			text-decoration:underline;
+		}
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+`;
+
+const Description = styled.p`
+	color: ${props => props.theme.colors.type};
+`;
 
 const TrysilPlug = ({
 	kicker,
@@ -21,9 +51,11 @@ const TrysilPlug = ({
 	offset,
 	sources,
 	ratio,
+	Heading,
+	headingProps,
 }) => (
 	<Article>
-		<BlockLink href={url}>
+		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
 			{placeholderUrl &&
 				<LazyProgressiveImage
@@ -40,8 +72,8 @@ const TrysilPlug = ({
 						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 				</LazyProgressiveImage>
 			}
-			<Heading headline>{title}</Heading>
-			{subtitle && <p itemProp="description">{subtitle}</p>}
+			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
+			{subtitle && <Description itemProp="description">{subtitle}</Description>}
 			{labels &&
 				labels.map(label => (
 					<Label key={label.text} color={label.color}>
@@ -49,7 +81,7 @@ const TrysilPlug = ({
 					</Label>
 				))
 			}
-		</BlockLink>
+		</PlugLink>
 	</Article>
 );
 
@@ -64,6 +96,14 @@ TrysilPlug.propTypes = {
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
+	Heading: PropTypes.func,
+	headingProps: PropTypes.shape({
+		skin: PropTypes.shape({
+			backgroundColor: PropTypes.string,
+			textColor: PropTypes.string,
+			needsPadding: PropTypes.bool,
+		}),
+	}),
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
@@ -72,6 +112,8 @@ TrysilPlug.defaultProps = {
 	labels: [],
 	offset: 0,
 	sources: [],
+	Heading: DefaultHeading,
+	headingProps: {},
 };
 
 export { TrysilPlug };

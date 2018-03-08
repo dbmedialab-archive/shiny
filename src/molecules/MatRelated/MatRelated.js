@@ -3,8 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Row } from '../../atoms/Row';
-import { Col  } from '../../atoms/Col';
+import {
+	Row,
+	Col,
+	LargeHeading as Heading,
+} from '../..';
 // import { IconBar } from '../IconBar';
 import { ComplexitySectionHeader } from '../../atoms/MainRecipe/ComplexitySectionHeader';
 
@@ -14,8 +17,8 @@ const Img = styled.img`
 
 
 export const Related = props => (
-	<section style={{ width: 1122, margin: '0 auto' }}>
-		<h1>Related Section</h1>
+	<section>
+		<Heading>Related Section</Heading>
 		<Row>
 			<Col md={6}>
 				<Row>
@@ -41,7 +44,7 @@ export const Related = props => (
 			</Col>
 		</Row>
 		<Row style={{ marginBottom: 20 }}>
-			<Col md={6}>
+			<Col md={4}>
 				<Row>
 					<Col md={5}>
 						<div><Img width="230" src="http://www.vancitybuzz.com/wp-content/uploads/2015/09/Pappardelle-Bolognaise_0001-230x180.jpg" alt="" /></div>
@@ -52,7 +55,7 @@ export const Related = props => (
 					</Col>
 				</Row>
 			</Col>
-			<Col md={6}>
+			<Col md={4}>
 				<Row>
 					<Col md={5}>
 						<div><Img width="230" src="http://www.fleuroudevoshaar.nl/wp-content/uploads/2014/09/geroosterde-groenten-wortels-stock-512x341-230x180.jpg" alt="" /></div>
