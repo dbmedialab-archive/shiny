@@ -5789,9 +5789,9 @@ prism-themes@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.0.tgz#58089547ed39df273e5195e1628c69177341bf88"
 
-prismjs@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.12.0.tgz#5edbc56096789c9d11b7e16cc84e8c8d4fc85613"
+prismjs@1.12.2:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.12.2.tgz#a40a6cd5bf36716e316cb75df91976a7d5d694e6"
   optionalDependencies:
     clipboard "^2.0.0"
 
