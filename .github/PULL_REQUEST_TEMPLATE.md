@@ -1,7 +1,7 @@
 Make sure these thing are boxes are checked before submitting a your PR - thank you!
 
 
-* [ ] Is it added to a storybook story?
+* [ ] If you're adding a feature, is it documented in a storybook story?
 * [ ] Should it have any [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)?
 * [ ] Should it have any microdata on it from [Schema.org](http://schema.org/)?
 
