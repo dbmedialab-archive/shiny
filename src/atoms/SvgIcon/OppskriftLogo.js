@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Svg = styled.svg`
-	box-sizing: border-box;
-	fill: ${props => (props.fill ? props.theme.colors[props.fill] : props.theme.colors.white)};
-	background: ${props => (props.background ? props.theme.colors[props.background] : '')}
+	stroke-opacity: 0;
 `;
 
 /* eslint-disable max-len */
-const MatLogo = props => (
+const OppskriftLogo = props => (
 	<Svg width="100%" height="100%" viewBox="0 0 125 135" {...props}>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<polygon id="Fill-1" fill="#FF790A" points="0 0 0 135 0.001 135 31.251 122.753 62.501 110.505 93.751 122.753 125 135 125 0" />
@@ -29,4 +27,4 @@ const MatLogo = props => (
 );
 /* eslint-enable max-len */
 
-export { MatLogo };
+export { OppskriftLogo };

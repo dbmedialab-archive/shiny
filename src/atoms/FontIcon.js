@@ -22,6 +22,7 @@ const Icon = styled.span`
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	color: ${props => props.color};
 
 	${props => props.size && css`
 		font-size: ${props.size}rem;
