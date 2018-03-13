@@ -7,19 +7,25 @@ const MoreStyle = styled.div`
 	text-align: center;
 	text-transform: uppercase;
 	width: 14rem;
+	cursor: pointer;
+	
+	& h1 {
+		margin-bottom: 0.5rem;
+	}
+	
 	& .icon-wrapper {
 		width: 100%;
 	}
 		& .icon-wrapper:before {
 			content: "";
 			width: 100%;
-			border-bottom: 0.2rem solid #ff790a;
+			border-bottom: 0.3rem solid #ff790a;
 			display: block;
 			margin-bottom: 1.7rem;
 		}
 `;
 
-export const MoreComponent = props => (
+const MoreComponent = props => (
 	<MoreStyle>
 		<MediumHeading className="heading">Vis flere</MediumHeading>
 		<div className="icon-wrapper">
@@ -27,3 +33,5 @@ export const MoreComponent = props => (
 		</div>
 	</MoreStyle>
 );
+
+export { MoreComponent };

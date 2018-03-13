@@ -114,6 +114,7 @@ export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
 export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
+export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
