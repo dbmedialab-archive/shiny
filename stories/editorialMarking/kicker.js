@@ -17,8 +17,8 @@ export default () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Kicker>Kicker</Kicker>
-			<Kicker color="teal">Kicker</Kicker>
-			<Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
+			<Kicker backgroundColor="teal">Kicker</Kicker>
+			<Kicker backgroundColor="secondaryLight" textColor="type">Kicker</Kicker>
 			<NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 		</DemoContainer>
 
@@ -31,8 +31,8 @@ import {
 } from '@aller/shiny';
 
 <Kicker>Kicker</Kicker>
-<Kicker color="teal">Kicker</Kicker>
-<Kicker color="secondaryLight" textColor="type">Kicker</Kicker>
+<Kicker backgroundColor="teal">Kicker</Kicker>
+<Kicker backgroundColor="secondaryLight" textColor="type">Kicker</Kicker>
 <NativeAdKicker>Annonsørinnhold: Hurra</NativeAdKicker>
 			`}
 		</Code>

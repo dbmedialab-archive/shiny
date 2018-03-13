@@ -30,7 +30,7 @@ const LunchButton = ({
 
 	return (
 		<Link href={link} {...rest}>
-			{kicker && <Kicker {...{ color, kickerShade }}>{kicker}</Kicker>}
+			{kicker && <Kicker {...{ textColor: color, kickerShade }}>{kicker}</Kicker>}
 			<Heading marginTopFactor={0} marginBottomFactor={0} color={color}>{title}</Heading>
 		</Link>
 	);
