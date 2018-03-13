@@ -2,26 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SvgIconWrapper from './SvgIconWrapper';
 
-import { ActivityTime } from './ActivityTime';
-import { Difficulty   } from './Difficulty';
-import { Nut          } from './Nut';
-import { Fish         } from './Fish';
-import { Gluten       } from './Gluten';
-import { Pork         } from './Pork';
-import { TotalTime    } from './TotalTime';
-import { Vegan        } from './Vegan';
-import { Vegetarian   } from './Vegetarian';
-import { DoubleArrow  } from './DoubleArrow';
-import { Star         } from './Star';
-import { Lactose      } from './Lactose';
-import { Egg          } from './Egg';
-import { ShellFish    } from './ShellFish';
-import { Mail         } from './Mail';
-import { Pinterest    } from './Pinterest';
-import { User         } from './Avatar';
-import { KK    		  } from './KK';
-import { Aller        } from './Aller';
-import { Dagbladet        } from './Dagbladet';
+import { ActivityTime 		 } from './ActivityTime';
+import { Difficulty   		 } from './Difficulty';
+import { Nut          		 } from './Nut';
+import { Fish         		 } from './Fish';
+import { Gluten       		 } from './Gluten';
+import { Pork         		 } from './Pork';
+import { TotalTime    		 } from './TotalTime';
+import { Vegan        		 } from './Vegan';
+import { Vegetarian   		 } from './Vegetarian';
+import { DoubleArrow  		 } from './DoubleArrow';
+import { Star         		 } from './Star';
+import { Lactose      		 } from './Lactose';
+import { Egg          		 } from './Egg';
+import { ShellFish    		 } from './ShellFish';
+import { Mail         		 } from './Mail';
+import { Pinterest    		 } from './Pinterest';
+import { User         		 } from './Avatar';
+import { KK    		  		 } from './KK';
+import { Aller        		 } from './Aller';
+import { Dagbladet    		 } from './Dagbladet';
+import { OppskriftLogo       } from './OppskriftLogo';
+import { OppskriftMobileLogo } from './OppskriftMobileLogo';
 
 const SvgIcon = props => (
 	<SvgIconWrapper size={props.size} >
@@ -71,6 +73,10 @@ const SvgIcon = props => (
 					return <Aller {...props} />;
 				case 'dagbladet':
 					return <Dagbladet {...props} />;
+				case 'oppskrift-logo':
+					return <OppskriftLogo {...props} />;
+				case 'oppskrift-mobile-logo':
+					return <OppskriftMobileLogo {...props} />;
 				default:
 					return null;
 				}
