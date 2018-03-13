@@ -27,4 +27,5 @@ const OppskriftLogo = props => (
 );
 /* eslint-enable max-len */
 
+
 export { OppskriftLogo };
