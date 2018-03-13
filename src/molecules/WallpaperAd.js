@@ -118,7 +118,9 @@ class WallpaperAd extends Component {
 	}
 
 	render() {
-		const { height, shouldHideAttribution } = this.props;
+		const {
+			height, shouldHideAttribution, itemType, itemScope,
+		} = this.props;
 
 		/* eslint-disable jsx-a11y/anchor-has-content */
 		const left = (
@@ -156,6 +158,8 @@ class WallpaperAd extends Component {
 					height={height}
 					width={this.state.isWallpaper ? '1010px' : '980px'}
 					shouldHideAttribution={shouldHideAttribution}
+					itemType={itemType}
+					itemScope={itemScope}
 				>
 					{React.cloneElement(this.props.children, {
 						onMediaQueryChange: this.onMediaQueryChange.bind(this),
@@ -171,6 +175,8 @@ WallpaperAd.propTypes = {
 	height: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	shouldHideAttribution: PropTypes.bool.isRequired,
+	itemType: PropTypes.string.isRequired,
+	itemScope: PropTypes.bool.isRequired,
 };
 
 WallpaperAd.defaultProps = {
