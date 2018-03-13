@@ -14,7 +14,7 @@ const StyledAdWrapper = AdWrapper.extend`
 
 const StickyWrapper = styled.div`
 	position: absolute;
-	top: 0;
+	top: ${props => props.theme.variables.verticalBase};
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
 		${props => (

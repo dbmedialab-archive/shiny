@@ -49,11 +49,11 @@ import {
 	<LinkBarLink linkText="One" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two" url="https://example.com" />
 	<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com">
-	<VerticalLinkBar background={colors.white}>
-		<LinkBarLink linkText="One" url="https://example.com" isActive />
-		<LinkBarLink linkText="Two" url="https://example.com" />
-	</VerticalLinkBar>
-</LinkBarDropdown>
+		<VerticalLinkBar background={colors.white}>
+			<LinkBarLink linkText="One" url="https://example.com" isActive />
+			<LinkBarLink linkText="Two" url="https://example.com" />
+		</VerticalLinkBar>
+	</LinkBarDropdown>
 </HorizontalLinkBar>
 				`}
 		</Code>
