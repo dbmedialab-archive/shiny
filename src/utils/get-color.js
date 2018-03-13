@@ -24,9 +24,9 @@ import { unshadeColorString } from '.';
  * @returns function A function that resolves props to a css color string, e.g. props => '#333333'
  */
 export const getColor = (color, shade=null) => (props) => {
-	const colorString = (props.theme.colors.skinColors[color]) ?(props.theme.colors.skinColors[color]) : color;
+	const colorString = (props.theme.colors.skinColors[color]) ? (props.theme.colors.skinColors[color]) : color;
 	const capShade = shade !== null ? shade.slice(0, 1).toUpperCase() + shade.slice(1) : '';
-	const shadedColorString = shade !== null ? unshadeColorString(colorString) + capShade : color;
+	const shadedColorString = shade !== null ? unshadeColorString(colorString) + capShade : colorString;
 
 	return props.theme.colors[shadedColorString];
 };
