@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // Utils
-import { unshadeColorString } from '../utils/unshade-color-string';
+import { getColor, getVariable } from '../utils';
 
 // Atoms
 import { BlockLink } from '../atoms/BlockLink';
@@ -10,15 +10,13 @@ const BlockLinkWithBackground = BlockLink.extend`
 	flex: 1;
 	margin:
 		0
-		calc(1/2 * ${props => props.theme.variables.horizontalBase})
-		${props => props.theme.variables.verticalBase}
+		calc(1/2 * ${getVariable('horizontalBase')})
+		${getVariable('verticalBase')}
 	;
-	padding: calc(1/2 * ${props => props.theme.variables.horizontalBase});
-	border-bottom: .2rem solid ${props => props.theme.colors[
-		unshadeColorString(props.background) + props.borderShade
-	]};
+	padding: calc(1/2 * ${getVariable('horizontalBase')});
+	border-bottom: .2rem solid ${props => getColor(props.background, props.borderShade)};
 	border-radius: .4rem;
-	background-color: ${props => props.theme.colors[props.background]};
+	background-color: ${props => getColor(props.background)};
 `;
 BlockLinkWithBackground.propTypes = {
 	theme: PropTypes.shape({
