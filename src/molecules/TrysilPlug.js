@@ -23,7 +23,7 @@ const PlugLink = BlockLink.extend`
 		}
 	}
 
-	&:hover, &:focus {
+	&:hover {
 		text-decoration: none;
 
 		h1 {
@@ -76,7 +76,12 @@ const TrysilPlug = ({
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}
 			{labels &&
 				labels.map(label => (
-					<Label key={label.text} color={label.color}>
+					<Label
+						key={label.text}
+						backgroundColor={label.backgroundColor}
+						backgroundHoverShade={label.backgroundHoverShade}
+						textColor={label.textColor}
+					>
 						{label.text}
 					</Label>
 				))
@@ -90,7 +95,12 @@ TrysilPlug.propTypes = {
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 	image: PropTypes.string.isRequired,
-	labels: PropTypes.arrayOf(PropTypes.object),
+	labels: PropTypes.arrayOf(PropTypes.shape({
+		backgroundColor: PropTypes.string,
+		backgroundHoverShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
+		textColor: PropTypes.string,
+		text: PropTypes.string,
+	})),
 	url: PropTypes.string.isRequired,
 	placeholderUrl: PropTypes.string.isRequired,
 	offset: PropTypes.number,

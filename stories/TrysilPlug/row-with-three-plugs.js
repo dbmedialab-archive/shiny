@@ -26,11 +26,11 @@ export default () => (
 					labels={[
 						{
 							text: 'Meninger',
-							color: 'orange',
+							backgroundColor: 'orange',
 						},
 						{
 							text: 'I am label',
-							color: 'blue',
+							backgroundColor: 'blue',
 						},
 					]}
 				/>
@@ -46,11 +46,11 @@ export default () => (
 					labels={[
 						{
 							text: 'Meninger',
-							color: 'orange',
+							backgroundColor: 'orange',
 						},
 						{
 							text: 'I am label',
-							color: 'blue',
+							backgroundColor: 'blue',
 						},
 					]}
 				/>
@@ -67,7 +67,7 @@ export default () => (
 						{ text: 'Akkurat nå' },
 						{
 							text: 'Trump',
-							color: 'pink',
+							backgroundColor: 'pink',
 						},
 					]}
 				/>
