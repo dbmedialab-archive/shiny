@@ -49,7 +49,10 @@ PaddedText.defaultProps = {
 	},
 };
 
-const Hgroup = styled.hgroup``;
+const Hgroup = styled.hgroup`
+	/* Fixes vertical spacing */
+	display: flex;
+`;
 
 const DymoHeading = (props) => {
 	const {
@@ -66,9 +69,7 @@ const DymoHeading = (props) => {
 	/* eslint-disable react/no-danger */
 	return (
 		<Hgroup>
-			<FormattedHeading
-				{...rest}
-			>
+			<FormattedHeading {...rest}>
 				<PaddedText
 					skin={{ ...skin }}
 					dangerouslySetInnerHTML={{ __html: children || title }}
