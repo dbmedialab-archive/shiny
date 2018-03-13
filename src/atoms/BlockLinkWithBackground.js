@@ -21,7 +21,7 @@ const BlockLinkWithBackground = BlockLink.extend`
 BlockLinkWithBackground.propTypes = {
 	theme: PropTypes.shape({
 		background: PropTypes.string.isRequired,
-		borderShade: PropTypes.oneOf(['', 'Dark', 'Light', 'Lighter']),
+		borderShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
 		colors: PropTypes.shape(),
 		variables: PropTypes.shape({
 			verticalBase: PropTypes.string,
