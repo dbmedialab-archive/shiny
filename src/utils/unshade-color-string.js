@@ -1,4 +1,4 @@
-const unshadeColorString = color => color
+const unshadeColorString = color => (color || '')
 	.replace(/Dark$/, '')
 	.replace(/Light$/, '')
 	.replace(/Lighter$/, '');

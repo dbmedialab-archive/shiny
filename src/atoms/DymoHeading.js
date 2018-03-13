@@ -1,14 +1,31 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { getColor, getVariable } from '../utils';
 
 import { Heading } from '..';
 
+const Hgroup = styled.hgroup`
+	/* Fixes vertical spacing */
+	display: flex;
+`;
+
 const FormattedHeading = styled(Heading)`
   display: inline-block;
-  margin: 0 0 calc(2/3*${props => props.theme.variables.verticalBase});
-  ${props => (props.hasImage ? 'max-width: 90%;' : `max-width: calc(100% - ${props.theme.variables.horizontalBase});`)}
+  margin: 0 0 calc(2/3 * ${getVariable('verticalBase')});
+
+  ${props => (props.hasImage
+		? 'max-width: 90%;'
+		: css`max-width: calc(100% - ${getVariable('horizontalBase')});`
+	)}
+
+	a:hover && {
+		text-decoration: none;
+	}
+
+	${Hgroup}:last-child & {
+		margin: 0;
+	}
 `;
 
 const PaddedText = styled.span`
@@ -38,9 +55,6 @@ const PaddedText = styled.span`
 				${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
 			;
 		}
-		a:hover h1 & {
-			text-decoration: none;
-		}
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
@@ -58,11 +72,6 @@ PaddedText.defaultProps = {
 		backgroundHoverShade: 'dark',
 	},
 };
-
-const Hgroup = styled.hgroup`
-	/* Fixes vertical spacing */
-	display: flex;
-`;
 
 const DymoHeading = (props) => {
 	const {

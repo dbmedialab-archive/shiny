@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-import { unshadeColorString } from '../utils/unshade-color-string';
+import { getColor, getVariable } from '../utils';
 
 const LunchKicker = styled.span`
-	color: ${props => props.theme.colors[
-		unshadeColorString(props.color) + props.kickerShade
-	]};
-	font-size: ${props => props.theme.variables.uiRegularSize};
-	line-height: ${props => props.theme.variables.verticalBase};
-	font-family: ${props => props.theme.variables.mainFont};
+	color: ${props => getColor((props.textColor || props.color), props.kickerShade)};
+	font-size:   ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('verticalBase')};
+	font-family: ${getVariable('mainFont')};
 `;
 
 export { LunchKicker };
