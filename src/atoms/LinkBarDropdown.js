@@ -19,10 +19,10 @@ const HideMeMaybe = styled.div`
 const ThisOughtToBeAFragment = styled.div``;
 
 class Dropdown extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
-			hide: true,
+			hide: !this.props.displayInitially,
 		};
 	}
 
@@ -34,7 +34,7 @@ class Dropdown extends React.Component {
 
 	render() {
 		const {
-			linkText, children, ...rest
+			linkText, children,  ...rest
 		} = this.props;
 		const { hide } = this.state;
 
@@ -58,11 +58,15 @@ Dropdown.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	displayInitially: propTypes.bool,
 	linkText: propTypes.string.isRequired,
+};
+Dropdown.defaultProps = {
+	displayInitially: false,
 };
 
 // When we export this as a styled component,
-// we can use it in interpoliations,
+// we can use it in interpolations,
 // for example in other styled compontents
 const LinkBarDropdown = styled(Dropdown)``;
 LinkBarDropdown.displayName = 'LinkBarDropdown';
