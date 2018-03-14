@@ -50,7 +50,7 @@ const MatFooter = () => (
 	<FooterWrapper>
 		<Grid>
 			<Row center="xs">
-				<Col md={3} sm={6} xs={12} >
+				<Col md={3} xs={12} >
 					<Row center="xs">
 						<Col md={12}>
 							<OppskriftLink href="#">Oppskrift.no</OppskriftLink>
@@ -68,7 +68,7 @@ const MatFooter = () => (
 						<Col md={12}><SvgIcon name="dagbladet" size="8.7" /></Col>
 					</Row>
 				</Col>
-				<Col md={3} sm={6} xs={12}>
+				<Col md={3} xs={12}>
 					<Row xs="center">
 						<Col xs={12}>
 							<SubCatHeading>Postadresse:</SubCatHeading>
@@ -86,13 +86,13 @@ const MatFooter = () => (
 						</Col>
 					</Row>
 				</Col>
-				<Col md={3} sm={6} xs={12}>
+				<Col md={3} xs={12}>
 					<SubCatHeading>Ansvarlig redaktør:</SubCatHeading>
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
 				</Col>
-				<Col md={3} sm={6} xs={12}>
+				<Col md={3} xs={12}>
 					<NavLinksBar>
 						<li>Annonseinfo</li>
 						<li>Om informasjonskapsler</li>

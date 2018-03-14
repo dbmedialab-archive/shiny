@@ -14,6 +14,10 @@ const StyledLine = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	${props => props.thick && css`border-width: .2rem`}
+	
+	@media only screen and (min-width: 360px) and (max-width: 1200px) {
+        border-bottom: none;
+}
 `;
 
 const UnderlinedHeading = ({ size, ...rest }) => (
