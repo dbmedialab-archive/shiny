@@ -30,11 +30,11 @@ export default () => (
 			labels={[
 				{
 					text: 'Meninger',
-					color: 'orange',
+					backgroundColor: 'orange',
 				},
 				{
 					text: 'I am label',
-					color: 'blue',
+					backgroundColor: 'blue',
 				},
 			]}
 		/>

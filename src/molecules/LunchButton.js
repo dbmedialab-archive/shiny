@@ -20,7 +20,6 @@ const LunchButton = ({
 	slug,
 	title,
 	kicker,
-	buttonClasses,
 	color,
 	kickerShade,
 	...rest
@@ -30,7 +29,7 @@ const LunchButton = ({
 
 	return (
 		<Link href={link} {...rest}>
-			{kicker && <Kicker {...{ color, kickerShade }}>{kicker}</Kicker>}
+			{kicker && <Kicker {...{ textColor: color, kickerShade }}>{kicker}</Kicker>}
 			<Heading marginTopFactor={0} marginBottomFactor={0} color={color}>{title}</Heading>
 		</Link>
 	);
@@ -41,24 +40,19 @@ LunchButton.propTypes = {
 	slug: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	kicker: PropTypes.string,
-	buttonClasses: PropTypes.oneOf([
-		PropTypes.string,
-		PropTypes.arrayOf(PropTypes.string),
-	]),
 	background: PropTypes.string,
 	color: PropTypes.string,
-	borderShade: PropTypes.oneOf(['', 'Dark', 'Light', 'Lighter']),
-	kickerShade: PropTypes.oneOf(['', 'Dark', 'Light', 'Lighter']),
+	borderShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
+	kickerShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
 };
 
 LunchButton.defaultProps = {
 	path: '',
 	kicker: 'Les mer om',
-	buttonClasses: '',
 	background: 'grayTintLight',
 	color: 'type',
 	borderShade: '',
-	kickerShade: 'Light',
+	kickerShade: 'light',
 };
 
 export { LunchButton };

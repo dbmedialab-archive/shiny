@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { getColor } from '../utils';
+
 const Kicker = styled.h1`
 	text-align: center;
 	text-transform: uppercase;
@@ -8,11 +10,18 @@ const Kicker = styled.h1`
 	padding: 0.6rem 0;
 	font-size: 1.3rem;
 	font-weight: bold;
-	color: ${props => props.theme.colors[props.textColor] || props.theme.colors.white};
-	background-color: ${props => props.theme.colors[props.color] || props.theme.colors.primary};
+	color: ${props => getColor(props.textColor)};
+	background-color: ${props => getColor((props.backgroundColor || props.color))};
+
+	a:hover && {
+		text-decoration: none;
+		background-color: ${props => getColor((props.backgroundColor || props.color), props.backgroundHoverShade)};
+	}
 `;
 Kicker.defaultProps = {
-	color: 'primary',
+	color: 'primary', // Deprecated
+	backgroundColor: 'primary', // Deprecated
+	backgroundHoverShade: 'dark',
 	textColor: 'white',
 };
 

@@ -1,14 +1,31 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { getColor, getVariable } from '../utils';
 
 import { Heading } from '..';
 
+const Hgroup = styled.hgroup`
+	/* Fixes vertical spacing */
+	display: flex;
+`;
+
 const FormattedHeading = styled(Heading)`
   display: inline-block;
-  margin: 0 0 calc(2/3*${props => props.theme.variables.verticalBase});
-  ${props => (props.hasImage ? 'max-width: 90%;' : `max-width: calc(100% - ${props.theme.variables.horizontalBase});`)}
+  margin: 0 0 calc(2/3 * ${getVariable('verticalBase')});
+
+  ${props => (props.hasImage
+		? 'max-width: 90%;'
+		: css`max-width: calc(100% - ${getVariable('horizontalBase')});`
+	)}
+
+	a:hover && {
+		text-decoration: none;
+	}
+
+	${Hgroup}:last-child & {
+		margin: 0;
+	}
 `;
 
 const PaddedText = styled.span`
@@ -31,12 +48,18 @@ const PaddedText = styled.span`
 		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
 
 		a:hover & {
-			padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
+			background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
+			box-shadow:
+				calc(1/2 * ${getVariable('horizontalBase')})
+				0
+				${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
+			;
 		}
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
 		backgroundColor: propTypes.string,
+		backgroundHoverShade: propTypes.string,
 		textColor: propTypes.string,
 		needsPadding: propTypes.bool,
 	}),
@@ -46,13 +69,9 @@ PaddedText.defaultProps = {
 		textColor: 'type',
 		needsPadding: false,
 		backgroundColor: 'transparent',
+		backgroundHoverShade: 'dark',
 	},
 };
-
-const Hgroup = styled.hgroup`
-	/* Fixes vertical spacing */
-	display: flex;
-`;
 
 const DymoHeading = (props) => {
 	const {
