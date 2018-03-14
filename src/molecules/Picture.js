@@ -31,13 +31,13 @@ class Picture extends Component {
 	}
 
 	componentDidMount() {
-		const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (this.props.onMounted) {
 			if (this.node) {
 				const img = this.node.querySelector('img');
 				this.props.onMounted(img);
 			}
 		}
+		const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
 			Promise.all([
 			import('picturefill'),
@@ -51,8 +51,8 @@ class Picture extends Component {
 		return (
 			<StyledPicture
 				className={this.props.isLoaded ? 'loaded' : ''}
-				innerRef={(node) => { this.node = node; }}
 				alt={this.props.alt}
+				innerRef={(node) => { this.node = node; }}
 			>
 				{this.props.children}
 			</StyledPicture>
