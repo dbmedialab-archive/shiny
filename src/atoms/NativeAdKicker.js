@@ -6,7 +6,7 @@ import { Kicker } from './Kicker';
 
 const NativeAdKicker = withTheme(props => (
 	<Kicker
-		color={`${props.theme.colors.skinColors.nativeAd}Light`}
+		backgroundColor={`${props.theme.colors.skinColors.nativeAd}Light`}
 		{...props}
 	/>
 ));
