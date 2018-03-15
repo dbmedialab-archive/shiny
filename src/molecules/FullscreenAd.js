@@ -8,7 +8,7 @@ const StyledAdWrapper = AdWrapper.extend`
   width: 100%;
   margin: 0;
   padding: 0;
-  display: ${props => (props.shouldHide ? 'block' : 'none')};
+  display: ${props => (props.shouldHide ? 'none' : 'block')};
 
   & > div {
     z-index: -1;
@@ -28,7 +28,7 @@ const StyledAdWrapper = AdWrapper.extend`
 
 const FullscreenAd = (props) => {
 	return (
-		<Observer rootMargin="15% 0 0 5%">
+		<Observer rootMargin="15%">
 			{inView => (<StyledAdWrapper {...props} isVisible={inView} />)}
 		</Observer>
 	);
