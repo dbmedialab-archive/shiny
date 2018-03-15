@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 
-class Source extends Component {
-	static propTypes = {
-		srcSet: propTypes.string.isRequired,
-		media: propTypes.string,
-	}
+const Source = ({ media, srcSet }) => (
+	<source media={media} srcSet={srcSet} />
+);
 
-	static defaultProps = {
-		media: '',
-	}
+Source.propTypes = {
+	srcSet: propTypes.string.isRequired,
+	media: propTypes.string,
+};
 
-	render() {
-		return <source media={this.props.media} srcSet={this.props.srcSet} />;
-	}
-}
+Source.defaultProps = {
+	media: '',
+};
 
 export { Source };
