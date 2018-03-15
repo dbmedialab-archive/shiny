@@ -2,7 +2,7 @@ import React from 'react';
 
 /* eslint-disable max-len */
 const SeHerLogo = props => (
-	<svg viewBox="0 0 371.1 403.72">
+	<svg viewBox="0 0 371.1 403.72" alt="Se og Hør">
 		<rect className="backdrop" fill="#e3000b" width="371.1" height="403.72" />
 		<g className="exploding-darkness" fill="#0c0000">
 			<polygon points="348.55 90.19 273.23 127.25 273.26 90.17 348.55 90.19" />
