@@ -6,7 +6,9 @@ const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-	filter: blur(2.5rem);
+	filter: blur(1.5rem);
+	transform: translateZ(0); /*for older browsers*/
+  	will-change: transform;
 	& img {
 		display: block;
 		max-width: 100%;

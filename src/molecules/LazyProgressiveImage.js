@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import React, { cloneElement, Component } from 'react';
+import React, { cloneElement, Component, PureComponent } from 'react';
 import styled from 'styled-components';
 import Observer from 'react-intersection-observer';
 
@@ -21,7 +21,7 @@ const StyledImage = Image.extend`
 	height: 100%;
 `;
 
-class LazyProgressiveImage extends Component {
+class LazyProgressiveImage extends PureComponent {
 	static propTypes = {
 		backgroundColor: propTypes.string,
 		src: propTypes.string.isRequired,
