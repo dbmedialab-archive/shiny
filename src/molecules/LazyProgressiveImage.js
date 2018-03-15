@@ -38,25 +38,19 @@ class LazyProgressiveImage extends Component {
 		offset: 0,
 	}
 
-	constructor(props) {
-		super(props);
-
-		this.props = props;
-	}
-
 	state = {
 		isLoaded: false,
 	}
 
-	componentDidMount() {
-		if (!('IntersectionObserver' in window)) {
-			import('intersection-observer').then((module) => {
-			});
-		}
-	}
-
 	onLoadImage = () => {
 		this.setLoadedStatus();
+	}
+
+
+	setLoadedStatus = () => {
+		this.setState({
+			isLoaded: true,
+		});
 	}
 
 	addImageListener = (img) => {
@@ -66,12 +60,6 @@ class LazyProgressiveImage extends Component {
 
 		this.img = img;
 		this.img.addEventListener('load', this.setLoadedStatus);
-	}
-
-	setLoadedStatus = () => {
-		this.setState({
-			isLoaded: true,
-		});
 	}
 
 

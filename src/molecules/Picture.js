@@ -6,7 +6,7 @@ const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-	filter: blur(5.0rem);
+	filter: blur(2.5rem);
 	& img {
 		display: block;
 		max-width: 100%;
@@ -14,7 +14,7 @@ const StyledPicture = styled.picture`
 
 	&.loaded {
 		filter: blur(0);
-		transition: filter .8s ease-in-out;
+		transition: filter .4s ease-in-out;
 	}
 `;
 
@@ -36,14 +36,6 @@ class Picture extends Component {
 				const img = this.node.querySelector('img');
 				this.props.onMounted(img);
 			}
-		}
-		const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-		if (isIE11) {
-			Promise.all([
-			import('picturefill'),
-			import('picturefill/dist/plugins/mutation/pf.mutation'),
-			]).then(([picturefill, mutation]) => {
-			});
 		}
 	}
 
