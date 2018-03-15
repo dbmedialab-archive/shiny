@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Observer from 'react-intersection-observer';
 
 import { AdWrapper } from '../atoms/AdWrapper';
@@ -28,7 +28,7 @@ const StyledAdWrapper = AdWrapper.extend`
 
 const FullscreenAd = (props) => {
 	return (
-		<Observer rootMargin="25%">
+		<Observer rootMargin="15% 0 0 5%">
 			{inView => (<StyledAdWrapper {...props} isVisible={inView} />)}
 		</Observer>
 	);
