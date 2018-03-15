@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import React, { cloneElement, Component, PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Observer from 'react-intersection-observer';
 
@@ -83,11 +83,7 @@ class LazyProgressiveImage extends PureComponent {
 					>
 						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
 							{inView ?
-								React.Children.map(this.props.children, child => child && cloneElement(child, {
-									onLoad: () => {
-										this.onLoadImage();
-									},
-								})) : null
+								this.props.children : null
 							}
 							<StyledImage
 								src={src}

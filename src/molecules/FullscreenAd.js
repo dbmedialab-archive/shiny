@@ -9,9 +9,10 @@ const StyledAdWrapper = AdWrapper.extend`
   margin: 0;
   padding: 0;
   display: ${props => (props.shouldHide ? 'none' : 'block')};
+  z-index: 5;
 
   & > div {
-    z-index: -1;
+    z-index: 4;
     position: ${props => (props.isVisible ? 'fixed' : 'absolute')};
     top: 0;
     padding: 0;

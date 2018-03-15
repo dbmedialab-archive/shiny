@@ -5423,7 +5423,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-picturefill@3.0.2:
+picturefill@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/picturefill/-/picturefill-3.0.2.tgz#fa3d35fffbef5ab5300fe2ad9dca8f2e36cba27b"
 
@@ -6021,7 +6021,7 @@ react-inspector@^2.2.2:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
 
-react-intersection-observer@^3.0.3:
+react-intersection-observer@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-3.0.3.tgz#3df67f413c36c28b02426e7fdbf9670790fb50ab"
 
@@ -6045,7 +6045,7 @@ react-split-pane@^0.1.74:
     prop-types "^15.5.10"
     react-style-proptype "^3.0.0"
 
-react-stickyfill@^0.2.3:
+react-stickyfill@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.3.tgz#a1241a16b8d6fd39f77832d9cc69fa2998e58d44"
   dependencies:
@@ -6928,7 +6928,7 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-striptags@^3.1.1:
+striptags@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/striptags/-/striptags-3.1.1.tgz#c8c3e7fdd6fb4bb3a32a3b752e5b5e3e38093ebd"
 
