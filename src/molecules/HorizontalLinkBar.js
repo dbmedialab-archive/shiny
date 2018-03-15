@@ -26,7 +26,7 @@ const LinkBar = ({
 			isTopLevelComponent={isTopLevelComponent}
 		>
 			<Bar background={background} {...rest}>
-				{children && children.map((child, i) => {
+				{children && React.Children.map(children, (child, i) => {
 					if (child.props && child.props.isListItem) {
 						return child;
 					}
