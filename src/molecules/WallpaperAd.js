@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from 'styled-components';
 import Sticker from 'react-stickyfill';
 
+import { getColor } from '../utils';
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const LeftAndRight = AdWrapper.extend`
@@ -40,8 +41,8 @@ const LeftAndRight = AdWrapper.extend`
 		opacity: 1;
 		padding: 0;
 		position: absolute;
-		color: ${props => props.theme.variables.adWrapperBackgroundColor};
-		background: ${props => props.theme.variables.adWrapperBackgroundColor};
+		color: ${getColor('adWrapperBackgroundColor')};
+		background: ${getColor('adWrapperBackgroundColor')};
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%) translateY(-2.63rem);

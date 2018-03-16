@@ -58,6 +58,10 @@ const colors = {
 		calmBorder: 'grayTintLight',
 		calmText: 'type',
 
+		adWrapperBackgroundColor: 'grayTintLight',
+		adWrapperFontColor: 'type',
+		adWrapperColor: 'type',
+
 		nativeAd: 'orange',
 		sport: 'green',
 		helse: 'blue',
