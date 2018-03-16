@@ -10,7 +10,7 @@ const StyledPicture = styled.picture`
 	transform: translateZ(0); /*for older browsers*/
   	will-change: transform;
 	& img {
-		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');		
+		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
 		display: block;
 		max-width: 100%;
 	}
@@ -20,7 +20,7 @@ const StyledPicture = styled.picture`
 		transition: filter .4s ease-in-out;
 
 		& img {
-			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');	
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
 		}
 	}
 `;
