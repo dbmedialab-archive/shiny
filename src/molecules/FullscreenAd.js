@@ -1,5 +1,6 @@
 import React from 'react';
 import Observer from 'react-intersection-observer';
+import 'intersection-observer';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 

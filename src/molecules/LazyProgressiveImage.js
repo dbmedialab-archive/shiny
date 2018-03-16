@@ -2,6 +2,7 @@ import propTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Observer from 'react-intersection-observer';
+import 'intersection-observer';
 
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
