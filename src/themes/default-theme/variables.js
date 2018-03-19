@@ -12,7 +12,7 @@ export default {
 	semiBoldWeight: 600,
 	boldWeight: 700,
 
-	largeWidth: '750px',
+	largeWidth: '750px', // deprecated, use theme.flexboxgrid.breakpoints.sm instead
 
 	uiRegularSize: '1.4rem',
 	uiRegularLineHeight: '1.9rem',
@@ -34,8 +34,5 @@ export default {
 	headingHugeSize: '4.8rem',
 	headingHugeLineHeight: '6.3rem',
 
-	adWrapperBackgroundColor: '#ececec',
-	adWrapperFontSize: '1.1rem',
-	adWrapperFontColor: '#767676',
 	adWrapperCase: 'uppercase',
 };

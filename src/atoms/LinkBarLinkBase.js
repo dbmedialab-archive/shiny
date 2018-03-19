@@ -44,6 +44,7 @@ export const LinkBarLinkBase = styled.a`
 	outline: none;
 	text-decoration: none;
 	color: ${getTextColor};
+	font-family: ${props => props.theme.variables.headingsFont};
 	font-size: ${props => props.theme.variables.uiRegularSize};
 	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
