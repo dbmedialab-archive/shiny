@@ -14,6 +14,11 @@ const StyledLine = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	${props => props.thick && css`border-width: .2rem`}
+	@media only screen
+	 and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em)
+	 and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+        border-bottom: none;
+}
 `;
 
 const UnderlinedHeading = ({ size, ...rest }) => (
