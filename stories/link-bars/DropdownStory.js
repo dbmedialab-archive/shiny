@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Heading, HugeHeading } from '../../src';
 // import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
 
@@ -26,8 +26,14 @@ const DropdownStory = () => (
 			<HorizontalLinkBar overflow="visible">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
-				<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com">
+				<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com" displayInitially>
 					<VerticalLinkBar background={colors.white}>
+						<LinkBarLink linkText="One" url="https://example.com" isActive />
+						<LinkBarLink linkText="Two" url="https://example.com" />
+					</VerticalLinkBar>
+				</LinkBarDropdown>
+				<LinkBarDropdown linkText="This dropdown is aligned to the right" url="https://example.com" displayInitially>
+					<VerticalLinkBar background={colors.white} align="right">
 						<LinkBarLink linkText="One" url="https://example.com" isActive />
 						<LinkBarLink linkText="Two" url="https://example.com" />
 					</VerticalLinkBar>
@@ -48,8 +54,14 @@ import {
 <HorizontalLinkBar overflow="visible">
 	<LinkBarLink linkText="One" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two" url="https://example.com" />
-	<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com">
+	<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com" displayInitially>
 		<VerticalLinkBar background={colors.white}>
+			<LinkBarLink linkText="One" url="https://example.com" isActive />
+			<LinkBarLink linkText="Two" url="https://example.com" />
+		</VerticalLinkBar>
+	</LinkBarDropdown>
+	<LinkBarDropdown linkText="This dropdown is aligned to the right" url="https://example.com" displayInitially>
+		<VerticalLinkBar background={colors.white} align="right">
 			<LinkBarLink linkText="One" url="https://example.com" isActive />
 			<LinkBarLink linkText="Two" url="https://example.com" />
 		</VerticalLinkBar>

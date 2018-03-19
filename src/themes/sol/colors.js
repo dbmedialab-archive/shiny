@@ -84,6 +84,9 @@ const colors = {
 		calmBorder: 'grayTintLighter',
 		calmText: 'type',
 
+		adWrapperBackgroundColor: 'transparent',
+		adWrapperFontColor: 'typeLight',
+
 		nativeAd: 'pink',
 		sport: 'green',
 		helse: 'blue',
