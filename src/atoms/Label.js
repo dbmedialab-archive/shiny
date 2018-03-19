@@ -1,14 +1,13 @@
 import styled from 'styled-components';
+import propTypes from 'prop-types';
+
+import { getColor, getVariable } from '../utils';
 
 const Label = styled.span`
-	background-color: ${props => (
-		props.theme.colors[props.color] || props.theme.colors[props.theme.colors.skinColors.splashBackground]
-	)};
-	color: ${props => (
-		props.theme.colors[props.textColor] || props.theme.colors[props.theme.colors.skinColors.splashText]
-	)};
+	background-color: ${props => getColor(props.backgroundColor)};
+	color: ${props => getColor(props.textColor)};
 	display: inline-block;
-	font-family: ${props => props.theme.variables.headingsFont};
+	font-family: ${getVariable('headingsFont')};
 	font-size: 1.1rem;
 	font-weight: 300;
 	letter-spacing: .1rem;
@@ -22,9 +21,15 @@ const Label = styled.span`
 	text-transform: uppercase;
 	white-space: nowrap;
 `;
-
+Label.propTypes = {
+	backgroundColor: propTypes.string,
+	backgroundHoverShade: propTypes.oneOf(['', 'dark', 'light', 'lighter']),
+	textColor: propTypes.string,
+};
 Label.defaultProps = {
-	color: 'primary',
+	backgroundColor: 'primary',
+	backgroundHoverShade: 'dark',
+	textColor: 'white',
 };
 
 export { Label };
