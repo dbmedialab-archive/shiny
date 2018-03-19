@@ -24,7 +24,7 @@ export const LinkBarLinkBase = styled.a`
 		if (props.size === 'xsmall') {
 			return css`
 				padding: 0 calc(1/2 * ${props.theme.variables.horizontalBase});
-			`;
+`;
 		}
 		if (props.size === 'small') {
 			return css`
@@ -123,7 +123,7 @@ export const LinkBarLinkBase = styled.a`
 		width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0')};
 	}
 }
-	`;
+`;
 LinkBarLinkBase.defaultProps = {
 	textColor: 'type',
 };
