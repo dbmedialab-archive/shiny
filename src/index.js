@@ -145,5 +145,5 @@ export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
-export { MatFooter               } from  './molecules/Footers/MatFooter';
+export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
 export { MainRecipe              } from  './organisms/MainRecipe';
