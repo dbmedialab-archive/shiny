@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { PaddedGrid		 } from '../../src/storybook-decorators/PaddedGrid';
-import { HugeHeading 	 } from '../..';
+import { PaddedGrid      } from '../../src/storybook-decorators/PaddedGrid';
+import { HugeHeading 	   } from '../../src';
 import { OppskriftFooter } from '../../src/molecules/Footers/OppskriftFooter';
 
 const MatColophon = () => (

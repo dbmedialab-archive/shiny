@@ -1,6 +1,6 @@
 import React from 'react';
 import { SearchField } from '../../src/molecules/SearchField';
-import { Row, Col } from '../..';
+import { Row, Col } from '../../src';
 
 export default () => (
 	<section>

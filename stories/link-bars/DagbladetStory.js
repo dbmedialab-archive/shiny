@@ -1,10 +1,14 @@
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
 
 import {
+	// For the story
+	Heading,
+	HugeHeading,
+
+	// For this component specifically
 	LinkBarLink,
 	SmallLinkBarLink,
 	LargeLinkBarLink,
@@ -12,7 +16,7 @@ import {
 	HorizontalLinkBar,
 	DagbladetLogo,
 	VerticalLinkBar,
-} from '../..';
+} from '../../src';
 
 import theme from '../../src/themes/default-theme';
 
