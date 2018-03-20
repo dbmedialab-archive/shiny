@@ -1,15 +1,19 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src';
 // import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
 
 import {
+	// For the story
+	Heading,
+	HugeHeading,
+
+	// For this component specifically
 	LinkBarLink,
 	LinkBarDropdown,
 	HorizontalLinkBar,
 	VerticalLinkBar,
-} from '../..';
+} from '../../src';
 
 import { Code } from '../../src/atoms/Code';
 import theme from '../../src/themes/default-theme';

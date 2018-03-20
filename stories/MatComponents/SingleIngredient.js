@@ -12,7 +12,7 @@ import {
 	LargeHorizontalHeroUnit as Hero,
 	FrontSmallHeading,
 	FrontLargeHeading,
-} from '../..';
+} from '../../src';
 import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
 import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';

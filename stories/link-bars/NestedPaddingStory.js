@@ -7,7 +7,7 @@ import { DemoContainer } from '../storybook-components';
 import {
 	LinkBarLink,
 	HorizontalLinkBar,
-} from '../..';
+} from '../../src';
 
 const NestedPaddingStory = () => (
 	<section>

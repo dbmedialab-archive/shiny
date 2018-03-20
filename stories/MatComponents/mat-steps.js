@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Col, HugeHeading, Heading } from '../..';
+import { Row, Col, HugeHeading, Heading } from '../../src';
 import { PaddedGrid as Grid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 import { RecipeStep } from '../../src/atoms/MainRecipe/RecipeStep';
