@@ -1,8 +1,6 @@
 import React from 'react';
 import { StarsRating } from '../../src/molecules/StarsRating';
-import { Row } from '../../lib/atoms/Row';
-import { Col } from '../../lib/atoms/Col';
-import { HugeHeading } from '../../src/atoms/Heading';
+import { Row, Col, HugeHeading } from '../../src';
 import { Code } from '../../src/atoms/Code';
 
 export default () => (
