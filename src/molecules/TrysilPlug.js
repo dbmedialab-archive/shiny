@@ -7,7 +7,7 @@ import {
 	Article,
 	Kicker,
 	PlugHeading as DefaultHeading,
-	Label,
+	Labels,
 	BlockLink,
 	LazyProgressiveImage,
 	Source,
@@ -74,18 +74,7 @@ const TrysilPlug = ({
 			}
 			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}
-			{labels &&
-				labels.map(label => (
-					<Label
-						key={label.text}
-						backgroundColor={label.backgroundColor}
-						backgroundHoverShade={label.backgroundHoverShade}
-						textColor={label.textColor}
-					>
-						{label.text}
-					</Label>
-				))
-			}
+			{labels && <Labels labels={labels} />}
 		</PlugLink>
 	</Article>
 );
