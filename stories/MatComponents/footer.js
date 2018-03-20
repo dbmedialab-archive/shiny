@@ -1,10 +1,10 @@
 import React from 'react';
-import { MatFooter } from '../../src/molecules/Footers/MatFooter';
+import { OppskriftFooter } from '../../src/molecules/Footers/OppskriftFooter';
 import { HugeHeading } from '../..';
 
 export default () => (
 	<section>
 		<HugeHeading>Mat Footer</HugeHeading>
-		<MatFooter />
+		<OppskriftFooter />
 	</section>
 );
