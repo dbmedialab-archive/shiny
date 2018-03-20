@@ -5,7 +5,7 @@ import {
 	LinkBarLink,
 	XSmallLinkBarLink,
 	HorizontalLinkBar,
-	MatLogo,
+	SvgIcon,
 	HugeHeading,
 	LinkBarItem,
 	LinkBarDropdown,
@@ -57,7 +57,7 @@ const MatStory = () => (
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
-					<MatLogo />
+					<SvgIcon name="oppskrift-logo" size={7} />
 				</LogoLink>
 			</LinkBarBleedingLogo>
 			<SearchField
