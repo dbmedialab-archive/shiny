@@ -135,6 +135,7 @@ export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
 export { GenericAd               } from './molecules/GenericAd';
 export { StickyAd                } from './molecules/StickyAd';
+export { FullscreenAd            } from './molecules/FullscreenAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
 export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';

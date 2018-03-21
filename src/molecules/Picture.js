@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -6,19 +6,26 @@ const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-	filter: blur(5.0rem);
+	filter: blur(1.5rem);
+	transform: translateZ(0); /*for older browsers*/
+  	will-change: transform;
 	& img {
+		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
 		display: block;
 		max-width: 100%;
 	}
 
 	&.loaded {
 		filter: blur(0);
-		transition: filter .8s ease-in-out;
+		transition: filter .4s ease-in-out;
+
+		& img {
+			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+		}
 	}
 `;
 
-class Picture extends Component {
+class Picture extends PureComponent {
 	static propTypes = {
 		onMounted: propTypes.func.isRequired,
 		isLoaded: propTypes.bool.isRequired,
@@ -31,19 +38,17 @@ class Picture extends Component {
 	}
 
 	componentDidMount() {
-		const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+		/* eslint-disable global-require */
+		const picturefill = require('picturefill');
+		require('picturefill/dist/plugins/mutation/pf.mutation.min');
+
+		picturefill();
+
 		if (this.props.onMounted) {
 			if (this.node) {
 				const img = this.node.querySelector('img');
 				this.props.onMounted(img);
 			}
-		}
-		if (isIE11) {
-			Promise.all([
-			import('picturefill'),
-			import('picturefill/dist/plugins/mutation/pf.mutation'),
-			]).then(([picturefill, mutation]) => {
-			});
 		}
 	}
 
@@ -51,8 +56,8 @@ class Picture extends Component {
 		return (
 			<StyledPicture
 				className={this.props.isLoaded ? 'loaded' : ''}
-				innerRef={(node) => { this.node = node; }}
 				alt={this.props.alt}
+				innerRef={(node) => { this.node = node; }}
 			>
 				{this.props.children}
 			</StyledPicture>

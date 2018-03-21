@@ -65,7 +65,7 @@ const WallpaperWrapper = AdWrapper.extend`
 class WallpaperAd extends Component {
 	state = {
 		backgroundImage: '',
-		top: '2.6rem',
+		top: 'calc(2.6rem + 2.4rem)',
 		href: '',
 		sticky: false,
 		isWallpaper: false,
@@ -96,7 +96,7 @@ class WallpaperAd extends Component {
 			return;
 		}
 
-		main.childNodes[0].style.padding = 0;
+		main.childNodes[0].childNodes[0].style.padding = 0;
 
 		frame.parentNode.style.backgroundImage = `url(${data.src})`;
 		frame.parentNode.style.backgroundPosition = 'top center';

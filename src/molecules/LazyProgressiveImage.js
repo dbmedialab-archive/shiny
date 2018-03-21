@@ -1,10 +1,14 @@
 import propTypes from 'prop-types';
-import React, { cloneElement, Component } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import Observer from 'react-intersection-observer';
 
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
+if (typeof window !== 'undefined') {
+	import('intersection-observer');
+}
 
 const Figure = styled.figure`
 	position: relative;
@@ -37,33 +41,12 @@ class LazyProgressiveImage extends Component {
 		offset: 0,
 	}
 
-	constructor(props) {
-		super(props);
-
-		this.props = props;
-	}
-
 	state = {
-		hasViewed: false,
 		isLoaded: false,
 	}
 
-	componentDidMount() {
-		if (!('IntersectionObserver' in window)) {
-			import('intersection-observer').then((module) => {
-			});
-		}
-		this.initObserver();
-	}
-
-	componentWillUnmount() {
-		if (this.img) {
-			this.img.removeEventListener('load', this.setLoadedStatus);
-		}
-
-		this.observer.unobserve(this.node);
-		this.observer = null;
-		this.node = null;
+	onLoadImage = () => {
+		this.setLoadedStatus();
 	}
 
 
@@ -80,39 +63,12 @@ class LazyProgressiveImage extends Component {
 
 		this.img = img;
 		this.img.addEventListener('load', this.setLoadedStatus);
+
+		if (img.complete) {
+			this.setLoadedStatus();
+		}
 	}
 
-	initObserver = (offset) => {
-		if (!this.node) {
-			return;
-		}
-
-
-		if (!('IntersectionObserver' in window)) {
-			this.setState({
-				hasViewed: true,
-			});
-
-			return;
-		}
-
-		const callback = (entries) => {
-			entries.forEach((entry) => {
-				const hasViewed = this.state.hasViewed || entry.isIntersecting;
-
-				this.setState({
-					hasViewed,
-				});
-			});
-		};
-		const options = {
-			threshold: 0,
-			rootMargin: this.props.offset ? `${this.props.offset}px` : '0px',
-		};
-
-		this.observer = new IntersectionObserver(callback, options);
-		this.observer.observe(this.node);
-	}
 
 	render() {
 		const {
@@ -125,20 +81,25 @@ class LazyProgressiveImage extends Component {
 			: () => {};
 
 		return (
-			<Figure
-				backgroundColor={backgroundColor}
-				innerRef={(node) => { this.node = node; }}
-				paddingBottom={ratio * 100}
-			>
-				<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
-					{this.state.hasViewed ?
-						React.Children.map(this.props.children, child => child && cloneElement(child, {
-							onMounted: this.addImageListener,
-						})) : null
-					}
-					<StyledImage src={src} alt={alt} />
-				</Picture>
-			</Figure>
+			<Observer rootMargin="400px" triggerOnce>
+				{inView => (
+					<Figure
+						backgroundColor={backgroundColor}
+						innerRef={(node) => { this.node = node; }}
+						paddingBottom={ratio * 100}
+					>
+						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
+							{inView ?
+								this.props.children : null
+							}
+							<StyledImage
+								src={src}
+								alt={alt}
+							/>
+						</Picture>
+					</Figure>
+				)}
+			</Observer>
 		);
 	}
 }
