@@ -6,7 +6,7 @@ import {
 	HorizontalOverflowGradient,
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
-	NavWithOptionalConstrainer,
+	NavWithOptionalConstrainer as DefaultSemanticElement,
 } from '..';
 
 const LinkBar = ({
@@ -16,10 +16,13 @@ const LinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
+	SemanticElement: PropSemanticElement,
 	...rest
 }) => {
+	const SemanticElement = PropSemanticElement ? PropSemanticElement : DefaultSemanticElement;
+
 	return (
-		<NavWithOptionalConstrainer
+		<SemanticElement
 			background={background}
 			width={width}
 			zIndex={zIndex}
@@ -38,7 +41,7 @@ const LinkBar = ({
 				})}
 			</Bar>
 			{shouldFadeOut && <HorizontalOverflowGradient />}
-		</NavWithOptionalConstrainer>
+		</SemanticElement>
 	);
 };
 
@@ -56,6 +59,7 @@ LinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
+	SemanticElement: PropTypes.node,
 };
 
 LinkBar.defaultProps = {
@@ -69,6 +73,7 @@ LinkBar.defaultProps = {
 	zIndex: 4,
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
+	SemanticElement: null,
 };
 
 // When we export this as a styled component,
