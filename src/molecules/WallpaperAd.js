@@ -65,7 +65,7 @@ const WallpaperWrapper = AdWrapper.extend`
 class WallpaperAd extends Component {
 	state = {
 		backgroundImage: '',
-		top: `calc(2.6rem + ${this.props.theme.variables.horizontalBase}`,
+		top: 'calc(2.6rem + 2.4rem)',
 		href: '',
 		sticky: false,
 		isWallpaper: false,

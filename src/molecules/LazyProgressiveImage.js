@@ -7,7 +7,7 @@ import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
 if (typeof window !== 'undefined') {
-	require('intersection-observer');
+	import('intersection-observer');
 }
 
 const Figure = styled.figure`
@@ -51,7 +51,6 @@ class LazyProgressiveImage extends Component {
 
 
 	setLoadedStatus = () => {
-		console.log('SETLOADEDSTATUS');
 		this.setState({
 			isLoaded: true,
 		});
