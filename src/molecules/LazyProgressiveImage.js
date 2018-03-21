@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Observer from 'react-intersection-observer';
 
@@ -7,7 +7,7 @@ import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
 if (typeof window !== 'undefined') {
-	import('intersection-observer');
+	require('intersection-observer');
 }
 
 const Figure = styled.figure`
@@ -24,7 +24,7 @@ const StyledImage = Image.extend`
 	height: 100%;
 `;
 
-class LazyProgressiveImage extends PureComponent {
+class LazyProgressiveImage extends Component {
 	static propTypes = {
 		backgroundColor: propTypes.string,
 		src: propTypes.string.isRequired,
@@ -51,6 +51,7 @@ class LazyProgressiveImage extends PureComponent {
 
 
 	setLoadedStatus = () => {
+		console.log('SETLOADEDSTATUS');
 		this.setState({
 			isLoaded: true,
 		});
@@ -63,6 +64,10 @@ class LazyProgressiveImage extends PureComponent {
 
 		this.img = img;
 		this.img.addEventListener('load', this.setLoadedStatus);
+
+		if (img.complete) {
+			this.setLoadedStatus();
+		}
 	}
 
 
