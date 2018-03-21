@@ -31,7 +31,7 @@ const theme = {
 
 	flexboxgrid: {
 		gutterWidth: stripUnit(variables.horizontalBase), // rem
-		outerMargin: 2, // rem
+		outerMargin: 0, // rem
 		container: {
 			sm: 71, // rem
 			md: 100.0, // rem
