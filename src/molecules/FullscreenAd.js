@@ -40,11 +40,7 @@ const StyledAdWrapper = AdWrapper.extend`
 
 const FullscreenAd = (props) => {
 	return (
-		<Observer rootMargin="15%">
-			{inView => (
-				<StyledAdWrapper {...props} isVisible={inView} />
-			)}
-		</Observer>
+		<StyledAdWrapper {...props}  />
 	);
 };
 
