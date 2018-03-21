@@ -1,11 +1,15 @@
 import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
 // HorizontalLinkBar
 import {
+	// For the story
+	Heading,
+	HugeHeading,
+
+	// For this component specifically
 	FullWidthLinkBar,
 	LinkBarLink,
 } from '../../src';

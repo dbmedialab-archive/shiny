@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'styled-components';
 
-import { LinkBarLinkBase } from '../..';
+import { LinkBarLinkBase } from '..';
 import { FontIcon } from './FontIcon';
 
 const Arrow = LinkBarLinkBase.withComponent('div').extend`

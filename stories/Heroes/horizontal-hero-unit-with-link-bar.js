@@ -1,17 +1,15 @@
 import React from 'react';
 
-import {
-	SmallHorizontalHeroUnit,
-	MediumHorizontalHeroUnit,
-	LargeHorizontalHeroUnit,
-} from '../../src/molecules/HorizontalHeroUnit';
 import { PaddedGrid  } from '../../src/storybook-decorators/PaddedGrid';
 import {
 	HugeHeading,
 	Heading,
 	Row,
 	Col,
-} from '../..';
+	SmallHorizontalHeroUnit,
+	MediumHorizontalHeroUnit,
+	LargeHorizontalHeroUnit,
+} from '../../src';
 
 /* eslint-disable max-len */
 const image = {

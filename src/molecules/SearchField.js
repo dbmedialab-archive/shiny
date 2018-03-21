@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 import {
 	LoadingSearchIcon,
 	FontIcon,
-} from '../..';
+} from '..';
 
 const Search = styled.div`
   position: relative;

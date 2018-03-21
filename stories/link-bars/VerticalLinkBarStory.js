@@ -7,7 +7,7 @@ import { DemoContainer } from '../storybook-components';
 import {
 	LinkBarLink,
 	VerticalLinkBar,
-} from '../..';
+} from '../../src';
 
 const VerticalLinkBarStory = () => (
 	<section>

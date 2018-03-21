@@ -10,7 +10,7 @@ import {
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
-} from '../../src/';
+} from '../../src';
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 

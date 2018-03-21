@@ -7,7 +7,7 @@ import {
 	HorizontalFlexingList as Bar,
 	LinkBarItem,
 	NavWithOptionalConstrainer,
-} from '../..';
+} from '..';
 
 const LinkBar = ({
 	background,
