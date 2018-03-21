@@ -3,6 +3,6 @@ import styled from 'styled-components';
 
 const RowM = Row.extend`
 	margin: 0;
-`
+`;
 
 export { RowM as Row };
