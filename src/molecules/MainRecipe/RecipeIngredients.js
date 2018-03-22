@@ -114,10 +114,10 @@ class RecipeIngredients extends React.Component {
 						<Wrapper> { this.getIngredientsParts() } </Wrapper>
 					</Col>
 				</Row>
-				<AddCart>
-					<FontIcon name="add" size={2.2} />
-					<span>LEGG I HANDLELISTE</span>
-				</AddCart>
+				{/* <AddCart> */}
+				{/* <FontIcon name="add" size={2.2} /> */}
+				{/* <span>LEGG I HANDLELISTE</span> */}
+				{/* </AddCart> */}
 			</div>
 		);
 	}
