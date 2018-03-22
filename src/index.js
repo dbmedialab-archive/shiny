@@ -96,6 +96,7 @@ export { LinkBarItem             } from './atoms/LinkBarItem';
 export { XSmallLinkBarLink       } from './atoms/LinkBarLink';
 export { SmallLinkBarLink        } from './atoms/LinkBarLink';
 export { LinkBarLink             } from './atoms/LinkBarLink';
+export { LinkBarLinkBordered     } from './atoms/LinkBarLinkBordered';
 export { LargeLinkBarLink        } from './atoms/LinkBarLink';
 export { XSmallLinkBarHeading    } from './atoms/LinkBarHeading';
 export { SmallLinkBarHeading     } from './atoms/LinkBarHeading';

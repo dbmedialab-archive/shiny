@@ -56,7 +56,7 @@ class ScrollArrowsLinkBar extends Component {
 		} = this.content;
 
 		const contentWiderThanContainer = contentFullSize > containerSize;
-		const allToTheFarRight = (leftScrollPosition + contentVisibleSize) === contentFullSize;
+		const allToTheFarRight = contentFullSize - (leftScrollPosition + contentVisibleSize) < 2;
 
 		if (contentWiderThanContainer && !allToTheFarRight) {
 			!shouldDrawRightArrow && this.setState({ shouldDrawRightArrow: true });
@@ -118,6 +118,7 @@ class ScrollArrowsLinkBar extends Component {
 			isTopLevelComponent,
 			arrowGradientRgbBackgroundValues,
 			arrowGradientHeight,
+			arrowColor,
 			...rest
 		} = this.props;
 
@@ -138,6 +139,7 @@ class ScrollArrowsLinkBar extends Component {
 							onClick={this.leftClick}
 							background={background}
 							arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
+							color={arrowColor}
 							arrowGradientHeight={arrowGradientHeight}
 						/>
 					}
@@ -158,6 +160,7 @@ class ScrollArrowsLinkBar extends Component {
 						<RightScrollArrow
 							onClick={this.rightClick}
 							background={background}
+							color={arrowColor}
 							arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 							arrowGradientHeight={arrowGradientHeight}
 						/>
@@ -186,9 +189,8 @@ ScrollArrowsLinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
-	arrowGradientRgbBackgroundValues: PropTypes.arrayOf([
-		PropTypes.number,
-	]),
+	arrowGradientRgbBackgroundValues: PropTypes.arrayOf(PropTypes.number),
+	arrowColor: PropTypes.string,
 	arrowGradientHeight: PropTypes.string,
 };
 
@@ -205,6 +207,7 @@ ScrollArrowsLinkBar.defaultProps = {
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
 	arrowGradientRgbBackgroundValues: [255, 255, 255],
+	arrowColor: 'inherit',
 	arrowGradientHeight: '',
 };
 
