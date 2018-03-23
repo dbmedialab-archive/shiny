@@ -9,7 +9,7 @@ import {
 	FrontSmallHeading,
 } from '../..';
 import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
-import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
+import { Buttons, Counter, Pers /* AddCart */ } from '../../atoms/MainRecipe/IngredientsSection';
 
 
 const RecipeIngredientsHeading = FrontSmallHeading.extend`
