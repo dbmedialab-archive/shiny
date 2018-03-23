@@ -117,7 +117,7 @@ class RecipeIngredients extends React.Component {
 				{/* <AddCart> */}
 				{/* <FontIcon name="add" size={2.2} /> */}
 				{/* <span>LEGG I HANDLELISTE</span> */}
-				{/* </AddCart> */}
+				{/* </AddCart> */} {/* Uncoment this when its will be ready */}
 			</div>
 		);
 	}
