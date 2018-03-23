@@ -11,7 +11,7 @@ import {
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added
-import { StarsRating } from '../../molecules/StarsRating';
+// import { StarsRating } from '../../molecules/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
 const RecipeMetaDataWrapper = styled.div`
@@ -75,8 +75,8 @@ const RecipeMetaData  = ({
 					</Col>
 				</Col>
 				<Col xs={12} md={3} mdOffset={1}>
-					<FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading>
-					<StarsRating count={5} size={29} value={rating} />
+					{/* <FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading> */}
+					{/* <StarsRating count={5} size={29} value={rating} /> */}
 				</Col>
 			</Row>
 		</RecipeMetaDataWrapper>
