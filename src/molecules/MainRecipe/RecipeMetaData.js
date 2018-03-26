@@ -31,6 +31,8 @@ const RecipeMetaData  = ({
 	preferences,
 	author,
 	rating,
+	mobile,
+	imgCaption,
 }) => {
 	allergies = allergies.map((allergyItem) => {
 		return {
@@ -45,13 +47,43 @@ const RecipeMetaData  = ({
 		};
 	});
 
+	// mobile has different order of elements
+	// Passer for -> Inneholder -> Oppskrift
+	if (mobile) {
+		return (
+			<RecipeMetaDataWrapper>
+				<Row>
+					<Col md={false} sm={12} xs={12}>
+						<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
+						<Col md={10} >
+							<IconBar entities={preferences} textSize={1.2} iconSize={4} />
+						</Col>
+					</Col>
+				</Row>
+				<Row>
+					<Col md={false} sm={12} xs={12}>
+						<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
+						<Col md={10} >
+							<IconBar entities={allergies} textSize={1.2} iconSize={4} />
+						</Col>
+					</Col>
+				</Row>
+				<Row>
+					<Col md={false} sm={12} xs={12}>
+						<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
+						<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
+					</Col>
+				</Row>
+			</RecipeMetaDataWrapper>
+		);
+	}
+
 	return (
 		<RecipeMetaDataWrapper>
 			<Row>
 				<PaddedCol xs md={8} mdOffset={2}>
 					<FigCaption>
-							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
-							super Foto: matrat.no / studio dreyer-hensley
+						{ imgCaption }
 					</FigCaption>
 				</PaddedCol>
 			</Row>
@@ -93,6 +125,8 @@ RecipeMetaData.defaultProps = {
 	preferences: [],
 	author: {},
 	rating: 0,
+	mobile: false,
+	imgCaption: '',
 };
 
 RecipeMetaData.propTypes = {
@@ -108,6 +142,8 @@ RecipeMetaData.propTypes = {
 		}),
 	}),
 	rating: PropTypes.number,
+	mobile: PropTypes.bool,
+	imgCaption: PropTypes.string,
 };
 
 
