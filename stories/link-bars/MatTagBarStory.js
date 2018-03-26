@@ -25,7 +25,7 @@ const MatTagBarStory = () => (
 				background={colors.white}
 				arrowColor={colors.primary}
 			>
-				<LinkBarLinkBordered linkText="Kjøtt" url="#" isActive />
+				<LinkBarLinkBordered linkText="Kjøtt" url="#" isActive 	activeBackground={colors.primary} />
 				<LinkBarLinkBordered linkText="Kylling" url="#" />
 				<LinkBarLinkBordered linkText="Vegetar" url="#" />
 				<LinkBarLinkBordered linkText="Pasta" url="#" />
