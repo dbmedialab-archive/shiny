@@ -15,8 +15,11 @@ const ColorTextBox = styled(Col)`
 	color: ${props => props.theme.colors[props.textColor]};
 	background-color: ${props => props.theme.colors[props.bgColor]};
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-		padding: 2rem 10rem;
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		padding: 9rem 16rem;
+		font-size: 5rem;
+		line-height: 1.4;
+		text-align: left;
  	}
 `;
 
