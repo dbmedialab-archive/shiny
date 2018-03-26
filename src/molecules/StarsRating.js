@@ -5,14 +5,6 @@ import { SvgIcon } from '../atoms/SvgIcon';
 
 const StarsRating = props => (
 	<React.Fragment>
-		{props.numVotes ?
-			<div itemScope itemType="http://schema.org/AggregateRating">
-				<meta itemProp="ratingValue" content={props.value} />
-				<meta itemProp="bestRating" content={5} />
-				<meta itemProp="worstRating" content={1} />
-				<meta itemProp="ratingCount" content={props.numVotes} />
-			</div>
-			:null}
 		<ReactRating
 			fullSymbol={<SvgIcon name="star" color="#f4d300" />}
 			emptySymbol={<SvgIcon name="star" color="#cccccc" />}
