@@ -31,6 +31,7 @@ const RecipeMetaData  = ({
 	preferences,
 	author,
 	rating,
+	numVotes,
 }) => {
 	allergies = allergies.map((allergyItem) => {
 		return {
@@ -93,6 +94,7 @@ RecipeMetaData.defaultProps = {
 	preferences: [],
 	author: {},
 	rating: 0,
+	numVotes: 0,
 };
 
 RecipeMetaData.propTypes = {
@@ -108,6 +110,7 @@ RecipeMetaData.propTypes = {
 		}),
 	}),
 	rating: PropTypes.number,
+	numVotes: PropTypes.number,
 };
 
 

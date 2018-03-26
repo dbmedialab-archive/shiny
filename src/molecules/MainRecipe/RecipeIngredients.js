@@ -99,6 +99,7 @@ class RecipeIngredients extends React.Component {
 					</span>
 				</Buttons>
 				<Counter>
+					<meta itemProp="recipeYield" content={`${this.state.servings} servings`} />
 					<span>{this.state.servings}</span>
 				</Counter>
 				<Buttons>
@@ -111,7 +112,7 @@ class RecipeIngredients extends React.Component {
 				</Pers>
 				<Row>
 					<Col xs={12} md={6} lg={6}>
-						<Wrapper> { this.getIngredientsParts() } </Wrapper>
+						<Wrapper datePublished> { this.getIngredientsParts() } </Wrapper>
 					</Col>
 				</Row>
 				{/* <AddCart> */}
