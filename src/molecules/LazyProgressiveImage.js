@@ -136,7 +136,7 @@ class LazyProgressiveImage extends Component {
 							onMounted: this.addImageListener,
 						})) : null
 					}
-					<StyledImage src={src} alt={alt} />
+					<StyledImage src={src} alt={alt} itemProp="image" />
 				</Picture>
 			</Figure>
 		);

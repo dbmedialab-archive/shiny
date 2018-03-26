@@ -23,6 +23,7 @@ const LeftAlignedCenteredRow = props => <LeftAlignedRow {...props} center="xs" /
 export const Quantity = props => (
 	<section>
 		<LeftAlignedCenteredRow>
+			<meta itemProp="recipeIngredient" content={`${props.amount} ${props.type} ${props.title}`} />
 			<LightCol xs={5}>
 				{props.amount} {props.type}
 			</LightCol>

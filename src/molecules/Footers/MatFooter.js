@@ -59,13 +59,13 @@ const MatFooter = () => (
 					<Row center="xs" >
 						<Col md={3}>
 							<AllerIconWrapper>
-								<SvgIcon name="aller" size="6.8" />
+								<SvgIcon name="aller" size={6.8} />
 							</AllerIconWrapper>
 						</Col>
-						<Col md={3} mdOffset={1} ><SvgIcon name="kk" size="4.5" /></Col>
+						<Col md={3} mdOffset={1} ><SvgIcon name="kk" size={4.5} /></Col>
 					</Row>
 					<Row center="xs">
-						<Col md={12}><SvgIcon name="dagbladet" size="8.7" /></Col>
+						<Col md={12}><SvgIcon name="dagbladet" size={8.7} /></Col>
 					</Row>
 				</Col>
 				<Col md={3} xs={12}>

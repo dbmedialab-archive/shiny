@@ -49,14 +49,31 @@ const formatTime = (mins) => {
 		minutes = mins % 60;
 	}
 
-	return `${hours ? `${hours}t ` : ''} ${minutes ? `${minutes}min ` : ''}`;
+	return {
+		humanTime: `${hours ? `${hours}t ` : ''} ${minutes ? `${minutes}min ` : ''}`,
+		schemaTime: `PT${hours ? `${hours}H` : ''}${minutes ? `${minutes}M` : ''}`,
+	};
 };
 
+
 const getIconTitle = (name, value) => {
+	let propName;
+	switch (name) {
+	case 'aktiv':
+		propName='cookTime';
+		break;
+	case 'totalt':
+		propName='totalTime';
+		break;
+	default:
+		break;
+	}
 	return (
 		<Fragment>
 			<NoWrap>{name}</NoWrap>
-			<NoWrap>{value}</NoWrap>
+			{value.humanTime && value.schemaTime ?
+				<time itemProp={propName} dateTime={value.schemaTime}>{value.humanTime}</time>
+				:<NoWrap>{value}</NoWrap> }
 		</Fragment>
 	);
 };
@@ -99,7 +116,7 @@ const HeroUnit = (props) => {
 				</Row>
 				}
 				<Row center="xs">
-					<Col xs={props.iconBarWidth}><props.Heading>{ props.title }</props.Heading></Col>
+					<Col xs={props.iconBarWidth}><props.Heading itemProp="name">{ props.title }</props.Heading></Col>
 				</Row>
 			</TitleCol>
 		</MaybePaddedRow>
