@@ -9,7 +9,7 @@ import {
 	FrontSmallHeading,
 } from '../..';
 import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
-import { Buttons, Counter, Pers, AddCart } from '../../atoms/MainRecipe/IngredientsSection';
+import { Buttons, Counter, Pers } from '../../atoms/MainRecipe/IngredientsSection';
 
 
 const RecipeIngredientsHeading = FrontSmallHeading.extend`
@@ -115,10 +115,10 @@ class RecipeIngredients extends React.Component {
 						<Wrapper datePublished> { this.getIngredientsParts() } </Wrapper>
 					</Col>
 				</Row>
-				<AddCart>
-					<FontIcon name="add" size={2.2} />
-					<span>LEGG I HANDLELISTE</span>
-				</AddCart>
+				{/* <AddCart> */}
+				{/* <FontIcon name="add" size={2.2} /> */}
+				{/* <span>LEGG I HANDLELISTE</span> */}
+				{/* </AddCart> */} {/* Uncoment this when its will be ready */}
 			</div>
 		);
 	}

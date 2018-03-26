@@ -5,12 +5,12 @@ import {
 	LinkBarLink,
 	XSmallLinkBarLink,
 	HorizontalLinkBar,
-	MatLogo,
+	SvgIcon,
 	HugeHeading,
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
-} from '../../src/';
+} from '../../src';
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 
@@ -57,7 +57,7 @@ const MatStory = () => (
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
-					<MatLogo />
+					<SvgIcon name="oppskrift-logo" size={7} />
 				</LogoLink>
 			</LinkBarBleedingLogo>
 			<SearchField

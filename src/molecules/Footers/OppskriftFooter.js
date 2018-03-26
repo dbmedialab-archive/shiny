@@ -46,7 +46,7 @@ const VerticalSeparator = styled.div`
 	height: ${props => props.height}rem;
 `;
 
-const MatFooter = () => (
+const OppskriftFooter = () => (
 	<FooterWrapper>
 		<Grid>
 			<Row center="xs">
@@ -105,4 +105,4 @@ const MatFooter = () => (
 	</FooterWrapper>
 );
 
-export { MatFooter };
+export { OppskriftFooter };

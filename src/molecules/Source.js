@@ -1,29 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 
-class Source extends Component {
-	static propTypes = {
-		onMounted: propTypes.func,
-		srcSet: propTypes.string.isRequired,
-		media: propTypes.string,
-	}
+const Source = ({ media, srcSet }) => (
+	<source media={media} srcSet={srcSet} />
+);
 
-	static defaultProps = {
-		media: '',
-		onMounted: undefined,
-	}
+Source.propTypes = {
+	srcSet: propTypes.string.isRequired,
+	media: propTypes.string,
+};
 
-	componentDidMount() {
-		if (this.props.onMounted) {
-			if (this.node) {
-				this.props.onMounted(this.node);
-			}
-		}
-	}
-
-	render() {
-		return <source media={this.props.media} srcSet={this.props.srcSet} ref={(node) => { this.node = node; }} />;
-	}
-}
+Source.defaultProps = {
+	media: '',
+};
 
 export { Source };
