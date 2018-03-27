@@ -27,7 +27,6 @@ ProtoHeading.defaultProps = {
 
 const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
-
 	return css`
 		font-size: ${props => props.theme.variables[`heading${capSize}Size`]};
 		line-height: ${props => props.theme.variables[`heading${capSize}LineHeight`]};
@@ -76,6 +75,9 @@ const HugeHeading = ProtoHeading.extend`
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		${props => getSizes({ size: 'huge', ...props })}
+	}
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: ${props => props.theme.variables.headingHugeLineHeight};
 	}
 `;
 
