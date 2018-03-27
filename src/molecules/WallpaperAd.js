@@ -39,13 +39,12 @@ const LeftAndRight = AdWrapper.extend`
 
 	&&::before {
 		opacity: 1;
-		padding: 0;
 		position: absolute;
 		color: ${getColor('adWrapperBackgroundColor')};
 		background: ${getColor('adWrapperBackgroundColor')};
 		top: 0;
 		left: 50%;
-		transform: translateX(-50%) translateY(-2.63rem);
+		transform: translateX(-50%) translateY(-2.4rem);
 	}
 `;
 
@@ -59,13 +58,12 @@ LeftAndRight.propTypes = {
 
 const WallpaperWrapper = AdWrapper.extend`
 	height: calc(300px + 2.63rem);
-  	position: relative;
 `;
 
 class WallpaperAd extends Component {
 	state = {
 		backgroundImage: '',
-		top: 'calc(2.6rem + 2.4rem)',
+		top: 'calc(2.4rem + 2.4rem)',
 		href: '',
 		sticky: false,
 		isWallpaper: false,

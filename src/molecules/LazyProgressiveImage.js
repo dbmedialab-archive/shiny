@@ -45,6 +45,12 @@ class LazyProgressiveImage extends Component {
 		isLoaded: false,
 	}
 
+	componentWillUnmount() {
+		if (this.img) {
+			this.img.removeEventListener('load', this.setLoadedStatus);
+		}
+	}
+
 	onLoadImage = () => {
 		this.setLoadedStatus();
 	}
@@ -56,23 +62,19 @@ class LazyProgressiveImage extends Component {
 		});
 	}
 
+
 	addImageListener = (img) => {
-		if (!img) {
+		if (!this.img) {
 			return;
 		}
 
-		this.img = img;
 		this.img.addEventListener('load', this.setLoadedStatus);
-
-		if (img.complete) {
-			this.setLoadedStatus();
-		}
 	}
 
 
 	render() {
 		const {
-			backgroundColor, src, alt, ratio,
+			backgroundColor, src, alt, ratio, fallbackSrc,
 		} = this.props;
 
 		// Mount the picture element if no child components are set
@@ -81,22 +83,17 @@ class LazyProgressiveImage extends Component {
 			: () => {};
 
 		return (
-			<Observer rootMargin="400px" triggerOnce>
+			<Observer rootMargin="1000px" triggerOnce>
 				{inView => (
 					<Figure
 						backgroundColor={backgroundColor}
 						innerRef={(node) => { this.node = node; }}
 						paddingBottom={ratio * 100}
 					>
-						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture}>
-							{inView ?
-								this.props.children : null
-							}
-							<StyledImage
-								src={src}
-								alt={alt}
-								itemProp="image"
-							/>
+						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture} inView={inView}>
+							{inView && this.props.children}
+							{inView && <StyledImage itemProp="image" src={src} alt={alt} onLoad={this.onLoadImage} /> }
+							<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
 						</Picture>
 					</Figure>
 				)}

@@ -16,7 +16,6 @@ const AdWrapper = Styled.div`
 	margin-bottom: ${getVariable('verticalBase')};
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
 	clear: both;
 	text-align: ${props => setTextAlign(props.sticky)};
 
