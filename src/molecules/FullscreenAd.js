@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
@@ -50,6 +52,10 @@ const FullscreenAd = (props) => {
 			<StyledAdWrapper {...props}  />
 		</StyledReserveSpacer>
 	);
+};
+
+FullscreenAd.propTypes = {
+	shouldHide: PropTypes.bool.isRequired,
 };
 
 export { FullscreenAd };
