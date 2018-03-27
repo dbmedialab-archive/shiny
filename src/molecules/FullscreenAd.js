@@ -28,7 +28,7 @@ const StyledAdWrapper = AdWrapper.extend`
 	z-index: -100;
 	clip: rect(0, 100vw, 100vh, 0);
 
-  & > div {
+  & > div > div {
 		z-index: -1;
     position: fixed;
     top: 0;
