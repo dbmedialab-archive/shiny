@@ -10,6 +10,7 @@ import {
 	UnderlinedHugeHeading,
 	UnderlinedMediumHeading,
 	UnderlinedSmallHeading,
+	YoutubeFrame,
 } from '..';
 import { IconBar } from '../molecules/IconBar';
 
@@ -95,15 +96,22 @@ const HeroUnit = (props) => {
 		name: 'total-time',
 		text: getIconTitle('totalt', formatTime(props.timeTotal)),
 	});
-
 	return (
 		<MaybePaddedRow verticalPadding={props.verticalPadding}>
 			<Col xs={12} md={7}>
-				<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
-					<Source srcSet={props.image.placeholder} />
-				</LazyProgressiveImage>
+				{props.type === 'video' &&
+					<YoutubeFrame>
+						<iframe src={props.video.src} width="100%" title={props.video.title || 'Video'} />
+					</YoutubeFrame>
+				}
+				{props.type === 'image' &&
+					<LazyProgressiveImage src={props} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
+						<Source srcSet={props.image.placeholder} />
+					</LazyProgressiveImage>
+				}
 			</Col>
 			<TitleCol xs={12} md={5}>
+
 				{(props.difficulty || props.timeCooking || props.timeTotal) &&
 				<Row center="xs">
 					<Col xs={props.iconBarWidth} md={4} >
@@ -129,7 +137,12 @@ HeroUnit.propTypes = {
 		ratio: PropTypes.number,
 		fallbackSrc: PropTypes.string,
 		placeholder: PropTypes.string.isRequired,
-	}).isRequired,
+	}),
+	video: PropTypes.shape({
+		src: PropTypes.string,
+		title: PropTypes.string,
+	}),
+	type: PropTypes.string,
 	difficulty: PropTypes.oneOf([1, 2, 3]),
 	timeCooking: PropTypes.number,
 	timeTotal: PropTypes.number,
@@ -141,6 +154,9 @@ HeroUnit.propTypes = {
 };
 
 HeroUnit.defaultProps = {
+	image: {},
+	video: {},
+	type: '',
 	difficulty: null,
 	timeCooking: null,
 	timeTotal: null,
