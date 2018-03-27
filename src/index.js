@@ -72,6 +72,7 @@ export { SvgIcon                 } from './atoms/SvgIcon';
 export { IconWithText            } from './atoms/IconWithText';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
+export { NoPaddingGrid           } from './atoms/NoPaddingGrid';
 export { Header                  } from './atoms/Header';
 export { HorizontalOverflowGradient } from './atoms/HorizontalOverflowGradient';
 export { Image                   } from './atoms/Image';
