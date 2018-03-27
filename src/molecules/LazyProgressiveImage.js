@@ -95,6 +95,7 @@ class LazyProgressiveImage extends Component {
 							<StyledImage
 								src={src}
 								alt={alt}
+								itemProp="image"
 							/>
 						</Picture>
 					</Figure>
