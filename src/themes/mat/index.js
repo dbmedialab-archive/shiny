@@ -4,7 +4,7 @@ import colors from './colors';
 import variables from './variables';
 
 const global = css`
-	@import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
+	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
 
 	* {
 		box-sizing: border-box;
