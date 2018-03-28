@@ -10,6 +10,30 @@ const FooterWrapper = styled.div`
 	padding: 10.3rem 0 6.2rem;
 	font-family: ${props => props.theme.variables.mainFont};
 	font-size: 1.4rem;
+	letter-spacing: 2px;
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: 3.2rem;
+		background-color: ${props => props.theme.colors.type};
+		padding-top: 14rem;
+		
+		.margin-bottom-sm-3{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-5{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-6{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-10{
+			margin-bottom: 3rem;
+		}
+	}
+	
+	.text-left{
+		text-align: left;
+	}
 `;
 
 const SubCatHeading = styled.h5`
@@ -17,6 +41,10 @@ const SubCatHeading = styled.h5`
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0;
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: 3.4rem;
+	}
 `;
 
 const NavLinksBar = styled.ul`
@@ -30,11 +58,15 @@ const OppskriftLink = styled.a`
 	font-size: 2.5rem;
 	text-decoration: none;
 	color: inherit;
-
+	font-family: 'Ubuntu', sans-serif;
 	&::after {
 		content: '';
 		display: block;
 		height: 1.3rem;
+	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: 5.7rem;
 	}
 `;
 
@@ -46,53 +78,59 @@ const VerticalSeparator = styled.div`
 	height: ${props => props.height}rem;
 `;
 
+const Address = styled.address`
+	font-style: normal;
+`;
+
 const OppskriftFooter = () => (
 	<FooterWrapper>
 		<Grid>
-			<Row center="xs">
-				<Col md={3} xs={12} >
-					<Row center="xs">
+			<Row center="md">
+				<Col md={3} xs={12}>
+					<Row center="md" className="margin-bottom-sm-3">
 						<Col md={12}>
 							<OppskriftLink href="#">Oppskrift.no</OppskriftLink>
 						</Col>
 					</Row>
-					<Row center="xs" >
+					<Row center="md" className="margin-bottom-sm-6">
 						<Col md={3}>
 							<AllerIconWrapper>
-								<SvgIcon name="aller" size={6.8} />
+								<SvgIcon name="aller" size={6.8} size-sm={19} />
 							</AllerIconWrapper>
 						</Col>
-						<Col md={3} mdOffset={1} ><SvgIcon name="kk" size={4.5} /></Col>
-					</Row>
-					<Row center="xs">
-						<Col md={12}><SvgIcon name="dagbladet" size={8.7} /></Col>
+						<Col md={3}>
+							<SvgIcon name="kk" size={4.5} size-sm={12} />
+						</Col>
+						<Col md={12}>
+							<SvgIcon name="dagbladet" size={8.7} size-sm={20} />
+						</Col>
 					</Row>
 				</Col>
-				<Col md={3} xs={12}>
-					<Row xs="center">
-						<Col xs={12}>
+				<Col md={3} xs={12}  className="text-left">
+					<Row  className="margin-bottom-sm-10">
+						<Col xs={12} className="margin-bottom-sm-3">
 							<SubCatHeading>Postadresse:</SubCatHeading>
-							<address>
+							<Address>
 								Boks 1184 Sentrum, 0107 Oslo
-							</address>
+							</Address>
 							<VerticalSeparator height={2.8} />
 						</Col>
 						<Col xs={12}>
 							<SubCatHeading>Besøksadresse:</SubCatHeading>
-							<address>
+							<Address>
 								Karvesvingen 1, 0579 Oslo<br />
 								Sentralbord: 24 00 10 00
-							</address>
+							</Address>
 						</Col>
 					</Row>
 				</Col>
-				<Col md={3} xs={12}>
-					<SubCatHeading>Ansvarlig redaktør:</SubCatHeading>
+				<Col md={3} xs={12} className="margin-bottom-sm-10 text-left">
+					<SubCatHeading className="margin-bottom-sm-5">Ansvarlig redaktør:</SubCatHeading>
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
 				</Col>
-				<Col md={3} xs={12}>
+				<Col md={3} xs={12} className="text-left">
 					<NavLinksBar>
 						<li>Annonseinfo</li>
 						<li>Om informasjonskapsler</li>
