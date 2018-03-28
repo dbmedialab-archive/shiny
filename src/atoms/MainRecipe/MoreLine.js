@@ -8,9 +8,16 @@ const MoreStyle = styled.div`
 	text-transform: uppercase;
 	width: 14rem;
 	cursor: pointer;
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		width: 16rem;
+	} 
 	
 	& h1 {
 		margin-bottom: 0.5rem;
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+			margin-bottom: 1.5rem;
+			font-size: 3.5rem;
+		}
 	}
 	
 	& .icon-wrapper {
@@ -23,6 +30,11 @@ const MoreStyle = styled.div`
 			display: block;
 			margin-bottom: 1.7rem;
 		}
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		div {
+			width: 3rem;
+		}
+	}
 `;
 
 const MoreComponent = props => (

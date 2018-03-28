@@ -1,10 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
 if (typeof window !== 'undefined') {
 	import('intersection-observer');
 }
+
+const StyledReserveSpacer = styled.div`
+	height: 100vh;
+	width: 100%;
+	display: ${props => (props.shouldHide ? 'none' : 'block')};
+`;
 
 const StyledAdWrapper = AdWrapper.extend`
 	position: absolute;
@@ -21,7 +30,7 @@ const StyledAdWrapper = AdWrapper.extend`
 
   & > div {
 		z-index: -1;
-    position: ${props => (props.isVisible ? 'fixed' : 'fixed')};
+    position: fixed;
     top: 0;
     right: 0;
 		left: 0;
@@ -39,8 +48,14 @@ const StyledAdWrapper = AdWrapper.extend`
 
 const FullscreenAd = (props) => {
 	return (
-		<StyledAdWrapper {...props}  />
+		<StyledReserveSpacer shouldHide={props.shouldHide}>
+			<StyledAdWrapper {...props}  />
+		</StyledReserveSpacer>
 	);
+};
+
+FullscreenAd.propTypes = {
+	shouldHide: PropTypes.bool.isRequired,
 };
 
 export { FullscreenAd };
