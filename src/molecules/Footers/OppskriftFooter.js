@@ -17,10 +17,18 @@ const FooterWrapper = styled.div`
 		background-color: ${props => props.theme.colors.type};
 		padding-top: 14rem;
 		
-		${() => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map(size => `
-		.mobile-margin-bottom-${size}{
-			margin-bottom: ${size}rem;
-		}`)}
+		.margin-bottom-sm-3{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-5{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-6{
+			margin-bottom: 3rem;
+		}
+		.margin-bottom-sm-10{
+			margin-bottom: 3rem;
+		}
 	}
 	
 	.text-left{
@@ -79,12 +87,12 @@ const OppskriftFooter = () => (
 		<Grid>
 			<Row center="md">
 				<Col md={3} xs={12}>
-					<Row center="md" className="mobile-margin-bottom-3">
+					<Row center="md" className="margin-bottom-sm-3">
 						<Col md={12}>
 							<OppskriftLink href="#">Oppskrift.no</OppskriftLink>
 						</Col>
 					</Row>
-					<Row center="md" className="mobile-margin-bottom-6">
+					<Row center="md" className="margin-bottom-sm-6">
 						<Col md={3}>
 							<AllerIconWrapper>
 								<SvgIcon name="aller" size={6.8} size-sm={19} />
@@ -99,8 +107,8 @@ const OppskriftFooter = () => (
 					</Row>
 				</Col>
 				<Col md={3} xs={12}  className="text-left">
-					<Row  className="mobile-margin-bottom-10">
-						<Col xs={12} className="mobile-margin-bottom-3">
+					<Row  className="margin-bottom-sm-10">
+						<Col xs={12} className="margin-bottom-sm-3">
 							<SubCatHeading>Postadresse:</SubCatHeading>
 							<Address>
 								Boks 1184 Sentrum, 0107 Oslo
@@ -116,8 +124,8 @@ const OppskriftFooter = () => (
 						</Col>
 					</Row>
 				</Col>
-				<Col md={3} xs={12} className="mobile-margin-bottom-10 text-left">
-					<SubCatHeading className="mobile-margin-bottom-5">Ansvarlig redaktør:</SubCatHeading>
+				<Col md={3} xs={12} className="margin-bottom-sm-10 text-left">
+					<SubCatHeading className="margin-bottom-sm-5">Ansvarlig redaktør:</SubCatHeading>
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
