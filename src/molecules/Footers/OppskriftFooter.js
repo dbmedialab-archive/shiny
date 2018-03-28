@@ -21,13 +21,13 @@ const FooterWrapper = styled.div`
 			margin-bottom: 3rem;
 		}
 		.margin-bottom-sm-5{
-			margin-bottom: 3rem;
+			margin-bottom: 5rem;
 		}
 		.margin-bottom-sm-6{
-			margin-bottom: 3rem;
+			margin-bottom: 6rem;
 		}
 		.margin-bottom-sm-10{
-			margin-bottom: 3rem;
+			margin-bottom: 10rem;
 		}
 	}
 	
