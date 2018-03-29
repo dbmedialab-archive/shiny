@@ -18,6 +18,7 @@ const AdWrapper = Styled.div`
 	margin-right: auto;
 	clear: both;
 	text-align: ${props => setTextAlign(props.sticky)};
+	will-change: height, min-height;
 
 	&::before {
 		content: 'Annonse';
