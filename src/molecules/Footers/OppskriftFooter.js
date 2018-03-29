@@ -48,6 +48,7 @@ const SubCatHeading = styled.h5`
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0;
+	color: white;
 	
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
 		font-size: 3.4rem;
@@ -59,6 +60,10 @@ const NavLinksBar = styled.ul`
 	margin: 0;
 	line-height: 1.79;
 	padding: 0;
+	
+	& li {	
+		font-size: 1.4rem;
+	}
 `;
 
 const OppskriftLink = styled.a`
