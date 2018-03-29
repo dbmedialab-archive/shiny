@@ -34,21 +34,13 @@ const FooterWrapper = styled.footer`
 	.text-left{
 		text-align: left;
 	}
-	
-	& * {
-		font-size: 1.4rem !important;
-	}
-	
-	
 `;
 
 const SubCatHeading = styled.h5`
-	color: #fff;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0;
-	color: white;
 	
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
 		font-size: 3.4rem;
@@ -60,14 +52,9 @@ const NavLinksBar = styled.ul`
 	margin: 0;
 	line-height: 1.79;
 	padding: 0;
-	
-	& li {	
-		font-size: 1.4rem;
-	}
 `;
 
 const OppskriftLink = styled.a`
-	font-size: 2.5rem !important;
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;

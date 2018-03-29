@@ -43,7 +43,7 @@ export const LinkBarLinkBase = styled.a`
 	border: 0;
 	outline: none;
 	text-decoration: none;
-	color: ${getTextColor} !important;
+	color: ${getTextColor};
 	font-family: ${props => props.theme.variables.headingsFont};
 	font-size: ${props => props.theme.variables.uiRegularSize};
 	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
@@ -57,7 +57,7 @@ export const LinkBarLinkBase = styled.a`
 
 	&:hover {
 		background: ${props => (props.activeBackground)};
-		color: ${props => props.theme.colors[props.activeTextColor || props.textColor]} !important;
+		color: ${props => props.theme.colors[props.activeTextColor || props.textColor]};
 	}
 
 	&:focus {
