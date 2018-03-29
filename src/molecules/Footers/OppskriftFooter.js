@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Col, Row, Grid } from '../..';
 import { SvgIcon } from '../../atoms/SvgIcon';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
 	background-color: ${props => props.theme.colors.darkGrey};
 	color: ${props => props.theme.colors.white};
 	padding: 10.3rem 0 6.2rem;
@@ -34,9 +34,16 @@ const FooterWrapper = styled.div`
 	.text-left{
 		text-align: left;
 	}
+	
+	& * {
+		font-size: 1.4rem !important;
+	}
+	
+	
 `;
 
 const SubCatHeading = styled.h5`
+	color: #fff;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -55,7 +62,7 @@ const NavLinksBar = styled.ul`
 `;
 
 const OppskriftLink = styled.a`
-	font-size: 2.5rem;
+	font-size: 2.5rem !important;
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;
