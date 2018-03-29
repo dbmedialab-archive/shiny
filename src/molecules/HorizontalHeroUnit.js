@@ -133,10 +133,10 @@ const HeroUnit = (props) => {
 
 HeroUnit.propTypes = {
 	image: PropTypes.shape({
-		src: PropTypes.string.isRequired,
+		src: PropTypes.string,
 		ratio: PropTypes.number,
 		fallbackSrc: PropTypes.string,
-		placeholder: PropTypes.string.isRequired,
+		placeholder: PropTypes.string,
 	}),
 	video: PropTypes.shape({
 		src: PropTypes.string,
@@ -156,7 +156,7 @@ HeroUnit.propTypes = {
 HeroUnit.defaultProps = {
 	image: {},
 	video: {},
-	type: '',
+	type: 'image',
 	difficulty: null,
 	timeCooking: null,
 	timeTotal: null,
