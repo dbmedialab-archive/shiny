@@ -88,7 +88,7 @@ const OppskriftFooter = () => (
 				<Col md={3} xs={12}>
 					<Row center="md" className="margin-bottom-sm-3">
 						<Col md={12}>
-							<OppskriftLink href="#">Oppskrift.no</OppskriftLink>
+							<OppskriftLink className="oppskrift-link" href="#">Oppskrift.no</OppskriftLink>
 						</Col>
 					</Row>
 					<Row center="md" className="margin-bottom-sm-6">
