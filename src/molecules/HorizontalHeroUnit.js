@@ -96,6 +96,7 @@ const HeroUnit = (props) => {
 		name: 'total-time',
 		text: getIconTitle('totalt', formatTime(props.timeTotal)),
 	});
+	/* eslint-disable react/no-danger */
 	return (
 		<MaybePaddedRow verticalPadding={props.verticalPadding}>
 			<Col xs={12} md={7}>
@@ -124,7 +125,13 @@ const HeroUnit = (props) => {
 				</Row>
 				}
 				<Row center="xs">
-					<Col xs={props.iconBarWidth}><props.Heading itemProp="name">{ props.title }</props.Heading></Col>
+					<Col xs={props.iconBarWidth}>
+						<props.Heading
+							itemProp="name"
+							dangerouslySetInnerHTML={{ __html: props.title.replace(/<\/?[^>]+>/g, '') }}
+						/>
+
+					</Col>
 				</Row>
 			</TitleCol>
 		</MaybePaddedRow>

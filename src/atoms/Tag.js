@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const TagItem = styled.a.attrs({
-	href: ({ url }) => url,
-})`
+const TagSpanItem = styled.span`
 	font-family: Cabin;
 	font-size: ${props => props.theme.variables.headingSmallSize};
 	font-weight: 500;
@@ -14,20 +12,30 @@ const TagItem = styled.a.attrs({
 	letter-spacing: 0.05rem;
 	text-align: center;
 	text-transform: uppercase;
+	color: ${props => props.theme.colors.grey};
+`;
+const TagAItem = TagSpanItem.withComponent('a').extend.attrs({
+	href: ({ url }) => url,
+})`
 	&, &:active, &:visited, &:hover {
 		text-decoration: none;
 		color: ${props => props.theme.colors.grey};
 	}
 `;
 
-const Tag = ({ url, title }) => <TagItem url={url}>{title}</TagItem>;
+const Tag = ({ url, title }) => (
+	<React.Fragment>
+		{url
+			?<TagAItem url={url}>{title}</TagAItem>
+			:<TagSpanItem>{title}</TagSpanItem>}
+
+	</React.Fragment>);
 
 Tag.propTypes = {
-	title: PropTypes.string,
+	title: PropTypes.string.isRequired,
 	url: PropTypes.string,
 };
 Tag.defaultProps = {
-	title: '',
-	url: '#',
+	url: null,
 };
 export { Tag };
