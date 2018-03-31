@@ -111,6 +111,7 @@ const HeroUnit = (props) => {
 							entities={icons}
 							textSize={props.textSize}
 							iconSize={props.iconSize}
+							iconSizeSm={props.iconSizeSm}
 						/>
 					</Col>
 				</Row>
@@ -136,6 +137,7 @@ HeroUnit.propTypes = {
 	title: PropTypes.string.isRequired,
 	iconBarWidth: PropTypes.number.isRequired,
 	iconSize: PropTypes.number.isRequired,
+	iconSizeSm: PropTypes.number.isRequired,
 	textSize: PropTypes.number.isRequired,
 	verticalPadding: PropTypes.bool,
 };
@@ -150,6 +152,7 @@ HeroUnit.defaultProps = {
 const SmallHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedSmallHeading}
 	iconSize={2}
+	iconSizeSm={2}
 	textSize={1}
 	iconBarWidth={10}
 	fallbackSrc=""
@@ -158,6 +161,7 @@ const SmallHorizontalHeroUnit = props => (<HeroUnit
 const MediumHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedMediumHeading}
 	iconSize={3}
+	iconSizeSm={3}
 	textSize={1.3}
 	iconBarWidth={9}
 	fallbackSrc=""
@@ -166,8 +170,9 @@ const MediumHorizontalHeroUnit = props => (<HeroUnit
 const LargeHorizontalHeroUnit = props => (<HeroUnit
 	Heading={UnderlinedHugeHeading}
 	iconSize={6}
+	iconSizeSm={20}
 	textSize={1.6}
-	iconBarWidth={7}
+	iconBarWidth={10}
 	fallbackSrc=""
 	{...props}
 />);

@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { LargeHeading as Heading } from '../..';
 import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
 
+const RecipeStepsWrapper = styled.div`
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		//padding: 0 5rem;
+	}
+`;
 const RecipeSteps = ({ steps }) => (
-	<div>
+	<RecipeStepsWrapper>
 		<Heading>SLIK GJØR DU</Heading>
 		{steps.map((item, index) => {
 			return (
@@ -16,7 +22,7 @@ const RecipeSteps = ({ steps }) => (
 				/>
 			);
 		})}
-	</div>
+	</RecipeStepsWrapper>
 );
 
 RecipeSteps.propTypes = {

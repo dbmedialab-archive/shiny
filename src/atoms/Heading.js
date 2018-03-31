@@ -16,10 +16,12 @@ const ProtoHeading = styled.h1`
 		color: inherit;
 	}
 `;
+
 ProtoHeading.propTypes = {
 	marginTopFactor: propTypes.number,
 	marginBottomFactor: propTypes.number,
 };
+
 ProtoHeading.defaultProps = {
 	marginTopFactor: 3/4,
 	marginBottomFactor: 1/2,
@@ -35,6 +37,13 @@ const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 			0
 			calc(${marginBottomFactor} * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
 		;
+		
+			
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+			font-size: ${props => props.theme.variables[`heading${capSize}SizeMobile`]};
+			line-height: ${props => props.theme.variables[`heading${capSize}LineHeightMobile`]};
+			letter-spacing: 1px;
+		}
 	`;
 };
 

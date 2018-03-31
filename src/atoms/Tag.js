@@ -18,6 +18,11 @@ const TagItem = styled.a.attrs({
 		text-decoration: none;
 		color: ${props => props.theme.colors.grey};
 	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: 4.5rem;
+		letter-spacing: 0.4rem;
+	}
 `;
 
 const Tag = ({ url, title }) => <TagItem url={url}>{title}</TagItem>;

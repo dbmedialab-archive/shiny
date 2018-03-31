@@ -21,6 +21,10 @@ const FheadStyle = props => css`
 		display: inline-block;
 		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
+		
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+			width:100%;
+		}
     }
 `;
 
@@ -30,11 +34,21 @@ export const FrontSmallHeading = SmallHeading.extend`
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
+		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
+	}
 `;
 export const FrontMediumHeading = MediumHeading.extend`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingMediumSize};
+	}
+		
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
+		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
 	}
 `;
 export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;

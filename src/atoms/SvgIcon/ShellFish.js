@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ShellFish = props => (
-	<svg width="25px" height="20px" viewBox="0 0 25 20">
+	<svg width="100%" height="100%" viewBox="0 0 25 20">
 		<g id="Index" stroke="none" fill="none">
 			<g id="Desktop-HD" transform="translate(-442.000000, -200.000000)" fill="#767676">
 				<g id="allergies-and-preferences" transform="translate(216.000000, 121.000000)">

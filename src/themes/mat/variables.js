@@ -13,6 +13,15 @@ export default {
 	headingLargeSize: '2.2rem',
 	headingLargeLineHeight: '2.7rem',
 
+	headingSmallSizeMobile: '4.6rem',
+	headingSmallLineHeightMobile: '4.6rem',
+	headingMediumSizeMobile: '1.8rem',
+	headingMediumLineHeightMobile: '2.5rem',
+	headingRegularSizeMobile: '2.0rem',
+	headingRegularLineHeightMobile: '2.7rem',
+	headingLargeSizeMobile: '5rem',
+	headingLargeLineHeightMobile: '6.1rem',
+
 
 	headingXlargeSize: '2.8rem',
 	headingXlargeLineHeight: '3.3rem',

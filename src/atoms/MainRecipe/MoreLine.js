@@ -9,7 +9,7 @@ const MoreStyle = styled.div`
 	width: 14rem;
 	cursor: pointer;
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		width: 16rem;
+		width: 23rem;
 	} 
 	
 	& h1 {

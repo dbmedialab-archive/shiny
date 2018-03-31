@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { SvgIcon } from './SvgIcon';
 
 const BylineBlock = Styled.div`
+	display: flex;
+	flex-wrap: nowrap;
 `;
+
 const BylineImage = Styled.img.attrs({
 	src: ({ src }) => src,
 })`
@@ -14,6 +17,13 @@ const BylineImage = Styled.img.attrs({
     overflow: hidden;
     border-radius: 50%;
     margin-right: ${props => props.theme.variables.horizontalBase};
+    object-fit: cover;
+
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+		width: 10rem;
+    	height: 10rem;
+    	margin-right: 4rem;
+	}
 `;
 
 const WrapAvatar = Styled.div`
@@ -24,18 +34,28 @@ const WrapAvatar = Styled.div`
     border-radius: 50%;
     margin-right: ${props => props.theme.variables.horizontalBase};
     text-align: center;
+    
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+		width: 10rem;
+    	height: 10rem;
+	}
 `;
 
 const TextBlock = Styled.div`
     float: left;
     color: ${props => props.theme.colors.type};
-    font-family: ${props => props.theme.variables.mainFont};
+    font-family: Roboto, Cabin, sans-serif;
 `;
 
 const Name = Styled.div`
     font-size: ${props => props.theme.variables.uiRegularSize};
     line-height: ${props => props.theme.variables.uiRegularLineHeight};
     font-weight: 300;
+
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+		font-size: 4.5rem;
+		line-height: 5.5rem;
+	}
 `;
 
 const Email = Styled.a.attrs({
@@ -44,6 +64,10 @@ const Email = Styled.a.attrs({
     font-size: ${props => props.theme.variables.uiSmallSize};
     font-weight: 300;
     color: ${props => props.theme.colors.type};
+    
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+    	font-size: 3.5rem;
+	}
 `;
 
 const BylineWithTwoLines = ({ src, name, email }) => (
