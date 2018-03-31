@@ -11,7 +11,7 @@ import {
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added
-import { StarsRating } from '../../molecules/StarsRating';
+// import { StarsRating } from '../../molecules/StarsRating';
 import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 
 const RecipeMetaDataWrapper = styled.div`
@@ -19,6 +19,21 @@ const RecipeMetaDataWrapper = styled.div`
 	margin: 0 auto;
 	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
 		padding: 1% 10%;
+	}
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em){
+		/*mobile has different order*/
+		>.order>:nth-child(1){ /*inneholder*/
+			order: 2;
+		}
+		>.order>:nth-child(2){ /*oppskrift*/
+			order: 3;
+		}
+		>.order>:nth-child(3){ /*passer for*/
+			order: 1;
+		}
+		>.order>:nth-child(4){ /*rating*/
+			order: 4;
+		}
 	}
 `;
 
@@ -31,6 +46,8 @@ const RecipeMetaData  = ({
 	preferences,
 	author,
 	rating,
+	imgCaption,
+	numVotes,
 }) => {
 	allergies = allergies.map((allergyItem) => {
 		return {
@@ -50,12 +67,11 @@ const RecipeMetaData  = ({
 			<Row>
 				<PaddedCol xs md={8} mdOffset={2}>
 					<FigCaption>
-							SMAKFULL OG SAFTIG. Kalkun er et festmåltid du kan spise med god samvittighet.<br />
-							super Foto: matrat.no / studio dreyer-hensley
+						{ imgCaption }
 					</FigCaption>
 				</PaddedCol>
 			</Row>
-			<Row>
+			<Row className="order">
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
 					<Col md={10} >
@@ -66,8 +82,6 @@ const RecipeMetaData  = ({
 					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
-			</Row>
-			<Row>
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
 					<Col md={10} >
@@ -75,8 +89,8 @@ const RecipeMetaData  = ({
 					</Col>
 				</Col>
 				<Col xs={12} md={3} mdOffset={1}>
-					<FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading>
-					<StarsRating count={5} size={29} value={rating} />
+					{/* <FrontSmallHeading lineWidth={6}>Vurdering</FrontSmallHeading> */}
+					{/* <StarsRating count={5} size={29} value={rating} /> */}
 				</Col>
 			</Row>
 		</RecipeMetaDataWrapper>
@@ -93,6 +107,8 @@ RecipeMetaData.defaultProps = {
 	preferences: [],
 	author: {},
 	rating: 0,
+	imgCaption: '',
+	numVotes: 0,
 };
 
 RecipeMetaData.propTypes = {
@@ -108,6 +124,8 @@ RecipeMetaData.propTypes = {
 		}),
 	}),
 	rating: PropTypes.number,
+	imgCaption: PropTypes.string,
+	numVotes: PropTypes.number,
 };
 
 

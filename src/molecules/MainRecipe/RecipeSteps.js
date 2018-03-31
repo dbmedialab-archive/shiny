@@ -4,17 +4,20 @@ import PropTypes from 'prop-types';
 import { LargeHeading as Heading } from '../..';
 import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
 
-const RecipeSteps  = ({ steps }) => (
+const RecipeSteps = ({ steps }) => (
 	<div>
 		<Heading>SLIK GJØR DU</Heading>
-		{
-			steps.map((item, index) => {
-				return <RecipeStep key={index} dangerouslySetInnerHTML={{ __html: item.description }} />;
-			})
-		}
+		{steps.map((item, index) => {
+			return (
+				<RecipeStep
+					itemProp="recipeInstructions"
+					key={index}
+					dangerouslySetInnerHTML={{ __html: item.description }}
+				/>
+			);
+		})}
 	</div>
 );
-/* eslint-enable max-len */
 
 RecipeSteps.propTypes = {
 	steps: PropTypes.arrayOf(PropTypes.shape({
@@ -24,6 +27,5 @@ RecipeSteps.propTypes = {
 RecipeSteps.defaultProps = {
 	steps: [],
 };
-
 
 export { RecipeSteps };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Dagbladet = props => (
-	<svg width="88px" height="26px" viewBox="0 0 88 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg width="100%" height="100%" viewBox="0 0 88 26" version="1.1" xmlns="http://www.w3.org/2000/svg">
 		{/* eslint-disable max-len */}
 		<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="db-logo">
