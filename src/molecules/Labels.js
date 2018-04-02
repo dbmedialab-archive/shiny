@@ -1,27 +1,47 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 
-import { Label  } from '..';
+import {
+	HorizontalLinkBar,
+	XSmallLinkBarHeading as Label,
+} from '..';
+
+const SemanticElement = ({ children }) => <footer>{children}</footer>;
+SemanticElement.propTypes = {
+	children: propTypes.node.isRequired,
+};
+
+const labelProps = {
+	provideRightSpacer: true,
+	useUnderline: false,
+};
+
+const linkBarProps = {
+	background: 'transparent',
+	shouldHavePadding: false,
+	SemanticElement,
+	zIndex: 3,
+};
 
 const Labels = ({ labels }) => (
-	<Fragment>
+	<HorizontalLinkBar {...linkBarProps}>
 		{labels.map(label => (
 			<Label
 				key={label.text}
-				backgroundColor={label.backgroundColor}
-				backgroundHoverShade={label.backgroundHoverShade}
-				textColor={label.textColor}
+				backgroundColor={label.backgroundColor || 'primary'}
+				textColor={label.textColor || 'white'}
+				ALLCAPS
+				{...labelProps}
 			>{label.text}
 			</Label>
 		))
 		}
-	</Fragment>
+	</HorizontalLinkBar>
 );
 
 Labels.propTypes = {
 	labels: propTypes.arrayOf(propTypes.shape({
 		backgroundColor: propTypes.string,
-		backgroundHoverShade: propTypes.oneOf(['', 'dark', 'light', 'lighter']),
 		textColor: propTypes.string,
 		text: propTypes.string,
 	})).isRequired,
