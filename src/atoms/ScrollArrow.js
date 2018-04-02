@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '..';
@@ -41,6 +42,31 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 		content: '';
 	}
 `;
+const LeftScrollArrow = props => (
+	<Arrow {...props} pointsTo="left">
+		<FontIcon name="arrow-alt-left" color={props.color} />
+	</Arrow>);
 
-export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="arrow-alt-left" color={props.color}/></Arrow>;
-export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="arrow-alt-right" color={props.color}/></Arrow>;
+LeftScrollArrow.propTypes = {
+	color: propTypes.string,
+};
+LeftScrollArrow.defaultProps = {
+	color: 'inherit',
+};
+
+const RightScrollArrow = props => (
+	<Arrow {...props} pointsTo="right">
+		<FontIcon name="arrow-alt-right" color={props.color} />
+	</Arrow>);
+
+RightScrollArrow.propTypes = {
+	color: propTypes.string,
+};
+RightScrollArrow.defaultProps = {
+	color: 'inherit',
+};
+
+module.exports = {
+	LeftScrollArrow,
+	RightScrollArrow,
+};
