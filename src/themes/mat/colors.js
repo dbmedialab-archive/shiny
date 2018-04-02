@@ -6,6 +6,8 @@ const colorsToShade= {
 	grey: '#7a7a7a',
 	darkGrey: '#4a4a4a',
 	type: '#333333',
+	typeGray: '#7a7a7a',
+	borderGray: '#9b9b9b',
 	white: '#ffffff',
 	red: '#ff5500',
 };

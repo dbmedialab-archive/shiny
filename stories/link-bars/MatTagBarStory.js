@@ -17,7 +17,7 @@ const MatTagBarStory = () => (
 	<section>
 		<HugeHeading>Tag Filter Bar</HugeHeading>
 		<p>Example of a filter bar that will be used for tags in MAT project. </p>
-		<p>You can specify background color for LinkBarLinkBordered. Default is theme primary color </p>
+		<p>You can specify background color for LinkBarLinkBordered. Default value is theme primary color. </p>
 
 		<Heading>Demo</Heading>
 		<DemoContainer background={colors.white}>
