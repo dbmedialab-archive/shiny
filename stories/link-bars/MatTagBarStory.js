@@ -4,10 +4,9 @@ import { DemoContainer } from '../storybook-components';
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// HorizontalLinkBar
 import {
-	ScrollArrowsLinkBar,
 	LinkBarLinkBordered,
+	Row,
 } from '../../src';
 
 import theme from '../../src/themes/mat';
@@ -16,16 +15,17 @@ const { colors } = theme;
 
 const MatTagBarStory = () => (
 	<section>
-		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>A horizontal navbar that will be used for tags in MAT project. </p>
+		<HugeHeading>Tag Filter Bar</HugeHeading>
+		<p>Example of a filter bar that will be used for tags in MAT project. </p>
+		<p>You can specify background color for LinkBarLinkBordered. Default is theme primary color </p>
 
 		<Heading>Demo</Heading>
 		<DemoContainer background={colors.white}>
-			<ScrollArrowsLinkBar
+			<Row
 				background={colors.white}
 				arrowColor={colors.primary}
 			>
-				<LinkBarLinkBordered linkText="Kjøtt" url="#" isActive 	activeBackground={colors.primary} />
+				<LinkBarLinkBordered linkText="Kjøtt" url="#" isActive />
 				<LinkBarLinkBordered linkText="Kylling" url="#" />
 				<LinkBarLinkBordered linkText="Vegetar" url="#" />
 				<LinkBarLinkBordered linkText="Pasta" url="#" />
@@ -36,8 +36,7 @@ const MatTagBarStory = () => (
 				<LinkBarLinkBordered linkText="Sunn" url="#" />
 				<LinkBarLinkBordered linkText="Dessert" url="#" />
 				<LinkBarLinkBordered linkText="Kaker" url="#" />
-				<LinkBarLinkBordered linkText="Full Width for You" url="#" />
-			</ScrollArrowsLinkBar>
+			</Row>
 		</DemoContainer>
 
 
@@ -49,7 +48,7 @@ import {
 	LinkBarLinkBordered,
 } from '@aller/shiny';
 
-<ScrollArrowsLinkBar
+<Row
 	background={colors.white}
 	arrowColor={colors.primary}
 >
@@ -65,7 +64,7 @@ import {
 	<LinkBarLinkBordered linkText="Dessert" url="#" />
 	<LinkBarLinkBordered linkText="Kaker" url="#" />
 	<LinkBarLinkBordered linkText="Full Width for You" url="#" />
-</ScrollArrowsLinkBar>
+</Row>
 			`}
 		</Code>
 	</section>
