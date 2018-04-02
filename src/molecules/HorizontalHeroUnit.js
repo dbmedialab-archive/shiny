@@ -102,7 +102,7 @@ const HeroUnit = (props) => {
 			<Col xs={12} md={7}>
 				{props.type === 'video' &&
 					<YoutubeFrame>
-						<iframe src={props.video.src} width="100%" frameBorder={props.video.frameBorder} title={props.video.title || 'Video'} />
+						<iframe src={props.video.src} width="100%" frameBorder="0" title={props.video.title || 'Video'} />
 					</YoutubeFrame>
 				}
 				{props.type === 'image' &&
@@ -148,7 +148,6 @@ HeroUnit.propTypes = {
 	video: PropTypes.shape({
 		src: PropTypes.string,
 		title: PropTypes.string,
-		frameBorder: PropTypes.oneOf(['0', '1']),
 	}),
 	type: PropTypes.string,
 	difficulty: PropTypes.oneOf([1, 2, 3]),
