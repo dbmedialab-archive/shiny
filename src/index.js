@@ -152,4 +152,4 @@ export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
-export { MainRecipe              } from  './organisms/MainRecipe';
+// export { MainRecipe              } from  './organisms/MainRecipe';

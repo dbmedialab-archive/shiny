@@ -5,13 +5,14 @@ const RecipeStep = styled.div`
 	font-family: Roboto, Cabin, sans-serif;
 	counter-increment: item;
 	margin-bottom: ${props => props.theme.variables.headingMediumLineHeight};
-	line-height: ${props => props.theme.variables.headingMediumLineHeight};
+	line-height: 3.5rem;
+    font-size: 2.1rem;
 	position: relative;
 	padding: 0 0 0 5rem;
 
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		line-height: 7.5rem;
-    	font-size: 2.7rem;	
+		line-height: 5.5rem;
+		font-size: 3.1rem;
 		margin-bottom: 2.5rem;
 		padding-left: 0;
 		text-indent: 1.5em;
@@ -19,8 +20,8 @@ const RecipeStep = styled.div`
 	
 	> *::before {
 		content: counter(item);
-		font-family: Roboto, Cabin, sans-serif;
-		font-size: ${props => props.theme.variables.headingHugeSize};
+		font-family: Cabin, sans-serif;
+		font-size: 4.6rem;
 		line-height: ${props => props.theme.variables.headingHugeSize};
 		display: inline-block;
 		position: absolute;
@@ -29,9 +30,9 @@ const RecipeStep = styled.div`
 			
 		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			content: counter(item) ". ";
-    		font-size: 4.2rem;
+			font-size: 3.8rem;
 			left: -4.6rem;
-			top: 2.2rem;
+			top: 1.6rem;
 		}
 	}
 `;

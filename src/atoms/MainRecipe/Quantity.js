@@ -31,9 +31,7 @@ const BoldCol = Col.extend`
 `;
 
 const RowWrapper = styled.section`
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		padding-left: 3rem
-	}
+
 `;
 
 const LeftAlignedRow = Row.extend`&&{text-align: left;}`;

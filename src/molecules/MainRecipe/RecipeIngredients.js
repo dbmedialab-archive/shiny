@@ -31,16 +31,23 @@ const PersonerCounterWrapper = Row.extend`
 	
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		margin-top: 7rem;
-		margin-bottom: 3rem;
+		margin-bottom: 5rem;
     }
 `;
 
 const Heading = XLargeHeading.extend`
-	font-size: 3.8rem !important;
+	font-size: 3.8rem !important;	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: 5.8rem !important;	
+    }
 `
 
 const RecipeIngredientsWrapper = Col.extend`
 	padding-left: 1.5rem;
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		padding-left: 0;
+    }
 `
 
 class RecipeIngredients extends React.Component {
