@@ -102,7 +102,13 @@ const HeroUnit = (props) => {
 			<Col xs={12} md={7}>
 				{props.type === 'video' &&
 					<YoutubeFrame>
-						<iframe  itemProp="thumbnailUrl" src={props.video.src} width="100%" frameBorder="0" title={props.video.title || 'Video'} />
+						<iframe
+							itemProp="thumbnailUrl"
+							src={props.video.src}
+							width="100%"
+							frameBorder="0"
+							title={props.video.title || 'Video'}
+						/>
 					</YoutubeFrame>
 				}
 				{props.type === 'image' &&

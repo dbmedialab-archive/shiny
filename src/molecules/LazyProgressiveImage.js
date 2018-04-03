@@ -93,7 +93,7 @@ class LazyProgressiveImage extends Component {
 						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture} inView={inView}>
 							{inView && this.props.children}
 							{inView && <StyledImage itemProp="image" src={src} alt={alt} onLoad={this.onLoadImage} /> }
-							<noscript><img src={src} alt={alt} itemProp="image" /></noscript>
+							<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
 						</Picture>
 					</Figure>
 				)}
