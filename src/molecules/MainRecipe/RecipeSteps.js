@@ -2,17 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { LargeHeading as Heading } from '../..';
+import { XLargeHeading as Heading } from '../..';
 import { RecipeStep } from '../../atoms/MainRecipe/RecipeStep';
 
 const RecipeStepsWrapper = styled.div`
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		//padding: 0 5rem;
 	}
 `;
+
+
+const RecipeIngredientsHeading = Heading.extend`
+	font-size: 3.8rem !important;
+    
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		margin-top: 7rem;
+		margin-bottom: 3rem;
+    }
+`;
+
 const RecipeSteps = ({ steps }) => (
 	<RecipeStepsWrapper>
-		<Heading>SLIK GJØR DU</Heading>
+		<RecipeIngredientsHeading>SLIK GJØR DU</RecipeIngredientsHeading>
 		{steps.map((item, index) => {
 			return (
 				<RecipeStep

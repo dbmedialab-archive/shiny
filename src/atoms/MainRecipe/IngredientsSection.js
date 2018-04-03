@@ -11,7 +11,7 @@ const Buttons = Styled.button`
 		color: #fff;
 	}
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		height: 8.7rem;
 	}
 `;
@@ -27,7 +27,7 @@ const Counter = Styled.span`
 	background-color: #ffffff;
 	box-shadow: inset 0 0 .2rem 0 rgba(111, 108, 108, 0.5);
 
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		width: 9.1rem;
 		height: 8.7rem;
 		margin: 0 2.3rem;
@@ -42,7 +42,7 @@ const Counter = Styled.span`
     	display: inline-block;
 		font-family: "Roboto";
     	
-    	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+    	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			font-size: 5.3rem;
 			line-height: 1.6;
 		}
@@ -57,7 +57,7 @@ const Pers = Styled.span`
 	letter-spacing: .0625rem;
 	font-family: "Roboto";
 
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 4.8rem;
 		font-weight: 300;
 		margin-left: 3.4rem;

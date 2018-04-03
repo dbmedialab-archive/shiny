@@ -22,7 +22,7 @@ const FheadStyle = props => css`
 		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
 		
-		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			width:100%;
 		}
     }
@@ -35,7 +35,7 @@ export const FrontSmallHeading = SmallHeading.extend`
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
 		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
 	}
@@ -46,7 +46,7 @@ export const FrontMediumHeading = MediumHeading.extend`
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 		
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
 		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
 	}

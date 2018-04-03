@@ -18,7 +18,7 @@ const RecipeIngredientsHeading = FrontSmallHeading.extend`
     margin-left: -1.3rem;
     font-size: 2.2rem !important;
     
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		margin-top: 7rem;
 		margin-bottom: 3rem;
     }
@@ -29,7 +29,7 @@ const PersonerCounterWrapper = Row.extend`
 	margin-bottom: 3rem;
 	margin-left: 0;
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		margin-top: 7rem;
 		margin-bottom: 3rem;
     }

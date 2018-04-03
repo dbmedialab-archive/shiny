@@ -39,7 +39,7 @@ const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 		;
 		
 			
-		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			font-size: ${props => props.theme.variables[`heading${capSize}SizeMobile`]};
 			line-height: ${props => props.theme.variables[`heading${capSize}LineHeightMobile`]};
 			letter-spacing: 1px;

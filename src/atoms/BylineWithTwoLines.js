@@ -19,7 +19,7 @@ const BylineImage = Styled.img.attrs({
     margin-right: ${props => props.theme.variables.horizontalBase};
     object-fit: cover;
 
-    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em)  {
 		width: 10rem;
     	height: 10rem;
     	margin-right: 4rem;
@@ -35,7 +35,7 @@ const WrapAvatar = Styled.div`
     margin-right: ${props => props.theme.variables.horizontalBase};
     text-align: center;
     
-    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em)  {
 		width: 10rem;
     	height: 10rem;
 	}
@@ -52,7 +52,7 @@ const Name = Styled.div`
     line-height: ${props => props.theme.variables.uiRegularLineHeight};
     font-weight: 300;
 
-    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em)  {
 		font-size: 4.5rem;
 		line-height: 5.5rem;
 	}
@@ -65,7 +65,7 @@ const Email = Styled.a.attrs({
     font-weight: 300;
     color: ${props => props.theme.colors.type};
     
-    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem)  {
+    @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em)  {
     	font-size: 3.5rem;
 	}
 `;

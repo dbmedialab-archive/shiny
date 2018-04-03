@@ -11,8 +11,11 @@ const FooterWrapper = styled.div`
 	font-family: ${props => props.theme.variables.mainFont};
 	font-size: 1.4rem;
 	letter-spacing: 2px;
-	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+			.margin-bottom-sm-10{
+			margin-bottom: 10rem;
+		}
+		
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 3.2rem;
 		background-color: ${props => props.theme.colors.type};
 		padding-top: 14rem;
@@ -42,7 +45,7 @@ const SubCatHeading = styled.h5`
 	font-weight: bold;
 	margin: 0;
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 3.4rem;
 	}
 `;
@@ -65,7 +68,7 @@ const OppskriftLink = styled.a`
 		height: 1.3rem;
 	}
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 5.7rem;
 	}
 `;
@@ -106,8 +109,8 @@ const OppskriftFooter = () => (
 						</Col>
 					</Row>
 				</Col>
-				<Col md={3} xs={12}  className="text-left">
-					<Row  className="margin-bottom-sm-10">
+				<Col md={3} xs={12} className="text-left">
+					<Row className="margin-bottom-sm-10">
 						<Col xs={12} className="margin-bottom-sm-3">
 							<SubCatHeading>Postadresse:</SubCatHeading>
 							<Address>

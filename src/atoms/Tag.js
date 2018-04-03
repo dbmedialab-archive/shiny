@@ -19,7 +19,7 @@ const TagItem = styled.a.attrs({
 		color: ${props => props.theme.colors.grey};
 	}
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 4.5rem;
 		letter-spacing: 0.4rem;
 	}

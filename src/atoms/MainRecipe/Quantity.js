@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 const commonCss = css`
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 4.3rem;
 		font-family: "Roboto", sans-serif;
 		letter-spacing: 1px;
@@ -31,7 +31,7 @@ const BoldCol = Col.extend`
 `;
 
 const RowWrapper = styled.section`
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		padding-left: 3rem
 	}
 `;

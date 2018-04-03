@@ -28,7 +28,7 @@ const Icon = styled.span`
 		font-size: ${props.size}rem;
 	`}
 	${props => props['size-xs'] && css`
-		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			font-size: ${props['size-xs']}rem;
 		}
 	`}

@@ -75,11 +75,11 @@ const MainRecipe = props => (
 						</Col>
 					</Row>
 					<Row center="xs">
-						<Col xs>
+						<Col xs={12}>
 							<YoutubeFrame>
 								<iframe
 									title="video"
-									width="100%"
+									width="10%"
 									src="https://www.dagbladet.no/video/embed/Z44J5oi1Jfc?autoplay=false"
 								/>
 							</YoutubeFrame>

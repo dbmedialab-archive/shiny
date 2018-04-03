@@ -9,7 +9,7 @@ const RecipeStep = styled.div`
 	position: relative;
 	padding: 0 0 0 5rem;
 
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		line-height: 7.5rem;
     	font-size: 2.7rem;	
 		margin-bottom: 2.5rem;
@@ -27,7 +27,7 @@ const RecipeStep = styled.div`
 		left: 0.05rem;
 		top: 0.5rem;
 			
-		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 			content: counter(item) ". ";
     		font-size: 4.2rem;
 			left: -4.6rem;
