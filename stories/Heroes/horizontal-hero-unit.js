@@ -52,6 +52,15 @@ export default () => (
 						title={title}
 					/>
 				</Col>
+				<Col xs={12}>
+					<SmallHorizontalHeroUnit
+						video={{
+							src: 'https://www.dagbladet.no/video/embed/sYc2RnQz8ko?autoplay=false&showinfo=0',
+						}}
+						type="video"
+						title={title}
+					/>
+				</Col>
 			</Row>
 			<Row>
 				<Col xs>
@@ -73,6 +82,15 @@ import {
 	}}
 	title="Stekt kjøtt"
 />
+
+<SmallHorizontalHeroUnit
+	video={{
+		src: 'https://www.dagbladet.no/video/embed/sYc2RnQz8ko?autoplay=false&showinfo=0'
+	}}
+	type="video"
+	title="Stekt kjøtt"
+/>
+
 					`}
 					</Code>
 				</Col>
