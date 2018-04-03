@@ -18,7 +18,8 @@
   "peerDependencies": {
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.6.1",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+		"styled-components": "3.2.5"
   },
   "dependencies": {
     "@aller/eslint-config-aller": "0.5.2",
@@ -41,8 +42,7 @@
     "react-rating": "1.0.6",
     "react-stickyfill": "0.2.3",
     "react-styled-flexboxgrid": "2.2.0",
-    "striptags": "3.1.1",
-    "styled-components": "3.2.5"
+    "striptags": "3.1.1"
   },
   "devDependencies": {
     "@percy-io/percy-storybook": "1.3.3",
