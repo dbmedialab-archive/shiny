@@ -6,6 +6,13 @@ const SvgIconWrapper = Styled.div`
 	width: ${(props) => {
 		return props.size;
 	}}rem;
+	
+	${props => (props['size-sm'] && `
+	@media screen 
+	and (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+		width: ${props['size-sm']}rem;
+ 	}
+ 	`)}
 `;
 
 export default SvgIconWrapper;

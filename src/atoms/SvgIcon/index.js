@@ -26,7 +26,7 @@ import { OppskriftLogo       } from './OppskriftLogo';
 import { OppskriftMobileLogo } from './OppskriftMobileLogo';
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size} >
+	<SvgIconWrapper size={props.size} size-sm={props['size-sm']}>
 		{
 			(() => {
 				switch (props.name) {
@@ -85,12 +85,14 @@ const SvgIcon = props => (
 );
 
 SvgIcon.propTypes = {
-	size: PropTypes.number,
-	name: PropTypes.string,
+	'size': PropTypes.number,
+	'size-sm': PropTypes.number,
+	'name': PropTypes.string,
 };
 SvgIcon.defaultProps = {
-	size: 3.2,
-	name: '',
+	'size': 3.2,
+	'size-sm': null,
+	'name': '',
 };
 
 export { SvgIcon };
