@@ -102,11 +102,17 @@ const HeroUnit = (props) => {
 			<Col xs={12} md={7}>
 				{props.type === 'video' &&
 					<YoutubeFrame>
-						<iframe src={props.video.src} width="100%" frameBorder="0" title={props.video.title || 'Video'} />
+						<iframe
+							itemProp="thumbnailUrl"
+							src={props.video.src}
+							width="100%"
+							frameBorder="0"
+							title={props.video.title || 'Video'}
+						/>
 					</YoutubeFrame>
 				}
 				{props.type === 'image' &&
-					<LazyProgressiveImage src={props} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
+					<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
 						<Source srcSet={props.image.placeholder} />
 					</LazyProgressiveImage>
 				}
