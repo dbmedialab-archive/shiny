@@ -18,6 +18,7 @@ const AdWrapper = Styled.div`
 	margin-right: auto;
 	clear: both;
 	text-align: ${props => setTextAlign(props.sticky)};
+	will-change: height, min-height;
 
 	&::before {
 		content: 'Annonse';
@@ -42,8 +43,7 @@ const AdWrapper = Styled.div`
 AdWrapper.propTypes = {
 	width: PropTypes.string,
 	height: PropTypes.string,
-	children: PropTypes.node.isRequired,
-	shouldHideAttribution: PropTypes.bool.isRequired,
+	shouldHideAttribution: PropTypes.bool,
 	sticky: PropTypes.string,
 };
 
@@ -51,6 +51,7 @@ AdWrapper.defaultProps = {
 	sticky: '',
 	width: '32.0rem',
 	height: '25.0rem',
+	shouldHideAttribution: false,
 };
 
 export { AdWrapper };

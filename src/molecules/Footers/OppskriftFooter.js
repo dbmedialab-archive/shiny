@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Col, Row, Grid } from '../..';
 import { SvgIcon } from '../../atoms/SvgIcon';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
 	background-color: ${props => props.theme.colors.darkGrey};
 	color: ${props => props.theme.colors.white};
 	padding: 10.3rem 0 6.2rem;
@@ -58,7 +58,6 @@ const NavLinksBar = styled.ul`
 `;
 
 const OppskriftLink = styled.a`
-	font-size: 2.5rem;
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;
@@ -92,7 +91,7 @@ const OppskriftFooter = () => (
 				<Col md={3} xs={12}>
 					<Row center="md" className="margin-bottom-sm-3">
 						<Col md={12}>
-							<OppskriftLink href="#">Oppskrift.no</OppskriftLink>
+							<OppskriftLink className="oppskrift-link" href="#">Oppskrift.no</OppskriftLink>
 						</Col>
 					</Row>
 					<Row center="md" className="margin-bottom-sm-6">

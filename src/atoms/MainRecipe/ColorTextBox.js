@@ -12,6 +12,7 @@ const ColorTextBox = styled(Col)`
 	font-weight: 300;
 	letter-spacing: .05rem;
 	text-align: center;
+	justify-content: center;
 	color: ${props => props.theme.colors[props.textColor]};
 	background-color: ${props => props.theme.colors[props.bgColor]};
 

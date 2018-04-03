@@ -85,9 +85,13 @@ export default () => (
 		</section>
 		<section style={{
 			backgroundColor: 'transparent',
+			height: 'auto',
+			width: '100%',
+			zIndex: 0,
+			position: 'relative',
 		}}
 		>
-			<FullscreenAd>
+			<FullscreenAd isIE11={false}>
 				<div>
 					<img src="https://via.placeholder.com/1920x1080" alt="placeholder" />
 				</div>
