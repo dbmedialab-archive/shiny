@@ -12,8 +12,8 @@ const BylineImage = Styled.img.attrs({
 	src: ({ src }) => src,
 })`
     float: left;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
     overflow: hidden;
     border-radius: 50%;
     margin-right: ${props => props.theme.variables.horizontalBase};
@@ -28,8 +28,8 @@ const BylineImage = Styled.img.attrs({
 
 const WrapAvatar = Styled.div`
 	float: left;
-    width: 4.5rem;
-    height: 4.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
     overflow: hidden;
     border-radius: 50%;
     margin-right: ${props => props.theme.variables.horizontalBase};
@@ -48,8 +48,8 @@ const TextBlock = Styled.div`
 `;
 
 const Name = Styled.div`
-    font-size: ${props => props.theme.variables.uiRegularSize};
-    line-height: ${props => props.theme.variables.uiRegularLineHeight};
+    font-size: 1.9rem;
+    line-height: 2.4rem;
     font-weight: 300;
 
     @media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em)  {
@@ -61,7 +61,8 @@ const Name = Styled.div`
 const Email = Styled.a.attrs({
 	href: ({ email }) => `mailto:${email}`,
 })`
-    font-size: ${props => props.theme.variables.uiSmallSize};
+    font-size: 1.7rem;
+    line-height: 3.4rem;
     font-weight: 300;
     color: ${props => props.theme.colors.type};
     

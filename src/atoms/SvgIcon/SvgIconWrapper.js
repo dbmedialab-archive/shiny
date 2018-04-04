@@ -8,8 +8,7 @@ const SvgIconWrapper = Styled.div`
 	}}rem;
 	
 	${props => (props['size-sm'] && `
-	@media screen 
-	and (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+	@media screen and (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
 		width: ${props['size-sm']}rem;
  	}
  	`)}

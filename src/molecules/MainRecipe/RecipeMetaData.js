@@ -6,7 +6,7 @@ import {
 	Row,
 	Col,
 	FigCaption,
-	FrontSmallHeading,
+	FrontHeading,
 } from '../..';
 
 import { IconBar } from '../IconBar';
@@ -75,20 +75,20 @@ const RecipeMetaData  = ({
 
 				{(!!allergies.length &&
 				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
+					<FrontHeading lineWidth={6} >Inneholder</FrontHeading>
 					<Col md={10} >
 						<IconBar entities={allergies} textSize={1.2} iconSize={4}  iconSizeSm={20} />
 					</Col>
 				</Col>)}
 
 				<Col xs={12} md={3} mdOffset={1}>
-					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
+					<FrontHeading lineWidth={6}>Oppskrift</FrontHeading>
 					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
 				</Col>
 
 				{(!!preferences.length &&
 				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
+					<FrontHeading lineWidth={6}>Passer For</FrontHeading>
 					<Col md={10} >
 						<IconBar entities={preferences} textSize={1.2} iconSize={4} iconSizeSm={20} />
 					</Col>

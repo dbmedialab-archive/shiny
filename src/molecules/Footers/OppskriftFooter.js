@@ -7,18 +7,20 @@ import { SvgIcon } from '../../atoms/SvgIcon';
 const FooterWrapper = styled.footer`
 	background-color: ${props => props.theme.colors.darkGrey};
 	color: ${props => props.theme.colors.white};
-	padding: 10.3rem 0 6.2rem;
+	padding: 10.3rem 0 0;
 	font-family: ${props => props.theme.variables.mainFont};
 	font-size: 1.4rem;
 	letter-spacing: 2px;
-			.margin-bottom-sm-10{
+	
+	.margin-bottom-sm-10{
 			margin-bottom: 10rem;
-		}
+	}
 		
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 3.2rem;
 		background-color: ${props => props.theme.colors.type};
 		padding-top: 14rem;
+		padding-bottom: 6.2rem;
 		
 		.margin-bottom-sm-3{
 			margin-bottom: 3rem;
