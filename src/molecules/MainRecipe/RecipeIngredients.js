@@ -76,6 +76,7 @@ class RecipeIngredients extends React.Component {
 							amount={this.calculateAmount(item.amount)}
 							type={item.type}
 							title={item.title}
+							slug={item.slug}
 						/>);
 					})}
 				</React.Fragment>);
