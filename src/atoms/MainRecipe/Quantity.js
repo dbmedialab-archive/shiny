@@ -14,7 +14,16 @@ const LightCol = Col.extend`
 `;
 
 const BoldCol = Col.extend`
-	font-weight: bold;
+	
+`;
+const IngredientTitle = styled.a.attrs({
+	href: ({ title }) => title,
+})`
+	&, &:active, &:visited, &:hover {
+		font-weight: bold;
+		text-decoration: none;
+		color: ${props => props.theme.colors.type};
+	}
 `;
 
 const LeftAlignedRow = Row.extend`&&{text-align: left;}`;
@@ -28,7 +37,7 @@ export const Quantity = props => (
 				{props.amount} {props.type}
 			</LightCol>
 			<BoldCol xs={7}>
-				{props.title}
+				<IngredientTitle href={`/ingrediens/${props.slug}`}>{props.title}</IngredientTitle>
 			</BoldCol>
 		</LeftAlignedCenteredRow>
 	</section>
@@ -38,10 +47,12 @@ Quantity.defaultProps = {
 	amount: '',
 	title: '',
 	type: '',
+	slug: '',
 };
 
 Quantity.propTypes = {
 	amount: PropTypes.number,
 	title: PropTypes.string,
 	type: PropTypes.string,
+	slug: PropTypes.string,
 };
