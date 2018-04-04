@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
 
 import {
 	Row,
@@ -40,7 +39,7 @@ const Heading = XLargeHeading.extend`
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 5.8rem !important;	
     }
-`
+`;
 
 const RecipeIngredientsWrapper = Col.extend`
 	padding-left: 1.5rem;
@@ -48,7 +47,7 @@ const RecipeIngredientsWrapper = Col.extend`
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		padding-left: 0;
     }
-`
+`;
 
 class RecipeIngredients extends React.Component {
 	constructor(props) {
