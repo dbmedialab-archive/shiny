@@ -18,6 +18,8 @@ import { Egg          		 } from './Egg';
 import { ShellFish    		 } from './ShellFish';
 import { Mail         		 } from './Mail';
 import { Pinterest    		 } from './Pinterest';
+import { FaceBook         	 } from './FaceBook';
+import { Twitter    		 } from './Twitter';
 import { User         		 } from './Avatar';
 import { KK    		  		 } from './KK';
 import { Aller        		 } from './Aller';
@@ -67,6 +69,10 @@ const SvgIcon = props => (
 					return <Star {...props} />;
 				case 'user':
 					return <User {...props} />;
+				case 'facebook':
+					return <FaceBook {...props} />;
+				case 'twitter':
+					return <Twitter {...props} />;
 				case 'kk':
 					return <KK {...props} />;
 				case 'aller':
