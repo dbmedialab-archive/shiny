@@ -39,7 +39,7 @@
     "react": "16.3.0",
     "react-dom": "16.3.0",
     "react-intersection-observer": "3.0.3",
-    "react-rating": "1.0.6",
+    "react-rating": "1.1.2",
     "react-stickyfill": "0.2.3",
     "react-styled-flexboxgrid": "2.2.0",
     "striptags": "3.1.1"
