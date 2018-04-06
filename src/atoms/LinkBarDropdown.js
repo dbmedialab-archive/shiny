@@ -34,7 +34,7 @@ class Dropdown extends React.Component {
 
 	render() {
 		const {
-			linkText, children,  ...rest
+			linkText, children, ...rest
 		} = this.props;
 		const { hide } = this.state;
 
@@ -60,9 +60,11 @@ Dropdown.propTypes = {
 	]).isRequired,
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string.isRequired,
+	isRelative: propTypes.bool,
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
+	isRelative: true,
 };
 
 // When we export this as a styled component,

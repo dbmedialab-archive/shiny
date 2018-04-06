@@ -120,6 +120,7 @@ export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { KKLogo					 } from './atoms/KKLogo';
+export { ButtonWithModal         } from './atoms/ButtonWithModal';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -150,6 +151,7 @@ export {
 } from './molecules/HorizontalHeroUnit';
 export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
+export { SearchField             } from './molecules/SearchField';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';

@@ -16,6 +16,7 @@ const LinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
+	shouldWrap,
 	...rest
 }) => {
 	return (
@@ -25,11 +26,12 @@ const LinkBar = ({
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar background={background} {...rest}>
+			<Bar background={background} position="static" flexWrap={shouldWrap ? 'wrap' : 'nowrap'} {...rest}>
 				{children && React.Children.map(children, (child, i) => {
 					if (child.props && child.props.isListItem) {
 						return child;
 					}
+
 					return (
 						<LinkBarItem key={i} {...child.props}>
 							{child}
@@ -56,6 +58,7 @@ LinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
+	shouldWrap: PropTypes.bool,
 };
 
 LinkBar.defaultProps = {
@@ -69,6 +72,7 @@ LinkBar.defaultProps = {
 	zIndex: 4,
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
+	shouldWrap: false,
 };
 
 // When we export this as a styled component,

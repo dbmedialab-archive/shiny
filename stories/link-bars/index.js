@@ -21,6 +21,7 @@ import { DropdownStory } from './DropdownStory';
 import { HideStory } from './HideStory';
 import { SeHerStory } from './SeHerStory';
 import { MatStory } from './MatStory';
+import { KKStory } from './KKStory';
 
 import { DagbladetStory } from './DagbladetStory';
 
@@ -44,6 +45,7 @@ export default () => {
 		.add('LinkBarButton', ButtonStory)
 		.add('Hidden LinkBar elements', HideStory)
 		.add('Dagbladet-like bar', DagbladetStory)
+		.add('KK', KKStory)
 		.add('SeHer-like bar', SeHerStory)
 		.add('MatStory link bar', MatStory);
 };

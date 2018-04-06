@@ -11,7 +11,7 @@ const Svg = styled.svg`
 
 /* eslint-disable max-len */
 const KKLogo = withTheme(props => (
-	<Svg hasCircle={props.hasCircle} backgroundColor={props.backgroundColor} viewBox="0 0 25 20" version="1.1">
+	<Svg width="100%" height="100%" hasCircle={props.hasCircle} backgroundColor={props.backgroundColor} viewBox="0 0 25 20" version="1.1">
 		{props.hasCircle ? (
 			<g stroke="none" >
 				<circle fill={getColor(props.backgroundColor)(props)} cx="12.5" cy="10" r="10" />
@@ -32,7 +32,6 @@ const KKLogo = withTheme(props => (
 		)}
 	</Svg>
 ));
-/* eslint-enable max-len */
 
 KKLogo.propTypes={
 	backgroundColor: propTypes.string,

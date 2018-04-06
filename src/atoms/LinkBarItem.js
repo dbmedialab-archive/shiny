@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { hideWithFlexboxgridSyntax } from '../utils/hide-with-flexboxgrid-syntax';
 
 const LinkBarItem = styled.li`
-	position: relative;
+	position: ${props => (props.position)};
 	vertical-align: middle;
 	line-height: 0;
 	margin: 0;
@@ -21,6 +21,7 @@ LinkBarItem.propTypes = {
 	md: propTypes.bool,
 	lg: propTypes.bool,
 	flex: propTypes.string,
+	position: propTypes.string,
 };
 
 LinkBarItem.defaultProps = {
@@ -29,6 +30,7 @@ LinkBarItem.defaultProps = {
 	md: null,
 	lg: null,
 	flex: '0 0 auto',
+	position: 'relative',
 };
 
 export { LinkBarItem };

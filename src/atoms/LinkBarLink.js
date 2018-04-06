@@ -12,7 +12,7 @@ const LinkBarLink = ({
 	return (
 		<LinkBarLinkBase
 			href={url}
-			skin={linkText.toLowerCase()}
+			skin={linkText}
 			{...rest}
 		>{children || linkText}
 		</LinkBarLinkBase>

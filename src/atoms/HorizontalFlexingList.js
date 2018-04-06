@@ -30,6 +30,7 @@ const HorizontalFlexingList = styled.ul`
 	-ms-overflow-style: -ms-autohiding-scrollbar!important;
 	-ms-overflow-style: none;
 	position: relative;
+	flex-wrap: ${props => (props.flexWrap)}
 
 	::-webkit-scrollbar {
 		display: none;
