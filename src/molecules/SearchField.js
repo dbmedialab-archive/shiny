@@ -97,7 +97,7 @@ class SearchField extends React.Component {
 		const value = (searchTextVisible) ? this.state.searchText : '';
 
 		return (
-			<Search marginBottom={marginBottom} className="test">
+			<Search marginBottom={marginBottom}>
 				<SearchFieldInput
 					type="text"
 					value={value}
