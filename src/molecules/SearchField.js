@@ -6,7 +6,6 @@ import {
 	LoadingSearchIcon,
 	FontIcon,
 } from '..';
-import theme from '../../src/themes/default-theme';
 
 const Search = styled.div`
   position: relative;
@@ -14,7 +13,7 @@ const Search = styled.div`
 		(`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
   background-color: ${props => props.theme.colors.white};
   font-size: 1.6rem;
-  box-shadow: ${props => props.shadow};
+  box-shadow: ${props => (props.shadow ? props.shadow : `0 0.3rem 0.3rem ${props.theme.colors.grayTint}`)};
   overflow: hidden;
   box-sizing: border-box;
   border-bottom: ${props => props.borderBottom};
@@ -137,7 +136,7 @@ SearchField.propTypes = {
 SearchField.defaultProps = {
 	color: 'white',
 	backgroundColor: '',
-	shadow: `0 0.3rem 0.3rem ${theme.colors.grayTint}`,
+	shadow: '',
 	fontSize: 'inherit',
 	iconSize: 'inherit',
 	marginBottom: '',
