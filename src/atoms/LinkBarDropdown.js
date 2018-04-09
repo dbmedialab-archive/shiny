@@ -23,7 +23,7 @@ const Dropdown = (props) => {
 		handleClick, id, linkText, children, show,  ...rest
 	} = props;
 
-	const hide  = id !== show;
+	const hide = id !== show;
 	const updown = (hide === true) ? 'down' : 'up';
 
 	return (
