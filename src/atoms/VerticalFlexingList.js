@@ -12,7 +12,7 @@ const VerticalFlexingList = styled.ul`
 	background: ${props => props.background};
 	position: relative;
 
-	${LinkBarDropdown} + * & {
+	${LinkBarDropdown} + div & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
 		position: absolute;

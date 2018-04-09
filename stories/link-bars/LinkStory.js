@@ -81,7 +81,8 @@ import {
 				</tr>
 				<tr>
 					<th>size</th>
-					<td><em>LinkBarLink</em> comes in different sizes, matching other LinkBar* item sizes. For instance: A
+					<td>
+						<em>LinkBarLink</em> comes in different sizes, matching other LinkBar* item sizes. For instance: A
 						<em>SmallLinkBarLink</em> and a <em>SmallLinkBarButton</em> will have the same height.
 					</td>
 					<td>optional</td>

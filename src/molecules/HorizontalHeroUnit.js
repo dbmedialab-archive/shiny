@@ -10,6 +10,7 @@ import {
 	UnderlinedHugeHeading,
 	UnderlinedMediumHeading,
 	UnderlinedSmallHeading,
+	YoutubeFrame,
 } from '..';
 import { IconBar } from '../molecules/IconBar';
 
@@ -49,14 +50,31 @@ const formatTime = (mins) => {
 		minutes = mins % 60;
 	}
 
-	return `${hours ? `${hours}t ` : ''} ${minutes ? `${minutes}min ` : ''}`;
+	return {
+		humanTime: `${hours ? `${hours}t ` : ''} ${minutes ? `${minutes}min ` : ''}`,
+		schemaTime: `PT${hours ? `${hours}H` : ''}${minutes ? `${minutes}M` : ''}`,
+	};
 };
 
+
 const getIconTitle = (name, value) => {
+	let propName;
+	switch (name) {
+	case 'aktiv':
+		propName='cookTime';
+		break;
+	case 'totalt':
+		propName='totalTime';
+		break;
+	default:
+		break;
+	}
 	return (
 		<Fragment>
 			<NoWrap>{name}</NoWrap>
-			<NoWrap>{value}</NoWrap>
+			{value.humanTime && value.schemaTime ?
+				<time itemProp={propName} dateTime={value.schemaTime}>{value.humanTime}</time>
+				:<NoWrap>{value}</NoWrap> }
 		</Fragment>
 	);
 };
@@ -78,15 +96,29 @@ const HeroUnit = (props) => {
 		name: 'total-time',
 		text: getIconTitle('totalt', formatTime(props.timeTotal)),
 	});
-
+	/* eslint-disable react/no-danger */
 	return (
 		<MaybePaddedRow verticalPadding={props.verticalPadding}>
 			<Col xs={12} md={7}>
-				<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
-					<Source srcSet={props.image.placeholder} />
-				</LazyProgressiveImage>
+				{props.type === 'video' &&
+					<YoutubeFrame>
+						<iframe
+							itemProp="thumbnailUrl"
+							src={props.video.src}
+							width="100%"
+							frameBorder="0"
+							title={props.video.title || 'Video'}
+						/>
+					</YoutubeFrame>
+				}
+				{props.type === 'image' &&
+					<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
+						<Source srcSet={props.image.placeholder} />
+					</LazyProgressiveImage>
+				}
 			</Col>
 			<TitleCol xs={12} md={5}>
+
 				{(props.difficulty || props.timeCooking || props.timeTotal) &&
 				<Row center="xs">
 					<Col xs={props.iconBarWidth} md={4} >
@@ -99,7 +131,13 @@ const HeroUnit = (props) => {
 				</Row>
 				}
 				<Row center="xs">
-					<Col xs={props.iconBarWidth}><props.Heading>{ props.title }</props.Heading></Col>
+					<Col xs={props.iconBarWidth}>
+						<props.Heading
+							itemProp="name"
+							dangerouslySetInnerHTML={{ __html: props.title.replace(/<\/?[^>]+>/g, '') }}
+						/>
+
+					</Col>
 				</Row>
 			</TitleCol>
 		</MaybePaddedRow>
@@ -108,11 +146,16 @@ const HeroUnit = (props) => {
 
 HeroUnit.propTypes = {
 	image: PropTypes.shape({
-		src: PropTypes.string.isRequired,
+		src: PropTypes.string,
 		ratio: PropTypes.number,
 		fallbackSrc: PropTypes.string,
-		placeholder: PropTypes.string.isRequired,
-	}).isRequired,
+		placeholder: PropTypes.string,
+	}),
+	video: PropTypes.shape({
+		src: PropTypes.string,
+		title: PropTypes.string,
+	}),
+	type: PropTypes.string,
 	difficulty: PropTypes.oneOf([1, 2, 3]),
 	timeCooking: PropTypes.number,
 	timeTotal: PropTypes.number,
@@ -124,6 +167,9 @@ HeroUnit.propTypes = {
 };
 
 HeroUnit.defaultProps = {
+	image: {},
+	video: {},
+	type: 'image',
 	difficulty: null,
 	timeCooking: null,
 	timeTotal: null,

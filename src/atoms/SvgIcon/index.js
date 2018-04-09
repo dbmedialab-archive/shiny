@@ -18,6 +18,8 @@ import { Egg          		 } from './Egg';
 import { ShellFish    		 } from './ShellFish';
 import { Mail         		 } from './Mail';
 import { Pinterest    		 } from './Pinterest';
+import { FaceBook         	 } from './FaceBook';
+import { Twitter    		 } from './Twitter';
 import { User         		 } from './Avatar';
 import { KK    		  		 } from './KK';
 import { Aller        		 } from './Aller';
@@ -26,7 +28,7 @@ import { OppskriftLogo       } from './OppskriftLogo';
 import { OppskriftMobileLogo } from './OppskriftMobileLogo';
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size} >
+	<SvgIconWrapper size={props.size} size-sm={props['size-sm']}>
 		{
 			(() => {
 				switch (props.name) {
@@ -67,6 +69,10 @@ const SvgIcon = props => (
 					return <Star {...props} />;
 				case 'user':
 					return <User {...props} />;
+				case 'facebook':
+					return <FaceBook {...props} />;
+				case 'twitter':
+					return <Twitter {...props} />;
 				case 'kk':
 					return <KK {...props} />;
 				case 'aller':
@@ -85,12 +91,14 @@ const SvgIcon = props => (
 );
 
 SvgIcon.propTypes = {
-	size: PropTypes.number,
-	name: PropTypes.string,
+	'size': PropTypes.number,
+	'size-sm': PropTypes.number,
+	'name': PropTypes.string,
 };
 SvgIcon.defaultProps = {
-	size: 3.2,
-	name: '',
+	'size': 3.2,
+	'size-sm': null,
+	'name': '',
 };
 
 export { SvgIcon };

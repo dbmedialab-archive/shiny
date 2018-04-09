@@ -1,7 +1,7 @@
 import React from 'react';
 
 const KK = props => (
-	<svg width="4.5rem" height="43" viewBox="0 0 234 211">
+	<svg width="100%" height="100%" viewBox="0 0 234 211">
 		{/* eslint-disable max-len */}
 		<g stroke="none"  fill="none">
 			<g>

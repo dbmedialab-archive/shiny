@@ -16,4 +16,5 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
 
 ## Relation to Firefly (the TV series)
 
-The name is very inspired.
+The name is very inspired!
+ 
