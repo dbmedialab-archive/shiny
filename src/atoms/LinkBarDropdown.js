@@ -16,20 +16,51 @@ const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
 
-const ThisOughtToBeAFragment = styled.div``;
+const StyledDropdown = styled.div``;
 
 class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.lastFocusTime = 0;
 		this.state = {
 			hide: !this.props.displayInitially,
 		};
 	}
 
-	handleClick() {
+	hide() {
+		this.setState({
+			hide: true,
+		});
+	}
+
+	show() {
+		this.setState({
+			hide: false,
+		});
+	}
+
+	toggle() {
 		this.setState({
 			hide: !this.state.hide,
 		});
+	}
+
+	/**
+	 * Hide on blur
+	 *
+	 * When changing focus between elements in the dropdown,
+	 * the blur and focus events will bubble up here in rapid succession.
+	 * Therefore we apply a grace time (delay) after the blur event
+	 * before we hide the dropdown.
+	 */
+	hideIfNotFocused() {
+		const delay = 100; // milliseconds
+		setTimeout(() => Date.now() - this.lastFocusTime > delay && this.hide(), delay);
+	}
+
+	updateLastFocusTime() {
+		this.lastFocusTime = Date.now();
 	}
 
 	render() {
@@ -41,15 +72,15 @@ class Dropdown extends React.Component {
 		const updown = (hide === true) ? 'down' : 'up';
 
 		return (
-			<ThisOughtToBeAFragment>
-				<Button onClick={e => this.handleClick()} {...rest}>
+			<StyledDropdown onFocus={e => this.updateLastFocusTime()} onBlur={e => this.hideIfNotFocused()}>
+				<Button onClick={e => this.toggle()} {...rest}>
 					{`${linkText} `}
 					<FontIcon name={`arrow-alt-${updown}`} />
 				</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
-			</ThisOughtToBeAFragment>
+			</StyledDropdown>
 		);
 	}
 }
