@@ -19,7 +19,7 @@
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "6.24.1",
-		"styled-components": "^3.2.5"
+    "styled-components": "^3.2.5"
   },
   "dependencies": {
     "@aller/eslint-config-aller": "0.5.2",
@@ -27,6 +27,7 @@
     "@storybook/addon-links": "3.4.0",
     "@storybook/react": "3.4.0",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
+    "babel-plugin-styled-components": "1.5.1",
     "babel-plugin-system-import-transformer": "3.1.0",
     "babel-plugin-transform-object-assign": "6.22.0",
     "intersection-observer": "0.5.0",
