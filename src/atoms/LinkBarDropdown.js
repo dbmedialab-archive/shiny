@@ -18,41 +18,26 @@ const HideMeMaybe = styled.div`
 
 const ThisOughtToBeAFragment = styled.div``;
 
-class Dropdown extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			hide: !this.props.displayInitially,
-		};
-	}
+const Dropdown = (props) => {
+	const {
+		handleClick, id, linkText, children, show,  ...rest
+	} = props;
 
-	handleClick() {
-		this.setState({
-			hide: !this.state.hide,
-		});
-	}
+	const hide = id !== show;
+	const updown = (hide === true) ? 'down' : 'up';
 
-	render() {
-		const {
-			linkText, children,  ...rest
-		} = this.props;
-		const { hide } = this.state;
-
-		const updown = (hide === true) ? 'down' : 'up';
-
-		return (
-			<ThisOughtToBeAFragment>
-				<Button onClick={e => this.handleClick()} {...rest}>
-					{`${linkText} `}
-					<FontIcon name={`arrow-alt-${updown}`} />
-				</Button>
-				<HideMeMaybe hide={hide}>
-					{children}
-				</HideMeMaybe>
-			</ThisOughtToBeAFragment>
-		);
-	}
-}
+	return (
+		<ThisOughtToBeAFragment>
+			<Button onClick={e => handleClick(id)}  {...rest}>
+				{`${linkText} `}
+				<FontIcon name={`arrow-alt-${updown}`} />
+			</Button>
+			<HideMeMaybe hide={hide}>
+				{children}
+			</HideMeMaybe>
+		</ThisOughtToBeAFragment>
+	);
+};
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
 		propTypes.node,
@@ -60,9 +45,16 @@ Dropdown.propTypes = {
 	]).isRequired,
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string.isRequired,
+	show: propTypes.number,
+	id: propTypes.number,
+	handleClick: propTypes.func,
+
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
+	id: -1,
+	show: 0,
+	handleClick: () => {},
 };
 
 // When we export this as a styled component,

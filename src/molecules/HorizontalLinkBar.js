@@ -9,38 +9,59 @@ import {
 	NavWithOptionalConstrainer,
 } from '..';
 
-const LinkBar = ({
-	background,
-	children,
-	shouldFadeOut,
-	width,
-	zIndex,
-	isTopLevelComponent,
-	...rest
-}) => {
-	return (
-		<NavWithOptionalConstrainer
-			background={background}
-			width={width}
-			zIndex={zIndex}
-			isTopLevelComponent={isTopLevelComponent}
-		>
-			<Bar background={background} {...rest}>
-				{children && children.map((child, i) => {
-					if (child.props && child.props.isListItem) {
-						return child;
-					}
-					return (
-						<LinkBarItem key={i} {...child.props}>
-							{child}
-						</LinkBarItem>
-					);
-				})}
-			</Bar>
-			{shouldFadeOut && <HorizontalOverflowGradient />}
-		</NavWithOptionalConstrainer>
-	);
-};
+class LinkBar extends React.Component {
+	constructor(props) {
+		super();
+
+		this.state = {
+			show: 0,
+		};
+	}
+	handleClick(id) {
+		this.setState({
+			show: this.state.show !== id ? id : -1,
+		});
+	}
+	render() {
+		const {
+			background,
+			children,
+			shouldFadeOut,
+			width,
+			zIndex,
+			isTopLevelComponent,
+			...rest
+		} = this.props;
+
+		return (
+			<NavWithOptionalConstrainer
+				background={background}
+				width={width}
+				zIndex={zIndex}
+				isTopLevelComponent={isTopLevelComponent}
+			>
+				<Bar className="bar" background={background} {...rest}>
+					{children && children.map((child, index) => {
+						if (child.props && child.props.isListItem) {
+							return child;
+						}
+
+						return (
+							<LinkBarItem key={index} {...child.props}>
+								{React.cloneElement(child, {
+									id: index,
+									show: this.state.show,
+									handleClick: this.handleClick.bind(this),
+								})}
+							</LinkBarItem>
+						);
+					})}
+				</Bar>
+				{shouldFadeOut && <HorizontalOverflowGradient />}
+			</NavWithOptionalConstrainer>
+		);
+	}
+}
 
 LinkBar.propTypes = {
 	background: PropTypes.string,
