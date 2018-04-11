@@ -28,6 +28,10 @@ const LightCol = Col.extend`
 const BoldCol = Col.extend`
 	${commonCss};
 	font-weight: bold;
+	& a {
+		text-decoration: none;
+		color: ${props => props.theme.colors.type}
+	}
 `;
 
 const IngredientTitle = styled.a.attrs({
@@ -65,7 +69,6 @@ Quantity.defaultProps = {
 	title: '',
 	type: '',
 	slug: '',
-
 };
 
 Quantity.propTypes = {
