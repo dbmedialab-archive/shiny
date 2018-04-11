@@ -32,7 +32,6 @@ export const Quantity = props => (
 				{props.amount} {props.type}
 			</LightCol>
 			<BoldCol xs={7}>
-				{console.log(props)}
 				<a href={`/ingrediens/${props.title}`}>{props.title}</a>
 			</BoldCol>
 		</LeftAlignedCenteredRow>
