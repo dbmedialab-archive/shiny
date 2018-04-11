@@ -46,7 +46,6 @@ import {
 		</Code>
 
 		<Heading>Props</Heading>
-
 		<table>
 			<thead>
 				<tr>
@@ -59,7 +58,7 @@ import {
 			</thead>
 			<tbody>
 				<tr>
-					<th>isActice</th>
+					<th>isActive</th>
 					<td>Flag a selected or otherwise active link item</td>
 					<td>optional</td>
 					<td>boolean</td>
