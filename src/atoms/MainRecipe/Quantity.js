@@ -15,6 +15,10 @@ const LightCol = Col.extend`
 
 const BoldCol = Col.extend`
 	font-weight: bold;
+	& a {
+		text-decoration: none;
+		color: ${props => props.theme.colors.type}
+	}
 `;
 
 const LeftAlignedRow = Row.extend`&&{text-align: left;}`;
@@ -28,7 +32,7 @@ export const Quantity = props => (
 				{props.amount} {props.type}
 			</LightCol>
 			<BoldCol xs={7}>
-				{props.title}
+				<a href={`/ingrediens/${props.title}`}>{props.title}</a>
 			</BoldCol>
 		</LeftAlignedCenteredRow>
 	</section>
