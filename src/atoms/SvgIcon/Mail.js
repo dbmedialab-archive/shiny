@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Mail = props => (
-	<svg width="37px" height="34px" viewBox="0 0 37 34" version="1.1">
+	<svg width="100%" height="100%" viewBox="0 0 37 34" version="1.1">
 		<defs>
 			<rect id="path-1" x="0" y="0" width="100%" height="100%" rx="6" />
 			<polygon id="path-3" points="0 34.3828333 34.3425 34.3828333 34.3425 0.000333333333 0 0.000333333333" />
