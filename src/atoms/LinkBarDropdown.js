@@ -72,8 +72,15 @@ class Dropdown extends React.Component {
 		const updown = (hide === true) ? 'down' : 'up';
 
 		return (
-			<StyledDropdown onFocus={e => this.updateLastFocusTime()} onBlur={e => this.hideIfNotFocused()}>
-				<Button onClick={e => this.toggle()} {...rest}>
+			<StyledDropdown
+				onFocus={e => this.updateLastFocusTime()}
+				onBlur={e => this.hideIfNotFocused()}
+			>
+				<Button
+					aria-expanded={hide ? 'false' : 'true'}
+					onClick={e => this.toggle()}
+					{...rest}
+				>
 					{`${linkText} `}
 					<FontIcon name={`arrow-alt-${updown}`} />
 				</Button>
