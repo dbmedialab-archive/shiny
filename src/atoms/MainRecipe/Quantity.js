@@ -32,7 +32,7 @@ export const Quantity = props => (
 				{props.amount} {props.type}
 			</LightCol>
 			<BoldCol xs={7}>
-				<a href={`/ingrediens/${props.title}`}>{props.title}</a>
+				<a href={`/ingrediens/${props.slug}`}>{props.title}</a>
 			</BoldCol>
 		</LeftAlignedCenteredRow>
 	</section>
@@ -42,10 +42,12 @@ Quantity.defaultProps = {
 	amount: '',
 	title: '',
 	type: '',
+	slug: '',
 };
 
 Quantity.propTypes = {
 	amount: PropTypes.number,
 	title: PropTypes.string,
 	type: PropTypes.string,
+	slug: PropTypes.string,
 };
