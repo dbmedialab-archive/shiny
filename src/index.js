@@ -40,6 +40,7 @@ export {
 export {
 	FrontSmallHeading,
 	FrontMediumHeading,
+	FrontHeading,
 	FrontLargeHeading,
 	FrontXLargeHeading,
 	FrontHugeHeading,
@@ -152,4 +153,3 @@ export { StarsRating             } from './molecules/StarsRating';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
-export { MainRecipe              } from  './organisms/MainRecipe';

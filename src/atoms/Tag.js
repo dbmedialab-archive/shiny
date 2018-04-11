@@ -21,6 +21,11 @@ const TagAItem = TagSpanItem.withComponent('a').extend.attrs({
 		text-decoration: none;
 		color: ${props => props.theme.colors.grey};
 	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: 4.5rem;
+		letter-spacing: 0.4rem;
+	}
 `;
 
 const Tag = ({ url, title }) => (

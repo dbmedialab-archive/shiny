@@ -7,19 +7,19 @@ const ProtoHeading = styled.h1`
 	color: ${props => props.theme.colors.type};
 	font-weight: 700;
 	font-family: ${props => props.theme.variables.headingsFont};
-
 	${props => props.ALLCAPS && css`
 		text-transform: uppercase;
 	`}
-
 	a {
 		color: inherit;
 	}
 `;
+
 ProtoHeading.propTypes = {
 	marginTopFactor: propTypes.number,
 	marginBottomFactor: propTypes.number,
 };
+
 ProtoHeading.defaultProps = {
 	marginTopFactor: 3/4,
 	marginBottomFactor: 1/2,
@@ -35,50 +35,33 @@ const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 			0
 			calc(${marginBottomFactor} * ${props => props.theme.variables[`heading${capSize}LineHeight`]})
 		;
+		
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+			font-size: ${props => props.theme.variables[`heading${capSize}SizeMobile`]};
+			line-height: ${props => props.theme.variables[`heading${capSize}LineHeightMobile`]};
+			letter-spacing: 1px;
+		}
 	`;
 };
 
 const SmallHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'small', ...props })}
-
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: 'regular', ...props })}
- 	}
 `;
 
 const MediumHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'medium', ...props })}
-
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: 'regular', ...props })}
-	}
 `;
 
 const LargeHeading = ProtoHeading.extend`
-	${props => getSizes({ size: 'regular', ...props })}
-
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: 'large', ...props })}
-	}
+	${props => getSizes({ size: 'large', ...props })}
 `;
 
 const XLargeHeading = ProtoHeading.extend`
-	${props => getSizes({ size: 'regular', ...props })}
-
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: 'xlarge', ...props })}
-	}
+	${props => getSizes({ size: 'xlarge', ...props })}
 `;
 
 const HugeHeading = ProtoHeading.extend`
-	${props => getSizes({ size: 'large', ...props })}
-
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: 'huge', ...props })}
-	}
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		font-size: ${props => props.theme.variables.headingHugeLineHeight};
-	}
+	${props => getSizes({ size: 'huge', ...props })}
 `;
 
 const Heading = ({ size, ...rest }) => {

@@ -7,27 +7,32 @@ import { SvgIcon } from '../../atoms/SvgIcon';
 const FooterWrapper = styled.footer`
 	background-color: ${props => props.theme.colors.darkGrey};
 	color: ${props => props.theme.colors.white};
-	padding: 10.3rem 0 6.2rem;
+	padding: 10.3rem 0 0;
 	font-family: ${props => props.theme.variables.mainFont};
 	font-size: 1.4rem;
 	letter-spacing: 2px;
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	.margin-bottom-sm-10{
+			margin-bottom: 10rem;
+	}
+		
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 3.2rem;
 		background-color: ${props => props.theme.colors.type};
 		padding-top: 14rem;
+		padding-bottom: 6.2rem;
 		
 		.margin-bottom-sm-3{
 			margin-bottom: 3rem;
 		}
 		.margin-bottom-sm-5{
-			margin-bottom: 3rem;
+			margin-bottom: 5rem;
 		}
 		.margin-bottom-sm-6{
-			margin-bottom: 3rem;
+			margin-bottom: 6rem;
 		}
 		.margin-bottom-sm-10{
-			margin-bottom: 3rem;
+			margin-bottom: 10rem;
 		}
 	}
 	
@@ -42,7 +47,7 @@ const SubCatHeading = styled.h5`
 	font-weight: bold;
 	margin: 0;
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 3.4rem;
 	}
 `;
@@ -64,7 +69,7 @@ const OppskriftLink = styled.a`
 		height: 1.3rem;
 	}
 	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		font-size: 5.7rem;
 	}
 `;
@@ -105,8 +110,8 @@ const OppskriftFooter = () => (
 						</Col>
 					</Row>
 				</Col>
-				<Col md={3} xs={12}  className="text-left">
-					<Row  className="margin-bottom-sm-10">
+				<Col md={3} xs={12} className="text-left">
+					<Row className="margin-bottom-sm-10">
 						<Col xs={12} className="margin-bottom-sm-3">
 							<SubCatHeading>Postadresse:</SubCatHeading>
 							<Address>

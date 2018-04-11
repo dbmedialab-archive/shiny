@@ -21,6 +21,10 @@ const FheadStyle = props => css`
 		display: inline-block;
 		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
 		vertical-align: middle;
+		
+		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+			width:100%;
+		}
     }
 `;
 
@@ -30,13 +34,35 @@ export const FrontSmallHeading = SmallHeading.extend`
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
+		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
+	}
 `;
 export const FrontMediumHeading = MediumHeading.extend`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
+		
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: ${props => props.theme.variables.headingSmallSizeMobile};
+		line-height: ${props => props.theme.variables.headingSmallLineHeightMobile};
+	}
 `;
+export const FrontHeading = MediumHeading.extend`
+	${FheadStyle}
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+		font-size: ${props => props.theme.variables.headingRegularSize};
+	}
+		
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: ${props => props.theme.variables.headingRegularSizeMobile};
+		line-height: ${props => props.theme.variables.headingRegularLineHeightMobile};
+	}
+`;
+
 export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;
 export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
 export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;
@@ -48,6 +74,7 @@ const defaultProps = {
 
 FrontSmallHeading.defaultProps = defaultProps;
 FrontMediumHeading.defaultProps = defaultProps;
+FrontHeading.defaultProps = defaultProps;
 FrontLargeHeading.defaultProps = defaultProps;
 FrontXLargeHeading.defaultProps = defaultProps;
 FrontHugeHeading.defaultProps = defaultProps;

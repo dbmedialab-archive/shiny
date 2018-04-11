@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Gluten = props => (
-	<svg width="100%" height="100%" viewBox="-7 -10 50 50" >
+	<svg width="100%" height="100%" viewBox="0 0 50 50" >
 		{/* eslint-disable max-len */}
 		<g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="info/allergi/Gluten" fill="#333333">

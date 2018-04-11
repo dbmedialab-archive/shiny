@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { Col } from '../../atoms/Col';
 
 const ColorTextBox = styled(Col)`
-	padding: 2rem;
+    padding: 8rem 12rem;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size:   ${props => props.theme.variables.headingRegularSize};
-	line-height: ${props => props.theme.variables.headingRegularLineHeight};
-	font-weight: 600;
+    font-size: 2.7rem;
+    line-height: 4.3rem;
+	font-weight: 300;
 	letter-spacing: .05rem;
 	text-align: center;
 	justify-content: center;
@@ -17,10 +17,12 @@ const ColorTextBox = styled(Col)`
 	background-color: ${props => props.theme.colors[props.bgColor]};
 
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		padding: 9rem 16rem;
-		font-size: 5rem;
-		line-height: 1.4;
+		padding: 9rem;
+		font-size: 5.4rem;
+		line-height: 1.7;
 		text-align: left;
+		font-weight: 300;
+    	letter-spacing: 3px;
  	}
 `;
 

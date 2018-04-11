@@ -15,7 +15,12 @@ const IconBar = props => (
 		{
 			props.entities.map((entity, i) => (
 				<PaddingLess xs key={i}>
-					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
+					<IconWithText
+						{...entity}
+						textSize={props.textSize}
+						iconSize={props.iconSize}
+						iconSizeSm={props.iconSizeSm || props.iconSize}
+					/>
 				</PaddingLess>
 			))
 		}
@@ -29,10 +34,12 @@ IconBar.propTypes = {
 	})),
 	textSize: PropTypes.number.isRequired,
 	iconSize: PropTypes.number.isRequired,
+	iconSizeSm: PropTypes.number,
 };
 
 IconBar.defaultProps = {
 	entities: [],
+	iconSizeSm: null,
 };
 
 export { IconBar };

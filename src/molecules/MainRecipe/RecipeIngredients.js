@@ -5,7 +5,7 @@ import {
 	Row,
 	Col,
 	FontIcon,
-	LargeHeading as Heading,
+	XLargeHeading,
 	FrontSmallHeading,
 } from '../..';
 import { Quantity, Wrapper } from '../../atoms/MainRecipe/Quantity';
@@ -14,6 +14,39 @@ import { Buttons, Counter, Pers } from '../../atoms/MainRecipe/IngredientsSectio
 
 const RecipeIngredientsHeading = FrontSmallHeading.extend`
 	font-weight: 600;
+    margin-left: -1.3rem;
+    font-size: 2.2rem !important;
+    
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		margin-top: 7rem;
+		margin-bottom: 3rem;
+    }
+`;
+
+const PersonerCounterWrapper = Row.extend`
+	margin-top: 4.8rem;
+	margin-bottom: 3rem;
+	margin-left: 0;
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		margin-top: 7rem;
+		margin-bottom: 5rem;
+    }
+`;
+
+const Heading = XLargeHeading.extend`
+	font-size: 3.8rem !important;	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		font-size: 5.8rem !important;	
+    }
+`;
+
+const RecipeIngredientsWrapper = Col.extend`
+	padding-left: 1.5rem;
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		padding-left: 0;
+    }
 `;
 
 class RecipeIngredients extends React.Component {
@@ -94,28 +127,32 @@ class RecipeIngredients extends React.Component {
 		return (
 			<div>
 				<Heading>DETTE TRENGER DU</Heading>
-				<Buttons>
-					<span>
-						<FontIcon name="remove" size={2.2} onClick={this.decrementServings} />
-					</span>
-				</Buttons>
-				<Counter>
-					<meta itemProp="recipeYield" content={`${this.state.servings} servings`} />
-					<span>{this.state.servings}</span>
-				</Counter>
-				<Buttons>
-					<span>
-						<FontIcon name="add" size={2.2} onClick={this.incrementServings} />
-					</span>
-				</Buttons>
-				<Pers>
-					<span>PERSONER</span>
-				</Pers>
-				<Row>
-					<Col xs={12} md={6} lg={6}>
-						<Wrapper datePublished> { this.getIngredientsParts() } </Wrapper>
-					</Col>
-				</Row>
+				<RecipeIngredientsWrapper>
+					<PersonerCounterWrapper>
+						<Buttons>
+							<span>
+								<FontIcon name="remove" size={2.9} size-xs={7.2} onClick={this.decrementServings} />
+							</span>
+						</Buttons>
+						<Counter>
+							<meta itemProp="recipeYield" content={`${this.state.servings} servings`} />
+							<span>{this.state.servings}</span>
+						</Counter>
+						<Buttons>
+							<span>
+								<FontIcon name="add" size={2.9} size-xs={7.2}  onClick={this.incrementServings} />
+							</span>
+						</Buttons>
+						<Pers>
+							<span>PORSJONER</span>
+						</Pers>
+					</PersonerCounterWrapper>
+					<Row>
+						<Col xs={12} md={9} lg={9}>
+							<Wrapper datePublished> { this.getIngredientsParts() } </Wrapper>
+						</Col>
+					</Row>
+				</RecipeIngredientsWrapper>
 				{/* <AddCart> */}
 				{/* <FontIcon name="add" size={2.2} /> */}
 				{/* <span>LEGG I HANDLELISTE</span> */}

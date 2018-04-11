@@ -10,6 +10,11 @@ const TagItemWrapper = styled.span`
 	&:last-child {
 		margin-right: 0;
 	}
+	
+	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		margin-right: 10rem;
+		line-height: 10rem;
+	}
 `;
 const TagSection = (props) => {
 	return (
