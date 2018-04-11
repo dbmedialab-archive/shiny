@@ -54,7 +54,7 @@ class Dropdown extends React.Component {
 	 * Therefore we apply a grace time (delay) after the blur event
 	 * before we hide the dropdown.
 	 */
-	hideIfNotFocused() {
+	hideIfNotRecentlyFocused() {
 		const delay = 100; // milliseconds
 		setTimeout(() => Date.now() - this.lastFocusTime > delay && this.hide(), delay);
 	}
@@ -74,7 +74,7 @@ class Dropdown extends React.Component {
 		return (
 			<StyledDropdown
 				onFocus={e => this.updateLastFocusTime()}
-				onBlur={e => this.hideIfNotFocused()}
+				onBlur={e => this.hideIfNotRecentlyFocused()}
 			>
 				<Button
 					aria-expanded={hide ? 'false' : 'true'}

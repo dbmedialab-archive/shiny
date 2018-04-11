@@ -1,4 +1,5 @@
 import React from 'react';
+import { linkTo } from '@storybook/addon-links';
 
 // import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
@@ -24,6 +25,7 @@ const DropdownStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar</HugeHeading>
 		<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+		<p>The dropdowns will be collapsed if focus leaves the dropdown, most often on a click or keypress (tab) event.</p>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
@@ -73,6 +75,37 @@ import {
 </HorizontalLinkBar>
 				`}
 		</Code>
+
+		<Heading>Props</Heading>
+		<table>
+			<thead>
+				<tr>
+					<th>Prop</th>
+					<th>Description</th>
+					<th>Required/optional</th>
+					<th>Type</th>
+					<th>default</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>displayInitially</th>
+					<td>Expands the menu by default</td>
+					<td>optional</td>
+					<td>boolean</td>
+					<td>false</td>
+				</tr>
+				<tr>
+					<th>...</th>
+					<td>For other props, see the <button onClick={linkTo('Link bars', 'LinkBarLink')}>LinkBarLink</button>{' '}
+						component.
+					</td>
+					<td />
+					<td />
+					<td />
+				</tr>
+			</tbody>
+		</table>
 	</section>
 );
 
