@@ -77,18 +77,18 @@ const SearchWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-	font-size: 44px;
+	font-size: 4.4rem;
 `;
 
 const SearchControls = styled.div`
 	width: 55%;
-	border-bottom: 2px solid black;
+	border-bottom: .2rem solid black;
 `;
 
 const KKButton = Button.extend`
 	color: black;
-	width: 50px;
-	height: 50px;
+	width: 5.0rem;
+	height: 5.0rem;
 	outline-color: tomato;
 	background: #fff;
 `;
@@ -112,12 +112,9 @@ const KKStory = () => (
 						</FrontSmallHeading>
 						<HorizontalLinkBar
 							background={colors.white}
-							barWidth="100%"
-							childrenWidth="50%"
 							isTopLevelComponent={false}
 							shouldFlexChildren
 							position="static"
-							showToggleDropdownArrow={false}
 							shouldWrap
 							shadow="none"
 						>
@@ -173,12 +170,9 @@ const KKStory = () => (
 						</FrontSmallHeading>
 						<HorizontalLinkBar
 							background={colors.white}
-							barWidth="100%"
-							childrenWidth="50%"
 							isTopLevelComponent={false}
 							shouldFlexChildren
 							position="static"
-							showToggleDropdownArrow={false}
 							shouldWrap
 							shadow="none"
 						>
@@ -320,7 +314,6 @@ const dropDownLinkProps = {
 const linkProps = {
 	useUnderline: false,
 	activeBackground: 'transparent',
-	barWidth: '50%',
 	position: 'static',
 };
 
@@ -331,125 +324,119 @@ const linkProps = {
 	justifyContent="space-between"
 >
 	<LargeLinkBarDropdown {...dropDownLinkProps} xs={false} md displayInitially>
-					<Menu>
-						<FrontSmallHeading textColor="#888" lineColor="#888">
-								Redaksjonelt innhold
-						</FrontSmallHeading>
-						<HorizontalLinkBar
-							background={colors.white}
-							barWidth="100%"
-							childrenWidth="50%"
-							isTopLevelComponent={false}
-							shouldFlexChildren
-							position="static"
-							showToggleDropdownArrow={false}
-							shouldWrap
-							shadow="none"
-						>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Helse, kosthold & trening"
-									circleText="HE"
-									position="right"
-								/>
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Showbiz & royal" circleText="sr" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Living" circleText="li" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mat" circleText="ma" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Livet mitt" circleText="lm" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Meninger" circleText="me" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mote & skjønnhet" circleText="mo" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Jobb, karriere & økonomi"
-									circleText="jo"
-									position="right"
-								/>
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mamma" circleText="mm" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Reise" circleText="re" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Horoskop" circleText="ho" position="right" />
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Sex og -samliv" circleText="ss" position="right" />
-							</LinkBarLink>
-						</HorizontalLinkBar>
-						<FrontSmallHeading textColor="#888" lineColor="#888">
-								KOMMERSIELT INNHOLD
-						</FrontSmallHeading>
-						<HorizontalLinkBar
-							background={colors.white}
-							barWidth="100%"
-							childrenWidth="50%"
-							isTopLevelComponent={false}
-							shouldFlexChildren
-							position="static"
-							showToggleDropdownArrow={false}
-							shouldWrap
-							shadow="none"
-						>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Shopping"
-									circleText="Sh"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="KK-mila"
-									circleText="kk"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Rabattkoder"
-									circleText="ra"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
-							</LinkBarLink>
-							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Abonnèr på KK"
-									circleText="kk"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
-							</LinkBarLink>
-						</HorizontalLinkBar>
-					</Menu>
-				</LargeLinkBarDropdown>
+		<Menu>
+			<FrontSmallHeading>
+					Redaksjonelt innhold
+			</FrontSmallHeading>
+			<HorizontalLinkBar
+				background={colors.white}
+				isTopLevelComponent={false}
+				shouldFlexChildren
+				position="static"
+				shouldWrap
+				shadow="none"
+			>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="Helse, kosthold & trening"
+						circleText="HE"
+						position="right"
+					/>
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Showbiz & royal" circleText="sr" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Living" circleText="li" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Mat" circleText="ma" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Livet mitt" circleText="lm" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Meninger" circleText="me" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Mote & skjønnhet" circleText="mo" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="Jobb, karriere & økonomi"
+						circleText="jo"
+						position="right"
+					/>
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Mamma" circleText="mm" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Reise" circleText="re" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Horoskop" circleText="ho" position="right" />
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText name="circle-with-text" text="Sex og -samliv" circleText="ss" position="right" />
+				</LinkBarLink>
+			</HorizontalLinkBar>
+			<FrontSmallHeading>
+					KOMMERSIELT INNHOLD
+			</FrontSmallHeading>
+			<HorizontalLinkBar
+				background={colors.white}
+				isTopLevelComponent={false}
+				shouldFlexChildren
+				position="static"
+				shouldWrap
+				shadow="none"
+			>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="Shopping"
+						circleText="Sh"
+						position="right"
+						fill="#000"
+						textColor="#fff"
+					/>
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="KK-mila"
+						circleText="kk"
+						position="right"
+						fill="#000"
+						textColor="#fff"
+					/>
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="Rabattkoder"
+						circleText="ra"
+						position="right"
+						fill="#000"
+						textColor="#fff"
+					/>
+				</LinkBarLink>
+				<LinkBarLink {...linkProps} url="#">
+					<IconWithText
+						name="circle-with-text"
+						text="Abonnèr på KK"
+						circleText="kk"
+						position="right"
+						fill="#000"
+						textColor="#fff"
+					/>
+				</LinkBarLink>
+			</HorizontalLinkBar>
+		</Menu>
+	</LargeLinkBarDropdown>
 	<SmallLinkBarLink {...logoProps} useUnderline={false} isBlockLink style={{ maxWidth: '14.6rem' }}>
 		<KKLogo background="transparent" />
 	</SmallLinkBarLink>
@@ -470,8 +457,8 @@ const linkProps = {
 					shadow="none"
 					color="#888"
 					backgroundColor="#fff"
-					handleSearchTextChange={() => { }}
-					handleUserTypedSearch={() => { }}
+					handleSearchTextChange={() => {}}
+					handleUserTypedSearch={() => {}}
 					searchText="Hva søker du etter"
 					searchTextVisible
 					isLoading={false}
