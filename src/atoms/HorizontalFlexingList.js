@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 // Originally written for the HorizontalLinkBar molecule
 const HorizontalFlexingList = styled.ul`
@@ -30,15 +31,19 @@ const HorizontalFlexingList = styled.ul`
 	-ms-overflow-style: -ms-autohiding-scrollbar!important;
 	-ms-overflow-style: none;
 	position: relative;
-	flex-wrap: ${props => (props.flexWrap)}
+	flex-wrap: ${props => (props.shouldWrap ? 'wrap' : 'nowrap')};
 
 	::-webkit-scrollbar {
 		display: none;
 	}
 `;
 HorizontalFlexingList.defaultProps = {
-	shouldFlexChildren: false,
 	justifyContent: 'initial',
+	shouldFlexChildren: false,
+	shouldWrap: false,
+};
+HorizontalFlexingList.propTypes = {
+	shouldWrap: propTypes.bool,
 };
 
 export { HorizontalFlexingList };
