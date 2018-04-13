@@ -16,7 +16,6 @@ const LinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
-	shouldWrap,
 	...rest
 }) => {
 	return (
@@ -26,7 +25,7 @@ const LinkBar = ({
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar background={background} position="static" flexWrap={shouldWrap ? 'wrap' : 'nowrap'} {...rest}>
+			<Bar background={background} position="static" {...rest}>
 				{children && React.Children.map(children, (child, i) => {
 					if (child.props && child.props.isListItem) {
 						return child;
