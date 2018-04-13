@@ -146,7 +146,7 @@ class ScrollArrowsLinkBar extends Component {
 						background={background}
 						{...rest}
 					>
-						{children && children.map((child, i) => {
+						{children && React.Children.map(children, (child, i) => {
 							return (
 								<LinkBarItem key={i} {...child.props}>
 									{child}

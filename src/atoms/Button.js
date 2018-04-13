@@ -28,7 +28,7 @@ const Button = styled.button`
 		border: .1rem solid ${props.theme.colors.button.background};
 		background: transparent;
 		color: ${props.theme.colors.button.background};
-		`}
+	`}
 `;
 
 export { Button };

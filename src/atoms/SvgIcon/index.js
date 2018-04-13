@@ -26,6 +26,7 @@ import { Aller        		 } from './Aller';
 import { Dagbladet    		 } from './Dagbladet';
 import { OppskriftLogo       } from './OppskriftLogo';
 import { OppskriftMobileLogo } from './OppskriftMobileLogo';
+import { CircleWithText      } from './CircleWithText';
 
 const SvgIcon = props => (
 	<SvgIconWrapper size={props.size} size-sm={props['size-sm']}>
@@ -83,6 +84,8 @@ const SvgIcon = props => (
 					return <OppskriftLogo {...props} />;
 				case 'oppskrift-mobile-logo':
 					return <OppskriftMobileLogo {...props} />;
+				case 'circle-with-text':
+					return <CircleWithText {...props} />;
 				default:
 					return null;
 				}

@@ -107,6 +107,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="dagbladet" text="dagbladet" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="circle-with-text" text="kk" />
+			</Col>
 		</Row>
 	</section>
 );
