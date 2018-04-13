@@ -9,8 +9,8 @@ const IconBlock = Styled.div`
 `;
 
 const IconText = Styled.div`
-    width: 100%;
-    font-size: ${(props) => {
+	width: 100%;
+	font-size: ${(props) => {
 		return props.textSize;
 	}}rem;
 `;
@@ -23,12 +23,12 @@ const IconBlockTextRight = Styled.div`
 
 const IconTextRight = Styled.div`
 	width: 100%;
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: flex-start;
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
-	margin-left: 5px;
-	margin-bottom: 5px;
+	margin-left: .5rem;
+	margin-bottom: .5rem;
 	color: ${props => (props.textColor)}
 `;
 
