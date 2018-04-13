@@ -16,7 +16,7 @@ import {
 	Button,
 	SearchField,
 	ButtonWithModal,
-} from '../..';
+} from '../../src';
 
 
 import theme from '../../src/themes/default-theme';
