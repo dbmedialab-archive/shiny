@@ -34,8 +34,6 @@ class ButtonWithModal extends Component {
 		this.state = {
 			modalIsOpen: false,
 		};
-
-		this.toggleModal = this.toggleModal.bind(this);
 	}
 
 	componentDidMount() {
