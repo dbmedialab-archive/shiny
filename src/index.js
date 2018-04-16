@@ -65,6 +65,7 @@ export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
+export { Error                   } from './atoms/Error';
 export { Figure                  } from './atoms/Figure';
 export { FigCaption              } from './atoms/FigCaption';
 export { FontIcon                } from './atoms/FontIcon';

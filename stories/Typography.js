@@ -16,6 +16,7 @@ import svgIcon from './typography/svgIcon';
 import iconWithText from './typography/iconWithText';
 import plugHeading from './typography/plug-heading';
 import frontHeading from './typography/front-heading';
+import error from './typography/error';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -38,5 +39,6 @@ export default () => {
 		.add('Dice', dice)
 		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
-		.add('Icon with text', iconWithText);
+		.add('Icon with text', iconWithText)
+		.add('Error', error);
 };
