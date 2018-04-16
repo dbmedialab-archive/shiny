@@ -38,7 +38,7 @@
     "prismjs": "1.14.0",
     "prop-types": "15.6.1",
     "react": "16.3.1",
-    "react-dom": "16.3.1",
+    "react-dom": "16.3.2",
     "react-intersection-observer": "3.0.3",
     "react-rating": "1.1.2",
     "react-modal": "3.3.2",
