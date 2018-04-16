@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 import { getColor, getVariable } from '../utils';
-import { Col, XLargePlugHeading, SmallHeading } from '..';
+import { Col, XLargePlugHeading, SmallHeading, Button } from '..';
 
 const ErrorWrapper = Col.extend`
 	text-align: center;
 	font-family: Cabin,sans-serif;
-    padding: 3rem;
+	padding: 3rem;
 `;
 
 const ExclamationPoint = styled.div`
@@ -20,16 +20,15 @@ const Message = SmallHeading.extend`
 	font-weight: 400;
 `;
 
-const ReloadButton = styled.button`
-	color: ${getColor('white')};
-	background-color: ${getColor('primary')};
+const ReloadButton = Button.extend`
 	border: none;
 	border-radius: 0.3rem;
 	padding: 1.5rem;
-	font-size: ${getVariable('uiRegularSize')};;
-    margin-top: 2rem;
-    text-transform: uppercase;
-    outline: none;
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
+	margin-top: 2rem;
+	text-transform: uppercase;
+	outline: none;
 `;
 
 const Error = ({ message, onRetryButtonClick }) => {
@@ -39,7 +38,15 @@ const Error = ({ message, onRetryButtonClick }) => {
 				<ExclamationPoint> ! </ExclamationPoint>
 				<XLargePlugHeading>Det har oppstått en feil</XLargePlugHeading>
 				{message && <Message>{message}</Message>}
-				{onRetryButtonClick && <ReloadButton onClick={onRetryButtonClick}>Prøv igjen</ReloadButton>}
+				{onRetryButtonClick &&
+				<ReloadButton
+					textColor="white"
+					background="primary"
+					onClick={onRetryButtonClick}
+				>
+					Prøv igjen
+				</ReloadButton>
+				}
 			</ErrorWrapper>
 		</React.Fragment>
 	);
