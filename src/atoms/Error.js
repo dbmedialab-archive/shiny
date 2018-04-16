@@ -7,6 +7,7 @@ import { Col, XLargePlugHeading, SmallHeading } from '..';
 const ErrorWrapper = Col.extend`
 	text-align: center;
 	font-family: Cabin,sans-serif;
+    padding: 3rem;
 `;
 
 const ExclamationPoint = styled.div`
