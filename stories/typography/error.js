@@ -50,7 +50,7 @@ import {
 		<DemoContainer>
 			<Error
 				message="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå"
-				onRetryButtonClick={() => alert('Retrying!')}
+				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
 
