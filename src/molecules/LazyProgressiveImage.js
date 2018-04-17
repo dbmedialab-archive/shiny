@@ -45,6 +45,10 @@ class LazyProgressiveImage extends Component {
 		isLoaded: false,
 	}
 
+	shouldComponentUpdate(nextProps, nextState) {
+		return !this.state.isLoaded;
+	}
+
 	componentWillUnmount() {
 		if (this.img) {
 			this.img.removeEventListener('load', this.setLoadedStatus);
