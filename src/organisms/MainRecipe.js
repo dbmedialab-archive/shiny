@@ -10,7 +10,7 @@ import {
 } from '..';
 import { RecipeMetaData          } from '../molecules/MainRecipe/RecipeMetaData';
 import { RecipeIngredients       } from '../molecules/MainRecipe/RecipeIngredients';
-import { RecipeSteps             } from '../molecules/MainRecipe/RecipeSteps';
+import { NumberedList             } from '../molecules/NumberedList';
 import { LargeHorizontalHeroUnit } from '../molecules/HorizontalHeroUnit';
 import { FrontLargeHeading       } from '../atoms/FrontHeading';
 import { YoutubeFrame            } from '../atoms/MainRecipe/youtubeFrame';
@@ -66,7 +66,7 @@ const MainRecipe = props => (
 				<Col xs={12} md={6}>
 					<Row>
 						<Col xs={12} >
-							<RecipeSteps steps={props.recipe.steps} />
+							<NumberedList steps={props.recipe.steps} />
 						</Col>
 					</Row>
 					<Row>

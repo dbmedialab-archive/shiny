@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
-const RecipeStep = styled.div`
+const NumberedListItemWrapper = styled.div`
 	list-style: none;
 	padding: 0;
 	font-family: Cabin;
@@ -22,4 +23,9 @@ const RecipeStep = styled.div`
 	}
 `;
 
-export { RecipeStep };
+const NumberedListItem = ({ children }) => (
+	<NumberedListItemWrapper>
+		<span>{children}</span>
+	</NumberedListItemWrapper>
+);
+export { NumberedListItem };
