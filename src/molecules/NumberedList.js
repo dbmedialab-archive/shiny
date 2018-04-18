@@ -6,7 +6,6 @@ import { NumberedListItem } from '../atoms/NumberedListItem';
 const NumberedList = ({ items }) => (
 	<React.Fragment>
 		{items.map((item, index) => {
-			console.log(item);
 			return (
 				<NumberedListItem
 					itemProp="recipeInstructions"

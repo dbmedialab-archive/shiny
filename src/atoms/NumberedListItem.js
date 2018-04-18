@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import propTypes from 'prop-types';
 
 const NumberedListItemWrapper = styled.div`
 	list-style: none;
@@ -28,4 +29,9 @@ const NumberedListItem = ({ children }) => (
 		<span>{children}</span>
 	</NumberedListItemWrapper>
 );
+
+NumberedListItem.propTypes = {
+	children: propTypes.node.isRequired,
+};
+
 export { NumberedListItem };

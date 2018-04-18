@@ -6,7 +6,9 @@ import { DemoContainer } from '../storybook-components';
 export default () => (
 	<section>
 		<HugeHeading>Numbered List</HugeHeading>
-		<XLargeHeading> You can pass an array to  {'<NumberedList items="[ ]">'} or use {'<NumberedListItem>'} directly.</XLargeHeading>
+		<XLargeHeading>
+			You can pass an array to  {'<NumberedList items="[ ]">'} or use {'<NumberedListItem>'} directly.
+		</XLargeHeading>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
@@ -60,7 +62,9 @@ import { NumberedListItem } from '@aller/shiny';
 			`}
 		</Code>
 
-		<XLargeHeading> Any other element can be put in between list items. Or they can also be wrapped in any other element. </XLargeHeading>
+		<XLargeHeading>
+			Any other element can be put in between list items. Or they can also be wrapped in any other element.
+		</XLargeHeading>
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Heading>How to pet a cat</Heading>
