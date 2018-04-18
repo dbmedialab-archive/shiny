@@ -12,7 +12,7 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<NumberedList items={['Celery', 'Apple', 'Cucumber']} />
+			<NumberedList items={['Celery', 'Apple', 'Cucumber']} itemProp="fruit" />
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
@@ -20,7 +20,7 @@ export default () => (
 			{`
 import { NumberedList } from '@aller/shiny';
 
-<NumberedList items={['Celery', 'Apple', 'Cucumber']} />
+<NumberedList items={['Celery', 'Apple', 'Cucumber']} itemProp="fruit" />
 			`}
 		</Code>
 

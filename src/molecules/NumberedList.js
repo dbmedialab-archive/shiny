@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import { NumberedListItem } from '../atoms/NumberedListItem';
 
-const NumberedList = ({ items }) => (
+const NumberedList = ({ items, itemProp }) => (
 	<React.Fragment>
 		{items.map((item, index) => {
 			return (
 				<NumberedListItem
-					itemProp="recipeInstructions"
+					itemProp={itemProp}
 					key={index}
 				>
 					{item}
@@ -19,10 +19,12 @@ const NumberedList = ({ items }) => (
 );
 
 NumberedList.propTypes = {
-	items: PropTypes.arrayOf(PropTypes.string),
+	items: PropTypes.arrayOf(PropTypes.node),
+	itemProp: PropTypes.string,
 };
 NumberedList.defaultProps = {
 	items: [],
+	itemProp: '',
 };
 
 export { NumberedList };
