@@ -122,6 +122,8 @@ export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { KKLogo                  } from './atoms/KKLogo';
 export { ButtonWithModal         } from './atoms/ButtonWithModal';
+export { NumberedListItem        } from './atoms/NumberedListItem';
+
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -144,7 +146,7 @@ export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
 export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
 export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
-export { RecipeSteps             } from './molecules/MainRecipe/RecipeSteps';
+export { NumberedList            } from './molecules/NumberedList';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
