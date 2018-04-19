@@ -62,7 +62,6 @@ export { Cite                    } from './atoms/Cite';
 export { Tag                     } from './atoms/Tag';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
-export { Code                    } from './atoms/Code';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
