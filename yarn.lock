@@ -5951,9 +5951,9 @@ pretty-format@^21.2.1:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
-prism-themes@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.0.tgz#58089547ed39df273e5195e1628c69177341bf88"
+prism-themes@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.1.tgz#8e68972176f5e4fbc0859cd8e9474a0bbfaf2e41"
 
 prismjs@1.14.0:
   version "1.14.0"
