@@ -41,7 +41,7 @@
     "react-dom": "16.3.2",
     "react-intersection-observer": "3.0.3",
     "react-rating": "1.1.2",
-    "react-modal": "3.4.1",
+    "react-modal": "3.4.2",
     "react-stickyfill": "0.2.3",
     "react-styled-flexboxgrid": "2.2.0",
     "striptags": "3.1.1"
