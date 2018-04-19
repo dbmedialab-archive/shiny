@@ -17,6 +17,7 @@ import iconWithText from './typography/iconWithText';
 import plugHeading from './typography/plug-heading';
 import frontHeading from './typography/front-heading';
 import error from './typography/error';
+import numberedList from './typography/numberedList';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -40,5 +41,6 @@ export default () => {
 		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
 		.add('Icon with text', iconWithText)
+		.add('Numbered list', numberedList)
 		.add('Error', error);
 };
