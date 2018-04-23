@@ -1,3 +1,6 @@
+import { css } from 'styled-components';
+import { extraSmallUp, smallUp, mediumUp, largeUp } from './media-queries';
+
 /**
  * Hide a styled-component with syntax familiar to users of react-styled-flexboxgrid.
  *
@@ -11,27 +14,23 @@
  *   md: null,
  *   lg: null,
  * }
+ *
+ * <Foo xs>
+ * <Foo xs={false} md />
  */
 const hideWithFlexboxgridSyntax = (display) => {
 	return (props) => {
 		const {
 			xs, sm, md, lg,
-			theme: {
-				flexboxgrid: {
-					breakpoints: {
-						xs: xsBreak, sm: smBreak, md: mdBreak, lg: lgBreak,
-					},
-				},
-			},
 		} = props;
 
 		const acc = [];
 
 		acc.push(`display: ${display};`);
-		xs !== null && acc.push(`@media only screen and (min-width: ${xsBreak}em) { display: ${xs ? display : 'none'}}`);
-		sm !== null && acc.push(`@media only screen and (min-width: ${smBreak}em) { display: ${sm ? display : 'none'}}`);
-		md !== null && acc.push(`@media only screen and (min-width: ${mdBreak}em) { display: ${md ? display : 'none'}}`);
-		lg !== null && acc.push(`@media only screen and (min-width: ${lgBreak}em) { display: ${lg ? display : 'none'}}`);
+		xs !== null && acc.push(css`@media ${extraSmallUp} { display: ${xs ? display : 'none'}}`);
+		sm !== null && acc.push(css`@media ${smallUp}      { display: ${sm ? display : 'none'}}`);
+		md !== null && acc.push(css`@media ${mediumUp}     { display: ${md ? display : 'none'}}`);
+		lg !== null && acc.push(css`@media ${largeUp}      { display: ${lg ? display : 'none'}}`);
 
 		return acc.join('\n');
 	};

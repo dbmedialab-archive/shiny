@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { smallUp } from '../utils/media-queries';
 
 const DontPushTheAdBoundaries = styled.div`
 	display: flex;
@@ -7,7 +8,7 @@ const DontPushTheAdBoundaries = styled.div`
 	box-orient: vertical; /* ios8.x really, really needs this; overrides flex direction */
 	padding: calc(${props => props.theme.variables.verticalBase}/2) 0 0;
 
-	@media (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		position: relative;
 		width: 100%;
 		max-width: 100.0rem;

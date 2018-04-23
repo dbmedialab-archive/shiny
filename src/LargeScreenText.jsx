@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { smallUp } from './utils/media-queries';
 
 const LargeScreenText = styled.span`
 	display: none;
 
-	@media (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		display: inline;
 	}
 `;

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { smallUp } from '../../src/utils/media-queries';
+
 import {
 	LinkBarLink,
 	XSmallLinkBarLink,
@@ -22,7 +24,8 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	position: absolute;
 	top:0;
 	width: 10.6rem;
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+
+	@media ${smallUp} {
 		width: 14.6rem;
 	}
 `;

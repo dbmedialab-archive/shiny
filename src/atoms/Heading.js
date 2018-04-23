@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { smallUp } from '../utils/media-queries';
 
 const ProtoHeading = styled.h1`
 	padding: 0;
@@ -41,7 +42,7 @@ const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 const SmallHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'small', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${props => getSizes({ size: 'regular', ...props })}
  	}
 `;
@@ -49,7 +50,7 @@ const SmallHeading = ProtoHeading.extend`
 const MediumHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'medium', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${props => getSizes({ size: 'regular', ...props })}
 	}
 `;
@@ -57,7 +58,7 @@ const MediumHeading = ProtoHeading.extend`
 const LargeHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'regular', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${props => getSizes({ size: 'large', ...props })}
 	}
 `;
@@ -65,7 +66,7 @@ const LargeHeading = ProtoHeading.extend`
 const XLargeHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'regular', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${props => getSizes({ size: 'xlarge', ...props })}
 	}
 `;
@@ -73,7 +74,7 @@ const XLargeHeading = ProtoHeading.extend`
 const HugeHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'large', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${props => getSizes({ size: 'huge', ...props })}
 	}
 `;

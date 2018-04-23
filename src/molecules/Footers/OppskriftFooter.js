@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		padding: 10rem 0 6rem;
 	}
-	
+
 	.text-left{
 		text-align: left;
 	}

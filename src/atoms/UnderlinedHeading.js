@@ -14,6 +14,8 @@ const StyledLine = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	${props => props.thick && css`border-width: .2rem`}
+
+	/* @TODO: Rewrite these styles to be mobile first*/
 	@media only screen
 	 and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em)
 	 and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
