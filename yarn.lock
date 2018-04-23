@@ -145,6 +145,15 @@
     global "^4.3.2"
     prop-types "^15.6.1"
 
+"@storybook/addon-viewport@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-3.4.1.tgz#f9ea52ec15094859ef03c65913fd5bb57af96104"
+  dependencies:
+    "@storybook/components" "3.4.1"
+    babel-runtime "^6.26.0"
+    global "^4.3.2"
+    prop-types "^15.6.1"
+
 "@storybook/addons@3.4.2":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.2.tgz#77f0d5cb3b9443da6765600d83cd5acda6115af6"
@@ -164,6 +173,14 @@
 "@storybook/client-logger@3.4.2":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.2.tgz#33a7b5c924e2960f9c129a934fc905ed1b271017"
+
+"@storybook/components@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.1.tgz#74e3bcf9590cb314a4845d2f3264aada79856c1f"
+  dependencies:
+    glamor "^2.20.40"
+    glamorous "^4.12.1"
+    prop-types "^15.6.1"
 
 "@storybook/components@3.4.2":
   version "3.4.2"
@@ -5951,9 +5968,9 @@ pretty-format@^21.2.1:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
-prism-themes@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.0.tgz#58089547ed39df273e5195e1628c69177341bf88"
+prism-themes@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.0.1.tgz#8e68972176f5e4fbc0859cd8e9474a0bbfaf2e41"
 
 prismjs@1.14.0:
   version "1.14.0"
@@ -6237,9 +6254,9 @@ react-lifecycles-compat@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.2.tgz#7279047275bd727a912e25f734c0559527e84eff"
 
-react-modal@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.4.1.tgz#9bee876ffb1b077447abef9aa298d375625f8ecf"
+react-modal@3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.4.2.tgz#507ce89c528380497ec6c5adf5d7448f99ab6d27"
   dependencies:
     exenv "^1.2.0"
     prop-types "^15.5.10"
