@@ -5,30 +5,15 @@ import { Col, Row, Grid } from '../..';
 import { SvgIcon } from '../../atoms/SvgIcon';
 
 const FooterWrapper = styled.footer`
-	background-color: ${props => props.theme.colors.darkGrey};
+	background-color: ${props => props.theme.colors.type};
 	color: ${props => props.theme.colors.white};
-	padding: 10.3rem 0 6.2rem;
 	font-family: ${props => props.theme.variables.mainFont};
-	font-size: 1.4rem;
-	letter-spacing: 2px;
-	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
-		font-size: 3.2rem;
-		background-color: ${props => props.theme.colors.type};
-		padding-top: 14rem;
-		
-		.margin-bottom-sm-3{
-			margin-bottom: 3rem;
-		}
-		.margin-bottom-sm-5{
-			margin-bottom: 3rem;
-		}
-		.margin-bottom-sm-6{
-			margin-bottom: 3rem;
-		}
-		.margin-bottom-sm-10{
-			margin-bottom: 3rem;
-		}
+	font-size: ${props => props.theme.variables.uiRegularSize};
+	line-height: ${props => props.theme.variables.headingMediumLineHeight};
+	padding: 5rem 2rem 4rem;
+
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		padding: 10rem 0 6rem;
 	}
 	
 	.text-left{
@@ -36,15 +21,15 @@ const FooterWrapper = styled.footer`
 	}
 `;
 
+const LeftAlignedCol = Col.extend`
+	text-align: left;
+`;
+
 const SubCatHeading = styled.h5`
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0;
-	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
-		font-size: 3.4rem;
-	}
 `;
 
 const NavLinksBar = styled.ul`
@@ -58,14 +43,11 @@ const OppskriftLink = styled.a`
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;
+	font-size: ${props => props.theme.variables.headingLargeSize};
 	&::after {
 		content: '';
 		display: block;
 		height: 1.3rem;
-	}
-	
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}rem) {
-		font-size: 5.7rem;
 	}
 `;
 
@@ -86,28 +68,29 @@ const OppskriftFooter = () => (
 		<Grid>
 			<Row center="md">
 				<Col md={3} xs={12}>
-					<Row center="md" className="margin-bottom-sm-3">
+					<Row center="md">
 						<Col md={12}>
 							<OppskriftLink className="oppskrift-link" href="#">Oppskrift.no</OppskriftLink>
 						</Col>
 					</Row>
-					<Row center="md" className="margin-bottom-sm-6">
+					<Row center="md">
 						<Col md={3}>
 							<AllerIconWrapper>
-								<SvgIcon name="aller" size={6.8} size-sm={19} />
+								<SvgIcon name="aller" size={6.8} />
 							</AllerIconWrapper>
 						</Col>
 						<Col md={3}>
-							<SvgIcon name="kk" size={4.5} size-sm={12} />
+							<SvgIcon name="kk" size={4.5} />
 						</Col>
 						<Col md={12}>
-							<SvgIcon name="dagbladet" size={8.7} size-sm={20} />
+							<SvgIcon name="dagbladet" size={8.7}  />
 						</Col>
 					</Row>
+					<VerticalSeparator height={2.8} />
 				</Col>
-				<Col md={3} xs={12}  className="text-left">
-					<Row  className="margin-bottom-sm-10">
-						<Col xs={12} className="margin-bottom-sm-3">
+				<LeftAlignedCol md={3} xs={12} >
+					<Row>
+						<Col xs={12}>
 							<SubCatHeading>Postadresse:</SubCatHeading>
 							<Address>
 								Boks 1184 Sentrum, 0107 Oslo
@@ -120,23 +103,25 @@ const OppskriftFooter = () => (
 								Karvesvingen 1, 0579 Oslo<br />
 								Sentralbord: 24 00 10 00
 							</Address>
+							<VerticalSeparator height={5} />
 						</Col>
 					</Row>
-				</Col>
-				<Col md={3} xs={12} className="margin-bottom-sm-10 text-left">
-					<SubCatHeading className="margin-bottom-sm-5">Ansvarlig redaktør:</SubCatHeading>
+				</LeftAlignedCol>
+				<LeftAlignedCol md={3} xs={12}>
+					<SubCatHeading>Ansvarlig redaktør:</SubCatHeading>
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
-				</Col>
-				<Col md={3} xs={12} className="text-left">
+					<VerticalSeparator height={2.8} />
+				</LeftAlignedCol>
+				<LeftAlignedCol md={3} xs={12}>
 					<NavLinksBar>
 						<li>Annonseinfo</li>
 						<li>Om informasjonskapsler</li>
 						<li>Redaksjonen</li>
 						<li>Personvern</li>
 					</NavLinksBar>
-				</Col>
+				</LeftAlignedCol>
 			</Row>
 		</Grid>
 	</FooterWrapper>
