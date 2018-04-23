@@ -1,7 +1,7 @@
 import { darken, lighten } from 'polished';
 
 const colorsToShade= {
-	primary: 'black',
+	primary: '#000', // black
 	secondary: '#999',
 	pink: 'hotpink',
 };

@@ -37,5 +37,4 @@ const stringToRGB = (color) => {
 	return rgbaToRGBA(color);
 };
 
-export default stringToRGB;
 export { stringToRGB };
