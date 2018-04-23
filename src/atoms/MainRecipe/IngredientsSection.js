@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 const Buttons = Styled.button`
 	background: #ff790a;
 	border: none;
-	height: 3.7rem;
+	height: 3.8rem;
 	display: inline-block;
 	border-radius: 10%;
 
@@ -27,7 +27,7 @@ const Counter = Styled.span`
 		color: #949494;
 		font-size: 2.4rem;
 		margin: .3rem .6rem;
-    display: inline-block;
+    	display: inline-block;
 	}
 `;
 

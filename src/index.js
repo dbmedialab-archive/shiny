@@ -145,7 +145,6 @@ export { FullscreenAd            } from './molecules/FullscreenAd';
 export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
 export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
-export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
 export { NumberedList            } from './molecules/NumberedList';
 export {
 	SmallHorizontalHeroUnit,
@@ -158,4 +157,3 @@ export { SearchField             } from './molecules/SearchField';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
-export { MainRecipe              } from  './organisms/MainRecipe';
