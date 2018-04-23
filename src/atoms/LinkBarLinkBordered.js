@@ -9,9 +9,8 @@ const calculateTextColor = (backgroundColor, theme) => {
 };
 
 const LinkBarLinkBordered = styled(LinkBarLink)`
-	border-radius: 3px;
-	border: solid 1px ${props => props.theme.colors.borderGray};	
-	letter-spacing: 0.4px;
+	border-radius: 0.3rem;
+	border: solid 0.1rem ${props => props.theme.colors.borderGray};	
 	color: ${props => props.theme.colors.typeGray} !important;
 	margin: 0 0.5rem 0.5rem;
 	text-transform: uppercase;
