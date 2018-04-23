@@ -8,8 +8,8 @@ const FooterWrapper = styled.footer`
 	background-color: ${props => props.theme.colors.type};
 	color: ${props => props.theme.colors.white};
 	font-family: ${props => props.theme.variables.mainFont};
-	font-size: ${props => props.theme.variables.uiRegularSize};
-	line-height: ${props => props.theme.variables.headingMediumLineHeight};
+	font-size: ${props => props.theme.variables.headingSmallSize};
+	line-height: ${props => props.theme.variables.headingSmallLineHeight};
 	padding: 5rem 2rem 4rem;
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
@@ -19,10 +19,6 @@ const FooterWrapper = styled.footer`
 	.text-left{
 		text-align: left;
 	}
-`;
-
-const LeftAlignedCol = Col.extend`
-	text-align: left;
 `;
 
 const SubCatHeading = styled.h5`
@@ -44,6 +40,7 @@ const OppskriftLink = styled.a`
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: ${props => props.theme.variables.headingLargeSize};
+	line-height: ${props => props.theme.variables.headingLargeLineHeight};
 	&::after {
 		content: '';
 		display: block;
@@ -66,7 +63,7 @@ const Address = styled.address`
 const OppskriftFooter = () => (
 	<FooterWrapper>
 		<Grid>
-			<Row center="md">
+			<Row>
 				<Col md={3} xs={12}>
 					<Row center="md">
 						<Col md={12}>
@@ -88,7 +85,7 @@ const OppskriftFooter = () => (
 					</Row>
 					<VerticalSeparator height={2.8} />
 				</Col>
-				<LeftAlignedCol md={3} xs={12} >
+				<Col md={3} xs={12} >
 					<Row>
 						<Col xs={12}>
 							<SubCatHeading>Postadresse:</SubCatHeading>
@@ -106,22 +103,22 @@ const OppskriftFooter = () => (
 							<VerticalSeparator height={5} />
 						</Col>
 					</Row>
-				</LeftAlignedCol>
-				<LeftAlignedCol md={3} xs={12}>
+				</Col>
+				<Col md={3} xs={12}>
 					<SubCatHeading>Ansvarlig redaktør:</SubCatHeading>
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
 					<VerticalSeparator height={2.8} />
-				</LeftAlignedCol>
-				<LeftAlignedCol md={3} xs={12}>
+				</Col>
+				<Col md={3} xs={12}>
 					<NavLinksBar>
 						<li>Annonseinfo</li>
 						<li>Om informasjonskapsler</li>
 						<li>Redaksjonen</li>
 						<li>Personvern</li>
 					</NavLinksBar>
-				</LeftAlignedCol>
+				</Col>
 			</Row>
 		</Grid>
 	</FooterWrapper>
