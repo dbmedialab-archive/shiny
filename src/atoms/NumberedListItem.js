@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-const NumberedListItemWrapper = styled.div`
+const NumberedListItem = styled.div`
 	list-style: none;
 	padding: 0;
 	font-family: Cabin;
@@ -12,7 +11,7 @@ const NumberedListItemWrapper = styled.div`
 	position: relative;
 	padding-left: 5rem;
 
-	> *::before {
+	::before {
 		content: counter(item);
 		font-family: Cabin;
 		font-size: ${props => props.theme.variables.headingHugeSize};
@@ -23,12 +22,6 @@ const NumberedListItemWrapper = styled.div`
 		top: 0.5rem;
 	}
 `;
-
-const NumberedListItem = ({ children }) => (
-	<NumberedListItemWrapper>
-		<span>{children}</span>
-	</NumberedListItemWrapper>
-);
 
 NumberedListItem.propTypes = {
 	children: propTypes.node.isRequired,
