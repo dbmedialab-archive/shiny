@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Pinterest = props => (
-	<svg width="37px" height="34px" viewBox="0 0 37 34">
+	<svg width="100%" height="100%" viewBox="0 0 37 34">
 		<g id="Symbols" stroke="none" fill="none">
 			<g id="pintrest">
 				<g id="pintrest-copy" transform="translate(2.000000, 0.000000)">

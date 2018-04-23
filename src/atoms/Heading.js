@@ -76,9 +76,6 @@ const HugeHeading = ProtoHeading.extend`
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		${props => getSizes({ size: 'huge', ...props })}
 	}
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		font-size: ${props => props.theme.variables.headingHugeLineHeight};
-	}
 `;
 
 const Heading = ({ size, ...rest }) => {

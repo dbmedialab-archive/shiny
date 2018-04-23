@@ -1,11 +1,13 @@
+import propTypes from 'prop-types';
 import styled from 'styled-components';
+import { getColor } from '../utils';
 
 const Button = styled.button`
 	letter-spacing: .1rem;
 	text-transform: uppercase;
-	background-color: ${props => props.theme.colors.button.background}
+	background-color: ${props => (props.background? getColor(props.background): props.theme.colors.button.background)};
 	border-color: #bdbdbd;
-	color: ${props => props.theme.colors.button.color}
+	color: ${props => (props.textColor? getColor(props.textColor): props.theme.colors.button.color)};
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
@@ -25,10 +27,16 @@ const Button = styled.button`
 	transition: background-color 300ms ease-out;
 
 	${props => props.outline && `
-		border: .1rem solid ${props.theme.colors.button.background};
+		border: .1rem solid ${props.background? getColor(props.background):  props.theme.colors.button.background};
 		background: transparent;
-		color: ${props.theme.colors.button.background};
-		`}
+		color: ${props.background? getColor(props.background): props.theme.colors.button.background};
+	`}
 `;
+
+
+Button.propTypes = {
+	background: propTypes.string,
+	textColor: propTypes.string,
+};
 
 export { Button };

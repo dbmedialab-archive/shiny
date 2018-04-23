@@ -9,12 +9,14 @@ import {
 
 const Search = styled.div`
   position: relative;
-  margin-bottom: calc(1 / 2 * ${props => props.theme.variables.verticalBase});
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom :
+		(`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
   background-color: ${props => props.theme.colors.white};
   font-size: 1.6rem;
-  box-shadow: 0 0.3rem 0.3rem ${props => props.theme.colors.grayTint};
+  box-shadow: ${props => (props.shadow ? props.shadow : `0 0.3rem 0.3rem ${props.theme.colors.grayTint}`)};
   overflow: hidden;
   box-sizing: border-box;
+  border-bottom: ${props => props.borderBottom};
 
   * {
   	box-sizing: border-box;
@@ -22,7 +24,8 @@ const Search = styled.div`
 `;
 
 const SearchIcon = styled(FontIcon)`
-	color: ${props => props.theme.colors[props.color]}
+	color: ${props => props.color};
+	font-size: ${props => props.iconSize};
 `;
 
 const SearchFieldInput = styled.input`
@@ -30,7 +33,7 @@ const SearchFieldInput = styled.input`
 	 padding: ${props => props.theme.variables.horizontalBase};
 	 border: 0;
 	 outline: none;
-	 font-size: inherit;
+	 font-size: ${props => props.fontSize};
 `;
 
 const IconContainer = styled.button`
@@ -39,35 +42,37 @@ const IconContainer = styled.button`
 	 padding: ${props => props.theme.variables.horizontalBase};
 	 border: 0;
 	 outline: none;
-	 background-color: ${props => props.theme.colors.primary};
-	 font-size: inherit;
+	 background-color: ${props => (props.backgroundColor ? props.backgroundColor : props.theme.colors.primary)};
+	 font-size: ${props => props.iconSize};
 	 cursor: pointer;
+	 top: 10px;
 `;
 
 class SearchField extends React.Component {
-	static propTypes = {
-		searchText: propTypes.string.isRequired,
-		handleSearchTextChange: propTypes.func.isRequired,
-		handleUserTypedSearch: propTypes.func.isRequired,
-		searchTextVisible: propTypes.bool.isRequired,
-		isLoading: propTypes.bool.isRequired,
-	};
+	constructor(props) {
+		super(props);
 
+		this.state = {
+			searchText: '',
+		};
+	}
 	handleTextChange = (event) => {
-		const {
-			handleSearchTextChange,
-		} = this.props;
+		// const {
+		// 	handleSearchTextChange,
+		// } = this.props;
 
-		handleSearchTextChange(event.target.value);
+		// handleSearchTextChange(event.target.value);
+		this.setState({
+			searchText: event.target.value,
+		});
 	};
 
 	searchNow = () => {
 		const {
-			searchText,
 			handleUserTypedSearch,
 		} = this.props;
 
-		handleUserTypedSearch(searchText);
+		handleUserTypedSearch(this.state.searchText);
 	};
 
 	searchNowIfEnter = (event) => {
@@ -79,30 +84,62 @@ class SearchField extends React.Component {
 	render() {
 		const {
 			searchTextVisible,
-			searchText,
 			isLoading,
+			color,
+			backgroundColor,
+			fontSize,
+			shadow,
+			iconSize,
+			marginBottom,
+			searchText,
 		} = this.props;
 
-		const value = (searchTextVisible) ? searchText : '';
+		const value = (searchTextVisible) ? this.state.searchText : '';
 
 		return (
-			<Search>
+			<Search marginBottom={marginBottom}>
 				<SearchFieldInput
 					type="text"
 					value={value}
-					placeholder="Søk..."
+					placeholder={searchText}
 					onChange={this.handleTextChange}
 					onKeyDown={this.searchNowIfEnter}
+					shadow={shadow}
+					fontSize={fontSize}
 				/>
 
 				<IconContainer
 					onClick={this.searchNow}
+					backgroundColor={backgroundColor}
+					iconSize={iconSize}
 				>
-					{isLoading ? <LoadingSearchIcon color="white" /> : <SearchIcon name="search" color="white" />}
+					{isLoading ? <LoadingSearchIcon color="white" /> : <SearchIcon name="search" color={color} />}
 				</IconContainer>
 			</Search>
 		);
 	}
 }
+
+SearchField.propTypes = {
+	searchText: propTypes.string.isRequired,
+	handleUserTypedSearch: propTypes.func.isRequired,
+	searchTextVisible: propTypes.bool.isRequired,
+	isLoading: propTypes.bool.isRequired,
+	color: propTypes.string,
+	backgroundColor: propTypes.string,
+	shadow: propTypes.string,
+	fontSize: propTypes.string,
+	iconSize: propTypes.string,
+	marginBottom: propTypes.string,
+};
+
+SearchField.defaultProps = {
+	color: 'white',
+	backgroundColor: '',
+	shadow: '',
+	fontSize: 'inherit',
+	iconSize: 'inherit',
+	marginBottom: '',
+};
 
 export { SearchField };

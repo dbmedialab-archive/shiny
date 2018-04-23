@@ -16,40 +16,78 @@ const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
 
-const ThisOughtToBeAFragment = styled.div``;
+const StyledDropdown = styled.div``;
 
 class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
+
+		this.lastFocusTime = 0;
 		this.state = {
 			hide: !this.props.displayInitially,
 		};
 	}
 
-	handleClick() {
+	hide() {
+		this.setState({
+			hide: true,
+		});
+	}
+
+	show() {
+		this.setState({
+			hide: false,
+		});
+	}
+
+	toggle() {
 		this.setState({
 			hide: !this.state.hide,
 		});
 	}
 
+	/**
+	 * Hide on blur
+	 *
+	 * When changing focus between elements in the dropdown,
+	 * the blur and focus events will bubble up here in rapid succession.
+	 * Therefore we apply a grace time (delay) after the blur event
+	 * before we hide the dropdown.
+	 */
+	hideIfNotRecentlyFocused() {
+		const delay = 100; // milliseconds
+		setTimeout(() => Date.now() - this.lastFocusTime > delay && this.hide(), delay);
+	}
+
+	updateLastFocusTime() {
+		this.lastFocusTime = Date.now();
+	}
+
 	render() {
 		const {
-			linkText, children,  ...rest
+			linkText, children, ...rest
 		} = this.props;
 		const { hide } = this.state;
 
 		const updown = (hide === true) ? 'down' : 'up';
 
 		return (
-			<ThisOughtToBeAFragment>
-				<Button onClick={e => this.handleClick()} {...rest}>
+			<StyledDropdown
+				onFocus={e => this.updateLastFocusTime()}
+				onBlur={e => this.hideIfNotRecentlyFocused()}
+			>
+				<Button
+					aria-expanded={hide ? 'false' : 'true'}
+					onClick={e => this.toggle()}
+					{...rest}
+				>
 					{`${linkText} `}
 					<FontIcon name={`arrow-alt-${updown}`} />
 				</Button>
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
-			</ThisOughtToBeAFragment>
+			</StyledDropdown>
 		);
 	}
 }
@@ -60,9 +98,11 @@ Dropdown.propTypes = {
 	]).isRequired,
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string.isRequired,
+	isRelative: propTypes.bool,
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
+	isRelative: true,
 };
 
 // When we export this as a styled component,

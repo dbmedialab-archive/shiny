@@ -8,7 +8,7 @@
     "clean": "rm -rf storybook-static lib",
     "deploy": "./deploy.sh",
     "postinstall": "babel src/ -d lib/",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280 --debug",
+    "snapshot": "build-storybook && percy-storybook --widths=320,414,768,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0",
     "dev": "babel src/ -w -d lib/"
@@ -18,39 +18,43 @@
   "peerDependencies": {
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.6.1",
-    "babel-preset-react": "6.24.1"
+    "babel-preset-react": "6.24.1",
+    "styled-components": "^3.2.5"
   },
   "dependencies": {
     "@aller/eslint-config-aller": "0.5.2",
     "@maji/react-prism": "1.0.1",
-    "@storybook/addon-links": "3.3.15",
-    "@storybook/react": "3.3.15",
+    "@storybook/addon-links": "3.4.2",
+    "@storybook/react": "3.4.2",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
+    "babel-plugin-styled-components": "1.5.1",
     "babel-plugin-system-import-transformer": "3.1.0",
     "babel-plugin-transform-object-assign": "6.22.0",
     "intersection-observer": "0.5.0",
     "picturefill": "3.0.2",
     "polished": "1.9.2",
     "pretty-format": "22.4.3",
-    "prism-themes": "1.0.0",
-    "prismjs": "1.12.2",
+    "prism-themes": "1.0.1",
+    "prismjs": "1.14.0",
     "prop-types": "15.6.1",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
     "react-intersection-observer": "3.0.3",
-    "react-rating": "1.0.6",
+    "react-rating": "1.1.2",
+    "react-modal": "3.4.2",
     "react-stickyfill": "0.2.3",
     "react-styled-flexboxgrid": "2.2.0",
-    "striptags": "3.1.1",
-    "styled-components": "3.1.6"
+    "striptags": "3.1.1"
   },
   "devDependencies": {
     "@percy-io/percy-storybook": "1.3.3",
+    "@storybook/addon-viewport": "^3.4.1",
     "babel-cli": "6.26.0",
-    "babel-eslint": "8.2.2",
+    "babel-eslint": "8.2.3",
     "eslint": "4.19.1",
-    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-import": "2.11.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.7.0"
+    "eslint-plugin-react": "7.7.0",
+    "styled-components": "3.2.6"
   }
 }

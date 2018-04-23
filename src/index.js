@@ -65,6 +65,7 @@ export { ColorBox                } from './atoms/ColorBox';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
+export { Error                   } from './atoms/Error';
 export { Figure                  } from './atoms/Figure';
 export { FigCaption              } from './atoms/FigCaption';
 export { FontIcon                } from './atoms/FontIcon';
@@ -120,6 +121,10 @@ export { RightScrollArrow        } from './atoms/ScrollArrow';
 export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
+export { KKLogo                  } from './atoms/KKLogo';
+export { ButtonWithModal         } from './atoms/ButtonWithModal';
+export { NumberedListItem        } from './atoms/NumberedListItem';
+
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -142,7 +147,7 @@ export { LazyProgressiveImage    } from './molecules/LazyProgressiveImage';
 export { Source                  } from './molecules/Source';
 export { RecipeMetaData          } from './molecules/MainRecipe/RecipeMetaData';
 export { RecipeIngredients       } from './molecules/MainRecipe/RecipeIngredients';
-export { RecipeSteps             } from './molecules/MainRecipe/RecipeSteps';
+export { NumberedList            } from './molecules/NumberedList';
 export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
@@ -150,6 +155,7 @@ export {
 } from './molecules/HorizontalHeroUnit';
 export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
+export { SearchField             } from './molecules/SearchField';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';

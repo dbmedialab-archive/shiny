@@ -25,11 +25,12 @@ const LinkBar = ({
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar background={background} {...rest}>
-				{children && children.map((child, i) => {
+			<Bar background={background} position="static" {...rest}>
+				{children && React.Children.map(children, (child, i) => {
 					if (child.props && child.props.isListItem) {
 						return child;
 					}
+
 					return (
 						<LinkBarItem key={i} {...child.props}>
 							{child}
@@ -56,6 +57,7 @@ LinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
+	shouldWrap: PropTypes.bool,
 };
 
 LinkBar.defaultProps = {
@@ -69,6 +71,7 @@ LinkBar.defaultProps = {
 	zIndex: 4,
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
+	shouldWrap: false,
 };
 
 // When we export this as a styled component,

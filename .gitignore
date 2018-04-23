@@ -11,3 +11,5 @@ dsgit
 !deploy.sh
 
 
+.yarn-metadata.json
+yarn-error.log
