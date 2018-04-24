@@ -50,6 +50,7 @@ export const LinkBarLinkBase = styled.a`
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
+	text-transform: ${props => (props.uppercase && 'uppercase')};
 
 	:hover {
 		text-decoration: none;
@@ -126,4 +127,5 @@ export const LinkBarLinkBase = styled.a`
 `;
 LinkBarLinkBase.defaultProps = {
 	textColor: 'type',
+	uppercase: false,
 };

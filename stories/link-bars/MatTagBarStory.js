@@ -1,12 +1,13 @@
 import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
 import {
 	LinkBarLinkBordered,
 	Row,
+	Heading,
+	HugeHeading,
 } from '../../src';
 
 import theme from '../../src/themes/mat';
