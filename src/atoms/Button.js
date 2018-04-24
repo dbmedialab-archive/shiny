@@ -17,7 +17,7 @@ const Button = styled.button`
 	position: relative;
 	text-decoration: none;
 	text-align: center;
-	border-radius: ${props => `${props.borderRadius}%`};
+	border-radius: ${props => props.borderRadius};
 	display: inline-block;
 	padding-top: 0.7rem;
 	padding-right: 1.4rem;
