@@ -9,33 +9,36 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => {
 };
 
 const LinkBarLinkBordered = styled(LinkBarLink)`
+
 	border-radius: 0.3rem;
 	border: solid 0.1rem ${props => props.theme.colors.grayTint};	
-	color: ${props => props.theme.colors.grayTintDark} !important;
-	margin: 0 0.5rem 0.5rem;
+	margin: 0.25rem 0.5rem 0.25rem 0;
 	&:after {
    		content: none;
 	}
+	
+	// get rid of !important by increasing specificity of these styles
+	&&{
+		color: ${props => props.theme.colors.grayTintDark};
 		
-	${props => (
-		props.isActive && `
-			border-color: ${props.activeBackground || props.theme.colors.primary};
-			background-color: ${props.activeBackground || props.theme.colors.primary};
-			color: ${calculateTextColor(props.theme, props.activeBackground)} !important;
-		`
-	)}
-	
-	&:hover{
-		border-color: ${props => props.activeBackground || props.theme.colors.primary};
-		background-color: ${props => props.activeBackground || props.theme.colors.primary};
-		color: ${props => calculateTextColor(props.theme, props.activeBackground)} !important;
-	};
-	
-	&:focus{
-		border-color: ${props => props.activeBackground || props.theme.colors.primary} !important;
-		background-color: ${props => props.activeBackground || props.theme.colors.primary} !important;
-		color: ${props => calculateTextColor(props.theme, props.activeBackground)} !important;
-	};
+		//isActive state
+		border-color: ${props => props.isActive && (props.activeBackground || props.theme.colors.primary)};
+		background-color: ${props => props.isActive && (props.activeBackground || props.theme.colors.primary)};
+		color: ${props => props.isActive && calculateTextColor(props.theme, props.activeBackground)};
+		
+		
+		&:hover{
+			border-color: ${props => props.activeBackground || props.theme.colors.primary};
+			background-color: ${props => props.activeBackground || props.theme.colors.primary};
+			color: ${props => calculateTextColor(props.theme, props.activeBackground)};
+		};
+		
+		&:focus{
+			border-color: ${props => props.activeBackground || props.theme.colors.primary};
+			background-color: ${props => props.activeBackground || props.theme.colors.primary};
+			color: ${props => calculateTextColor(props.theme, props.activeBackground)};
+		};
+	}
 `;
 
 LinkBarLinkBordered.defaultProps = {
