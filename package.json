@@ -41,13 +41,13 @@
     "react-dom": "16.3.2",
     "react-intersection-observer": "3.0.3",
     "react-rating": "1.1.2",
-    "react-modal": "3.4.2",
+    "react-modal": "3.4.4",
     "react-stickyfill": "0.2.3",
     "react-styled-flexboxgrid": "2.2.0",
     "striptags": "3.1.1"
   },
   "devDependencies": {
-    "@percy-io/percy-storybook": "1.3.3",
+    "@percy-io/percy-storybook": "1.3.5",
     "@storybook/addon-viewport": "^3.4.1",
     "babel-cli": "6.26.0",
     "babel-eslint": "8.2.3",
