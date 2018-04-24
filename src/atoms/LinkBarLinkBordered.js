@@ -42,7 +42,7 @@ const LinkBarLinkBordered = styled(LinkBarLink)`
 `;
 
 LinkBarLinkBordered.defaultProps = {
-	uppercase: true,
+	ALLCAPS: true,
 };
 
 module.exports = { LinkBarLinkBordered };
