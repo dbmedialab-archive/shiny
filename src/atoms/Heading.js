@@ -50,7 +50,7 @@ const MediumHeading = ProtoHeading.extend`
 	${props => getSizes({ size: 'medium', ...props })}
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		${props => getSizes({ size: props.xsize || 'regular', ...props })}
+		${props => getSizes({ size: 'regular', ...props })}
 	}
 `;
 
@@ -81,12 +81,12 @@ const HugeHeading = ProtoHeading.extend`
 	}
 `;
 
-const Heading = ({ size, xsize, ...rest }) => {
+const Heading = ({ size, ...rest }) => {
 	switch (size) {
 	case 'small':
 		return <SmallHeading {...rest} />;
 	case 'medium':
-		return <MediumHeading xsize={xsize} {...rest} />;
+		return <MediumHeading {...rest} />;
 	case 'large':
 		return <LargeHeading {...rest} />;
 	case 'xlarge':

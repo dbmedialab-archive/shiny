@@ -123,11 +123,9 @@ export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { KKLogo                  } from './atoms/KKLogo';
 export { ButtonWithModal         } from './atoms/ButtonWithModal';
 export { NumberedListItem        } from './atoms/NumberedListItem';
-
-
-export { ActivityTime         } from './atoms/SvgIcon/ActivityTime';
-export { Difficulty         } from './atoms/SvgIcon/Difficulty';
-export { TotalTime         } from './atoms/SvgIcon/TotalTime';
+export { ActivityTime         	 } from './atoms/SvgIcon/ActivityTime';
+export { Difficulty        		 } from './atoms/SvgIcon/Difficulty';
+export { TotalTime        		 } from './atoms/SvgIcon/TotalTime';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
