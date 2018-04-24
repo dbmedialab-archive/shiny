@@ -17,7 +17,7 @@ const Button = styled.button`
 	position: relative;
 	text-decoration: none;
 	text-align: center;
-	border-radius: ${props => props.borderRadius || 0}%;
+	border-radius: ${props => `${props.borderRadius}%`};
 	display: inline-block;
 	padding-top: 0.7rem;
 	padding-right: 1.4rem;
@@ -32,6 +32,10 @@ const Button = styled.button`
 		color: ${props.background? getColor(props.background): props.theme.colors.button.background};
 	`}
 `;
+
+Button.defaultProps = {
+	borderRadius: 0,
+};
 
 
 Button.propTypes = {
