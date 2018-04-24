@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import parseColor from 'parse-color';
 import { LinkBarLink } from '..';
-import { stringToRGB } from '../utils';
 
 const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => {
-	const { r, g, b } = stringToRGB(backgroundColor);
+	const { r, g, b } = parseColor(backgroundColor);
 	const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000; // converting to YIQ to determine brightness of background
 	return (yiq >= 150) ? theme.colors.grayTintDark : theme.colors.white;
 };

@@ -1,7 +1,7 @@
 import { darken, lighten } from 'polished';
 
 const colorsToShade= {
-	primary: '#008080', // teal
+	primary: 'teal', // teal
 	secondary: 'darkgoldenrod',
 	pink: 'palevioletred',
 	purple: 'darkorchid',
