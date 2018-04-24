@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { smallUp } from '../../utils/media-queries';
 
 // @TODO: Rewrite this piece of code to have mobile first styles
 const SvgIconWrapper = styled.div`
