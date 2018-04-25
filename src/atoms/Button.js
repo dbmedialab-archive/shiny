@@ -13,7 +13,7 @@ const Button = styled.button`
 	cursor: pointer;
 	font-weight: 700;
 	line-height: normal;
-	margin: 0 0 1.25rem;
+	margin: 0 0.25rem 1.25rem;
 	position: relative;
 	text-decoration: none;
 	text-align: center;
@@ -25,6 +25,7 @@ const Button = styled.button`
 	padding-left: 1.4rem;
 	font-size: 0.9rem;
 	transition: background-color 300ms ease-out;
+	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
 	${props => props.outline && `
 		border: .1rem solid ${props.background? getColor(props.background):  props.theme.colors.button.background};
@@ -37,6 +38,7 @@ const Button = styled.button`
 Button.propTypes = {
 	background: propTypes.string,
 	textColor: propTypes.string,
+	ALLCAPS: false,
 };
 
 export { Button };
