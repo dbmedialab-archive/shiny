@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "node"
+  - "9"
   - "8"
 
 before_install:
@@ -12,7 +12,7 @@ before_script:
 
 script:
   - |
-    if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
+    if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "9" ]]; then
       echo "Sending PR snapshots to Percy";
       npm run snapshot;
     elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
