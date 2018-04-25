@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '..';
@@ -12,7 +11,6 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 	font-weight: 800;
 	cursor: pointer;
 	z-index: 9;
-	height: 100%;
 	background: ${props => props.background};
 
 	/* ::before is used to add gradient shading beside the arrow */
@@ -42,31 +40,6 @@ const Arrow = LinkBarLinkBase.withComponent('div').extend`
 		content: '';
 	}
 `;
-const LeftScrollArrow = props => (
-	<Arrow {...props} pointsTo="left">
-		<FontIcon name="arrow-alt-left" color={props.color} />
-	</Arrow>);
 
-LeftScrollArrow.propTypes = {
-	color: propTypes.string,
-};
-LeftScrollArrow.defaultProps = {
-	color: 'inherit',
-};
-
-const RightScrollArrow = props => (
-	<Arrow {...props} pointsTo="right">
-		<FontIcon name="arrow-alt-right" color={props.color} />
-	</Arrow>);
-
-RightScrollArrow.propTypes = {
-	color: propTypes.string,
-};
-RightScrollArrow.defaultProps = {
-	color: 'inherit',
-};
-
-module.exports = {
-	LeftScrollArrow,
-	RightScrollArrow,
-};
+export const LeftScrollArrow = props => <Arrow {...props} pointsTo="left"><FontIcon name="arrow-alt-left" /></Arrow>;
+export const RightScrollArrow = props => <Arrow {...props} pointsTo="right"><FontIcon name="arrow-alt-right" /></Arrow>;
