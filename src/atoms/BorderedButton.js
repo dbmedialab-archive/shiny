@@ -13,7 +13,6 @@ const BorderedButton = Button.extend`
 	border: solid 0.1rem ${props => props.theme.colors.grayTint};
 	transition-property: color, background-color, border-color;
 	background-color: transparent;
-	font-size: 1.4rem;
 	font-weight: 500;
 	letter-spacing: 0;
 	outline: none;
