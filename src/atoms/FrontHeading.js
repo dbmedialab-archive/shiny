@@ -37,7 +37,13 @@ export const FrontMediumHeading = MediumHeading.extend`
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 `;
-export const FrontLargeHeading = LargeHeading.extend`${FheadStyle}`;
+export const FrontLargeHeading = LargeHeading.extend`
+	${FheadStyle}
+	font-size: ${props => props.theme.variables.headingMediumSize};
+	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	font-size: ${props => props.theme.variables.headingLargeSize};
+	}
+`;
 export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
 export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;
 
