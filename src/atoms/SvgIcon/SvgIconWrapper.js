@@ -15,4 +15,4 @@ const SvgIconWrapper = Styled.div`
  	`)}
 `;
 
-export default SvgIconWrapper;
+export { SvgIconWrapper };

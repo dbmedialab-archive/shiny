@@ -43,21 +43,24 @@ export const LinkBarLinkBase = styled.a`
 	border: 0;
 	outline: none;
 	text-decoration: none;
-	color: ${getTextColor} !important;
 	font-family: ${props => props.theme.variables.headingsFont};
 	font-size: ${props => props.theme.variables.uiRegularSize};
 	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
-
+	${props => (props.ALLCAPS && 'text-transform: uppercase')};
+	
 	:hover {
 		text-decoration: none;
 	}
 
-	&:hover {
-		background: ${props => (props.activeBackground)};
-		color: ${props => props.theme.colors[props.activeTextColor || props.textColor]} !important;
+	&{
+		color: ${getTextColor};
+		:hover {
+			background: ${props => (props.activeBackground)};
+			color: ${props => props.theme.colors[props.activeTextColor || props.textColor]};
+		}
 	}
 
 	&:focus {
@@ -126,4 +129,5 @@ export const LinkBarLinkBase = styled.a`
 `;
 LinkBarLinkBase.defaultProps = {
 	textColor: 'type',
+	ALLCAPS: false,
 };
