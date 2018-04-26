@@ -1,20 +1,21 @@
 import { css } from 'styled-components';
 import colors from './colors';
+import { fontSpecs } from './font-specs';
 
 const variables = {
-	mainFont: '"Open Sans","Helvetica",Helvetica,Arial,sans-serif',
-	headingsFont: '"GFS Didot", Didot, Georgia, serif',
+	mainFont: '"Open Sans", Helvetica, Arial, sans-serif',
+	headingsFont: '"Didot 16 A", "Didot 16 B", Didot, "GFS Didot", Georgia, serif',
 };
 
 const global = css`
-	@import url('https://fonts.googleapis.com/css?family=GFS+Didot:400,700,800|Open+Sans:400,700,800');
+	${fontSpecs}
 
 	* {
 		box-sizing: border-box;
 	}
 
 	body {
-		color: #222;
+		color: ${colors.type}
 		padding: 0;
 		margin: 0;
 		font-family: ${variables.mainFont};
