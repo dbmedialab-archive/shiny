@@ -15,13 +15,14 @@ const MoreStyle = styled.div`
 	& h1 {
 		margin-bottom: 0.5rem;
 		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-			margin-bottom: 1.5rem;
-			font-size: 3.5rem;
+			font-size: 1.6rem;
+			margin-bottom: 0.5rem;
 		}
 	}
 	
 	& .icon-wrapper {
 		width: 100%;
+		margin-bottom: 1rem;
 	}
 		& .icon-wrapper:before {
 			content: "";
@@ -29,19 +30,20 @@ const MoreStyle = styled.div`
 			border-bottom: 0.3rem solid #ff790a;
 			display: block;
 			margin-bottom: 1.7rem;
+			@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+				margin: 0 auto;
+				border-bottom: 0.2rem solid #ff790a;
+				width: 60%;
+				margin-bottom: 0.5rem;
+			}
 		}
-	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-		div {
-			width: 3rem;
-		}
-	}
 `;
 
 const MoreComponent = props => (
 	<MoreStyle>
 		<MediumHeading className="heading">Vis flere</MediumHeading>
 		<div className="icon-wrapper">
-			<SvgIcon name="double-arrow" color="#ff790a" size={2} />
+			<SvgIcon name="double-arrow" color="#ff790a" size={1.6} />
 		</div>
 	</MoreStyle>
 );
