@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SvgIconWrapper from './SvgIconWrapper';
+import { SvgIconWrapper } from './SvgIconWrapper';
 
 import { ActivityTime 		 } from './ActivityTime';
 import { Difficulty   		 } from './Difficulty';
