@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import propTypes from 'prop-types';
 
-const NumberedListItem = styled.div`
+const NumberedListItem = styled.li`
 	list-style: none;
 	padding: 0;
 	font-family: Cabin;
