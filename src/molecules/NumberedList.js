@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { NumberedListItem } from '../atoms/NumberedListItem';
 
 const NumberedList = ({ items, itemProp }) => (
-	<React.Fragment>
+	<ol>
 		{items.map((item, index) => {
 			return (
 				<NumberedListItem
@@ -15,7 +15,7 @@ const NumberedList = ({ items, itemProp }) => (
 				</NumberedListItem>
 			);
 		})}
-	</React.Fragment>
+	</ol>
 );
 
 NumberedList.propTypes = {
