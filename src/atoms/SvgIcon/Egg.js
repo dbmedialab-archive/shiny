@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Egg = props => (
-	<svg width="25px" height="23px" viewBox="0 0 25 23" version="1.1">
+	<svg width="25px" height="30px" viewBox="0 0 25 23" version="1.1">
 		<g id="Index" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="Desktop-HD" transform="translate(-443.000000, -250.000000)" fill="#767676">
 				<g id="allergies-and-preferences"transform="translate(216.000000, 121.000000)">
