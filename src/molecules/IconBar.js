@@ -10,16 +10,20 @@ const PaddingLess = Col.extend`
 	padding: 0;
 `;
 
+const RowBase = Row.extend`
+	align-items: baseline;
+`;
+
 const IconBar = props => (
-	<Row>
+	<RowBase>
 		{
 			props.entities.map((entity, i) => (
-				<PaddingLess xs key={i}>
+				<PaddingLess className="Zalupa" xs={4} key={i}>
 					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
 				</PaddingLess>
 			))
 		}
-	</Row>
+	</RowBase>
 );
 
 IconBar.propTypes = {
