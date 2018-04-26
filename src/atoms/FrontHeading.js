@@ -41,7 +41,7 @@ export const FrontLargeHeading = LargeHeading.extend`
 	${FheadStyle}
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-	font-size: ${props => props.theme.variables.headingLargeSize};
+		font-size: ${props => props.theme.variables.headingLargeSize};
 	}
 `;
 export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
