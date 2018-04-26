@@ -23,7 +23,7 @@ const BorderedButton = Button.extend`
 		color: ${props.isActive && calculateTextColor(props.theme)};
 	`)};
 	
-	&:hover, &:focus{
+	&:hover, &:active{
 		border-color: ${props => props.theme.colors.primary};
 		background-color: ${props => props.theme.colors.primary};
 		color: ${props => calculateTextColor(props.theme)};
