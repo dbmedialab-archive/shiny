@@ -18,7 +18,7 @@ const IconBar = props => (
 	<RowBase>
 		{
 			props.entities.map((entity, i) => (
-				<PaddingLess className="Zalupa" xs={4} key={i}>
+				<PaddingLess xs={4} key={i}>
 					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
 				</PaddingLess>
 			))
