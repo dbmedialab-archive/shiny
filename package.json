@@ -25,7 +25,7 @@
     "@aller/eslint-config-aller": "0.5.2",
     "@maji/react-prism": "1.0.1",
     "@storybook/addon-links": "3.4.2",
-    "@storybook/react": "3.4.2",
+    "@storybook/react": "3.4.3",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "babel-plugin-styled-components": "1.5.1",
     "babel-plugin-system-import-transformer": "3.1.0",
