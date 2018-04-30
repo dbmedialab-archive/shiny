@@ -73,14 +73,32 @@ const OppskriftFooter = () => (
 					<Row center="md">
 						<Col md={3}>
 							<AllerIconWrapper>
-								<SvgIcon name="aller" size={6.8} />
+								<a
+									href="https://www.aller.se"
+									target="_blank"
+									rel="noreferrer noopener"
+								>
+									<SvgIcon name="aller" size={6.8} />
+								</a>
 							</AllerIconWrapper>
 						</Col>
 						<Col md={3}>
-							<SvgIcon name="kk" size={4.5} />
+							<a
+								href="https://www.aller.se"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								<SvgIcon name="kk" size={4.5} />
+							</a>
 						</Col>
 						<Col md={12}>
-							<SvgIcon name="dagbladet" size={8.7}  />
+							<a
+								href="https://www.aller.se"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
+								<SvgIcon name="dagbladet" size={8.7}  />
+							</a>
 						</Col>
 					</Row>
 					<VerticalSeparator height={2.8} />
