@@ -17,6 +17,8 @@ import { BylineWithTwoLines } from '../../atoms/BylineWithTwoLines';
 const RecipeMetaDataWrapper = styled.div`
 	padding: 0;
 	margin: 0 auto;
+
+	/* @TODO Rewrite these styles to be mobile first */
 	@media screen and (min-width: ${props => props.theme.variables.mediumWidth}) {
 		padding: 1% 10%;
 	}

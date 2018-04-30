@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { smallUp } from '../utils/media-queries';
 
 const getTextColor = ({
 	theme, isActive, activeTextColor, textColor,
@@ -94,7 +95,7 @@ export const LinkBarLinkBase = styled.a`
 		transition: width .2s ease-in-out;
 	}
 
-	@media (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		${(props) => {
 		if (props.size === 'xsmall') {
 			return css`

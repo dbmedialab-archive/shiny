@@ -1,4 +1,6 @@
 import { css } from 'styled-components';
+import { smallUp } from '../utils/media-queries';
+
 import {
 	SmallHeading,
 	MediumHeading,
@@ -27,13 +29,13 @@ const FheadStyle = props => css`
 
 export const FrontSmallHeading = SmallHeading.extend`
 	${FheadStyle}
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
 `;
 export const FrontMediumHeading = MediumHeading.extend`
 	${FheadStyle}
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media ${smallUp} {
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 `;

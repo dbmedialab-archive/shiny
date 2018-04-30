@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { MediumHeading } from '../Heading';
 import { SvgIcon } from '../SvgIcon';
 
+// @TODO: Rewrite this piece of code to have mobile first styles
 const MoreStyle = styled.div`
 	text-align: center;
 	text-transform: uppercase;
@@ -10,8 +11,8 @@ const MoreStyle = styled.div`
 	cursor: pointer;
 	@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		width: 16rem;
-	} 
-	
+	}
+
 	& h1 {
 		margin-bottom: 0.5rem;
 		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
@@ -19,7 +20,7 @@ const MoreStyle = styled.div`
 			margin-bottom: 0.5rem;
 		}
 	}
-	
+
 	& .icon-wrapper {
 		width: 100%;
 		margin-bottom: 1rem;
