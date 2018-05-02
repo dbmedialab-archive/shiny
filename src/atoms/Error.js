@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { getVariable } from '../utils';
-import {Col, XLargePlugHeading, SmallHeading, Button, SvgIcon} from '..';
+import { Col, XLargePlugHeading, SmallHeading, Button, SvgIcon } from '..';
 
 const ErrorWrapper = Col.extend`
 	text-align: center;
@@ -24,7 +24,9 @@ const ReloadButton = Button.extend`
 	outline: none;
 `;
 
-const Error = ({ icon, message, additionalInfo, onRetryButtonClick }) => {
+const Error = ({
+	icon, message, additionalInfo, onRetryButtonClick,
+}) => {
 	return (
 		<React.Fragment>
 			<ErrorWrapper center="xs">
@@ -49,14 +51,14 @@ Error.propTypes = {
 	message: propTypes.string,
 	additionalInfo: propTypes.string,
 	onRetryButtonClick: propTypes.func,
-	icon: propTypes.string.isRequired
+	icon: propTypes.string,
 };
 
 Error.defaultProps = {
 	message: 'Det har oppstått en feil',
 	additionalInfo: '',
 	icon: 'exclamation-mark',
-	onRetryButtonClick: void 0
+	onRetryButtonClick: undefined,
 };
 
 export { Error };
