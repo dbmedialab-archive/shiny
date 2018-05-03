@@ -25,12 +25,12 @@ const ReloadButton = Button.extend`
 `;
 
 const Error = ({
-	icon, message, additionalInfo, onRetryButtonClick,
+	icon, message, additionalInfo, onRetryButtonClick, color
 }) => {
 	return (
 		<React.Fragment>
 			<ErrorWrapper center="xs">
-				<SvgIcon name={icon} size={4} size-sm={5} />
+				<SvgIcon name={icon} size={4} size-sm={5} color={color} />
 				<XLargePlugHeading>{message}</XLargePlugHeading>
 				{additionalInfo && <Message>{additionalInfo}</Message>}
 				{onRetryButtonClick &&
@@ -52,6 +52,7 @@ Error.propTypes = {
 	additionalInfo: propTypes.string,
 	onRetryButtonClick: propTypes.func,
 	icon: propTypes.string,
+	color: propTypes.string,
 };
 
 Error.defaultProps = {
@@ -59,6 +60,7 @@ Error.defaultProps = {
 	additionalInfo: '',
 	icon: 'exclamation-mark',
 	onRetryButtonClick: undefined,
+	color: 'type',
 };
 
 export { Error };
