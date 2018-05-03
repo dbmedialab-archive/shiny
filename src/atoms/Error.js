@@ -25,14 +25,14 @@ const ReloadButton = Button.extend`
 `;
 
 const Error = ({
-	icon, message, additionalInfo, onRetryButtonClick, color,
+	icon, message, AdditionalInfo, onRetryButtonClick, color,
 }) => {
 	return (
 		<React.Fragment>
 			<ErrorWrapper center="xs">
 				<SvgIcon name={icon} size={4} size-sm={5} color={color} />
 				<XLargePlugHeading>{message}</XLargePlugHeading>
-				{additionalInfo && <Message>{additionalInfo}</Message>}
+				{AdditionalInfo && <AdditionalInfo />}
 				{onRetryButtonClick &&
 				<ReloadButton
 					textColor="white"
@@ -49,7 +49,7 @@ const Error = ({
 
 Error.propTypes = {
 	message: propTypes.string,
-	additionalInfo: propTypes.string,
+	AdditionalInfo: propTypes.func,
 	onRetryButtonClick: propTypes.func,
 	icon: propTypes.string,
 	color: propTypes.string,
@@ -57,7 +57,7 @@ Error.propTypes = {
 
 Error.defaultProps = {
 	message: 'Det har oppstått en feil',
-	additionalInfo: '',
+	AdditionalInfo: () => null,
 	icon: 'exclamation-mark',
 	onRetryButtonClick: undefined,
 	color: 'type',

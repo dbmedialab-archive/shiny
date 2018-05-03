@@ -33,7 +33,7 @@ import {
 
 		<Heading>With additional information</Heading>
 		<DemoContainer >
-			<Error additionalInfo="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå" />
+			<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 		</DemoContainer>
 
 		<Code language="jsx">
@@ -42,14 +42,14 @@ import {
 	Error
 } from '@aller/shiny';
 
-<Error info="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå" />
+<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 			`}
 		</Code>
 
 		<Heading>With additional information and callback</Heading>
 		<DemoContainer>
 			<Error
-				additionalInfo="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå"
+				AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -61,17 +61,18 @@ import {
 } from '@aller/shiny';
 
 <Error
-	additionalInfo="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå"
+	AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>
 	onRetryButtonClick={() => {}}
 />
 `}
 		</Code>
-		<Heading>With custom svg icon and information</Heading>
+		<Heading>With custom colored svg icon and information</Heading>
 		<DemoContainer>
 			<Error
+				color="primary"
 				message="Fant ingen videoer"
 				icon="crossed-video-camera"
-				additionalInfo="Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.  "
+				AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -83,9 +84,10 @@ import {
 } from '@aller/shiny';
 
 <Error
+	color="primary"
 	message="Fant ingen videoer"
 	icon="crossed-video-camera"
-	additionalInfo="Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.  "
+	AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
 />
 `}
 		</Code>
