@@ -1,16 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { getVariable } from '../utils';
-import { Col, XLargePlugHeading, SmallHeading, Button, SvgIcon } from '..';
+import { Col, XLargePlugHeading, Button, SvgIcon } from '..';
 
 const ErrorWrapper = Col.extend`
 	text-align: center;
 	font-family: Cabin,sans-serif;
 	padding: 3rem;
-`;
-
-const Message = SmallHeading.extend`
-	font-weight: 400;
 `;
 
 const ReloadButton = Button.extend`
