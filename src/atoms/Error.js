@@ -25,7 +25,7 @@ const ReloadButton = Button.extend`
 `;
 
 const Error = ({
-	icon, message, additionalInfo, onRetryButtonClick, color
+	icon, message, additionalInfo, onRetryButtonClick, color,
 }) => {
 	return (
 		<React.Fragment>
