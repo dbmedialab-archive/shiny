@@ -1,23 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import propTypes from 'prop-types';
-import { getColor, getVariable } from '../utils';
-import { Col, XLargePlugHeading, SmallHeading, Button } from '..';
+import { getVariable } from '../utils';
+import { Col, XLargePlugHeading, Button, SvgIcon } from '..';
 
 const ErrorWrapper = Col.extend`
 	text-align: center;
 	font-family: Cabin,sans-serif;
 	padding: 3rem;
-`;
-
-const ExclamationPoint = styled.div`
-	color: ${getColor('primary')};
-	font-size: 7rem;
-	line-height: 7rem;
-`;
-
-const Message = SmallHeading.extend`
-	font-weight: 400;
 `;
 
 const ReloadButton = Button.extend`
@@ -31,13 +20,15 @@ const ReloadButton = Button.extend`
 	outline: none;
 `;
 
-const Error = ({ message, onRetryButtonClick }) => {
+const Error = ({
+	icon, message, AdditionalInfo, onRetryButtonClick, iconColor,
+}) => {
 	return (
 		<React.Fragment>
 			<ErrorWrapper center="xs">
-				<ExclamationPoint> ! </ExclamationPoint>
-				<XLargePlugHeading>Det har oppstått en feil</XLargePlugHeading>
-				{message && <Message>{message}</Message>}
+				<SvgIcon name={icon} size={4} size-sm={5} color={iconColor} />
+				<XLargePlugHeading>{message}</XLargePlugHeading>
+				{AdditionalInfo && <AdditionalInfo />}
 				{onRetryButtonClick &&
 				<ReloadButton
 					textColor="white"
@@ -54,12 +45,18 @@ const Error = ({ message, onRetryButtonClick }) => {
 
 Error.propTypes = {
 	message: propTypes.string,
+	AdditionalInfo: propTypes.func,
 	onRetryButtonClick: propTypes.func,
+	icon: propTypes.string,
+	iconColor: propTypes.string,
 };
 
 Error.defaultProps = {
-	message: undefined,
+	message: 'Det har oppstått en feil',
+	AdditionalInfo: () => null,
+	icon: 'exclamation-mark',
 	onRetryButtonClick: undefined,
+	iconColor: 'primary',
 };
 
 export { Error };

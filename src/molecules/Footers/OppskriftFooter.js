@@ -84,16 +84,16 @@ const OppskriftFooter = () => (
 						</Col>
 						<Col md={3}>
 							<a
-								href="https://www.aller.se"
+								href="https://www.kk.no"
 								target="_blank"
 								rel="noreferrer noopener"
 							>
-								<SvgIcon name="kk" size={4.5} />
+								<SvgIcon name="kk" size={4.5} color="white" />
 							</a>
 						</Col>
 						<Col md={12}>
 							<a
-								href="https://www.aller.se"
+								href="https://www.dagbladet.no"
 								target="_blank"
 								rel="noreferrer noopener"
 							>

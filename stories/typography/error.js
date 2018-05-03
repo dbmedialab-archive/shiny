@@ -31,9 +31,9 @@ import {
 			`}
 		</Code>
 
-		<Heading>With message</Heading>
+		<Heading>With additional information</Heading>
 		<DemoContainer >
-			<Error message="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå" />
+			<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 		</DemoContainer>
 
 		<Code language="jsx">
@@ -42,14 +42,14 @@ import {
 	Error
 } from '@aller/shiny';
 
-<Error message="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå" />
+<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 			`}
 		</Code>
 
-		<Heading>With message and callback</Heading>
+		<Heading>With additional information and callback</Heading>
 		<DemoContainer>
 			<Error
-				message="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå"
+				AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -61,8 +61,33 @@ import {
 } from '@aller/shiny';
 
 <Error
-	message="Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå"
+	AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>
 	onRetryButtonClick={() => {}}
+/>
+`}
+		</Code>
+		<Heading>With custom colored svg icon and information</Heading>
+		<DemoContainer>
+			<Error
+				iconColor="primary"
+				message="Fant ingen videoer"
+				icon="crossed-video-camera"
+				AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
+				onRetryButtonClick={() => {}}
+			/>
+		</DemoContainer>
+
+		<Code language="jsx">
+			{`
+import {
+	Error
+} from '@aller/shiny';
+
+<Error
+	iconColor="primary"
+	message="Fant ingen videoer"
+	icon="crossed-video-camera"
+	AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
 />
 `}
 		</Code>

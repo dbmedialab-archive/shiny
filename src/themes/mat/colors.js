@@ -8,6 +8,7 @@ const colorsToShade= {
 	type: '#333333',
 	white: '#ffffff',
 	red: '#ff5500',
+	sand: '#f8f8f1',
 };
 
 // Creates 4 shades of each color in colorsToShade
