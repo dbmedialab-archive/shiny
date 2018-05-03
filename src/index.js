@@ -114,6 +114,7 @@ export { SmallLinkBarDropdown    } from './atoms/LinkBarDropdown';
 export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
 export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
 export { ShinyLogo               } from './atoms/ShinyLogo';
+export { ThemeColor              } from './atoms/ThemeColor';
 export { ThemeSelector           } from './atoms/ThemeSelector';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { LeftScrollArrow         } from './atoms/ScrollArrow';
