@@ -93,7 +93,7 @@ const SvgIcon = props => (
 				case 'exclamation-mark':
 				case 'exclamation-point':
 				case 'exclamation':
-						return <ExclamationMark {...props} />;
+					return <ExclamationMark {...props} />;
 				default:
 					return null;
 				}
