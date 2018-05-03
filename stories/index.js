@@ -11,7 +11,6 @@ import lazyProgressiveImage from './LazyProgressiveImage';
 import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
-import heroes from './Heroes';
 import rating from './rating';
 
 introduction();
@@ -32,4 +31,3 @@ lazyProgressiveImage();
 matComponents();
 logos();
 forms();
-heroes();
