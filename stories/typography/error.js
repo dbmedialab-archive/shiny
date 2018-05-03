@@ -69,7 +69,7 @@ import {
 		<Heading>With custom colored svg icon and information</Heading>
 		<DemoContainer>
 			<Error
-				color="primary"
+				iconColor="primary"
 				message="Fant ingen videoer"
 				icon="crossed-video-camera"
 				AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
@@ -84,7 +84,7 @@ import {
 } from '@aller/shiny';
 
 <Error
-	color="primary"
+	iconColor="primary"
 	message="Fant ingen videoer"
 	icon="crossed-video-camera"
 	AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
