@@ -84,7 +84,7 @@ const OppskriftFooter = () => (
 						</Col>
 						<Col md={3}>
 							<a
-								href="https://www.aller.se"
+								href="https://www.kk.no"
 								target="_blank"
 								rel="noreferrer noopener"
 							>
@@ -93,7 +93,7 @@ const OppskriftFooter = () => (
 						</Col>
 						<Col md={12}>
 							<a
-								href="https://www.aller.se"
+								href="https://www.dagbladet.no"
 								target="_blank"
 								rel="noreferrer noopener"
 							>
