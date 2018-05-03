@@ -11,7 +11,7 @@ const SvgIconWrapper = Styled.div`
  	}`)}
  	
  	path {
- 		fill: ${props => props.theme.colors.primary};
+ 		fill: ${props => props.theme.colors[props.color]};
  	}
 `;
 

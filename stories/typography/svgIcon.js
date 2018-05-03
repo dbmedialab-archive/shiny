@@ -30,6 +30,13 @@ export default () => (
 						<SvgIcon name="difficulty" value={1} size={5} />
 					`}
 				</Code>
+				<Code language="jsx">
+					{`
+						import { SvgIcon } from '@aller/shiny';
+
+						<SvgIcon color="primary" name="exclamation" value={1} size={5} />
+					`}
+				</Code>
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>
@@ -109,6 +116,12 @@ export default () => (
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="circle-with-text" text="kk" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText color="primary" name="exclamation" text="exclamation" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText color="primary" name="crossed-video-camera" text="crossed-video-camera" />
 			</Col>
 		</Row>
 	</section>

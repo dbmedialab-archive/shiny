@@ -31,7 +31,7 @@ import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size} size-sm={props['size-sm']}>
+	<SvgIconWrapper size={props.size} size-sm={props['size-sm']} color={props.color}>
 		{
 			(() => {
 				switch (props.name) {
@@ -105,11 +105,13 @@ SvgIcon.propTypes = {
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
+	'color': PropTypes.string,
 };
 SvgIcon.defaultProps = {
 	'size': 3.2,
 	'size-sm': null,
 	'name': '',
+	'color': 'type',
 };
 
 export { SvgIcon };
