@@ -77,7 +77,7 @@ const OppskriftFooter = () => (
 							</AllerIconWrapper>
 						</Col>
 						<Col md={3}>
-							<SvgIcon name="kk" size={4.5} />
+							<SvgIcon name="kk" size={4.5} color="white" />
 						</Col>
 						<Col md={12}>
 							<SvgIcon name="dagbladet" size={8.7}  />
