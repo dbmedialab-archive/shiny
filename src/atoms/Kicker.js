@@ -9,7 +9,7 @@ const Kicker = styled.h1`
 	margin: 0;
 	padding: 0.6rem 0;
 	font-size: 1.3rem;
-	font-size: 1.5rem;
+	line-height: 1.5rem;
 	font-weight: bold;
 	color: ${props => getColor(props.textColor)};
 	background-color: ${props => getColor((props.backgroundColor || props.color))};
