@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { getColor } from '../utils';
 
+// @TODO Use sizes from theme
 const Kicker = styled.h1`
 	text-align: center;
 	text-transform: uppercase;
@@ -9,7 +10,7 @@ const Kicker = styled.h1`
 	margin: 0;
 	padding: 0.6rem 0;
 	font-size: 1.3rem;
-	line-height: 1.5rem;
+	line-height: 1.95rem;
 	font-weight: bold;
 	color: ${props => getColor(props.textColor)};
 	background-color: ${props => getColor((props.backgroundColor || props.color))};
