@@ -9,7 +9,7 @@ const BlockLink = styled.a`
 	border-bottom: 0 none;
 	line-height: 0;
 	text-decoration: none;
-	color: inherit !important;
+	color: inherit;
 `;
 
 export { BlockLink };
