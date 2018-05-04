@@ -36,8 +36,11 @@ const PlugLink = BlockLink.extend`
 	}
 `;
 
+// @TODO Use sizes from theme
 const Description = styled.p`
 	color: ${props => props.theme.colors.type};
+	font-size: 1.6rem;
+	line-height: 2.4rem;
 `;
 
 const TrysilPlug = ({
