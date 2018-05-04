@@ -4,6 +4,11 @@ import styled from 'styled-components';
 import stripTags from 'striptags';
 
 import {
+	getColor,
+	getVariable,
+} from '../utils';
+
+import {
 	Article,
 	Kicker,
 	PlugHeading as DefaultHeading,
@@ -38,9 +43,9 @@ const PlugLink = BlockLink.extend`
 
 // @TODO Use sizes from theme
 const Description = styled.p`
-	color: ${props => props.theme.colors.type};
-	font-size: 1.6rem;
-	line-height: 2.4rem;
+	color: ${getColor('type')};
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
 `;
 
 const TrysilPlug = ({
