@@ -9,8 +9,8 @@ const Ol = styled.ol`
 	padding: 0;
 `;
 
-const NumberedList = ({ items, itemProp }) => (
-	<Ol>
+const NumberedList = ({ items, itemProp, className }) => (
+	<Ol className={className}>
 		{items.map((item, index) => {
 			return (
 				<NumberedListItem
