@@ -8,8 +8,6 @@ import {
 	Heading,
 	HugeHeading,
 	BlockLink,
-	LazyProgressiveImage,
-	Source,
 	SmallHeading,
 	Row,
 	Col,
