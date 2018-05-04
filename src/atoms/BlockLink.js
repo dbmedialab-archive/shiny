@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 const BlockLink = styled.a`
 	display: block;
-	color: ${props => props.theme.colors.textColor};
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	background: transparent;
+	border-bottom: 0 none;
+	line-height: 0;
 	text-decoration: none;
-	outline: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
+	color: inherit !important;
 `;
 
 export { BlockLink };
