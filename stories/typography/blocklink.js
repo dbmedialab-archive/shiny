@@ -12,7 +12,7 @@ import {
 	MediumPlugHeading,
 } from '../../src';
 
-const imgUrl = 'https://images.pexels.com/photos/60006/spring-tree-flowers-meadow-60006.jpeg?auto=compress&cs=tinysrgb&h=350';
+const imgUrl = 'https://images.pexels.com/photos/60006/spring-tree-flowers-meadow-60006.jpeg?cs=tinysrgb&h=350';
 export default () => (
 	<section>
 		<HugeHeading>Block Link</HugeHeading>
