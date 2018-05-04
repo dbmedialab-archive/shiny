@@ -10,7 +10,13 @@ const ColorTextBox = styled(Col)`
 	letter-spacing: .05rem;
 	text-align: left;
 	color: ${props => getColor(props.textColor)};
-	background-color: ${props =>  getColor(props.bgColor)};
+	background-color: ${props => getColor(props.bgColor)};
+	width: 100%;
+	height: 100%;
+	
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		padding: 7rem 10rem;
+	}
 `;
 
 ColorTextBox.defaultProps = {

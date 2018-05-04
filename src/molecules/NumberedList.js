@@ -27,10 +27,12 @@ const NumberedList = ({ items, itemProp, className }) => (
 NumberedList.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.node),
 	itemProp: PropTypes.string,
+	className: PropTypes.string,
 };
 NumberedList.defaultProps = {
 	items: [],
 	itemProp: '',
+	className: '',
 };
 
 export { NumberedList };
