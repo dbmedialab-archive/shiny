@@ -6,10 +6,10 @@ import {
 } from '../utils';
 
 const BodyText = styled.p`
-	font-weight: 300;
+	margin-bottom: ${getVariable('verticalBase')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${getVariable('uiRegularLineHeight')};
-	margin-bottom: ${getVariable('verticalBase')};
+	font-weight: ${getVariable('regularWeight')};
 	color: ${getColor('type')};
 	text-rendering: optimizeLegibility;
 `;
