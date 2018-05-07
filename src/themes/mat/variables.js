@@ -8,10 +8,10 @@ export default {
 	headingSmallLineHeight: '2.3rem',
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.5rem',
-	headingRegularSize: '2.0rem',
+	headingRegularSize: '2.2rem',
 	headingRegularLineHeight: '2.7rem',
-	headingLargeSize: '2.2rem',
-	headingLargeLineHeight: '2.7rem',
+	headingLargeSize: '2.4rem',
+	headingLargeLineHeight: '3.1rem',
 
 
 	headingXlargeSize: '2.8rem',

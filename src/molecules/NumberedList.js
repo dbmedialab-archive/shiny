@@ -9,8 +9,8 @@ const Ol = styled.ol`
 	padding: 0;
 `;
 
-const NumberedList = ({ items, itemProp }) => (
-	<Ol>
+const NumberedList = ({ items, itemProp, className }) => (
+	<Ol className={className}>
 		{items.map((item, index) => {
 			return (
 				<NumberedListItem
@@ -27,10 +27,12 @@ const NumberedList = ({ items, itemProp }) => (
 NumberedList.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.node),
 	itemProp: PropTypes.string,
+	className: PropTypes.string,
 };
 NumberedList.defaultProps = {
 	items: [],
 	itemProp: '',
+	className: '',
 };
 
 export { NumberedList };
