@@ -48,10 +48,6 @@ const StyledLink = styled.a`
 
 const DefaultButton = ({
 	children,
-	PrefixIcon,
-	prefixIconColor,
-	SuffixIcon,
-	suffixIconColor,
 	size,
 	type,
 	theme: {
@@ -59,34 +55,13 @@ const DefaultButton = ({
 	} = {},
 	...props
 }) => {
-	let iconSize = '1.8rem';
-	if (size === 'small') { iconSize = '1.4rem'; }
-	if (size === 'tiny') { iconSize = '1.2rem'; }
-
-	const iconStyles = {
-		NavigationChevronRight: {
-			height: iconSize,
-			width: iconSize,
-			verticalAlign: 'middle',
-			margin: '0 -.5rem 0 0',
-		},
-	};
-	const prefix = (PrefixIcon && PrefixIcon.displayName) ?
-		iconStyles[PrefixIcon.displayName] :
-		{};
-	const suffix = (SuffixIcon && SuffixIcon.displayName) ?
-		iconStyles[SuffixIcon.displayName] :
-		{};
-
 	return (
 		<StyledLink
 			{...props}
 			type={type}
 			size={size}
 		>
-			{PrefixIcon && <PrefixIcon color={colors[prefixIconColor]} style={prefix} />}
 			{children}
-			{SuffixIcon && <SuffixIcon color={colors[suffixIconColor]} style={suffix} />}
 		</StyledLink>
 	);
 };
