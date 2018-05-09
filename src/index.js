@@ -127,6 +127,9 @@ export { NumberedListItem        } from './atoms/NumberedListItem';
 export { ActivityTime            } from './atoms/SvgIcon/ActivityTime';
 export { Difficulty              } from './atoms/SvgIcon/Difficulty';
 export { TotalTime               } from './atoms/SvgIcon/TotalTime';
+export { RoundedButton           } from './atoms/RoundedButtons';
+export { SmallRoundedButton      } from './atoms/RoundedButtons';
+export { TinyRoundedButton       } from './atoms/RoundedButtons';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -160,3 +163,7 @@ export { SearchField             } from './molecules/SearchField';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
+
+// Utils
+export { getColor                } from './utils/get-color';
+export { getVariable             } from './utils/get-variable';
