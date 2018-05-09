@@ -186,9 +186,7 @@ ScrollArrowsLinkBar.propTypes = {
 	shouldHavePadding: PropTypes.bool,
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
-	arrowGradientRgbBackgroundValues: PropTypes.arrayOf([
-		PropTypes.number,
-	]),
+	arrowGradientRgbBackgroundValues: PropTypes.arrayOf(PropTypes.number),
 	arrowGradientHeight: PropTypes.string,
 };
 

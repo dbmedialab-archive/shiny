@@ -7,7 +7,12 @@ import {
 	BorderedButton,
 	Row,
 	Heading,
-	HugeHeading, Button,
+	HugeHeading,
+	Button,
+	RoundedButton,
+	SmallRoundedButton,
+	TinyRoundedButton,
+	FontIcon,
 } from '../../src/index';
 
 export default () => (
@@ -27,6 +32,27 @@ export default () => (
 				<BorderedButton> Default </BorderedButton>
 				<BorderedButton isActive> Active </BorderedButton>
 			</Row>
+
+			<Heading> Rounded button </Heading>
+			<Row>
+				<RoundedButton>default background</RoundedButton>
+			</Row>
+			<Row>
+				<RoundedButton>
+					with icon
+					<FontIcon name="arrow-alt-right" size="1" />
+				</RoundedButton>
+			</Row>
+
+			<Heading> Small rounded button </Heading>
+			<Row>
+				<SmallRoundedButton background="secondary">secondary background</SmallRoundedButton>
+			</Row>
+
+			<Heading> Tiny rounded button </Heading>
+			<Row>
+				<TinyRoundedButton background="secondary" color="primaryLight">primaryLight text color</TinyRoundedButton>
+			</Row>
 		</DemoContainer>
 
 
@@ -34,10 +60,14 @@ export default () => (
 		<Code language="jsx">
 			{`
 import {
+	BorderedButton,
 	Row,
 	Heading,
-	BorderedButton,
-	Button
+	Button,
+	RoundedButton,
+	SmallRoundedButton,
+	TinyRoundedButton,
+	FontIcon,
 } from '@aller/shiny';
 
 <Heading> Simple buttons </Heading>
@@ -51,8 +81,28 @@ import {
 	<BorderedButton> Default </BorderedButton>
 	<BorderedButton isActive> Active </BorderedButton>
 </Row>
+
+<Heading> Rounded button </Heading>
+<Row>
+	<RoundedButton>default background</RoundedButton>
+</Row>
+<Row>
+	<RoundedButton>
+		with icon
+		<FontIcon name="arrow-alt-right" size="1" />
+	</RoundedButton>
+</Row>
+
+<Heading> Small rounded button </Heading>
+<Row>
+	<SmallRoundedButton background="secondary">secondary background</SmallRoundedButton>
+</Row>
+
+<Heading> Tiny rounded button </Heading>
+<Row>
+	<TinyRoundedButton background="secondary" color="primaryLight">primaryLight text color</TinyRoundedButton>
+</Row>
 			`}
 		</Code>
 	</section>
 );
-
