@@ -12,10 +12,12 @@
 #### If you're adding a feature, is it documented in a storybook story?
 - [ ] Yes
 - [ ] No
+- [ ] Not adding a new feature
 
 #### Are the components you're working on reusable between brands?
 - [ ] Yes _(Using variables that are defined in the default theme)_
 - [ ] No _(I hard coded some values)_
+- [ ] Not working on any components
 
 #### If you're creating markup, did you add proper semantics? 
 - [ ] I added [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
