@@ -40,7 +40,7 @@
     "prop-types": "15.6.1",
     "react": "16.3.2",
     "react-dom": "16.3.2",
-    "react-intersection-observer": "3.0.3",
+    "react-intersection-observer": "4.0.1",
     "react-rating": "1.1.2",
     "react-modal": "3.4.4",
     "react-stickyfill": "0.2.3",
