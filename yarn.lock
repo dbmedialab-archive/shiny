@@ -3102,9 +3102,9 @@ eslint-plugin-jsx-a11y@6.0.3:
     emoji-regex "^6.1.0"
     jsx-ast-utils "^2.0.0"
 
-eslint-plugin-react@7.7.0:
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.7.0.tgz#f606c719dbd8a1a2b3d25c16299813878cca0160"
+eslint-plugin-react@7.8.2:
+  version "7.8.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.8.2.tgz#e95c9c47fece55d2303d1a67c9d01b930b88a51d"
   dependencies:
     doctrine "^2.0.2"
     has "^1.0.1"
@@ -4161,7 +4161,7 @@ intersection-observer@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.0.tgz#9fe8bee3953c755b1485c38efd9633d535775ea6"
 
-invariant@^2.2.0, invariant@^2.2.2:
+invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -6453,9 +6453,11 @@ react-inspector@^2.2.2:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
 
-react-intersection-observer@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-3.0.3.tgz#3df67f413c36c28b02426e7fdbf9670790fb50ab"
+react-intersection-observer@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-4.0.2.tgz#62567c1d8b978a56243707144b310c47a0288902"
+  dependencies:
+    invariant "^2.2.4"
 
 react-is@^16.3.1:
   version "16.3.2"
