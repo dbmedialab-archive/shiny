@@ -1,5 +1,3 @@
-import React from 'react';
-
 import styled, { injectGlobal } from 'styled-components';
 
 injectGlobal`
@@ -7,7 +5,7 @@ injectGlobal`
     font-family: 'Helveticons';
     src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff');
   }
-`
+`;
 
 const ArrowBullet = styled.a`
     color: ${props => props.theme.colors.darkGrey};
