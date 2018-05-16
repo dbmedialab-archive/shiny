@@ -28,12 +28,12 @@ const OverlayContent = styled.div`
 `;
 
 const CollapsiblePanel = props => (
-	<div>
+	<React.Fragment>
 		{props.opened &&
 		<OverlayContent {...props}>
 			{props.children}
 		</OverlayContent>}
-	</div>
+	</React.Fragment>
 );
 
 CollapsiblePanel.defaultProps = {
