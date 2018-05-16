@@ -36,6 +36,10 @@ const LinkBar = ({
 							key={i}
 							position={child.props.position}
 							flex={child.props.flex}
+							xs={child.props.xs}
+							sm={child.props.sm}
+							md={child.props.md}
+							lg={child.props.lg}
 						>
 							{child}
 						</LinkBarItem>
