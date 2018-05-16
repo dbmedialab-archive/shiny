@@ -9,6 +9,16 @@ const global = css`
 	* {
 		box-sizing: border-box;
 	}
+
+	a {
+		text-decoration: none;
+
+		&:active,
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 `;
 
 export default {
