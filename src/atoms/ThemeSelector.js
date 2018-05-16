@@ -7,21 +7,6 @@ import { themes } from '../themes';
 
 const isClient = (typeof window !== 'undefined');
 
-injectGlobal`
-	/* Font reset: 1rem = 10px */
-	html {
-		font-size: 62.5%;
-	}
-	body {
-		font-size: 1.6rem;
-	}
-	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section, main {
-    	display: block;
-	}
-`;
-
 /**
  * An extension of styled-component's ThemeProvider.
  *
@@ -48,8 +33,24 @@ const ThemeSelector = ({ children, themeSlug }) => {
 	// console.log(`Switching to the ${themeName} theme.`);
 	// console.log('new theme', theme.name);
 
-	// Inject our theme's global styles
-	injectGlobal`${theme.global}`;
+	// Inject
+	// - Reset styles
+	// - Our theme's global styles
+	injectGlobal`
+		/* Font reset: 1rem = 10px */
+		html {
+			font-size: 62.5%;
+		}
+		body {
+			font-size: 1.6rem;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section, main {
+	    	display: block;
+		}
+
+		${theme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment

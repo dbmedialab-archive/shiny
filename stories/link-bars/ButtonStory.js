@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
@@ -36,14 +37,14 @@ const ButtonStory = () => (
 			<HorizontalLinkBar background={colors.white}>
 				<LinkBarButton
 					isActive
-					onClick={(e) => { alert('You like clicking things'); }} // eslint-disable-line no-alert
+					onClick={action('You like clicking things')}
 				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 				</LinkBarButton>
-				<LinkBarButton>
+				<LinkBarButton onClick={action('You like clicking things')}>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 				</LinkBarButton>
-				<LinkBarButton>
+				<LinkBarButton onClick={action('You like clicking things')}>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
 				</LinkBarButton>
 			</HorizontalLinkBar>
@@ -55,14 +56,22 @@ const ButtonStory = () => (
 					isActive
 					useUnderline={false}
 					activeBackground={colors.blueLight}
-					onClick={(e) => { alert('You like clicking things'); }} // eslint-disable-line no-alert
+					onClick={action('You like clicking things')}
 				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 				</SmallLinkBarButton>
-				<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+				<SmallLinkBarButton
+					useUnderline={false}
+					activeBackground={colors.blueLight}
+					onClick={action('You like clicking things')}
+				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 				</SmallLinkBarButton>
-				<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+				<SmallLinkBarButton
+					useUnderline={false}
+					activeBackground={colors.blueLight}
+					onClick={action('You like clicking things')}
+				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
 				</SmallLinkBarButton>
 			</HorizontalLinkBar>
@@ -78,13 +87,16 @@ import {
 } from '@aller/shiny';
 
 <HorizontalLinkBar background={colors.white}>
-	<LinkBarButton isActive onClick={(e) => { alert('You like clicking things'); }}>
+	<LinkBarButton
+		isActive
+		onClick={action('You like clicking things')}
+	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 	</LinkBarButton>
-	<LinkBarButton>
+	<LinkBarButton onClick={action('You like clicking things')}>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 	</LinkBarButton>
-	<LinkBarButton>
+	<LinkBarButton onClick={action('You like clicking things')}>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
 	</LinkBarButton>
 </HorizontalLinkBar>
@@ -96,14 +108,22 @@ import {
 		isActive
 		useUnderline={false}
 		activeBackground={colors.blueLight}
-		onClick={(e) => { alert('You like clicking things'); }}
+		onClick={action('You like clicking things')}
 	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 	</SmallLinkBarButton>
-	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+	<SmallLinkBarButton
+		useUnderline={false}
+		activeBackground={colors.blueLight}
+		onClick={action('You like clicking things')}
+	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 	</SmallLinkBarButton>
-	<SmallLinkBarButton useUnderline={false} activeBackground={colors.blueLight}>
+	<SmallLinkBarButton
+		useUnderline={false}
+		activeBackground={colors.blueLight}
+		onClick={action('You like clicking things')}
+	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
 	</SmallLinkBarButton>
 </HorizontalLinkBar>
