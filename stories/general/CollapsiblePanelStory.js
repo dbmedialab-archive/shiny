@@ -50,7 +50,7 @@ class CollapsiblePanelStory extends React.Component {
 				</p>
 
 				<p>
-					Please note, that for panel to display properly, you should set parent's position to relative
+					{`Please note, that for panel to display properly, you should set parent's position to relative`}
 				</p>
 
 				<Heading>
