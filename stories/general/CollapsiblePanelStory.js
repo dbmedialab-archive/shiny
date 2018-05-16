@@ -74,7 +74,9 @@ class CollapsiblePanelStory extends React.Component {
 					Usage
 				</Heading>
 				<Code language="jsx">
-					{`<HorizontalLinkBar overflow="visible">
+					{`import { CollapsiblePanel } from '@aller/shiny';
+
+<HorizontalLinkBar overflow="visible">
 	<LinkBarButton onClick={this.toggleSubMenu}>
 		Button with overlay
 	</LinkBarButton>
