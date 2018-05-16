@@ -74,45 +74,15 @@ class CollapsiblePanelStory extends React.Component {
 					Usage
 				</Heading>
 				<Code language="jsx">
-					{`import { CollapsiblePanel } from '@aller/shiny';
+					{`<HorizontalLinkBar overflow="visible">
+	<LinkBarButton onClick={this.toggleSubMenu}>
+		Button with overlay
+	</LinkBarButton>
+</HorizontalLinkBar>
 
-const RelativeParent = styled.div\`
-		position: relative
-\`;
-
-class PanelDemo extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			subMenuOpened: false,
-		};
-
-		this.toggleSubMenu = this.toggleSubMenu.bind(this);
-	}
-
-	toggleSubMenu() {
-		this.setState({
-			subMenuOpened: !this.state.subMenuOpened,
-		});
-	}
-
-	render() {
-		return (
-			<RelativeParent>
-				<HorizontalLinkBar overflow="visible">
-					<LinkBarButton onClick={this.toggleSubMenu}>
-						Button with overlay
-					</LinkBarButton>
-				</HorizontalLinkBar>
-
-				<CollapsiblePanel opened={this.state.subMenuOpened}>
-					<div>Content of panel</div>
-				</CollapsiblePanel>
-			</RelativeParent>
-		);
-	}
-}`}
+<CollapsiblePanel opened={this.state.subMenuOpened}>
+	<div>Content of panel</div>
+</CollapsiblePanel>`}
 				</Code>
 			</section>
 		);
