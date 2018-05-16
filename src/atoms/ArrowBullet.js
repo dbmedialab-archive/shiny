@@ -1,31 +1,47 @@
-import styled, { injectGlobal } from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-injectGlobal`
-    @font-face {
-    font-family: 'Helveticons';
-    src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff');
-  }
-`;
+import styled from 'styled-components';
 
-const ArrowBullet = styled.a`
-    color: ${props => props.theme.colors.darkGrey};
+import { FontIcon, getColor } from '..';
+
+const Bullet = styled.a`
+    color: ${getColor('type')};
     font-size: ${props => props.theme.variables.headingMediumSize};
+    line-height: ${props => props.theme.variables.headingMediumLineHeight}
     font-family: ${props => props.theme.variables.mainFont};
     transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
     display: inline-block;
     cursor: pointer;
-    
-    &:before {
-        font-family: 'Helveticons';
-        font-size: .7em;
-        margin-right: .8em;
-        content: "\\e880";
-    }
-    
+
     &:hover {
-        color: ${props => props.theme.colors.primary};
+        color: ${getColor('primary')};
         transform: translateX(1em);
     }
 `;
+
+const StyledFontIcon = styled(FontIcon)`
+	margin-right: ${props => props.arrowSpacing};
+`;
+
+const ArrowBullet = props => (
+	<Bullet>
+		<StyledFontIcon
+			arrowSpacing={props.arrowSpacing}
+			name="arrow-alt-right"
+			size={1.2}
+		/>
+		{props.children}
+	</Bullet>
+);
+
+ArrowBullet.defaultProps = {
+	arrowSpacing: '1.2em',
+};
+
+ArrowBullet.propTypes = {
+	arrowSpacing: PropTypes.string,
+	children: PropTypes.node.isRequired,
+};
 
 export { ArrowBullet };

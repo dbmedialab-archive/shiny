@@ -48,5 +48,5 @@ export default () => {
 		.add('Error', error)
 		.add('Buttons', buttons)
 		.add('Block Link', blocklink)
-		.add('Popular Button', arrowBullet);
+		.add('Arrow Bullet', arrowBullet);
 };

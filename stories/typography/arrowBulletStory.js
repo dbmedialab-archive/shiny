@@ -10,27 +10,28 @@ import { ArrowBullet } from '../../src/atoms/ArrowBullet';
 export default () => (
 	<section>
 		<HugeHeading>
-            Popular Button
+			Arrow Bullet
 		</HugeHeading>
 
 		<p>
-            A button-style link with decorated arrow with offset animation on hover
+			A button-style link with decorated arrow with offset animation on hover
 		</p>
 
 		<Heading>
-            Demo
+			Demo
 		</Heading>
 		<DemoContainer background="white">
 			<ArrowBullet>
-                Test content
+				Test content
 			</ArrowBullet>
 		</DemoContainer>
 
 		<Heading>
-            Usage
+			Usage
 		</Heading>
 		<Code language="jsx">
 			{`import { ArrowBullet } from '@aller/shiny';
+
 <ArrowBullet>
     Test content
 </ArrowBullet>`}
