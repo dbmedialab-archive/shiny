@@ -32,7 +32,11 @@ const LinkBar = ({
 					}
 
 					return (
-						<LinkBarItem key={i} {...child.props}>
+						<LinkBarItem
+							key={i}
+							position={child.props.position}
+							flex={child.props.flex}
+						>
 							{child}
 						</LinkBarItem>
 					);
