@@ -127,6 +127,24 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="dark" displayColor="brownLighter" />
 			</FlexBox>
 			<FlexBox>
+				<ColorBox textColor="light" displayColor="navyDark" />
+				<ColorBox textColor="light" displayColor="navy" isMainShade />
+				<ColorBox textColor="dark" displayColor="navyLight" />
+				<ColorBox textColor="dark" displayColor="navyLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="sandDark" />
+				<ColorBox textColor="light" displayColor="sand" isMainShade />
+				<ColorBox textColor="dark" displayColor="sandLight" />
+				<ColorBox textColor="dark" displayColor="sandLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="burgundyDark" />
+				<ColorBox textColor="light" displayColor="burgundy" isMainShade />
+				<ColorBox textColor="dark" displayColor="burgundyLight" />
+				<ColorBox textColor="dark" displayColor="burgundyLighter" />
+			</FlexBox>
+			<FlexBox>
 				<ColorBox textColor="light" displayColor="darkness" />
 				<ColorBox textColor="light" displayColor="darknessLight" />
 			</FlexBox>
