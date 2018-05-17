@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Heading, HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+import {
+	HugeHeading,
+	SmallHeading,
+	ThemeName,
+	ColorBox,
+} from '../../src';
 
-import { ThemeName } from '../../src/atoms/ThemeName';
-import { ColorBox } from '../../src/atoms/ColorBox';
-// import { Code } from '../../src/atoms/Code';
 import { Code } from '../../src/atoms/Code';
 
 const FlexBox = styled.section`
@@ -16,11 +18,7 @@ const FlexBox = styled.section`
 const Palette = () => {
 	return (
 		<section>
-			<HugeHeading>Welcome, adventurer!</HugeHeading>
-
-			<p>You have arrived at the style definition for the <ThemeName /> brand.</p>
-
-			<Heading>Colors</Heading>
+			<HugeHeading>Colors</HugeHeading>
 			<p>
             When you set out to create a component, you probably want to use some color, whether that is a background
             color to fill your space or a text color to make your type visible.
@@ -30,16 +28,19 @@ const Palette = () => {
 			<SmallHeading>Using colors</SmallHeading>
 			<Code language="jsx">
 				{`
-// Beware, this example is outdated :(
-
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../shared-components/Base/Palette';
+
+// In shiny
+// import { getColor } from 'path/to/src';
+
+// In dependants to shiny
+import { getColor } from '@aller/shiny';
 
 const MyHeading = styled.h3\`
-  color: \${colors.typeDisabled};
-  background-color: \${colors.solRed};
-  border: .1rem solid \${colors.solRedDark};
+  color: \${getColor('typeDisabled')};
+  background-color: \${getColor('primary')};
+  border: .1rem solid \${getColor('primary', 'dark')};
 \`;
 
 <MyHeading>Overskrift</MyHeading>
