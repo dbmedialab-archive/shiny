@@ -89,7 +89,7 @@ const HugeHeading = ProtoHeading.extend`
 const Heading = ({ size, ...rest }) => {
 	switch (size) {
 	case 'xsmall':
-		return <XSmallHeading {...rest} />
+		return <XSmallHeading {...rest} />;
 	case 'small':
 		return <SmallHeading {...rest} />;
 	case 'medium':

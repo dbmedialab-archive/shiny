@@ -36,7 +36,7 @@ UnderlinedHeading.defaultProps = {
 
 export { UnderlinedHeading };
 
-export const UnderlinedXSmallHeading = props => <UnderlinedHeading size="xsmall" {...props} />
+export const UnderlinedXSmallHeading = props => <UnderlinedHeading size="xsmall" {...props} />;
 export const UnderlinedSmallHeading = props => <UnderlinedHeading size="small" {...props} />;
 export const UnderlinedMediumHeading = props => <UnderlinedHeading size="medium" {...props} />;
 export const UnderlinedLargeHeading = props => <UnderlinedHeading size="large" {...props} />;
