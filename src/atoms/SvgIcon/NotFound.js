@@ -1,5 +1,4 @@
 import React from 'react';
-import { getColor } from '../../utils';
 
 const NotFound = props => (
 	<svg width="41px" height="49px" viewBox="0 0 41 49">
