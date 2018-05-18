@@ -6,8 +6,12 @@ import Observer from 'react-intersection-observer';
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
-if (typeof window !== 'undefined') {
-	import('intersection-observer');
+if (typeof window !== 'undefined' &&
+	!('IntersectionObserver' in window) &&
+	!('IntersectionObserverEntry' in window)
+) {
+	/* eslint-disable global-require */
+	require('intersection-observer');
 }
 
 const Figure = styled.figure`
