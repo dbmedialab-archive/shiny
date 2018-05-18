@@ -28,13 +28,15 @@ const UnderlinedHeading = ({ size, ...rest }) => (
 	</CenteredContent>
 );
 UnderlinedHeading.propTypes = {
-	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
+	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
 };
 UnderlinedHeading.defaultProps = {
 	size: 'large',
 };
 
 export { UnderlinedHeading };
+
+export const UnderlinedXSmallHeading = props => <UnderlinedHeading size="xsmall" {...props} />
 export const UnderlinedSmallHeading = props => <UnderlinedHeading size="small" {...props} />;
 export const UnderlinedMediumHeading = props => <UnderlinedHeading size="medium" {...props} />;
 export const UnderlinedLargeHeading = props => <UnderlinedHeading size="large" {...props} />;
