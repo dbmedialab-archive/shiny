@@ -29,9 +29,10 @@ import { OppskriftMobileLogo } from './OppskriftMobileLogo';
 import { CircleWithText      } from './CircleWithText';
 import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
+import { YouTube             } from './YouTube';
 
 const SvgIcon = props => (
-	<SvgIconWrapper size={props.size} size-sm={props['size-sm']} color={props.color}>
+	<SvgIconWrapper size={props.size} size-sm={props['size-sm']} color={props.color} className={props.className}>
 		{
 			(() => {
 				switch (props.name) {
@@ -94,6 +95,8 @@ const SvgIcon = props => (
 				case 'exclamation-point':
 				case 'exclamation':
 					return <ExclamationMark {...props} />;
+				case 'youtube':
+					return <YouTube {...props} />;
 				default:
 					return null;
 				}
@@ -106,12 +109,14 @@ SvgIcon.propTypes = {
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
 	'color': PropTypes.string,
+	'className': PropTypes.string,
 };
 SvgIcon.defaultProps = {
 	'size': 3.2,
 	'size-sm': null,
 	'name': '',
 	'color': 'type',
+	'className': '',
 };
 
 export { SvgIcon };
