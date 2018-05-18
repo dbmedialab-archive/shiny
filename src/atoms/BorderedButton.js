@@ -1,11 +1,12 @@
-import parseColor from 'parse-color';
+import propTypes from 'prop-types';
 import { Button } from './Button';
+import { isBright } from '../utils/luminance';
 
-const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => {
-	const { r, g, b } = parseColor(backgroundColor);
-	const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000; // converting to YIQ to determine brightness of background
-	return (yiq >= 150) ? theme.colors.grayTintDark : theme.colors.white;
-};
+const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
+	isBright(backgroundColor)
+		? theme.colors.grayTintDark
+		: theme.colors.white
+);
 
 const BorderedButton = Button.extend`
 	color: ${props => props.theme.colors.grayTintDark};
@@ -22,7 +23,7 @@ const BorderedButton = Button.extend`
 		background-color: ${props.isActive && (props.theme.colors.primary)};
 		color: ${props.isActive && calculateTextColor(props.theme)};
 	`)};
-	
+
 	&:hover, &:active{
 		border-color: ${props => props.theme.colors.primary};
 		background-color: ${props => props.theme.colors.primary};
@@ -32,6 +33,9 @@ const BorderedButton = Button.extend`
 
 BorderedButton.defaultProps = {
 	ALLCAPS: true,
+};
+BorderedButton.propTypes = {
+	ALLCAPS: propTypes.bool,
 };
 
 module.exports = { BorderedButton };
