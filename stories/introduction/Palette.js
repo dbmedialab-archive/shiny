@@ -79,6 +79,18 @@ const MyHeading = styled.h3\`
 
 			<SmallHeading>Supporting Colors</SmallHeading>
 			<FlexBox>
+				<ColorBox textColor="light" displayColor="orangeDark" />
+				<ColorBox textColor="dark" displayColor="orange" isMainShade />
+				<ColorBox textColor="dark" displayColor="orangeLight" />
+				<ColorBox textColor="dark" displayColor="orangeLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="burgundyDark" />
+				<ColorBox textColor="light" displayColor="burgundy" isMainShade />
+				<ColorBox textColor="dark" displayColor="burgundyLight" />
+				<ColorBox textColor="dark" displayColor="burgundyLighter" />
+			</FlexBox>
+			<FlexBox>
 				<ColorBox textColor="light" displayColor="pinkDark" />
 				<ColorBox textColor="dark" displayColor="pink" isMainShade />
 				<ColorBox textColor="dark" displayColor="pinkLight" />
@@ -89,6 +101,12 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="light" displayColor="purple" isMainShade />
 				<ColorBox textColor="dark" displayColor="purpleLight" />
 				<ColorBox textColor="dark" displayColor="purpleLighter" />
+			</FlexBox>
+			<FlexBox>
+				<ColorBox textColor="light" displayColor="navyDark" />
+				<ColorBox textColor="light" displayColor="navy" isMainShade />
+				<ColorBox textColor="dark" displayColor="navyLight" />
+				<ColorBox textColor="dark" displayColor="navyLighter" />
 			</FlexBox>
 			<FlexBox>
 				<ColorBox textColor="light" displayColor="blueDark" />
@@ -115,10 +133,10 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="dark" displayColor="yellowLighter" />
 			</FlexBox>
 			<FlexBox>
-				<ColorBox textColor="light" displayColor="orangeDark" />
-				<ColorBox textColor="dark" displayColor="orange" isMainShade />
-				<ColorBox textColor="dark" displayColor="orangeLight" />
-				<ColorBox textColor="dark" displayColor="orangeLighter" />
+				<ColorBox textColor="light" displayColor="sandDark" />
+				<ColorBox textColor="light" displayColor="sand" isMainShade />
+				<ColorBox textColor="dark" displayColor="sandLight" />
+				<ColorBox textColor="dark" displayColor="sandLighter" />
 			</FlexBox>
 			<FlexBox>
 				<ColorBox textColor="light" displayColor="brownDark" />
@@ -127,26 +145,10 @@ const MyHeading = styled.h3\`
 				<ColorBox textColor="dark" displayColor="brownLighter" />
 			</FlexBox>
 			<FlexBox>
-				<ColorBox textColor="light" displayColor="navyDark" />
-				<ColorBox textColor="light" displayColor="navy" isMainShade />
-				<ColorBox textColor="dark" displayColor="navyLight" />
-				<ColorBox textColor="dark" displayColor="navyLighter" />
-			</FlexBox>
-			<FlexBox>
-				<ColorBox textColor="light" displayColor="sandDark" />
-				<ColorBox textColor="light" displayColor="sand" isMainShade />
-				<ColorBox textColor="dark" displayColor="sandLight" />
-				<ColorBox textColor="dark" displayColor="sandLighter" />
-			</FlexBox>
-			<FlexBox>
-				<ColorBox textColor="light" displayColor="burgundyDark" />
-				<ColorBox textColor="light" displayColor="burgundy" isMainShade />
-				<ColorBox textColor="dark" displayColor="burgundyLight" />
-				<ColorBox textColor="dark" displayColor="burgundyLighter" />
-			</FlexBox>
-			<FlexBox>
-				<ColorBox textColor="light" displayColor="darkness" />
+				<ColorBox textColor="light" displayColor="darknessDark" />
+				<ColorBox textColor="light" displayColor="darkness" isMainShade />
 				<ColorBox textColor="light" displayColor="darknessLight" />
+				<ColorBox textColor="light" displayColor="darknessLighter" />
 			</FlexBox>
 
 			<SmallHeading>Link color</SmallHeading>
