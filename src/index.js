@@ -31,6 +31,7 @@ export {
 
 export {
 	UnderlinedHeading,
+	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
 	UnderlinedLargeHeading,

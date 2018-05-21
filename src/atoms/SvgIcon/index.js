@@ -30,6 +30,8 @@ import { CircleWithText      } from './CircleWithText';
 import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
 import { YouTube             } from './YouTube';
+import { NotFound            } from './NotFound';
+
 
 const SvgIcon = props => (
 	<SvgIconWrapper size={props.size} size-sm={props['size-sm']} color={props.color} className={props.className}>
@@ -91,6 +93,8 @@ const SvgIcon = props => (
 					return <CircleWithText {...props} />;
 				case 'crossed-video-camera':
 					return <CrossedVideoCamera {...props} />;
+				case 'not-found':
+					return <NotFound {...props} />;
 				case 'exclamation-mark':
 				case 'exclamation-point':
 				case 'exclamation':

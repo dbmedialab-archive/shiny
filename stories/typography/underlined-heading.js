@@ -9,6 +9,7 @@ import { HugeHeading, Heading } from '../../src/atoms/Heading';
 // Typography
 import {
 	UnderlinedHeading,
+	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
 	UnderlinedLargeHeading,
@@ -22,6 +23,7 @@ export default () => (
 		<p>Also called headline, overskrift.</p>
 		<p>There are four sizes of underlined headings:</p>
 		<ul>
+			<li>XSmall</li>
 			<li>Small</li>
 			<li>Medium</li>
 			<li>Large (default)</li>
@@ -34,6 +36,11 @@ export default () => (
 			<Row>
 				<Col>
 					<UnderlinedHeading>This is the default underlined heading</UnderlinedHeading>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<UnderlinedXSmallHeading>This is a extra small underlined heading</UnderlinedXSmallHeading>
 				</Col>
 			</Row>
 			<Row>
@@ -67,6 +74,7 @@ export default () => (
 		<Code language="jsx">
 			{`
 import {
+	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
 	UnderlinedLargeHeading,
@@ -74,6 +82,7 @@ import {
 	UnderlinedHugeHeading
 } from '@aller/shiny';
 
+<UnderlinedXSmallHeading>Dette er en ekstra liten overskrift</UnderlinedXSmallHeading>
 <UnderlinedSmallHeading>Dette er en liten overskrift</UnderlinedSmallHeading>
 <UnderlinedMediumHeading>Dette er en middels overskrift</UnderlinedMediumHeading>
 <UnderlinedLargeHeading>Dette er en vanlig størrelse overskrift</UnderlinedLargeHeading>
