@@ -63,27 +63,51 @@ class Dropdown extends React.Component {
 		this.lastFocusTime = Date.now();
 	}
 
-	render() {
-		const {
-			linkText, children, ...rest
-		} = this.props;
+	getStandardTrigger() {
+		const { linkText, ...rest } = this.props;
 		const { hide } = this.state;
-
 		const updown = (hide === true) ? 'down' : 'up';
 
 		return (
-			<StyledDropdown
-				onFocus={e => this.updateLastFocusTime()}
-				onBlur={e => this.hideIfNotRecentlyFocused()}
+			<Button
+				aria-expanded={hide ? 'false' : 'true'}
+				onClick={() => this.toggle()}
+				{...rest}
 			>
-				<Button
-					aria-expanded={hide ? 'false' : 'true'}
-					onClick={e => this.toggle()}
-					{...rest}
-				>
-					{`${linkText} `}
-					<FontIcon name={`arrow-alt-${updown}`} />
-				</Button>
+				{`${linkText} `}
+				<FontIcon name={`arrow-alt-${updown}`} />
+			</Button>
+		)
+	}
+
+	getCustomTrigger() {
+		const { hide } = this.state;
+		const { trigger, className } = this.props;
+
+		const Trigger = trigger;
+
+		return (
+			<Trigger className={className} aria-expanded={hide ? 'false' : 'true'}
+					 onClick={() => this.toggle()} />
+		);
+	}
+
+	getTrigger() {
+		const { trigger } = this.props;
+
+		return trigger ? this.getCustomTrigger() : this.getStandardTrigger();
+	}
+
+	render() {
+		const { children } = this.props;
+		const { hide } = this.state;
+
+		return (
+			<StyledDropdown
+				onFocus={() => this.updateLastFocusTime()}
+				onBlur={() => this.hideIfNotRecentlyFocused()}
+			>
+				{this.getTrigger()}
 				<HideMeMaybe hide={hide}>
 					{children}
 				</HideMeMaybe>
@@ -91,14 +115,16 @@ class Dropdown extends React.Component {
 		);
 	}
 }
+
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
 	displayInitially: propTypes.bool,
-	linkText: propTypes.string.isRequired,
+	linkText: propTypes.string,
 	isRelative: propTypes.bool,
+	Trigger: propTypes.node
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
