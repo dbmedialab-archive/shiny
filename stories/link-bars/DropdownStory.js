@@ -61,7 +61,7 @@ const DropdownStory = () => {
 							<LinkBarLink linkText="Two" url="https://example.com" />
 						</VerticalLinkBar>
 					</LinkBarDropdown>
-					<LinkBarDropdown trigger={CustomTrigger} displayInitially>
+					<LinkBarDropdown Trigger={CustomTrigger} displayInitially>
 						<VerticalLinkBar background={colors.white}>
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
@@ -99,7 +99,7 @@ const DropdownStory = () => {
 				<LinkBarLink linkText="Two" url="https://example.com" />
 			</VerticalLinkBar>
 		</LinkBarDropdown>
-		<LinkBarDropdown trigger={CustomTrigger} displayInitially>
+		<LinkBarDropdown Trigger={CustomTrigger} displayInitially>
 			<VerticalLinkBar background={colors.white}>
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />

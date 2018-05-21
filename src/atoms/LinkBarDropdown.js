@@ -26,6 +26,10 @@ class Dropdown extends React.Component {
 		this.state = {
 			hide: !this.props.displayInitially,
 		};
+
+		this.updateLastFocusTime = this.updateLastFocusTime.bind(this);
+		this.hideIfNotRecentlyFocused = this.hideIfNotRecentlyFocused.bind(this);
+		this.toggle = this.toggle.bind(this);
 	}
 
 	hide() {
@@ -71,7 +75,7 @@ class Dropdown extends React.Component {
 		return (
 			<Button
 				aria-expanded={hide ? 'false' : 'true'}
-				onClick={() => this.toggle()}
+				onClick={this.toggle}
 				{...rest}
 			>
 				{`${linkText} `}
@@ -82,20 +86,18 @@ class Dropdown extends React.Component {
 
 	getCustomTrigger() {
 		const { hide } = this.state;
-		const { trigger, className } = this.props;
-
-		const Trigger = trigger;
+		const { Trigger, className } = this.props;
 
 		return (
 			<Trigger className={className} aria-expanded={hide ? 'false' : 'true'}
-					 onClick={() => this.toggle()} />
+					 onClick={this.toggle} />
 		);
 	}
 
 	getTrigger() {
-		const { trigger } = this.props;
+		const { Trigger } = this.props;
 
-		return trigger ? this.getCustomTrigger() : this.getStandardTrigger();
+		return Trigger ? this.getCustomTrigger() : this.getStandardTrigger();
 	}
 
 	render() {
@@ -104,8 +106,8 @@ class Dropdown extends React.Component {
 
 		return (
 			<StyledDropdown
-				onFocus={() => this.updateLastFocusTime()}
-				onBlur={() => this.hideIfNotRecentlyFocused()}
+				onFocus={this.updateLastFocusTime}
+				onBlur={this.hideIfNotRecentlyFocused}
 			>
 				{this.getTrigger()}
 				<HideMeMaybe hide={hide}>
