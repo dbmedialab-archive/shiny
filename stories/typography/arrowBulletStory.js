@@ -21,7 +21,7 @@ export default () => (
 			Demo
 		</Heading>
 		<DemoContainer background="white">
-			<ArrowBullet>
+			<ArrowBullet href="https://oppskrift.no">
 				Test content
 			</ArrowBullet>
 		</DemoContainer>
@@ -32,7 +32,7 @@ export default () => (
 		<Code language="jsx">
 			{`import { ArrowBullet } from '@aller/shiny';
 
-<ArrowBullet>
+<ArrowBullet href="https://oppskrift.no">
     Test content
 </ArrowBullet>`}
 		</Code>

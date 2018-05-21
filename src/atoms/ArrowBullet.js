@@ -5,13 +5,13 @@ import styled from 'styled-components';
 
 import { FontIcon } from './FontIcon';
 
-import { getColor } from '../utils';
+import { getColor, getVariable } from '../utils';
 
 const Bullet = styled.a`
     color: ${getColor('type')};
-    font-size: ${props => props.theme.variables.headingMediumSize};
-    line-height: ${props => props.theme.variables.headingMediumLineHeight};
-    font-family: ${props => props.theme.variables.mainFont};
+    font-size: ${getVariable('headingMediumSize')};
+    line-height: ${getVariable('headingMediumLineHeight')};
+    font-family: ${getVariable('mainFont')};
     transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
     display: block;
 	overflow: hidden;
@@ -20,18 +20,17 @@ const Bullet = styled.a`
 
     &:hover {
         color: ${getColor('primary')};
-        transform: translateX(1em);
+        transform: translateX(${getVariable('horizontalBase')});
     }
 `;
 
 const StyledFontIcon = styled(FontIcon)`
-	margin-right: ${props => props.arrowSpacing};
+	margin-right: ${getVariable('horizontalBase')};
 `;
 
 const UnstyledArrowBullet = props => (
 	<Bullet href={props.href} className={props.className}>
 		<StyledFontIcon
-			arrowSpacing={props.arrowSpacing}
 			name="arrow-alt-right"
 			size={1.2}
 		/>
@@ -40,13 +39,11 @@ const UnstyledArrowBullet = props => (
 );
 
 UnstyledArrowBullet.defaultProps = {
-	arrowSpacing: '1.2em',
 	className: null,
 	href: null,
 };
 
 UnstyledArrowBullet.propTypes = {
-	arrowSpacing: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	className: PropTypes.string,
 	href: PropTypes.string,
