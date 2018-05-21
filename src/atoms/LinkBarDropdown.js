@@ -78,7 +78,7 @@ class Dropdown extends React.Component {
 				onClick={this.toggle}
 				{...rest}
 			>
-				{`${linkText} `}
+				{linkText}
 				<FontIcon name={`arrow-alt-${updown}`} />
 			</Button>
 		)
