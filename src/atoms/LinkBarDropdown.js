@@ -32,12 +32,6 @@ class Dropdown extends React.Component {
 		this.toggle = this.toggle.bind(this);
 	}
 
-	hide() {
-		this.setState({
-			hide: true,
-		});
-	}
-
 	show() {
 		this.setState({
 			hide: false,
@@ -81,7 +75,7 @@ class Dropdown extends React.Component {
 				{linkText}
 				<FontIcon name={`arrow-alt-${updown}`} />
 			</Button>
-		)
+		);
 	}
 
 	getCustomTrigger() {
@@ -89,8 +83,11 @@ class Dropdown extends React.Component {
 		const { Trigger, className } = this.props;
 
 		return (
-			<Trigger className={className} aria-expanded={hide ? 'false' : 'true'}
-					 onClick={this.toggle} />
+			<Trigger
+				className={className}
+				aria-expanded={hide ? 'false' : 'true'}
+				onClick={this.toggle}
+			/>
 		);
 	}
 
@@ -98,6 +95,12 @@ class Dropdown extends React.Component {
 		const { Trigger } = this.props;
 
 		return Trigger ? this.getCustomTrigger() : this.getStandardTrigger();
+	}
+
+	hide() {
+		this.setState({
+			hide: true,
+		});
 	}
 
 	render() {
@@ -126,11 +129,15 @@ Dropdown.propTypes = {
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string,
 	isRelative: propTypes.bool,
-	Trigger: propTypes.node
+	Trigger: propTypes.node,
+	className: propTypes.string,
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
 	isRelative: true,
+	className: null,
+	linkText: null,
+	Trigger: null,
 };
 
 // When we export this as a styled component,

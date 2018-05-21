@@ -130,10 +130,12 @@ const DropdownStory = () => {
 					</tr>
 					<tr>
 						<th>...</th>
-						<td>For other props, see the <button
-							onClick={linkTo('Link bars', 'LinkBarLink')}
-						>LinkBarLink
-						</button>{' '}
+						<td>For other props, see the
+							<button
+								onClick={linkTo('Link bars', 'LinkBarLink')}
+							>
+								LinkBarLink
+							</button>{' '}
 						component.
 						</td>
 						<td />
