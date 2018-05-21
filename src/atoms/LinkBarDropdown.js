@@ -32,18 +32,6 @@ class Dropdown extends React.Component {
 		this.toggle = this.toggle.bind(this);
 	}
 
-	show() {
-		this.setState({
-			hide: false,
-		});
-	}
-
-	toggle() {
-		this.setState({
-			hide: !this.state.hide,
-		});
-	}
-
 	/**
 	 * Hide on blur
 	 *
@@ -100,6 +88,18 @@ class Dropdown extends React.Component {
 	hide() {
 		this.setState({
 			hide: true,
+		});
+	}
+
+	show() {
+		this.setState({
+			hide: false,
+		});
+	}
+
+	toggle() {
+		this.setState({
+			hide: !this.state.hide,
 		});
 	}
 
