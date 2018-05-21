@@ -32,23 +32,6 @@ class Dropdown extends React.Component {
 		this.toggle = this.toggle.bind(this);
 	}
 
-	/**
-	 * Hide on blur
-	 *
-	 * When changing focus between elements in the dropdown,
-	 * the blur and focus events will bubble up here in rapid succession.
-	 * Therefore we apply a grace time (delay) after the blur event
-	 * before we hide the dropdown.
-	 */
-	hideIfNotRecentlyFocused() {
-		const delay = 100; // milliseconds
-		setTimeout(() => Date.now() - this.lastFocusTime > delay && this.hide(), delay);
-	}
-
-	updateLastFocusTime() {
-		this.lastFocusTime = Date.now();
-	}
-
 	getStandardTrigger() {
 		const { linkText, ...rest } = this.props;
 		const { hide } = this.state;
@@ -83,6 +66,23 @@ class Dropdown extends React.Component {
 		const { Trigger } = this.props;
 
 		return Trigger ? this.getCustomTrigger() : this.getStandardTrigger();
+	}
+
+	/**
+	 * Hide on blur
+	 *
+	 * When changing focus between elements in the dropdown,
+	 * the blur and focus events will bubble up here in rapid succession.
+	 * Therefore we apply a grace time (delay) after the blur event
+	 * before we hide the dropdown.
+	 */
+	hideIfNotRecentlyFocused() {
+		const delay = 100; // milliseconds
+		setTimeout(() => Date.now() - this.lastFocusTime > delay && this.hide(), delay);
+	}
+
+	updateLastFocusTime() {
+		this.lastFocusTime = Date.now();
 	}
 
 	hide() {
