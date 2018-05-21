@@ -14,7 +14,7 @@ const Bullet = styled.a`
     font-family: ${getVariable('mainFont')};
     transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
     display: block;
-	overflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
 
