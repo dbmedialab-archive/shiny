@@ -123,6 +123,12 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText color="primary" name="crossed-video-camera" text="crossed-video-camera" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText color="primary" name="youtube" text="youtube" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText color="primary" name="not-found" text="not-found" />
+			</Col>
 		</Row>
 	</section>
 );

@@ -5,8 +5,12 @@ import PropTypes from 'prop-types';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
-if (typeof window !== 'undefined') {
-	import('intersection-observer');
+if (typeof window !== 'undefined' &&
+		!('IntersectionObserver' in window) &&
+    !('IntersectionObserverEntry' in window)
+) {
+	/* eslint-disable global-require */
+	require('intersection-observer');
 }
 
 const StyledReserveSpacer = styled.div`

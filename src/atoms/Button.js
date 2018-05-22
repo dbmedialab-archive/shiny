@@ -36,13 +36,14 @@ const Button = styled.button`
 
 Button.defaultProps = {
 	borderRadius: 0,
+	ALLCAPS: false,
 };
 
 
 Button.propTypes = {
 	background: propTypes.string,
 	textColor: propTypes.string,
-	ALLCAPS: false,
+	ALLCAPS: propTypes.bool,
 };
 
 export { Button };
