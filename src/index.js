@@ -31,6 +31,7 @@ export {
 
 export {
 	UnderlinedHeading,
+	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
 	UnderlinedMediumHeading,
 	UnderlinedLargeHeading,
@@ -130,6 +131,7 @@ export { TotalTime               } from './atoms/SvgIcon/TotalTime';
 export { RoundedButton           } from './atoms/RoundedButtons';
 export { SmallRoundedButton      } from './atoms/RoundedButtons';
 export { TinyRoundedButton       } from './atoms/RoundedButtons';
+export { ArrowBullet 			 } from './atoms/ArrowBullet';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
