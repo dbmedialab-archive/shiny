@@ -20,6 +20,7 @@ import error from './typography/error';
 import numberedList from './typography/numberedList';
 import buttons from './typography/buttons';
 import blocklink from './typography/blocklink';
+import arrowBullet from './typography/arrowBulletStory';
 
 // @TODO: Create stories for BlockLink and LargeScreenText;
 // import BlockLink from '../shared-components/Typography/BlockLink';
@@ -46,5 +47,6 @@ export default () => {
 		.add('Numbered list', numberedList)
 		.add('Error', error)
 		.add('Buttons', buttons)
-		.add('Block Link', blocklink);
+		.add('Block Link', blocklink)
+		.add('Arrow Bullet', arrowBullet);
 };
