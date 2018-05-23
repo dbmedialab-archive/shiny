@@ -841,22 +841,22 @@
     classnames "^2.2.5"
     prop-types "^15.5.8"
 
-"@percy-io/percy-storybook@1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@percy-io/percy-storybook/-/percy-storybook-1.3.5.tgz#746942a4e3bc51253766fe9267ec10d4630e745f"
+"@percy-io/percy-storybook@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@percy-io/percy-storybook/-/percy-storybook-1.4.1.tgz#28bf1b73f36a40cfe705679fd68d776eb9a72eab"
   dependencies:
-    "@percy/react-percy-api-client" "^0.4.1"
+    "@percy/react-percy-api-client" "^0.4.3"
     babel-runtime "^6.26.0"
-    debug "^2.6.3"
+    debug "^3.1.0"
     es6-error "^4.0.2"
     es6-promise-pool "^2.4.4"
     jsdom "^9.12.0"
     walk "^2.3.9"
     yargs "^7.0.2"
 
-"@percy/react-percy-api-client@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@percy/react-percy-api-client/-/react-percy-api-client-0.4.1.tgz#1ef1fdfbbdbd063f64e425f450348905f96d8930"
+"@percy/react-percy-api-client@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@percy/react-percy-api-client/-/react-percy-api-client-0.4.3.tgz#3375ee6ce2721c0323187df4017c13c01625b107"
   dependencies:
     babel-runtime "^6.26.0"
     debug "^2.6.3"
