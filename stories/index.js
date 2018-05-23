@@ -12,6 +12,7 @@ import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
 import rating from './rating';
+import general from './general';
 
 introduction();
 
@@ -21,6 +22,7 @@ editorialMarking();
 loaders();
 grid();
 rating();
+general();
 
 // Molecules
 linkBars();
