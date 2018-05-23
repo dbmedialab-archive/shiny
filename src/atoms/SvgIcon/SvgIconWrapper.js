@@ -1,4 +1,5 @@
 import Styled from 'styled-components';
+import { getColor } from '../../utils';
 
 const SvgIconWrapper = Styled.div`
 	display: inline-block;
@@ -10,8 +11,11 @@ const SvgIconWrapper = Styled.div`
 		width: ${props['size-sm']}rem;
  	}`)}
  	
- 	path {
- 		fill: ${props => props.theme.colors[props.color]};
+ 	svg{
+		path {
+			fill: ${props => getColor(props.color)};
+		}
+		stroke: ${props => getColor(props.color)}
  	}
 `;
 

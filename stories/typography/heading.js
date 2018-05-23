@@ -7,6 +7,7 @@ import { Code } from '../../src/atoms/Code';
 // Typography
 import {
 	Heading,
+	XSmallHeading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
@@ -20,6 +21,7 @@ export default () => (
 		<p>Also called headline, overskrift.</p>
 		<p>There are four sizes of headings:</p>
 		<ul>
+			<li>XSmall</li>
 			<li>Small</li>
 			<li>Medium</li>
 			<li>Large (default)</li>
@@ -30,6 +32,7 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
+			<XSmallHeading>This is an X small heading</XSmallHeading>
 			<SmallHeading>This is a small heading</SmallHeading>
 			<MediumHeading>This is a medium heading</MediumHeading>
 			<LargeHeading>This is a large heading (default)</LargeHeading>
@@ -41,6 +44,7 @@ export default () => (
 		<Code language="jsx">
 			{`
 import {
+	XSmallHeading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
@@ -48,6 +52,7 @@ import {
 	HugeHeading
 } from '@aller/shiny';
 
+<XSmallHeading>Dette er en ekstra liten overskrift</XSmallHeading>
 <SmallHeading>Dette er en liten overskrift</SmallHeading>
 <MediumHeading>Dette er en middels overskrift</MediumHeading>
 <LargeHeading>Dette er en vanlig størrelse overskrift</LargeHeading>
