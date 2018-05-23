@@ -1,12 +1,18 @@
 {
 	"presets": [
-		"env",
-		"react",
-		"stage-0"
+		"@babel/preset-env",
+		"@babel/preset-react",
+		"@babel/preset-stage-0"
 	],
 	"plugins": [
-		"system-import-transformer",
-		"transform-object-assign",
-		["styled-components", { "ssr": true,	"displayName": true,  "preprocess": false }] 
-    ]
+		"@babel/plugin-transform-object-assign",
+		[
+			"styled-components",
+			{
+				"ssr": true,
+				"displayName": true,
+				"preprocess": false
+			}
+		]
+	]
 }
