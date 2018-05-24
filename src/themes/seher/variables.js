@@ -1,7 +1,7 @@
 export const variables = {
 	mainFont: '"Source Sans Pro", sans-serif',
 	headingsFont: '"Source Sans Pro", sans-serif',
-	
+
 	uiRegularSize: '1.4rem',
 	uiRegularLineHeight: '1.9rem',
 	uiSmallSize: '1.2rem',
