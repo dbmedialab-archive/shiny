@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import { darken, lighten } from 'polished';
 import { variables } from './variables';
 
@@ -21,7 +20,7 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
-const global = css`
+const global = `
 	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
 
 	* {

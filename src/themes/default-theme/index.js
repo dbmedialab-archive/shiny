@@ -1,9 +1,8 @@
-import { css } from 'styled-components';
 import variables from './variables';
 import colors from './colors';
 import flexboxgrid from './flexboxgrid';
 
-const global = css`
+const global = `
 	* {
 		box-sizing: border-box;
 	}
