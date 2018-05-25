@@ -650,11 +650,11 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.44"
 
-"@babel/plugin-transform-object-assign@7.0.0-beta.44":
-  version "7.0.0-beta.44"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.0.0-beta.44.tgz#96881dd11daf77a0fb71137921650b86b8a0e5bb"
+"@babel/plugin-transform-object-assign@7.0.0-beta.48":
+  version "7.0.0-beta.48"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.0.0-beta.48.tgz#095c5822eaa28f8d2478e112237d8228e1813180"
   dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.44"
+    "@babel/helper-plugin-utils" "7.0.0-beta.48"
 
 "@babel/plugin-transform-object-super@7.0.0-beta.44":
   version "7.0.0-beta.44"
