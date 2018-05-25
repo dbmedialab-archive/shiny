@@ -162,6 +162,10 @@
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.44.tgz#9f590bc3ae6daa8a10b853233baa3e25d263751d"
 
+"@babel/helper-plugin-utils@7.0.0-beta.49":
+  version "7.0.0-beta.49"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0-beta.49.tgz#0e9fcbb834f878bb365d2a8ea90eee21ba3ccd23"
+
 "@babel/helper-regex@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/helper-regex/-/helper-regex-7.0.0-beta.44.tgz#f5b6828c1e40f0b74ab6ed90abdd52be0c38a74e"
@@ -598,11 +602,11 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.44"
 
-"@babel/plugin-transform-object-assign@7.0.0-beta.44":
-  version "7.0.0-beta.44"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.0.0-beta.44.tgz#96881dd11daf77a0fb71137921650b86b8a0e5bb"
+"@babel/plugin-transform-object-assign@7.0.0-beta.49":
+  version "7.0.0-beta.49"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-object-assign/-/plugin-transform-object-assign-7.0.0-beta.49.tgz#031bf5cfeb976e62e8a91fc16ffb3a6448c410cd"
   dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.44"
+    "@babel/helper-plugin-utils" "7.0.0-beta.49"
 
 "@babel/plugin-transform-object-super@7.0.0-beta.44":
   version "7.0.0-beta.44"
