@@ -1,9 +1,8 @@
-import { css } from 'styled-components';
 import { stripUnit } from 'polished';
 import colors from './colors';
 import variables from './variables';
 
-const global = css`
+const global = `
 	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
 
 	* {
