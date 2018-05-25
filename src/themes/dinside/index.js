@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import colors from './colors';
 
 const variables = {
@@ -6,7 +5,7 @@ const variables = {
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
 };
 
-const global = css`
+const global = `
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 
 	* {

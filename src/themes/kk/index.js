@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import colors from './colors';
 import { fontSpecs } from './font-specs';
 
@@ -7,7 +6,7 @@ const variables = {
 	headingsFont: '"Didot 16 A", "Didot 16 B", Didot, "GFS Didot", Georgia, serif',
 };
 
-const global = css`
+const global = `
 	${fontSpecs}
 
 	* {

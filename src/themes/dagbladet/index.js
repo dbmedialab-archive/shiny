@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import colors from './colors';
 
 const variables = {
@@ -6,7 +5,7 @@ const variables = {
 	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 };
 
-const global = css`
+const global = `
 	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
 
 	* {
