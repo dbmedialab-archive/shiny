@@ -16,16 +16,16 @@
   "author": "Aller Media",
   "license": "ISC",
   "peerDependencies": {
-    "@babel/cli": "7.0.0-beta.44",
-    "@babel/core": "7.0.0-beta.44",
+    "@babel/cli": "7.0.0-beta.49",
+    "@babel/core": "7.0.0-beta.49",
     "styled-components": "^3.2.5"
   },
   "dependencies": {
     "@aller/eslint-config-aller": "0.5.2",
-    "@babel/plugin-transform-object-assign": "7.0.0-beta.44",
-    "@babel/preset-env": "7.0.0-beta.44",
-    "@babel/preset-react": "7.0.0-beta.44",
-    "@babel/preset-stage-0": "7.0.0-beta.44",
+    "@babel/plugin-transform-object-assign": "7.0.0-beta.49",
+    "@babel/preset-env": "7.0.0-beta.49",
+    "@babel/preset-react": "7.0.0-beta.49",
+    "@babel/preset-stage-0": "7.0.0-beta.49",
     "@maji/react-prism": "1.0.1",
     "@storybook/addon-actions": "3.4.5",
     "@storybook/addon-links": "3.4.5",
@@ -50,8 +50,8 @@
     "striptags": "3.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.0.0-beta.44",
-    "@babel/core": "7.0.0-beta.44",
+    "@babel/cli": "7.0.0-beta.49",
+    "@babel/core": "7.0.0-beta.49",
     "@percy-io/percy-storybook": "1.4.1",
     "@storybook/addon-viewport": "^3.4.1",
     "@storybook/addons": "3.4.5",
