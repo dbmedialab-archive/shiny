@@ -12,6 +12,7 @@ const ProtoHeading = styled.h1`
 
 	${props => props.ALLCAPS && css`
 		text-transform: uppercase;
+		letter-spacing: .1rem;
 	`}
 
 	a {
