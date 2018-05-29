@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { getColor } from '../../utils';
+
 import { Col } from '../../atoms/Col';
 import { Row } from '../../atoms/Row';
 
@@ -17,7 +19,7 @@ const BoldCol = Col.extend`
 	font-weight: bold;
 	& a {
 		text-decoration: none;
-		color: ${props => props.theme.colors.type}
+		color: ${getColor('type')}
 	}
 `;
 

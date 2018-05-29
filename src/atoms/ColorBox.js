@@ -1,20 +1,21 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
 import styled from 'styled-components';
+
+import { getColor } from '../utils';
 
 const ColorDiv = styled.div`
 	flex: ${props => (props.isMainShade ? '9 1 20%' : '1 1 20%')};
 	padding: 2.4rem 1.4rem;
-	background-color: ${props => props.theme.colors[`${props.displayColor}`]};
+	background-color: ${props => getColor(props.displayColor)};
 	color: ${props => (props.textColor === 'light'
-		? props.theme.colors.white
-		: props.theme.colors.type
+		? getColor('white')
+		: getColor('type')
 	)};
 	text-align: center;
 
 	&::after {
-		content: '${props => props.theme.colors[`${props.displayColor}`]}';
+		content: '${props => getColor(props.displayColor)}';
 	}
 `;
 
