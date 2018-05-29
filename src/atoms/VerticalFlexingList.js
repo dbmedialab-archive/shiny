@@ -1,7 +1,9 @@
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { getVariable } from '../utils';
 import { LinkBarDropdown } from './LinkBarDropdown';
+
 
 // Originally written for the VerticalLinkBar molecule
 const VerticalFlexingList = styled.ul`
@@ -15,11 +17,12 @@ const VerticalFlexingList = styled.ul`
 	${LinkBarDropdown} + div & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
+		min-width: calc(14 * ${getVariable('horizontalBase')});
 		position: absolute;
 		top: 100%;
 		left: ${props => (props.align === 'left' ? 0 : 'initial')};
 		right: ${props => (props.align === 'right' ? 0 : 'initial')};
-		box-shadow: 0 0 4rem 0 rgba(0,0,0,.15);
+		box-shadow: 0 0 2rem 0 rgba(0,0,0,.15);
 
 		::before {
 			content: '';
