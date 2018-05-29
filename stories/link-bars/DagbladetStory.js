@@ -70,7 +70,7 @@ const DagbladetStory = () => (
 				<SmallLinkBarLink {...linkProps} isBlockLink style={{ maxWidth: '14.6rem' }}>
 					<DagbladetLogo background="transparent" />
 				</SmallLinkBarLink>
-				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg>
+				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg displayInitially>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
@@ -117,7 +117,7 @@ const DagbladetStory = () => (
 						<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-				<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false}>
+				<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false} displayInitially>
 					<VerticalLinkBar background="white">
 						<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
 						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
