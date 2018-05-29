@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { getColor } from '../../utils';
+
 const DotLoaderContainer = styled.div`
 	height: 6.5rem;
 
@@ -24,7 +26,7 @@ const DotLoader = styled.div`
 	margin: 0 auto;
 	transform: translateZ( 0 );
 	border-radius: 50%;
-	color: ${props => props.theme.colors.typeDisabled};
+	color: ${getColor('typeDisabled')};
 	font-size: 1.0rem;
 	text-indent: -9999em;
 	content: '';
