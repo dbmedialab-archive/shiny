@@ -14,6 +14,11 @@ const VerticalFlexingList = styled.ul`
 	background: ${props => props.background};
 	position: relative;
 
+	width: 100%;
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
+		width: auto;
+	}
+
 	${LinkBarDropdown} + div & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
