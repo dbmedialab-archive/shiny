@@ -45,12 +45,13 @@ export const LinkBarLinkBase = styled.a`
 	text-decoration: none;
 	font-family: ${props => props.theme.variables.headingsFont};
 	font-size: ${props => props.theme.variables.uiRegularSize};
+	letter-spacing: ${props => (props.ALLCAPS ? '.1rem' : '0')};
 	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
-	
+
 	:hover {
 		text-decoration: none;
 	}

@@ -26,6 +26,7 @@ const linkProps = {
 	useUnderline: false,
 	activeBackground: '#bd0000',
 	textColor: 'white',
+	ALLCAPS: true,
 };
 const dropDownLinkProps = {
 	useUnderline: false,
