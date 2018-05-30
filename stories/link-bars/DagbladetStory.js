@@ -18,6 +18,8 @@ import {
 	DagbladetLogo,
 	VerticalLinkBar,
 	SmallHeading,
+	Row,
+	Col,
 
 	getColor,
 	getVariable,
@@ -53,6 +55,11 @@ const VerySpecialLinkBar= styled(HorizontalLinkBar)`
 	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}em) {
 		justify-content: flex-start;
 	}
+`;
+
+const FlexCol = styled(Col)`
+	display: flex;
+	flex-direction: column;
 `;
 
 const DagbladetStory = () => (
@@ -122,14 +129,20 @@ const DagbladetStory = () => (
 						<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
 						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
 						<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
-						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
-						<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+						<Row>
+							<FlexCol xs={6}>
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
+							</FlexCol>
+							<FlexCol xs={6}>
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
+								<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+							</FlexCol>
+						</Row>
 						<PaddedHeading ALLCAPS>Snarveier</PaddedHeading>
 						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
@@ -164,6 +177,8 @@ import {
 	HorizontalLinkBar,
 	DagbladetLogo,
 	VerticalLinkBar,
+	Row,
+	Col,
 } from '@aller/shiny';
 
 const linkProps = {
@@ -192,6 +207,11 @@ const VerySpecialLinkBar= styled(HorizontalLinkBar)\`
 	@media (min-width: \${props => props.theme.flexboxgrid.breakpoints.lg}em) {
 		justify-content: flex-start;
 	}
+\`;
+
+const FlexCol = styled(Col)\`
+	display: flex;
+	flex-direction: column;
 \`;
 
 <VerySpecialLinkBar
@@ -254,14 +274,20 @@ const VerySpecialLinkBar= styled(HorizontalLinkBar)\`
 			<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
 			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
 			<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
-			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
-			<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+			<Row>
+				<FlexCol xs={6}>
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
+				</FlexCol>
+				<FlexCol xs={6}>
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
+					<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+				</FlexCol>
+			</Row>
 			<PaddedHeading ALLCAPS>Snarveier</PaddedHeading>
 			<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
