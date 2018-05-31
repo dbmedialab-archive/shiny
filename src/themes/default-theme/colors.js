@@ -37,6 +37,7 @@ const colors = {
 
 	grayTint: '#C0C0C0',
 	grayTintLight: '#ECECEC',
+	grayTintLighter: '#f3f3f3',
 	grayTintLightDark: '#C0C0C0',
 	grayTintDark: '#767676',
 
