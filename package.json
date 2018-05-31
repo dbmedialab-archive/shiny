@@ -11,7 +11,7 @@
     "snapshot": "build-storybook && percy-storybook --widths=320,414,768,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0",
-    "dev": "babel src/ -w -d lib/ ---ignore Code.js"
+    "dev": "babel src/ -w -d lib/ --ignore Code.js"
   },
   "author": "Aller Media",
   "license": "ISC",
