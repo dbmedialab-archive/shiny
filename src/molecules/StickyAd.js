@@ -5,7 +5,7 @@ import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
-const StyledAdWrapper = AdWrapper.extend`
+const StyledAdWrapper = styled(AdWrapper)`
 	position: sticky;
 	top: 0;
 	margin-left: 0;

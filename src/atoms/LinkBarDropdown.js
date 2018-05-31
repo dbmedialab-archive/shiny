@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import { LinkBarLinkBase } from './LinkBarLinkBase';
 import { FontIcon } from './FontIcon';
 
-const Button = LinkBarLinkBase.withComponent('button').extend`
+const Button = styled(LinkBarLinkBase.withComponent('button'))`
 	cursor: pointer;
 `;
 

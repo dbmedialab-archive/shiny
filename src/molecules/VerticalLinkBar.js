@@ -7,7 +7,7 @@ import { LinkBarItem as Li } from '..';
 // import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 import { VerticalFlexingList as Bar } from '../atoms/VerticalFlexingList';
 
-const LinkBarItem = Li.extend`
+const LinkBarItem = styled(Li)`
 	box-sizing: border-box;
 	width: 100%;
 

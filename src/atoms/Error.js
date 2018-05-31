@@ -1,15 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
 import { getVariable } from '../utils';
 import { Col, XLargePlugHeading, Button, SvgIcon } from '..';
 
-const ErrorWrapper = Col.extend`
+const ErrorWrapper = styled(Col)`
 	text-align: center;
 	font-family: Cabin,sans-serif;
 	padding: 3rem;
 `;
 
-const ReloadButton = Button.extend`
+const ReloadButton = styled(Button)`
 	border: none;
 	border-radius: 0.3rem;
 	padding: 1.5rem;

@@ -41,7 +41,7 @@ const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
 	`;
 };
 
-const XSmallHeading = ProtoHeading.extend`
+const XSmallHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'small', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {
@@ -49,7 +49,7 @@ const XSmallHeading = ProtoHeading.extend`
  	}
 `;
 
-const SmallHeading = ProtoHeading.extend`
+const SmallHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'small', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {
@@ -57,7 +57,7 @@ const SmallHeading = ProtoHeading.extend`
  	}
 `;
 
-const MediumHeading = ProtoHeading.extend`
+const MediumHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'medium', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {
@@ -65,7 +65,7 @@ const MediumHeading = ProtoHeading.extend`
 	}
 `;
 
-const LargeHeading = ProtoHeading.extend`
+const LargeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'regular', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {
@@ -73,7 +73,7 @@ const LargeHeading = ProtoHeading.extend`
 	}
 `;
 
-const XLargeHeading = ProtoHeading.extend`
+const XLargeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'regular', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {
@@ -81,7 +81,7 @@ const XLargeHeading = ProtoHeading.extend`
 	}
 `;
 
-const HugeHeading = ProtoHeading.extend`
+const HugeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'large', ...props })}
 
 	@media screen and (min-width: ${getVariable('largeWidth')}) {

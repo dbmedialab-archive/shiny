@@ -18,7 +18,7 @@ import {
 	Source,
 } from '..';
 
-const PlugLink = BlockLink.extend`
+const PlugLink = styled(BlockLink)`
 	&:focus {
 		outline: none;
 		box-shadow: 0 0 .3rem .1rem #08e;

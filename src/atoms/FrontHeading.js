@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
 	SmallHeading,
 	MediumHeading,
@@ -25,27 +25,27 @@ const FheadStyle = props => css`
 `;
 
 
-export const FrontSmallHeading = SmallHeading.extend`
+export const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
 `;
-export const FrontMediumHeading = MediumHeading.extend`
+export const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 `;
-export const FrontLargeHeading = LargeHeading.extend`
+export const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingLargeSize};
 	}
 `;
-export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
-export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;
+export const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;
+export const FrontHugeHeading = styled(HugeHeading)`${FheadStyle}`;
 
 const defaultProps = {
 	textColor: 'type',

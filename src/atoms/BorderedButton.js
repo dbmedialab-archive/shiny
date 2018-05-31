@@ -1,4 +1,5 @@
 import propTypes from 'prop-types';
+import styled from 'styled-components';
 import { Button } from './Button';
 import { isBright } from '../utils/luminance';
 
@@ -8,7 +9,7 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 		: theme.colors.white
 );
 
-const BorderedButton = Button.extend`
+const BorderedButton = styled(Button)`
 	color: ${props => props.theme.colors.grayTintDark};
 	border-radius: 0.3rem;
 	border: solid 0.1rem ${props => props.theme.colors.grayTint};
