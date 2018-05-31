@@ -60,6 +60,7 @@ export {
 	FrontHugeHeading,
 }                                  from './atoms/FrontHeading';
 
+/* eslint-disable max-len */
 export const Article =                  makeLoadable({ module: './atoms/Article', namedExport: 'Article' });
 export const AdWrapper =                makeLoadable({ module: './atoms/AdWrapper', namedExport: 'AdWrapper' });
 export { BlockLink } from './atoms/BlockLink';
