@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
@@ -16,6 +17,12 @@ import {
 	HorizontalLinkBar,
 	DagbladetLogo,
 	VerticalLinkBar,
+	SmallHeading,
+	Row,
+	Col,
+
+	getColor,
+	getVariable,
 } from '../../src';
 
 import theme from '../../src/themes/default-theme';
@@ -26,6 +33,7 @@ const linkProps = {
 	useUnderline: false,
 	activeBackground: '#bd0000',
 	textColor: 'white',
+	ALLCAPS: true,
 };
 const dropDownLinkProps = {
 	useUnderline: false,
@@ -35,6 +43,25 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 	rel: 'nofoollow',
 });
 
+const PaddedHeading = styled(SmallHeading)`
+	padding-left: ${getVariable('horizontalBase')};
+	padding-right: ${getVariable('horizontalBase')};
+	color: ${getColor('primary')};
+`;
+
+const VerySpecialLinkBar= styled(HorizontalLinkBar)`
+	justify-content: space-between;
+
+	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}em) {
+		justify-content: flex-start;
+	}
+`;
+
+const FlexCol = styled(Col)`
+	display: flex;
+	flex-direction: column;
+`;
+
 const DagbladetStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar</HugeHeading>
@@ -42,14 +69,15 @@ const DagbladetStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<HorizontalLinkBar
+			<VerySpecialLinkBar
 				background="#d60000"
 				overflow="visible"
+				shouldFlexChildren
 			>
 				<SmallLinkBarLink {...linkProps} isBlockLink style={{ maxWidth: '14.6rem' }}>
 					<DagbladetLogo background="transparent" />
 				</SmallLinkBarLink>
-				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} md>
+				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg displayInitially>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
@@ -61,8 +89,8 @@ const DagbladetStory = () => (
 						<LinkBarLink {...dropDownLinkProps} linkText="Meninger" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} md />
-				<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} md>
+				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} lg />
+				<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} lg>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
@@ -75,7 +103,7 @@ const DagbladetStory = () => (
 						<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice"  url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} md>
+				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} lg>
 					<VerticalLinkBar background={colors.white}>
 						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
@@ -96,7 +124,46 @@ const DagbladetStory = () => (
 						<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-			</HorizontalLinkBar>
+				<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false} displayInitially>
+					<VerticalLinkBar background="white">
+						<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
+						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
+						<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>
+						<Row>
+							<FlexCol xs={6}>
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
+							</FlexCol>
+							<FlexCol xs={6}>
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
+								<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
+								<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+							</FlexCol>
+						</Row>
+						<PaddedHeading ALLCAPS>Snarveier</PaddedHeading>
+						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
+						<LinkBarLink
+							{...dropDownLinkProps}
+							linkText="FourFourTwo"
+							url="#"
+							isActive
+						/>
+						<LinkBarLink {...dropDownLinkProps} linkText="Mat"                         url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)"    url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)"     url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)"     url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Se.no"                       url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no"                  url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Leserreiser (annonsørinnhold)" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
+					</VerticalLinkBar>
+				</LargeLinkBarDropdown>
+			</VerySpecialLinkBar>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
@@ -110,12 +177,15 @@ import {
 	HorizontalLinkBar,
 	DagbladetLogo,
 	VerticalLinkBar,
+	Row,
+	Col,
 } from '@aller/shiny';
 
 const linkProps = {
 	useUnderline: false,
 	activeBackground: '#bd0000',
 	textColor: 'white',
+	ALLCAPS: true,
 };
 const dropDownLinkProps = {
 	useUnderline: false,
@@ -125,14 +195,34 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 	rel: 'nofoollow',
 });
 
-<HorizontalLinkBar
+const PaddedHeading = styled(SmallHeading)\`
+	padding-left: \${getVariable('horizontalBase')};
+	padding-right: \${getVariable('horizontalBase')};
+	color: \${getColor('primary')};
+\`;
+
+const VerySpecialLinkBar= styled(HorizontalLinkBar)\`
+	justify-content: space-between;
+
+	@media (min-width: \${props => props.theme.flexboxgrid.breakpoints.lg}em) {
+		justify-content: flex-start;
+	}
+\`;
+
+const FlexCol = styled(Col)\`
+	display: flex;
+	flex-direction: column;
+\`;
+
+<VerySpecialLinkBar
 	background="#d60000"
 	overflow="visible"
+	shouldFlexChildren
 >
-	<XSmallLinkBarLink {...linkProps} style={{ maxWidth: '16.6rem' }}>
+	<SmallLinkBarLink {...linkProps} isBlockLink style={{ maxWidth: '14.6rem' }}>
 		<DagbladetLogo background="transparent" />
-	</XSmallLinkBarLink>
-	<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} md>
+	</SmallLinkBarLink>
+	<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
@@ -144,8 +234,8 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 			<LinkBarLink {...dropDownLinkProps} linkText="Meninger" url="#" />
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
-	<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} md />
-	<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} md>
+	<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} lg />
+	<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} lg>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
@@ -158,7 +248,7 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 			<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice"  url="#" />
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
-	<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} md>
+	<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} lg>
 		<VerticalLinkBar background={colors.white}>
 			<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
@@ -179,7 +269,46 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 			<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
-</HorizontalLinkBar>
+	<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false}>
+		<VerticalLinkBar background="white">
+			<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
+			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
+			<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>
+			<Row>
+				<FlexCol xs={6}>
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/nyheter/" linkText="Nyheter" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/kultur/" linkText="Kultur" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/sport/" linkText="Sport" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dinside.no/motor/" linkText="Bil" />
+				</FlexCol>
+				<FlexCol xs={6}>
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/reise/" linkText="Reise" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/meninger/" linkText="Meninger" />
+					<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/" linkText="Pluss" />
+					<LinkBarLink {...dropDownLinkProps} href="https://dbtv.no" linkText="DBTV" />
+				</FlexCol>
+			</Row>
+			<PaddedHeading ALLCAPS>Snarveier</PaddedHeading>
+			<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
+			<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
+			<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
+			<LinkBarLink
+				{...dropDownLinkProps}
+				linkText="FourFourTwo"
+				url="#"
+				isActive
+			/>
+			<LinkBarLink {...dropDownLinkProps} linkText="Mat"                         url="#" />
+			<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)"    url="#" />
+			<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)"     url="#" />
+			<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)"     url="#" />
+			<LinkBarLink {...dropDownLinkProps} linkText="Se.no"                       url="#" />
+			<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no"                  url="#" />
+			<LinkBarLink {...paidDDLinkProps} linkText="Leserreiser (annonsørinnhold)" url="#" />
+			<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
+		</VerticalLinkBar>
+	</LargeLinkBarDropdown>
+</VerySpecialLinkBar>
 				`}
 		</Code>
 	</section>

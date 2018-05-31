@@ -1,6 +1,9 @@
 import Styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { getColor, getVariable } from '../utils';
+
 import { SvgIcon } from './SvgIcon';
 
 const BylineBlock = Styled.div`
@@ -13,7 +16,7 @@ const BylineImage = Styled.img.attrs({
     height: 4.5rem;
     overflow: hidden;
     border-radius: 50%;
-    margin-right: ${props => props.theme.variables.horizontalBase};
+    margin-right: ${getVariable('horizontalBase')};
 `;
 
 const WrapAvatar = Styled.div`
@@ -22,28 +25,28 @@ const WrapAvatar = Styled.div`
     height: 4.5rem;
     overflow: hidden;
     border-radius: 50%;
-    margin-right: ${props => props.theme.variables.horizontalBase};
+    margin-right: ${getVariable('horizontalBase')};
     text-align: center;
 `;
 
 const TextBlock = Styled.div`
     float: left;
-    color: ${props => props.theme.colors.type};
-    font-family: ${props => props.theme.variables.mainFont};
+    color: ${getColor('type')};
+    font-family: ${getVariable('mainFont')};
 `;
 
 const Name = Styled.div`
-    font-size: ${props => props.theme.variables.uiRegularSize};
-    line-height: ${props => props.theme.variables.uiRegularLineHeight};
+    font-size: ${getVariable('uiRegularSize')};
+    line-height: ${getVariable('uiRegularLineHeight')};
     font-weight: 300;
 `;
 
 const Email = Styled.a.attrs({
 	href: ({ email }) => `mailto:${email}`,
 })`
-    font-size: ${props => props.theme.variables.uiSmallSize};
+    font-size: ${getVariable('uiSmallSize')};
     font-weight: 300;
-    color: ${props => props.theme.colors.type};
+    color: ${getColor('type')};
 `;
 
 const BylineWithTwoLines = ({ src, name, email }) => (

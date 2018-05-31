@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { getColor, getVariable } from '../../utils';
 import { Col, Row, Grid } from '../..';
 import { SvgIcon } from '../../atoms/SvgIcon';
 
 const FooterWrapper = styled.footer`
-	background-color: ${props => props.theme.colors.type};
-	color: ${props => props.theme.colors.white};
-	font-family: ${props => props.theme.variables.mainFont};
-	font-size: ${props => props.theme.variables.headingSmallSize};
-	line-height: ${props => props.theme.variables.headingSmallLineHeight};
+	background-color: ${getColor('type')};
+	color: ${getColor('white')};
+	font-family: ${getVariable('mainFont')};
+	font-size: ${getVariable('headingSmallSize')};
+	line-height: ${getVariable('headingSmallLineHeight')};
 	padding: 5rem 2rem 4rem;
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		padding: 10rem 0 6rem;
 	}
-	
+
 	.text-left{
 		text-align: left;
 	}
@@ -39,8 +40,8 @@ const OppskriftLink = styled.a`
 	text-decoration: none;
 	color: inherit;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: ${props => props.theme.variables.headingLargeSize};
-	line-height: ${props => props.theme.variables.headingLargeLineHeight};
+	font-size: ${getVariable('headingLargeSize')};
+	line-height: ${getVariable('headingLargeLineHeight')};
 	&::after {
 		content: '';
 		display: block;

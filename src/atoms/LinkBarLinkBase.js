@@ -49,8 +49,11 @@ export const LinkBarLinkBase = styled.a`
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
-	${props => (props.ALLCAPS && 'text-transform: uppercase')};
-	
+	${props => props.ALLCAPS && css`
+		text-transform: uppercase;
+		letter-spacing: .1rem;
+	`}
+
 	:hover {
 		text-decoration: none;
 	}
