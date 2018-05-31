@@ -1,5 +1,5 @@
-import grid from './grid';
 import introduction from './introduction';
+import grid from './grid';
 import loaders from './Loaders';
 import typography from './Typography';
 import editorialMarking from './EditorialMarking';
