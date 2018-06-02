@@ -113,7 +113,7 @@ class Dropdown extends React.Component {
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
 				{this.getTrigger()}
-				<HideMeMaybe hide={hide}>
+				<HideMeMaybe hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
 			</StyledDropdown>
