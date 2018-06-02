@@ -32,14 +32,14 @@ class LazyProgressiveImage extends PureComponent {
 		children: propTypes.node.isRequired,
 		/** Aspect ratio of the image, used to reserve space */
 		ratio: propTypes.number.isRequired,
-		/** Should we use the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) */
-		shouldBlur: propTypes.bool,
+		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
+		preventBlur: propTypes.bool,
 	}
 
 	static defaultProps = {
 		backgroundColor: '#ececec',
 		alt: 'Artikkelbilde.',
-		shouldBlur: true,
+		preventBlur: false,
 	}
 
 	componentDidMount() {
@@ -49,7 +49,7 @@ class LazyProgressiveImage extends PureComponent {
 
 	render() {
 		const {
-			backgroundColor, src, alt, ratio, shouldBlur, fallbackSrc,
+			backgroundColor, src, alt, ratio, preventBlur, fallbackSrc,
 		} = this.props;
 
 
@@ -58,7 +58,7 @@ class LazyProgressiveImage extends PureComponent {
 				backgroundColor={backgroundColor}
 				paddingBottom={ratio * 100}
 			>
-				<Picture alt={alt} shouldBlur={shouldBlur}>
+				<Picture alt={alt} preventBlur={preventBlur}>
 					{this.props.children}
 					<Image
 						itemProp="image"
@@ -66,7 +66,7 @@ class LazyProgressiveImage extends PureComponent {
 						data-sizes="auto"
 						src={src}
 						data-src={src}
-						className={`lazyload ${shouldBlur ? 'blur-up' : ''}`}
+						className={`lazyload ${preventBlur ? '' : 'blur-up'}`}
 					/>
 					<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
 				</Picture>

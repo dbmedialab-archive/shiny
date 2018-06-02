@@ -12,7 +12,7 @@ const StyledPicture = styled.picture`
 		max-width: 100%;
 		
 
-		${props => (props.shouldBlur ? css`
+		${props => (!props.preventBlur ? css`
 			backface-visibility: hidden;
 			perspective: 1000;
 			transform: translate3d(0,0,0);
@@ -38,8 +38,8 @@ class Picture extends PureComponent {
 		children: propTypes.node.isRequired,
 		/** The alt text for the <img> tag */
 		alt: propTypes.string,
-		/** Indicates wether the image should have a blur transition effect */
-		shouldBlur: propTypes.bool.isRequired,
+		/** Turns off blur transition when true */
+		preventBlur: propTypes.bool.isRequired,
 	}
 
 	static defaultProps = {
@@ -55,11 +55,11 @@ class Picture extends PureComponent {
 	}
 
 	render() {
-		const { alt, shouldBlur } = this.props;
+		const { alt, preventBlur } = this.props;
 		return (
 			<StyledPicture
 				alt={alt}
-				shouldBlur={shouldBlur}
+				preventBlur={preventBlur}
 			>
 				{this.props.children}
 			</StyledPicture>

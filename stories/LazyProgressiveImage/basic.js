@@ -23,7 +23,6 @@ const MultipleLazyProgressiveImagesStory = () => {
 				ratio={0.5}
 				fallbackSrc={''}
 				key={i}
-				shouldBlur={false}
 			>
 				<Source
 					srcSet={`https://9.dbstatic.no/${id}.jpg?imageId=${id}&panow=0&panoy=0&panoh=0&panox=0&heightx=0&heightw=0&heighth=0&heighty=0&width=980&height=490&compression=70`}
