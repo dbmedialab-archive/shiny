@@ -1,10 +1,19 @@
 {
   "extends": [
     "@aller/eslint-config-aller"
-  ],
+	],
   "rules": {
     "react/jsx-filename-extension": 0,
     "react/jsx-curly-brace-presence": 0,
-	 "import/prefer-default-export": 0
+		 "import/prefer-default-export": 0,
+		 "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "stories/**"
+        ]
+      }
+    ]
   }
 }

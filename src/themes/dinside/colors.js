@@ -1,12 +1,14 @@
 import { darken, lighten } from 'polished';
 
 const colorsToShade= {
-	primary: '#cc3612',
-	secondary: '#0064b4',
+	primary: '#BE4125',
+	secondary: '#2664AC',
 
 	yellow: '#ffd861',
 	sand: '#e5e1d9',
 	green: '#839d63',
+	navy: '#0064b4',
+	red: '#2664AC',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -24,11 +26,13 @@ const colors = {
 	...combinedShadedColors,
 	skinColors: {
 		splashBackground: 'sand',
-		splashText: 'secondary',
+		splashText: 'navy',
 
 		calmBackground: 'sand',
 		calmBorder: 'sand',
 		calmText: 'secondary',
+
+		link: 'navy',
 	},
 };
 
