@@ -43,6 +43,7 @@ class LazyProgressiveImage extends PureComponent {
 	}
 
 	componentDidMount() {
+		/* eslint-disable global-require */
 		require('lazysizes');
 	}
 
