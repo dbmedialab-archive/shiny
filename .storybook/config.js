@@ -15,7 +15,33 @@ addDecorator(StorybookThemeSwitcher);
 setDefaults({
 	header: true,
 	inline: true,
-	source: true
+	source: true,
+	styles: style => ({
+		...style,
+		infoBody: {
+			...style.infoBody,
+			border: 'none',
+			boxShadow: 'none',
+		},
+		jsxInfoContent: {
+			...style.jsxInfoContent,
+			borderTop: 'none',
+		},
+		header: {
+			...style.header,
+			body: {
+				...style.header.body,
+				borderBottom: 'none'
+			}
+		},
+		source: {
+			...style.source,
+			h1: {
+				...style.source.h1,
+				borderBottom: 'none',
+			}
+		}
+	})
 })
 
 const { percyAddon, serializeStories } = createPercyAddon();
