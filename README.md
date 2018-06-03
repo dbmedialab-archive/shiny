@@ -34,8 +34,8 @@ git push --tags
 
 1. Create and merge a pull request for the branch
 
-1. Add release notes:
-https://github.com/dbmedialab/shiny/releases
+1. Add release notes by opening the visiting [Shiny's releases overview page](https://github.com/dbmedialab/shiny/releases) on GitHub, clicking your newly pushed release and then clicking the "Edit tag" button.
+
 
 
 ## Relation to Firefly (the TV series)
