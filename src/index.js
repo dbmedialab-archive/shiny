@@ -121,6 +121,7 @@ export { LeftScrollArrow         } from './atoms/ScrollArrow';
 export { RightScrollArrow        } from './atoms/ScrollArrow';
 export { SeHerLogo               } from './atoms/SeHerLogo';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
+export { DinsideLogo             } from './atoms/DinsideLogo';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { KKLogo                  } from './atoms/KKLogo';
 export { ButtonWithModal         } from './atoms/ButtonWithModal';
