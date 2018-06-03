@@ -7,7 +7,7 @@
     "build": "build-storybook",
     "clean": "rm -rf storybook-static lib",
     "deploy": "./deploy.sh",
-    "postinstall": "babel src/ -d lib/",
+    "prepublish": "babel src/ -d lib/",
     "snapshot": "build-storybook && percy-storybook --widths=320,414,768,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0",
