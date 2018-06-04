@@ -1,36 +1,45 @@
 import React, { PureComponent } from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-	filter: blur(1.5rem);
-	transform: translateZ(0); /*for older browsers*/
-  	will-change: transform;
+
 	& img {
-		filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15');
 		display: block;
 		max-width: 100%;
-	}
+		
 
-	&.loaded {
-		filter: blur(0);
-		transition: filter .4s ease-in-out;
+		${props => (!props.preventBlur ? css`
+			backface-visibility: hidden;
+			perspective: 1000;
+			transform: translate3d(0,0,0);
+			transform: translateZ(0);
+			will-change: filter;
+			&.blur-up {
+				
+				filter: blur(15px);
+				transition: filter 400ms;
 
-		& img {
-			filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
-		}
+				&.lazyloaded {
+					filter: blur(0.5px);
+				}
+		}` : '')}
 	}
 `;
 
+/**
+ * Picture is a styled version of a <picture> tag, with added polyfill for old browsers.
+ */
 class Picture extends PureComponent {
 	static propTypes = {
-		onMounted: propTypes.func.isRequired,
-		isLoaded: propTypes.bool.isRequired,
 		children: propTypes.node.isRequired,
+		/** The alt text for the <img> tag */
 		alt: propTypes.string,
+		/** Turns off blur transition when true */
+		preventBlur: propTypes.bool.isRequired,
 	}
 
 	static defaultProps = {
@@ -43,21 +52,14 @@ class Picture extends PureComponent {
 		require('picturefill/dist/plugins/mutation/pf.mutation.min');
 
 		picturefill();
-
-		if (this.props.onMounted) {
-			if (this.node) {
-				const img = this.node.querySelector('img');
-				this.props.onMounted(img);
-			}
-		}
 	}
 
 	render() {
+		const { alt, preventBlur } = this.props;
 		return (
 			<StyledPicture
-				className={this.props.isLoaded ? 'loaded' : ''}
-				alt={this.props.alt}
-				innerRef={(node) => { this.node = node; }}
+				alt={alt}
+				preventBlur={preventBlur}
 			>
 				{this.props.children}
 			</StyledPicture>
