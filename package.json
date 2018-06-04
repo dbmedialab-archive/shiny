@@ -13,6 +13,10 @@
 		"test": "eslint src stories --max-warnings=0",
 		"dev": "babel src/ -w -d lib/"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dbmedialab/shiny.git"
+	},
 	"author": "Aller Media",
 	"peerDependencies": {
 		"prop-types": "^15.6.1",
