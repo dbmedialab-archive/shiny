@@ -1,12 +1,10 @@
-
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/dbmedialab/shiny.svg)](https://greenkeeper.io/)
-
-# Shiny
+[![Travis badge](https://api.travis-ci.org/dbmedialab/shiny.svg?branch=master)](https://travis-ci.org/dbmedialab/shiny)
 
 _Ev'rythings shiny, cap'n, not to fret!_
+# Shiny
 
-Shiny is a collection of dumb React components. Check out the [storybook](https://dbmedialab.github.com/shiny/)!
+Shiny components for your React application. Check out the [storybook](https://dbmedialab.github.com/shiny/)!
 
 In Aller Media, we use shiny as part of a four-layered frontend system:
   1. **[shiny](https://github.com/dbmedialab/shiny) (dumb frontend components): Makes stuff look good**
