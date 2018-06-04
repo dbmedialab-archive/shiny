@@ -20,7 +20,7 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
 # Replace x.x.x with your new version number
 git checkout master && git pull && yarn && git checkout -b release/x.x.x
 ```
-2. Publish it! Yarn will prompt you to for a new version number. Until we have reached 1.0.0, breaking changes or new features should trigger a minor version bump, while bug fixes should trigger a patch version bump. In other words: Don't inadvertedly release 1.0.0!
+2. Publish it! Yarn will prompt you to for a new version number. Until we have reached 1.0.0, breaking changes or new features should trigger a minor version bump, while bug fixes should trigger a patch version bump. In other words: Don't inadvertently release 1.0.0!
 ```sh
 yarn publish
 ```
