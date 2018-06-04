@@ -1,18 +1,9 @@
 import propTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import Observer from 'react-intersection-observer';
 
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
-
-if (typeof window !== 'undefined' &&
-	!('IntersectionObserver' in window) &&
-	!('IntersectionObserverEntry' in window)
-) {
-	/* eslint-disable global-require */
-	require('intersection-observer');
-}
 
 const Figure = styled.figure`
 	position: relative;
@@ -24,84 +15,62 @@ const Figure = styled.figure`
 	margin: 0;
 `;
 
-const StyledImage = Image.extend`
-	height: 100%;
-`;
-
-class LazyProgressiveImage extends Component {
+/**
+ * LazyProgressiveImage downloads a small version of an image first, then loads the correct size when it is ready
+ */
+class LazyProgressiveImage extends PureComponent {
 	static propTypes = {
+		/** Background color used on the <figure> tag */
 		backgroundColor: propTypes.string,
+		/** Low quality image used for first load */
 		src: propTypes.string.isRequired,
+		/** The image src used for <noscript> */
 		fallbackSrc: propTypes.string.isRequired,
+		/** The alt attribute for the <img> and <picture> tags */
 		alt: propTypes.string,
-		offset: propTypes.number,
+		/** Should be <source> tags */
 		children: propTypes.node.isRequired,
+		/** Aspect ratio of the image, used to reserve space */
 		ratio: propTypes.number.isRequired,
+		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
+		preventBlur: propTypes.bool,
 	}
 
 	static defaultProps = {
 		backgroundColor: '#ececec',
 		alt: 'Artikkelbilde.',
-		offset: 0,
+		preventBlur: false,
 	}
 
-	state = {
-		isLoaded: false,
+	componentDidMount() {
+		/* eslint-disable global-require */
+		require('lazysizes');
 	}
-
-	componentWillUnmount() {
-		if (this.img) {
-			this.img.removeEventListener('load', this.setLoadedStatus);
-		}
-	}
-
-	onLoadImage = () => {
-		this.setLoadedStatus();
-	}
-
-
-	setLoadedStatus = () => {
-		this.setState({
-			isLoaded: true,
-		});
-	}
-
-
-	addImageListener = (img) => {
-		if (!this.img) {
-			return;
-		}
-
-		this.img.addEventListener('load', this.setLoadedStatus);
-	}
-
 
 	render() {
 		const {
-			backgroundColor, src, alt, ratio, fallbackSrc,
+			backgroundColor, src, alt, ratio, preventBlur, fallbackSrc,
 		} = this.props;
 
-		// Mount the picture element if no child components are set
-		const onMountPicture = (typeof this.props.children !== 'undefined' || !this.props.children)
-			? this.addImageListener
-			: () => {};
 
 		return (
-			<Observer rootMargin="1000px" triggerOnce>
-				{inView => (
-					<Figure
-						backgroundColor={backgroundColor}
-						innerRef={(node) => { this.node = node; }}
-						paddingBottom={ratio * 100}
-					>
-						<Picture {...this.props} isLoaded={this.state.isLoaded} onMounted={onMountPicture} inView={inView}>
-							{inView && this.props.children}
-							{inView && <StyledImage itemProp="image" src={src} alt={alt} onLoad={this.onLoadImage} /> }
-							<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
-						</Picture>
-					</Figure>
-				)}
-			</Observer>
+			<Figure
+				backgroundColor={backgroundColor}
+				paddingBottom={ratio * 100}
+			>
+				<Picture alt={alt} preventBlur={preventBlur}>
+					{this.props.children}
+					<Image
+						itemProp="image"
+						alt={alt}
+						data-sizes="auto"
+						src={src}
+						data-src={src}
+						className={`lazyload ${preventBlur ? '' : 'blur-up'}`}
+					/>
+					<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
+				</Picture>
+			</Figure>
 		);
 	}
 }

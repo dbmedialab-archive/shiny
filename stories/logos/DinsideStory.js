@@ -4,10 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { DinsideLogo } from '../../src';
 
 const DinsideStory = () => (
-	<div>
-		<DinsideLogo />
-		<DinsideLogo twentyYearAnniversary />
-	</div>
+	<DinsideLogo />
 );
 
-export default withInfo('This is the different variations of the Dinside logo.')(DinsideStory);
+export default withInfo('The main Dinside logo.')(DinsideStory);

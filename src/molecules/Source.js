@@ -2,11 +2,13 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Source = ({ media, srcSet }) => (
-	<source media={media} srcSet={srcSet} />
+	<source media={media} data-srcset={srcSet} />
 );
 
 Source.propTypes = {
+	/** URL to image */
 	srcSet: propTypes.string.isRequired,
+	/** Media query string, e.g. (max-width: 75em) */
 	media: propTypes.string,
 };
 
