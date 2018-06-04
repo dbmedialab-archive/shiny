@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import styled, { keyframes } from 'styled-components';
 
 import {
 	Row,
@@ -10,6 +11,26 @@ import {
 
 import { Code } from '../../src/atoms/Code';
 
+const twirl = keyframes`
+	from {
+		transform: rotate(0);
+	}
+	27% {
+		transform: rotate(20deg);
+	}
+
+	to {
+		transform: rotate(-1440deg);
+	}
+`;
+
+
+const Spinning = styled.div`
+	&:hover {
+		animation: ${twirl} 1.4s ease-out 1;
+	}
+`;
+
 const Welcome = () => (
 	<Fragment>
 		<section>
@@ -20,7 +41,7 @@ const Welcome = () => (
 					</p>
 				</Col>
 				<Col xs sm={3}>
-					<ShinyLogo />
+					<Spinning><ShinyLogo /></Spinning>
 				</Col>
 			</Row>
 		</section>
