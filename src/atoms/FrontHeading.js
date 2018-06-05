@@ -24,36 +24,44 @@ const FheadStyle = props => css`
     }
 `;
 
-
-export const FrontSmallHeading = styled(SmallHeading)`
+const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
 `;
-export const FrontMediumHeading = styled(MediumHeading)`
+
+const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 `;
-export const FrontLargeHeading = styled(LargeHeading)`
+const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingLargeSize};
 	}
 `;
-export const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;
-export const FrontHugeHeading = styled(HugeHeading)`${FheadStyle}`;
+const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;
+const FrontHugeHeading = styled(HugeHeading)`${FheadStyle}`;
 
 const defaultProps = {
 	textColor: 'type',
 	lineColor: 'primary',
 };
 
-FrontSmallHeading.defaultProps = defaultProps;
-FrontMediumHeading.defaultProps = defaultProps;
-FrontLargeHeading.defaultProps = defaultProps;
-FrontXLargeHeading.defaultProps = defaultProps;
-FrontHugeHeading.defaultProps = defaultProps;
+FrontSmallHeading.defaultProps  = Object.assign({}, SmallHeading.defaultProps, defaultProps);
+FrontMediumHeading.defaultProps = Object.assign({}, MediumHeading.defaultProps, defaultProps);
+FrontLargeHeading.defaultProps  = Object.assign({}, LargeHeading.defaultProps, defaultProps);
+FrontXLargeHeading.defaultProps = Object.assign({}, XLargeHeading.defaultProps, defaultProps);
+FrontHugeHeading.defaultProps   = Object.assign({}, HugeHeading.defaultProps, defaultProps);
+
+export {
+	FrontSmallHeading,
+	FrontMediumHeading,
+	FrontLargeHeading,
+	FrontXLargeHeading,
+	FrontHugeHeading,
+};
