@@ -93,6 +93,9 @@ const KKButton = Button.extend`
 	background: #fff;
 `;
 
+const Icon = props => <IconWithText name="circle-with-text" size={5} position="right" {...props} />;
+const CommercialIcon = props => <Icon fill="#000" textColor="#fff" {...props} />;
+
 const KKStory = () => (
 	<section>
 		<HugeHeading>KK Header</HugeHeading>
@@ -119,50 +122,40 @@ const KKStory = () => (
 							shadow="none"
 						>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Helse, kosthold & trening"
-									circleText="HE"
-									position="right"
-								/>
+								<Icon text="Helse, kosthold & trening" circleText="HE" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Showbiz & royal" circleText="sr" position="right" />
+								<Icon text="Showbiz & royal" circleText="sr" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Living" circleText="li" position="right" />
+								<Icon text="Living" circleText="li" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mat" circleText="ma" position="right" />
+								<Icon text="Mat" circleText="ma" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Livet mitt" circleText="lm" position="right" />
+								<Icon text="Livet mitt" circleText="lm" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Meninger" circleText="me" position="right" />
+								<Icon text="Meninger" circleText="me" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mote & skjønnhet" circleText="mo" position="right" />
+								<Icon text="Mote & skjønnhet" circleText="mo" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Jobb, karriere & økonomi"
-									circleText="jo"
-									position="right"
-								/>
+								<Icon text="Jobb, karriere & økonomi" circleText="jo" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Mamma" circleText="mm" position="right" />
+								<Icon text="Mamma" circleText="mm" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Reise" circleText="re" position="right" />
+								<Icon text="Reise" circleText="re" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Horoskop" circleText="ho" position="right" />
+								<Icon text="Horoskop" circleText="ho" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText name="circle-with-text" text="Sex og -samliv" circleText="ss" position="right" />
+								<Icon text="Sex og -samliv" circleText="ss" />
 							</LinkBarLink>
 						</HorizontalLinkBar>
 						<FrontSmallHeading>
@@ -177,43 +170,21 @@ const KKStory = () => (
 							shadow="none"
 						>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Shopping"
-									circleText="Sh"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
+								<CommercialIcon text="Shopping" circleText="Sh" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
+								<Icon
 									text="KK-mila"
 									circleText="kk"
-									position="right"
-									fill="#000"
-									textColor="#fff"
 								/>
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
-									text="Rabattkoder"
-									circleText="ra"
-									position="right"
-									fill="#000"
-									textColor="#fff"
-								/>
+								<CommercialIcon text="Rabattkoder" circleText="ra" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
-								<IconWithText
-									name="circle-with-text"
+								<CommercialIcon
 									text="Abonnèr på KK"
 									circleText="kk"
-									position="right"
-									fill="#000"
-									textColor="#fff"
 								/>
 							</LinkBarLink>
 						</HorizontalLinkBar>
@@ -317,6 +288,9 @@ const linkProps = {
 	position: 'static',
 };
 
+const Icon = props => <IconWithText name="circle-with-text" size={5} position="right" {...props} />;
+const CommercialIcon = props => <Icon fill="#000" textColor="#fff" {...props} />;
+
 <HorizontalLinkBar
 	background="#fff"
 	overflow="visible"
@@ -337,50 +311,40 @@ const linkProps = {
 				shadow="none"
 			>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
-						text="Helse, kosthold & trening"
-						circleText="HE"
-						position="right"
-					/>
+					<Icon text="Helse, kosthold & trening" circleText="HE" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Showbiz & royal" circleText="sr" position="right" />
+					<Icon text="Showbiz & royal" circleText="sr" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Living" circleText="li" position="right" />
+					<Icon text="Living" circleText="li" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Mat" circleText="ma" position="right" />
+					<Icon text="Mat" circleText="ma" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Livet mitt" circleText="lm" position="right" />
+					<Icon text="Livet mitt" circleText="lm" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Meninger" circleText="me" position="right" />
+					<Icon text="Meninger" circleText="me" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Mote & skjønnhet" circleText="mo" position="right" />
+					<Icon text="Mote & skjønnhet" circleText="mo" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
-						text="Jobb, karriere & økonomi"
-						circleText="jo"
-						position="right"
-					/>
+					<Icon text="Jobb, karriere & økonomi" circleText="jo" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Mamma" circleText="mm" position="right" />
+					<Icon text="Mamma" circleText="mm" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Reise" circleText="re" position="right" />
+					<Icon text="Reise" circleText="re" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Horoskop" circleText="ho" position="right" />
+					<Icon text="Horoskop" circleText="ho" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText name="circle-with-text" text="Sex og -samliv" circleText="ss" position="right" />
+					<Icon text="Sex og -samliv" circleText="ss" />
 				</LinkBarLink>
 			</HorizontalLinkBar>
 			<FrontSmallHeading>
@@ -395,43 +359,21 @@ const linkProps = {
 				shadow="none"
 			>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
-						text="Shopping"
-						circleText="Sh"
-						position="right"
-						fill="#000"
-						textColor="#fff"
-					/>
+					<CommercialIcon text="Shopping" circleText="Sh" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
+					<Icon
 						text="KK-mila"
 						circleText="kk"
-						position="right"
-						fill="#000"
-						textColor="#fff"
 					/>
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
-						text="Rabattkoder"
-						circleText="ra"
-						position="right"
-						fill="#000"
-						textColor="#fff"
-					/>
+					<CommercialIcon text="Rabattkoder" circleText="ra" />
 				</LinkBarLink>
 				<LinkBarLink {...linkProps} url="#">
-					<IconWithText
-						name="circle-with-text"
+					<CommercialIcon
 						text="Abonnèr på KK"
 						circleText="kk"
-						position="right"
-						fill="#000"
-						textColor="#fff"
 					/>
 				</LinkBarLink>
 			</HorizontalLinkBar>
