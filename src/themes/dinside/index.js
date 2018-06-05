@@ -6,15 +6,22 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
 
 	* {
 		box-sizing: border-box;
 	}
 
 	body {
+		color: #333;
+		padding: 0;
+		margin: 0;
 		font-family: ${variables.mainFont};
-		line-height: ${variables.verticalBase};
+		font-weight: 400;
+		font-style: normal;
+		line-height: 1.5;
+		position: relative;
+		cursor: auto;
 	}
 
 	a {
