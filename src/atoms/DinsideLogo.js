@@ -59,7 +59,8 @@ const Svg = styled.svg`
 
 /** Dinside Main Logo */
 const DinsideLogo = ({ twentyYearAnniversary }) => (
-	<Svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${twentyYearAnniversary ? '411.8' : '296.8'} 68.8`}>
+	<Svg role="img" aria-labelledby="title" id="DinsideLogo" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox={`0 0 ${twentyYearAnniversary ? '411.8' : '296.8'} 68.8`}>
+		<title id="title">Dinside Logo</title>
 		<path
 			className="primary"
 			d="M0,5.7h27.7c23.3,0,33.9,11,33.9,30.7c0,20.7-10.3,31.8-34.7,31.8H0V5.7z M26.1,52.7c7,0,10.5-3.5,10.5-15.2 c0-11.7-3.2-15.6-10.5-15.6h-1.4v30.8L26.1,52.7L26.1,52.7z"
