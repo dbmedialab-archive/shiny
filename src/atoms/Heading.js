@@ -89,6 +89,20 @@ const HugeHeading = styled(ProtoHeading)`
 	}
 `;
 
+XSmallHeading.propTypes = ProtoHeading.propTypes;
+SmallHeading.propTypes  = ProtoHeading.propTypes;
+MediumHeading.propTypes = ProtoHeading.propTypes;
+LargeHeading.propTypes  = ProtoHeading.propTypes;
+XLargeHeading.propTypes = ProtoHeading.propTypes;
+HugeHeading.propTypes   = ProtoHeading.propTypes;
+
+XSmallHeading.defaultProps = ProtoHeading.defaultProps;
+SmallHeading.defaultProps  = ProtoHeading.defaultProps;
+MediumHeading.defaultProps = ProtoHeading.defaultProps;
+LargeHeading.defaultProps  = ProtoHeading.defaultProps;
+XLargeHeading.defaultProps = ProtoHeading.defaultProps;
+HugeHeading.defaultProps   = ProtoHeading.defaultProps;
+
 const Heading = ({ size, ...rest }) => {
 	switch (size) {
 	case 'xsmall':
