@@ -9,7 +9,7 @@ import publishedDate from './publishedDate';
 import bodyText from './bodyText';
 import lunchButton from './lunch-button';
 import dice from './dice';
-// import icon from './icon';
+import icon from './icon';
 import underlinedHeading from './underlined-heading';
 import dymoHeading from './dymo-heading';
 import svgIcon from './svgIcon';
