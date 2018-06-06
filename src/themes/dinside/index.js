@@ -3,6 +3,8 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Open Sans', helvetica, arial, sans-serif",
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
+
+	uiRegularLineHeight: '1.5',
 };
 
 const global = `
@@ -19,13 +21,19 @@ const global = `
 		font-family: ${variables.mainFont};
 		font-weight: 400;
 		font-style: normal;
-		line-height: 1.5;
+		line-height: ${variables.uiRegularLineHeight};
 		position: relative;
 		cursor: auto;
 	}
 
 	a {
-		color: #333;
+		color: ${colors.skinColors.link};
+		text-decoration: underline;
+		line-height: inherit;
+
+		&:visited {
+			color: ${colors.skinColors.linkVisited};
+		}
 	}
 `;
 
