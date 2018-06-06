@@ -40,7 +40,7 @@ export default () => {
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
 		.add('Dice', dice)
-		// .add('Font Icon', icon)
+		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
 		.add('Icon with text', iconWithText)
 		.add('Numbered list', numberedList)
