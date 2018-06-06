@@ -9,6 +9,7 @@ const colorsToShade= {
 	green: '#839d63',
 	navy: '#0064b4',
 	red: '#2664AC',
+	purple: '#609',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -33,6 +34,7 @@ const colors = {
 		calmText: 'secondary',
 
 		link: 'navy',
+		linkVisited: 'purple',
 	},
 };
 
