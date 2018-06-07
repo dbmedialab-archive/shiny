@@ -1,4 +1,4 @@
-import propTypes from 'propTypes';
+import propTypes from 'prop-types';
 
 import defaultTheme from './default-theme';
 import dagbladet from './dagbladet';
