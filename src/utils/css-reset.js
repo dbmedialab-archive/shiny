@@ -92,5 +92,9 @@ export const cssReset = css`
 			border: 0;
 		}
 	}
+
+	p {
+		margin-bottom: 1em;
+	}
 `;
 /* eslint-disable max-len */
