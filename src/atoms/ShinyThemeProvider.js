@@ -1,13 +1,28 @@
+/* eslint-disable max-len */
 import React from 'react';
-import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal } from 'styled-components';
+import propTypes from 'prop-types';
+import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal, css } from 'styled-components';
 import { merge } from 'aurora-deep-slice-merge';
 
-import { cssReset } from '../utils';
 import defaultTheme from '../themes/default-theme';
 import { themePropTypes } from '../themes';
 
-/* eslint-disable max-len */
-
+// @TODO: Switch to a proper CSS reset, like this one in utils:
+// import { cssReset } from '../utils';
+const cssReset = css`
+	/* Font reset: 1rem = 10px */
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		font-size: 1.6rem;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section, main {
+    	display: block;
+	}
+`;
 /**
  * An extension of styled-component's ThemeProvider.
  *
@@ -47,7 +62,13 @@ const ShinyThemeProvider = ({ children, theme }) => {
 		</StyledComponentsThemeProvider>
 	);
 };
-ShinyThemeProvider.propTypes = themePropTypes;
+ShinyThemeProvider.propTypes = {
+	theme: themePropTypes,
+	children: propTypes.oneOfType([
+		propTypes.arrayOf(propTypes.node),
+		propTypes.node,
+	]),
+};
 ShinyThemeProvider.defaultProps = {
 	children: null,
 	theme: {},
