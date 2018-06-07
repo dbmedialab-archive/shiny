@@ -1,3 +1,4 @@
+import { css } from 'styled-components';
 import propTypes from 'prop-types';
 import { Button } from './Button';
 import { isBright } from '../utils/luminance';
@@ -7,6 +8,11 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 		? theme.colors.grayTintDark
 		: theme.colors.white
 );
+const coloredBackground = css`
+			border-color: ${props => props.theme.colors.primary};
+			background-color: ${props => props.theme.colors.primary};
+			color: ${props => calculateTextColor(props.theme)};
+`;
 
 const BorderedButton = Button.extend`
 	color: ${props => props.theme.colors.grayTintDark};
@@ -17,18 +23,14 @@ const BorderedButton = Button.extend`
 	font-weight: 500;
 	letter-spacing: 0;
 	outline: none;
+	cursor: pointer;
+	${props => props.isActive && coloredBackground};
 
-	${props => props.isActive && (`
-		border-color: ${props.theme.colors.primary};
-		background-color: ${props.isActive && (props.theme.colors.primary)};
-		color: ${props.isActive && calculateTextColor(props.theme)};
-	`)};
-
-	&:hover, &:active{
-		border-color: ${props => props.theme.colors.primary};
-		background-color: ${props => props.theme.colors.primary};
-		color: ${props => calculateTextColor(props.theme)};
-	};
+	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+		&:hover{
+			${coloredBackground}
+		};
+	}
 `;
 
 BorderedButton.defaultProps = {
