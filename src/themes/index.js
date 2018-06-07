@@ -7,6 +7,8 @@ import sol from './sol';
 import topp from './topp';
 import mat from './mat';
 
+export { themePropTypes } from './theme-prop-types';
+
 const themes = {
 	defaultTheme,
 	dagbladet,
