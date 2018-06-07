@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 import propTypes from 'prop-types';
 import { Button } from './Button';
-import { isBright } from '../utils/luminance';
+import { isBright, getColor } from '../utils';
 
 const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 	isBright(backgroundColor)
@@ -9,9 +9,9 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 		: theme.colors.white
 );
 const coloredBackground = css`
-			border-color: ${props => props.theme.colors.primary};
-			background-color: ${props => props.theme.colors.primary};
-			color: ${props => calculateTextColor(props.theme)};
+	border-color: ${getColor('primary')};
+	background-color: ${getColor('primary')};
+	color: ${props => calculateTextColor(props.theme)};
 `;
 
 const BorderedButton = Button.extend`
