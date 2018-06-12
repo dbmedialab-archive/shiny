@@ -8,15 +8,14 @@ import {
 	getVariable,
 } from '../utils';
 
-import {
-	Article,
-	Kicker,
-	PlugHeading as DefaultHeading,
-	Labels,
-	BlockLink,
-	LazyProgressiveImage,
-	Source,
-} from '..';
+
+import { Article } from '..';
+import { Kicker } from '..';
+import { PlugHeading as DefaultHeading } from '..';
+import { Labels } from '..';
+import { BlockLink } from '..';
+import { LazyProgressiveImage } from '..';
+import { Source } from '..';
 
 const PlugLink = BlockLink.extend`
 	&:focus {

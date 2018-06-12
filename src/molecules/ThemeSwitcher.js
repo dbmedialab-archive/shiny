@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 import { merge } from 'aurora-deep-slice-merge';
 
-import {
-	FullWidthLinkBar,
-	LinkBarButton as Button,
-	ThemeSelector as ShinyThemeProvider,
-} from '..';
+
+import { FullWidthLinkBar } from '..';
+import { LinkBarButton as Button } from '..';
+import { ThemeSelector as ShinyThemeProvider } from '..';
+
 
 import { themes } from '../themes';
 

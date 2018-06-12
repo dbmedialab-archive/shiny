@@ -5,7 +5,7 @@ import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal, css } fro
 import { merge } from 'aurora-deep-slice-merge';
 
 import defaultTheme from '../themes/default-theme';
-import { themePropTypes } from '../themes';
+import { themePropTypes } from '../themes/theme-prop-types';
 
 // @TODO: Switch to a proper CSS reset, like this one in utils:
 // import { cssReset } from '../utils';
