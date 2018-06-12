@@ -1,5 +1,5 @@
-import {	BlockLink	} from '..';
-import {	LinkBarLinkBase	} from '..';
+import { BlockLink } from '..';
+import { LinkBarLinkBase } from '..';
 
 const Button = BlockLink.withComponent('button');
 const SomewhatPrettyButton = LinkBarLinkBase.withComponent(Button);

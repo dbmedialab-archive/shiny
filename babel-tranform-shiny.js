@@ -1,17 +1,17 @@
-const mapping = getMapping()
+const mapping = getMapping();
 
-module.exports = function(importName, matches) {
+module.exports = function transformImports(importName, matches) {
 	if (mapping[importName]) {
-		return mapping[importName]
+		return mapping[importName];
 	}
-	throw new Error(importName + ' is not in mapping')
-}
+	throw new Error(`${importName} is not in mapping`);
+};
 
 function getMapping() {
 	return {
 		themes: '../themes',
-        HorizontalOverflowGradient: '../atoms/HorizontalOverflowGradient',
-        ShinyThemeProvider: '../atoms/ShinyThemeProvider',
+		HorizontalOverflowGradient: '../atoms/HorizontalOverflowGradient',
+		ShinyThemeProvider: '../atoms/ShinyThemeProvider',
 		Heading: '../atoms/Heading',
 		SmallHeading: '../atoms/Heading',
 		MediumHeading: '../atoms/Heading',
@@ -157,6 +157,6 @@ function getMapping() {
 		RoundedButton: '../atoms/RoundedButtons',
 		SmallRoundedButton: '../atoms/RoundedButtons',
 		TinyRoundedButton: '../atoms/RoundedButtons',
-		ArrowBullet: '../atoms/ArrowBullet'
-	}
+		ArrowBullet: '../atoms/ArrowBullet',
+	};
 }
