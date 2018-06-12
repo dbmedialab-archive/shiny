@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { HorizontalOverflowGradient } from '..';
 import { HorizontalFlexingList as Bar } from '..';
 import { LinkBarItem } from '..';
-import { NavWithOptionalConstrainer} from '..';
+import { NavWithOptionalConstrainer } from '..';
 
 const LinkBar = ({
 	background,
