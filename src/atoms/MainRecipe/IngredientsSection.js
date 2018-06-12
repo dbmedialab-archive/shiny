@@ -6,7 +6,8 @@ const Buttons = Styled.button`
 	height: 3.8rem;
 	display: inline-block;
 	border-radius: 10%;
-
+	padding: 0;
+	
 	> span {
 		color: #fff;
 	}

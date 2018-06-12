@@ -6,11 +6,13 @@ import rowWithThreePlugs from './row-with-three-plugs';
 import kicker from './kicker';
 import allCaps from './all-caps';
 import customHeading from './custom-heading';
+import TrysilPlugWithoutBlurStory from './without-blur';
 
 export default () => {
 	storiesOf('TrysilPlug', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('TrysilPlug', basicIssue)
+		.add('... without blur', TrysilPlugWithoutBlurStory)
 		.add('Custom Heading', customHeading)
 		.add('With Kicker', kicker)
 		.add('All caps', allCaps)
