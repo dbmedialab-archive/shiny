@@ -40,7 +40,7 @@
 		"react-modal": "3.4.5",
 		"react-rating": "1.1.2",
 		"react-stickyfill": "0.2.3",
-		"react-styled-flexboxgrid": "2.2.0",
+		"react-styled-flexboxgrid": "2.3.0",
 		"striptags": "3.1.1"
 	},
 	"devDependencies": {
