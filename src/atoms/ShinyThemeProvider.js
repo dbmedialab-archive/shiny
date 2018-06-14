@@ -44,10 +44,8 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// Inject
 	// - Reset styles
 	// - Our theme's global styles
-	injectGlobal`
-		${cssReset}
-		${mergedTheme.global}
-	`;
+	injectGlobal`${cssReset}`;
+	injectGlobal`${mergedTheme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
