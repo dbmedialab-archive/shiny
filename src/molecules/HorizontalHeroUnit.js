@@ -24,6 +24,7 @@ const TitleCol = Col.extend`
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		text-align: center;
 	}
 
 	padding: ${props => props.theme.variables.verticalBase} 0;

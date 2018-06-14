@@ -61,11 +61,15 @@ const Address = styled.address`
 	font-style: normal;
 `;
 
+const LogoCol = styled(Col)`
+	text-align: center;
+`
+
 const OppskriftFooter = () => (
 	<FooterWrapper>
 		<Grid>
 			<Row>
-				<Col md={3} xs={12}>
+				<LogoCol md={3} xs={12}>
 					<Row center="md">
 						<Col md={12}>
 							<OppskriftLink className="oppskrift-link" href="#">Oppskrift.no</OppskriftLink>
@@ -103,7 +107,7 @@ const OppskriftFooter = () => (
 						</Col>
 					</Row>
 					<VerticalSeparator height={2.8} />
-				</Col>
+				</LogoCol>
 				<Col md={3} xs={12} >
 					<Row>
 						<Col xs={12}>
