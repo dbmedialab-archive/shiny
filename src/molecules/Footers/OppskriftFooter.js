@@ -63,7 +63,7 @@ const Address = styled.address`
 
 const LogoCol = styled(Col)`
 	text-align: center;
-`
+`;
 
 const OppskriftFooter = () => (
 	<FooterWrapper>
