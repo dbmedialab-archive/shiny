@@ -14,6 +14,16 @@
 				"displayName": true,
 				"preprocess": false
 			}
+		],
+		[
+			"transform-imports",
+			{
+				"..": {
+					"transform": "./../../babel-tranform-shiny.js",
+					"preventFullImport": true,
+					"skipDefaultConversion": true
+				}
+			}
 		]
 	]
 }
