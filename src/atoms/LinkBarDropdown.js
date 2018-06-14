@@ -129,7 +129,7 @@ Dropdown.propTypes = {
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string,
 	isRelative: propTypes.bool,
-	Trigger: propTypes.node,
+	Trigger: propTypes.func,
 	className: propTypes.string,
 };
 Dropdown.defaultProps = {

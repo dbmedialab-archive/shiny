@@ -2,10 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-	DontPushTheAdBoundaries,
-	LinkBarNav as Nav,
-} from '..';
+import { DontPushTheAdBoundaries } from '..';
+import { LinkBarNav as Nav } from '..';
 
 const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
 	&& {

@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-	Row,
-	Col,
-	IconWithText,
-} from '..';
+
+import { Row } from '..';
+import { Col } from '..';
+import { IconWithText } from '..';
 
 const PaddingLess = Col.extend`
 	padding: 0;

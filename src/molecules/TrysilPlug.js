@@ -8,15 +8,14 @@ import {
 	getVariable,
 } from '../utils';
 
-import {
-	Article,
-	Kicker,
-	PlugHeading as DefaultHeading,
-	Labels,
-	BlockLink,
-	LazyProgressiveImage,
-	Source,
-} from '..';
+
+import { Article } from '..';
+import { Kicker } from '..';
+import { PlugHeading as DefaultHeading } from '..';
+import { Labels } from '..';
+import { BlockLink } from '..';
+import { LazyProgressiveImage } from '..';
+import { Source } from '..';
 
 const PlugLink = BlockLink.extend`
 	&:focus {
@@ -61,6 +60,7 @@ const TrysilPlug = ({
 	ratio,
 	Heading,
 	headingProps,
+	preventBlur,
 }) => (
 	<Article>
 		<PlugLink href={url}>
@@ -72,6 +72,7 @@ const TrysilPlug = ({
 					offset={offset}
 					fallbackSrc={image}
 					ratio={ratio}
+					preventBlur={preventBlur}
 				>
 					{sources.length === 0 &&
 						<Source srcSet={image} />
@@ -111,6 +112,7 @@ TrysilPlug.propTypes = {
 			needsPadding: PropTypes.bool,
 		}),
 	}),
+	preventBlur: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
 	kicker: '',
@@ -121,6 +123,7 @@ TrysilPlug.defaultProps = {
 	sources: [],
 	Heading: DefaultHeading,
 	headingProps: {},
+	preventBlur: false,
 };
 
 export { TrysilPlug };
