@@ -7030,9 +7030,9 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-styled-flexboxgrid@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.2.0.tgz#2b1ea9dba28da8c493c0f576b4d5b2dc8a07a30f"
+react-styled-flexboxgrid@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-styled-flexboxgrid/-/react-styled-flexboxgrid-2.3.0.tgz#7981f4a0802cffc3c5acd122fca2a88e88d32c20"
   dependencies:
     lodash.isinteger "^4.0.4"
 
