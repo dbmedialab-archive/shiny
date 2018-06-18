@@ -15,7 +15,8 @@ const BylineImage = Styled.img.attrs({
     width: 4.5rem;
     height: 4.5rem;
     overflow: hidden;
-    border-radius: 50%;
+	border-radius: 50%;
+	object-fit: cover;
     margin-right: ${getVariable('horizontalBase')};
 `;
 
