@@ -122,7 +122,7 @@ const KKStory = () => (
 							shadow="none"
 						>
 							<LinkBarLink {...linkProps} url="#">
-								<Icon text="Helse, kosthold & trening" circleText="HE" />
+								<Icon text="Helse, kosthold & trening" circleText="he" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
 								<Icon text="Showbiz & royal" circleText="sr" />
@@ -170,7 +170,7 @@ const KKStory = () => (
 							shadow="none"
 						>
 							<LinkBarLink {...linkProps} url="#">
-								<CommercialIcon text="Shopping" circleText="Sh" />
+								<CommercialIcon text="Shopping" circleText="sh" />
 							</LinkBarLink>
 							<LinkBarLink {...linkProps} url="#">
 								<Icon
