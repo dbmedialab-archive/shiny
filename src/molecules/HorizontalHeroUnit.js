@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	Row,
-	Col,
-	LazyProgressiveImage,
-	Source,
-	UnderlinedHugeHeading,
-	UnderlinedMediumHeading,
-	UnderlinedSmallHeading,
-	YoutubeFrame,
-} from '..';
+import { Row } from '..';
+import { Col } from '..';
+import { LazyProgressiveImage } from '..';
+import { Source } from '..';
+import { UnderlinedHugeHeading } from '..';
+import { UnderlinedMediumHeading } from '..';
+import { UnderlinedSmallHeading } from '..';
+import { YoutubeFrame } from '..';
+
 import { IconBar } from '../molecules/IconBar';
 
 const Fragment = ({ children }) => children;
@@ -25,6 +24,7 @@ const TitleCol = styled(Col)`
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		text-align: center;
 	}
 
 	padding: ${props => props.theme.variables.verticalBase} 0;

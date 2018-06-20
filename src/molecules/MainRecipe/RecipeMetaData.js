@@ -61,6 +61,7 @@ const RecipeMetaData  = ({
 			name: preferenceItem.slug,
 		};
 	});
+	const authorImage = author.profileImage || {};
 
 	return (
 		<RecipeMetaDataWrapper>
@@ -80,7 +81,7 @@ const RecipeMetaData  = ({
 				</Col>
 				<Col xs={12} md={3} mdOffset={1}>
 					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
-					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
+					<BylineWithTwoLines name={author.name} email={author.email} src={authorImage.mediumPortrait} />
 				</Col>
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>

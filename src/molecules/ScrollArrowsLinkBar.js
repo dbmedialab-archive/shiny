@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	HorizontalFlexingList as Bar,
-	LinkBarItem,
-	NavWithOptionalConstrainer,
-	LeftScrollArrow,
-	RightScrollArrow,
-} from '..';
+
+import { HorizontalFlexingList as Bar } from '..';
+import { LinkBarItem } from '..';
+import { NavWithOptionalConstrainer } from '..';
+import { LeftScrollArrow } from '..';
+import { RightScrollArrow } from '..';
 
 const Container = styled.div`
 	overflow: hidden;

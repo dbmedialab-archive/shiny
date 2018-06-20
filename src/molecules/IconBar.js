@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	Row,
-	Col,
-	IconWithText,
-} from '..';
+import { Row } from '..';
+import { Col } from '..';
+import { IconWithText } from '..';
 
 const PaddingLess = styled(Col)`
 	padding: 0;

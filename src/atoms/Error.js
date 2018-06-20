@@ -2,7 +2,10 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { getVariable } from '../utils';
-import { Col, XLargePlugHeading, Button, SvgIcon } from '..';
+import { Col } from '..';
+import { XLargePlugHeading } from '..';
+import { Button } from '..';
+import { SvgIcon } from '..';
 
 const ErrorWrapper = styled(Col)`
 	text-align: center;
