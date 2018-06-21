@@ -102,8 +102,12 @@ const AuthorInfo = ({ author }) => {
 			<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
 			<BylineWithTwoLines name={author.name} email={author.email} src={authorImage.mediumPortrait} />
 		</Col>
-	)
-}
+	);
+};
+
+AuthorInfo.propTypes = {
+	author: PropTypes.object
+};
 
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
@@ -113,6 +117,7 @@ const IconValues = PropTypes.shape({
 RecipeMetaData.defaultProps = {
 	allergies: [],
 	preferences: [],
+	author: null,
 	rating: 0,
 	imgCaption: '',
 	numVotes: 0,
