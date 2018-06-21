@@ -63,6 +63,8 @@ const colors = {
 		adWrapperFontColor: 'type',
 		adWrapperColor: 'type',
 
+		heading: 'type',
+
 		nativeAd: 'orange',
 		sport: 'green',
 		helse: 'blue',
