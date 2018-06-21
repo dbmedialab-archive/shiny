@@ -6,8 +6,8 @@ import { getColor, getVariable } from '../utils';
 
 const ProtoHeading = styled.h1`
 	padding: 0;
-	color: ${getColor('type')};
-	font-weight: 700;
+	color: ${getColor('heading')};
+	font-weight: ${getVariable('headingsWeight')};
 	font-family: ${getVariable('headingsFont')};
 
 	${props => props.ALLCAPS && css`
