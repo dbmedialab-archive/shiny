@@ -105,13 +105,23 @@ const AuthorInfo = ({ author }) => {
 	);
 };
 
+const authorPropType = PropTypes.shape({
+	name: PropTypes.string,
+	email: PropTypes.string,
+	profileImage: PropTypes.shape({
+		title: PropTypes.string,
+		seoFilename: PropTypes.string,
+		mediumPortrait: PropTypes.string,
+	}),
+});
+
 AuthorInfo.propTypes = {
 	author: authorPropType,
 };
 
 AuthorInfo.defaultProps = {
 	author: null,
-}
+};
 
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
@@ -135,15 +145,5 @@ RecipeMetaData.propTypes = {
 	imgCaption: PropTypes.string,
 	numVotes: PropTypes.number,
 };
-
-const authorPropType = PropTypes.shape({
-	name: PropTypes.string,
-	email: PropTypes.string,
-	profileImage: PropTypes.shape({
-		title: PropTypes.string,
-		seoFilename: PropTypes.string,
-		mediumPortrait: PropTypes.string,
-	}),
-});
 
 export { RecipeMetaData };
