@@ -78,10 +78,7 @@ const RecipeMetaData  = ({
 						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>
-				<Col xs={12} md={3} mdOffset={1}>
-					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
-					<BylineWithTwoLines name={author.name} email={author.email} src={author.profileImage.mediumPortrait} />
-				</Col>
+				{author && <AuthorInfo author={author} />}
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
 					<Col md={10} >
@@ -97,6 +94,35 @@ const RecipeMetaData  = ({
 	);
 };
 
+const AuthorInfo = ({ author }) => {
+	const authorImage = author.profileImage || {};
+
+	return (
+		<Col xs={12} md={3} mdOffset={1}>
+			<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
+			<BylineWithTwoLines name={author.name} email={author.email} src={authorImage.mediumPortrait} />
+		</Col>
+	);
+};
+
+const authorPropType = PropTypes.shape({
+	name: PropTypes.string,
+	email: PropTypes.string,
+	profileImage: PropTypes.shape({
+		title: PropTypes.string,
+		seoFilename: PropTypes.string,
+		mediumPortrait: PropTypes.string,
+	}),
+});
+
+AuthorInfo.propTypes = {
+	author: authorPropType,
+};
+
+AuthorInfo.defaultProps = {
+	author: null,
+};
+
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
 	value: PropTypes.number,
@@ -105,7 +131,7 @@ const IconValues = PropTypes.shape({
 RecipeMetaData.defaultProps = {
 	allergies: [],
 	preferences: [],
-	author: {},
+	author: null,
 	rating: 0,
 	imgCaption: '',
 	numVotes: 0,
@@ -114,19 +140,10 @@ RecipeMetaData.defaultProps = {
 RecipeMetaData.propTypes = {
 	allergies: PropTypes.arrayOf(IconValues),
 	preferences: PropTypes.arrayOf(IconValues),
-	author: PropTypes.shape({
-		name: PropTypes.string,
-		email: PropTypes.string,
-		profileImage: PropTypes.shape({
-			title: PropTypes.string,
-			seoFilename: PropTypes.string,
-			mediumPortrait: PropTypes.string,
-		}),
-	}),
+	author: authorPropType,
 	rating: PropTypes.number,
 	imgCaption: PropTypes.string,
 	numVotes: PropTypes.number,
 };
-
 
 export { RecipeMetaData };

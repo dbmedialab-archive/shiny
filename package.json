@@ -1,6 +1,6 @@
 {
 	"name": "@aller/shiny",
-	"version": "0.5.3",
+	"version": "0.5.4",
 	"description": "",
 	"main": "lib/index.js",
 	"scripts": {
@@ -35,7 +35,7 @@
 		"picturefill": "3.0.2",
 		"polished": "1.9.2",
 		"prism-themes": "1.0.1",
-		"prismjs": "1.14.0",
+		"prismjs": "1.15.0",
 		"react-intersection-observer": "5.0.5",
 		"react-modal": "3.4.5",
 		"react-rating": "1.1.2",
@@ -52,12 +52,12 @@
 		"@babel/preset-react": "7.0.0-beta.51",
 		"@babel/preset-stage-0": "7.0.0-beta.51",
 		"@percy-io/percy-storybook": "2.0.0",
-		"@storybook/addon-actions": "3.4.7",
-		"@storybook/addon-info": "3.4.7",
-		"@storybook/addon-links": "3.4.7",
-		"@storybook/addon-viewport": "3.4.7",
-		"@storybook/addons": "3.4.7",
-		"@storybook/react": "3.4.7",
+		"@storybook/addon-actions": "3.4.8",
+		"@storybook/addon-info": "3.4.8",
+		"@storybook/addon-links": "3.4.8",
+		"@storybook/addon-viewport": "3.4.8",
+		"@storybook/addons": "3.4.8",
+		"@storybook/react": "3.4.8",
 		"babel-core": "7.0.0-bridge.0",
 		"babel-eslint": "8.2.3",
 		"babel-plugin-react-docgen": "2.0.0-rc.0",
@@ -68,9 +68,9 @@
 		"eslint-plugin-jsx-a11y": "6.0.3",
 		"eslint-plugin-react": "7.9.1",
 		"pretty-format": "23.0.1",
-		"prop-types": "15.6.1",
+		"prop-types": "15.6.2",
 		"react": "16.4.1",
 		"react-dom": "16.4.1",
-		"styled-components": "3.2.6"
+		"styled-components": "3.3.3"
 	}
 }
