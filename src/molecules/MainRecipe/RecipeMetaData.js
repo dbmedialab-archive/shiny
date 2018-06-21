@@ -106,8 +106,12 @@ const AuthorInfo = ({ author }) => {
 };
 
 AuthorInfo.propTypes = {
-	author: PropTypes.object
+	author: authorPropType,
 };
+
+AuthorInfo.defaultProps = {
+	author: null,
+}
 
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
@@ -126,19 +130,20 @@ RecipeMetaData.defaultProps = {
 RecipeMetaData.propTypes = {
 	allergies: PropTypes.arrayOf(IconValues),
 	preferences: PropTypes.arrayOf(IconValues),
-	author: PropTypes.shape({
-		name: PropTypes.string,
-		email: PropTypes.string,
-		profileImage: PropTypes.shape({
-			title: PropTypes.string,
-			seoFilename: PropTypes.string,
-			mediumPortrait: PropTypes.string,
-		}),
-	}),
+	author: authorPropType,
 	rating: PropTypes.number,
 	imgCaption: PropTypes.string,
 	numVotes: PropTypes.number,
 };
 
+const authorPropType = PropTypes.shape({
+	name: PropTypes.string,
+	email: PropTypes.string,
+	profileImage: PropTypes.shape({
+		title: PropTypes.string,
+		seoFilename: PropTypes.string,
+		mediumPortrait: PropTypes.string,
+	}),
+});
 
 export { RecipeMetaData };
