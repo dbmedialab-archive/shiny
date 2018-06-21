@@ -61,7 +61,6 @@ const RecipeMetaData  = ({
 			name: preferenceItem.slug,
 		};
 	});
-	const authorImage = author.profileImage || {};
 
 	return (
 		<RecipeMetaDataWrapper>
@@ -79,10 +78,7 @@ const RecipeMetaData  = ({
 						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>
-				<Col xs={12} md={3} mdOffset={1}>
-					<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
-					<BylineWithTwoLines name={author.name} email={author.email} src={authorImage.mediumPortrait} />
-				</Col>
+				{author && <AuthorInfo author={author} />}
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
 					<Col md={10} >
@@ -98,6 +94,17 @@ const RecipeMetaData  = ({
 	);
 };
 
+const AuthorInfo = ({ author }) => {
+	const authorImage = author.profileImage || {};
+
+	return (
+		<Col xs={12} md={3} mdOffset={1}>
+			<FrontSmallHeading lineWidth={6}>Oppskrift</FrontSmallHeading>
+			<BylineWithTwoLines name={author.name} email={author.email} src={authorImage.mediumPortrait} />
+		</Col>
+	)
+}
+
 const IconValues = PropTypes.shape({
 	slug: PropTypes.string,
 	value: PropTypes.number,
@@ -106,7 +113,6 @@ const IconValues = PropTypes.shape({
 RecipeMetaData.defaultProps = {
 	allergies: [],
 	preferences: [],
-	author: {},
 	rating: 0,
 	imgCaption: '',
 	numVotes: 0,
