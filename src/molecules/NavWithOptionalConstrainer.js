@@ -1,11 +1,12 @@
 // Originally written for the HorizontalLinkBar molecule
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { DontPushTheAdBoundaries } from '..';
 import { LinkBarNav as Nav } from '..';
 
-const DesktopWidthConstrainer = DontPushTheAdBoundaries.extend`
+const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 	&& {
 		padding-top: 0;
 		background: transparent;

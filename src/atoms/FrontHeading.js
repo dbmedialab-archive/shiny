@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
 	SmallHeading,
 	MediumHeading,
@@ -24,36 +24,44 @@ const FheadStyle = props => css`
     }
 `;
 
-
-export const FrontSmallHeading = SmallHeading.extend`
+const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingSmallSize};
 	}
 `;
-export const FrontMediumHeading = MediumHeading.extend`
+
+const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingMediumSize};
 	}
 `;
-export const FrontLargeHeading = LargeHeading.extend`
+const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
 	font-size: ${props => props.theme.variables.headingMediumSize};
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
 		font-size: ${props => props.theme.variables.headingLargeSize};
 	}
 `;
-export const FrontXLargeHeading = XLargeHeading.extend`${FheadStyle}`;
-export const FrontHugeHeading = HugeHeading.extend`${FheadStyle}`;
+const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;
+const FrontHugeHeading = styled(HugeHeading)`${FheadStyle}`;
 
 const defaultProps = {
 	textColor: 'type',
 	lineColor: 'primary',
 };
 
-FrontSmallHeading.defaultProps = defaultProps;
-FrontMediumHeading.defaultProps = defaultProps;
-FrontLargeHeading.defaultProps = defaultProps;
-FrontXLargeHeading.defaultProps = defaultProps;
-FrontHugeHeading.defaultProps = defaultProps;
+FrontSmallHeading.defaultProps  = Object.assign({}, SmallHeading.defaultProps, defaultProps);
+FrontMediumHeading.defaultProps = Object.assign({}, MediumHeading.defaultProps, defaultProps);
+FrontLargeHeading.defaultProps  = Object.assign({}, LargeHeading.defaultProps, defaultProps);
+FrontXLargeHeading.defaultProps = Object.assign({}, XLargeHeading.defaultProps, defaultProps);
+FrontHugeHeading.defaultProps   = Object.assign({}, HugeHeading.defaultProps, defaultProps);
+
+export {
+	FrontSmallHeading,
+	FrontMediumHeading,
+	FrontLargeHeading,
+	FrontXLargeHeading,
+	FrontHugeHeading,
+};

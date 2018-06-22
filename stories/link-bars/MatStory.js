@@ -14,7 +14,7 @@ import {
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 
-const BoxShadowLinkBar = HorizontalLinkBar.extend`
+const BoxShadowLinkBar = styled(HorizontalLinkBar)`
 	box-shadow: 0 .2rem .4rem 0 rgba(203, 203, 203, 0.5);
 `;
 
@@ -27,13 +27,13 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	}
 `;
 
-const SearchField = TopBarSearchField.extend`
+const SearchField = styled(TopBarSearchField)`
 	box-sizing: border-box;
 	margin: .8rem 0;
 	max-width: calc(100% - 21rem);
 `;
 
-const LinkBarBleedingLogo = LinkBarItem.extend`
+const LinkBarBleedingLogo = styled(LinkBarItem)`
 	align-self: flex-start;
 	z-index: 9;
 `;

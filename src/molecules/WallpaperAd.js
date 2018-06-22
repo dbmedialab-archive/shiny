@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import Sticker from 'react-stickyfill';
 
 import { getColor } from '../utils';
 import { AdWrapper } from '../atoms/AdWrapper';
 
-const LeftAndRight = AdWrapper.extend`
+const LeftAndRight = styled(AdWrapper)`
 	position: absolute;
 	height: 100%;
 	width: 455px; /* Used for positioning of background ad so we use px */
@@ -56,7 +56,7 @@ LeftAndRight.propTypes = {
 	]).isRequired,
 };
 
-const WallpaperWrapper = AdWrapper.extend`
+const WallpaperWrapper = styled(AdWrapper)`
 	height: calc(300px + 2.63rem);
 `;
 

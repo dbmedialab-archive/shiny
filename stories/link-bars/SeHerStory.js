@@ -25,13 +25,13 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	}
 `;
 
-const SearchField = TopBarSearchField.extend`
+const SearchField = styled(TopBarSearchField)`
 	box-sizing: border-box;
 	margin: .8rem 0;
 	max-width: calc(100% - 21rem);
 `;
 
-const LinkBarBleedingLogo = LinkBarItem.extend`
+const LinkBarBleedingLogo = styled(LinkBarItem)`
 	align-self: flex-start;
 	z-index: 9;
 `;

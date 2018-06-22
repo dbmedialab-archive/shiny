@@ -37,7 +37,7 @@ const RecipeMetaDataWrapper = styled.div`
 	}
 `;
 
-const PaddedCol = Col.extend`
+const PaddedCol = styled(Col)`
 	margin-top: 2rem;
 `;
 

@@ -85,7 +85,7 @@ const SearchControls = styled.div`
 	border-bottom: .2rem solid black;
 `;
 
-const KKButton = Button.extend`
+const KKButton = styled(Button)`
 	color: black;
 	width: 5.0rem;
 	height: 5.0rem;

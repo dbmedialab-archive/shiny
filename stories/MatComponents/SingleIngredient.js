@@ -22,7 +22,7 @@ const description = 'Mandelpotet er en delikatessepotet som dyrkes over store de
 	'grohull. Kjøttet er gult med karakteristisk smak. Mandelpotet er en selvfølge til rakfisk, lutefisk, ribbe, ' +
 	'vilt og spesielt godt egnet til bakst og potetmos.';
 
-const DetailsCol = Col.extend`
+const DetailsCol = styled(Col)`
 	padding-bottom: calc(2 * ${props => props.theme.variables.verticalBase});
 `;
 
@@ -188,7 +188,7 @@ const description = 'Mandelpotet er en delikatessepotet som dyrkes over store de
 	'grohull. Kjøttet er gult med karakteristisk smak. Mandelpotet er en selvfølge til rakfisk, lutefisk, ribbe, ' +
 	'vilt og spesielt godt egnet til bakst og potetmos.';
 
-const DetailsCol = Col.extend\`
+const DetailsCol = styled(Col)\`
 	padding-bottom: calc(2 * $\{props => props.theme.variables.verticalBase});
 \`;
 
