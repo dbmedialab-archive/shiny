@@ -75,6 +75,8 @@ const colors = {
 	transparent: 'transparent',
 	grayTintLight: '#ececec',
 	grayTintLighter: '#f3f3f3',
+	darknessLight: '#555',
+	darknessLighter: '#ccc'
 	link: 'cornflowerblue',
 };
 
