@@ -5,9 +5,9 @@ import { getColor } from '../utils';
 const Button = styled.button`
 	letter-spacing: .1rem;
 	text-transform: uppercase;
-	background-color: ${props => (props.background? getColor(props.background): props.theme.colors.button.background)};
+	background-color: ${props => getColor(props.background)};
 	border-color: #bdbdbd;
-	color: ${props => (props.textColor? getColor(props.textColor): props.theme.colors.button.color)};
+	color: ${props => getColor(props.textColor)};
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
@@ -28,13 +28,15 @@ const Button = styled.button`
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
 	${props => props.outline && `
-		border: .1rem solid ${props.background? getColor(props.background):  props.theme.colors.button.background};
+		border: .1rem solid ${getColor(props.background)};
 		background: transparent;
-		color: ${props.background? getColor(props.background): props.theme.colors.button.background};
+		color: ${props.background};
 	`}
 `;
 
 Button.defaultProps = {
+	background: 'grayTintLight',
+	textColor: 'type',
 	borderRadius: 0,
 	ALLCAPS: false,
 };
