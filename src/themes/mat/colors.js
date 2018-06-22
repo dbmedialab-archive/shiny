@@ -5,7 +5,7 @@ const colorsToShade= {
 	secondary: '#0096a3',
 	grey: '#7a7a7a',
 	darkGrey: '#4a4a4a',
-	type: '#333333',
+	darkness: '#333333',
 	white: '#ffffff',
 	red: '#ff5500',
 	sand: '#f8f8f1',
@@ -22,4 +22,14 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
-export default combinedShadedColors;
+const skinColors = {
+	type: 'darkness',
+	typeLight: 'darknessLight',
+	typeLighter: 'darknessLighter',
+	typeDark: 'darknessDark',
+};
+
+export default {
+	...combinedShadedColors,
+	skinColors,
+};

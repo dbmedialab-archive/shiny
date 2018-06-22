@@ -13,7 +13,6 @@ const colorsToShade = {
 	blue: '#185bd3',
 	type: '#666',
 
-
 	pink: '#444',
 	purple: '#444',
 	teal: '#444',
@@ -47,6 +46,8 @@ const skinColors = {
 	calmText: 'type',
 
 	heading: 'primary',
+
+	type: 'type',
 };
 
 const colors = {

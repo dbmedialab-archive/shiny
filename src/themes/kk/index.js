@@ -14,7 +14,7 @@ const global = `
 	}
 
 	body {
-		color: ${colors.type}
+		color: #222;
 		padding: 0;
 		margin: 0;
 		font-family: ${variables.mainFont};

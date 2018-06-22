@@ -77,6 +77,11 @@ const colors = {
 	link: '#0E6BF5',
 
 	skinColors: {
+		// Type colors
+		type: 'type',
+		typeLight: 'typeLight',
+		typeDisabled: 'typeDisabled',
+
 		splashBackground: 'secondary',
 		splashText: 'white',
 

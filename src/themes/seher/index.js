@@ -35,7 +35,7 @@ const global = `
 export default {
 	name: 'SeHer',
 	colors: {
-		type: '#272727',
+		darkness: '#272727',
 
 		grayTint: '#C0C0C0',
 		grayTintLight: '#ECECEC',
@@ -45,6 +45,7 @@ export default {
 		...combinedShadedColors,
 
 		skinColors: {
+			type: 'darkness',
 			splashBackground: 'primary',
 			splashBorder: 'darkness',
 			splashText: 'white',

@@ -31,14 +31,11 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const colors = {
 	transparent: 'transparent',
-	type: '#222222',
-	typeLight: '#555555',
-	typeDisabled: '#ccc',
 
 	grayTint: '#C0C0C0',
-	grayTintLight: '#ECECEC',
-	grayTintLighter: '#f3f3f3',
 	grayTintLightDark: '#C0C0C0',
+	grayTintLight: '#ECECEC',
+	grayTintLighter: '#FEFEFE',
 	grayTintDark: '#767676',
 
 	button: {
@@ -63,7 +60,10 @@ const colors = {
 		adWrapperFontColor: 'type',
 		adWrapperColor: 'type',
 
-		heading: 'type',
+		background: 'transparent',
+		type: 'darkness',
+		typeLight: 'darknessLight',
+		typeDisabled: 'grayTint',
 
 		nativeAd: 'orange',
 		sport: 'green',
