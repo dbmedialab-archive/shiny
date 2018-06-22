@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
+import { getColor } from '../utils';
 
 const getTextColor = ({
-	theme, isActive, activeTextColor, textColor,
-}) =>
-	(theme.colors[
-		(isActive && activeTextColor) ?
-			activeTextColor :
-			textColor
-	]);
+	isActive, activeTextColor, textColor,
+}) => (
+	(isActive && activeTextColor)
+		? getColor(activeTextColor)
+		: getColor(textColor)
+);
 
 export const LinkBarLinkBase = styled.a`
 	display: inline-block;
@@ -58,7 +58,7 @@ export const LinkBarLinkBase = styled.a`
 		text-decoration: none;
 	}
 
-	&{
+	& {
 		color: ${getTextColor};
 		:hover {
 			background: ${props => (props.activeBackground)};
