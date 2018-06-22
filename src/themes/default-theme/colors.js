@@ -64,6 +64,8 @@ const skinColors = {
 	primary: 'primary',
 	secondary: 'secondary',
 	transparent: 'transparent',
+
+	grayTintLightDark: 'grayTint',
 };
 
 const colors = {
@@ -71,7 +73,7 @@ const colors = {
 	skinColors,
 
 	transparent: 'transparent',
-	grayTintLightDark: '#c0c0c0',
+	grayTintLight: '#ececec',
 	grayTintLighter: '#f3f3f3',
 	link: 'cornflowerblue',
 };
