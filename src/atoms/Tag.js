@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { getColor } from '../utils';
+
 const TagSpanItem = styled.span`
 	font-family: Cabin;
 	font-size: ${props => props.theme.variables.headingSmallSize};
@@ -12,14 +14,14 @@ const TagSpanItem = styled.span`
 	letter-spacing: 0.05rem;
 	text-align: center;
 	text-transform: uppercase;
-	color: ${props => props.theme.colors.grey};
+	color: ${getColor('grey')};
 `;
 const TagAItem = TagSpanItem.withComponent('a').extend.attrs({
 	href: ({ url }) => url,
 })`
 	&, &:active, &:visited, &:hover {
 		text-decoration: none;
-		color: ${props => props.theme.colors.grey};
+		color: ${getColor('grey')};
 	}
 `;
 

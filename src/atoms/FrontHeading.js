@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { getColor, getVariable } from '../utils';
+
 import {
 	SmallHeading,
 	MediumHeading,
@@ -8,7 +10,7 @@ import {
 } from './Heading';
 
 const FheadStyle = props => css`
-    color: ${props.theme.colors[props.textColor]};
+    color: ${getColor(props.textColor)};
     display: block;
     white-space: nowrap;
 	overflow: hidden;
@@ -17,31 +19,31 @@ const FheadStyle = props => css`
     &:after {
 		content: '';
 		width: ${props.lineWidth ? `${props.lineWidth}rem` : '100%'};
-		margin-left: ${props.theme.variables.headingSmallSize};
+		margin-left: ${getVariable('headingSmallSize')};
 		display: inline-block;
-		border-bottom: .2rem solid ${props.theme.colors[props.lineColor]};
+		border-bottom: .2rem solid ${getColor(props.lineColor)};
 		vertical-align: middle;
     }
 `;
 
 const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingSmallSize};
+	@media screen and (min-width: ${getVariable('largeWidth')}) {
+		font-size: ${getVariable('headingSmallSize')};
 	}
 `;
 
 const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingMediumSize};
+	@media screen and (min-width: ${getVariable('largeWidth')}) {
+		font-size: ${getVariable('headingMediumSize')};
 	}
 `;
 const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
-	font-size: ${props => props.theme.variables.headingMediumSize};
-	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		font-size: ${props => props.theme.variables.headingLargeSize};
+	font-size: ${getVariable('headingMediumSize')};
+	@media screen and (min-width: ${getVariable('largeWidth')}) {
+		font-size: ${getVariable('headingLargeSize')};
 	}
 `;
 const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;

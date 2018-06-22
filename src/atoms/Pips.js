@@ -2,13 +2,14 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { withTheme } from 'styled-components';
+import { getColor } from '../utils';
 
 /**
  * A small circle that is easy to count.
  *
  * Used in dice to signify a number or value.
  */
-const Pip = withTheme(props => <circle r="10" fill={props.theme.colors[props.pipColor]} {...props} />);
+const Pip = withTheme(props => <circle r="10" fill={getColor(props.pipColor)(props)} {...props} />);
 
 const WestPip = props => <Pip cx="25" cy="50" {...props} />;
 const EastPip = props => <Pip cx="75" cy="50" {...props} />;
