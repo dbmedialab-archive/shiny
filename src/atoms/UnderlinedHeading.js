@@ -1,6 +1,8 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+
+import { getColor } from '../utils';
 import { Heading } from './Heading';
 
 const CenteredContent = styled.div`
@@ -10,7 +12,7 @@ const CenteredContent = styled.div`
 
 const StyledLine = styled.div`
 	width: 80%;
-	border-bottom: 0.1rem solid ${props => props.theme.colors.primary};
+	border-bottom: 0.1rem solid ${getColor('primary')};
 	margin-left: auto;
 	margin-right: auto;
 	${props => props.thick && css`border-width: .2rem`}

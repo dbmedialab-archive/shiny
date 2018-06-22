@@ -53,7 +53,7 @@ export default () => (
 			<Row>
 				<Col xs>
 					<SmallHeading>Two BlockLinks</SmallHeading>
-					<BodyText>There is whitespace between the blocks.</BodyText>
+					<BodyText>There is no whitespace between the blocks.</BodyText>
 					<BlockLink href="https://example.com">
 						<Img src={imgUrl} alt="Alternative text" />
 					</BlockLink>

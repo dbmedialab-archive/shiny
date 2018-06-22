@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // Utils
+import { getColor } from '../utils';
 import { removeFalsyValuesFromArray } from '../utils/remove-falsy-values-from-array';
 
 // Atoms
@@ -12,7 +13,7 @@ import { LunchKicker as Kicker } from '../atoms/LunchKicker';
 import { MediumHeading } from '../atoms/Heading';
 
 const Heading = styled(MediumHeading)`
-	color: ${props => props.theme.colors[props.color]};
+	color: ${props => getColor(props.color)};
 	margin: 0;
 `;
 

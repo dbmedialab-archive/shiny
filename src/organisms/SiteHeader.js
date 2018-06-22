@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { getColor, getVariable } from '../utils';
 import { Header } from '../atoms/Header';
 
 const Primary = styled.div`
-	height: calc(2 * ${props => props.theme.variables.verticalBase});
-	line-height: ${props => props.theme.variables.verticalBase};
-	background-color: ${props => props.theme.colors.secondary};
-	color: ${props => props.theme.colors.white};
+	height: calc(2 * ${getVariable('verticalBase')});
+	line-height: ${getVariable('verticalBase')};
+	background-color: ${getColor('secondary')};
+	color: ${getColor('white')};
 `;
 // const Secondary = styled.section``;
 
