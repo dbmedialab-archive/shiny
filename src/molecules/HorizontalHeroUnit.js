@@ -19,7 +19,7 @@ const NoWrap = styled.div`
 	white-space: nowrap;
 `;
 
-const TitleCol = Col.extend`
+const TitleCol = styled(Col)`
 	&& {
 		display: flex;
 		flex-direction: column;
@@ -30,7 +30,7 @@ const TitleCol = Col.extend`
 	padding: ${props => props.theme.variables.verticalBase} 0;
 `;
 
-const MaybePaddedRow = Row.extend`
+const MaybePaddedRow = styled(Row)`
 	padding-top:    calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
 	padding-bottom: calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
 `;

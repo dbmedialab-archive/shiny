@@ -1,10 +1,10 @@
 import React from 'react';
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { LinkBarLinkBase } from '..';
 import { FontIcon } from './FontIcon';
 
-const Arrow = LinkBarLinkBase.withComponent('div').extend`
+const Arrow = styled(LinkBarLinkBase.withComponent('div'))`
 	position: absolute;
 	top: 0;
 	${props => (props.pointsTo === 'left' ? css`left: 0` : css`right: 0;`)};

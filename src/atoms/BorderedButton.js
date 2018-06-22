@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
 import { Button } from './Button';
 import { isBright, getColor } from '../utils';
 
@@ -14,7 +15,7 @@ const coloredBackground = css`
 	color: ${props => calculateTextColor(props.theme)};
 `;
 
-const BorderedButton = Button.extend`
+const BorderedButton = styled(Button)`
 	color: ${props => props.theme.colors.grayTintDark};
 	border-radius: 0.3rem;
 	border: solid 0.1rem ${props => props.theme.colors.grayTint};

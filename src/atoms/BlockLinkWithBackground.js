@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 // Utils
 import { getColor, getVariable } from '../utils';
@@ -6,7 +7,7 @@ import { getColor, getVariable } from '../utils';
 // Atoms
 import { BlockLink } from '../atoms/BlockLink';
 
-const BlockLinkWithBackground = BlockLink.extend`
+const BlockLinkWithBackground = styled(BlockLink)`
 	flex: 1;
 	margin:
 		0

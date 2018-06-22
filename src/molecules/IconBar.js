@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { Row } from '..';
 import { Col } from '..';
 import { IconWithText } from '..';
 
-const PaddingLess = Col.extend`
+const PaddingLess = styled(Col)`
 	padding: 0;
 `;
 
-const RowBase = Row.extend`
+const RowBase = styled(Row)`
 	align-items: baseline;
 `;
 

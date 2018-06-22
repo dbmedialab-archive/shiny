@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
 	margin: 3rem 0;
 `;
 
-const LightCol = Col.extend`
+const LightCol = styled(Col)`
 	font-weight: 300;
 `;
 
-const BoldCol = Col.extend`
+const BoldCol = styled(Col)`
 	font-weight: bold;
 	& a {
 		text-decoration: none;
@@ -23,7 +23,7 @@ const BoldCol = Col.extend`
 	}
 `;
 
-const LeftAlignedRow = Row.extend`&&{text-align: left;}`;
+const LeftAlignedRow = styled(Row)`&&{text-align: left;}`;
 const LeftAlignedCenteredRow = props => <LeftAlignedRow {...props} center="xs" />;
 
 export const Quantity = props => (
