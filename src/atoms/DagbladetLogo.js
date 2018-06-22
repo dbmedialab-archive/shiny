@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getColor } from '../utils';
 
 const Svg = styled.svg`
 	box-sizing: border-box;
-	fill: ${props => (props.fill ? props.theme.colors[props.fill] : props.theme.colors.white)};
-	background: ${props => (props.background ? props.theme.colors[props.background] : props.theme.colors.primary)}
+	fill: ${props => getColor(props.fill)};
+	background: ${props => getColor(props.background)}
 `;
+Svg.defaultProps = {
+	fill: 'white',
+	background: 'primary',
+};
 
 /* eslint-disable max-len */
 const DagbladetLogo = props => (
