@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { getColor } from '../utils';
 
 const Button = styled.button`
@@ -27,10 +27,10 @@ const Button = styled.button`
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
-	${props => props.outline && `
+	${props => props.outline && css`
 		border: .1rem solid ${getColor(props.background)};
 		background: transparent;
-		color: ${props.background};
+		color: ${getColor(props.background)};
 	`}
 `;
 
