@@ -44,7 +44,7 @@
 		"striptags": "3.1.1"
 	},
 	"devDependencies": {
-		"@aller/eslint-config-aller": "0.5.2",
+		"@aller/eslint-config-aller": "0.6.1",
 		"@babel/cli": "7.0.0-beta.51",
 		"@babel/core": "7.0.0-beta.51",
 		"@babel/plugin-transform-object-assign": "7.0.0-beta.51",
