@@ -677,6 +677,7 @@ const Icon = styled.span`
 		case 'kicker': return '\\e888';
 		case 'rectangle': return '\\e889';
 		case 'square': return '\\e890';
+		case 'instagram': return '\\e891';
 		default: return '';
 		}
 	}}";
