@@ -1,24 +1,20 @@
 import { stripUnit } from 'polished';
+
+import { cssReset } from '../../utils/css-reset';
+
 import colors from './colors';
 import variables from './variables';
 
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
 
-	* {
-		box-sizing: border-box;
-	}
+	${cssReset}
 
 	body {
-		padding: 0;
-		margin: 0;
+		color: ${colors[colors.skinColors.type]};
 		font-family: ${variables.mainFont};
-		position: relative;
-		cursor: auto;
-	}
-
-	nav {
-		text-transform: uppercase;
+		font-size: ${variables.uiRegularSize};
+		line-height: ${variables.uiRegularLineHeight};
 	}
 `;
 
