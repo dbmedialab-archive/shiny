@@ -1,9 +1,23 @@
 import { stripUnit } from 'polished';
 
-import { cssReset } from '../../utils/css-reset';
-
 import colors from './colors';
 import variables from './variables';
+
+const cssReset = `
+	/* Font reset: 1rem = 10px */
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		font-size: 1.6rem;
+		margin: 0;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section, main {
+    	display: block;
+	}
+`
 
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
