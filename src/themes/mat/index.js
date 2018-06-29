@@ -17,7 +17,7 @@ const cssReset = `
 	footer, header, hgroup, menu, nav, section, main {
     	display: block;
 	}
-`
+`;
 
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
