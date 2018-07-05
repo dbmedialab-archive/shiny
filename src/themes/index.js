@@ -6,6 +6,7 @@ import dinside from './dinside';
 import kk from './kk';
 import seher from './seher';
 import sol from './sol';
+import start from './start';
 import topp from './topp';
 import mat from './mat';
 
@@ -21,6 +22,7 @@ const themes = {
 	kk,
 	seher,
 	sol,
+	start,
 	mat,
 	topp,
 };
