@@ -1,14 +1,14 @@
 const colors = {
 	// Brand colors
-	primary: '#7a9a26',
-	primaryDark: '#617330',
-	primaryLight: '#b2d25f',
-	primaryLighter: '#cbf364',
+	primary: '#313131',
+	primaryDark: '#22222',
+	primaryLight: '#5d5d5d',
+	primaryLighter: '#c5c5c5',
 
-	secondary: '#313131',
-	secondaryDark: '#22222',
-	secondaryLight: '#5d5d5d',
-	secondaryLighter: '#c5c5c5',
+	secondary: '#7a9a26',
+	secondaryDark: '#617330',
+	secondaryLight: '#b2d25f',
+	secondaryLighter: '#cbf364',
 
 	// Type colors
 	type: '#222',
