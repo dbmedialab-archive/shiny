@@ -15,6 +15,7 @@ const global = `
 		font-family: ${variables.mainFont};
 		font-size: ${variables.uiRegularSize};
 		line-height: ${variables.uiRegularLineHeight};
+		background-color: #f9f9f9;
 	}
 
 	a {
