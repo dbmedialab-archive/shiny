@@ -41,17 +41,17 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.52"
 
-"@babel/core@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.51.tgz#0e54bd6b638736b2ae593c31a47f0969e2b2b96d"
+"@babel/core@7.0.0-beta.52":
+  version "7.0.0-beta.52"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.0.0-beta.52.tgz#f27a9a468f8cf9c860aabca5f6084fa52fbc6e55"
   dependencies:
-    "@babel/code-frame" "7.0.0-beta.51"
-    "@babel/generator" "7.0.0-beta.51"
-    "@babel/helpers" "7.0.0-beta.51"
-    "@babel/parser" "7.0.0-beta.51"
-    "@babel/template" "7.0.0-beta.51"
-    "@babel/traverse" "7.0.0-beta.51"
-    "@babel/types" "7.0.0-beta.51"
+    "@babel/code-frame" "7.0.0-beta.52"
+    "@babel/generator" "7.0.0-beta.52"
+    "@babel/helpers" "7.0.0-beta.52"
+    "@babel/parser" "7.0.0-beta.52"
+    "@babel/template" "7.0.0-beta.52"
+    "@babel/traverse" "7.0.0-beta.52"
+    "@babel/types" "7.0.0-beta.52"
     convert-source-map "^1.1.0"
     debug "^3.1.0"
     json5 "^0.5.0"
@@ -338,13 +338,13 @@
     "@babel/traverse" "7.0.0-beta.52"
     "@babel/types" "7.0.0-beta.52"
 
-"@babel/helpers@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.0.0-beta.51.tgz#95272be2ab4634d6820425f8925031a928918397"
+"@babel/helpers@7.0.0-beta.52":
+  version "7.0.0-beta.52"
+  resolved "https://registry.yarnpkg.com/@babel/helpers/-/helpers-7.0.0-beta.52.tgz#89beebe4e4fd6b22f5d7540716027629408c4a63"
   dependencies:
-    "@babel/template" "7.0.0-beta.51"
-    "@babel/traverse" "7.0.0-beta.51"
-    "@babel/types" "7.0.0-beta.51"
+    "@babel/template" "7.0.0-beta.52"
+    "@babel/traverse" "7.0.0-beta.52"
+    "@babel/types" "7.0.0-beta.52"
 
 "@babel/highlight@7.0.0-beta.44":
   version "7.0.0-beta.44"
