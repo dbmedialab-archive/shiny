@@ -1,28 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal, css } from 'styled-components';
+import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal } from 'styled-components';
 import { merge } from 'aurora-deep-slice-merge';
 
 import defaultTheme from '../themes/default-theme';
 import { themePropTypes } from '../themes/theme-prop-types';
 
-// @TODO: Switch to a proper CSS reset, like this one in utils:
-// import { cssReset } from '../utils';
-const cssReset = css`
-	/* Font reset: 1rem = 10px */
-	html {
-		font-size: 62.5%;
-	}
-	body {
-		font-size: 1.6rem;
-	}
-	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section, main {
-    	display: block;
-	}
-`;
 /**
  * An extension of styled-component's ThemeProvider.
  *
@@ -41,13 +25,8 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// console.log(`Switching to the ${themeName} theme.`);
 	// console.log('new theme', theme.name);
 
-	// Inject
-	// - Reset styles
-	// - Our theme's global styles
-	injectGlobal`
-		${cssReset}
-		${mergedTheme.global}
-	`;
+	// Inject our theme's global styles
+	injectGlobal`${mergedTheme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
@@ -63,7 +42,7 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	);
 };
 ShinyThemeProvider.propTypes = {
-	theme: themePropTypes,
+	theme: propTypes.shape(themePropTypes),
 	children: propTypes.oneOfType([
 		propTypes.arrayOf(propTypes.node),
 		propTypes.node,
