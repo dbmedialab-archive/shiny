@@ -30,6 +30,7 @@ class Dropdown extends React.Component {
 		this.updateLastFocusTime = this.updateLastFocusTime.bind(this);
 		this.hideIfNotRecentlyFocused = this.hideIfNotRecentlyFocused.bind(this);
 		this.toggle = this.toggle.bind(this);
+		this.tryHide = this.tryHide.bind(this);
 	}
 
 	getStandardTrigger() {
@@ -97,6 +98,12 @@ class Dropdown extends React.Component {
 		});
 	}
 
+	tryHide() {
+		if (this.props.hideOnClick) {
+			this.hide();
+		}
+	}
+
 	toggle() {
 		this.setState({
 			hide: !this.state.hide,
@@ -113,7 +120,7 @@ class Dropdown extends React.Component {
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
 				{this.getTrigger()}
-				<HideMeMaybe hide={hide} tabIndex={-1}>
+				<HideMeMaybe onClick={this.tryHide} hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
 			</StyledDropdown>
@@ -131,6 +138,7 @@ Dropdown.propTypes = {
 	isRelative: propTypes.bool,
 	Trigger: propTypes.func,
 	className: propTypes.string,
+	hideOnClick: propTypes.bool,
 };
 Dropdown.defaultProps = {
 	displayInitially: false,
@@ -138,6 +146,7 @@ Dropdown.defaultProps = {
 	className: null,
 	linkText: null,
 	Trigger: null,
+	hideOnClick: false,
 };
 
 // When we export this as a styled component,

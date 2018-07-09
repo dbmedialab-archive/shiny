@@ -1,6 +1,8 @@
-import styled from 'styled-components';
 import React from 'react';
 import propTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+
+import { getColor, getVariable } from '../utils';
 
 import { LoadingSearchIcon } from '..';
 import { FontIcon } from '..';
@@ -9,9 +11,9 @@ const Search = styled.div`
   position: relative;
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom :
 		(`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${getColor('white')};
   font-size: 1.6rem;
-  box-shadow: ${props => (props.shadow ? props.shadow : `0 0.3rem 0.3rem ${props.theme.colors.grayTint}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')}`)};
   overflow: hidden;
   box-sizing: border-box;
   border-bottom: ${props => props.borderBottom};
@@ -28,7 +30,7 @@ const SearchIcon = styled(FontIcon)`
 
 const SearchFieldInput = styled.input`
 	 width: 80%;
-	 padding: ${props => props.theme.variables.horizontalBase};
+	 padding: ${getVariable('horizontalBase')};
 	 border: 0;
 	 outline: none;
 	 font-size: ${props => props.fontSize};
@@ -37,10 +39,10 @@ const SearchFieldInput = styled.input`
 const IconContainer = styled.button`
 	 width: 20%;
 	 height: 100%;
-	 padding: ${props => props.theme.variables.horizontalBase};
+	 padding: ${getVariable('horizontalBase')};
 	 border: 0;
 	 outline: none;
-	 background-color: ${props => (props.backgroundColor ? props.backgroundColor : props.theme.colors.primary)};
+	 background-color: ${props => (props.backgroundColor ? props.backgroundColor : getColor('primary'))};
 	 font-size: ${props => props.iconSize};
 	 cursor: pointer;
 	 top: 10px;

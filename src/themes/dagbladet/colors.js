@@ -27,8 +27,6 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const colors = {
-	type: '#222222',
-
 	grayTint: '#C0C0C0',
 	grayTintLight: '#ECECEC',
 	grayTintLightDark: '#C0C0C0',
@@ -36,8 +34,11 @@ const colors = {
 	grayTintDark: '#767676',
 
 	white: '#fff',
+
 	darkness: '#222222',
 	darknessLight: '#453d3f',
+	darknessLighter: '#342c2e',
+	darknessDark: '#111111',
 
 	button: {
 		background: '#ececec',
@@ -47,6 +48,7 @@ const colors = {
 	...combinedShadedColors,
 
 	skinColors: {
+		type: 'darkness',
 		nativeAd: 'green',
 		splashBackground: 'primary',
 		splashText: 'white',

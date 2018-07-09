@@ -1,6 +1,6 @@
 {
 	"name": "@aller/shiny",
-	"version": "0.5.4",
+	"version": "0.8.0",
 	"description": "",
 	"main": "lib/index.js",
 	"scripts": {
@@ -33,12 +33,12 @@
 		"lazysizes": "4.0.4",
 		"parse-color": "1.0.0",
 		"picturefill": "3.0.2",
-		"polished": "1.9.2",
+		"polished": "1.9.3",
 		"prism-themes": "1.0.1",
 		"prismjs": "1.15.0",
 		"react-intersection-observer": "5.0.5",
 		"react-modal": "3.4.5",
-		"react-rating": "1.1.2",
+		"react-rating": "1.2.1",
 		"react-stickyfill": "0.2.3",
 		"react-styled-flexboxgrid": "2.4.0",
 		"striptags": "3.1.1"
@@ -59,7 +59,7 @@
 		"@storybook/addons": "3.4.8",
 		"@storybook/react": "3.4.8",
 		"babel-core": "7.0.0-bridge.0",
-		"babel-eslint": "8.2.3",
+		"babel-eslint": "8.2.5",
 		"babel-plugin-react-docgen": "2.0.0-rc.0",
 		"babel-plugin-styled-components": "1.5.1",
 		"babel-plugin-transform-imports": "1.5.0",

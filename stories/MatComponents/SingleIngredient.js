@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { getColor, getVariable } from '../../src/utils';
+
 import {
 	Grid,
 	Row,
@@ -23,14 +25,14 @@ const description = 'Mandelpotet er en delikatessepotet som dyrkes over store de
 	'vilt og spesielt godt egnet til bakst og potetmos.';
 
 const DetailsCol = styled(Col)`
-	padding-bottom: calc(2 * ${props => props.theme.variables.verticalBase});
+	padding-bottom: calc(2 * ${getVariable('verticalBase')});
 `;
 
 const RelatedSection = styled.section`
-	padding-top: calc(3 * ${props => props.theme.variables.verticalBase});
-	padding-bottom: calc(3 * ${props => props.theme.variables.verticalBase});
+	padding-top: calc(3 * ${getVariable('verticalBase')});
+	padding-bottom: calc(3 * ${getVariable('verticalBase')});
 
-	background-color: ${props => props.theme.colors.grayTintLight};
+	background-color: ${getColor('grayTint', 'light')};
 `;
 
 const SingleIngredientStory = ({ ...rest }) => (
@@ -189,14 +191,14 @@ const description = 'Mandelpotet er en delikatessepotet som dyrkes over store de
 	'vilt og spesielt godt egnet til bakst og potetmos.';
 
 const DetailsCol = styled(Col)\`
-	padding-bottom: calc(2 * $\{props => props.theme.variables.verticalBase});
+	padding-bottom: calc(2 * $\{getVariable('verticalBase')});
 \`;
 
 const RelatedSection = styled.section\`
-	padding-top: calc(3 * $\{props => props.theme.variables.verticalBase});
-	padding-bottom: calc(3 * $\{props => props.theme.variables.verticalBase});
+	padding-top: calc(3 * $\{getVariable('verticalBase')});
+	padding-bottom: calc(3 * $\{getVariable('verticalBase')});
 
-	background-color: $\{props => props.theme.colors.grayTintLight};
+	background-color: $\{getColor('grayTint', 'light')};
 \`;
 
 <Grid fluid>

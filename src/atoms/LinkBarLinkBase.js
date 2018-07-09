@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
+import { getColor, getVariable } from '../utils';
 
 const getTextColor = ({
-	theme, isActive, activeTextColor, textColor,
-}) =>
-	(theme.colors[
-		(isActive && activeTextColor) ?
-			activeTextColor :
-			textColor
-	]);
+	isActive, activeTextColor, textColor,
+}) => (
+	(isActive && activeTextColor)
+		? getColor(activeTextColor)
+		: getColor(textColor)
+);
 
 export const LinkBarLinkBase = styled.a`
 	display: inline-block;
@@ -23,29 +23,29 @@ export const LinkBarLinkBase = styled.a`
 	${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${props.theme.variables.horizontalBase});
+				padding: 0 calc(1/2 * ${getVariable('horizontalBase')});
 `;
 		}
 		if (props.size === 'small') {
 			return css`
 				padding:
-					calc(1/2 * (3/2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
-					calc(1/2 * ${props.theme.variables.horizontalBase});
+					calc(1/2 * (3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
+					calc(1/2 * ${getVariable('horizontalBase')});
 			`;
 		}
 		return css`
 			padding:
-				calc(1/2 * (3/2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
-				${props.theme.variables.horizontalBase};
+				calc(1/2 * (3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
+				${getVariable('horizontalBase')};
 		`;
 	}}
 
 	border: 0;
 	outline: none;
 	text-decoration: none;
-	font-family: ${props => props.theme.variables.headingsFont};
-	font-size: ${props => props.theme.variables.uiRegularSize};
-	line-height: ${props => (props.isBlockLink ? '0' : props.theme.variables.uiRegularLineHeight)};
+	font-family: ${getVariable('headingsFont')};
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight'))};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
@@ -58,11 +58,11 @@ export const LinkBarLinkBase = styled.a`
 		text-decoration: none;
 	}
 
-	&{
+	& {
 		color: ${getTextColor};
 		:hover {
 			background: ${props => (props.activeBackground)};
-			color: ${props => props.theme.colors[props.activeTextColor || props.textColor]};
+			color: ${props => getColor(props.activeTextColor || props.textColor)};
 		}
 	}
 
@@ -80,7 +80,7 @@ export const LinkBarLinkBase = styled.a`
 		width: ${props =>
 		(
 			props.isActive && props.useUnderline
-				? `calc( 100% - 2*${props.theme.variables.horizontalBase} )`
+				? css`calc( 100% - 2*${getVariable('horizontalBase')} )`
 				: '0'
 		)};
 		display: block;
@@ -88,7 +88,7 @@ export const LinkBarLinkBase = styled.a`
 		bottom: 0;
 		left: 0;
 		height: .1rem;
-		margin: 0 ${props => props.theme.variables.horizontalBase};
+		margin: 0 ${getVariable('horizontalBase')};
 		background: ${props =>
 		(
 			props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary
@@ -97,36 +97,39 @@ export const LinkBarLinkBase = styled.a`
 		transition: width .2s ease-in-out;
 	}
 
-	@media (min-width: ${props => props.theme.variables.largeWidth}) {
+	@media (min-width: ${getVariable('largeWidth')}) {
 		${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${props.theme.variables.horizontalBase});
+				padding: 0 calc(1/2 * ${getVariable('horizontalBase')});
 			`;
 		}
 
 		if (props.size === 'small') {
-			return `padding:
-				calc(1/2 * ( 3/2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
-				calc(1/4*${props.theme.variables.horizontalBase});
+			return css`
+				padding:
+					calc(1/2 * ( 3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
+					calc(1/4*${getVariable('horizontalBase')});
 			`;
 		}
 
 		if (props.size === 'large') {
-			return `padding:
-				calc(1/2 * ( 5/2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
-				${props.theme.variables.horizontalBase};
+			return css`
+				padding:
+					calc(1/2 * ( 5/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
+					${getVariable('horizontalBase')};
 			`;
 		}
 
-		return `padding:
-			calc(1/2 * ( 2*${props.theme.variables.verticalBase} - ${props.theme.variables.uiRegularLineHeight}) )
-			${props.theme.variables.horizontalBase};
+		return css`
+			padding:
+				calc(1/2 * ( 2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
+				${getVariable('horizontalBase')};
 		`;
 	}}
 
 	&:hover::after{
-		width: ${props => (props.useUnderline ? `calc( 100% - 2*${props.theme.variables.horizontalBase} )` : '0')};
+		width: ${props => (props.useUnderline ? css`calc( 100% - 2*${getVariable('horizontalBase')} )` : '0')};
 	}
 }
 `;

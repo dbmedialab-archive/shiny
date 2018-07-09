@@ -6,9 +6,10 @@ import { isBright, getColor } from '../utils';
 
 const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 	isBright(backgroundColor)
-		? theme.colors.grayTintDark
-		: theme.colors.white
+		? getColor('grayTintDark')
+		: getColor('white')
 );
+
 const coloredBackground = css`
 	border-color: ${getColor('primary')};
 	background-color: ${getColor('primary')};
@@ -16,9 +17,9 @@ const coloredBackground = css`
 `;
 
 const BorderedButton = styled(Button)`
-	color: ${props => props.theme.colors.grayTintDark};
+	color: ${getColor('grayTintDark')};
 	border-radius: 0.3rem;
-	border: solid 0.1rem ${props => props.theme.colors.grayTint};
+	border: solid 0.1rem ${getColor('grayTint')};
 	transition-property: color, background-color, border-color;
 	background-color: transparent;
 	font-weight: 500;

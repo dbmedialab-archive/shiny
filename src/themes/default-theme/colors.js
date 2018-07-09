@@ -16,8 +16,8 @@ const colorsToShade= {
 	sand: '#c2b280',
 	white: '#fff',
 	darkness: '#222222',
+	grayTint: '#c0c0c0',
 };
-
 // Creates 4 shades of each color in colorsToShade
 // For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
 const shadedColors = Object.keys(colorsToShade).map(color => ({
@@ -29,60 +29,55 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
-const colors = {
+const skinColors = {
+	splashBackground: 'primary',
+	splashBorder: 'primary',
+	splashText: 'white',
+
+	calmBackground: 'grayTintLight',
+	calmBorder: 'grayTintLight',
+	calmText: 'type',
+
+	adWrapperBackgroundColor: 'grayTintLight',
+	adWrapperFontColor: 'type',
+	adWrapperColor: 'type',
+
+	background: 'transparent',
+	type: 'darkness',
+	typeLight: 'darknessLight',
+	typeDisabled: 'grayTint',
+
+	nativeAd: 'orange',
+	sport: 'green',
+	helse: 'blue',
+	reise: 'purple',
+	mat: 'orange',
+	bolig: 'brown',
+	motor: 'yellow',
+	underholdning: 'pink',
+	meninger: 'teal',
+	redaksjonenanbefaler: 'burgundy',
+	anbefalt: 'burgundy',
+
+	solRed: 'primary',
+	solBlue: 'secondary',
+	primary: 'primary',
+	secondary: 'secondary',
 	transparent: 'transparent',
-	type: '#222222',
-	typeLight: '#555555',
-	typeDisabled: '#ccc',
 
-	grayTint: '#C0C0C0',
-	grayTintLight: '#ECECEC',
-	grayTintLighter: '#f3f3f3',
-	grayTintLightDark: '#C0C0C0',
-	grayTintDark: '#767676',
+	grayTintLightDark: 'grayTint',
+};
 
-	button: {
-		background: '#ececec',
-		color: '#333333',
-	},
-
-	link: 'cornflowerblue',
-
+const colors = {
 	...combinedShadedColors,
+	skinColors,
 
-	skinColors: {
-		splashBackground: 'primary',
-		splashBorder: 'primary',
-		splashText: 'white',
-
-		calmBackground: 'grayTintLight',
-		calmBorder: 'grayTintLight',
-		calmText: 'type',
-
-		adWrapperBackgroundColor: 'grayTintLight',
-		adWrapperFontColor: 'type',
-		adWrapperColor: 'type',
-
-		heading: 'type',
-
-		nativeAd: 'orange',
-		sport: 'green',
-		helse: 'blue',
-		reise: 'purple',
-		mat: 'orange',
-		bolig: 'brown',
-		motor: 'yellow',
-		underholdning: 'pink',
-		meninger: 'teal',
-		redaksjonenanbefaler: 'burgundy',
-		anbefalt: 'burgundy',
-
-		solRed: 'primary',
-		solBlue: 'secondary',
-		primary: 'primary',
-		secondary: 'secondary',
-		transparent: 'transparent',
-	},
+	transparent: 'transparent',
+	grayTintLight: '#ececec',
+	grayTintLighter: '#f3f3f3',
+	darknessLight: '#555',
+	darknessLighter: '#ccc',
+	link: 'cornflowerblue',
 };
 
 export default colors;

@@ -1,9 +1,14 @@
 import { darken, lighten } from 'polished';
 
+import { cssReset } from '../../utils/css-reset';
+
 const variables = {
 	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsWeight: '300',
+
+	uiRegularSize: '1.6rem',
+	uiRegularLineHeight: '2.4rem',
 };
 
 const colorsToShade = {
@@ -12,7 +17,6 @@ const colorsToShade = {
 
 	blue: '#185bd3',
 	type: '#666',
-
 
 	pink: '#444',
 	purple: '#444',
@@ -47,6 +51,8 @@ const skinColors = {
 	calmText: 'type',
 
 	heading: 'primary',
+
+	type: 'type',
 };
 
 const colors = {
@@ -58,20 +64,14 @@ const colors = {
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
 
-	* {
-		box-sizing: border-box;
-	}
+	${cssReset}
 
 	body {
-		color: ${colors.type}
-		padding: 0;
-		margin: 0;
+		color: ${colors[colors.skinColors.type]};
 		font-family: ${variables.mainFont};
+		font-size: ${variables.uiRegularSize};
+		line-height: ${variables.uiRegularLineHeight};
 		font-weight: 300;
-		font-style: normal;
-		line-height: 1.5;
-		position: relative;
-		cursor: auto;
 	}
 `;
 

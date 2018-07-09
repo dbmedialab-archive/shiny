@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import propTypes from 'prop-types';
+import { getColor } from '../../utils';
 
 const transition = keyframes`
 	from {
@@ -21,7 +22,7 @@ const LoadingSearchIcon = styled.div`
 	border-radius: .35em;
 	font-size: 3.6rem; // This controls the size.
 	border: .3rem solid transparent;
-	border-top-color: ${props => (props.color ? props.color : props.theme.colors.primary)};
+	border-top-color: ${props => (props.color ? props.color : getColor('primary'))};
 	animation-name: ${transition};
 	animation-duration: 1000ms;
 	animation-iteration-count: infinite;
