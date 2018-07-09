@@ -54,6 +54,7 @@ class SearchField extends React.Component {
 
 		this.state = {
 			searchText: '',
+			isLoading: props.isLoading,
 		};
 	}
 	handleTextChange = (event) => {
@@ -84,7 +85,6 @@ class SearchField extends React.Component {
 	render() {
 		const {
 			searchTextVisible,
-			isLoading,
 			color,
 			backgroundColor,
 			fontSize,
@@ -93,6 +93,8 @@ class SearchField extends React.Component {
 			marginBottom,
 			searchText,
 		} = this.props;
+
+		const { isLoading } = this.state;
 
 		const value = (searchTextVisible) ? this.state.searchText : '';
 
