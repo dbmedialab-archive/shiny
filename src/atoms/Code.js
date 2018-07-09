@@ -2,9 +2,9 @@
 
 import { default as React } from 'react';
 import { default as PropTypes } from 'prop-types';
+import styled from 'styled-components';
 
 import Prism from '@maji/react-prism';
-
 import 'prismjs';
 
 // Other than javascript, we'll have to import
@@ -17,17 +17,25 @@ import 'prismjs/components/prism-jsx';
 
 import 'prism-themes/themes/prism-hopscotch.css';
 
+import { getVariable } from '../utils';
+
+const PrismStyles = styled.div`
+	&& pre {
+		margin: 0 0 ${getVariable('verticalBase')};
+	}
+`;
+
 const Code = ({
 	language,
 	children,
 	...rest
-}) => {
-	return (
+}) => (
+	<PrismStyles>
 		<Prism language={language} {...rest}>
 			{children}
 		</Prism>
-	);
-};
+	</PrismStyles>
+);
 Code.propTypes = {
 	children: PropTypes.node,
 	language: PropTypes.string,

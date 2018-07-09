@@ -1,3 +1,5 @@
+import { cssReset } from '../../utils/css-reset';
+
 import colors from './colors';
 import variables from './variables';
 
@@ -6,8 +8,13 @@ import variables from './variables';
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
 
-	* {
-		box-sizing: border-box;
+	${cssReset}
+
+	body {
+		color: ${colors[colors.skinColors.type]};
+		font-family: ${variables.mainFont};
+		font-size: ${variables.uiRegularSize};
+		line-height: ${variables.uiRegularLineHeight};
 	}
 
 	a {
