@@ -30,7 +30,7 @@ const global = `
 `;
 
 export default {
-	name: 'SOL',
+	name: 'Start',
 	global,
 	colors,
 	variables,
