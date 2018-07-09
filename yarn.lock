@@ -6885,9 +6885,9 @@ react-modal@3.4.5, react-modal@^3.3.2:
     react-lifecycles-compat "^3.0.0"
     warning "^3.0.0"
 
-react-rating@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.2.1.tgz#5ed1df19e1b1bd7bcb39892f7300c1d249e1460a"
+react-rating@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-rating/-/react-rating-1.3.0.tgz#f690c77363e406da05ede0c64aea62ea3a44bf14"
   dependencies:
     "@types/lodash" "^4.14.105"
     "@types/react" "^16.0.40"
