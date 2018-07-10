@@ -7,6 +7,7 @@ const variables = {
 	mainFont: '"Open Sans", Helvetica, Arial, sans-serif',
 	headingsFont: '"Didot 16 A", "Didot 16 B", Didot, "GFS Didot", Georgia, serif',
 
+	uiWeight: '300',
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
 };
