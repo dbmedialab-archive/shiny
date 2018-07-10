@@ -8,6 +8,7 @@ const ColorTextBox = styled(Col)`
 	line-height: ${props => props.theme.variables.headingRegularLineHeight};
 	font-weight: 500;
 	letter-spacing: .05rem;
+	word-wrap: break-word;
 	text-align: left;
 	color: ${props => getColor(props.textColor)};
 	background-color: ${props => getColor(props.bgColor)};
