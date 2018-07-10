@@ -19,7 +19,7 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const skinColors = {
 	type: 'darkness',
-	background: 'secondary',
+	background: 'grayTintLighter',
 };
 
 export default {
