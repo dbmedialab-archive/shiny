@@ -17,6 +17,11 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
 }));
 
+const skinColors = {
+	type: 'darkness',
+};
+
 export default {
 	...shadedColors,
+	skinColors,
 };
