@@ -1,9 +1,8 @@
 import { darken, lighten } from 'polished';
 
 const colorsToShade = {
-	// Brand colors
-	primary: '#313131',
-	secondary: '#7a9a26',
+	primary: '#7a9a26',
+	secondary: '#313131',
 
 	grayTint: '#eee',
 };
@@ -16,12 +15,14 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 	[`${color}Light`]: lighten(0.15, colorsToShade[color]),
 	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
 }));
+const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const skinColors = {
 	type: 'darkness',
+	background: 'secondary',
 };
 
 export default {
-	...shadedColors,
+	...combinedShadedColors,
 	skinColors,
 };
