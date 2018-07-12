@@ -13,7 +13,7 @@ const global = `
 		font-family: ${variables.mainFont};
 		font-size: ${variables.uiRegularSize};
 		line-height: ${variables.uiRegularLineHeight};
-		background-color: ${colors.grayTintLighter};
+		background-color: ${colors[colors.skinColors.background]};
 	}
 `;
 
