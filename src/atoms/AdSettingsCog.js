@@ -21,8 +21,8 @@ const StyledCog = styled.div`
 	}
 `;
 
-const AdSettingsCog = () => (
-	<StyledCog>
+const AdSettingsCog = props => (
+	<StyledCog {...props}>
 		<FontIcon name="settings-alt-2" size={2.4} />
 	</StyledCog>
 );
