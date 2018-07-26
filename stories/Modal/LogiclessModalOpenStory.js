@@ -11,6 +11,7 @@ const Title = () => (
 	</Fragment>
 );
 
+/* eslint-disable no-console */
 const LogiclessModalStory = () => (
 	<LogiclessModal isOpen title={<Title />} closeModal={() => console.log('Closing!')} appElement="#root">
 		<LargeHeading>Hvorfor ser du denne annonsen</LargeHeading>
