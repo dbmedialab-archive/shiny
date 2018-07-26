@@ -12,6 +12,7 @@ import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
 import rating from './rating';
+import modals from './Modal';
 
 introduction();
 
@@ -31,3 +32,4 @@ lazyProgressiveImage();
 matComponents();
 logos();
 forms();
+modals();

@@ -48,6 +48,7 @@ export {
 
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
+export { AdSettingsCog           } from './atoms/AdSettingsCog';
 export { BlockLink               } from './atoms/BlockLink';
 export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
 export { BlockQuote              } from './atoms/BlockQuote';
@@ -134,6 +135,8 @@ export { RoundedButton           } from './atoms/RoundedButtons';
 export { SmallRoundedButton      } from './atoms/RoundedButtons';
 export { TinyRoundedButton       } from './atoms/RoundedButtons';
 export { ArrowBullet 			 } from './atoms/ArrowBullet';
+export { LogiclessModal          } from './atoms/LogiclessModal';
+
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';

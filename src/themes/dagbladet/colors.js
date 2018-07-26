@@ -40,10 +40,8 @@ const colors = {
 	darknessLighter: '#342c2e',
 	darknessDark: '#111111',
 
-	button: {
-		background: '#ececec',
-		color: '#3768c9',
-	},
+	buttonBackground: '#ececec',
+	buttonColor: '#3768c9',
 
 	...combinedShadedColors,
 
