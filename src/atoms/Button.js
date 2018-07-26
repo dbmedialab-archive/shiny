@@ -7,7 +7,10 @@ const Button = styled.button`
 	text-transform: uppercase;
 	background-color: ${props => getColor(props.background)};
 	border-color: #bdbdbd;
-	color: ${props => (props.textColor ? getColor(props.textColor) : calculateTextColorFromName(props.background, props))};
+	color: ${props => (props.textColor
+		? getColor(props.textColor)
+		: calculateTextColorFromName(props.background, props))
+};
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;

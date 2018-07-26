@@ -14,12 +14,23 @@ const Title = () => (
 const LogiclessModalStory = () => (
 	<LogiclessModal isOpen title={<Title />} closeModal={() => null} appElement="#root">
 		<LargeHeading>Hvorfor ser du denne annonsen</LargeHeading>
-		<p>Nettstedet du nå besøker blir i stor del finansiert av annonseinntekter. Basert på din tidligere aktivitet hos oss, vil du få annonser vi tror kan interessere deg.</p>
+		<p>
+			Nettstedet du nå besøker blir i stor del finansiert av annonseinntekter.
+			Basert på din tidligere aktivitet hos oss, vil du få annonser vi tror kan interessere deg.
+		</p>
 		<p>Du velger selv om du ønsker å endre dine innstillinger</p>
-		<Button outline background="buttonColor"><a href="https://personvern.aller.no/annonseinnstillinger.html" rel="noopener noreferrer" target="_blank">Administrer dine innstillinger</a></Button>
+		<Button outline background="buttonColor">
+			<a href="https://personvern.aller.no/annonseinnstillinger.html" rel="noopener noreferrer" target="_blank">
+				Administrer dine innstillinger
+			</a>
+		</Button>
 		<LargeHeading>Om Aller Media og annonsering</LargeHeading>
 		<p>Aller Media eier nettstedene Dagbladet, Sol, DinSide, KK, Se og Hør, Lommelegen, Topp og Vi</p>
-		<Button outline background="buttonColor"><a href="https://personvern.aller.no/relevantinnhold.html" rel="noopener noreferrer" target="_blank">Les mer om Aller Media og annonser</a></Button>
+		<Button outline background="buttonColor">
+			<a href="https://personvern.aller.no/relevantinnhold.html" rel="noopener noreferrer" target="_blank">
+				Les mer om Aller Media og annonser
+			</a>
+		</Button>
 	</LogiclessModal>
 );
 
