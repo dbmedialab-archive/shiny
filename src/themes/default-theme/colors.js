@@ -72,8 +72,8 @@ const colors = {
 	...combinedShadedColors,
 	skinColors,
 
-	buttonColor: 'seagreen',
-	buttonBackground: 'seagreen',
+	buttonColor: '#3768c9',
+	buttonBackground: '#3768c9',
 
 	transparent: 'transparent',
 	grayTintLight: '#ececec',

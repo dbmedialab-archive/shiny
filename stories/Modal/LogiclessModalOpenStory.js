@@ -11,8 +11,9 @@ const Title = () => (
 	</Fragment>
 );
 
+/* eslint-disable no-console */
 const LogiclessModalStory = () => (
-	<LogiclessModal isOpen title={<Title />} closeModal={() => null} appElement="#root">
+	<LogiclessModal isOpen title={<Title />} closeModal={() => console.log('Closing!')} appElement="#root">
 		<LargeHeading>Hvorfor ser du denne annonsen</LargeHeading>
 		<p>
 			Nettstedet du nå besøker blir i stor del finansiert av annonseinntekter.

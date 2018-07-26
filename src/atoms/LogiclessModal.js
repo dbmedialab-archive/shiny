@@ -67,7 +67,7 @@ const LogiclessModal = ({
 		>
 			<Header>
 				<Heading>{title}</Heading>
-				<CloseButton><FontIcon name="close" size={1.8} /> LUKK</CloseButton>
+				<CloseButton onClick={closeModal}><FontIcon name="close" size={1.8} /> LUKK</CloseButton>
 			</Header>
 			{children}
 		</Modal>
