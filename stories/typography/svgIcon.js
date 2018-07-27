@@ -129,6 +129,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText color="primary" name="not-found" text="not-found" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="oppskrift-loader" text="oppskrift-loader" />
+			</Col>
 		</Row>
 	</section>
 );
