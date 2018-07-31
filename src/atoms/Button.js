@@ -25,9 +25,9 @@ const Button = styled.button`
 	border-radius: ${props => props.borderRadius};
 	display: inline-block;
 	padding-top: calc(${getVariable('verticalBase')} / 2);
-	padding-right: ${getVariable('verticalBase')};
+	padding-right: calc(${getVariable('horizontalBase')} * 1.5);
 	padding-bottom: calc(${getVariable('verticalBase')} / 2);
-	padding-left: ${getVariable('verticalBase')};
+	padding-left: calc(${getVariable('horizontalBase')} * 1.5);
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
