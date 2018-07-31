@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { getColor, calculateTextColorFromName } from '../utils';
+import { getColor, getVariable, calculateTextColorFromName } from '../utils';
 
 const Button = styled.button`
 	letter-spacing: .1rem;
@@ -18,16 +18,16 @@ const Button = styled.button`
 	font-family: inherit;
 	font-size: 1.28rem;
 	line-height: normal;
-	margin: 0 0 2rem;
+	margin: 0 .25rem 1.25rem;
 	position: relative;
 	text-decoration: none;
 	text-align: center;
 	border-radius: ${props => props.borderRadius};
 	display: inline-block;
-	padding-top: 1.12rem;
-	padding-right: 2.24rem;
-	padding-bottom: 1.22rem;
-	padding-left: 2.24rem;
+	padding-top: calc(${getVariable('verticalBase')} / 2);
+	padding-right: ${getVariable('verticalBase')};
+	padding-bottom: calc(${getVariable('verticalBase')} / 2);
+	padding-left: ${getVariable('verticalBase')};
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
