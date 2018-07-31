@@ -23,8 +23,16 @@ export default () => (
 		<DemoContainer background="white">
 			<Heading> Simple buttons </Heading>
 			<Row>
-				<Button> Default </Button>
-				<Button background="primary"> Colored </Button>
+				<Button> Large Default </Button>
+				<Button background="primary"> Large Colored </Button>
+			</Row>
+			<Row>
+				<Button size="medium"> Medium Default </Button>
+				<Button background="primary" size="medium"> Medium Colored </Button>
+			</Row>
+			<Row>
+				<Button size="small"> Small Default </Button>
+				<Button background="primary" size="small"> Small Colored </Button>
 			</Row>
 
 			<Heading> Bordered buttons </Heading>

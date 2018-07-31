@@ -37,5 +37,26 @@ export default {
 	headingHugeSize: '4.8rem',
 	headingHugeLineHeight: '6.3rem',
 
+	buttonSizes: {
+		small: {
+			vertical: '0.7rem',
+			horizontal: '1.4rem',
+			fontSize: '0.9rem',
+			fontWeight: '400',
+		},
+		medium: {
+			vertical: '0.9rem',
+			horizontal: '1.7rem',
+			fontSize: '1.1rem',
+			fontWeight: '400',
+		},
+		large: {
+			vertical: '1.2rem',
+			horizontal: '2.25rem',
+			fontSize: '1.28rem',
+			fontWeight: '400',
+		},
+	},
+
 	adWrapperCase: 'uppercase',
 };

@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { getColor, getVariable, calculateTextColorFromName } from '../utils';
+import { getColor, calculateTextColorFromName, getNestedVariable } from '../utils';
 
 const Button = styled.button`
 	letter-spacing: .1rem;
@@ -14,9 +14,9 @@ const Button = styled.button`
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
-	font-weight: 400;
+	font-weight: ${props => getNestedVariable(`buttonSizes.${props.size}.fontWeight`)};
 	font-family: inherit;
-	font-size: 1.28rem;
+	font-size: ${props => getNestedVariable(`buttonSizes.${props.size}.fontSize`)};
 	line-height: normal;
 	margin: 0 .25rem 1.25rem;
 	position: relative;
@@ -24,10 +24,10 @@ const Button = styled.button`
 	text-align: center;
 	border-radius: ${props => props.borderRadius};
 	display: inline-block;
-	padding-top: calc(${getVariable('verticalBase')} / 2);
-	padding-right: calc(${getVariable('horizontalBase')} * 1.5);
-	padding-bottom: calc(${getVariable('verticalBase')} / 2);
-	padding-left: calc(${getVariable('horizontalBase')} * 1.5);
+	padding-top: ${props => getNestedVariable(`buttonSizes.${props.size}.vertical`)};
+	padding-right: ${props => getNestedVariable(`buttonSizes.${props.size}.horizontal`)};
+	padding-bottom: ${props => getNestedVariable(`buttonSizes.${props.size}.vertical`)};
+	padding-left: ${props => getNestedVariable(`buttonSizes.${props.size}.horizontal`)};
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
@@ -64,6 +64,7 @@ Button.defaultProps = {
 	textColor: null,
 	borderRadius: 0,
 	ALLCAPS: false,
+	size: 'large',
 };
 
 
@@ -71,6 +72,7 @@ Button.propTypes = {
 	background: propTypes.string,
 	textColor: propTypes.string,
 	ALLCAPS: propTypes.bool,
+	size: propTypes.oneOf(['small', 'medium', 'large']),
 };
 
 export { Button };
