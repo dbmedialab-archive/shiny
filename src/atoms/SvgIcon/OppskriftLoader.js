@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const OppskriftLoader = props => (
-	<svg x="0px" y="0px" width="60" height="60" viewBox="0 0 32 32" enableBackground="new 0 0 32 32">
+const OppskriftLoader = () => (
+	<svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 32 32" enableBackground="new 0 0 32 32">
 		<g id="group1" fill="#ff790a">
 			<path d="M17.645,6.507C17.11,10.193,16,13.014,16,13.014s-1.067-2.67-1.644-6.507C13.821,2.953,15.092,0,16,0   S18.159,2.95,17.645,6.507z" />
 			<path fillOpacity="0.92" d="M12.677,6.957c1.38,3.459,1.83,6.457,1.83,6.457s-2.259-1.778-4.678-4.813   C7.59,5.791,7.214,2.598,8,2.144C8.786,1.689,11.345,3.619,12.677,6.957z" />
@@ -17,7 +17,6 @@ const OppskriftLoader = props => (
 			<path fillOpacity="0.2" d="M25.043,12.677c-3.459,1.381-6.457,1.831-6.457,1.831s1.779-2.26,4.813-4.678   C26.21,7.59,29.402,7.213,29.856,8C30.311,8.786,28.381,11.345,25.043,12.677z" />
 			<path fillOpacity="0.12" d="M22.17,8.601c-2.305,2.925-4.676,4.813-4.676,4.813s0.409-2.846,1.828-6.457   C20.637,3.612,23.214,1.689,24,2.144C24.786,2.598,24.395,5.778,22.17,8.601z" />
 		</g>
-		<animateTransform xlinkHref="#group1" attributeName="transform" attributeType="XML" type="rotate" from="0, 16, 16" to="360, 16, 16" dur="0.75s" repeatCount="indefinite" />
 	</svg>
 );
 
