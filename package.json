@@ -70,7 +70,7 @@
 		"pretty-format": "23.0.1",
 		"prop-types": "15.6.2",
 		"react": "16.4.2",
-		"react-dom": "16.4.1",
+		"react-dom": "16.4.2",
 		"styled-components": "3.3.3"
 	}
 }
