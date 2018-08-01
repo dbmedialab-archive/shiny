@@ -2,6 +2,7 @@ import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { getColor, calculateTextColorFromName, getVariable } from '../utils';
 
+/* eslint-disable max-len */
 const Button = styled.button`
 	letter-spacing: .1rem;
 	text-transform: uppercase;
@@ -14,24 +15,31 @@ const Button = styled.button`
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
-	font-weight: ${props => getVariable(`buttonSizes.${props.size}.fontWeight`)};
+	font-weight: ${getVariable('uiWeight')};
 	font-family: inherit;
-	font-size: ${props => getVariable(`buttonSizes.${props.size}.fontSize`)};
 	line-height: normal;
-	margin: 0 .25rem 1.25rem;
+	margin: 0 calc(1/6 * ${getVariable('horizontalBase')}) calc(1/2 * ${getVariable('verticalBase')});
 	position: relative;
 	text-decoration: none;
 	text-align: center;
 	border-radius: ${props => props.borderRadius};
 	display: inline-block;
-	padding-top: ${props => getVariable(`buttonSizes.${props.size}.vertical`)};
-	padding-right: ${props => getVariable(`buttonSizes.${props.size}.horizontal`)};
-	padding-bottom: ${props => getVariable(`buttonSizes.${props.size}.vertical`)};
-	padding-left: ${props => getVariable(`buttonSizes.${props.size}.horizontal`)};
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
-	& a {
+	${props => props.size === 'small'  && css`padding: calc(1/3*${getVariable('verticalBase')}) ${getVariable('horizontalBase')};`}
+	${props => props.size === 'medium' && css`padding: calc(1/2*${getVariable('verticalBase')}) ${getVariable('horizontalBase')};`}
+	${props => props.size === 'large'  && css`padding: calc(2/3*${getVariable('verticalBase')}) ${getVariable('horizontalBase')};`}
+
+	${props => props.size === 'small'  && css`font-size: ${getVariable('uiTinySize')};`}
+	${props => props.size === 'medium' && css`font-size: ${getVariable('uiSmallSize')};`}
+	${props => props.size === 'large'  && css`font-size: ${getVariable('uiRegularSize')};`}
+
+	${props => props.size === 'small'  && css`line-height: ${getVariable('uiTinyLineHeight')};`}
+	${props => props.size === 'medium' && css`line-height: ${getVariable('uiSmallLineHeight')};`}
+	${props => props.size === 'large'  && css`line-height: ${getVariable('uiRegularLineHeight')};`}
+
+	a {
 		color: inherit;
 		font-size: inherit;
 		font-weight: inherit;
@@ -51,11 +59,11 @@ const Button = styled.button`
 		}
 	`}
 
-	& span {
-		font-size: 2.048rem;
+	span {
+		font-size: 2.048rem; /* TODO: Let's revisit these values */
 		line-height: 0;
 		position: relative;
-		top: 0.48rem;
+		top: 0.48rem; /* TODO: Let's revisit these values */
 	}
 `;
 
@@ -64,7 +72,7 @@ Button.defaultProps = {
 	textColor: null,
 	borderRadius: 0,
 	ALLCAPS: false,
-	size: 'large',
+	size: 'medium',
 };
 
 
