@@ -26,6 +26,7 @@ import { Aller        		 } from './Aller';
 import { Dagbladet    		 } from './Dagbladet';
 import { OppskriftLogo       } from './OppskriftLogo';
 import { OppskriftMobileLogo } from './OppskriftMobileLogo';
+import { OppskriftLoader     } from './OppskriftLoader';
 import { CircleWithText      } from './CircleWithText';
 import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
@@ -89,6 +90,8 @@ const SvgIcon = props => (
 					return <OppskriftLogo {...props} />;
 				case 'oppskrift-mobile-logo':
 					return <OppskriftMobileLogo {...props} />;
+				case 'oppskrift-loader':
+					return <OppskriftLoader {...props} />;
 				case 'circle-with-text':
 					return <CircleWithText {...props} />;
 				case 'crossed-video-camera':
@@ -119,7 +122,7 @@ SvgIcon.defaultProps = {
 	'size': 3.2,
 	'size-sm': null,
 	'name': '',
-	'color': 'type',
+	'color': undefined,
 	'className': '',
 };
 

@@ -11,12 +11,14 @@ const SvgIconWrapper = Styled.div`
 		width: ${props['size-sm']}rem;
  	}`)}
  	
- 	svg{
-		path {
-			fill: ${props => getColor(props.color)};
+ 	${props => props.color && `
+		svg{
+			path {
+				fill: ${getColor(props.color)(props)};
+			}
+			stroke: ${getColor(props.color)(props)}
 		}
-		stroke: ${props => getColor(props.color)}
- 	}
+ 	`}
 `;
 
 export { SvgIconWrapper };
