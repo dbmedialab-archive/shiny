@@ -13,6 +13,8 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
   1. wolverine-fetcher (dumb API layer): Fetches data from backend systems
   
 ## Releasing
+(After you have merged you changes into master)
+
 1. Get the latest version, and checkout a release branch for npm work. The release branch is necessary because the master branch is protected.
 ```sh
 # Replace x.x.x with your new version number
