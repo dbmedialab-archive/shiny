@@ -1,6 +1,6 @@
 {
 	"name": "@aller/shiny",
-	"version": "0.10.2",
+	"version": "0.11.0",
 	"description": "",
 	"main": "lib/index.js",
 	"scripts": {
@@ -30,7 +30,7 @@
 		"aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
 		"get-best-contrast-color": "0.2.1",
 		"intersection-observer": "0.5.0",
-		"lazysizes": "4.0.4",
+		"lazysizes": "4.1.0",
 		"parse-color": "1.0.0",
 		"picturefill": "3.0.2",
 		"polished": "1.9.3",
@@ -71,6 +71,6 @@
 		"prop-types": "15.6.2",
 		"react": "16.4.2",
 		"react-dom": "16.4.2",
-		"styled-components": "3.3.3"
+		"styled-components": "3.4.1"
 	}
 }

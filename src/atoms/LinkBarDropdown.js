@@ -2,12 +2,8 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarButton } from './LinkBarButton';
 import { FontIcon } from './FontIcon';
-
-const Button = styled(LinkBarLinkBase.withComponent('button'))`
-	cursor: pointer;
-`;
 
 // I just met you,
 // And this is crazy.
@@ -15,8 +11,6 @@ const Button = styled(LinkBarLinkBase.withComponent('button'))`
 const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
-
-const StyledDropdown = styled.div``;
 
 class Dropdown extends React.Component {
 	constructor(props) {
@@ -39,14 +33,14 @@ class Dropdown extends React.Component {
 		const updown = (hide === true) ? 'down' : 'up';
 
 		return (
-			<Button
+			<LinkBarButton
 				aria-expanded={hide ? 'false' : 'true'}
 				onClick={this.toggle}
 				{...rest}
 			>
 				{linkText}{' '}
 				<FontIcon name={`arrow-alt-${updown}`} />
-			</Button>
+			</LinkBarButton>
 		);
 	}
 
@@ -115,7 +109,7 @@ class Dropdown extends React.Component {
 		const { hide } = this.state;
 
 		return (
-			<StyledDropdown
+			<div
 				onFocus={this.updateLastFocusTime}
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
@@ -123,7 +117,7 @@ class Dropdown extends React.Component {
 				<HideMeMaybe onClick={this.tryHide} hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
-			</StyledDropdown>
+			</div>
 		);
 	}
 }
