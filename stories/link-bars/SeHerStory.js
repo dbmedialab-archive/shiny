@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import {
 	LinkBarLink,
 	XSmallLinkBarLink,
+	SmallLinkBarLink,
 	HorizontalLinkBar,
 	SeHerLogo,
+	FontIcon,
 	HugeHeading,
 	LinkBarItem,
 	LinkBarDropdown,
@@ -21,19 +23,24 @@ const LogoLink = styled(XSmallLinkBarLink)`
 	transition: .2s width;
 
 	@media screen and (min-width: ${props => props.theme.variables.largeWidth}) {
-		width: calc(4 * ${props => props.theme.variables.verticalBase} + 1.1rem);
+		width: calc(4 * ${props => props.theme.variables.verticalBase} + 1.2rem);
 	}
 `;
 
 const SearchField = styled(TopBarSearchField)`
 	box-sizing: border-box;
 	margin: .8rem 0;
-	max-width: calc(100% - 21rem);
+	width: auto;
 `;
 
 const LinkBarBleedingLogo = styled(LinkBarItem)`
 	align-self: flex-start;
 	z-index: 9;
+`;
+
+const SeHerDropdown = styled(LinkBarDropdown)`
+	font-size: 2.0rem;
+	line-height: 2.4rem;
 `;
 
 const linkProps = {
@@ -42,6 +49,15 @@ const linkProps = {
 	textColor: 'type',
 	skin: 'splashBorder',
 };
+
+const socialLinkProps = {
+	useUnderline: false,
+	textColor: 'type',
+};
+const SocialLink = styled(SmallLinkBarLink)`
+	font-size: 3.1rem;
+	line-height: 1;
+`;
 
 const SeHerStory = () => (
 	<section>
@@ -52,37 +68,64 @@ const SeHerStory = () => (
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
+			shouldAdjustForNestedPadding
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
 					<SeHerLogo />
 				</LogoLink>
 			</LinkBarBleedingLogo>
-			<form action="https://www.seher.no/tekstarkiv/">
-				<SearchField
-					type="search"
-					name="q"
-					placeholder="Søk i Se&Hør..."
-					xs={false}
-					md
-				/>
-			</form>
-			<LinkBarDropdown
-				xs
-				md={false}
-				linkText="☰"
-				textColor="type"
+			<HorizontalLinkBar
+				isTopLevelComponent={false} // Use the full width
+				background="#ffffff" // A refactor to bacground='splashBackground' is on the books
+				shouldFlexChildren
+				justifyContent="space-between"
+				overflow="visible"
 			>
-				<VerticalLinkBar background="white" align="right">
-					<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
-					<LinkBarLink linkText="Reality" url="#" {...linkProps} />
-					<LinkBarLink linkText="Brudd & bryllup" url="#" {...linkProps} />
-					<LinkBarLink linkText="Hollywood" url="#" {...linkProps} />
-					<LinkBarLink linkText="Regal" url="#" {...linkProps} />
-					<LinkBarLink linkText="Video" url="#" {...linkProps} />
-					<LinkBarLink linkText="Sterke historier" url="#" {...linkProps} />
-				</VerticalLinkBar>
-			</LinkBarDropdown>
+				<SocialLink
+					href="https://www.facebook.com/seoghor/"
+					{...socialLinkProps}
+				>
+					<FontIcon name="facebook" title="Se og Hør på Facebook" />
+				</SocialLink>
+				<SocialLink
+					href="https://www.instagram.com/seoghoer/"
+					{...socialLinkProps}
+				>
+					<FontIcon name="pictures" title="Se og Hør på Instagram" />
+				</SocialLink>
+				<SocialLink
+					href="https://www.youtube.com/channel/UCSzN1_wSj9VsKaysZc263Dg"
+					{...socialLinkProps}
+				>
+					<FontIcon name="youtube" title="Se og Hør på YouTube" />
+				</SocialLink>
+				<form action="https://www.seher.no/tekstarkiv/">
+					<SearchField
+						type="search"
+						name="q"
+						placeholder="Søk i Se&Hør..."
+						xs={false}
+						md
+					/>
+				</form>
+				<SeHerDropdown
+					xs
+					md={false}
+					linkText="☰"
+					textColor="type"
+				>
+					<VerticalLinkBar background="white" align="right">
+						<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
+						<LinkBarLink linkText="Reality" url="#" {...linkProps} />
+						<LinkBarLink linkText="Brudd & bryllup" url="#" {...linkProps} />
+						<LinkBarLink linkText="Hollywood" url="#" {...linkProps} />
+						<LinkBarLink linkText="Regal" url="#" {...linkProps} />
+						<LinkBarLink linkText="Video" url="#" {...linkProps} />
+						<LinkBarLink linkText="Sterke historier" url="#" {...linkProps} />
+					</VerticalLinkBar>
+				</SeHerDropdown>
+			</HorizontalLinkBar>
 		</HorizontalLinkBar>
 		<HorizontalLinkBar
 			background="#ececec"
