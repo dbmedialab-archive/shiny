@@ -3,8 +3,8 @@ import { darken, lighten } from 'polished';
 const colorsToShade = {
 	primary: '#7a9a26',
 	secondary: '#313131',
-
-	grayTint: '#eee',
+	darkness: '#222',
+	pageBackground: '#f9f9f9',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -19,7 +19,7 @@ const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc
 
 const skinColors = {
 	type: 'darkness',
-	background: 'grayTintLighter',
+	background: 'pageBackground',
 };
 
 export default {
