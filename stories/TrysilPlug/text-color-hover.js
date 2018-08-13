@@ -8,14 +8,14 @@ import { DymoHeading } from '../../src/atoms/DymoHeading';
 export default () => (
 	<section>
 		<HugeHeading>DymoHeading with shade on hover</HugeHeading>
-		<p>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</p>
+		<p>DymoHeading does not have any hover effect by default, but if you pass the skin.textHoverShade prop, it will add that shade to the textColor on hover.</p>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug
 			Heading={DymoHeading}
 			headingProps={{
 				skin: {
-					textColor: 'yellow',
+					textColor: 'navy',
 					textHoverShade: 'lighter',
 					backgroundColor: 'transparent',
 				},
