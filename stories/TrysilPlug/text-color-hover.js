@@ -7,7 +7,7 @@ import { DymoHeading } from '../../src/atoms/DymoHeading';
 
 export default () => (
 	<section>
-		<HugeHeading>TrysilPlug</HugeHeading>
+		<HugeHeading>DymoHeading with shade on hover</HugeHeading>
 		<p>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</p>
 
 		<Heading>Usage</Heading>
@@ -15,7 +15,9 @@ export default () => (
 			Heading={DymoHeading}
 			headingProps={{
 				skin: {
-					textHoverColor: 'yellow',
+					textColor: 'yellow',
+					textHoverShade: 'lighter',
+					backgroundColor: 'transparent',
 				},
 			}}
 			title="Hva skal vi plugge i dag, da?"

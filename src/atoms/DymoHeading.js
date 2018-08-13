@@ -48,7 +48,7 @@ const PaddedText = styled.span`
 	padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
 
 	a:hover & {
-		color: ${props => (props.skin.textHoverColor ? getColor(props.skin.textHoverColor) : 'inherit')};
+		color: ${props => getColor(props.skin.textColor, props.skin.textHoverShade)};
 		background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
 		box-shadow:
 			calc(1/2 * ${getVariable('horizontalBase')})
@@ -59,16 +59,16 @@ const PaddedText = styled.span`
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
-		textHoverColor: propTypes.string,
 		backgroundColor: propTypes.string,
-		backgroundHoverShade: propTypes.string,
-		textColor: propTypes.string,
+		backgroundHoverShade: propTypes.oneOf(['dark', 'light', 'lighter', '']),
 		needsPadding: propTypes.bool,
+		textColor: propTypes.string,
+		textHoverShade: propTypes.oneOf(['dark', 'light', 'lighter', '']),
 	}),
 };
 PaddedText.defaultProps = {
 	skin: {
-		textHoverColor: 'inherit',
+		textHoverShade: '',
 		textColor: 'type',
 		needsPadding: false,
 		backgroundColor: 'transparent',
