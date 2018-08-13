@@ -30,34 +30,36 @@ const FormattedHeading = styled(Heading)`
 
 const PaddedText = styled.span`
 	${props => (props.hasImage ? '' : 'max-width: 100%;')}
-	 	margin: 0;
-		padding-top: 0;
+	margin: 0;
+	padding-top: 0;
+	box-shadow:
+		calc(1/2 * ${getVariable('horizontalBase')})
+		0
+		${props => getColor(props.skin.backgroundColor)}
+	;
+	background: ${props => getColor(props.skin.backgroundColor)};
+	color:      ${props => getColor(props.skin.textColor)};
+	-webkit-box-decoration-break: clone;
+
+	span.highlighted {
+		color: ${getColor('red')};
+	}
+
+	padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
+
+	a:hover & {
+		color: ${props => (props.skin.textHoverColor ? getColor(props.skin.textHoverColor) : 'inherit')};
+		background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
 		box-shadow:
 			calc(1/2 * ${getVariable('horizontalBase')})
 			0
-		  ${props => getColor(props.skin.backgroundColor)}
+			${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
 		;
-		background: ${props => getColor(props.skin.backgroundColor)};
-		color:      ${props => getColor(props.skin.textColor)};
-		-webkit-box-decoration-break: clone;
-
-		span.highlighted {
-			color: ${getColor('red')};
-		}
-
-		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
-
-		a:hover & {
-			background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
-			box-shadow:
-				calc(1/2 * ${getVariable('horizontalBase')})
-				0
-				${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
-			;
-		}
+	}
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
+		textHoverColor: propTypes.string,
 		backgroundColor: propTypes.string,
 		backgroundHoverShade: propTypes.string,
 		textColor: propTypes.string,
@@ -66,6 +68,7 @@ PaddedText.propTypes = {
 };
 PaddedText.defaultProps = {
 	skin: {
+		textHoverColor: 'inherit',
 		textColor: 'type',
 		needsPadding: false,
 		backgroundColor: 'transparent',
@@ -103,6 +106,7 @@ DymoHeading.propTypes = {
 	hasImage: propTypes.bool,
 	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
 	skin: propTypes.shape({
+		textHoverColor: propTypes.string,
 		backgroundColor: propTypes.string,
 		textColor: propTypes.string,
 		shouldTextBePadded: propTypes.bool,
@@ -115,6 +119,7 @@ DymoHeading.defaultProps = {
 	hasImage: false,
 	size: 'large',
 	skin: {
+		textHoverColor: 'dark',
 		textColor: 'type',
 		shouldTextBePadded: false,
 		backgroundColor: 'transparent',
