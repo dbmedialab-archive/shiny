@@ -22,4 +22,16 @@ export default {
 	headingXlargeLineHeight: '3.3rem',
 	headingHugeSize: '3.8rem',
 	headingHugeLineHeight: '6.4rem',
+
+	buttonSizes: {
+		small: {
+			fontWeight: '700',
+		},
+		medium: {
+			fontWeight: '700',
+		},
+		large: {
+			fontWeight: '700',
+		},
+	},
 };

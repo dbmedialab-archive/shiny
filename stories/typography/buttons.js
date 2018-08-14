@@ -21,19 +21,37 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer background="white">
-			<Heading> Simple buttons </Heading>
+			<Heading>Simple buttons</Heading>
 			<Row>
-				<Button> Default </Button>
-				<Button background="primary"> Colored </Button>
+				<Button size="large">Large Default</Button>
+				<Button background="primary" size="large"> Large Colored </Button>
+			</Row>
+			<Row>
+				<Button size="medium">Medium Default</Button>
+				<Button background="primary" size="medium">Medium Colored </Button>
+			</Row>
+			<Row>
+				<Button size="small">Small Default</Button>
+				<Button background="primary" size="small">Small Colored </Button>
 			</Row>
 
-			<Heading> Bordered buttons </Heading>
+			<Heading>Bordered buttons</Heading>
 			<Row>
-				<BorderedButton> Default </BorderedButton>
-				<BorderedButton isActive> Active </BorderedButton>
+				<BorderedButton size="large">Large Default</BorderedButton>
+				<BorderedButton size="large" isActive>Large Active</BorderedButton>
 			</Row>
 
-			<Heading> Rounded button </Heading>
+			<Row>
+				<BorderedButton size="medium">Medium Default</BorderedButton>
+				<BorderedButton size="medium" isActive>Medium Active</BorderedButton>
+			</Row>
+
+			<Row>
+				<BorderedButton size="small">Small Default</BorderedButton>
+				<BorderedButton size="small" isActive>Small Active</BorderedButton>
+			</Row>
+
+			<Heading>Rounded button</Heading>
 			<Row>
 				<RoundedButton>default background</RoundedButton>
 			</Row>
@@ -44,12 +62,12 @@ export default () => (
 				</RoundedButton>
 			</Row>
 
-			<Heading> Small rounded button </Heading>
+			<Heading>Small rounded button</Heading>
 			<Row>
 				<SmallRoundedButton background="secondary">secondary background</SmallRoundedButton>
 			</Row>
 
-			<Heading> Tiny rounded button </Heading>
+			<Heading>Tiny rounded button</Heading>
 			<Row>
 				<TinyRoundedButton background="secondary" color="primaryLight">primaryLight text color</TinyRoundedButton>
 			</Row>
