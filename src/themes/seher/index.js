@@ -11,6 +11,7 @@ const colorsToShade= {
 
 	yellow: '#f1ca3f',
 	black: '#222222',
+	darkness: '#272727',
 };
 // Creates 4 shades of each color in colorsToShade
 // For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
@@ -24,8 +25,6 @@ const shadedColors = Object.keys(colorsToShade).map(color => ({
 const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
 
 const colors = {
-	darkness: '#272727',
-
 	grayTint: '#C0C0C0',
 	grayTintLight: '#ECECEC',
 	grayTintLightDark: '#C0C0C0',

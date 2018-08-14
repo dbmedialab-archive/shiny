@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 
 import { Heading } from '..';
@@ -30,46 +31,49 @@ const FormattedHeading = styled(Heading)`
 
 const PaddedText = styled.span`
 	${props => (props.hasImage ? '' : 'max-width: 100%;')}
-	 	margin: 0;
-		padding-top: 0;
+	margin: 0;
+	padding-top: 0;
+	box-shadow:
+		calc(1/2 * ${getVariable('horizontalBase')})
+		0
+		${props => getColor(props.skin.backgroundColor)}
+	;
+	background: ${props => getColor(props.skin.backgroundColor)};
+	color:      ${props => getColor(props.skin.textColor)};
+	-webkit-box-decoration-break: clone;
+
+	span.highlighted {
+		color: ${getColor('red')};
+	}
+
+	padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
+
+	a:hover & {
+		color: ${props => getColor(props.skin.textColor, props.skin.textHoverShade)};
+		background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
 		box-shadow:
 			calc(1/2 * ${getVariable('horizontalBase')})
 			0
-		  ${props => getColor(props.skin.backgroundColor)}
+			${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
 		;
-		background: ${props => getColor(props.skin.backgroundColor)};
-		color:      ${props => getColor(props.skin.textColor)};
-		-webkit-box-decoration-break: clone;
-
-		span.highlighted {
-			color: ${getColor('red')};
-		}
-
-		padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
-
-		a:hover & {
-			background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
-			box-shadow:
-				calc(1/2 * ${getVariable('horizontalBase')})
-				0
-				${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
-			;
-		}
+	}
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
-		backgroundColor: propTypes.string,
-		backgroundHoverShade: propTypes.string,
-		textColor: propTypes.string,
+		backgroundColor: shinyPropTypes.color,
+		backgroundHoverShade: shinyPropTypes.shade,
 		needsPadding: propTypes.bool,
+		textColor: shinyPropTypes.color,
+		textHoverShade: shinyPropTypes.shade,
 	}),
 };
 PaddedText.defaultProps = {
 	skin: {
-		textColor: 'type',
-		needsPadding: false,
 		backgroundColor: 'transparent',
 		backgroundHoverShade: 'dark',
+		needsPadding: false,
+		textColor: 'type',
+		textHoverShade: '',
 	},
 };
 
@@ -103,9 +107,11 @@ DymoHeading.propTypes = {
 	hasImage: propTypes.bool,
 	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
 	skin: propTypes.shape({
-		backgroundColor: propTypes.string,
-		textColor: propTypes.string,
-		shouldTextBePadded: propTypes.bool,
+		backgroundColor: shinyPropTypes.color,
+		backgroundHoverShade: shinyPropTypes.shade,
+		needsPadding: propTypes.bool,
+		textColor: shinyPropTypes.color,
+		textHoverShade: shinyPropTypes.shade,
 	}),
 	title: propTypes.string,
 };
@@ -115,9 +121,11 @@ DymoHeading.defaultProps = {
 	hasImage: false,
 	size: 'large',
 	skin: {
-		textColor: 'type',
-		shouldTextBePadded: false,
 		backgroundColor: 'transparent',
+		backgroundHoverShade: 'dark',
+		needsPadding: false,
+		textColor: 'type',
+		textHoverShade: '',
 	},
 	title: '',
 };
