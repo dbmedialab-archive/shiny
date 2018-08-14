@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 
 import { Heading } from '..';
@@ -59,20 +60,20 @@ const PaddedText = styled.span`
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({
-		backgroundColor: propTypes.string,
-		backgroundHoverShade: propTypes.oneOf(['dark', 'light', 'lighter', '']),
+		backgroundColor: shinyPropTypes.color,
+		backgroundHoverShade: shinyPropTypes.shade,
 		needsPadding: propTypes.bool,
-		textColor: propTypes.string,
-		textHoverShade: propTypes.oneOf(['dark', 'light', 'lighter', '']),
+		textColor: shinyPropTypes.color,
+		textHoverShade: shinyPropTypes.shade,
 	}),
 };
 PaddedText.defaultProps = {
 	skin: {
-		textHoverShade: '',
-		textColor: 'type',
-		needsPadding: false,
 		backgroundColor: 'transparent',
 		backgroundHoverShade: 'dark',
+		needsPadding: false,
+		textColor: 'type',
+		textHoverShade: '',
 	},
 };
 
@@ -106,10 +107,11 @@ DymoHeading.propTypes = {
 	hasImage: propTypes.bool,
 	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
 	skin: propTypes.shape({
-		textHoverColor: propTypes.string,
-		backgroundColor: propTypes.string,
-		textColor: propTypes.string,
-		shouldTextBePadded: propTypes.bool,
+		backgroundColor: shinyPropTypes.color,
+		backgroundHoverShade: shinyPropTypes.shade,
+		needsPadding: propTypes.bool,
+		textColor: shinyPropTypes.color,
+		textHoverShade: shinyPropTypes.shade,
 	}),
 	title: propTypes.string,
 };
@@ -119,10 +121,11 @@ DymoHeading.defaultProps = {
 	hasImage: false,
 	size: 'large',
 	skin: {
-		textHoverColor: 'dark',
-		textColor: 'type',
-		shouldTextBePadded: false,
 		backgroundColor: 'transparent',
+		backgroundHoverShade: 'dark',
+		needsPadding: false,
+		textColor: 'type',
+		textHoverShade: '',
 	},
 	title: '',
 };

@@ -15,8 +15,8 @@ export default () => {
 		.add('TrysilPlug', basicIssue)
 		.add('... without blur', TrysilPlugWithoutBlurStory)
 		.add('Custom Heading', customHeading)
+		.add('DymoHeading with hover shade', textColorOnHover)
 		.add('With Kicker', kicker)
 		.add('All caps', allCaps)
-		.add('Row with three plugs', rowWithThreePlugs)
-		.add('Text color on hover', textColorOnHover);
+		.add('Row with three plugs', rowWithThreePlugs);
 };
