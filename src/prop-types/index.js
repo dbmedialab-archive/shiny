@@ -1,4 +1,4 @@
-import { getColor } from '..';
+import { getColor } from '../utils';
 import defaultTheme from '../themes/default-theme';
 
 /**

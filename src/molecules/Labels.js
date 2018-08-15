@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import propTypes from 'prop-types';
 
-import { Label  } from '..';
+import { Label  } from '../atoms/Label';
 
 const Labels = ({ labels }) => (
 	<Fragment>

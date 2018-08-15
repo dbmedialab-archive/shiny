@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
-import { HorizontalFlexingList as Bar } from '..';
-import { LinkBarItem } from '..';
-import { NavWithOptionalConstrainer } from '..';
-import { LeftScrollArrow } from '..';
-import { RightScrollArrow } from '..';
+import { HorizontalFlexingList as Bar } from '../atoms/HorizontalFlexingList';
+import { LinkBarItem } from '../atoms/LinkBarItem';
+import {
+	LeftScrollArrow,
+	RightScrollArrow,
+} from '../atoms/ScrollArrow';
+import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
 
 const Container = styled.div`
 	overflow: hidden;

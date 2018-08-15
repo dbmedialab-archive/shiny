@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading } from '..';
+import { Heading } from './Heading';
 
 const PlugHeading = props => <Heading marginTopFactor={1/4} marginBottomFactor={1/2} {...props} />;
 

@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	Row,
-	Col,
-	FigCaption,
-	FrontSmallHeading,
-} from '../..';
+import { Row } from '../../atoms/Row';
+import { FigCaption } from '../../atoms/FigCaption';
+import { Col } from '../../atoms/Col';
+import { FrontSmallHeading } from '../../atoms/FrontHeading';
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added

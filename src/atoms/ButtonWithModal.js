@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 
-import { FontIcon  } from '..';
+import { FontIcon  } from './FontIcon';
 
 class ButtonWithModal extends Component {
 	static propTypes = {

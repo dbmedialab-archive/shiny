@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Row } from '..';
-import { Col } from '..';
-import { LazyProgressiveImage } from '..';
-import { Source } from '..';
-import { UnderlinedHugeHeading } from '..';
-import { UnderlinedMediumHeading } from '..';
-import { UnderlinedSmallHeading } from '..';
-import { YoutubeFrame } from '..';
+import { Row } from '../atoms/Row';
+import { Col } from '../atoms/Col';
+import { LazyProgressiveImage } from './LazyProgressiveImage';
+import { Source } from './Source';
+import {
+	UnderlinedHugeHeading,
+	UnderlinedMediumHeading,
+	UnderlinedSmallHeading,
+} from '../atoms/UnderlinedHeading';
+import { YoutubeFrame } from '../atoms/MainRecipe/youtubeFrame';
 
 import { IconBar } from './IconBar';
 

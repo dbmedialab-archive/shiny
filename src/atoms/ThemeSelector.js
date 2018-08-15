@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { ShinyThemeProvider } from '..';
+import { ShinyThemeProvider } from './ShinyThemeProvider';
 import { themes } from '../themes';
 
 const isClient = (typeof window !== 'undefined');

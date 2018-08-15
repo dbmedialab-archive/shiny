@@ -4,13 +4,11 @@ import styled from 'styled-components';
 
 import { merge } from 'aurora-deep-slice-merge';
 
-
-import { FullWidthLinkBar } from '..';
-import { LinkBarButton as Button } from '..';
-import { ThemeSelector as ShinyThemeProvider } from '..';
-
-
 import { themes } from '../themes';
+
+import { LinkBarButton as Button } from '../atoms/LinkBarButton';
+import { ThemeSelector as ShinyThemeProvider } from '../atoms/ThemeSelector';
+import { FullWidthLinkBar } from './FullWidthLinkBar';
 
 const ThemeSelector = styled(ShinyThemeProvider)`
 	padding-top: calc(2 * ${props => (props.theme.variables || {}).verticalBase});

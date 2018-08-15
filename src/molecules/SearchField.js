@@ -4,8 +4,8 @@ import styled, { css } from 'styled-components';
 
 import { getColor, getVariable } from '../utils';
 
-import { LoadingSearchIcon } from '..';
-import { FontIcon } from '..';
+import { LoadingSearchIcon } from '../atoms/loaders/LoadingSearchIcon';
+import { FontIcon } from '../atoms/FontIcon';
 
 const Search = styled.div`
   position: relative;

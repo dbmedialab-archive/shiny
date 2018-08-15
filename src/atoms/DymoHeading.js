@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 
-import { Heading } from '..';
+import { Heading } from './Heading';
 
 const Hgroup = styled.hgroup`
 	/* Fixes vertical spacing */

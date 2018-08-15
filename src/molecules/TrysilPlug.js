@@ -8,14 +8,13 @@ import {
 	getVariable,
 } from '../utils';
 
-
-import { Article } from '..';
-import { Kicker } from '..';
-import { PlugHeading as DefaultHeading } from '..';
-import { Labels } from '..';
-import { BlockLink } from '..';
-import { LazyProgressiveImage } from '..';
-import { Source } from '..';
+import { Article } from '../atoms/Article';
+import { Kicker } from '../atoms/Kicker';
+import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
+import { BlockLink } from '../atoms/BlockLink';
+import { Labels } from './Labels';
+import { LazyProgressiveImage } from './LazyProgressiveImage';
+import { Source } from './Source';
 
 const PlugLink = styled(BlockLink)`
 	&:focus {

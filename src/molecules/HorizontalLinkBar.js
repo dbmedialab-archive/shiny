@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { HorizontalOverflowGradient } from '..';
-import { HorizontalFlexingList as Bar } from '..';
-import { LinkBarItem } from '..';
-import { NavWithOptionalConstrainer } from '..';
+import { HorizontalOverflowGradient } from '../atoms/HorizontalOverflowGradient';
+import { HorizontalFlexingList as Bar } from '../atoms/HorizontalFlexingList';
+import { LinkBarItem } from '../atoms/LinkBarItem';
+import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
 
 const LinkBar = ({
 	background,

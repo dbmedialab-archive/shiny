@@ -3,8 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { DontPushTheAdBoundaries } from '..';
-import { LinkBarNav as Nav } from '..';
+import { DontPushTheAdBoundaries } from '../atoms/DontPushTheAdBoundaries';
+import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 
 const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 	&& {
