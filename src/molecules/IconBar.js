@@ -14,12 +14,20 @@ const RowBase = styled(Row)`
 	align-items: baseline;
 `;
 
-const IconBar = props => (
+const IconBar = ({
+	entities,
+	iconSize,
+	textSize,
+}) => (
 	<RowBase>
 		{
-			props.entities.map((entity, i) => (
+			entities.map((entity, i) => (
 				<PaddingLess xs={2} md={4} key={i}>
-					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
+					<IconWithText
+						{...entity}
+						textSize={textSize}
+						iconSize={iconSize}
+					/>
 				</PaddingLess>
 			))
 		}

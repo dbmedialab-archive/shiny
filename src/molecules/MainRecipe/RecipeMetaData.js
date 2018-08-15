@@ -73,15 +73,15 @@ const RecipeMetaData  = ({
 			</Row>
 			<Row className="order">
 				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
-					<Col md={10} >
+					<FrontSmallHeading lineWidth={6}>Inneholder</FrontSmallHeading>
+					<Col md={10}>
 						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>
 				{author && <AuthorInfo author={author} />}
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
-					<Col md={10} >
+					<Col md={10}>
 						<IconBar entities={preferences} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>

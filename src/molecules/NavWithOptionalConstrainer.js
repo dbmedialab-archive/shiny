@@ -16,20 +16,23 @@ const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 `;
 
 const NavWithOptionalConstrainer = ({
-	width, background, zIndex, isTopLevelComponent, ...props
+	children,
+	isTopLevelComponent,
+	zIndex,
+	...rest
 }) => {
 	if (isTopLevelComponent) {
 		return (
-			<Nav width={width} background={background}>
+			<Nav {...rest}>
 				<DesktopWidthConstrainer zIndex={zIndex}>
-					{props.children}
+					{children}
 				</DesktopWidthConstrainer>
 			</Nav>
 		);
 	}
 	return (
-		<Nav width={width} background={background}>
-			{props.children}
+		<Nav {...rest}>
+			{children}
 		</Nav>
 	);
 };

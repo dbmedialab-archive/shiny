@@ -65,21 +65,22 @@ const TrysilPlug = ({
 	<Article>
 		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{placeholderUrl &&
-				<LazyProgressiveImage
-					alt={title}
-					src={placeholderUrl}
-					offset={offset}
-					fallbackSrc={image}
-					ratio={ratio}
-					preventBlur={preventBlur}
-				>
-					{sources.length === 0 &&
-						<Source srcSet={image} />
-					}
-					{sources.map((source, i) =>
-						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-				</LazyProgressiveImage>
+			{placeholderUrl
+				&& (
+					<LazyProgressiveImage
+						alt={title}
+						src={placeholderUrl}
+						offset={offset}
+						fallbackSrc={image}
+						ratio={ratio}
+						preventBlur={preventBlur}
+					>
+						{sources.length === 0
+						&& <Source srcSet={image} />
+						}
+						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+					</LazyProgressiveImage>
+				)
 			}
 			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}

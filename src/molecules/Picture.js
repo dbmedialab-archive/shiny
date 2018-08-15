@@ -10,7 +10,7 @@ const StyledPicture = styled.picture`
 	& img {
 		display: block;
 		max-width: 100%;
-		
+
 
 		${props => (!props.preventBlur ? css`
 			backface-visibility: hidden;
@@ -19,7 +19,7 @@ const StyledPicture = styled.picture`
 			transform: translateZ(0);
 			will-change: filter;
 			&.blur-up {
-				
+
 				filter: blur(15px);
 				transition: filter 400ms;
 
@@ -55,13 +55,14 @@ class Picture extends PureComponent {
 	}
 
 	render() {
-		const { alt, preventBlur } = this.props;
+		const {
+			children,
+			...rest
+		} = this.props;
+
 		return (
-			<StyledPicture
-				alt={alt}
-				preventBlur={preventBlur}
-			>
-				{this.props.children}
+			<StyledPicture {...rest}>
+				{children}
 			</StyledPicture>
 		);
 	}

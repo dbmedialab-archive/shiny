@@ -108,7 +108,7 @@ const OppskriftFooter = () => (
 					</Row>
 					<VerticalSeparator height={2.8} />
 				</LogoCol>
-				<Col md={3} xs={12} >
+				<Col md={3} xs={12}>
 					<Row>
 						<Col xs={12}>
 							<SubCatHeading>Postadresse:</SubCatHeading>

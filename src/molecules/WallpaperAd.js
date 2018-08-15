@@ -118,20 +118,32 @@ class WallpaperAd extends Component {
 
 	render() {
 		const {
-			height, shouldHideAttribution, itemType, itemScope,
+			children,
+			height,
+			itemType,
+			itemScope,
+			shouldHideAttribution,
 		} = this.props;
+
+		const {
+			backgroundImage,
+			href,
+			isWallpaper,
+			top,
+			sticky,
+		} = this.state;
 
 		/* eslint-disable jsx-a11y/anchor-has-content */
 		const left = (
 			<LeftAndRight
 				key={'left'}
-				backgroundImage={this.state.backgroundImage}
-				top={this.state.top}
-				sticky={this.state.sticky}
+				backgroundImage={backgroundImage}
+				top={top}
+				sticky={sticky}
 				left
 			>
 				<Sticker>
-					<a href={this.state.href} />
+					<a href={href} />
 				</Sticker>
 			</LeftAndRight>
 		);
@@ -139,12 +151,12 @@ class WallpaperAd extends Component {
 		const right = (
 			<LeftAndRight
 				key={'right'}
-				backgroundImage={this.state.backgroundImage}
-				top={this.state.top}
-				sticky={this.state.sticky}
+				backgroundImage={backgroundImage}
+				top={top}
+				sticky={sticky}
 			>
 				<Sticker>
-					<a href={this.state.href} />
+					<a href={href} />
 				</Sticker>
 			</LeftAndRight>
 		);
@@ -152,17 +164,17 @@ class WallpaperAd extends Component {
 
 		return (
 			<Fragment>
-				{this.state.isWallpaper && [left, right]}
+				{isWallpaper && [left, right]}
 				<WallpaperWrapper
 					height={height}
-					width={this.state.isWallpaper ? '1010px' : '980px'}
+					width={isWallpaper ? '1010px' : '980px'}
 					shouldHideAttribution={shouldHideAttribution}
 					itemType={itemType}
 					itemScope={itemScope}
 				>
-					{React.cloneElement(this.props.children, {
+					{React.cloneElement(children, {
 						onMediaQueryChange: this.onMediaQueryChange.bind(this),
-						width: this.state.isWallpaper ? '1010px' : '980px',
+						width: isWallpaper ? '1010px' : '980px',
 					})}
 				</WallpaperWrapper>
 			</Fragment>

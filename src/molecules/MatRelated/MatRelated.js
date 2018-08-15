@@ -16,7 +16,7 @@ const Img = styled.img`
 `;
 
 
-export const Related = props => (
+export const Related = ({ headerTitle }) => (
 	<section>
 		<Heading>Related Section</Heading>
 		<Row>
@@ -27,7 +27,7 @@ export const Related = props => (
 					</Col>
 					<Col md={5}>
 						{/* <IconBar entities={props.entities} /> */}
-						<ComplexitySectionHeader style={{ fontSize: 18 }}>{props.headerTitle}</ComplexitySectionHeader>
+						<ComplexitySectionHeader style={{ fontSize: 18 }}>{headerTitle}</ComplexitySectionHeader>
 					</Col>
 				</Row>
 			</Col>
@@ -38,7 +38,7 @@ export const Related = props => (
 					</Col>
 					<Col md={5}>
 						{/* <IconsBar entities={props.entities} /> */}
-						<ComplexitySectionHeader style={{ fontSize: 18 }}>{props.headerTitle}</ComplexitySectionHeader>
+						<ComplexitySectionHeader style={{ fontSize: 18 }}>{headerTitle}</ComplexitySectionHeader>
 					</Col>
 				</Row>
 			</Col>
@@ -51,7 +51,7 @@ export const Related = props => (
 					</Col>
 					<Col md={5}>
 						{/* <IconsBar entities={props.entities} /> */}
-						<ComplexitySectionHeader style={{ fontSize: 18 }}>{props.headerTitle}</ComplexitySectionHeader>
+						<ComplexitySectionHeader style={{ fontSize: 18 }}>{headerTitle}</ComplexitySectionHeader>
 					</Col>
 				</Row>
 			</Col>
@@ -62,7 +62,7 @@ export const Related = props => (
 					</Col>
 					<Col md={5}>
 						{/* <IconsBar entities={props.entities} /> */}
-						<ComplexitySectionHeader style={{ fontSize: 18 }}>{props.headerTitle}</ComplexitySectionHeader>
+						<ComplexitySectionHeader style={{ fontSize: 18 }}>{headerTitle}</ComplexitySectionHeader>
 					</Col>
 				</Row>
 			</Col>

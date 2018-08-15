@@ -49,7 +49,13 @@ class LazyProgressiveImage extends PureComponent {
 
 	render() {
 		const {
-			backgroundColor, src, alt, ratio, preventBlur, fallbackSrc,
+			alt,
+			backgroundColor,
+			children,
+			fallbackSrc,
+			preventBlur,
+			ratio,
+			src,
 		} = this.props;
 
 
@@ -59,7 +65,7 @@ class LazyProgressiveImage extends PureComponent {
 				paddingBottom={ratio * 100}
 			>
 				<Picture alt={alt} preventBlur={preventBlur}>
-					{this.props.children}
+					{children}
 					<Image
 						itemProp="image"
 						alt={alt}
