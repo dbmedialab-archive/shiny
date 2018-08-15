@@ -13,6 +13,7 @@ import logos from './logos';
 import forms from './forms';
 import rating from './rating';
 import modals from './Modal';
+import footers from './footers';
 
 introduction();
 
@@ -33,3 +34,4 @@ matComponents();
 logos();
 forms();
 modals();
+footers();
