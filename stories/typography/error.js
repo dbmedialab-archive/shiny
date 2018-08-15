@@ -32,7 +32,7 @@ import {
 		</Code>
 
 		<Heading>With additional information</Heading>
-		<DemoContainer >
+		<DemoContainer>
 			<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 		</DemoContainer>
 

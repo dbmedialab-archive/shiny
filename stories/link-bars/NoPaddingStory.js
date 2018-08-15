@@ -70,7 +70,7 @@ const NoPaddingStory = () => (
 		<Heading>Without props</Heading>
 		<p>This section is here just to help you compare the effects of the props.</p>
 		<DemoContainer>
-			<HorizontalLinkBar >
+			<HorizontalLinkBar>
 				<LinkBarLink linkText="Siste nytt" />
 				<LinkBarLink isActive linkText="Lokale nyheter" />
 				<LinkBarLink linkText="Sport" />

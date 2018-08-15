@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { HugeHeading, XLargeHeading, Heading, NumberedListItem, NumberedList } from '../../src';
+import {
+	HugeHeading, XLargeHeading, Heading, NumberedListItem, NumberedList,
+} from '../../src';
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
 

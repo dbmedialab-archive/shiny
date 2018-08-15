@@ -23,7 +23,7 @@ import theme from '../../src/themes/default-theme';
 const { colors } = theme;
 
 const CustomTrigger = ({ onClick, className }) => (
-	<button onClick={onClick} className={className}>This dropdown has custom trigger</button>
+	<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>
 );
 
 CustomTrigger.propTypes = {
@@ -81,7 +81,7 @@ const DropdownStory = () => {
 	} from '@aller/shiny';
 
 	const CustomTrigger = ({ onClick, className }) => (
-		<button onClick={onClick} className={className}>This dropdown has custom trigger</button>
+		<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>
 	);
 
 	<HorizontalLinkBar overflow="visible">
@@ -132,6 +132,7 @@ const DropdownStory = () => {
 						<th>...</th>
 						<td>For other props, see the
 							<button
+								type="button"
 								onClick={linkTo('Link bars', 'LinkBarLink')}
 							>
 								LinkBarLink
