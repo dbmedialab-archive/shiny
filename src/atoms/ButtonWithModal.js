@@ -36,19 +36,30 @@ class ButtonWithModal extends Component {
 	}
 
 	componentDidMount() {
-		Modal.setAppElement(this.props.rootElement);
+		const { rootElement } = this.props;
+
+		Modal.setAppElement(rootElement);
 	}
 
 	toggleModal() {
-		this.setState({ modalIsOpen: !this.state.modalIsOpen });
+		const { modalIsOpen } = this.state;
+
+		this.setState({ modalIsOpen: !modalIsOpen });
 	}
 
 	render() {
 		const {
-			Button, children, text, closedIcon, openedIcon, customStyles,
+			Button,
+			children,
+			closedIcon,
+			customStyles,
+			openedIcon,
+			text,
 		} = this.props;
+		const { modalIsOpen } =this.state;
 
-		const icon = this.state.modalIsOpen ? openedIcon : closedIcon;
+		const icon = modalIsOpen ? openedIcon : closedIcon;
+
 		return (
 			<React.Fragment>
 				<Button onClick={this.toggleModal}>
@@ -56,7 +67,7 @@ class ButtonWithModal extends Component {
 					{text}
 				</Button>
 				<Modal
-					isOpen={this.state.modalIsOpen}
+					isOpen={modalIsOpen}
 					style={customStyles}
 				>
 					{children}

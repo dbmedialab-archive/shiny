@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Col } from '../../atoms/Col';
+import { Col } from '../Col';
 import { getColor } from '../../utils';
 
 const ColorTextBox = styled(Col)`

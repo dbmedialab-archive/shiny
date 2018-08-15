@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { getColor, getVariable } from '../utils';
 
 // Atoms
-import { BlockLink } from '../atoms/BlockLink';
+import { BlockLink } from './BlockLink';
 
 const BlockLinkWithBackground = styled(BlockLink)`
 	flex: 1;

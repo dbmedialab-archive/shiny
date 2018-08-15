@@ -33,14 +33,16 @@ const Error = ({
 				<SvgIcon name={icon} size={4} size-sm={5} color={iconColor} />
 				<XLargePlugHeading>{message}</XLargePlugHeading>
 				{AdditionalInfo && <AdditionalInfo />}
-				{onRetryButtonClick &&
-				<ReloadButton
-					textColor="white"
-					background="primary"
-					onClick={onRetryButtonClick}
-				>
+				{onRetryButtonClick
+				&& (
+					<ReloadButton
+						textColor="white"
+						background="primary"
+						onClick={onRetryButtonClick}
+					>
 					Prøv igjen
-				</ReloadButton>
+					</ReloadButton>
+				)
 				}
 			</ErrorWrapper>
 		</React.Fragment>

@@ -52,9 +52,11 @@ const Email = Styled.a.attrs({
 
 const BylineWithTwoLines = ({ src, name, email }) => (
 	<BylineBlock>
-		{ src ?  <BylineImage
-			src={src}
-		/> : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
+		{ src ?  (
+			<BylineImage
+				src={src}
+			/>
+		) : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
 			<Name itemProp="author" itemScope itemType="http://schema.org/Person">
 				<span itemProp="name">{name}</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Fish = props => (
-	<svg width="100%" height="100%" viewBox="-7 -10 50 50" >
+	<svg width="100%" height="100%" viewBox="-7 -10 50 50">
 		{/* eslint-disable max-len */}
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g fill="#000000">

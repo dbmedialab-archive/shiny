@@ -77,22 +77,20 @@ export const LinkBarLinkBase = styled.a`
 
 	/* This is the underline feature */
 	&::after {
-		width: ${props =>
-		(
-			props.isActive && props.useUnderline
-				? css`calc( 100% - 2*${getVariable('horizontalBase')} )`
-				: '0'
-		)};
+		width: ${props => (
+		props.isActive && props.useUnderline
+			? css`calc( 100% - 2*${getVariable('horizontalBase')} )`
+			: '0'
+	)};
 		display: block;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		height: .1rem;
 		margin: 0 ${getVariable('horizontalBase')};
-		background: ${props =>
-		(
-			props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary
-		)};
+		background: ${props => (
+		props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary
+	)};
 		content: '';
 		transition: width .2s ease-in-out;
 	}

@@ -16,9 +16,11 @@ class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
 
+		const { displayInitially } = this.props;
+
 		this.lastFocusTime = 0;
 		this.state = {
-			hide: !this.props.displayInitially,
+			hide: !displayInitially,
 		};
 
 		this.updateLastFocusTime = this.updateLastFocusTime.bind(this);
@@ -93,14 +95,18 @@ class Dropdown extends React.Component {
 	}
 
 	tryHide() {
-		if (this.props.hideOnClick) {
+		const { hideOnClick } = this.props;
+
+		if (hideOnClick) {
 			this.hide();
 		}
 	}
 
 	toggle() {
+		const { hide } = this.state;
+
 		this.setState({
-			hide: !this.state.hide,
+			hide: !hide,
 		});
 	}
 
