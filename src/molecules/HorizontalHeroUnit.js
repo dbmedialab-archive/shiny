@@ -136,15 +136,11 @@ const HeroUnit = ({
 
 				{(difficulty || timeCooking || timeTotal)
 				&& (
-					<Row center="xs">
-						<Col xs={iconBarWidth} md={4}>
-							<IconBar
-								entities={icons}
-								textSize={textSize}
-								iconSize={iconSize}
-							/>
-						</Col>
-					</Row>
+					<IconBar
+						entities={icons}
+						textSize={textSize}
+						iconSize={iconSize}
+					/>
 				)
 				}
 				<Row center="xs">

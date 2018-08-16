@@ -2,16 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Row } from '../atoms/Row';
-import { Col } from '../atoms/Col';
 import { IconWithText } from '../atoms/IconWithText';
 
-const PaddingLess = styled(Col)`
-	padding: 0;
-`;
-
-const RowBase = styled(Row)`
-	align-items: baseline;
+const Bar = styled.div`
+	display: flex;
+	justify-content: center;
 `;
 
 const IconBar = ({
@@ -19,19 +14,17 @@ const IconBar = ({
 	iconSize,
 	textSize,
 }) => (
-	<RowBase>
+	<Bar>
 		{
 			entities.map((entity, i) => (
-				<PaddingLess xs={2} md={4} key={i}>
-					<IconWithText
-						{...entity}
-						textSize={textSize}
-						iconSize={iconSize}
-					/>
-				</PaddingLess>
+				<IconWithText
+					{...entity}
+					textSize={textSize}
+					iconSize={iconSize}
+				/>
 			))
 		}
-	</RowBase>
+	</Bar>
 );
 
 IconBar.propTypes = {
