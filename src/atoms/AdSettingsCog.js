@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { getVariable } from '../utils';
-import { FontIcon } from '../atoms/FontIcon';
+import { FontIcon } from './FontIcon';
 
 const StyledCog = styled.div`
 	position: absolute;
@@ -28,4 +28,3 @@ const AdSettingsCog = props => (
 );
 
 export { AdSettingsCog };
-

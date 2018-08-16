@@ -15,7 +15,7 @@ const TagSection = (props) => {
 	return (
 		props.tags.map((tag) => {
 			return (
-				<TagItemWrapper key={tag.title} >
+				<TagItemWrapper key={tag.title}>
 					<Tag {...tag} />
 				</TagItemWrapper>);
 		})

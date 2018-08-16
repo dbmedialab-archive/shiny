@@ -4,13 +4,13 @@ import styled, { css } from 'styled-components';
 
 import { getColor, getVariable } from '../utils';
 
-import { LoadingSearchIcon } from '..';
-import { FontIcon } from '..';
+import { LoadingSearchIcon } from '../atoms/loaders/LoadingSearchIcon';
+import { FontIcon } from '../atoms/FontIcon';
 
 const Search = styled.div`
   position: relative;
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom :
-		(`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom
+		: (`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
   background-color: ${getColor('white')};
   font-size: 1.6rem;
   box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')}`)};
@@ -57,6 +57,7 @@ class SearchField extends React.Component {
 			isLoading: props.isLoading,
 		};
 	}
+
 	handleTextChange = (event) => {
 		// const {
 		// 	handleSearchTextChange,
@@ -73,7 +74,11 @@ class SearchField extends React.Component {
 			handleUserTypedSearch,
 		} = this.props;
 
-		handleUserTypedSearch(this.state.searchText);
+		const {
+			searchText,
+		} = this.state;
+
+		handleUserTypedSearch(searchText);
 	};
 
 	searchNowIfEnter = (event) => {
@@ -91,19 +96,22 @@ class SearchField extends React.Component {
 			shadow,
 			iconSize,
 			marginBottom,
-			searchText,
+			searchText: placeholder,
 		} = this.props;
 
-		const { isLoading } = this.state;
+		const {
+			isLoading,
+			searchText,
+		} = this.state;
 
-		const value = (searchTextVisible) ? this.state.searchText : '';
+		const value = (searchTextVisible) ? searchText : '';
 
 		return (
 			<Search marginBottom={marginBottom}>
 				<SearchFieldInput
 					type="text"
 					value={value}
-					placeholder={searchText}
+					placeholder={placeholder}
 					onChange={this.handleTextChange}
 					onKeyDown={this.searchNowIfEnter}
 					shadow={shadow}

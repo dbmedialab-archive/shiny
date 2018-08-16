@@ -65,4 +65,6 @@ const Quantity = Styled.ul`
 	}
 `;
 
-export { Buttons, Counter, Pers, Quantity, AddCart };
+export {
+	Buttons, Counter, Pers, Quantity, AddCart,
+};

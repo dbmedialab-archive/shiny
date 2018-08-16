@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Row } from '..';
-import { Col } from '..';
-import { LazyProgressiveImage } from '..';
-import { Source } from '..';
-import { UnderlinedHugeHeading } from '..';
-import { UnderlinedMediumHeading } from '..';
-import { UnderlinedSmallHeading } from '..';
-import { YoutubeFrame } from '..';
+import { Row } from '../atoms/Row';
+import { Col } from '../atoms/Col';
+import { LazyProgressiveImage } from './LazyProgressiveImage';
+import { Source } from './Source';
+import {
+	UnderlinedHugeHeading,
+	UnderlinedMediumHeading,
+	UnderlinedSmallHeading,
+} from '../atoms/UnderlinedHeading';
+import { YoutubeFrame } from '../atoms/MainRecipe/youtubeFrame';
 
-import { IconBar } from '../molecules/IconBar';
+import { IconBar } from './IconBar';
 
 const Fragment = ({ children }) => children;
 
@@ -34,12 +36,6 @@ const MaybePaddedRow = styled(Row)`
 	padding-top:    calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
 	padding-bottom: calc( 1/2 * ${props => (props.verticalPadding ? props.theme.variables.verticalBase : '0')});
 `;
-
-const difficulty = {
-	1: 'Lett',
-	2: 'Middels',
-	3: 'Vanskelig',
-};
 
 const formatTime = (mins) => {
 	let hours = 0;
@@ -72,69 +68,86 @@ const getIconTitle = (name, value) => {
 	return (
 		<Fragment>
 			<NoWrap>{name}</NoWrap>
-			{value.humanTime && value.schemaTime ?
-				<time itemProp={propName} dateTime={value.schemaTime}>{value.humanTime}</time>
+			{value.humanTime && value.schemaTime
+				? <time itemProp={propName} dateTime={value.schemaTime}>{value.humanTime}</time>
 				:<NoWrap>{value}</NoWrap> }
 		</Fragment>
 	);
 };
 
-const HeroUnit = (props) => {
+const HeroUnit = ({
+	Heading,
+
+	difficulty,
+	iconBarWidth,
+	iconSize,
+	image,
+	textSize,
+	timeCooking,
+	timeTotal,
+	title,
+	type,
+	verticalPadding,
+	video,
+}) => {
 	const icons = [];
-	props.difficulty && icons.push({
+
+	difficulty && icons.push({
 		name: 'difficulty',
-		text: getIconTitle('nivå', difficulty[props.difficulty] || ''),
-		value: props.difficulty,
+		text: getIconTitle('nivå', difficulty[difficulty] || ''),
+		value: difficulty,
 	});
 
-	props.timeCooking && icons.push({
+	timeCooking && icons.push({
 		name: 'activity',
-		text: getIconTitle('aktiv', formatTime(props.timeCooking)),
+		text: getIconTitle('aktiv', formatTime(timeCooking)),
 	});
 
-	props.timeTotal && icons.push({
+	timeTotal && icons.push({
 		name: 'total-time',
-		text: getIconTitle('totalt', formatTime(props.timeTotal)),
+		text: getIconTitle('totalt', formatTime(timeTotal)),
 	});
 	/* eslint-disable react/no-danger */
 	return (
-		<MaybePaddedRow verticalPadding={props.verticalPadding}>
+		<MaybePaddedRow verticalPadding={verticalPadding}>
 			<Col xs={12} md={7}>
-				{props.type === 'video' &&
-					<YoutubeFrame>
-						<iframe
-							itemProp="thumbnailUrl"
-							src={props.video.src}
-							width="100%"
-							frameBorder="0"
-							title={props.video.title || 'Video'}
-						/>
-					</YoutubeFrame>
+				{type === 'video'
+					&& (
+						<YoutubeFrame>
+							<iframe
+								itemProp="thumbnailUrl"
+								src={video.src}
+								width="100%"
+								frameBorder="0"
+								title={video.title || 'Video'}
+							/>
+						</YoutubeFrame>
+					)
 				}
-				{props.type === 'image' &&
-					<LazyProgressiveImage src={props.image.src} ratio={0.66} fallbackSrc={props.image.fallbackSrc} >
-						<Source srcSet={props.image.placeholder} />
-					</LazyProgressiveImage>
+				{type === 'image'
+					&& (
+						<LazyProgressiveImage src={image.src} ratio={0.66} fallbackSrc={image.fallbackSrc}>
+							<Source srcSet={image.placeholder} />
+						</LazyProgressiveImage>
+					)
 				}
 			</Col>
 			<TitleCol xs={12} md={5}>
 
-				{(props.difficulty || props.timeCooking || props.timeTotal) &&
-				<Row center="xs">
-					<Col xs={props.iconBarWidth} md={4} >
-						<IconBar
-							entities={icons}
-							textSize={props.textSize}
-							iconSize={props.iconSize}
-						/>
-					</Col>
-				</Row>
+				{(difficulty || timeCooking || timeTotal)
+				&& (
+					<IconBar
+						entities={icons}
+						textSize={textSize}
+						iconSize={iconSize}
+					/>
+				)
 				}
 				<Row center="xs">
-					<Col xs={props.iconBarWidth}>
-						<props.Heading
+					<Col xs={iconBarWidth}>
+						<Heading
 							itemProp="name"
-							dangerouslySetInnerHTML={{ __html: props.title.replace(/<\/?[^>]+>/g, '') }}
+							dangerouslySetInnerHTML={{ __html: title.replace(/<\/?[^>]+>/g, '') }}
 						/>
 
 					</Col>
@@ -145,6 +158,7 @@ const HeroUnit = (props) => {
 };
 
 HeroUnit.propTypes = {
+	Heading: PropTypes.func,
 	image: PropTypes.shape({
 		src: PropTypes.string,
 		ratio: PropTypes.number,
@@ -167,6 +181,7 @@ HeroUnit.propTypes = {
 };
 
 HeroUnit.defaultProps = {
+	Heading: ({ children, ...rest }) => <h1 {...rest}>{children}</h1>,
 	image: {},
 	video: {},
 	type: 'image',
@@ -176,29 +191,39 @@ HeroUnit.defaultProps = {
 	verticalPadding: false,
 };
 
-const SmallHorizontalHeroUnit = props => (<HeroUnit
-	Heading={UnderlinedSmallHeading}
-	iconSize={2}
-	textSize={1}
-	iconBarWidth={10}
-	fallbackSrc=""
-	{...props}
-/>);
-const MediumHorizontalHeroUnit = props => (<HeroUnit
-	Heading={UnderlinedMediumHeading}
-	iconSize={3}
-	textSize={1.3}
-	iconBarWidth={9}
-	fallbackSrc=""
-	{...props}
-/>);
-const LargeHorizontalHeroUnit = props => (<HeroUnit
-	Heading={UnderlinedHugeHeading}
-	iconSize={6}
-	textSize={1.6}
-	iconBarWidth={7}
-	fallbackSrc=""
-	{...props}
-/>);
+const SmallHorizontalHeroUnit = props => (
+	<HeroUnit
+		Heading={UnderlinedSmallHeading}
+		iconSize={2}
+		textSize={1}
+		iconBarWidth={10}
+		fallbackSrc=""
+		{...props}
+	/>
+);
+const MediumHorizontalHeroUnit = props => (
+	<HeroUnit
+		Heading={UnderlinedMediumHeading}
+		iconSize={3}
+		textSize={1.3}
+		iconBarWidth={9}
+		fallbackSrc=""
+		{...props}
+	/>
+);
+const LargeHorizontalHeroUnit = props => (
+	<HeroUnit
+		Heading={UnderlinedHugeHeading}
+		iconSize={6}
+		textSize={1.6}
+		iconBarWidth={7}
+		fallbackSrc=""
+		{...props}
+	/>
+);
 
-export { SmallHorizontalHeroUnit, MediumHorizontalHeroUnit, LargeHorizontalHeroUnit };
+export {
+	SmallHorizontalHeroUnit,
+	MediumHorizontalHeroUnit,
+	LargeHorizontalHeroUnit,
+};

@@ -2,10 +2,10 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { getVariable } from '../utils';
-import { Col } from '..';
-import { XLargePlugHeading } from '..';
-import { Button } from '..';
-import { SvgIcon } from '..';
+import { Col } from './Col';
+import { XLargePlugHeading } from './PlugHeading';
+import { Button } from './Button';
+import { SvgIcon } from './SvgIcon';
 
 const ErrorWrapper = styled(Col)`
 	text-align: center;
@@ -33,14 +33,16 @@ const Error = ({
 				<SvgIcon name={icon} size={4} size-sm={5} color={iconColor} />
 				<XLargePlugHeading>{message}</XLargePlugHeading>
 				{AdditionalInfo && <AdditionalInfo />}
-				{onRetryButtonClick &&
-				<ReloadButton
-					textColor="white"
-					background="primary"
-					onClick={onRetryButtonClick}
-				>
+				{onRetryButtonClick
+				&& (
+					<ReloadButton
+						textColor="white"
+						background="primary"
+						onClick={onRetryButtonClick}
+					>
 					Prøv igjen
-				</ReloadButton>
+					</ReloadButton>
+				)
 				}
 			</ErrorWrapper>
 		</React.Fragment>

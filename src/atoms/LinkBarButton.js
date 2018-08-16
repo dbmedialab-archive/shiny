@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { LinkBarButtonBase } from '..';
+import { LinkBarButtonBase } from './LinkBarButtonBase';
 
 const LinkBarButton = ({ children, ...rest }) => {
 	return (

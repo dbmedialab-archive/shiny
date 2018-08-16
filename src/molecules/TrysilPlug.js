@@ -8,14 +8,13 @@ import {
 	getVariable,
 } from '../utils';
 
-
-import { Article } from '..';
-import { Kicker } from '..';
-import { PlugHeading as DefaultHeading } from '..';
-import { Labels } from '..';
-import { BlockLink } from '..';
-import { LazyProgressiveImage } from '..';
-import { Source } from '..';
+import { Article } from '../atoms/Article';
+import { Kicker } from '../atoms/Kicker';
+import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
+import { BlockLink } from '../atoms/BlockLink';
+import { Labels } from './Labels';
+import { LazyProgressiveImage } from './LazyProgressiveImage';
+import { Source } from './Source';
 
 const PlugLink = styled(BlockLink)`
 	&:focus {
@@ -65,21 +64,22 @@ const TrysilPlug = ({
 	<Article>
 		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{placeholderUrl &&
-				<LazyProgressiveImage
-					alt={title}
-					src={placeholderUrl}
-					offset={offset}
-					fallbackSrc={image}
-					ratio={ratio}
-					preventBlur={preventBlur}
-				>
-					{sources.length === 0 &&
-						<Source srcSet={image} />
-					}
-					{sources.map((source, i) =>
-						<Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-				</LazyProgressiveImage>
+			{placeholderUrl
+				&& (
+					<LazyProgressiveImage
+						alt={title}
+						src={placeholderUrl}
+						offset={offset}
+						fallbackSrc={image}
+						ratio={ratio}
+						preventBlur={preventBlur}
+					>
+						{sources.length === 0
+						&& <Source srcSet={image} />
+						}
+						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+					</LazyProgressiveImage>
+				)
 			}
 			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}

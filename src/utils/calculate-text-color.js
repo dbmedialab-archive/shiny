@@ -1,4 +1,5 @@
-import { getColor, isBright } from '../utils';
+import { getColor } from './get-color';
+import { isBright } from './luminance';
 
 export const calculateTextColorFromName = (color, props) => {
 	const themeColor = getColor(color)(props);

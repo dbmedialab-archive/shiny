@@ -18,12 +18,14 @@ const InlineBlock = styled.div`
 const Face = withTheme(({ theme, color }) => <rect height="101" width="100" x="0" y="0" fill={theme.colors[color]} />);
 
 // Triangle with fill color
-const FaceShade = withTheme(({ theme, color, faceShade }) => (<path
-	d="M 0 0 L 100 0 L 0 100 z"
-	fill={theme.colors[
-		unshadeColorString(color) + faceShade
-	]}
-/>));
+const FaceShade = withTheme(({ theme, color, faceShade }) => (
+	<path
+		d="M 0 0 L 100 0 L 0 100 z"
+		fill={theme.colors[
+			unshadeColorString(color) + faceShade
+		]}
+	/>
+));
 
 const Dice = withTheme(({
 	borderRadius,

@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import {
-	Row,
-	Col,
-	FigCaption,
-	FrontSmallHeading,
-} from '../..';
+import { Row } from '../../atoms/Row';
+import { FigCaption } from '../../atoms/FigCaption';
+import { Col } from '../../atoms/Col';
+import { FrontSmallHeading } from '../../atoms/FrontHeading';
 
 import { IconBar } from '../IconBar';
 // TODO uncomment after rating will be added
@@ -73,15 +71,15 @@ const RecipeMetaData  = ({
 			</Row>
 			<Row className="order">
 				<Col xs={12} md={3} mdOffset={2}>
-					<FrontSmallHeading lineWidth={6} >Inneholder</FrontSmallHeading>
-					<Col md={10} >
+					<FrontSmallHeading lineWidth={6}>Inneholder</FrontSmallHeading>
+					<Col md={10}>
 						<IconBar entities={allergies} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>
 				{author && <AuthorInfo author={author} />}
 				<Col xs={12} md={3} mdOffset={2}>
 					<FrontSmallHeading lineWidth={6}>Passer For</FrontSmallHeading>
-					<Col md={10} >
+					<Col md={10}>
 						<IconBar entities={preferences} textSize={1.2} iconSize={4} />
 					</Col>
 				</Col>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { BlockLink } from '..';
-import { LinkBarLinkBase } from '..';
+import { BlockLink } from './BlockLink';
+import { LinkBarLinkBase } from './LinkBarLinkBase';
 
 const Button = BlockLink.withComponent('button');
 const SomewhatPrettyButton = LinkBarLinkBase.withComponent(Button);

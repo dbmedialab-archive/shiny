@@ -28,13 +28,15 @@ const StyledFontIcon = styled(FontIcon)`
 	margin-right: ${getVariable('horizontalBase')};
 `;
 
-const UnstyledArrowBullet = props => (
-	<Bullet href={props.href} className={props.className}>
+const UnstyledArrowBullet = ({
+	href, className, children, ...rest
+}) => (
+	<Bullet href={href} className={className} {...rest}>
 		<StyledFontIcon
 			name="arrow-alt-right"
 			size={1.2}
 		/>
-		{props.children}
+		{children}
 	</Bullet>
 );
 

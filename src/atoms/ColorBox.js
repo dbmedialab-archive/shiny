@@ -9,7 +9,8 @@ const getTextColor = props => getBestContrastColor( // eslint-disable-line funct
 	getColor(props.displayColor)(props), [
 		getColor('type')(props),
 		getColor('white')(props),
-	]);
+	]
+);
 
 const ColorDiv = styled.div`
 	flex: ${props => (props.isMainShade ? '9 1 20%' : '1 1 20%')};

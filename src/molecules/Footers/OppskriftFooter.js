@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { getColor, getVariable } from '../../utils';
-import { Col, Row, Grid } from '../..';
+
+import { Grid } from '../../atoms/Grid';
+import { Row } from '../../atoms/Row';
+import { Col } from '../../atoms/Col';
 import { SvgIcon } from '../../atoms/SvgIcon';
 
 const FooterWrapper = styled.footer`
@@ -108,7 +111,7 @@ const OppskriftFooter = () => (
 					</Row>
 					<VerticalSeparator height={2.8} />
 				</LogoCol>
-				<Col md={3} xs={12} >
+				<Col md={3} xs={12}>
 					<Row>
 						<Col xs={12}>
 							<SubCatHeading>Postadresse:</SubCatHeading>

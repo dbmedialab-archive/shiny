@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 
 import { AdWrapper } from '../atoms/AdWrapper';
 
-if (typeof window !== 'undefined' &&
-		!('IntersectionObserver' in window) &&
-    !('IntersectionObserverEntry' in window)
+if (
+	typeof window !== 'undefined'
+	&& !('IntersectionObserver' in window)
+  && !('IntersectionObserverEntry' in window)
 ) {
 	/* eslint-disable global-require */
 	require('intersection-observer');
@@ -54,8 +55,10 @@ const StyledWrapper = styled.div`
 
 
 const FullscreenAd = (props) => {
+	const { shouldHide } = props;
+
 	return (
-		<StyledReserveSpacer shouldHide={props.shouldHide}>
+		<StyledReserveSpacer shouldHide={shouldHide}>
 			<AdWrapper width="100%" />
 			<StyledWrapper {...props}  />
 		</StyledReserveSpacer>
@@ -67,4 +70,3 @@ FullscreenAd.propTypes = {
 };
 
 export { FullscreenAd };
-

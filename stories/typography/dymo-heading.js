@@ -28,7 +28,7 @@ const skin = {
 export default () => (
 	<section>
 		<HugeHeading>DymoHeading</HugeHeading>
-		<p>A variant of the <button onClick={linkTo('Typography', 'Heading')}>Heading</button> component.</p>
+		<p>A variant of the <button type="button" onClick={linkTo('Typography', 'Heading')}>Heading</button> component.</p>
 		<p>There are four sizes of headings:</p>
 		<ul>
 			<li>Small</li>

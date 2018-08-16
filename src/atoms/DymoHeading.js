@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 
-import { Heading } from '..';
+import { Heading } from './Heading';
 
 const Hgroup = styled.hgroup`
 	/* Fixes vertical spacing */
@@ -131,8 +131,8 @@ DymoHeading.defaultProps = {
 };
 
 export { DymoHeading };
-export const SmallDymoHeading  = props => <DymoHeading size="small"  {...props} />;
+export const SmallDymoHeading  = props => <DymoHeading size="small" {...props} />;
 export const MediumDymoHeading = props => <DymoHeading size="medium" {...props} />;
-export const LargeDymoHeading  = props => <DymoHeading size="large"  {...props} />;
+export const LargeDymoHeading  = props => <DymoHeading size="large" {...props} />;
 export const XLargeDymoHeading = props => <DymoHeading size="xlarge" {...props} />;
-export const HugeDymoHeading   = props => <DymoHeading size="huge"   {...props} />;
+export const HugeDymoHeading   = props => <DymoHeading size="huge" {...props} />;

@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 import { getColor } from '../../utils';
 
-import { Col } from '../../atoms/Col';
-import { Row } from '../../atoms/Row';
+import { Col } from '../Col';
+import { Row } from '../Row';
 
 export const Wrapper = styled.div`
 	margin: 3rem 0;
@@ -17,6 +17,7 @@ const LightCol = styled(Col)`
 
 const BoldCol = styled(Col)`
 	font-weight: bold;
+
 	& a {
 		text-decoration: none;
 		color: ${getColor('type')}
@@ -26,15 +27,21 @@ const BoldCol = styled(Col)`
 const LeftAlignedRow = styled(Row)`&&{text-align: left;}`;
 const LeftAlignedCenteredRow = props => <LeftAlignedRow {...props} center="xs" />;
 
-export const Quantity = props => (
-	<section>
+export const Quantity = ({
+	amount,
+	slug,
+	title,
+	type,
+	...rest
+}) => (
+	<section {...rest}>
 		<LeftAlignedCenteredRow>
-			<meta itemProp="recipeIngredient" content={`${props.amount} ${props.type} ${props.title}`} />
+			<meta itemProp="recipeIngredient" content={`${amount} ${type} ${title}`} />
 			<LightCol xs={5}>
-				{props.amount} {props.type}
+				{amount} {type}
 			</LightCol>
 			<BoldCol xs={7}>
-				<a href={`/ingrediens/${props.slug}`}>{props.title}</a>
+				<a href={`/ingrediens/${slug}`}>{title}</a>
 			</BoldCol>
 		</LeftAlignedCenteredRow>
 	</section>

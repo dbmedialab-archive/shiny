@@ -42,4 +42,4 @@ BorderedButton.propTypes = {
 	ALLCAPS: propTypes.bool,
 };
 
-module.exports = { BorderedButton };
+export { BorderedButton };

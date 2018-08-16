@@ -3,8 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { DontPushTheAdBoundaries } from '..';
-import { LinkBarNav as Nav } from '..';
+import { DontPushTheAdBoundaries } from '../atoms/DontPushTheAdBoundaries';
+import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 
 const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 	&& {
@@ -16,20 +16,23 @@ const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 `;
 
 const NavWithOptionalConstrainer = ({
-	width, background, zIndex, isTopLevelComponent, ...props
+	children,
+	isTopLevelComponent,
+	zIndex,
+	...rest
 }) => {
 	if (isTopLevelComponent) {
 		return (
-			<Nav width={width} background={background}>
+			<Nav {...rest}>
 				<DesktopWidthConstrainer zIndex={zIndex}>
-					{props.children}
+					{children}
 				</DesktopWidthConstrainer>
 			</Nav>
 		);
 	}
 	return (
-		<Nav width={width} background={background}>
-			{props.children}
+		<Nav {...rest}>
+			{children}
 		</Nav>
 	);
 };

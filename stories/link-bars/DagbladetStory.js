@@ -79,47 +79,47 @@ const DagbladetStory = () => (
 				</SmallLinkBarLink>
 				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg displayInitially>
 					<VerticalLinkBar background={colors.white}>
-						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Kultur"   url="#" isActive />
-						<LinkBarLink {...dropDownLinkProps} linkText="Økonomi"  url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Kjendis"  url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Reise"    url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Bil"      url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Sport" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Kultur" url="#" isActive />
+						<LinkBarLink {...dropDownLinkProps} linkText="Økonomi" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Kjendis" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Reise" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Bil" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Meninger" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
 				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} lg />
 				<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} lg>
 					<VerticalLinkBar background={colors.white}>
-						<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Magasinet"     url="#" isActive />
+						<LinkBarLink {...dropDownLinkProps} linkText="Forsiden" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="I dag" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Magasinet" url="#" isActive />
 						<LinkBarLink {...dropDownLinkProps} linkText="Søk i arkivet" url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Kultur"        url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"       url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Sport"         url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="eAvis"         url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice"  url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Kultur" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Sport" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="eAvis" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Kundeservice" url="#" />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
 				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} lg>
 					<VerticalLinkBar background={colors.white}>
-						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Været" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio" url="#" />
 						<LinkBarLink
 							{...dropDownLinkProps}
 							linkText="FourFourTwo"
 							url="#"
 							isActive
 						/>
-						<LinkBarLink {...dropDownLinkProps} linkText="Mat"                         url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)"    url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)"     url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)"     url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Se.no"                       url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no"                  url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Mat" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Se.no" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no" url="#" />
 						<LinkBarLink {...paidDDLinkProps} linkText="Leserreiser (annonsørinnhold)" url="#" />
 						<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
 					</VerticalLinkBar>
@@ -144,21 +144,21 @@ const DagbladetStory = () => (
 							</FlexCol>
 						</Row>
 						<PaddedHeading ALLCAPS>Snarveier</PaddedHeading>
-						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Været" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio" url="#" />
 						<LinkBarLink
 							{...dropDownLinkProps}
 							linkText="FourFourTwo"
 							url="#"
 							isActive
 						/>
-						<LinkBarLink {...dropDownLinkProps} linkText="Mat"                         url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)"    url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)"     url="#" />
-						<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)"     url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="Se.no"                       url="#" />
-						<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no"                  url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Mat" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Oddstips (annonsørinnhold)" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Tipping (annonsørinnhold)" url="#" />
+						<LinkBarLink {...paidDDLinkProps} linkText="Lotteri (annonsørinnhold)" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="Se.no" url="#" />
+						<LinkBarLink {...dropDownLinkProps} linkText="DinSide.no" url="#" />
 						<LinkBarLink {...paidDDLinkProps} linkText="Leserreiser (annonsørinnhold)" url="#" />
 						<LinkBarLink {...paidDDLinkProps} linkText="Rabattkoder (annonsørinnhold)" url="#" />
 					</VerticalLinkBar>

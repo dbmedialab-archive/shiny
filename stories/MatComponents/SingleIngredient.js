@@ -19,10 +19,10 @@ import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
 import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 
-const description = 'Mandelpotet er en delikatessepotet som dyrkes over store deler av landet, også langt oppe i ' +
-	'fjellbygdene og nordpå. Knollene er små og avlange og oftest litt bøyd. Skallet er hvitt og jevnt med grunne ' +
-	'grohull. Kjøttet er gult med karakteristisk smak. Mandelpotet er en selvfølge til rakfisk, lutefisk, ribbe, ' +
-	'vilt og spesielt godt egnet til bakst og potetmos.';
+const description = 'Mandelpotet er en delikatessepotet som dyrkes over store deler av landet, også langt oppe i '
+	+ 'fjellbygdene og nordpå. Knollene er små og avlange og oftest litt bøyd. Skallet er hvitt og jevnt med grunne '
+	+ 'grohull. Kjøttet er gult med karakteristisk smak. Mandelpotet er en selvfølge til rakfisk, lutefisk, ribbe, '
+	+ 'vilt og spesielt godt egnet til bakst og potetmos.';
 
 const DetailsCol = styled(Col)`
 	padding-bottom: calc(2 * ${getVariable('verticalBase')});

@@ -1,4 +1,4 @@
-import { getColor } from '..';
+import { getColor } from '../utils';
 import defaultTheme from '../themes/default-theme';
 
 /**
@@ -23,11 +23,11 @@ const createChainableTypeChecker = (validate) => {
 		if (props[propName] == null) {
 			if (isRequired) {
 				if (props[propName] === null) {
-					return new PropTypeError(`The ${location} \`${propFullName}\` is marked` +
-						` as required in \`${componentName}\`, but its value is \`null\`.`);
+					return new PropTypeError(`The ${location} \`${propFullName}\` is marked`
+						+ ` as required in \`${componentName}\`, but its value is \`null\`.`);
 				}
-				return new PropTypeError(`The ${location} \`${propFullName}\` is marked ` +
-					`as required in \`${componentName}\`, but its value is \`undefined\`.`);
+				return new PropTypeError(`The ${location} \`${propFullName}\` is marked `
+					+ `as required in \`${componentName}\`, but its value is \`undefined\`.`);
 			}
 			return null;
 		}
@@ -44,13 +44,13 @@ const createChainableTypeChecker = (validate) => {
  * Validate that a color string is gettable from the theme with getColor
  */
 const isValidShinyColor = (props, propName, componentName) => {
-	const color = getColor(props[propName])({ theme: defaultTheme });
+	const color = getColor(props[propName])({ theme: defaultTheme }); // eslint-disable-line react/destructuring-assignment
 
 	if (!color) {
-		return new PropTypeError(`Invalid prop \`${propName}\` supplied to` +
-				` \`${componentName}\`. Validation failed. Use a color that` +
-				` exists on the default theme. The color \`${props[propName]}\`` +
-				' is fake news.');
+		return new PropTypeError(`Invalid prop \`${propName}\` supplied to`
+				+ ` \`${componentName}\`. Validation failed. Use a color that`
+				+ ` exists on the default theme. The color \`${props[propName]}\``
+				+ ' is fake news.');
 	}
 
 	return null;
@@ -63,12 +63,12 @@ const isValidShade = (props, propName, componentName) => {
 	const validShades = ['dark', '', 'light', 'lighter'];
 
 	if (
-		typeof props[propName] !== 'string' ||
-		!validShades.includes(props[propName].toLowerCase())
+		typeof props[propName] !== 'string' // eslint-disable-line react/destructuring-assignment
+		|| !validShades.includes(props[propName].toLowerCase()) // eslint-disable-line react/destructuring-assignment
 	) {
-		return new PropTypeError(`Invalid prop \`${propName}\` supplied to` +
-				` \`${componentName}\`. Validation failed. Use one of 'dark', '',` +
-				' \'light\', \'lighter\'.');
+		return new PropTypeError(`Invalid prop \`${propName}\` supplied to`
+				+ ` \`${componentName}\`. Validation failed. Use one of 'dark', '',`
+				+ ' \'light\', \'lighter\'.');
 	}
 
 	return null;
