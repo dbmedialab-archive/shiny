@@ -10,7 +10,7 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 		: getColor('white')
 );
 
-const coloredBackground = css`
+const coloredBackground = props => css`
 	border-color: ${getColor('primary')};
 	background-color: ${getColor('primary')};
 	color: ${props => calculateTextColor(props.theme)};

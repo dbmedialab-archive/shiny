@@ -28,15 +28,16 @@ ProtoHeading.defaultProps = {
 	marginBottomFactor: 1/2,
 };
 
-const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
+const getSizes = (props) => {
+	const { size, marginTopFactor, marginBottomFactor } = props;
 	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
 	return css`
-		font-size: ${getVariable(`heading${capSize}Size`)};
-		line-height: ${getVariable(`heading${capSize}LineHeight`)};
+		font-size: ${getVariable(`heading${capSize}Size`)(props)};
+		line-height: ${getVariable(`heading${capSize}LineHeight`)(props)};
 		margin:
-			calc(${marginTopFactor} * ${getVariable(`heading${capSize}LineHeight`)})
+			calc(${marginTopFactor} * ${getVariable(`heading${capSize}LineHeight`)(props)})
 			0
-			calc(${marginBottomFactor} * ${getVariable(`heading${capSize}LineHeight`)})
+			calc(${marginBottomFactor} * ${getVariable(`heading${capSize}LineHeight`)(props)})
 		;
 	`;
 };
