@@ -1,6 +1,7 @@
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
+import withProps from 'recompose/withProps';
 
 import { getColor } from '../utils';
 
@@ -16,14 +17,14 @@ const TagSpanItem = styled.span`
 	text-transform: uppercase;
 	color: ${getColor('grey')};
 `;
-const TagAItem = TagSpanItem.withComponent('a').extend.attrs({
+const TagAItem = withProps({
 	href: ({ url }) => url,
-})`
+})(styled(TagSpanItem.withComponent('a'))`
 	&, &:active, &:visited, &:hover {
 		text-decoration: none;
 		color: ${getColor('grey')};
 	}
-`;
+`);
 
 const Tag = ({ url, title }) => (
 	<React.Fragment>

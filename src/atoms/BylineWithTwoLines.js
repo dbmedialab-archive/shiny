@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import withProps from 'recompose/withProps';
 
 import { getColor, getVariable } from '../utils';
 
 import { SvgIcon } from './SvgIcon';
 
 const BylineBlock = styled.div``;
-const BylineImage = styled.img.attrs({
+const BylineImage = withProps({
 	src: ({ src }) => src,
-})`
+})(styled.img`
     float: left;
     width: 4.5rem;
     height: 4.5rem;
@@ -17,7 +18,7 @@ const BylineImage = styled.img.attrs({
     border-radius: 50%;
     object-fit: cover;
     margin-right: ${getVariable('horizontalBase')};
-`;
+`);
 
 const WrapAvatar = styled.div`
 	float: left;
@@ -41,13 +42,13 @@ const Name = styled.div`
     font-weight: 300;
 `;
 
-const Email = styled.a.attrs({
+const Email = withProps({
 	href: ({ email }) => `mailto:${email}`,
-})`
+})(styled.a`
     font-size: ${getVariable('uiSmallSize')};
     font-weight: 300;
     color: ${getColor('type')};
-`;
+`);
 
 const BylineWithTwoLines = ({ src, name, email }) => (
 	<BylineBlock>
