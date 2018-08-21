@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const Logo = Styled.svg`
+const Logo = styled.svg`
 	position: absolute;
 	left: 9.0rem;
 	width: 12.5rem;

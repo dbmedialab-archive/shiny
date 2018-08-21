@@ -1,14 +1,13 @@
-import Styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { getColor, getVariable } from '../utils';
 
 import { SvgIcon } from './SvgIcon';
 
-const BylineBlock = Styled.div`
-`;
-const BylineImage = Styled.img.attrs({
+const BylineBlock = styled.div``;
+const BylineImage = styled.img.attrs({
 	src: ({ src }) => src,
 })`
     float: left;
@@ -20,7 +19,7 @@ const BylineImage = Styled.img.attrs({
     margin-right: ${getVariable('horizontalBase')};
 `;
 
-const WrapAvatar = Styled.div`
+const WrapAvatar = styled.div`
 	float: left;
     width: 4.5rem;
     height: 4.5rem;
@@ -30,19 +29,19 @@ const WrapAvatar = Styled.div`
     text-align: center;
 `;
 
-const TextBlock = Styled.div`
+const TextBlock = styled.div`
     float: left;
     color: ${getColor('type')};
     font-family: ${getVariable('mainFont')};
 `;
 
-const Name = Styled.div`
+const Name = styled.div`
     font-size: ${getVariable('uiRegularSize')};
     line-height: ${getVariable('uiRegularLineHeight')};
     font-weight: 300;
 `;
 
-const Email = Styled.a.attrs({
+const Email = styled.a.attrs({
 	href: ({ email }) => `mailto:${email}`,
 })`
     font-size: ${getVariable('uiSmallSize')};

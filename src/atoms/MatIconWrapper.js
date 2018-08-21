@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const MatIconWrapper = Styled.div`
+const MatIconWrapper = styled.div`
 	display: inline-block;
 	text-align: center;
 	width: 5.0rem;

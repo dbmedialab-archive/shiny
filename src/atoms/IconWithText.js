@@ -1,27 +1,27 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { SvgIcon } from './SvgIcon';
 
-const IconBlock = Styled.div`
+const IconBlock = styled.div`
 	text-align: center;
 	display: inline-block;
 `;
 
-const IconText = Styled.div`
+const IconText = styled.div`
 	width: 100%;
 	font-size: ${(props) => {
 		return props.textSize;
 	}}rem;
 `;
 
-const IconBlockTextRight = Styled.div`
+const IconBlockTextRight = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 
-const IconTextRight = Styled.div`
+const IconTextRight = styled.div`
 	width: 100%;
 	font-size: 1.6rem;
 	display: flex;

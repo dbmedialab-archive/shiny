@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const ComplexitySectionWrapper = Styled.div`
+const ComplexitySectionWrapper = styled.div`
 	padding-top: 15.5rem;
 `;
 

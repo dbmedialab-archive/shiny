@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const MatIconImageWrapper = Styled.div`
+const MatIconImageWrapper = styled.div`
 	height: 75%;
 	width: 75%;
 `;
