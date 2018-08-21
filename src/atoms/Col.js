@@ -1,3 +1,3 @@
-import { Col } from 'react-styled-flexboxgrid';
+import { Col } from 'react-emotion-flexboxgrid';
 
 export { Col };

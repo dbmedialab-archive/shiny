@@ -1,3 +1,3 @@
-import { Row } from 'react-styled-flexboxgrid';
+import { Row } from 'react-emotion-flexboxgrid';
 
 export { Row };

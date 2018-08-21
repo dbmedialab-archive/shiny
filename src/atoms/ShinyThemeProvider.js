@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeProvider as StyledComponentsThemeProvider, injectGlobal } from 'styled-components';
+import { injectGlobal } from 'react-emotion';
+import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { merge } from 'aurora-deep-slice-merge';
 
 import defaultTheme from '../themes/default-theme';
@@ -11,7 +12,7 @@ import { themePropTypes } from '../themes/theme-prop-types';
  * An extension of styled-component's ThemeProvider.
  *
  * Why do we need this, you might ask? In addition to what we
- * get from styled-components, this ThemeProvider:
+ * get from emotion-theming, this ThemeProvider:
  * - deep merges our theme with the default theme
  * - injects our theme's global styles
  */
@@ -34,11 +35,11 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	 * aurora-frontend is still not on Fiber. ThemeProvider expects an only child.
 	 */
 	return (
-		<StyledComponentsThemeProvider theme={mergedTheme}>
+		<EmotionThemeProvider theme={mergedTheme}>
 			<div>
 				{children}
 			</div>
-		</StyledComponentsThemeProvider>
+		</EmotionThemeProvider>
 	);
 };
 ShinyThemeProvider.propTypes = {

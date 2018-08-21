@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const Buttons = styled.button`
 	background: #ff790a;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import propTypes from 'prop-types';
 
 // Originally written for the HorizontalLinkBar molecule

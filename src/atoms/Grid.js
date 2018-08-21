@@ -1,1 +1,1 @@
-export { Grid } from 'react-styled-flexboxgrid';
+export { Grid } from 'react-emotion-flexboxgrid';

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 // So, you don't like the look of this?
 // Morgan doesn't either, and he's a designer.

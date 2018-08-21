@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const ComplexitySectionHeader = styled.div`
 	text-align: center;

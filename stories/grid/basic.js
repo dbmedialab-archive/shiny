@@ -28,10 +28,10 @@ export default () => (
 		<Heading>Basic</Heading>
 		<p>
 			The <code>&lt;Row&gt;</code> and <code>&lt;Col&gt;</code> components are provided by
-			<code>react-styled-flexboxgrid</code>.
+			<code>react-emotion-flexboxgrid</code>.
 			(
-			<a href="https://github.com/loicmahieu/react-styled-flexboxgrid">GitHub</a>/
-			<a href="https://www.npmjs.com/package/react-styled-flexboxgrid">npm</a>/
+			<a href="https://github.com/SimeonC/react-emotion-flexboxgrid">GitHub</a>/
+			<a href="https://www.npmjs.com/package/react-emotion-flexboxgrid">npm</a>/
 			<a href="https://loicmahieu.github.io/react-styled-flexboxgrid/demo/index.html">docs</a>
 			).
 		</p>

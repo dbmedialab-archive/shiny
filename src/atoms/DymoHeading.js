@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 

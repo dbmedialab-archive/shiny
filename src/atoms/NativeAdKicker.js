@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'emotion-theming';
 
 import { Kicker } from './Kicker';
 

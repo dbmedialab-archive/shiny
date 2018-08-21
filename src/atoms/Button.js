@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable, calculateTextColorFromName } from '../utils';
 
 const Button = styled.button`

@@ -83,7 +83,7 @@ import { Dice } from '@aller/shiny';
 						</tr>
 						<tr>
 							<td>theme</td>
-							<td>The theme prop will be provided by styled-components' ThemeProvider.</td>
+							<td>The theme prop will be provided by emotion's ThemeProvider.</td>
 							<td>required</td>
 							<td>object</td>
 							<td>default theme</td>

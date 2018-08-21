@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';

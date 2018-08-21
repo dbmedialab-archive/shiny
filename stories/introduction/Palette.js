@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import {
 	HugeHeading,
@@ -29,7 +29,7 @@ const Palette = () => {
 			<Code language="jsx">
 				{`
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 // In shiny
 // import { getColor } from 'path/to/src';
