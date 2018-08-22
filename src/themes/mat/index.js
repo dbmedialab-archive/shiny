@@ -42,7 +42,7 @@ const theme = {
 		gutterWidth: stripUnit(variables.horizontalBase), // rem
 		outerMargin: 2, // rem
 		container: {
-			sm: 49.0, // rem
+			sm: 71, // rem
 			md: 100.0, // rem
 			lg: 101.0,  // rem
 		},
