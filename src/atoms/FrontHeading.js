@@ -1,4 +1,4 @@
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import { getColor, getVariable } from '../utils';
 
 import {
@@ -9,7 +9,7 @@ import {
 	HugeHeading,
 } from './Heading';
 
-const FheadStyle = props => css`
+const FheadStyle = props => `
     color: ${getColor(props.textColor)};
     display: block;
     white-space: nowrap;

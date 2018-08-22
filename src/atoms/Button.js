@@ -41,7 +41,7 @@ const Button = styled.button`
 		}
 	}
 
-	${props => props.outline && css`
+	${props => props.outline && `
 		border: .1rem solid ${getColor(props.background)};
 		background: transparent;
 		color: ${getColor(props.background)};

@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import shinyPropTypes from '../prop-types';
 import { getColor, getVariable } from '../utils';
 
@@ -17,7 +17,7 @@ const FormattedHeading = styled(Heading)`
 
   ${props => (props.hasImage
 		? 'max-width: 90%;'
-		: css`max-width: calc(100% - ${getVariable('horizontalBase')});`
+		: `max-width: calc(100% - ${getVariable('horizontalBase')});`
 	)}
 
 	a:hover && {
