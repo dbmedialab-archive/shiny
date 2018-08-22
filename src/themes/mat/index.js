@@ -43,7 +43,7 @@ const theme = {
 		outerMargin: 2, // rem
 		container: {
 			sm: 49.0, // rem
-			md: 64.0, // rem
+			md: 100.0, // rem
 			lg: 101.0,  // rem
 		},
 		breakpoints: {
@@ -57,36 +57,3 @@ const theme = {
 
 export default theme;
 
-// gridSize: 12,
-// 	gutterWidth: stripUnit(variables.horizontalBase), // rem
-// 	outerMargin: 1.5, // rem
-// 	mediaQuery: 'only screen',
-// 	container: {
-// 	sm: 49.0, // rem
-// 		md: 64.0, // rem
-// 		lg: 101.0,  // rem
-// },
-// breakpoints: {
-// 	xs: 0,  // em
-// 		sm: 48, // em
-// 		md: 64, // em
-// 		lg: 75,  // em
-// },
-
-
-// old
-// flexboxgrid: {
-// 	gutterWidth: stripUnit(variables.horizontalBase), // rem
-// 		outerMargin: 2, // rem
-// 		container: {
-// 		sm: 71, // rem
-// 			md: 100.0, // rem
-// 			lg: 110.0,  // rem
-// 	},
-// 	breakpoints: {
-// 		xs: 0,  // em
-// 			sm: 48, // em 768px
-// 			md: 75, // em 1200px
-// 			lg: 90,  // em 1440px
-// 	},
-// },
