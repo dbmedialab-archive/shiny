@@ -14,22 +14,22 @@ import forms from './forms';
 import rating from './rating';
 import modals from './Modal';
 
-// introduction();
+introduction();
 
 // Atoms
 typography();
-// editorialMarking();
-// loaders();
-// grid();
-// rating();
+editorialMarking();
+loaders();
+grid();
+rating();
 
 // Molecules
-// linkBars();
-// trysilPlug();
-// floatImage();
-// ads();
-// lazyProgressiveImage();
-// matComponents();
-// logos();
-// forms();
-// modals();
+linkBars();
+trysilPlug();
+floatImage();
+ads();
+lazyProgressiveImage();
+matComponents();
+logos();
+forms();
+modals();
