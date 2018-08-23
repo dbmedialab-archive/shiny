@@ -28,7 +28,7 @@ export default () => (
 		<Heading>Basic</Heading>
 		<p>
 			The <code>&lt;Row&gt;</code> and <code>&lt;Col&gt;</code> components are provided by
-			<code>react-emotion-flexboxgrid</code>.
+			<code>react-emotion-flexboxgrid, but we have copy pasted the code to our Grid, Row and Col component</code>.
 			(
 			<a href="https://github.com/SimeonC/react-emotion-flexboxgrid">GitHub</a>/
 			<a href="https://www.npmjs.com/package/react-emotion-flexboxgrid">npm</a>/

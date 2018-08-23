@@ -1,10 +1,44 @@
-import styled from 'react-emotion';
-import { Grid as FlexBoxGrid } from 'react-emotion-flexboxgrid';
+import PropTypes from 'prop-types';
+import styled, { css } from 'react-emotion';
 
+import config, { DIMENSION_NAMES } from '../utils/grid-config';
 
-const StyledGrid = styled(FlexBoxGrid)`
-  @media only screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}em) {
-    width: ${props => props.theme.flexboxgrid.container.lg}rem;
-  }
+const mediaQ = gridProps => (props) => {
+	const dimensions = DIMENSION_NAMES.map(
+		(t) => {
+			if (!config(gridProps).container[t]) {
+				return '';
+			}
+
+			return config(gridProps).media[t]`
+				width: ${config(props).container[t]}rem;
+			`;
+		}
+	);
+
+	return css`${dimensions}`;
+};
+
+const Grid = styled('div')`
+  margin-right: auto;
+  margin-left: auto;
+  ${(gridProps) => {
+		if (gridProps.fluid) {
+			return props => css`
+				padding-right: ${config(props).outerMargin}rem};
+				padding-left:  ${config(props).outerMargin}rem};
+			`;
+	   }
+
+	   return mediaQ(gridProps);
+	}}
 `;
-export { StyledGrid as Grid };
+
+Grid.displayName = 'Grid';
+
+Grid.propTypes = {
+	fluid: PropTypes.bool,
+	children: PropTypes.node,
+};
+
+export { Grid };

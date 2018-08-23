@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import { Grid as LibGrid } from 'react-emotion-flexboxgrid';
+import { Grid as LibGrid } from './Grid';
 
 // This should also fit wallpapers and topbanners.
 
