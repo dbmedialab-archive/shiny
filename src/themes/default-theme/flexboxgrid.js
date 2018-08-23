@@ -2,7 +2,7 @@ import { stripUnit } from 'polished';
 import variables from './variables';
 
 const flexboxgrid = {
-	gridSize: 12,
+	gridSize: 1.5,
 	gutterWidth: stripUnit(variables.horizontalBase), // rem
 	outerMargin: 5, // rem
 	mediaQuery: 'only screen',
@@ -12,7 +12,7 @@ const flexboxgrid = {
 		lg: 101.0,  // rem
 	},
 	breakpoints: {
-		xs: 1,  // em
+		xs: 0,  // em
 		sm: 48, // em
 		md: 64, // em
 		lg: 75,  // em

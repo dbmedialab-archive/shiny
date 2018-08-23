@@ -2,7 +2,7 @@ import { css } from 'react-emotion';
 
 const THEME_CONF = 'flexboxgrid';
 export const BASE_CONF = {
-	gridSize: 12,
+	gridSize: 1.5,
 	gutterWidth: 1,
 	outerMargin: 2,
 	mediaQuery: 'only screen',
