@@ -27,7 +27,7 @@ import arrowBullet from './arrowBulletStory';
 
 export default () => {
 	storiesOf('Typography', module)
-		// .addDecorator(StorybookPaddedGrid)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('PlugHeading', plugHeading)
