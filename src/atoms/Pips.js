@@ -9,7 +9,10 @@ import { getColor } from '../utils';
  *
  * Used in dice to signify a number or value.
  */
-const Pip = withTheme(props => <circle r="10" fill={getColor(props.pipColor)(props)} {...props} />);
+const Pip = withTheme(({ pipColor, ...rest }) => {
+	return <circle r="10" fill={getColor(pipColor)(rest)} {...rest} />;
+});
+
 
 const WestPip = props => <Pip cx="25" cy="50" {...props} />;
 const EastPip = props => <Pip cx="75" cy="50" {...props} />;

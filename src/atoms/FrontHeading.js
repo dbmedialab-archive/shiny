@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable } from '../utils';
 
 import {
@@ -9,8 +9,8 @@ import {
 	HugeHeading,
 } from './Heading';
 
-const FheadStyle = props => `
-    color: ${getColor(props.textColor)};
+const FheadStyle = props => css`
+    color: ${getColor(props.textColor)(props)};
     display: block;
     white-space: nowrap;
 	overflow: hidden;
@@ -19,9 +19,9 @@ const FheadStyle = props => `
     &:after {
 		content: '';
 		width: ${props.lineWidth ? `${props.lineWidth}rem` : '100%'};
-		margin-left: ${getVariable('headingSmallSize')};
+		margin-left: ${getVariable('headingSmallSize')(props)};
 		display: inline-block;
-		border-bottom: .2rem solid ${getColor(props.lineColor)};
+		border-bottom: .2rem solid ${getColor(props.lineColor)(props)};
 		vertical-align: middle;
     }
 `;

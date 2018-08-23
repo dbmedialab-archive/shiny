@@ -24,11 +24,11 @@ const StickyWrapper = styled.div`
 	)}}
 	${props => ['sm', 'md', 'lg'].map(size => css`
 		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
-			${
-	props.sticky === 'right'
-		? `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-		: `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-}}
+			${(props => (
+		props.sticky === 'right'
+			? `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+			: `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+	))(props)}}
 
 		`)}
 

@@ -41,12 +41,12 @@ const Button = styled.button`
 		}
 	}
 
-	${props => props.outline && `
-		border: .1rem solid ${getColor(props.background)};
+	${props => props.outline && css`
+		border: .1rem solid ${getColor(props.background)(props)};
 		background: transparent;
-		color: ${getColor(props.background)};
+		color: ${getColor(props.background)(props)};
 		&:hover {
-			background: ${getColor(props.background)};
+			background: ${getColor(props.background)(props)};
 			color: ${calculateTextColorFromName(props.background, props)};
 		}
 	`}

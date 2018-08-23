@@ -27,7 +27,7 @@ import arrowBullet from './arrowBulletStory';
 
 export default () => {
 	storiesOf('Typography', module)
-		.addDecorator(StorybookPaddedGrid)
+		// .addDecorator(StorybookPaddedGrid)
 		.add('Label', label)
 		.add('Heading', heading)
 		.add('PlugHeading', plugHeading)
@@ -40,10 +40,10 @@ export default () => {
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
 		.add('Dice', dice)
-		// .add('Font Icon', icon)
-		.add('Svg Icon', svgIcon)
-		.add('Icon with text', iconWithText)
-		.add('Numbered list', numberedList)
+	 	// .add('Font Icon', icon)
+	 	.add('Svg Icon', svgIcon)
+	 	.add('Icon with text', iconWithText)
+	 	.add('Numbered list', numberedList)
 		.add('Error', error)
 		.add('Buttons', buttons)
 		.add('Block Link', blocklink)

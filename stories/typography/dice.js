@@ -26,11 +26,13 @@ import { Dice } from '@aller/shiny';
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>
-						<th>Prop</th>
-						<th>Description</th>
-						<th>Required/optional</th>
-						<th>Type</th>
-						<th>default</th>
+						<tr>
+							<th>Prop</th>
+							<th>Description</th>
+							<th>Required/optional</th>
+							<th>Type</th>
+							<th>default</th>
+						</tr>
 					</thead>
 					<tbody>
 						<tr>

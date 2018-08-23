@@ -1,5 +1,5 @@
+import { css } from 'react-emotion';
 import { unshadeColorString } from './unshade-color-string';
-
 /**
  * Create a function that looks up a color from your theme.
  *
@@ -24,11 +24,13 @@ import { unshadeColorString } from './unshade-color-string';
  * @returns function A function that resolves props to a css color string, e.g. props => '#333333'
  */
 export const getColor = (color, shade=null) => (props) => {
-// export const getColor = (props) => {
-	console.log(color, shade, props);
 	const colorString = (props.theme.colors.skinColors[color]) ? (props.theme.colors.skinColors[color]) : color;
 	const capShade = shade !== null ? shade.slice(0, 1).toUpperCase() + shade.slice(1) : '';
 	const shadedColorString = shade !== null ? unshadeColorString(colorString) + capShade : colorString;
 
 	return props.theme.colors[shadedColorString];
 };
+
+const createCssRuleWithColor = (cssProp, cssValue) => css` ${cssProp}: cssValue`;
+
+export const createColorCss = (color, cssProp, shade=null) => createCssRuleWithColor(cssProp, getColor(color, shade));
