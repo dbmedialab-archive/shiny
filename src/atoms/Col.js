@@ -50,9 +50,12 @@ const Col = styled('div')`
   ${p => Object.keys(p)
 		.filter(k => offsetProps.indexOf(k) >= 0)
 		.map(
-			k => config(p).media[k.replace(/Offset$/, '')]`
+			(k) => {
+				console.log('config(p).media', config(p).media);
+				return config(p).media[k.replace(/Offset$/, '')]`
         margin-left: ${100 / config(p).gridSize * p[k]}%;
-      `
+      ` 
+;}
 		)}
 `;
 
