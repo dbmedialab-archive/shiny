@@ -19,17 +19,9 @@ export const BASE_CONF = {
 	},
 };
 
-function makeMedia(media) {
-	return (...args) => css`
-    @media ${media} {
-      ${css(...args)};
-    }
-  `;
-}
-
 const configCache = [];
-const makeCacheId = (props = {}) => JSON.stringify((props.theme && props.theme[THEME_CONF]) || {});
-const resolveConfig = (props = {}) => {
+const makeCacheId = props => JSON.stringify((props.theme && props.theme[THEME_CONF]) || {});
+const resolveConfig = (props) => {
 	const themeConf = (props.theme && props.theme[THEME_CONF]) || {};
 
 	const conf = {
@@ -48,7 +40,10 @@ const resolveConfig = (props = {}) => {
 	conf.media = Object.keys(conf.breakpoints).reduce((media, breakpoint) => {
 		const breakpointWidth = conf.breakpoints[breakpoint];
 		media[breakpoint] = makeMedia(
-			[conf.mediaQuery, breakpoint !== 0 && `(min-width: ${breakpointWidth}em)`]
+			[
+				conf.mediaQuery,
+				breakpoint !== 0 && `(min-width: ${breakpointWidth}em)`,
+			]
 				.filter(Boolean)
 				.join(' and ')
 		);
@@ -60,7 +55,7 @@ const resolveConfig = (props = {}) => {
 
 export const DIMENSION_NAMES = ['xs', 'sm', 'md', 'lg'];
 
-export default function config(props = {}) {
+export default function config(props) {
 	const cacheId = makeCacheId(props);
 	if (configCache[0] === cacheId) {
 		return configCache[1];
@@ -72,4 +67,12 @@ export default function config(props = {}) {
 	configCache[1] = conf;
 
 	return conf;
+}
+
+function makeMedia(media) {
+	return (...args) => css`
+    @media ${media} {
+      ${css(...args)}
+    }
+  `;
 }
