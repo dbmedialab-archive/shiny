@@ -3,35 +3,16 @@ import styled, { css } from 'react-emotion';
 
 import config, { DIMENSION_NAMES } from '../utils/grid-config';
 
-const mediaQ = gridProps => (props) => {
-	const dimensions = DIMENSION_NAMES.map(
-		(t) => {
-			if (!config(gridProps).container[t]) {
-				return '';
-			}
-
-			return config(gridProps).media[t]`
-				width: ${config(props).container[t]}rem;
-			`;
-		}
-	);
-
-	return css`${dimensions}`;
-};
-
-const Grid = styled('div')`
+const Grid = styled.div`
   margin-right: auto;
   margin-left: auto;
-  ${(gridProps) => {
-		if (gridProps.fluid) {
-			return props => css`
-				padding-right: ${config(props).outerMargin}rem};
-				padding-left:  ${config(props).outerMargin}rem};
-			`;
-	   }
-
-	   return mediaQ(gridProps);
-	}}
+  padding-right: ${p => `${config(p).outerMargin}rem`};
+  padding-left: ${p => `${config(p).outerMargin}rem`};
+  ${p => !p.fluid && css`
+    ${DIMENSION_NAMES.map(t => config(p).container[t] && config(p).media[t]`
+        width: ${p => config(p).container[t]}rem;
+      `)}
+  `}
 `;
 
 Grid.displayName = 'Grid';
