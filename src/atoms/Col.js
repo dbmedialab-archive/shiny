@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise, no-nested-ternary */
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import isInteger from 'lodash.isinteger';
@@ -62,4 +63,4 @@ Col.propTypes = {
 	children: PropTypes.node,
 };
 
-export default Col;
+export { Col };
