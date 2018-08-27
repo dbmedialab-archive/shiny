@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
-import MatColophon from './MatColophon';
 import description from './mat-description';
 import MoreComponent from './mat-more-component';
 import SingleIngredient from './SingleIngredient';
