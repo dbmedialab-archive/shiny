@@ -22,7 +22,6 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// in the default theme will have a value
 	// no matter which theme we are using
 	const mergedTheme = merge(defaultTheme, theme);
-	console.log('mergedTheme', mergedTheme, mergedTheme.global);
 	// console.log(`Switching to the ${themeName} theme.`);
 	// console.log('new theme', theme.name);
 
