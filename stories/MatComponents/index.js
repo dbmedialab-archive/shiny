@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/react';
+import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 import MatColophon from './MatColophon';
 import description from './mat-description';
@@ -8,6 +9,7 @@ import Footer from './footer';
 
 export default () => {
 	storiesOf('Mat Components', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Colophon', MatColophon)
 		.add('Mat Description', description)
 		.add('More Component', MoreComponent)
