@@ -4,20 +4,22 @@ import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
+const styles = props => css`padding: 0;
+color: ${getColor('heading')(props)};
+font-weight: ${getVariable('headingsWeight')(props)};
+font-family: ${getVariable('headingsFont')(props)};
+
+${props.ALLCAPS && css`
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+`}
+
+a {
+	color: inherit;
+}`;
+
 const ProtoHeading = styled.h1`
-	padding: 0;
-	color: ${getColor('heading')};
-	font-weight: ${getVariable('headingsWeight')};
-	font-family: ${getVariable('headingsFont')};
-
-	${props => props.ALLCAPS && css`
-		text-transform: uppercase;
-		letter-spacing: .1rem;
-	`}
-
-	a {
-		color: inherit;
-	}
+	${styles}
 `;
 ProtoHeading.propTypes = {
 	marginTopFactor: propTypes.number,
