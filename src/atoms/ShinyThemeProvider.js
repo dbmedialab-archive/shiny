@@ -22,12 +22,11 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// in the default theme will have a value
 	// no matter which theme we are using
 	const mergedTheme = merge(defaultTheme, theme);
-
+	console.log('mergedTheme', mergedTheme, mergedTheme.global);
 	// console.log(`Switching to the ${themeName} theme.`);
 	// console.log('new theme', theme.name);
 
 	// Inject our theme's global styles
-	injectGlobal`${mergedTheme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
@@ -37,6 +36,7 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	return (
 		<EmotionThemeProvider theme={mergedTheme}>
 			<div>
+				{injectGlobal`${mergedTheme.global}`}
 				{children}
 			</div>
 		</EmotionThemeProvider>

@@ -43,10 +43,14 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 	rel: 'nofoollow',
 });
 
+const paddedStyles = props => css`
+	padding-left: ${getVariable('horizontalBase')(props)};
+	padding-right: ${getVariable('horizontalBase')(props)};
+	color: ${getColor('primary')(props)};
+`;
+
 const PaddedHeading = styled(SmallHeading)`
-	padding-left: ${getVariable('horizontalBase')};
-	padding-right: ${getVariable('horizontalBase')};
-	color: ${getColor('primary')};
+${paddedStyles}
 `;
 
 const VerySpecialLinkBar= styled(HorizontalLinkBar)`

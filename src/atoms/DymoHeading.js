@@ -29,34 +29,37 @@ const FormattedHeading = styled(Heading)`
 	}
 `;
 
-const PaddedText = styled.span`
-	${props => (props.hasImage ? '' : 'max-width: 100%;')}
+const paddedStyles = props => css`
+${props.hasImage ? '' : 'max-width: 100%;'}
 	margin: 0;
 	padding-top: 0;
 	box-shadow:
-		calc(1/2 * ${getVariable('horizontalBase')})
+		calc(1/2 * ${getVariable('horizontalBase')(props)})
 		0
-		${props => getColor(props.skin.backgroundColor)}
+		${getColor(props.skin.backgroundColor)(props)}
 	;
-	background: ${props => getColor(props.skin.backgroundColor)};
-	color:      ${props => getColor(props.skin.textColor)};
+	background: ${getColor(props.skin.backgroundColor)(props)};
+	color:      ${getColor(props.skin.textColor)(props)};
 	-webkit-box-decoration-break: clone;
 
 	span.highlighted {
-		color: ${getColor('red')};
+		color: ${getColor('red')(props)};
 	}
 
-	padding-left: ${props => (props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
+	padding-left: ${props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0'};
 
 	a:hover & {
-		color: ${props => getColor(props.skin.textColor, props.skin.textHoverShade)};
-		background: ${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)};
+		color: ${getColor(props.skin.textColor, props.skin.textHoverShade)(props)};
+		background: ${getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)(props)};
 		box-shadow:
-			calc(1/2 * ${getVariable('horizontalBase')})
+			calc(1/2 * ${getVariable('horizontalBase')(props)})
 			0
-			${props => getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)}
+			${getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)(props)}
 		;
-	}
+	}`;
+
+const PaddedText = styled.span`
+${paddedStyles}
 `;
 PaddedText.propTypes = {
 	skin: propTypes.shape({

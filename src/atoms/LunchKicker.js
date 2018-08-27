@@ -1,12 +1,16 @@
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
+const styles = props => css`
+color: ${getColor((props.textColor || props.color), props.kickerShade)(props)};
+	font-size:   ${getVariable('uiRegularSize')(props)};
+	line-height: ${getVariable('verticalBase')(props)};
+	font-family: ${getVariable('mainFont')(props)};
+	`;
+
 const LunchKicker = styled.span`
-	color: ${props => getColor((props.textColor || props.color), props.kickerShade)};
-	font-size:   ${getVariable('uiRegularSize')};
-	line-height: ${getVariable('verticalBase')};
-	font-family: ${getVariable('mainFont')};
+	${styles}
 `;
 
 export { LunchKicker };

@@ -1,7 +1,7 @@
 // Dependencies
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 
 // Utils
 import { getColor } from '../utils';
@@ -12,9 +12,16 @@ import { BlockLinkWithBackground as Link } from '../atoms/BlockLinkWithBackgroun
 import { LunchKicker as Kicker } from '../atoms/LunchKicker';
 import { MediumHeading } from '../atoms/Heading';
 
+const styles = (props) => {
+	console.log('getColor(props.color)(props)', getColor(props.color)(props));
+	return css`
+		color: ${getColor(props.color)(props)};
+		margin: 0;
+	`;
+};
+
 const Heading = styled(MediumHeading)`
-	color: ${props => getColor(props.color)};
-	margin: 0;
+	${styles}
 `;
 
 const LunchButton = ({
