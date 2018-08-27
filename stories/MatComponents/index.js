@@ -9,10 +9,9 @@ import Footer from './footer';
 
 export default () => {
 	storiesOf('Mat Components', module)
-		.addDecorator(StorybookPaddedGrid)
-		.add('Colophon', MatColophon)
-		.add('Mat Description', description)
-		.add('More Component', MoreComponent)
 		.add('SingleIngredient', SingleIngredient)
-		.add('Footer', Footer);
+		.add('Footer', Footer)
+		.addDecorator(StorybookPaddedGrid)
+		.add('Mat Description', description)
+		.add('More Component', MoreComponent);
 };

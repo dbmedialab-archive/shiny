@@ -37,7 +37,7 @@ const RelatedSection = styled.section`
 const SingleIngredientStory = ({ ...rest }) => (
 	<section>
 		<Row>
-			<Col xs={12}>
+			<Col xs={8}>
 				<HugeHeading>Single Ingredient</HugeHeading>
 				<p>A page displaying a single ingredient that can be used in recipes.</p>
 				<p>This is a huuuge story. The RelatedSection could maybe be taken out of here and get its own story instead.
