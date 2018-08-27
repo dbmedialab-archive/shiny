@@ -16,7 +16,7 @@ import {
 	FrontLargeHeading,
 } from '../../src';
 import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
-import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
+import { StorybookPaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 
 const description = 'Mandelpotet er en delikatessepotet som dyrkes over store deler av landet, også langt oppe i '

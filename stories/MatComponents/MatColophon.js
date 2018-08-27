@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { PaddedGrid      } from '../../src/storybook-decorators/PaddedGrid';
+import { StorybookPaddedGrid      } from '../../src/storybook-decorators/PaddedGrid';
 import { HugeHeading 	   } from '../../src';
 import { OppskriftFooter } from '../../src/molecules/Footers/OppskriftFooter';
 
 const MatColophon = () => (
 	<section>
-		<PaddedGrid>
+		<StorybookPaddedGrid>
 			<HugeHeading>Mat-like Colophon</HugeHeading>
 			<OppskriftFooter />
-		</PaddedGrid>
+		</StorybookPaddedGrid>
 	</section>
 );
 

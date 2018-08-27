@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'react-emotion';
 
@@ -15,6 +16,17 @@ const PaddedGrid = ({ children }) => (
 		</PaddedDiv>
 	</Grid>
 );
+
+
+PaddedGrid.propTypes = {
+	children: PropTypes.node,
+};
+
+
+PaddedGrid.defaultProps = {
+	children: null,
+};
+
 
 const StorybookPaddedGrid = stories => <PaddedGrid>{stories()}</PaddedGrid>;
 
