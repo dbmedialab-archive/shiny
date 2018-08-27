@@ -13,7 +13,6 @@ import { LunchKicker as Kicker } from '../atoms/LunchKicker';
 import { MediumHeading } from '../atoms/Heading';
 
 const styles = (props) => {
-	console.log('getColor(props.color)(props)', getColor(props.color)(props));
 	return css`
 		color: ${getColor(props.color)(props)};
 		margin: 0;
