@@ -28,22 +28,22 @@ const FheadStyle = props => css`
 
 const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingSmallSize')};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingSmallSize')(props)};
 	}
 `;
 
 const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingMediumSize')};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingMediumSize')(props)};
 	}
 `;
 const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
-	font-size: ${getVariable('headingMediumSize')};
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingLargeSize')};
+	font-size: ${props => getVariable('headingMediumSize')(props)};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingLargeSize')(props)};
 	}
 `;
 const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;

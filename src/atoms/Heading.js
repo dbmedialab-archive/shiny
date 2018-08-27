@@ -49,7 +49,7 @@ const getSizes = (props) => {
 const XSmallHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'small', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {
 		${props => getSizes({ size: 'medium', ...props })}
  	}
 `;
@@ -57,7 +57,7 @@ const XSmallHeading = styled(ProtoHeading)`
 const SmallHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'small', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {H
 		${props => getSizes({ size: 'regular', ...props })}
  	}
 `;
@@ -65,7 +65,7 @@ const SmallHeading = styled(ProtoHeading)`
 const MediumHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'medium', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {
 		${props => getSizes({ size: 'regular', ...props })}
 	}
 `;
@@ -73,7 +73,7 @@ const MediumHeading = styled(ProtoHeading)`
 const LargeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'regular', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {
 		${props => getSizes({ size: 'large', ...props })}
 	}
 `;
@@ -81,7 +81,7 @@ const LargeHeading = styled(ProtoHeading)`
 const XLargeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'regular', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {
 		${props => getSizes({ size: 'xlarge', ...props })}
 	}
 `;
@@ -89,7 +89,7 @@ const XLargeHeading = styled(ProtoHeading)`
 const HugeHeading = styled(ProtoHeading)`
 	${props => getSizes({ size: 'large', ...props })}
 
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.lg}rem) {
 		${props => getSizes({ size: 'huge', ...props })}
 	}
 `;
