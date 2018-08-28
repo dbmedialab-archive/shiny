@@ -13,7 +13,7 @@
 				"..": {
 					"transform": "./../../babel-transform-shiny.js",
 					"preventFullImport": true,
-					"skipDefaultConversion": false
+					"skipDefaultConversion": true
 				}
 			}
 		]
