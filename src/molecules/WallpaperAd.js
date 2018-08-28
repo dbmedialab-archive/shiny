@@ -1,37 +1,37 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import Sticker from 'react-stickyfill';
 
 import { getColor } from '../utils';
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const LeftAndRight = styled(AdWrapper)`
+	${props => `
 	position: absolute;
 	height: 100%;
 	width: 455px; /* Used for positioning of background ad so we use px */
 
-	top: ${props => props.top};
-  	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
-		${props => (
-		props.left
-			? 'right: 100%;'
-			: 'left: 100%;'
-	)}}
-	${props => ['sm', 'md', 'lg'].map(size => css`
+	top: ${props.top};
+  	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.xs}em) {
+		${props.left
+		? 'right: 100%;'
+		: 'left: 100%;'
+}}
+	${['sm', 'md', 'lg'].map(size => `
 		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
-			${props => (
-		props.left
-			? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-			: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-	)}}
+			${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+}}
 
 		`)}
 
 	& a {
-		${props => (props.sticky ? 'position:sticky;top:0;' : '')} background-repeat: no-repeat;
-		background-image: url(${props => props.backgroundImage});
-		background-position: ${props => (props.left ? '' : 'right top')};
+		${props.sticky ? 'position:sticky;top:0;' : ''} background-repeat: no-repeat;
+		background-image: url(${props.backgroundImage});
+		background-position: ${props.left ? '' : 'right top'};
 		display: block;
 		height: 1200px; /* Use px instead of rem beause this is used to position */
 		width: 455px; /*  a background image from DFP so we need absolute values */
@@ -40,12 +40,13 @@ const LeftAndRight = styled(AdWrapper)`
 	&&::before {
 		opacity: 1;
 		position: absolute;
-		color: ${getColor('adWrapperBackgroundColor')};
-		background: ${getColor('adWrapperBackgroundColor')};
+		color: ${getColor('adWrapperBackgroundColor')(props)};
+		background: ${getColor('adWrapperBackgroundColor')(props)};
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%) translateY(-2.4rem);
 	}
+	`}
 `;
 
 LeftAndRight.propTypes = {
