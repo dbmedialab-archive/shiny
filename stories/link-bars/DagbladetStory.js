@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
@@ -43,14 +43,10 @@ const paidDDLinkProps = Object.assign({}, dropDownLinkProps, {
 	rel: 'nofoollow',
 });
 
-const paddedStyles = props => css`
-	padding-left: ${getVariable('horizontalBase')(props)};
-	padding-right: ${getVariable('horizontalBase')(props)};
-	color: ${getColor('primary')(props)};
-`;
-
 const PaddedHeading = styled(SmallHeading)`
-${paddedStyles}
+	padding-left: ${getVariable('horizontalBase')};
+	padding-right: ${getVariable('horizontalBase')};
+	color: ${getColor('primary')};
 `;
 
 const VerySpecialLinkBar= styled(HorizontalLinkBar)`
