@@ -26,8 +26,7 @@ yarn publish
 ```
 3. yarn publish will have created a commit with your new version number, and tagged your release in git for you. Push both the commit and the tagged release to GitHub.
 ```sh
-git push -u origin release/x.x.x
-git push --tags
+git push --tags -u origin release/x.x.x
 ```
 
 4. Create and merge a pull request for the branch
