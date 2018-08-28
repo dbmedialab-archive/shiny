@@ -33,7 +33,7 @@ ProtoHeading.defaultProps = {
 const getSizes = (props) => {
 	const { size, marginTopFactor, marginBottomFactor } = props;
 	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
-	return css`
+	return `
 		font-size: ${getVariable(`heading${capSize}Size`)(props)};
 		line-height: ${getVariable(`heading${capSize}LineHeight`)(props)};
 		margin:
