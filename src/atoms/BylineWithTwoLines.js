@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import withProps from 'recompose/withProps';
 
 import { getColor, getVariable } from '../utils';
 
