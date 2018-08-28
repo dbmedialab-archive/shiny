@@ -34,7 +34,7 @@ const ProtoHeading = styled.h1`
 					calc(${props.marginBottomFactor} * ${headingDefaultLineHeight})
 				;
 
-				@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.lg}rem) {
+				@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}rem) {
 					font-size: ${headingUpSize};
 					line-height: ${headingUpLineHeight};
 					margin:
