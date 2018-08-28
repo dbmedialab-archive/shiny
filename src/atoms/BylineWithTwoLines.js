@@ -17,7 +17,7 @@ const BylineImage = withProps({
     overflow: hidden;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: ${getVariable('horizontalBase')};
+    margin-right: ${props => getVariable('horizontalBase')(props)};
 `);
 
 const WrapAvatar = styled.div`
@@ -26,28 +26,28 @@ const WrapAvatar = styled.div`
     height: 4.5rem;
     overflow: hidden;
     border-radius: 50%;
-    margin-right: ${getVariable('horizontalBase')};
+    margin-right: ${props => getVariable('horizontalBase')(props)};
     text-align: center;
 `;
 
 const TextBlock = styled.div`
     float: left;
-    color: ${getColor('type')};
-    font-family: ${getVariable('mainFont')};
+    color: ${props => getColor('type')(props)};
+    font-family: ${props => getVariable('mainFont')(props)};
 `;
 
 const Name = styled.div`
-    font-size: ${getVariable('uiRegularSize')};
-    line-height: ${getVariable('uiRegularLineHeight')};
+    font-size: ${props => getVariable('uiRegularSize')(props)};
+    line-height: ${props => getVariable('uiRegularLineHeight')(props)};
     font-weight: 300;
 `;
 
 const Email = withProps({
 	href: ({ email }) => `mailto:${email}`,
 })(styled.a`
-    font-size: ${getVariable('uiSmallSize')};
+    font-size: ${props => getVariable('uiSmallSize')(props)};
     font-weight: 300;
-    color: ${getColor('type')};
+    color: ${props => getColor('type')(props)};
 `);
 
 const BylineWithTwoLines = ({ src, name, email }) => (
