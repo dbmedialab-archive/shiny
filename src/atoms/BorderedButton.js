@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'react-emotion';
 import propTypes from 'prop-types';
 
@@ -11,12 +12,12 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 );
 
 const coloredBackground = props => css`
-	border-color: ${getColor('primary')(props)};
-	background-color: ${getColor('primary')(props)};
-	color: ${calculateTextColor(props.theme)(props)};
+border-color: ${getColor('primary')(props)};
+background-color: ${getColor('primary')(props)};
+color: ${calculateTextColor(props.theme)(props)};
 `;
 
-const BorderedButton = styled(Button)`
+const BorderedButtonImpl = styled(Button)`
 	color: ${getColor('grayTintDark')};
 	border-radius: 0.3rem;
 	border: solid 0.1rem ${getColor('grayTint')};
@@ -34,9 +35,6 @@ const BorderedButton = styled(Button)`
 	}
 `;
 
-BorderedButton.defaultProps = {	ALLCAPS: true  };
-BorderedButton.propTypes = {
-	ALLCAPS: propTypes.bool,
-};
+const BorderedButton = props => <BorderedButtonImpl ALLCAPS {...props} />;
 
 export { BorderedButton };
