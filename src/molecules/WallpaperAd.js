@@ -19,15 +19,27 @@ const LeftAndRight = styled(AdWrapper)`
 		? 'right: 100%;'
 		: 'left: 100%;'
 }}
-	${['sm', 'md', 'lg'].map(size => `
-		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
+	
+		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
 			${
 	props.left
-		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.sm}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.sm}rem);`
 }}
 
-		`)}
+	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+		${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.md}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.md}rem);`
+}}
+
+	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.lg}em) {
+		${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.lg}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.lg}rem);`
+}}
 
 	& a {
 		${props.sticky ? 'position:sticky;top:0;' : ''} background-repeat: no-repeat;
