@@ -14,6 +14,7 @@ const LeftAndRight = styled(AdWrapper)`
 
 	top: ${props.top};
   	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.xs}em) {
+		z-index: -1;
 		${props.left
 		? 'right: 100%;'
 		: 'left: 100%;'
