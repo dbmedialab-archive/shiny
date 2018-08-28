@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import propTypes from 'prop-types';
 
 import { Button } from './Button';
 import { isBright, getColor } from '../utils';
