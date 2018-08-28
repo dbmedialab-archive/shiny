@@ -6,22 +6,14 @@ import { getColor, getVariable } from '../utils';
 
 import { SvgIcon } from './SvgIcon';
 
-const BylineBlock = styled.div``;
-
-
-const BylineImage = (props) => {
-	// eslint-disable-next-line jsx-a11y/alt-text
-	return <img {...props} />;
-};
-
-const StyledBylineImage = styled(BylineImage)`
+const BylineImage = styled.img`
 	float: left;
 	width: 4.5rem;
 	height: 4.5rem;
 	overflow: hidden;
 	border-radius: 50%;
 	object-fit: cover;
-	margin-right: ${props => getVariable('horizontalBase')(props)};
+	margin-right: ${getVariable('horizontalBase')};
 `;
 
 const WrapAvatar = styled.div`
@@ -30,39 +22,40 @@ const WrapAvatar = styled.div`
 	height: 4.5rem;
 	overflow: hidden;
 	border-radius: 50%;
-	margin-right: ${props => getVariable('horizontalBase')(props)};
+	margin-right: ${getVariable('horizontalBase')};
 	text-align: center;
 `;
 
 const TextBlock = styled.div`
 	float: left;
-	color: ${props => getColor('type')(props)};
-	font-family: ${props => getVariable('mainFont')(props)};
+	color: ${getColor('type')};
+	font-family: ${getVariable('mainFont')};
 `;
 
 const Name = styled.div`
-	font-size: ${props => getVariable('uiRegularSize')(props)};
-	line-height: ${props => getVariable('uiRegularLineHeight')(props)};
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
 	font-weight: 300;
 `;
 
-const Email = ({ email, children }) => <a href={`mailto:${email}`}>{children}</a>;
+const A = styled.a`
+	font-size: ${getVariable('uiSmallSize')};
+	font-weight: 300;
+	color: ${getColor('type')};
+`;
+
+const Email = ({ email, ...rest }) => <A href={`mailto:${email}`} {...rest} />;
 
 Email.propTypes = {
 	email: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
 };
 
-const StyledEmail = styled(Email)`
-	font-size: ${props => getVariable('uiSmallSize')(props)};
-	font-weight: 300;
-	color: ${props => getColor('type')(props)};
-`;
 
 const BylineWithTwoLines = ({ src, name, email }) => (
-	<BylineBlock>
+	<div>
 		{ src ?  (
-			<StyledBylineImage
+			<BylineImage
 				src={src}
 			/>
 		) : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
@@ -70,11 +63,11 @@ const BylineWithTwoLines = ({ src, name, email }) => (
 			<Name itemProp="author" itemScope itemType="http://schema.org/Person">
 				<span itemProp="name">{name}</span>
 			</Name>
-			<StyledEmail email={email}>
+			<Email email={email}>
 				{email}
-			</StyledEmail>
+			</Email>
 		</TextBlock>
-	</BylineBlock>
+	</div>
 );
 
 BylineWithTwoLines.propTypes = {
