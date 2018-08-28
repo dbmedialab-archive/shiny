@@ -43,7 +43,7 @@ export const LinkBarLinkBase = styled.a`
 	border: 0;
 	outline: none;
 	text-decoration: none;
-	font-family: ${props => getVariable('headingsFont')(props)};
+	font-family: ${getVariable('headingsFont')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight')(props))};
 	font-weight: ${props => (props.isActive ? '600' : '400')};

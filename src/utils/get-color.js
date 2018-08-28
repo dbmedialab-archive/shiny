@@ -1,4 +1,3 @@
-import { css } from 'react-emotion';
 import { unshadeColorString } from './unshade-color-string';
 /**
  * Create a function that looks up a color from your theme.
@@ -30,7 +29,3 @@ export const getColor = (color, shade=null) => (props) => {
 
 	return props.theme.colors[shadedColorString];
 };
-
-const createCssRuleWithColor = (cssProp, cssValue) => css` ${cssProp}: cssValue`;
-
-export const createColorCss = (color, cssProp, shade=null) => createCssRuleWithColor(cssProp, getColor(color, shade));

@@ -1,5 +1,6 @@
-import { css } from 'react-emotion';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
+import propTypes from 'prop-types';
+
 import { Button } from './Button';
 import { isBright, getColor } from '../utils';
 
@@ -32,5 +33,10 @@ const BorderedButton = styled(Button)`
 		};
 	}
 `;
+
+BorderedButton.defaultProps = {	ALLCAPS: true  };
+BorderedButton.propTypes = {
+	ALLCAPS: propTypes.bool,
+};
 
 export { BorderedButton };
