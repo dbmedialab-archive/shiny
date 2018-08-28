@@ -1,12 +1,11 @@
 /* eslint-disable max-len */
-import { css } from 'react-emotion';
 
 /**
  * Extensive reset styles.
  *
  * Notably resets 1rem to 10px.
  */
-export const cssReset = css`
+export const cssReset = `
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
