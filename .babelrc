@@ -6,7 +6,17 @@
 	],
 	"plugins": [
 		"@babel/plugin-transform-object-assign",
-		"react-docgen"
+		"react-docgen",
+		[
+			"transform-imports",
+			{
+				"..": {
+					"transform": "./../../babel-transform-shiny.js",
+					"preventFullImport": true,
+					"skipDefaultConversion": false
+				}
+			}
+		]
 	],
 	"env": {
 		"production": {
