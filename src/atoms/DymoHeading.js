@@ -12,55 +12,66 @@ const Hgroup = styled.hgroup`
 `;
 
 const FormattedHeading = styled(Heading)`
-  display: inline-block;
-  margin: 0 0 calc(2/3 * ${getVariable('verticalBase')});
+	&& {
+	  display: inline-block;
+	  margin: 0 0 calc(2/3 * ${getVariable('verticalBase')});
 
-  ${props => (props.hasImage
+	  ${props => (props.hasImage
 		? 'max-width: 90%;'
-		: css`max-width: calc(100% - ${getVariable('horizontalBase')(props)});`
-	)}
+		: css`max-width: calc(100% - ${getVariable('horizontalBase')(props)});`)
+}
 
-	a:hover && {
-		text-decoration: none;
-	}
+		a:hover && {
+			text-decoration: none;
+		}
 
-	${Hgroup}:last-child & {
-		margin: 0;
+		${Hgroup}:last-child & {
+			margin: 0;
+		}
 	}
 `;
-
-const paddedStyles = props => css`
-${props.hasImage ? '' : 'max-width: 100%;'}
-	margin: 0;
-	padding-top: 0;
-	box-shadow:
-		calc(1/2 * ${getVariable('horizontalBase')(props)})
-		0
-		${getColor(props.skin.backgroundColor)(props)}
-	;
-	background: ${getColor(props.skin.backgroundColor)(props)};
-	color:      ${getColor(props.skin.textColor)(props)};
-	-webkit-box-decoration-break: clone;
-
-	span.highlighted {
-		color: ${getColor('red')(props)};
-	}
-
-	padding-left: ${props.skin.needsPadding ? `calc(1/2 * ${props.theme.variables.horizontalBase})` : '0'};
-
-	a:hover & {
-		color: ${getColor(props.skin.textColor, props.skin.textHoverShade)(props)};
-		background: ${getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)(props)};
-		box-shadow:
-			calc(1/2 * ${getVariable('horizontalBase')(props)})
-			0
-			${getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)(props)}
-		;
-	}`;
 
 const PaddedText = styled.span`
-${paddedStyles}
+	${(props) => {
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const backgroundColor = getColor(props.skin.backgroundColor)(props);
+		const textColor = getColor(props.skin.textColor)(props);
+		const textHoverColor = getColor(props.skin.textColor, props.skin.textHoverShade)(props);
+		const backgroundHoverColor = getColor(props.skin.backgroundColor, props.skin.backgroundHoverShade)(props);
+		const textHighlightColor = getColor('red')(props);
+
+		return css`
+			${props.hasImage ? '' : 'max-width: 100%;'}
+			margin: 0;
+			padding-top: 0;
+			box-shadow:
+				calc(1/2 * ${horizontalBase})
+				0
+				${backgroundColor}
+			;
+			background: ${backgroundColor};
+			color: ${textColor};
+			-webkit-box-decoration-break: clone;
+
+			span.highlighted {
+				color: ${textHighlightColor};
+			}
+
+			padding-left: ${props.skin.needsPadding ? `calc(1/2 * ${horizontalBase})` : '0'};
+
+			a:hover & {
+				color: ${textHoverColor};
+				background: ${backgroundHoverColor};
+				box-shadow:
+					calc(1/2 * ${horizontalBase})
+					0
+					${backgroundHoverColor}
+				;
+			}
+		`;
+	}}
 `;
+
 PaddedText.propTypes = {
 	skin: propTypes.shape({
 		backgroundColor: shinyPropTypes.color,
