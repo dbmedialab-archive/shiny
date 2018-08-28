@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { css } from 'styled-components';
+import { css } from 'react-emotion';
 
 /**
  * Extensive reset styles.

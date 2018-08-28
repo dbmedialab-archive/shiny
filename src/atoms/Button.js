@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable, calculateTextColorFromName } from '../utils';
 
 const Button = styled.button`
@@ -42,11 +42,11 @@ const Button = styled.button`
 	}
 
 	${props => props.outline && css`
-		border: .1rem solid ${getColor(props.background)};
+		border: .1rem solid ${getColor(props.background)(props)};
 		background: transparent;
-		color: ${getColor(props.background)};
+		color: ${getColor(props.background)(props)};
 		&:hover {
-			background: ${getColor(props.background)};
+			background: ${getColor(props.background)(props)};
 			color: ${calculateTextColorFromName(props.background, props)};
 		}
 	`}

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
 import propTypes from 'prop-types';
 import { getColor } from '../../utils';
 

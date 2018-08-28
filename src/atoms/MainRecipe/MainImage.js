@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const MainImage = Styled.img`
+const MainImage = styled.img`
 	 width: 100%
 `;
 

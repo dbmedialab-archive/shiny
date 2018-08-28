@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const ComplexitySectionHeader = Styled.div`
+const ComplexitySectionHeader = styled.div`
 	text-align: center;
 	position: relative;
 	font-size: 3.8rem;

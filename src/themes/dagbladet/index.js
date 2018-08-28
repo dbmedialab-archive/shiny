@@ -1,3 +1,4 @@
+import { css } from 'react-emotion';
 import { cssReset } from '../../utils/css-reset';
 
 import colors from './colors';
@@ -12,7 +13,7 @@ const variables = {
 	uiRegularLineHeight: '2.4rem',
 };
 
-const global = `
+const global = css`
 	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
 
 	${cssReset}

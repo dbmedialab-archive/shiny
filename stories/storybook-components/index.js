@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import propTypes from 'prop-types';
 
 export const DemoContainer = styled.article`

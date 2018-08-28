@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
 const StyledPicture = styled.picture`
 	width: 100%;

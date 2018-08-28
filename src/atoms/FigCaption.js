@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const FigCaption = styled.figcaption`
 	font-size: ${props => props.theme.variables.uiRegularSize};

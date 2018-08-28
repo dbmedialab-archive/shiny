@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const NavigationMenuItem = Styled.li`
+const NavigationMenuItem = styled.li`
 	display: inline-block;
 	font-size: 1.6rem;
 	margin-left: 9.0rem;

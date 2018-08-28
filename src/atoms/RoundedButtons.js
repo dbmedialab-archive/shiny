@@ -1,50 +1,70 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css, withTheme } from 'styled-components';
+import styled, { css } from 'react-emotion';
+import { withTheme } from 'emotion-theming';
 
 import { getColor, getVariable } from '../utils';
 
+const styles = (props) => {
+	const mainFont = getVariable('mainFont')(props);
+	const fontWeight = getVariable('semiBoldWeight')(props);
+	const background = props.background ? getColor(props.background)(props) : getColor('grayTintLighter')(props);
+	const color = props.color ? getColor(props.color)(props) : getColor('type')(props);
+	const backgroundColor = props.background ? getColor(`${props.background}Dark`)(props) : getColor('grayTint')(props);
+	const horizontalBase = getVariable('horizontalBase')(props);
+	const verticalBase = getVariable('verticalBase')(props);
+
+	let sizeCSS;
+
+	if (props.size === 'small') {
+		const uiRegularSize = getVariable('uiRegularSize')(props);
+		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
+
+		sizeCSS = css`
+			font-size: ${uiRegularSize};
+			line-height: ${uiRegularLineHeight};
+			padding: calc(1/2 * ${horizontalBase}) 2.0rem;
+			border-radius: 1.7rem;
+		`;
+	} else if (props.size === 'tiny') {
+		const uiSize = getVariable('uiSmallSize')(props);
+		const lineHeight = getVariable('uiSmallLineHeight')(props);
+		sizeCSS = css`
+			font-size: ${uiSize};
+			line-height: ${lineHeight};
+			padding: calc(1/4 * ${horizontalBase}) calc(2/3 * ${horizontalBase});
+			border-radius: 1.7rem;
+		`;
+	} else {
+		sizeCSS = css`
+		font-size: inherit;
+		line-height: inherit;
+		padding: calc(1/3 * ${verticalBase}) calc(3/2 * ${horizontalBase});
+		border-radius: ${verticalBase};
+		`;
+	}
+
+	return css`
+		font-family: ${mainFont};
+		font-weight: ${fontWeight};
+		display: inline-flex;
+		align-items: center;
+		border: 0 none;
+		background: ${background};
+		color: ${color};
+		cursor: pointer;
+		transition: background-color .2s ease-in-out;
+		&:hover {
+			background-color: ${backgroundColor};
+		}
+		${sizeCSS}
+	`;
+};
+
 const StyledLink = styled.a`
-  font-family: ${getVariable('mainFont')};
-  font-weight: ${getVariable('semiBoldWeight')};
-  display: inline-flex;
-  align-items: center;
-  border: 0 none;
-  background: ${props => (props.background ? getColor(props.background) : getColor('grayTintLighter'))};
-  color: ${props => (props.color ? getColor(props.color) : getColor('type'))};
-  cursor: pointer;
-  transition: background-color .2s ease-in-out;
-  &:hover {
-	 background-color: ${props => (props.background ? getColor(`${props.background}Dark`) : getColor('grayTint'))};
-  }
-
-  ${(props) => {
-		if (props.size === 'small') {
-			return css`
-				font-size: ${getVariable('uiRegularSize')};
-				line-height: ${getVariable('uiRegularLineHeight')};
-				padding: calc(1/2 * ${getVariable('horizontalBase')}) 2.0rem;
-				border-radius: 1.7rem;
-			`;
-		}
-
-		if (props.size === 'tiny') {
-			return css`
-				font-size: ${getVariable('uiSmallSize')};
-				line-height: ${getVariable('uiSmallLineHeight')};
-				padding: calc(1/4 * ${getVariable('horizontalBase')}) calc(2/3 * ${getVariable('horizontalBase')});
-				border-radius: 1.7rem;
-			`;
-		}
-
-		return css`
-			font-size: inherit;
-			line-height: inherit;
-			padding: calc(1/3 * ${getVariable('verticalBase')}) calc(3/2 * ${getVariable('horizontalBase')});
-			border-radius: ${getVariable('verticalBase')};
-		 `;
-	}}
+	${styles}
 `;
+
 
 const DefaultButton = ({
 	children,

@@ -1,7 +1,7 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const MainImageWrapper = Styled.div`
-	
+const MainImageWrapper = styled.div`
+
 `;
 
 export { MainImageWrapper };

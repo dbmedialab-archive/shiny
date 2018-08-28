@@ -46,8 +46,8 @@ themeslug = {
 			<tr>
 				<th>global</th>
 				<td>tagged template literal</td>
-				<td>Will be passed to styled-components&apos;{' '}
-					<a href="https://www.styled-components.com/docs/api#injectglobal">injectGlobal</a>{' '}
+				<td>Will be passed to emotion&apos;s{' '}
+					<a href="https://github.com/emotion-js/emotion/blob/master/docs/inject-global.md">injectGlobal</a>{' '}
 					when you activate your theme.
 				</td>
 			</tr>

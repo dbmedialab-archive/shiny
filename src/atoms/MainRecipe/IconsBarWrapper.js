@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const IconsBarWrapper = Styled.div`
+const IconsBarWrapper = styled.div`
 	width: 20.0rem;
 	margin: 0 auto;
 `;

@@ -1,95 +1,93 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
 const ProtoHeading = styled.h1`
-	padding: 0;
-	color: ${getColor('heading')};
-	font-weight: ${getVariable('headingsWeight')};
-	font-family: ${getVariable('headingsFont')};
+	${(props) => {
+		const headingDefaultSize = getVariable(`heading${props.defaultSize}Size`)(props);
+		const headingDefaultLineHeight = getVariable(`heading${props.defaultSize}LineHeight`)(props);
+		const headingUpSize = getVariable(`heading${props.upSize}Size`)(props);
+		const headingUpLineHeight = getVariable(`heading${props.upSize}LineHeight`)(props);
 
-	${props => props.ALLCAPS && css`
-		text-transform: uppercase;
-		letter-spacing: .1rem;
-	`}
+		return css`
+				padding: 0;
+				color: ${getColor('heading')(props)};
+				font-weight: ${getVariable('headingsWeight')(props)};
+				font-family: ${getVariable('headingsFont')(props)};
 
-	a {
-		color: inherit;
+				${props.ALLCAPS && `
+					text-transform: uppercase;
+					letter-spacing: .1rem;
+				`}
+
+				a {
+					color: inherit;
+				}
+
+				font-size: ${headingDefaultSize};
+				line-height: ${headingDefaultLineHeight};
+				margin:
+					calc(${props.marginTopFactor} * ${headingDefaultLineHeight})
+					0
+					calc(${props.marginBottomFactor} * ${headingDefaultLineHeight})
+				;
+
+				@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}rem) {
+					font-size: ${headingUpSize};
+					line-height: ${headingUpLineHeight};
+					margin:
+						calc(${props.marginTopFactor} * ${headingUpLineHeight})
+						0
+						calc(${props.marginBottomFactor} * ${headingUpLineHeight})
+					;
+				}
+			`;
 	}
+}
 `;
+
 ProtoHeading.propTypes = {
 	marginTopFactor: propTypes.number,
 	marginBottomFactor: propTypes.number,
+	defaultSize: propTypes.string,
+	upSize: propTypes.string,
 };
 ProtoHeading.defaultProps = {
 	marginTopFactor: 3/4,
 	marginBottomFactor: 1/2,
+	defaultSize: 'Regular',
+	upSize: 'Large',
 };
 
-const getSizes = ({ size, marginTopFactor, marginBottomFactor }) => {
-	const capSize = size.slice(0, 1).toUpperCase() + size.slice(1);
-	return css`
-		font-size: ${getVariable(`heading${capSize}Size`)};
-		line-height: ${getVariable(`heading${capSize}LineHeight`)};
-		margin:
-			calc(${marginTopFactor} * ${getVariable(`heading${capSize}LineHeight`)})
-			0
-			calc(${marginBottomFactor} * ${getVariable(`heading${capSize}LineHeight`)})
-		;
-	`;
+const Heading = ({ size, ...rest }) => {
+	switch (size) {
+	case 'xsmall':
+		return <ProtoHeading {...rest} defaultSize="Small" upSize="Medium" />;
+	case 'small':
+		return <ProtoHeading {...rest} defaultSize="Small" upSize="Regular" />;
+	case 'medium':
+		return <ProtoHeading {...rest} defaultSize="Medium" upSize="Regular" />;
+	case 'large':
+		return <ProtoHeading {...rest} defaultSize="Regular" upSize="Large" />;
+	case 'xlarge':
+		return <ProtoHeading {...rest} defaultSize="Regular" upSize="Xlarge" />;
+	case 'huge':
+		return <ProtoHeading {...rest} defaultSize="Large" upSize="Huge" />;
+	default:
+		// Same as 'large'
+		return <ProtoHeading {...rest} defaultSize="Regular" upSize="Large" />;
+	}
 };
 
-const XSmallHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'small', ...props })}
+const XSmallHeading = props => <Heading size="xsmall" {...props} />;
+const SmallHeading = props => <Heading size="small" {...props} />;
+const MediumHeading = props => <Heading size="medium" {...props} />;
+const LargeHeading = props => <Heading size="large" {...props} />;
+const XLargeHeading = props => <Heading size="xlarge" {...props} />;
+const HugeHeading = props => <Heading size="huge" {...props} />;
 
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'medium', ...props })}
- 	}
-`;
-
-const SmallHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'small', ...props })}
-
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'regular', ...props })}
- 	}
-`;
-
-const MediumHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'medium', ...props })}
-
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'regular', ...props })}
-	}
-`;
-
-const LargeHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'regular', ...props })}
-
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'large', ...props })}
-	}
-`;
-
-const XLargeHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'regular', ...props })}
-
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'xlarge', ...props })}
-	}
-`;
-
-const HugeHeading = styled(ProtoHeading)`
-	${props => getSizes({ size: 'large', ...props })}
-
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		${props => getSizes({ size: 'huge', ...props })}
-	}
-`;
-
-XSmallHeading.propTypes = ProtoHeading.propTypes;
 SmallHeading.propTypes  = ProtoHeading.propTypes;
 MediumHeading.propTypes = ProtoHeading.propTypes;
 LargeHeading.propTypes  = ProtoHeading.propTypes;
@@ -103,28 +101,8 @@ LargeHeading.defaultProps  = ProtoHeading.defaultProps;
 XLargeHeading.defaultProps = ProtoHeading.defaultProps;
 HugeHeading.defaultProps   = ProtoHeading.defaultProps;
 
-const Heading = ({ size, ...rest }) => {
-	switch (size) {
-	case 'xsmall':
-		return <XSmallHeading {...rest} />;
-	case 'small':
-		return <SmallHeading {...rest} />;
-	case 'medium':
-		return <MediumHeading {...rest} />;
-	case 'large':
-		return <LargeHeading {...rest} />;
-	case 'xlarge':
-		return <XLargeHeading {...rest} />;
-	case 'huge':
-		return <HugeHeading {...rest} />;
-	default:
-		return <LargeHeading {...rest} />;
-	}
-};
-
 export {
 	Heading,
-
 	XSmallHeading,
 	SmallHeading,
 	MediumHeading,

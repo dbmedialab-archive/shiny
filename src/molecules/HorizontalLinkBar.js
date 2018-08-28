@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { HorizontalOverflowGradient } from '../atoms/HorizontalOverflowGradient';
 import { HorizontalFlexingList as Bar } from '../atoms/HorizontalFlexingList';

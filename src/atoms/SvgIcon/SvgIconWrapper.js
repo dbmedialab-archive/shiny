@@ -1,16 +1,16 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 import { getColor } from '../../utils';
 
-const SvgIconWrapper = Styled.div`
+const SvgIconWrapper = styled.div`
 	display: inline-block;
 	text-align: center;
 	width: ${props => props.size}rem;
-	
+
 	${props => (props['size-sm'] && `
 	@media (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
 		width: ${props['size-sm']}rem;
  	}`)}
- 	
+
  	${props => props.color && `
 		svg{
 			path {

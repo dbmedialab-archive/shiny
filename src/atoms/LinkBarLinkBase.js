@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable } from '../utils';
 
 const getTextColor = ({
@@ -23,20 +23,20 @@ export const LinkBarLinkBase = styled.a`
 	${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${getVariable('horizontalBase')});
+				padding: 0 calc(1/2 * ${getVariable('horizontalBase')(props)});
 `;
 		}
 		if (props.size === 'small') {
 			return css`
 				padding:
-					calc(1/2 * (3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
-					calc(1/2 * ${getVariable('horizontalBase')});
+					calc(1/2 * (3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+					calc(1/2 * ${getVariable('horizontalBase')(props)});
 			`;
 		}
 		return css`
 			padding:
-				calc(1/2 * (3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
-				${getVariable('horizontalBase')};
+				calc(1/2 * (3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+				${getVariable('horizontalBase')(props)};
 		`;
 	}}
 
@@ -45,7 +45,7 @@ export const LinkBarLinkBase = styled.a`
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
 	font-size: ${getVariable('uiRegularSize')};
-	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight'))};
+	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight')(props))};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
@@ -79,7 +79,7 @@ export const LinkBarLinkBase = styled.a`
 	&::after {
 		width: ${props => (
 		props.isActive && props.useUnderline
-			? css`calc( 100% - 2*${getVariable('horizontalBase')} )`
+			? css`calc( 100% - 2*${getVariable('horizontalBase')(props)} )`
 			: '0'
 	)};
 		display: block;
@@ -99,35 +99,35 @@ export const LinkBarLinkBase = styled.a`
 		${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${getVariable('horizontalBase')});
+				padding: 0 calc(1/2 * ${getVariable('horizontalBase')(props)});
 			`;
 		}
 
 		if (props.size === 'small') {
 			return css`
 				padding:
-					calc(1/2 * ( 3/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
-					calc(1/4*${getVariable('horizontalBase')});
+					calc(1/2 * ( 3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+					calc(1/4*${getVariable('horizontalBase')(props)});
 			`;
 		}
 
 		if (props.size === 'large') {
 			return css`
 				padding:
-					calc(1/2 * ( 5/2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
-					${getVariable('horizontalBase')};
+					calc(1/2 * ( 5/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+					${getVariable('horizontalBase')(props)};
 			`;
 		}
 
 		return css`
 			padding:
-				calc(1/2 * ( 2*${getVariable('verticalBase')} - ${getVariable('uiRegularLineHeight')}) )
-				${getVariable('horizontalBase')};
+				calc(1/2 * ( 2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+				${getVariable('horizontalBase')(props)};
 		`;
 	}}
 
 	&:hover::after{
-		width: ${props => (props.useUnderline ? css`calc( 100% - 2*${getVariable('horizontalBase')} )` : '0')};
+		width: ${props => (props.useUnderline ? css`calc( 100% - 2*${getVariable('horizontalBase')(props)} )` : '0')};
 	}
 }
 `;

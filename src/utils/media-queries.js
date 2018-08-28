@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'react-emotion';
 
 const sizes = {
 	xlarge: 1920,
