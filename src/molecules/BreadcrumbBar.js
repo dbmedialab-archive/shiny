@@ -7,7 +7,7 @@ import { HorizontalFlexingList as Bar } from '../atoms/HorizontalFlexingList';
 import { LinkBarItem } from '../atoms/LinkBarItem';
 import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
 
-const LinkBar = ({
+const BreadcrumbBar = ({
 	background,
 	children,
 	shouldFadeOut,
@@ -39,8 +39,6 @@ const LinkBar = ({
 							sm={child.props.sm}
 							md={child.props.md}
 							lg={child.props.lg}
-							preventSeparator={child.props.preventSeparator}
-							before={child.props.before}
 						>
 							{child}
 						</ListItemElement>
@@ -52,7 +50,7 @@ const LinkBar = ({
 	);
 };
 
-LinkBar.propTypes = {
+BreadcrumbBar.propTypes = {
 	background: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
@@ -70,7 +68,7 @@ LinkBar.propTypes = {
 	ListItemElement: PropTypes.func,
 };
 
-LinkBar.defaultProps = {
+BreadcrumbBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
 	children: null,
 	overflow: 'auto',
@@ -88,6 +86,6 @@ LinkBar.defaultProps = {
 // When we export this as a styled component,
 // we can use it in interpoliations,
 // for example in other styled compontents
-const HorizontalLinkBar = styled(LinkBar)``;
+const HorizontalBreadcrumbBar = styled(BreadcrumbBar)``;
 
-export { HorizontalLinkBar };
+export { HorizontalBreadcrumbBar };
