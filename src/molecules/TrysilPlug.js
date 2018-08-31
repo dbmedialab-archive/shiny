@@ -47,31 +47,31 @@ const Description = styled.p`
 `;
 
 const TrysilPlug = ({
-	kicker,
-	title,
-	subtitle,
-	image,
-	labels,
 	url,
-	placeholderUrl,
-	offset,
-	sources,
+	image,
 	ratio,
+	title,
+	labels,
+	kicker,
+	offset,
 	Heading,
-	headingProps,
+	sources,
+	subtitle,
 	preventBlur,
+	headingProps,
+	placeholderUrl,
 }) => (
 	<Article>
 		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{placeholderUrl
+			{image
 				&& (
 					<LazyProgressiveImage
 						alt={title}
-						src={placeholderUrl}
+						ratio={ratio}
 						offset={offset}
 						fallbackSrc={image}
-						ratio={ratio}
+						src={placeholderUrl ? placeholderUrl : image}
 						preventBlur={preventBlur}
 					>
 						{sources.length === 0
