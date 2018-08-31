@@ -3,6 +3,7 @@ import { darken, lighten } from 'polished';
 import { cssReset } from '../../utils/css-reset';
 
 import { variables } from './variables';
+import { flexboxgrid } from './flexboxgrid';
 
 const colorsToShade= {
 	primary: '#e3000b',
@@ -60,6 +61,7 @@ const global = `
 export default {
 	name: 'SeHer',
 	colors,
+	flexboxgrid,
 	global,
 	variables,
 };
