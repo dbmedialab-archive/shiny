@@ -7,6 +7,8 @@ import {
 	LinkBarLink,
 	LargeLinkBarLink,
 	LargeLinkBarDropdown,
+	BreadcrumbBar,
+	BreadcrumbLink,
 	HorizontalLinkBar,
 	DagbladetLogo,
 	VerticalLinkBar,
@@ -174,12 +176,12 @@ const DefaultBreadcrumbsStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<DBHeader />
-			<HorizontalLinkBar background={colors.white} ListItemElement={BreadcrumbItem} before={afterChar}>
+			<BreadcrumbBar background={colors.white} ListItemElement={BreadcrumbItem} before={afterChar}>
 				<BreadcrumbIcon preventSeparator />
-				<LinkBarLink preventSeparator linkText="One" url="https://example.com" />
-				<LinkBarLink linkText="Two" url="https://example.com" />
-				<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
-			</HorizontalLinkBar>
+				<BreadcrumbLink preventSeparator linkText="One" url="https://example.com" />
+				<BreadcrumbLink linkText="Two" url="https://example.com" />
+				<BreadcrumbLink linkText="Buckle My Shoe" url="https://example.com" />
+			</BreadcrumbBar>
 		</DemoContainer>
 	</section>
 );

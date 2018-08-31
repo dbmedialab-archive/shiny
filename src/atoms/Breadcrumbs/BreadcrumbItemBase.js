@@ -1,28 +1,9 @@
 import styled, { css } from 'react-emotion';
-import { getColor, getVariable } from '../../utils';
-
-const getTextColor = ({
-	isActive, activeTextColor, textColor,
-}) => (
-	(isActive && activeTextColor)
-		? getColor(activeTextColor)
-		: getColor(textColor)
-);
+import { getVariable } from '../../utils';
 
 export const BreadcrumbItemBase = styled.a`
 	display: inline-block;
 
-	:before {
-		content: "/";
-		margin: 0 1rem 0 -1rem;
-		color: "red";
-	}
-
-	:first-of-type {
-		:before {
-			display: none;
-		}
-	}
 	/*
 	 * With the 'xsmall', 'small', '' (default) and 'large' variants,
 	 * LinkBar items like LinkBarLinks, LinkBarButtons and LinkBarDropdowns
@@ -56,25 +37,10 @@ export const BreadcrumbItemBase = styled.a`
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
 	font-size: ${getVariable('uiRegularSize')};
-	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight')(props))};
-	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
-	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
-	${props => props.ALLCAPS && css`
-		text-transform: uppercase;
-		letter-spacing: .1rem;
-	`}
 
 	:hover {
-		text-decoration: none;
-	}
-
-	& {
-		color: ${getTextColor};
-		:hover {
-			background: ${props => (props.activeBackground)};
-			color: ${props => getColor(props.activeTextColor || props.textColor)};
-		}
+		text-decoration: underline;
 	}
 
 	&:focus {

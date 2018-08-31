@@ -15,6 +15,7 @@ const LinkBar = ({
 	zIndex,
 	isTopLevelComponent,
 	ListItemElement,
+	before,
 	...rest
 }) => {
 	return (
@@ -40,7 +41,7 @@ const LinkBar = ({
 							md={child.props.md}
 							lg={child.props.lg}
 							preventSeparator={child.props.preventSeparator}
-							before={child.props.before}
+							before={before}
 						>
 							{child}
 						</ListItemElement>
