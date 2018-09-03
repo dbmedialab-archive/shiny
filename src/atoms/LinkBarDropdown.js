@@ -101,12 +101,12 @@ class Dropdown extends React.Component {
 
 const StandardTrigger = (props) => {
 	const { linkText, hide, ...rest } = props;
-	const updown = (hide === true) ? 'down' : 'up';
+	const direction = (hide === true) ? 'down' : 'up';
 
 	return (
 		<LinkBarButton {...rest}>
 			{linkText}{' '}
-			<FontIcon name={`arrow-alt-${updown}`} />
+			<FontIcon name={`arrow-alt-${direction}`} />
 		</LinkBarButton>
 	);
 };
