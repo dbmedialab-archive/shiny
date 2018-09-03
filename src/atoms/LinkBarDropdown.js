@@ -29,42 +29,6 @@ class Dropdown extends React.Component {
 		this.tryHide = this.tryHide.bind(this);
 	}
 
-	getStandardTrigger() {
-		const { linkText, ...rest } = this.props;
-		const { hide } = this.state;
-		const updown = (hide === true) ? 'down' : 'up';
-
-		return (
-			<LinkBarButton
-				aria-expanded={hide ? 'false' : 'true'}
-				onClick={this.toggle}
-				{...rest}
-			>
-				{linkText}{' '}
-				<FontIcon name={`arrow-alt-${updown}`} />
-			</LinkBarButton>
-		);
-	}
-
-	getCustomTrigger() {
-		const { hide } = this.state;
-		const { Trigger, className } = this.props;
-
-		return (
-			<Trigger
-				className={className}
-				aria-expanded={hide ? 'false' : 'true'}
-				onClick={this.toggle}
-			/>
-		);
-	}
-
-	getTrigger() {
-		const { Trigger } = this.props;
-
-		return Trigger ? this.getCustomTrigger() : this.getStandardTrigger();
-	}
-
 	/**
 	 * Hide on blur
 	 *
@@ -111,7 +75,9 @@ class Dropdown extends React.Component {
 	}
 
 	render() {
-		const { children } = this.props;
+		const {
+			children, Trigger, ...rest
+		} = this.props;
 		const { hide } = this.state;
 
 		return (
@@ -119,7 +85,12 @@ class Dropdown extends React.Component {
 				onFocus={this.updateLastFocusTime}
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
-				{this.getTrigger()}
+				<Trigger
+					aria-expanded={hide ? 'false' : 'true'}
+					hide={hide}
+					onClick={this.toggle}
+					{...rest}
+				/>
 				<HideMeMaybe onClick={this.tryHide} hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
@@ -127,6 +98,18 @@ class Dropdown extends React.Component {
 		);
 	}
 }
+
+const StandardTrigger = (props) => {
+	const { linkText, hide, ...rest } = props;
+	const updown = (hide === true) ? 'down' : 'up';
+
+	return (
+		<LinkBarButton {...rest}>
+			{linkText}{' '}
+			<FontIcon name={`arrow-alt-${updown}`} />
+		</LinkBarButton>
+	);
+};
 
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
@@ -145,7 +128,7 @@ Dropdown.defaultProps = {
 	isRelative: true,
 	className: null,
 	linkText: null,
-	Trigger: null,
+	Trigger: StandardTrigger,
 	hideOnClick: false,
 };
 
