@@ -47,40 +47,37 @@ const Description = styled.p`
 `;
 
 const TrysilPlug = ({
-	kicker,
-	title,
-	subtitle,
-	image,
-	labels,
 	url,
-	placeholderUrl,
-	offset,
-	sources,
+	image,
 	ratio,
+	title,
+	labels,
+	kicker,
+	offset,
 	Heading,
-	headingProps,
+	sources,
+	subtitle,
 	preventBlur,
+	headingProps,
+	placeholderUrl,
 }) => (
 	<Article>
 		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{placeholderUrl
-				&& (
-					<LazyProgressiveImage
-						alt={title}
-						src={placeholderUrl}
-						offset={offset}
-						fallbackSrc={image}
-						ratio={ratio}
-						preventBlur={preventBlur}
-					>
-						{sources.length === 0
-						&& <Source srcSet={image} />
-						}
-						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-					</LazyProgressiveImage>
-				)
-			}
+			<LazyProgressiveImage
+				alt={title}
+				ratio={ratio}
+				offset={offset}
+				fallbackSrc={image}
+				src={placeholderUrl}
+				preventBlur={preventBlur}
+			>
+				{sources.length === 0
+					&& <Source srcSet={image} />
+				}
+				{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+			</LazyProgressiveImage>
+
 			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
 			{subtitle && <Description itemProp="description">{subtitle}</Description>}
 			{labels && <Labels labels={labels} />}

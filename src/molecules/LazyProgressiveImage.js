@@ -23,7 +23,7 @@ class LazyProgressiveImage extends PureComponent {
 		/** Background color used on the <figure> tag */
 		backgroundColor: propTypes.string,
 		/** Low quality image used for first load */
-		src: propTypes.string.isRequired,
+		src: propTypes.string,
 		/** The image src used for <noscript> */
 		fallbackSrc: propTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
@@ -37,9 +37,10 @@ class LazyProgressiveImage extends PureComponent {
 	}
 
 	static defaultProps = {
-		backgroundColor: '#ececec',
-		alt: 'Artikkelbilde.',
+		src: '',
 		preventBlur: false,
+		alt: 'Artikkelbilde.',
+		backgroundColor: '#ececec',
 	}
 
 	componentDidMount() {
@@ -50,12 +51,12 @@ class LazyProgressiveImage extends PureComponent {
 	render() {
 		const {
 			alt,
-			backgroundColor,
+			src,
+			ratio,
 			children,
 			fallbackSrc,
 			preventBlur,
-			ratio,
-			src,
+			backgroundColor,
 		} = this.props;
 
 
