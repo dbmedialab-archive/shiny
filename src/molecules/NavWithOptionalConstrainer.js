@@ -31,7 +31,7 @@ const NavWithOptionalConstrainer = ({
 		);
 	}
 	return (
-		<Nav {...rest}>
+		<Nav {...rest} zIndex={zIndex}>
 			{children}
 		</Nav>
 	);

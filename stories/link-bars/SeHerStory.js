@@ -9,6 +9,7 @@ import {
 	SeHerLogo,
 	FontIcon,
 	HugeHeading,
+	LinkBarButton,
 	LinkBarItem,
 	LinkBarDropdown,
 	VerticalLinkBar,
@@ -38,10 +39,22 @@ const LinkBarBleedingLogo = styled(LinkBarItem)`
 	z-index: 9;
 `;
 
-const SeHerDropdown = styled(LinkBarDropdown)`
+const SeHerButton = styled(LinkBarButton)`
 	font-size: 2.0rem;
 	line-height: 2.4rem;
 `;
+
+const SeHerDropdownButton = (props) => {
+	const { linkText, hide, ...rest } = props;
+	const direction = (hide === true) ? 'down' : 'up';
+
+	return (
+		<SeHerButton {...rest}>
+			{linkText}{' '}
+			<FontIcon name={`arrow-alt-${direction}`} />
+		</SeHerButton>
+	);
+};
 
 const linkProps = {
 	useUnderline: true,
@@ -69,6 +82,7 @@ const SeHerStory = () => (
 			justifyContent="space-between"
 			overflow="visible"
 			shouldAdjustForNestedPadding
+			zIndex={9}
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
@@ -76,7 +90,7 @@ const SeHerStory = () => (
 				</LogoLink>
 			</LinkBarBleedingLogo>
 			<HorizontalLinkBar
-				isTopLevelComponent={false} // Use the full width
+				isTopLevelComponent // Use the full width
 				background="#ffffff" // A refactor to bacground='splashBackground' is on the books
 				shouldFlexChildren
 				justifyContent="space-between"
@@ -109,11 +123,12 @@ const SeHerStory = () => (
 						md
 					/>
 				</form>
-				<SeHerDropdown
+				<LinkBarDropdown
 					xs
 					md={false}
 					linkText="☰"
 					textColor="type"
+					Trigger={SeHerDropdownButton}
 				>
 					<VerticalLinkBar background="white" align="right">
 						<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
@@ -124,7 +139,7 @@ const SeHerStory = () => (
 						<LinkBarLink linkText="Video" url="#" {...linkProps} />
 						<LinkBarLink linkText="Sterke historier" url="#" {...linkProps} />
 					</VerticalLinkBar>
-				</SeHerDropdown>
+				</LinkBarDropdown>
 			</HorizontalLinkBar>
 		</HorizontalLinkBar>
 		<HorizontalLinkBar
