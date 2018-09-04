@@ -126,7 +126,7 @@ TrysilPlug.defaultProps = {
 	Heading: DefaultHeading,
 	headingProps: {},
 	preventBlur: false,
-	placeholderUrl: null,
+	placeholderUrl: '',
 };
 
 export { TrysilPlug };
