@@ -51,6 +51,7 @@ const TrysilPlug = ({
 	image,
 	ratio,
 	title,
+	fadeIn,
 	labels,
 	kicker,
 	offset,
@@ -73,6 +74,7 @@ const TrysilPlug = ({
 						fallbackSrc={image}
 						src={placeholderUrl ? placeholderUrl : image}
 						preventBlur={preventBlur}
+						fadeIn={fadeIn}
 					>
 						{sources.length === 0
 						&& <Source srcSet={image} />
@@ -100,7 +102,7 @@ TrysilPlug.propTypes = {
 		text: PropTypes.string,
 	})),
 	url: PropTypes.string.isRequired,
-	placeholderUrl: PropTypes.string.isRequired,
+	placeholderUrl: PropTypes.string,
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
@@ -124,6 +126,7 @@ TrysilPlug.defaultProps = {
 	Heading: DefaultHeading,
 	headingProps: {},
 	preventBlur: false,
+	placeholderUrl: null,
 };
 
 export { TrysilPlug };
