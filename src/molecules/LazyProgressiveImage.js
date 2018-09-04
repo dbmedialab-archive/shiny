@@ -23,7 +23,7 @@ class LazyProgressiveImage extends PureComponent {
 		/** Background color used on the <figure> tag */
 		backgroundColor: propTypes.string,
 		/** Low quality image used for first load */
-		src: propTypes.string,
+		src: propTypes.string.isRequired,
 		/** The image src used for <noscript> */
 		fallbackSrc: propTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
@@ -34,11 +34,11 @@ class LazyProgressiveImage extends PureComponent {
 		ratio: propTypes.number.isRequired,
 		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
 		preventBlur: propTypes.bool,
+		/** Option to fadein the image. */
 		fadeIn: propTypes.bool,
 	}
 
 	static defaultProps = {
-		src: '',
 		preventBlur: false,
 		alt: 'Artikkelbilde.',
 		backgroundColor: '#ececec',
