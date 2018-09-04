@@ -54,6 +54,7 @@ const MatStory = () => (
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
+			zIndex={5}
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
