@@ -10,12 +10,11 @@ const StyledPicture = styled.picture`
 	& img {
 		display: block;
 		max-width: 100%;
-
+		backface-visibility: hidden;
+		transform: translate3d(0,0,0);
 
 		${props => (!props.preventBlur ? css`
-			backface-visibility: hidden;
 			perspective: 1000;
-			transform: translate3d(0,0,0);
 			transform: translateZ(0);
 			will-change: filter;
 			&.blur-up {
@@ -25,6 +24,17 @@ const StyledPicture = styled.picture`
 
 				&.lazyloaded {
 					filter: blur(0.5px);
+				}
+		}` : '')}
+
+		${props => (props.fadeIn ? css`
+			will-change: opacity;
+			&.fade-in {
+				opacity: 0.1;
+				transition: opacity 400ms;
+
+				&.lazyloaded {
+					opacity: 1;
 				}
 		}` : '')}
 	}
