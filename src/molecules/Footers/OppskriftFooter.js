@@ -132,6 +132,7 @@ const OppskriftFooter = () => (
 				</Col>
 				<Col md={3} xs={12}>
 					<SubCatHeading>Ansvarlig redaktør:</SubCatHeading>
+					Alexandra Beverfjord
 					<VerticalSeparator height={5} />
 					<SubCatHeading>Utgiverselskap</SubCatHeading>
 					Aller Media AS
