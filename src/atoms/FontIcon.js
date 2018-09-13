@@ -495,7 +495,7 @@ const Icon = styled.span`
 		case 'people': return '\\e7ce';
 		case 'people-alt': return '\\e7cf';
 		case 'pause': return '\\e7d0';
-		case 'pannel-close': return '\\e7d1';
+		case 'panel-close': return '\\e7d1';
 		case 'panel-show': return '\\e7d2';
 		case 'page-restricted': return '\\e7d3';
 		case 'page-remove': return '\\e7d4';
