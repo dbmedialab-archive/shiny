@@ -29,14 +29,6 @@ const cssReset = `
 
 const global = `
 	${cssReset}
-
-	body {
-		color: ${colors[colors.skinColors.type]};
-		font-family: ${variables.mainFont};
-		font-size: ${variables.uiRegularSize};
-		line-height: ${variables.uiRegularLineHeight};
-		font-weight: 300;
-	}
 `;
 
 const theme = {

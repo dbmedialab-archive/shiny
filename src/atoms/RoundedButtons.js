@@ -7,7 +7,7 @@ import { getColor, getVariable } from '../utils';
 
 const styles = (props) => {
 	const mainFont = getVariable('mainFont')(props);
-	const fontWeight = getVariable('semiBoldWeight')(props);
+	const fontWeight = getVariable('uiWeightSemiBold')(props);
 	const background = props.background ? getColor(props.background)(props) : getColor('grayTintLighter')(props);
 	const color = props.color ? getColor(props.color)(props) : getColor('type')(props);
 	const backgroundColor = props.background ? getColor(`${props.background}Dark`)(props) : getColor('grayTint')(props);

@@ -76,6 +76,7 @@ function getMapping() {
 		BlockLink: '../atoms/BlockLink',
 		BlockLinkWithBackgroun: '../atoms/BlockLinkWithBackground',
 		BlockQuote: '../atoms/BlockQuote',
+		Body: '../atoms/Body',
 		BodyText: '../atoms/BodyText',
 		Button: '../atoms/Button',
 		BylineImage: '../atoms/BylineImage',
