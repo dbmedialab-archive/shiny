@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'emotion-theming';
 
 import { unshadeColorString } from '../utils/unshade-color-string';
 

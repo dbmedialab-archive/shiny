@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css, injectGlobal } from 'styled-components';
+import styled, { css, injectGlobal } from 'react-emotion';
 
 const FontIcon = (props) => {
 	injectGlobal`

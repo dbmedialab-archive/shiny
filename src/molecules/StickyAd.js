@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import Sticker from 'react-stickyfill';
 
 import { AdWrapper } from '../atoms/AdWrapper';
@@ -24,11 +24,11 @@ const StickyWrapper = styled.div`
 	)}}
 	${props => ['sm', 'md', 'lg'].map(size => css`
 		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
-			${props => (
+			${(props => (
 		props.sticky === 'right'
 			? `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
 			: `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-	)}}
+	))(props)}}
 
 		`)}
 

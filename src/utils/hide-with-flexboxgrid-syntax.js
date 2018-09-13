@@ -1,5 +1,5 @@
 /**
- * Hide a styled-component with syntax familiar to users of react-styled-flexboxgrid.
+ * Hide a styled-component with syntax familiar to users of react-emotion-flexboxgrid.
  *
  * Example usage:
  * const Foo = styled.div`

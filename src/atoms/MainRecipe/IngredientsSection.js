@@ -1,19 +1,19 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const Buttons = Styled.button`
+const Buttons = styled.button`
 	background: #ff790a;
 	border: none;
 	height: 3.8rem;
 	display: inline-block;
 	border-radius: 10%;
 	padding: 0;
-	
+
 	> span {
 		color: #fff;
 	}
 `;
 
-const Counter = Styled.span`
+const Counter = styled.span`
 	width: 3.8rem;
 	display: inline-block;
 	height: 3.7rem;
@@ -32,7 +32,7 @@ const Counter = Styled.span`
 	}
 `;
 
-const Pers = Styled.span`
+const Pers = styled.span`
 	font-size: 1.8rem;
 	color: #333333;
 	font-weight: normal;
@@ -40,7 +40,7 @@ const Pers = Styled.span`
 	letter-spacing: .0625rem;
 `;
 
-const AddCart = Styled.div`
+const AddCart = styled.div`
 	> span:first-child {
 		color: #ff790a;
 		vertical-align: sub;
@@ -53,7 +53,7 @@ const AddCart = Styled.div`
 	}
 `;
 
-const Quantity = Styled.ul`
+const Quantity = styled.ul`
 	margin-top: 2.6rem;
 	list-style: none;
 	padding: 0;

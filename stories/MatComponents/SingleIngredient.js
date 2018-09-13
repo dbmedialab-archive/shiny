@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { getColor, getVariable } from '../../src/utils';
 
@@ -16,7 +16,6 @@ import {
 	FrontLargeHeading,
 } from '../../src';
 import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
-import { PaddedGrid as StorybookGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { Code } from '../../src/atoms/Code';
 
 const description = 'Mandelpotet er en delikatessepotet som dyrkes over store deler av landet, også langt oppe i '
@@ -37,17 +36,15 @@ const RelatedSection = styled.section`
 
 const SingleIngredientStory = ({ ...rest }) => (
 	<section>
-		<StorybookGrid>
-			<Row>
-				<Col xs={12}>
-					<HugeHeading>Single Ingredient</HugeHeading>
-					<p>A page displaying a single ingredient that can be used in recipes.</p>
-					<p>This is a huuuge story. The RelatedSection could maybe be taken out of here and get its own story instead.
-					</p>
-					<Heading>Demo</Heading>
-				</Col>
-			</Row>
-		</StorybookGrid>
+		<Row>
+			<Col xs={8}>
+				<HugeHeading>Single Ingredient</HugeHeading>
+				<p>A page displaying a single ingredient that can be used in recipes.</p>
+				<p>This is a huuuge story. The RelatedSection could maybe be taken out of here and get its own story instead.
+				</p>
+				<Heading>Demo</Heading>
+			</Col>
+		</Row>
 
 		<Grid fluid>
 			<Hero
@@ -165,12 +162,11 @@ const SingleIngredientStory = ({ ...rest }) => (
 			</Grid>
 		</RelatedSection>
 
-		<StorybookGrid>
-			<Row>
-				<Col xs>
-					<Heading>Usage</Heading>
-					<Code language="jsx">
-						{`
+		<Row>
+			<Col xs>
+				<Heading>Usage</Heading>
+				<Code language="jsx">
+					{`
 import {
 	Grid,
 	Row,
@@ -308,10 +304,9 @@ const RelatedSection = styled.section\`
 	</Grid>
 </RelatedSection>
 						`}
-					</Code>
-				</Col>
-			</Row>
-		</StorybookGrid>
+				</Code>
+			</Col>
+		</Row>
 	</section>
 );
 

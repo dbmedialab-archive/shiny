@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 const BylineName = styled.span`
 	font-size: ${props => props.theme.variables.headingSmallSize};

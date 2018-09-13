@@ -1,7 +1,7 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 import { hideWithFlexboxgridSyntax } from '../../utils/hide-with-flexboxgrid-syntax';
 
-const TopBarSearchField = Styled.input`
+const TopBarSearchField = styled.input`
 	height: 3.8rem;
 	width: 56.4rem;
 	float: right;

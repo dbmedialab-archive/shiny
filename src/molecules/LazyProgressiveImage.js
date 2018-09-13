@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
@@ -34,12 +34,15 @@ class LazyProgressiveImage extends PureComponent {
 		ratio: propTypes.number.isRequired,
 		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
 		preventBlur: propTypes.bool,
+		/** Option to fadein the image. */
+		fadeIn: propTypes.bool,
 	}
 
 	static defaultProps = {
-		backgroundColor: '#ececec',
-		alt: 'Artikkelbilde.',
 		preventBlur: false,
+		alt: 'Artikkelbilde.',
+		backgroundColor: '#ececec',
+		fadeIn: false,
 	}
 
 	componentDidMount() {
@@ -50,21 +53,21 @@ class LazyProgressiveImage extends PureComponent {
 	render() {
 		const {
 			alt,
-			backgroundColor,
+			src,
+			ratio,
+			fadeIn,
 			children,
 			fallbackSrc,
 			preventBlur,
-			ratio,
-			src,
+			backgroundColor,
 		} = this.props;
-
 
 		return (
 			<Figure
 				backgroundColor={backgroundColor}
 				paddingBottom={ratio * 100}
 			>
-				<Picture alt={alt} preventBlur={preventBlur}>
+				<Picture alt={alt} preventBlur={preventBlur} fadeIn={fadeIn}>
 					{children}
 					<Image
 						itemProp="image"
@@ -72,7 +75,7 @@ class LazyProgressiveImage extends PureComponent {
 						data-sizes="auto"
 						src={src}
 						data-src={src}
-						className={`lazyload ${preventBlur ? '' : 'blur-up'}`}
+						className={`lazyload ${preventBlur ? '' : 'blur-up'} ${fadeIn ? 'fade-in' : ''}`}
 					/>
 					<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
 				</Picture>

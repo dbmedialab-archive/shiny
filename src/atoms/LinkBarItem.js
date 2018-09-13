@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import propTypes from 'prop-types';
 import { hideWithFlexboxgridSyntax } from '../utils/hide-with-flexboxgrid-syntax';
 
@@ -11,7 +11,7 @@ const LinkBarItem = styled.li`
 	z-index: 8;
 
 	/* This whole block deals with hiding the LinkBarItem */
-	/* with syntax from react-styled-flexboxgrid */
+	/* with syntax from react-emotion-flexboxgrid */
 	${hideWithFlexboxgridSyntax('inline-block')}
 	`;
 

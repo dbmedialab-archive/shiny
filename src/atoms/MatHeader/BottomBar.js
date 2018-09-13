@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const BottomBar = Styled.div`	
+const BottomBar = styled.div`
 	&:after {
 		content: '';
 		clear: both;

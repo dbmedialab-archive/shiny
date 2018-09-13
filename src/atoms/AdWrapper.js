@@ -1,4 +1,4 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
 import { getColor, getVariable } from '../utils';
@@ -9,7 +9,7 @@ const setTextAlign = (sticky) => {
 	return 'center';
 };
 
-const AdWrapper = Styled.div`
+const AdWrapper = styled.div`
 	width: ${props => props.width};
 	height: auto;
 	min-height: calc(${props => props.height} + ${getVariable('verticalBase')});

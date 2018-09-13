@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { getVariable } from '../utils';
 import { LinkBarDropdown } from './LinkBarDropdown';

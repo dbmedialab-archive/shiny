@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
@@ -13,7 +13,7 @@ const Search = styled.div`
 		: (`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
   background-color: ${getColor('white')};
   font-size: 1.6rem;
-  box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')(props)}`)};
   overflow: hidden;
   box-sizing: border-box;
   border-bottom: ${props => props.borderBottom};

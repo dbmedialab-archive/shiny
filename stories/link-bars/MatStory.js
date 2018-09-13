@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import {
 	LinkBarLink,
@@ -54,6 +54,7 @@ const MatStory = () => (
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
+			zIndex={5}
 		>
 			<LinkBarBleedingLogo isListItem>
 				<LogoLink useUnderline={false}>
