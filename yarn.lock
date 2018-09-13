@@ -3675,11 +3675,11 @@ emotion-theming@9.2.6:
   dependencies:
     hoist-non-react-statics "^2.3.1"
 
-emotion@9.2.6:
-  version "9.2.6"
-  resolved "https://registry.yarnpkg.com/emotion/-/emotion-9.2.6.tgz#48517515e769bca6d8f7ff18425a7f133b010f22"
+emotion@9.2.8:
+  version "9.2.8"
+  resolved "https://registry.yarnpkg.com/emotion/-/emotion-9.2.8.tgz#b89e754be1a109f4e47ff0031928f94e40d7984a"
   dependencies:
-    babel-plugin-emotion "^9.2.6"
+    babel-plugin-emotion "^9.2.8"
     create-emotion "^9.2.6"
 
 encodeurl@~1.0.2:
