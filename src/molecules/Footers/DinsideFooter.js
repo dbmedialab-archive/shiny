@@ -47,7 +47,7 @@ const DinsideLink = styled.a`
 	}
 `;
 
-const DinsideLinkYellow = DinsideLink.extend`
+const DinsideLinkYellow = styled(DinsideLink)`
 	color: ${getColor('yellowDark')};
 `;
 
