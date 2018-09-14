@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { getColor, getVariable } from '../../utils';
 import { Col, Row, Grid } from '../..';
@@ -75,7 +75,7 @@ const DinsideFooter = (props) => {
 							</Col>
 						</Row>
 					</LogoCol>
-					<Col md={3} xs={12} >
+					<Col md={3} xs={12}>
 						<Row>
 							<Col xs={12}>
 								<SubCatHeading>Postadresse:</SubCatHeading>
