@@ -121,6 +121,7 @@ class ScrollArrowsLinkBar extends Component {
 			isTopLevelComponent,
 			arrowGradientRgbBackgroundValues,
 			arrowGradientHeight,
+			arrowSize,
 			...rest
 		} = this.props;
 
@@ -145,6 +146,7 @@ class ScrollArrowsLinkBar extends Component {
 								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
+								size={arrowSize}
 							/>
 						)
 					}
@@ -178,6 +180,7 @@ class ScrollArrowsLinkBar extends Component {
 								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
+								size={arrowSize}
 							/>
 						)
 					}
