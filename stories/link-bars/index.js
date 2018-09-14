@@ -20,6 +20,7 @@ import { ButtonStory } from './ButtonStory';
 import { DropdownStory } from './DropdownStory';
 import { HideStory } from './HideStory';
 import { SeHerStory } from './SeHerStory';
+import { SeHerMenuRemake } from './SeHerMenuRemake';
 import { MatStory } from './MatStory';
 import { KKStory } from './KKStory';
 
@@ -47,5 +48,6 @@ export default () => {
 		.add('Dagbladet-like bar', DagbladetStory)
 		.add('KK', KKStory)
 		.add('SeHer-like bar', SeHerStory)
+		.add('SeHer menu remake', SeHerMenuRemake)
 		.add('MatStory link bar', MatStory);
 };
