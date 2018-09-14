@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'react-emotion';
+import { withTheme } from 'emotion-theming';
 import propTypes from 'prop-types';
 import { getColor } from '../utils';
 

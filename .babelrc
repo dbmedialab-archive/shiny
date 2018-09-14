@@ -8,22 +8,22 @@
 		"@babel/plugin-transform-object-assign",
 		"react-docgen",
 		[
-			"styled-components",
-			{
-				"ssr": true,
-				"displayName": true,
-				"preprocess": false
-			}
-		],
-		[
 			"transform-imports",
 			{
 				"..": {
-					"transform": "./../../babel-tranform-shiny.js",
+					"transform": "./../../babel-transform-shiny.js",
 					"preventFullImport": true,
 					"skipDefaultConversion": true
 				}
 			}
 		]
-	]
+	],
+	"env": {
+		"production": {
+		"plugins": [["emotion", { "hoist": true }]]
+		},
+		"development": {
+		"plugins": [["emotion", { "sourceMap": true, "autoLabel": true }]]
+		}
+	}
 }

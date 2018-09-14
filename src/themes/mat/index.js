@@ -44,7 +44,7 @@ const theme = {
 		container: {
 			sm: 71, // rem
 			md: 100.0, // rem
-			lg: 110.0,  // rem
+			lg: 101.0,  // rem
 		},
 		breakpoints: {
 			xs: 0,  // em

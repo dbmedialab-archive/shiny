@@ -30,7 +30,7 @@ export default () => (
 			Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs,
 			sm, md & lg viewport widths.
 		</p>
-		<p>The break points can be customised in the styled-components theme.</p>
+		<p>The break points can be customised in the emotion theme.</p>
 		<Row>
 			<Col xs={12} sm={3} md={2} lg={1}>xs-12 sm-3 md-2 lg-1</Col>
 			<Col xs={6} sm={6} md={8} lg={10}>xs-6 sm-6 md-8 lg-10</Col>

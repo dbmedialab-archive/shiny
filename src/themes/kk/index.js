@@ -7,7 +7,7 @@ const variables = {
 	mainFont: '"Open Sans", Helvetica, Arial, sans-serif',
 	headingsFont: '"Didot 16 A", "Didot 16 B", Didot, "GFS Didot", Georgia, serif',
 
-	uiWeight: '300',
+	uiWeight: 300,
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
 };
@@ -16,14 +16,6 @@ const global = `
 	${fontSpecs}
 
 	${cssReset}
-
-	body {
-		color: ${colors[colors.skinColors.type]};
-		font-family: ${variables.mainFont};
-		font-size: ${variables.uiRegularSize};
-		line-height: ${variables.uiRegularLineHeight};
-		font-weight: 300;
-	}
 `;
 
 const theme = {

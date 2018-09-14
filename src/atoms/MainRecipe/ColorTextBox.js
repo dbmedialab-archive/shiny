@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { Col } from '../Col';
 import { getColor } from '../../utils';
 

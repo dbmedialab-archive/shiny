@@ -12,6 +12,7 @@ import forms from './forms';
 import rating from './rating';
 import modals from './Modal';
 import images from './Images';
+import footers from './footers';
 
 introduction();
 
@@ -31,3 +32,4 @@ logos();
 matComponents();
 modals();
 trysilPlug();
+footers();

@@ -3,6 +3,7 @@ import { darken, lighten } from 'polished';
 import { cssReset } from '../../utils/css-reset';
 
 import { variables } from './variables';
+import { flexboxgrid } from './flexboxgrid';
 
 const colorsToShade= {
 	primary: '#e3000b',
@@ -47,19 +48,12 @@ const global = `
 	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
 
 	${cssReset}
-
-	body {
-		color: ${colors[colors.skinColors.darkness]};
-		font-family: ${variables.mainFont};
-		font-size: ${variables.uiRegularSize};
-		line-height: ${variables.uiRegularLineHeight};
-		font-weight: 300;
-	}
 `;
 
 export default {
 	name: 'SeHer',
 	colors,
+	flexboxgrid,
 	global,
 	variables,
 };

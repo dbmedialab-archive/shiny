@@ -26,11 +26,13 @@ import { Dice } from '@aller/shiny';
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>
-						<th>Prop</th>
-						<th>Description</th>
-						<th>Required/optional</th>
-						<th>Type</th>
-						<th>default</th>
+						<tr>
+							<th>Prop</th>
+							<th>Description</th>
+							<th>Required/optional</th>
+							<th>Type</th>
+							<th>default</th>
+						</tr>
 					</thead>
 					<tbody>
 						<tr>
@@ -83,7 +85,7 @@ import { Dice } from '@aller/shiny';
 						</tr>
 						<tr>
 							<td>theme</td>
-							<td>The theme prop will be provided by styled-components' ThemeProvider.</td>
+							<td>The theme prop will be provided by emotion's ThemeProvider.</td>
 							<td>required</td>
 							<td>object</td>
 							<td>default theme</td>

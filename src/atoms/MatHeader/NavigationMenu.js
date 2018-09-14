@@ -1,6 +1,6 @@
-import Styled from 'styled-components';
+import styled from 'react-emotion';
 
-const NavigationMenu = Styled.ul`
+const NavigationMenu = styled.ul`
 	list-style: none;
 	text-transform: uppercase;
 	margin-left: 17.5rem;

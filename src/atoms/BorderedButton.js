@@ -1,6 +1,6 @@
-import { css } from 'styled-components';
-import propTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { css } from 'react-emotion';
+
 import { Button } from './Button';
 import { isBright, getColor } from '../utils';
 
@@ -10,13 +10,13 @@ const calculateTextColor = (theme, backgroundColor=theme.colors.primary) => (
 		: getColor('white')
 );
 
-const coloredBackground = css`
-	border-color: ${getColor('primary')};
-	background-color: ${getColor('primary')};
-	color: ${props => calculateTextColor(props.theme)};
+const coloredBackground = props => css`
+border-color: ${getColor('primary')(props)};
+background-color: ${getColor('primary')(props)};
+color: ${calculateTextColor(props.theme)(props)};
 `;
 
-const BorderedButton = styled(Button)`
+const BorderedButtonImpl = styled(Button)`
 	color: ${getColor('grayTintDark')};
 	border-radius: 0.3rem;
 	border: solid 0.1rem ${getColor('grayTint')};
@@ -27,7 +27,6 @@ const BorderedButton = styled(Button)`
 	outline: none;
 	cursor: pointer;
 	${props => props.isActive && coloredBackground};
-
 	@media (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
 		&:hover{
 			${coloredBackground}
@@ -35,11 +34,6 @@ const BorderedButton = styled(Button)`
 	}
 `;
 
-BorderedButton.defaultProps = {
-	ALLCAPS: true,
-};
-BorderedButton.propTypes = {
-	ALLCAPS: propTypes.bool,
-};
+const BorderedButton = props => <BorderedButtonImpl ALLCAPS {...props} />;
 
 export { BorderedButton };

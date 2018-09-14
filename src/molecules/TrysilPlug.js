@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import stripTags from 'striptags';
 
 import {
@@ -47,32 +47,34 @@ const Description = styled.p`
 `;
 
 const TrysilPlug = ({
-	kicker,
-	title,
-	subtitle,
-	image,
-	labels,
 	url,
-	placeholderUrl,
-	offset,
-	sources,
+	image,
 	ratio,
+	title,
+	fadeIn,
+	labels,
+	kicker,
+	offset,
 	Heading,
-	headingProps,
+	sources,
+	subtitle,
 	preventBlur,
+	headingProps,
+	placeholderUrl,
 }) => (
 	<Article>
 		<PlugLink href={url}>
 			{kicker && <Kicker>{kicker}</Kicker>}
-			{placeholderUrl
+			{image
 				&& (
 					<LazyProgressiveImage
 						alt={title}
-						src={placeholderUrl}
+						ratio={ratio}
 						offset={offset}
 						fallbackSrc={image}
-						ratio={ratio}
+						src={placeholderUrl ? placeholderUrl : image}
 						preventBlur={preventBlur}
+						fadeIn={fadeIn}
 					>
 						{sources.length === 0
 						&& <Source srcSet={image} />
@@ -100,7 +102,7 @@ TrysilPlug.propTypes = {
 		text: PropTypes.string,
 	})),
 	url: PropTypes.string.isRequired,
-	placeholderUrl: PropTypes.string.isRequired,
+	placeholderUrl: PropTypes.string,
 	offset: PropTypes.number,
 	sources: PropTypes.arrayOf(PropTypes.object),
 	ratio: PropTypes.number.isRequired,
@@ -124,6 +126,7 @@ TrysilPlug.defaultProps = {
 	Heading: DefaultHeading,
 	headingProps: {},
 	preventBlur: false,
+	placeholderUrl: '',
 };
 
 export { TrysilPlug };
