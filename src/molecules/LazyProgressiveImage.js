@@ -24,8 +24,6 @@ class LazyProgressiveImage extends PureComponent {
 		backgroundColor: propTypes.string,
 		/** Low quality image used for first load */
 		src: propTypes.string.isRequired,
-		/** The image src used for <noscript> */
-		fallbackSrc: propTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
 		alt: propTypes.string,
 		/** Should be <source> tags */
