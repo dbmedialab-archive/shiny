@@ -24,8 +24,6 @@ class LazyProgressiveImage extends PureComponent {
 		backgroundColor: propTypes.string,
 		/** Low quality image used for first load */
 		src: propTypes.string.isRequired,
-		/** The image src used for <noscript> */
-		fallbackSrc: propTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
 		alt: propTypes.string,
 		/** Should be <source> tags */
@@ -57,7 +55,6 @@ class LazyProgressiveImage extends PureComponent {
 			ratio,
 			fadeIn,
 			children,
-			fallbackSrc,
 			preventBlur,
 			backgroundColor,
 		} = this.props;
@@ -77,7 +74,7 @@ class LazyProgressiveImage extends PureComponent {
 						data-src={src}
 						className={`lazyload ${preventBlur ? '' : 'blur-up'} ${fadeIn ? 'fade-in' : ''}`}
 					/>
-					<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
+					<noscript><img src={src} alt={alt} itemProp="image" /></noscript>
 				</Picture>
 			</Figure>
 		);
