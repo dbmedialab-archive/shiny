@@ -65,4 +65,8 @@ Row.propTypes = {
 	children: PropTypes.node,
 };
 
-export { Row };
+const RowM = Row.extend`
+	margin: 0;
+`;
+
+export { RowM as Row };
