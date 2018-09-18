@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const StateIndicationStory = () => (
 	<section>
 		<HugeHeading>LinkBarLink with alternative state indication</HugeHeading>
@@ -24,20 +20,20 @@ const StateIndicationStory = () => (
 			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarLink
 					useUnderline={false}
-					activeBackground={colors.pinkLight}
+					activeBackgroundColor="pinkLight"
 					linkText="One"
 					url="https://example.com"
 					isActive
 				/>
 				<LinkBarLink
 					useUnderline={false}
-					activeBackground={colors.pinkLight}
+					activeBackgroundColor="pinkLight"
 					linkText="Two"
 					url="https://example.com"
 				/>
 				<LinkBarLink
 					useUnderline={false}
-					activeBackground={colors.pinkLight}
+					activeBackgroundColor="pinkLight"
 					linkText="Buckle My Shoe"
 					url="https://example.com"
 				/>

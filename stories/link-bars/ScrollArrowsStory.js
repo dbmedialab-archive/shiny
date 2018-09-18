@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const ScrollArrowsStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>

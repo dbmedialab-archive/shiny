@@ -9,10 +9,6 @@ import {
 	HorizontalLinkBar,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const HorizontalLinkBarStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar</HugeHeading>

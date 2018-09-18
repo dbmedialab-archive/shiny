@@ -40,7 +40,7 @@ const LinkBarBleedingLogo = styled(LinkBarItem)`
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	activeTextColor: 'primary',
 	textColor: 'type',
 };

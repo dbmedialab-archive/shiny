@@ -18,9 +18,6 @@ import {
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
 
 const CustomTrigger = ({ onClick, className }) => (
 	<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>

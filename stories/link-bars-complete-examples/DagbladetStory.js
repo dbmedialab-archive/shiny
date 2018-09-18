@@ -25,13 +25,9 @@ import {
 	getVariable,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const linkProps = {
 	useUnderline: false,
-	activeBackground: '#bd0000',
+	activeBackgroundColor: 'primaryDark',
 	textColor: 'white',
 	ALLCAPS: true,
 };
@@ -183,7 +179,7 @@ import {
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: '#bd0000',
+	activeBackground: 'primaryDark',
 	textColor: 'white',
 	ALLCAPS: true,
 };

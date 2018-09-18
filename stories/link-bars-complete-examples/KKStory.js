@@ -18,11 +18,6 @@ import {
 	ButtonWithModal,
 } from '../../src';
 
-
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const customStyles = {
 	content: {
 		top: '55%',
@@ -41,7 +36,7 @@ const customStyles = {
 
 const logoProps = {
 	useUnderline: true,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	textColor: 'black',
 	isActive: true,
 	size: 'large',
@@ -49,7 +44,7 @@ const logoProps = {
 
 const dropDownLinkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	linkText: 'Meny',
 	width: '100%',
 	position: 'static',
@@ -60,7 +55,7 @@ const dropDownLinkProps = {
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	position: 'static',
 	flex: '0 0 50%',
 };
@@ -265,7 +260,7 @@ const customStyles = {
 
 const logoProps = {
 	useUnderline: true,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	textColor: 'black',
 	isActive: true,
 	size: 'large',
@@ -273,7 +268,7 @@ const logoProps = {
 
 const dropDownLinkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	linkText: 'Meny',
 	width: '100%',
 	position: 'static',
@@ -284,7 +279,7 @@ const dropDownLinkProps = {
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	position: 'static',
 };
 

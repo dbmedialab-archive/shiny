@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const LinkStory = () => (
 	<section>
 		<HugeHeading>LinkBarLink</HugeHeading>
@@ -72,7 +68,7 @@ import {
 					<td>&quot;Manglende lenketekst&quot;</td>
 				</tr>
 				<tr>
-					<th>activeBackground</th>
+					<th>activeBackgroundColor</th>
 					<td>Color of the background on links that have the <em>isActive</em> flag set.</td>
 					<td>optional</td>
 					<td>String matching a theme color name</td>

@@ -15,10 +15,6 @@ import {
 	SmallLinkBarButton,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const ButtonStory = () => (
 	<section>
 		<HugeHeading>LinkBarButton</HugeHeading>
@@ -55,21 +51,21 @@ const ButtonStory = () => (
 				<SmallLinkBarButton
 					isActive
 					useUnderline={false}
-					activeBackground={colors.blueLight}
+					activeBackgroundColor="blueLight"
 					onClick={action('You like clicking things')}
 				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 				</SmallLinkBarButton>
 				<SmallLinkBarButton
 					useUnderline={false}
-					activeBackground={colors.blueLight}
+					activeBackgroundColor="blueLight"
 					onClick={action('You like clicking things')}
 				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 				</SmallLinkBarButton>
 				<SmallLinkBarButton
 					useUnderline={false}
-					activeBackground={colors.blueLight}
+					activeBackgroundColor="blueLight"
 					onClick={action('You like clicking things')}
 				>
 					<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />
@@ -107,21 +103,21 @@ import {
 	<SmallLinkBarButton
 		isActive
 		useUnderline={false}
-		activeBackground={colors.blueLight}
+		activeBackgroundColor="blueLight"
 		onClick={action('You like clicking things')}
 	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo1" />
 	</SmallLinkBarButton>
 	<SmallLinkBarButton
 		useUnderline={false}
-		activeBackground={colors.blueLight}
+		activeBackgroundColor="blueLight"
 		onClick={action('You like clicking things')}
 	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo2" />
 	</SmallLinkBarButton>
 	<SmallLinkBarButton
 		useUnderline={false}
-		activeBackground={colors.blueLight}
+		activeBackgroundColor="blueLight"
 		onClick={action('You like clicking things')}
 	>
 		<img src="https://sol.no/s/img/w_30/static/sol.png" alt="" title="demo3" />

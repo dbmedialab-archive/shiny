@@ -58,7 +58,7 @@ const SeHerDropdownButton = (props) => {
 
 const linkProps = {
 	useUnderline: true,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	textColor: 'type',
 	skin: 'splashBorder',
 };
