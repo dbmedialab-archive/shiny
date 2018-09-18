@@ -69,7 +69,7 @@ const Welcome = () => (
 			<Code language="jsx">
 				{`
 import React from 'react';
-import { ThemeSelector as ShinyThemeProvider } from 'aller/shiny';
+import { ThemeSelector as ShinyThemeProvider } from '@aller/shiny';
 import { App } from './App';
 
 const AppWithShinyTheme = props => (
@@ -105,6 +105,10 @@ const App = props => (
 export default App;
 				`}
 			</Code>
+		</section>
+
+		<section>
+			Remember to install the peerDependencies (see package.json).
 		</section>
 	</Fragment>
 );

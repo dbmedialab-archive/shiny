@@ -4,6 +4,7 @@ export { themes                  } from './themes';
 // Atoms
 export {
 	Heading,
+	XSmallHeading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
