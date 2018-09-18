@@ -22,7 +22,7 @@ const ScrollArrowsNestedPaddingStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<ScrollArrowsLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				shouldAdjustForNestedPadding
 			>
 				<LinkBarLink linkText="One long link" url="https://example.com" isActive />
@@ -56,7 +56,7 @@ import {
 } from '@aller/shiny';
 
 <ScrollArrowsLinkBar
-	background={colors.white}
+	backgroundColor="white"
 	shouldAdjustForNestedPadding
 >
 	<LinkBarLink linkText="One long link" url="https://example.com" isActive />

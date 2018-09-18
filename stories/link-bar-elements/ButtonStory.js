@@ -34,7 +34,7 @@ const ButtonStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarButton
 					isActive
 					onClick={action('You like clicking things')}
@@ -51,7 +51,7 @@ const ButtonStory = () => (
 
 			<hr />
 
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<SmallLinkBarButton
 					isActive
 					useUnderline={false}
@@ -86,7 +86,7 @@ import {
 	SmallLinkBarButton
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<LinkBarButton
 		isActive
 		onClick={action('You like clicking things')}
@@ -103,7 +103,7 @@ import {
 
 <hr />
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<SmallLinkBarButton
 		isActive
 		useUnderline={false}

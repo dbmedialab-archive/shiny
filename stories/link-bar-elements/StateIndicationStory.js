@@ -21,7 +21,7 @@ const StateIndicationStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarLink
 					useUnderline={false}
 					activeBackground={colors.pinkLight}
@@ -52,7 +52,7 @@ import {
 	LinkBarLink,
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<LinkBarLink
 	useUnderline={false}
 	activeBackground={colors.pinkLight}

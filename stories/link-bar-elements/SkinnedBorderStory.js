@@ -24,7 +24,7 @@ const SkinnedBorderStory = () => (
 					border. Hover inactive items for an animated effect.
 		</p>
 		<DemoContainer>
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarLink linkText="Sport" url="https://example.com" />
 				<LinkBarLink linkText="Underholdning" url="https://example.com" />
 				<LinkBarLink linkText="Non-corresponding linkText defaults to primary color" url="https://example.com" />
@@ -42,7 +42,7 @@ import {
 	LinkBarLink,
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<LinkBarLink linkText="Sport" url="https://example.com" />
 	<LinkBarLink linkText="Underholdning" url="https://example.com" />
 	<LinkBarLink linkText="Non-corresponding linkText defaults to primary color" url="https://example.com" />

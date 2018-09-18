@@ -29,7 +29,7 @@ const FullWidthStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<FullWidthLinkBar background={colors.white}>
+			<FullWidthLinkBar backgroundColor="white">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
 				<LinkBarLink linkText="Full Width for You" url="https://example.com" />
@@ -45,7 +45,7 @@ import {
 	LinkBarLink,
 } from '@aller/shiny';
 
-<FullWidthLinkBar background={colors.white}>
+<FullWidthLinkBar backgroundColor="white">
 	<LinkBarLink linkText="One" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two" url="https://example.com" />
 	<LinkBarLink linkText="Full Width for You" url="https://example.com" />

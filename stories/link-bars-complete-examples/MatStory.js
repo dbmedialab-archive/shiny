@@ -71,7 +71,7 @@ const MatStory = () => (
 				linkText="☰"
 				textColor="white"
 			>
-				<VerticalLinkBar background="white">
+				<VerticalLinkBar backgroundColor="white">
 					<LinkBarLink linkText="Oppskrifter" url="#" {...linkProps} />
 					<LinkBarLink linkText="Trinn-for-trinn-video" url="#" {...linkProps} />
 					<LinkBarLink linkText="Bli inspirert" url="#" {...linkProps} />
@@ -80,7 +80,7 @@ const MatStory = () => (
 			</LinkBarDropdown>
 		</HorizontalLinkBar>
 		<BoxShadowLinkBar
-			background="white"
+			backgroundColor="white"
 			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
 			justifyContent="center"

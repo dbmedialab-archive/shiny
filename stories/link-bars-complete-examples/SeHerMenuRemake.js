@@ -115,7 +115,7 @@ const SeHerMenuRemake = () => (
 				<LargeLinkBarLink xs={false} md url="/seksjon" {...linkProps}>Seksjon</LargeLinkBarLink>
 				<LargeLinkBarDropdown xs={false} md linkText="Kommersielt" {...linkProps}>
 					<VerticalLinkBar
-						background="#ffffff"
+						backgroundColor="white"
 					>
 						<LinkBarLink
 							linkText="Rabattkoder"

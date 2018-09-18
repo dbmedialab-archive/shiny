@@ -23,7 +23,7 @@ const ScrollArrowsStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<ScrollArrowsLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				drawRightArrowInitially
 			>
 				<LinkBarLink linkText="One long link" url="https://example.com" isActive />
@@ -57,7 +57,7 @@ import {
 } from '@aller/shiny';
 
 <ScrollArrowsLinkBar
-	background={colors.white}
+	backgroundColor="white"
 	drawRightArrowInitially
 >
 	<LinkBarLink linkText="One long link" url="https://example.com" isActive />

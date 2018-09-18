@@ -103,7 +103,7 @@ const KKStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<HorizontalLinkBar
-				background="#fff"
+				backgroundColor="white"
 				overflow="visible"
 				shouldFlexChildren
 				justifyContent="space-between"
@@ -114,7 +114,7 @@ const KKStory = () => (
 								Redaksjonelt innhold
 						</FrontSmallHeading>
 						<HorizontalLinkBar
-							background={colors.white}
+							backgroundColor="white"
 							isTopLevelComponent={false}
 							shouldFlexChildren
 							position="static"
@@ -162,7 +162,7 @@ const KKStory = () => (
 								KOMMERSIELT INNHOLD
 						</FrontSmallHeading>
 						<HorizontalLinkBar
-							background={colors.white}
+							backgroundColor="white"
 							isTopLevelComponent={false}
 							shouldFlexChildren
 							position="static"
@@ -292,7 +292,7 @@ const Icon = props => <IconWithText name="circle-with-text" size={5} position="r
 const CommercialIcon = props => <Icon fill="#000" textColor="#fff" {...props} />;
 
 <HorizontalLinkBar
-	background="#fff"
+	backgroundColor="white"
 	overflow="visible"
 	shouldFlexChildren
 	justifyContent="space-between"
@@ -303,7 +303,7 @@ const CommercialIcon = props => <Icon fill="#000" textColor="#fff" {...props} />
 					Redaksjonelt innhold
 			</FrontSmallHeading>
 			<HorizontalLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				isTopLevelComponent={false}
 				shouldFlexChildren
 				position="static"
@@ -351,7 +351,7 @@ const CommercialIcon = props => <Icon fill="#000" textColor="#fff" {...props} />
 					KOMMERSIELT INNHOLD
 			</FrontSmallHeading>
 			<HorizontalLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				isTopLevelComponent={false}
 				shouldFlexChildren
 				position="static"
