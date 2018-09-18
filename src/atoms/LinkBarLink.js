@@ -23,7 +23,8 @@ LinkBarLink.propTypes = {
 	isActive: propTypes.bool,
 	linkText: propTypes.string,
 	children: propTypes.node,
-	activeBackground: propTypes.string,
+	activeBackground: propTypes.string, // Deprecated actual css color string
+	activeBackgroundColor: propTypes.string, // Color name from theme
 	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
 	url: propTypes.string,
 	useUnderline: propTypes.bool,
@@ -33,7 +34,8 @@ LinkBarLink.defaultProps = {
 	children: null,
 	isActive: false,
 	linkText: 'Manglende lenketekst',
-	activeBackground: 'transparent',
+	activeBackground: 'transparent', // Deprecated actual css color string
+	activeBackgroundColor: null, // Color name from theme
 	size: 'medium',
 	url: '#',
 	useUnderline: true,

@@ -1,5 +1,9 @@
 import styled, { css } from 'react-emotion';
+import debug from 'debug';
+
 import { getColor, getVariable } from '../utils';
+
+const log = debug('LinkBarLinkBase');
 
 const getTextColor = ({
 	isActive, activeTextColor, textColor,
@@ -8,6 +12,14 @@ const getTextColor = ({
 		? getColor(activeTextColor)
 		: getColor(textColor)
 );
+
+const getFocusBackground = (props) => {
+	const activeBackgroundFromProps = (
+		props.activeBackgroundColor ? getColor(props.activeBackgroundColor)(props) : props.activeBackground
+	);
+
+	return (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : activeBackgroundFromProps);
+};
 
 export const LinkBarLinkBase = styled.a`
 	display: inline-block;
@@ -62,15 +74,20 @@ export const LinkBarLinkBase = styled.a`
 	transition: padding .2s;
 	background: ${(props) => {
 		if (props.isActive) {
-			// Deprecated actual css color
+			if (props.activeBackground && !props.activeBackgroundColor) {
+				log('The `activeBackground` prop has been deprecated. Use the `activeBackgroundColor instead.'
+				+ ' It expects a color name from your theme instead of an actual css color string.`');
+			}
+
 			if (!props.activeBackgroundColor) {
+				// Deprecated actual css color
 				return props.activeBackground;
 			}
 
 			// Let's use the color palette / getColor when we can
-			return getColor(props.activeBackgroundColor);
+			return getColor(props.activeBackgroundColor)(props);
 		}
-		return getColor(props.backgroundColor);
+		return getColor(props.backgroundColor)(props);
 	}};
 	${props => props.ALLCAPS && css`
 		text-transform: uppercase;
@@ -84,17 +101,22 @@ export const LinkBarLinkBase = styled.a`
 	& {
 		color: ${getTextColor};
 		:hover {
-			background: ${props => (props.activeBackground)};
+			background:
+				${
+	props => (props.activeBackgroundColor
+		? getColor(props.activeBackgroundColor)(props)
+		: props.activeBackground)
+};
 			color: ${props => getColor(props.activeTextColor || props.textColor)};
 		}
 	}
 
 	&:focus {
-		background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
+		background: ${getFocusBackground};
 		box-shadow: none;
 
 		&:hover {
-			background: ${props => (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : props.activeBackground)};
+			background: ${getFocusBackground};
 		}
 	}
 
