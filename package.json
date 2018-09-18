@@ -60,7 +60,7 @@
     "@storybook/addon-links": "3.4.11",
     "@storybook/addon-viewport": "3.4.10",
     "@storybook/addons": "3.4.11",
-    "@storybook/react": "3.4.10",
+    "@storybook/react": "3.4.11",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "8.2.5",
     "babel-plugin-emotion": "9.2.9",
