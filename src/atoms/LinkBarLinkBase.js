@@ -21,26 +21,38 @@ export const LinkBarLinkBase = styled.a`
 	 * Also used in media query overrides.
 	 */
 	${(props) => {
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const verticalBase = getVariable('verticalBase')(props);
+		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
+
+		// If props.inset is true, we will remove half the vertical padding
+		// We use this for elements like buttons and search forms that do not
+		// cover the entire height of the link bar
+		const insetFactor = props.inset ? 1/2 : 1;
+
 		if (props.size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${getVariable('horizontalBase')(props)});
-`;
+				padding:
+					0
+					calc(1/2 * ${horizontalBase});
+			`;
 		}
 		if (props.size === 'small') {
 			return css`
 				padding:
-					calc(1/2 * (3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
-					calc(1/2 * ${getVariable('horizontalBase')(props)});
+					calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+					calc(1/2 * ${horizontalBase});
 			`;
 		}
 		return css`
 			padding:
-				calc(1/2 * (3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
-				${getVariable('horizontalBase')(props)};
+				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				${horizontalBase};
 		`;
 	}}
 
 	border: 0;
+	${props => props.rounded && 'border-radius: .3rem;'}
 	outline: none;
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
@@ -48,7 +60,18 @@ export const LinkBarLinkBase = styled.a`
 	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight')(props))};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
-	background: ${props => (props.isActive ? props.activeBackground : 'transparent')};
+	background: ${(props) => {
+		if (props.isActive) {
+			// Deprecated actual css color
+			if (!props.activeBackgroundColor) {
+				return props.activeBackground;
+			}
+
+			// Let's use the color palette / getColor when we can
+			return getColor(props.activeBackgroundColor);
+		}
+		return getColor(props.backgroundColor);
+	}};
 	${props => props.ALLCAPS && css`
 		text-transform: uppercase;
 		letter-spacing: .1rem;
@@ -97,6 +120,15 @@ export const LinkBarLinkBase = styled.a`
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
 		${(props) => {
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const verticalBase = getVariable('verticalBase')(props);
+		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
+
+		// If props.inset is true, we will remove half the vertical padding
+		// We use this for elements like buttons and search forms that do not
+		// cover the entire height of the link bar
+		const insetFactor = props.inset ? 1/2 : 1;
+
 		if (props.size === 'xsmall') {
 			return css`
 				padding: 0 calc(1/2 * ${getVariable('horizontalBase')(props)});
@@ -106,23 +138,23 @@ export const LinkBarLinkBase = styled.a`
 		if (props.size === 'small') {
 			return css`
 				padding:
-					calc(1/2 * ( 3/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
-					calc(1/4*${getVariable('horizontalBase')(props)});
+					calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiRegularLineHeight}) )
+					calc(1/4*${horizontalBase});
 			`;
 		}
 
 		if (props.size === 'large') {
 			return css`
 				padding:
-					calc(1/2 * ( 5/2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
+					calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )
 					${getVariable('horizontalBase')(props)};
 			`;
 		}
 
 		return css`
 			padding:
-				calc(1/2 * ( 2*${getVariable('verticalBase')(props)} - ${getVariable('uiRegularLineHeight')(props)}) )
-				${getVariable('horizontalBase')(props)};
+				calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )
+				${horizontalBase};
 		`;
 	}}
 
@@ -132,6 +164,7 @@ export const LinkBarLinkBase = styled.a`
 }
 `;
 LinkBarLinkBase.defaultProps = {
+	backgroundColor: 'transparent',
 	textColor: 'type',
 	ALLCAPS: false,
 };
