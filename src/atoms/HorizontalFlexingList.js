@@ -1,6 +1,8 @@
 import styled from 'react-emotion';
 import propTypes from 'prop-types';
 
+import { getColor } from '../utils/get-color';
+
 // Originally written for the HorizontalLinkBar molecule
 const HorizontalFlexingList = styled.ul`
 	box-sizing: border-box;
@@ -21,7 +23,7 @@ const HorizontalFlexingList = styled.ul`
 	padding: ${props => (props.shouldHavePadding ? `0 calc(1/2 * ${props.theme.variables.horizontalBase})` : '0')};
 	font-family: ${props => props.theme.variables.mainFont};
 
-	background: ${props => props.background};
+	background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
 
 	white-space: nowrap;
 	overflow: -moz-scrollbars-none;
@@ -38,12 +40,18 @@ const HorizontalFlexingList = styled.ul`
 	}
 `;
 HorizontalFlexingList.defaultProps = {
+	background: null,
+	backgroundColor: null,
 	justifyContent: 'initial',
 	shouldFlexChildren: false,
 	shouldWrap: false,
 };
 HorizontalFlexingList.propTypes = {
+	background: propTypes.string, // Deprecated, actual css color string
+	backgroundColor: propTypes.string, // Color name from theme
 	shouldWrap: propTypes.bool,
+	justifyContent: propTypes.string,
+	shouldFlexChildren: propTypes.bool,
 };
 
 export { HorizontalFlexingList };
