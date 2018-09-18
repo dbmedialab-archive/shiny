@@ -134,9 +134,11 @@ export const themePropTypes = {
 		uiTinySize: propTypes.string,
 		verticalBase: propTypes.string,
 
-		boldWeight: propTypes.number,
-		regularWeight: propTypes.number,
-		semiBoldWeight: propTypes.number,
+		uiWeight: propTypes.oneOf([100, 200, 300, 400, 500, 600, 700, 800, 900]),
+		uiWeightSemiBold: propTypes.oneOf([100, 200, 300, 400, 500, 600, 700, 800, 900]),
+		uiWeightBold: propTypes.oneOf([100, 200, 300, 400, 500, 600, 700, 800, 900]),
+		headingsWeight: propTypes.oneOf([100, 200, 300, 400, 500, 600, 700, 800, 900]),
+
 		unitlessHorizontalBase: propTypes.number,
 		unitlessVerticalBase: propTypes.number,
 	}),

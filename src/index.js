@@ -53,6 +53,7 @@ export { AdSettingsCog           } from './atoms/AdSettingsCog';
 export { BlockLink               } from './atoms/BlockLink';
 export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
 export { BlockQuote              } from './atoms/BlockQuote';
+export { Body                    } from './atoms/Body';
 export { BodyText                } from './atoms/BodyText';
 export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';

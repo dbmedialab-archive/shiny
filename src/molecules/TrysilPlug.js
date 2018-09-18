@@ -71,7 +71,6 @@ const TrysilPlug = ({
 						alt={title}
 						ratio={ratio}
 						offset={offset}
-						fallbackSrc={image}
 						src={placeholderUrl ? placeholderUrl : image}
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}

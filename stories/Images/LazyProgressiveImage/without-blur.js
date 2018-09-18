@@ -2,19 +2,12 @@
 import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 
-import { LazyProgressiveImage } from '../../src/molecules/LazyProgressiveImage';
-import { Source } from '../../src/molecules/Source';
+import { LazyProgressiveImage } from '../../../src/molecules/LazyProgressiveImage';
+import { Source } from '../../../src/molecules/Source';
 
 const MultipleLazyProgressiveImagesStory = () => {
 	const ids = [
-		// 60375866,
-		// 68797204,
-		// 69761110,
-		// 69829020,
-		// 69782034,
-		// 69767493,
 		69838583,
-		// 69838845,
 	];
 	return (
 		ids.map((id, i) => (

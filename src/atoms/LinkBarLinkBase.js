@@ -95,7 +95,7 @@ export const LinkBarLinkBase = styled.a`
 		transition: width .2s ease-in-out;
 	}
 
-	@media (min-width: ${getVariable('largeWidth')}) {
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
 		${(props) => {
 		if (props.size === 'xsmall') {
 			return css`
