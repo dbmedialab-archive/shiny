@@ -116,6 +116,7 @@ Dropdown.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	/** Expands the menu by default. */
 	displayInitially: propTypes.bool,
 	linkText: propTypes.string,
 	isRelative: propTypes.bool,
