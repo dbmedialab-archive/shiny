@@ -18,9 +18,6 @@ import {
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
 
 const CustomTrigger = ({ onClick, className }) => (
 	<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>
@@ -46,7 +43,7 @@ const DropdownStory = () => {
 					<LinkBarLink linkText="One" url="https://example.com" isActive />
 					<LinkBarLink linkText="Two" url="https://example.com" />
 					<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com" displayInitially>
-						<VerticalLinkBar background={colors.white}>
+						<VerticalLinkBar backgroundColor="white">
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
 						</VerticalLinkBar>
@@ -56,13 +53,13 @@ const DropdownStory = () => {
 						url="https://example.com"
 						displayInitially
 					>
-						<VerticalLinkBar background={colors.white} align="right">
+						<VerticalLinkBar backgroundColor="white" align="right">
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
 						</VerticalLinkBar>
 					</LinkBarDropdown>
 					<LinkBarDropdown Trigger={CustomTrigger} displayInitially>
-						<VerticalLinkBar background={colors.white}>
+						<VerticalLinkBar backgroundColor="white">
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
 						</VerticalLinkBar>
@@ -88,19 +85,19 @@ const DropdownStory = () => {
 		<LinkBarLink linkText="One" url="https://example.com" isActive />
 		<LinkBarLink linkText="Two" url="https://example.com" />
 		<LinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com" displayInitially>
-			<VerticalLinkBar background={colors.white}>
+			<VerticalLinkBar backgroundColor="white">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
 			</VerticalLinkBar>
 		</LinkBarDropdown>
 		<LinkBarDropdown linkText="This dropdown is aligned to the right" url="https://example.com" displayInitially>
-			<VerticalLinkBar background={colors.white} align="right">
+			<VerticalLinkBar backgroundColor="white" align="right">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
 			</VerticalLinkBar>
 		</LinkBarDropdown>
 		<LinkBarDropdown Trigger={CustomTrigger} displayInitially>
-			<VerticalLinkBar background={colors.white}>
+			<VerticalLinkBar backgroundColor="white">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
 			</VerticalLinkBar>

@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const ScrollArrowsNestedPaddingStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
@@ -22,7 +18,7 @@ const ScrollArrowsNestedPaddingStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<ScrollArrowsLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				shouldAdjustForNestedPadding
 			>
 				<LinkBarLink linkText="One long link" url="https://example.com" isActive />
@@ -56,7 +52,7 @@ import {
 } from '@aller/shiny';
 
 <ScrollArrowsLinkBar
-	background={colors.white}
+	backgroundColor="white"
 	shouldAdjustForNestedPadding
 >
 	<LinkBarLink linkText="One long link" url="https://example.com" isActive />

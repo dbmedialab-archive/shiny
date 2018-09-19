@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const HideStory = () => (
 	<section>
 		<HugeHeading>Hidden LinkBar elements</HugeHeading>
@@ -23,7 +19,7 @@ const HideStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarLink linkText="All screens" url="https://example.com" />
 				<LinkBarLink md={false} linkText="xs and sm screens" url="https://example.com" />
 				<LinkBarLink xs={false} sm linkText="sm, md and lg screens" url="https://example.com" />
@@ -40,7 +36,7 @@ import {
 	LinkBarLink,
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<LinkBarLink linkText="All screens" url="https://example.com" />
 	<LinkBarLink md={false} linkText="xs and sm screens" url="https://example.com" />
 	<LinkBarLink xs={false} sm linkText="sm, md and lg screens" url="https://example.com" />

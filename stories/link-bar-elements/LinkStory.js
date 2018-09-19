@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const LinkStory = () => (
 	<section>
 		<HugeHeading>LinkBarLink</HugeHeading>
@@ -22,7 +18,7 @@ const LinkStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<HorizontalLinkBar background={colors.white}>
+			<HorizontalLinkBar backgroundColor="white">
 				<LinkBarLink linkText="One" url="https://example.com" isActive />
 				<LinkBarLink linkText="Two" url="https://example.com" />
 				<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
@@ -37,7 +33,7 @@ import {
 	LinkBarLink,
 } from '@aller/shiny';
 
-<HorizontalLinkBar background={colors.white}>
+<HorizontalLinkBar backgroundColor="white">
 	<LinkBarLink linkText="One" url="https://example.com" isActive />
 	<LinkBarLink linkText="Two" url="https://example.com" />
 	<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
@@ -72,7 +68,7 @@ import {
 					<td>&quot;Manglende lenketekst&quot;</td>
 				</tr>
 				<tr>
-					<th>activeBackground</th>
+					<th>activeBackgroundColor</th>
 					<td>Color of the background on links that have the <em>isActive</em> flag set.</td>
 					<td>optional</td>
 					<td>String matching a theme color name</td>

@@ -114,6 +114,7 @@ class ScrollArrowsLinkBar extends Component {
 	render() {
 		const {
 			background,
+			backgroundColor,
 			children,
 			width,
 			zIndex,
@@ -130,6 +131,7 @@ class ScrollArrowsLinkBar extends Component {
 		return (
 			<NavWithOptionalConstrainer
 				background={background}
+				backgroundColor={backgroundColor}
 				width={width}
 				zIndex={zIndex}
 				isTopLevelComponent={isTopLevelComponent}
@@ -140,6 +142,7 @@ class ScrollArrowsLinkBar extends Component {
 							<LeftScrollArrow
 								onClick={this.leftClick}
 								background={background}
+								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
 							/>
@@ -148,6 +151,7 @@ class ScrollArrowsLinkBar extends Component {
 					<Bar
 						innerRef={(input) => { this.content = input; }}
 						background={background}
+						backgroundColor={backgroundColor}
 						{...rest}
 					>
 						{children && React.Children.map(children, (child, i) => {
@@ -171,6 +175,7 @@ class ScrollArrowsLinkBar extends Component {
 							<RightScrollArrow
 								onClick={this.rightClick}
 								background={background}
+								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
 							/>
@@ -183,7 +188,8 @@ class ScrollArrowsLinkBar extends Component {
 }
 
 ScrollArrowsLinkBar.propTypes = {
-	background: PropTypes.string,
+	background: PropTypes.string, // Deprecated actual css color string
+	backgroundColor: PropTypes.string, // Color name from theme
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -205,7 +211,8 @@ ScrollArrowsLinkBar.propTypes = {
 };
 
 ScrollArrowsLinkBar.defaultProps = {
-	background: 'papayawhip', // colors.white,
+	background: 'papayawhip', // Deprecated actual css color string
+	backgroundColor: null, // Color name from theme
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,

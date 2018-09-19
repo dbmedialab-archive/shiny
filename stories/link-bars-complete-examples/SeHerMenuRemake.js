@@ -45,7 +45,7 @@ const SeHerDropdownButton = (props) => {
 
 const linkProps = {
 	useUnderline: true,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	textColor: 'type',
 	skin: 'splashBorder',
 	ALLCAPS: true,
@@ -115,7 +115,7 @@ const SeHerMenuRemake = () => (
 				<LargeLinkBarLink xs={false} md url="/seksjon" {...linkProps}>Seksjon</LargeLinkBarLink>
 				<LargeLinkBarDropdown xs={false} md linkText="Kommersielt" {...linkProps}>
 					<VerticalLinkBar
-						background="#ffffff"
+						backgroundColor="white"
 					>
 						<LinkBarLink
 							linkText="Rabattkoder"
