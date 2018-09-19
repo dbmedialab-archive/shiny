@@ -19,6 +19,11 @@ const Input = styled(InputBase)`
 	}
 `;
 
+/**
+ * LinkBarSearchField description goes here, it's a docgen title.
+ *
+ * This is a docgen description of the component as a whole.
+ */
 const LinkBarSearchField = ({
 	action,
 	iconColor,
@@ -33,17 +38,21 @@ const LinkBarSearchField = ({
 		</form>
 	</>
 );
+LinkBarSearchField.propTypes = {
+	/** The background color in the search field */
+	backgroundColor: PropTypes.string,
+	/** Corresponds to the textColor prop in the icon */
+	iconColor: PropTypes.string,
+	/** Unique per html document */
+	id: PropTypes.string,
+	/** Affects the height of the LinkBar */
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
+};
 LinkBarSearchField.defaultProps ={
 	backgroundColor: 'grayTintLighter',
 	iconColor: 'link',
 	id: 'search',
 	size: 'medium',
-};
-LinkBarSearchField.propTypes = {
-	backgroundColor: PropTypes.string,
-	iconColor: PropTypes.string,
-	id: PropTypes.string,
-	size: PropTypes.oneOf(['small', 'medium', 'large']),
 };
 
 export { LinkBarSearchField };

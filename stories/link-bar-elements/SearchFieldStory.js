@@ -12,7 +12,7 @@ import {
 	LargeLinkBarSearchField,
 } from '../../src';
 
-const SearchFieldStory = () => (
+/* const SearchFieldStory = () => (
 	<section>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<SmallLinkBarLink linkText="One" url="https://example.com" isActive />
@@ -33,5 +33,7 @@ const SearchFieldStory = () => (
 		</HorizontalLinkBar>
 	</section>
 );
+*/
 
-export default withInfo('LinkBarSearchField')(SearchFieldStory);
+const SearchFieldStory = () => <LinkBarSearchField placeholder="Search My Shoe" backgroundColor="white" />;
+export default withInfo('LinkBarSearchField has some descriptive text here.')(SearchFieldStory);
