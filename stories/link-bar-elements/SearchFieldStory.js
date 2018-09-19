@@ -23,7 +23,10 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<LinkBarLink linkText="One" url="https://example.com" isActive />
 			<LinkBarLink linkText="Two" url="https://example.com" />
-			<LinkBarSearchField placeholder="Search My Shoe" backgroundColor="white" />
+			<LinkBarSearchField
+				placeholder="Search My Shoe"
+				backgroundColor="white"
+			/>
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
@@ -34,4 +37,4 @@ const SearchFieldStory = () => (
 	</section>
 );
 
-export default withInfo('LinkBarSearchField')(SearchFieldStory);
+export default withInfo('LinkBarSearchField is a search field for link bars.')(SearchFieldStory);
