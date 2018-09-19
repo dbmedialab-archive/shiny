@@ -38,7 +38,8 @@ const NavWithOptionalConstrainer = ({
 };
 
 NavWithOptionalConstrainer.propTypes = {
-	background: PropTypes.string,
+	background: PropTypes.string, // Deprecated actual css string
+	backgroundColor: PropTypes.string, // Color name from theme
 	width: PropTypes.string.isRequired,
 	zIndex: PropTypes.number.isRequired,
 	isTopLevelComponent: PropTypes.bool.isRequired,
@@ -49,6 +50,7 @@ NavWithOptionalConstrainer.propTypes = {
 };
 NavWithOptionalConstrainer.defaultProps = {
 	background: 'transparent',
+	backgroundColor: null,
 };
 
 export { NavWithOptionalConstrainer };
