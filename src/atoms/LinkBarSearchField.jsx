@@ -24,9 +24,6 @@ const Input = styled(InputBase)`
 	}
 `;
 
-/**
- * This is a docgen header.
- */
 const LinkBarSearchField = ({
 	action,
 	iconColor,
