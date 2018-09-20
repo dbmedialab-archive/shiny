@@ -32,17 +32,29 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<XSmallHeading>This is an X small heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</XSmallHeading>
+			<XSmallHeading>This is an X small heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning
+			</XSmallHeading>
 			<p>Paragraph</p>
-			<SmallHeading>This is a small heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</SmallHeading>
+			<SmallHeading>This is a small heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning
+			</SmallHeading>
 			<p>Paragraph</p>
-			<MediumHeading>This is a medium heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</MediumHeading>
+			<MediumHeading>This is a medium heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning
+			</MediumHeading>
 			<p>Paragraph</p>
-			<LargeHeading>This is a large heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning (default size)</LargeHeading>
+			<LargeHeading>This is a large heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning (default size)
+			</LargeHeading>
 			<p>Paragraph</p>
-			<XLargeHeading>This is an X large heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</XLargeHeading>
+			<XLargeHeading>This is an X large heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning
+			</XLargeHeading>
 			<p>Paragraph</p>
-			<HugeHeading>This is a huge heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</HugeHeading>
+			<HugeHeading>This is a huge heading that is long enough to cover two
+				lines, as it has many words in it to convey loads of meaning
+			</HugeHeading>
 			<p>Paragraph</p>
 		</DemoContainer>
 
