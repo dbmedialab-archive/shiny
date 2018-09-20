@@ -41,11 +41,27 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<SmallDymoHeading {...{ skin }}>This is lots and lots of text in a small dymo heading</SmallDymoHeading>
-			<MediumDymoHeading {...{ skin }}>This is lots and lots of text in a medium dymo heading</MediumDymoHeading>
-			<LargeDymoHeading {...{ skin }}>This is lots and lots of text in a large dymo heading (default)</LargeDymoHeading>
-			<XLargeDymoHeading {...{ skin }}>This is lots and lots of text in an X large dymo heading</XLargeDymoHeading>
-			<HugeDymoHeading {...{ skin }}>This is lots and lots of text in a huge dymo heading</HugeDymoHeading>
+			<SmallDymoHeading
+				ALLCAPS
+				{...{ skin }}
+			>This is lots and lots of text in a small dymo heading
+			</SmallDymoHeading>
+			<MediumDymoHeading
+				ALLCAPS
+				{...{ skin }}
+			>This is lots and lots of text in a medium dymo heading
+			</MediumDymoHeading>
+			<LargeDymoHeading
+				ALLCAPS
+				{...{ skin }}
+			>This is lots and lots of text in a large dymo heading (default)
+			</LargeDymoHeading>
+			<XLargeDymoHeading
+				ALLCAPS
+				{...{ skin }}
+			>This is lots and lots of text in an X large dymo heading
+			</XLargeDymoHeading>
+			<HugeDymoHeading ALLCAPS {...{ skin }}>This is lots and lots of text in a huge dymo heading</HugeDymoHeading>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
