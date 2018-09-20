@@ -10,10 +10,6 @@ import {
 	LinkBarLink,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const ScrollArrowsSubLevelStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
@@ -23,7 +19,7 @@ const ScrollArrowsSubLevelStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<ScrollArrowsLinkBar
-				background={colors.white}
+				backgroundColor="white"
 				isTopLevelComponent={false}
 			>
 				<LinkBarLink linkText="One long link" url="https://example.com" isActive />
@@ -57,7 +53,7 @@ import {
 } from '@aller/shiny';
 
 <ScrollArrowsLinkBar
-	background={colors.white}
+	backgroundColor="white"
 	isTopLevelComponent={false}
 >
 	<LinkBarLink linkText="One" url="https://example.com" isActive />

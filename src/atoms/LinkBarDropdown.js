@@ -116,11 +116,17 @@ Dropdown.propTypes = {
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	/** Expands the menu by default. */
 	displayInitially: propTypes.bool,
+	/** Text to display in the link. Can be overriden with the _children_ prop. */
 	linkText: propTypes.string,
+	/** Sets position: relative on the button. Needed to position dropdowns absolutely. */
 	isRelative: propTypes.bool,
+	/** For providing custom button elements. */
 	Trigger: propTypes.func,
+	/** For providing additional classnames. */
 	className: propTypes.string,
+	/** @TODO: What does this do? */
 	hideOnClick: propTypes.bool,
 };
 Dropdown.defaultProps = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 
+import { getColor } from '../utils';
 import { LinkBarLinkBase } from './LinkBarLinkBase';
 import { FontIcon } from './FontIcon';
 
@@ -11,7 +12,7 @@ const Arrow = styled(LinkBarLinkBase.withComponent('div'))`
 	font-weight: 800;
 	cursor: pointer;
 	z-index: 9;
-	background: ${props => props.background};
+	background: ${props => (props.backgroundColor ? getColor(props.backgroundColor)(props) : props.background)};
 
 	/* ::before is used to add gradient shading beside the arrow */
 	&&::before {

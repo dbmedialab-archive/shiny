@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 
+import { getColor } from '../utils/get-color';
+
 const FontIcon = (props) => {
 	injectGlobal`
 		@font-face {
@@ -22,7 +24,7 @@ const Icon = styled.span`
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	color: ${props => props.color};
+	color: ${props => (props.textColor ? getColor(props.textColor) : props.color)};
 
 	${props => props.size && css`
 		font-size: ${props.size}rem;

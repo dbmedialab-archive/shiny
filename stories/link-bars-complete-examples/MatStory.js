@@ -40,7 +40,7 @@ const LinkBarBleedingLogo = styled(LinkBarItem)`
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	activeTextColor: 'primary',
 	textColor: 'type',
 };
@@ -50,7 +50,7 @@ const MatStory = () => (
 		<HugeHeading>Mat-like header</HugeHeading>
 		<HorizontalLinkBar
 			isTopLevelComponent={false} // Use the full width
-			background="#4a4a4a" // A refactor to bacground='splashBackground' is on the books
+			background="#4a4a4a" // This prop has been deprecated. Use backgroundColor instead
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
@@ -71,7 +71,7 @@ const MatStory = () => (
 				linkText="☰"
 				textColor="white"
 			>
-				<VerticalLinkBar background="white">
+				<VerticalLinkBar backgroundColor="white">
 					<LinkBarLink linkText="Oppskrifter" url="#" {...linkProps} />
 					<LinkBarLink linkText="Trinn-for-trinn-video" url="#" {...linkProps} />
 					<LinkBarLink linkText="Bli inspirert" url="#" {...linkProps} />
@@ -80,7 +80,7 @@ const MatStory = () => (
 			</LinkBarDropdown>
 		</HorizontalLinkBar>
 		<BoxShadowLinkBar
-			background="white"
+			backgroundColor="white"
 			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
 			justifyContent="center"

@@ -1,7 +1,8 @@
 import styled from 'react-emotion';
+import { getColor } from '../utils/get-color';
 
 const LinkBarNav = styled.nav`
-	background: ${props => props.background};
+	background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
 	position: relative;
 	width: ${props => props.width};
 	display: ${props => (props.isVertical ? 'inline-block' : 'block')};

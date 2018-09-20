@@ -58,7 +58,7 @@ const SeHerDropdownButton = (props) => {
 
 const linkProps = {
 	useUnderline: true,
-	activeBackground: 'transparent',
+	activeBackgroundColor: 'transparent',
 	textColor: 'type',
 	skin: 'splashBorder',
 };
@@ -77,7 +77,7 @@ const SeHerStory = () => (
 		<HugeHeading>Se&Hør-like header</HugeHeading>
 		<HorizontalLinkBar
 			isTopLevelComponent={false} // Use the full width
-			background="#ffffff" // A refactor to bacground='splashBackground' is on the books
+			backgroundColor="white"
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
@@ -91,7 +91,7 @@ const SeHerStory = () => (
 			</LinkBarBleedingLogo>
 			<HorizontalLinkBar
 				isTopLevelComponent // Use the full width
-				background="#ffffff" // A refactor to bacground='splashBackground' is on the books
+				backgroundColor="white"
 				shouldFlexChildren
 				justifyContent="space-between"
 				overflow="visible"
@@ -130,7 +130,7 @@ const SeHerStory = () => (
 					textColor="type"
 					Trigger={SeHerDropdownButton}
 				>
-					<VerticalLinkBar background="white" align="right">
+					<VerticalLinkBar backgroundColor="white" align="right">
 						<LinkBarLink linkText="Rød løper" url="#" {...linkProps} />
 						<LinkBarLink linkText="Reality" url="#" {...linkProps} />
 						<LinkBarLink linkText="Brudd & bryllup" url="#" {...linkProps} />
