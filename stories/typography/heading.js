@@ -32,12 +32,18 @@ export default () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<XSmallHeading>This is an X small heading</XSmallHeading>
-			<SmallHeading>This is a small heading</SmallHeading>
-			<MediumHeading>This is a medium heading</MediumHeading>
-			<LargeHeading>This is a large heading (default)</LargeHeading>
-			<XLargeHeading>This is an X large heading</XLargeHeading>
-			<HugeHeading>This is a huge heading</HugeHeading>
+			<XSmallHeading>This is an X small heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</XSmallHeading>
+			<p>Paragraph</p>
+			<SmallHeading>This is a small heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</SmallHeading>
+			<p>Paragraph</p>
+			<MediumHeading>This is a medium heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</MediumHeading>
+			<p>Paragraph</p>
+			<LargeHeading>This is a large heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning (default size)</LargeHeading>
+			<p>Paragraph</p>
+			<XLargeHeading>This is an X large heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</XLargeHeading>
+			<p>Paragraph</p>
+			<HugeHeading>This is a huge heading that is long enough to cover two lines, as it has many words in it to convey loads of meaning</HugeHeading>
+			<p>Paragraph</p>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
