@@ -23,7 +23,10 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<LinkBarLink linkText="One" url="https://example.com" isActive />
 			<LinkBarLink linkText="Two" url="https://example.com" />
-			<LinkBarSearchField placeholder="Search My Shoe" backgroundColor="white" />
+			<LinkBarSearchField
+				placeholder="Search My Shoe"
+				backgroundColor="white"
+			/>
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
@@ -34,4 +37,14 @@ const SearchFieldStory = () => (
 	</section>
 );
 
-export default withInfo('LinkBarSearchField')(SearchFieldStory);
+export default withInfo({
+	text: `
+<p>LinkBarSearchField is a search field for link bars.</p>
+
+<p>LinkBar elements match each other in height and horizontal spacing. Therefore,
+	they go well alongside each other inside a --LinkBar element, like
+	HorizontalLinkBar or VerticalLinkBar. They also share most of their props.
+</p>
+
+        `,
+})(SearchFieldStory);

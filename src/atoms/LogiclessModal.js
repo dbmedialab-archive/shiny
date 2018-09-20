@@ -38,7 +38,7 @@ const CloseButton = styled(BorderedButton)`
 `;
 
 const LogiclessModal = ({
-	isOpen, closeModal, children, title, appElement, width,
+	isOpen, closeModal, children, title, appElement, width, zIndex,
 }) => {
 	Modal.setAppElement(appElement);
 	return (
@@ -53,6 +53,7 @@ const LogiclessModal = ({
 					right: 0,
 					bottom: 0,
 					backgroundColor: 'rgba(0, 0, 0, 0.66)',
+					zIndex,
 				},
 				content: {
 					width,
@@ -81,11 +82,13 @@ LogiclessModal.propTypes = {
 	closeModal: PropTypes.func.isRequired,
 	children: PropTypes.node.isRequired,
 	title: PropTypes.node.isRequired,
+	zIndex: PropTypes.number,
 };
 
 LogiclessModal.defaultProps = {
 	width: '60rem',
 	appElement: '#__next',
+	zIndex: 6,
 };
 
 

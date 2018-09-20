@@ -14,7 +14,10 @@ const Hgroup = styled.hgroup`
 const FormattedHeading = styled(Heading)`
 	&& {
 	  display: inline-block;
-	  margin: 0 0 calc(2/3 * ${getVariable('verticalBase')});
+	  margin:
+			${props => (props.needsPadding ? '0' : `calc(1/3 * ${getVariable('verticalBase')(props)})`)}
+			0
+			calc(2/3 * ${getVariable('verticalBase')});
 
 	  ${props => (props.hasImage
 		? 'max-width: 90%;'
@@ -106,7 +109,7 @@ const DymoHeading = (props) => {
 	/* eslint-disable react/no-danger */
 	return (
 		<Hgroup>
-			<FormattedHeading {...rest}>
+			<FormattedHeading {...rest} needsPadding={skin.needsPadding}>
 				<PaddedText
 					skin={{ ...skin }}
 					dangerouslySetInnerHTML={{ __html: children || title }}
