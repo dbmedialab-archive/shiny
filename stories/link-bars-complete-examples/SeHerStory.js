@@ -77,7 +77,7 @@ const SeHerStory = () => (
 		<HugeHeading>Se&Hør-like header</HugeHeading>
 		<HorizontalLinkBar
 			isTopLevelComponent={false} // Use the full width
-			backgroundColor="splashBackground"
+			backgroundColor="white"
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
@@ -91,7 +91,7 @@ const SeHerStory = () => (
 			</LinkBarBleedingLogo>
 			<HorizontalLinkBar
 				isTopLevelComponent // Use the full width
-				backgroundColor="splashBackground"
+				backgroundColor="white"
 				shouldFlexChildren
 				justifyContent="space-between"
 				overflow="visible"
