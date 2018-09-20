@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
+import { getColor } from '../utils/get-color';
 import { LinkBarLinkBase } from './LinkBarLinkBase';
 import { FontIcon } from './FontIcon';
 
@@ -17,6 +18,10 @@ const Input = styled(InputBase)`
 		/* Magic number: width of the AbsoluteFontIcon */
 		padding-left: ${props => (props.size === 'small' ? '2.7rem' : '4.4rem')};
 	}
+
+	::placeholder {
+		color: ${props => getColor(props.placeholderColor)(props)}
+	}
 `;
 
 const LinkBarSearchField = ({
@@ -26,24 +31,37 @@ const LinkBarSearchField = ({
 	size,
 	...rest
 }) => (
-	<>
+	<Fragment>
 		<AbsoluteFontIcon size={size} textColor={iconColor} inset name="search" />
 		<form id={id} name={id} action={action}>
 			<Input {...rest} size={size} inset rounded type="search" />
 		</form>
-	</>
+	</Fragment>
 );
+LinkBarSearchField.propTypes = {
+	/** Color name from theme. Will be used on hover or focus */
+	activeBackgroundColor: PropTypes.string,
+	/** Color name from theme */
+	backgroundColor: PropTypes.string,
+	/** Color name from theme */
+	iconColor: PropTypes.string,
+	/** Unique per page view. It's HTML... */
+	id: PropTypes.string,
+	/** Color name from theme */
+	placeholderColor: PropTypes.string,
+	/** Match the size of your sibling LinkBar* elements */
+	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	/** Color name from theme */
+	textColor: PropTypes.string,
+};
 LinkBarSearchField.defaultProps ={
+	activeBackgroundColor: null,
 	backgroundColor: 'grayTintLighter',
 	iconColor: 'link',
 	id: 'search',
+	placeholderColor: 'typeDisabled',
 	size: 'medium',
-};
-LinkBarSearchField.propTypes = {
-	backgroundColor: PropTypes.string,
-	iconColor: PropTypes.string,
-	id: PropTypes.string,
-	size: PropTypes.oneOf(['small', 'medium', 'large']),
+	textColor: 'type',
 };
 
 export { LinkBarSearchField };
