@@ -6507,9 +6507,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-polished@2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-2.0.3.tgz#54bb5f474bebe149e760d4015ed04207817fd38e"
+polished@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.1.0.tgz#2c34f3c3699cb4de16fb90c5776f84d8bd0a5c10"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
