@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import debug from 'debug';
 
+import { themePropTypes } from '../themes/theme-prop-types';
 import { getColor, getVariable } from '../utils';
 
 const log = debug('LinkBarLinkBase');
@@ -121,27 +123,49 @@ export const LinkBarLinkBase = styled.a`
 	}
 
 	/* This is the underline feature */
-	&::after {
-		width: ${props => (
-		props.isActive && props.useUnderline
-			? css`calc( 100% - 2*${getVariable('horizontalBase')(props)} )`
-			: '0'
-	)};
-		display: block;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: .1rem;
-		margin: 0 ${getVariable('horizontalBase')};
-		background: ${props => (
-		props.theme.colors[props.theme.colors.skinColors[props.skin]] || props.theme.colors.primary
-	)};
-		content: '';
-		transition: width .2s ease-in-out;
-	}
+	${(props) => {
+		const {
+			isActive,
+			useUnderline,
+			size,
+			skin,
+			theme: { colors },
+		} = props;
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const sizeFactor = ['xsmall', 'small'].includes(size) ? 1/2 : 1;
+
+		const width = (
+			useUnderline
+				? css`calc( 100% - 2 * ${sizeFactor} * ${horizontalBase} )`
+				: '0'
+		);
+
+		const background = colors[colors.skinColors[skin]] || colors.primary;
+
+		return css`
+			&::after {
+				width: ${isActive ? width :'0'};
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: .1rem;
+				margin: 0 calc(${sizeFactor} * ${horizontalBase});
+				background: ${background};
+				content: '';
+				transition: width .2s ease-in-out;
+			}
+
+			&:hover::after{
+				width: ${width};
+			}
+		`;
+	}}
+
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
 		${(props) => {
+		const { size, inset } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const verticalBase = getVariable('verticalBase')(props);
 		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
@@ -149,27 +173,27 @@ export const LinkBarLinkBase = styled.a`
 		// If props.inset is true, we will remove half the vertical padding
 		// We use this for elements like buttons and search forms that do not
 		// cover the entire height of the link bar
-		const insetFactor = props.inset ? 1/2 : 1;
+		const insetFactor = inset ? 1/2 : 1;
 
-		if (props.size === 'xsmall') {
+		if (size === 'xsmall') {
 			return css`
-				padding: 0 calc(1/2 * ${getVariable('horizontalBase')(props)});
+				padding: 0 calc(1/2 * ${horizontalBase});
 			`;
 		}
 
-		if (props.size === 'small') {
+		if (size === 'small') {
 			return css`
 				padding:
 					calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiRegularLineHeight}) )
-					calc(1/4*${horizontalBase});
+					calc(1/2 * ${horizontalBase});
 			`;
 		}
 
-		if (props.size === 'large') {
+		if (size === 'large') {
 			return css`
 				padding:
 					calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )
-					${getVariable('horizontalBase')(props)};
+					${horizontalBase};
 			`;
 		}
 
@@ -179,14 +203,45 @@ export const LinkBarLinkBase = styled.a`
 				${horizontalBase};
 		`;
 	}}
-
-	&:hover::after{
-		width: ${props => (props.useUnderline ? css`calc( 100% - 2*${getVariable('horizontalBase')(props)} )` : '0')};
-	}
 }
 `;
+LinkBarLinkBase.propTypes = {
+	/** Display text in capital letters */
+	ALLCAPS: PropTypes.bool,
+	/** DEPRECATED css color string, use activeBackgroundColor instead */
+	activeBackground: PropTypes.string,
+	/** Color name from theme */
+	activeBackgroundColor: PropTypes.string,
+	/** Color name from theme */
+	backgroundColor: PropTypes.string,
+	/**
+	 * If props.inset is true, we will remove half the vertical padding
+	 * We use this for elements like buttons and search forms that do not
+	 * cover the entire height of the link bar
+	 */
+	inset: PropTypes.bool,
+	/** Mark selected link */
+	isActive: PropTypes.bool,
+	/** Flag to remove line-height */
+	isBlockLink: PropTypes.bool,
+	/** Round the corners */
+	rounded: PropTypes.bool,
+	size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+	/** Color name from theme */
+	textColor: PropTypes.string,
+	/** Shiny theme */
+	theme: () => themePropTypes,
+	/** Fancy underline feature on hover and focus */
+	useUnderline: PropTypes.bool,
+};
 LinkBarLinkBase.defaultProps = {
-	backgroundColor: 'transparent',
-	textColor: 'type',
 	ALLCAPS: false,
+	backgroundColor: 'transparent',
+	inset: false,
+	isActive: false,
+	isBlockLink: false,
+	rounded: false,
+	size: 'medium',
+	textColor: 'type',
+	useUnderline: false,
 };
