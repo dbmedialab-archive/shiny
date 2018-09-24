@@ -5,7 +5,7 @@ import debug from 'debug';
 import { themePropTypes } from '../themes/theme-prop-types';
 import { getColor, getVariable } from '../utils';
 
-const log = debug('LinkBarLinkBase');
+const log = debug('LinkBarElementBase');
 
 const getTextColor = ({
 	isActive, activeTextColor, textColor,
@@ -23,18 +23,17 @@ const getFocusBackground = (props) => {
 	return (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : activeBackgroundFromProps);
 };
 
-export const LinkBarLinkBase = styled.a`
+export const LinkBarElementBase = styled.a`
 	display: inline-block;
 
 	/*
-	 * With the 'xsmall', 'small', '' (default) and 'large' variants,
+	 * With the 'xsmall', 'small', 'medium' (default) and 'large' variants,
 	 * LinkBar items like LinkBarLinks, LinkBarButtons and LinkBarDropdowns
 	 * all take up the same vertical space. That way, you can stuff in
 	 * another item without changing the height of your LinkBar.
-	 *
-	 * Also used in media query overrides.
 	 */
 	${(props) => {
+		const { size, inset } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const verticalBase = getVariable('verticalBase')(props);
 		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
@@ -42,26 +41,51 @@ export const LinkBarLinkBase = styled.a`
 		// If props.inset is true, we will remove half the vertical padding
 		// We use this for elements like buttons and search forms that do not
 		// cover the entire height of the link bar
-		const insetFactor = props.inset ? 1/2 : 1;
+		const insetFactor = inset ? 1/2 : 1;
 
-		if (props.size === 'xsmall') {
-			return css`
-				padding:
-					0
-					calc(1/2 * ${horizontalBase});
+		let padding;
+		let smPadding;
+		if (size === 'xsmall') {
+			padding = `
+				0
+				calc(1/2 * ${horizontalBase})
 			`;
-		}
-		if (props.size === 'small') {
-			return css`
-				padding:
-					calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
-					calc(1/2 * ${horizontalBase});
-			`;
-		}
-		return css`
-			padding:
+			smPadding = padding;
+		} else if (size === 'small') {
+			padding = `
 				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				calc(1/2 * ${horizontalBase})
+			`;
+			smPadding = `
+				calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				calc(1/2 * ${horizontalBase})
+			`;
+		} else if (size === 'large') {
+			padding = `
+				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				${horizontalBase}
+			`;
+			smPadding = `
+				calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )
+				${horizontalBase}
+			`;
+		} else {
+			// size === medium
+			padding = `
+				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				${horizontalBase}
+			`;
+			smPadding = `
+				calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )
 				${horizontalBase};
+			`;
+		}
+
+		return css`
+			padding: ${padding};
+			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
+				padding: ${smPadding};
+			}
 		`;
 	}}
 
@@ -161,51 +185,8 @@ export const LinkBarLinkBase = styled.a`
 			}
 		`;
 	}}
-
-
-	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-		${(props) => {
-		const { size, inset } = props;
-		const horizontalBase = getVariable('horizontalBase')(props);
-		const verticalBase = getVariable('verticalBase')(props);
-		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
-
-		// If props.inset is true, we will remove half the vertical padding
-		// We use this for elements like buttons and search forms that do not
-		// cover the entire height of the link bar
-		const insetFactor = inset ? 1/2 : 1;
-
-		if (size === 'xsmall') {
-			return css`
-				padding: 0 calc(1/2 * ${horizontalBase});
-			`;
-		}
-
-		if (size === 'small') {
-			return css`
-				padding:
-					calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiRegularLineHeight}) )
-					calc(1/2 * ${horizontalBase});
-			`;
-		}
-
-		if (size === 'large') {
-			return css`
-				padding:
-					calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )
-					${horizontalBase};
-			`;
-		}
-
-		return css`
-			padding:
-				calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )
-				${horizontalBase};
-		`;
-	}}
-}
 `;
-LinkBarLinkBase.propTypes = {
+LinkBarElementBase.propTypes = {
 	/** Display text in capital letters */
 	ALLCAPS: PropTypes.bool,
 	/** DEPRECATED css color string, use activeBackgroundColor instead */
@@ -234,7 +215,7 @@ LinkBarLinkBase.propTypes = {
 	/** Fancy underline feature on hover and focus */
 	useUnderline: PropTypes.bool,
 };
-LinkBarLinkBase.defaultProps = {
+LinkBarElementBase.defaultProps = {
 	ALLCAPS: false,
 	backgroundColor: 'transparent',
 	inset: false,

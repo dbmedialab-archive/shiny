@@ -1,7 +1,7 @@
 import React from 'react';
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarElementBase } from './LinkBarElementBase';
 
-const LinkBarHeading = LinkBarLinkBase.withComponent('span');
+const LinkBarHeading = LinkBarElementBase.withComponent('span');
 
 export const XSmallLinkBarHeading = props => <LinkBarHeading size="xsmall" {...props} />;
 export const SmallLinkBarHeading = props => <LinkBarHeading size="small" {...props} />;

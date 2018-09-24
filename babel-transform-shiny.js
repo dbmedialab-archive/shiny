@@ -131,7 +131,7 @@ function getMapping() {
 		SmallLinkBarHeading: '../atoms/LinkBarHeading',
 		LinkBarHeading: '../atoms/LinkBarHeading',
 		LargeLinkBarHeading: '../atoms/LinkBarHeading',
-		LinkBarLinkBase: '../atoms/LinkBarLinkBase',
+		LinkBarElementBase: '../atoms/LinkBarElementBase',
 		LinkBarButton: '../atoms/LinkBarButton',
 		SmallLinkBarButton: '../atoms/LinkBarButton',
 		XSmallLinkBarButton: '../atoms/LinkBarButton',

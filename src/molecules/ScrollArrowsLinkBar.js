@@ -191,8 +191,11 @@ class ScrollArrowsLinkBar extends Component {
 }
 
 ScrollArrowsLinkBar.propTypes = {
-	background: PropTypes.string, // Deprecated actual css color string
-	backgroundColor: PropTypes.string, // Color name from theme
+	arrowSize: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+	/** Deprecated actual css color string */
+	background: PropTypes.string,
+	/** Color name from theme */
+	backgroundColor: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -214,8 +217,9 @@ ScrollArrowsLinkBar.propTypes = {
 };
 
 ScrollArrowsLinkBar.defaultProps = {
-	background: 'papayawhip', // Deprecated actual css color string
-	backgroundColor: null, // Color name from theme
+	arrowSize: 'medium',
+	background: 'papayawhip',
+	backgroundColor: null,
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,

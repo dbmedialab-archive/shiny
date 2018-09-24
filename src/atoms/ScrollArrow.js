@@ -2,10 +2,11 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 
 import { getColor } from '../utils';
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarElementBase } from './LinkBarElementBase';
 import { FontIcon } from './FontIcon';
 
-const Arrow = styled(LinkBarLinkBase.withComponent('div'))`
+const ArrowBase = LinkBarElementBase.withComponent('div');
+const Arrow = styled(ArrowBase)`
 	position: absolute;
 	top: 0;
 	${props => (props.pointsTo === 'left' ? css`left: 0` : css`right: 0;`)};
