@@ -95,7 +95,7 @@ export const LinkBarElementBase = styled.a`
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
 	font-size: ${getVariable('uiRegularSize')};
-	line-height: ${props => (props.isBlockLink ? '0' : getVariable('uiRegularLineHeight')(props))};
+	line-height: ${getVariable('uiRegularLineHeight')};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${(props) => {
@@ -119,6 +119,25 @@ export const LinkBarElementBase = styled.a`
 		text-transform: uppercase;
 		letter-spacing: .1rem;
 	`}
+
+	/*
+	 * As opposed to other links,
+	 * blocklinks will not have
+	 * line-height or horizontal padding
+	 */
+	${(props) => {
+		const { isBlockLink } = props;
+		if (!isBlockLink) {
+			return '';
+		}
+
+		return css`
+			&& {
+				line-height: 0;
+				padding: 0;
+			}
+		`;
+	}}
 
 	:hover {
 		text-decoration: none;
