@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 
 import { getColor } from '../utils/get-color';
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarElementBase } from './LinkBarElementBase';
 import { FontIcon } from './FontIcon';
 
-const FontIconBase = LinkBarLinkBase.withComponent(FontIcon);
+const FontIconBase = LinkBarElementBase.withComponent(FontIcon);
 const AbsoluteFontIcon = styled(FontIconBase)`
 	position: absolute;
 	font-family: "Helveticons";
 `;
 
-const InputBase = LinkBarLinkBase.withComponent('input');
+const InputBase = LinkBarElementBase.withComponent('input');
 const Input = styled(InputBase)`
 	&& {
 		/* Magic number: width of the AbsoluteFontIcon */

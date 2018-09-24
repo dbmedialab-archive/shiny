@@ -4,12 +4,13 @@ import { withTheme } from 'emotion-theming';
 import { getColor, getVariable } from '../../src';
 
 import {
-	LinkBarLink,
-	XSmallLinkBarLink,
 	HorizontalLinkBar,
 	SeHerLogo,
 	FontIcon,
 	HugeHeading,
+	LinkBarLink,
+	XSmallLinkBarLink,
+	SmallLinkBarLink,
 	LargeLinkBarLink,
 	LargeLinkBarDropdown,
 	LinkBarButton,
@@ -78,7 +79,7 @@ const SecondaryBar = withTheme(({
 		},
 	},
 	...rest
-}) => <ScrollArrowsLinkBar background={white} {...rest} />);
+}) => <ScrollArrowsLinkBar background={white} arrowSize="small" {...rest} />);
 
 const SecondaryLinkBarHeading = styled(LinkBarHeading)`
 	border-right: .1rem solid ${getColor('grayTint', 'light')};
@@ -179,8 +180,8 @@ const SeHerMenuRemake = () => (
 			</BrandBar>
 		</BrandBar>
 		<SecondaryBar
-			isTopLevelComponent // Use the full width
-			shouldAdjustForNestedPadding
+			// isTopLevelComponent // Use the full width
+			// shouldAdjustForNestedPadding
 			shouldFlexChildren
 			background={`linear-gradient(
 				0deg,
@@ -188,44 +189,44 @@ const SeHerMenuRemake = () => (
 				#fff .1rem
 			)`}
 		>
-			<SecondaryLinkBarHeading {...linkProps} useUnderline={false}>Seksjoner</SecondaryLinkBarHeading>
-			<LinkBarLink
+			<SecondaryLinkBarHeading {...linkProps} size="small" useUnderline={false}>Seksjoner</SecondaryLinkBarHeading>
+			<SmallLinkBarLink
 				linkText="Rød løper"
 				url="#"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Reality"
 				url="#"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Brudd & bryllup"
 				url="#"
 				{...secondaryLinkProps}
 				isActive
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Hollywood"
 				url="#"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Regal"
 				url="#"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Video"
 				url="#"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Sterke historier"
 				url="https://example.com"
 				{...secondaryLinkProps}
 			/>
-			<LinkBarLink
+			<SmallLinkBarLink
 				linkText="Reise"
 				url="https://example.com"
 				{...secondaryLinkProps}

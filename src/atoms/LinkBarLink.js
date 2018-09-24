@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarElementBase } from './LinkBarElementBase';
 
 const LinkBarLink = ({
 	children,
@@ -10,12 +10,12 @@ const LinkBarLink = ({
 	...rest
 }) => {
 	return (
-		<LinkBarLinkBase
+		<LinkBarElementBase
 			href={url}
 			skin={linkText.toLowerCase()}
 			{...rest}
 		>{children || linkText}
-		</LinkBarLinkBase>
+		</LinkBarElementBase>
 	);
 };
 
