@@ -8,8 +8,8 @@ import {
 	SeHerLogo,
 	FontIcon,
 	HugeHeading,
+	LinkBarItem,
 	LinkBarLink,
-	XSmallLinkBarLink,
 	SmallLinkBarLink,
 	LargeLinkBarLink,
 	LargeLinkBarDropdown,
@@ -21,10 +21,23 @@ import {
 
 import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
 
+const logoWidth = '5.9rem';
+const smLogoWidth = '7.2rem';
+
 const SearchField = styled(TopBarSearchField)`
 	box-sizing: border-box;
 	margin: .8rem 0;
 	width: auto;
+`;
+
+const LinkBarBleedingLogo = styled(LinkBarItem)`
+	align-self: flex-start;
+	z-index: 9;
+	width: ${logoWidth};
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
+		width: ${smLogoWidth};
+	}
+
 `;
 
 const SeHerButton = styled(LinkBarButton)`
@@ -64,6 +77,27 @@ const SocialLink = styled(LinkBarLink)`
 	font-size: 3.0rem;
 	line-height: 1;
 `;
+
+const ArrowBar = styled(ScrollArrowsLinkBar)`
+	${(props) => {
+		const blackMagicVariable = '.3rem';
+		const margin = `calc(${logoWidth} + 2*${blackMagicVariable})`;
+		const smMargin = `calc(${smLogoWidth} + ${blackMagicVariable})`;
+
+		return `
+			margin-left: ${margin};
+
+			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
+				margin-left: ${smMargin};
+			}
+		`;
+	}}
+`;
+
+const StyledBar = styled(HorizontalLinkBar)`
+	align-items: flex-start;
+`;
+
 const BrandBar = withTheme(({
 	theme: {
 		colors: {
@@ -71,7 +105,7 @@ const BrandBar = withTheme(({
 		},
 	},
 	...rest
-}) => <HorizontalLinkBar background={grayTintLight} {...rest} />);
+}) => <StyledBar background={grayTintLight} {...rest} />);
 const SecondaryBar = withTheme(({
 	theme: {
 		colors: {
@@ -79,18 +113,21 @@ const SecondaryBar = withTheme(({
 		},
 	},
 	...rest
-}) => <ScrollArrowsLinkBar background={white} arrowSize="small" {...rest} />);
+}) => <ArrowBar background={white} arrowSize="small" {...rest} />);
 
 const SecondaryLinkBarHeading = styled(LinkBarHeading)`
 	border-right: .1rem solid ${getColor('grayTint', 'light')};
 	font-weight: ${getVariable('uiWeightSemiBold')};
 `;
 
-const LogoLink = styled(XSmallLinkBarLink)`
-	width: 6.9rem;
+const LogoLink = styled(LargeLinkBarLink)`
+	position: absolute;
+	top:0;
+	transition: .2s width;
+	width: ${logoWidth};
 
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-		width: 7.2rem;
+		width: ${smLogoWidth};
 	}
 `;
 
@@ -99,18 +136,21 @@ const SeHerMenuRemake = () => (
 		<HugeHeading>SeHer Menu Remake Mockup</HugeHeading>
 		<BrandBar
 			isTopLevelComponent={false} // Use the full width
+			shouldAdjustForNestedPadding
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
-			shouldAdjustForNestedPadding
 			zIndex={9}
 		>
 			<BrandBar
 				overflow="visible"
+				shouldFlexChildren
 			>
-				<LogoLink {...linkProps} useUnderline={false} isBlockLink>
-					<SeHerLogo />
-				</LogoLink>
+				<LinkBarBleedingLogo isListItem>
+					<LogoLink {...linkProps} useUnderline={false} isBlockLink>
+						<SeHerLogo />
+					</LogoLink>
+				</LinkBarBleedingLogo>
 				<LargeLinkBarLink xs={false} md url="/seksjon" {...linkProps}>Seksjon</LargeLinkBarLink>
 				<LargeLinkBarLink xs={false} md url="/seksjon" {...linkProps}>Seksjon</LargeLinkBarLink>
 				<LargeLinkBarLink xs={false} md url="/seksjon" {...linkProps}>Seksjon</LargeLinkBarLink>
@@ -180,9 +220,9 @@ const SeHerMenuRemake = () => (
 			</BrandBar>
 		</BrandBar>
 		<SecondaryBar
-			// isTopLevelComponent // Use the full width
-			// shouldAdjustForNestedPadding
+			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
+			justifyContent="flex-start"
 			background={`linear-gradient(
 				0deg,
 				#eee,
