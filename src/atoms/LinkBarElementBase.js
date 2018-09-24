@@ -36,6 +36,9 @@ export const LinkBarElementBase = styled.a`
 		const { size, inset } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const verticalBase = getVariable('verticalBase')(props);
+		const uiSmallSize = getVariable('uiSmallSize')(props);
+		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
+		const uiRegularSize = getVariable('uiRegularSize')(props);
 		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
 
 		// If props.inset is true, we will remove half the vertical padding
@@ -53,16 +56,16 @@ export const LinkBarElementBase = styled.a`
 			smPadding = padding;
 		} else if (size === 'small') {
 			padding = `
-				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiSmallLineHeight}) )
 				calc(1/2 * ${horizontalBase})
 			`;
 			smPadding = `
-				calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiSmallLineHeight}) )
 				calc(1/2 * ${horizontalBase})
 			`;
 		} else if (size === 'large') {
 			padding = `
-				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
+				calc(${insetFactor} * 1/2 * (4/2*${verticalBase} - ${uiRegularLineHeight}) )
 				${horizontalBase}
 			`;
 			smPadding = `
@@ -81,7 +84,16 @@ export const LinkBarElementBase = styled.a`
 			`;
 		}
 
+		const fontSize = ['xsmall', 'small'].includes(props.size)
+			? uiSmallSize
+			: uiRegularSize;
+		const lineHeight = ['xsmall', 'small'].includes(props.size)
+			? uiSmallLineHeight
+			: uiRegularLineHeight;
+
 		return css`
+			font-size: ${fontSize};
+			line-height: ${lineHeight};
 			padding: ${padding};
 			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
 				padding: ${smPadding};
@@ -94,8 +106,6 @@ export const LinkBarElementBase = styled.a`
 	outline: none;
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
-	font-size: ${getVariable('uiRegularSize')};
-	line-height: ${getVariable('uiRegularLineHeight')};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 	transition: padding .2s;
 	background: ${(props) => {
