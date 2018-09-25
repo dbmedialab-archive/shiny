@@ -66,6 +66,7 @@ const DagbladetStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<VerySpecialLinkBar
+				isTopLevelComponent={false} // Use the whole width
 				backgroundColor="splashBackground"
 				overflow="visible"
 				shouldFlexChildren
