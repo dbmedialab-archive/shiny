@@ -32,7 +32,6 @@ const SearchField = styled(TopBarSearchField)`
 
 const LinkBarBleedingLogo = styled(LinkBarItem)`
 	align-self: flex-start;
-	z-index: 9;
 	width: ${logoWidth};
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
 		width: ${smLogoWidth};
