@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { withTheme } from 'emotion-theming';
 import { getColor, getVariable } from '../../src';
 
 import {
@@ -13,22 +12,14 @@ import {
 	SmallLinkBarLink,
 	LargeLinkBarLink,
 	LargeLinkBarDropdown,
+	LargeLinkBarSearchField,
 	LinkBarButton,
 	LinkBarHeading,
-	ScrollArrowsLinkBar,
 	VerticalLinkBar,
 } from '../../src';
 
-import { TopBarSearchField } from '../../src/atoms/MatHeader/TopBarSearchField';
-
 const logoWidth = '5.9rem';
 const smLogoWidth = '7.2rem';
-
-const SearchField = styled(TopBarSearchField)`
-	box-sizing: border-box;
-	margin: .8rem 0;
-	width: auto;
-`;
 
 const LinkBarBleedingLogo = styled(LinkBarItem)`
 	align-self: flex-start;
@@ -36,7 +27,6 @@ const LinkBarBleedingLogo = styled(LinkBarItem)`
 	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
 		width: ${smLogoWidth};
 	}
-
 `;
 
 const SeHerButton = styled(LinkBarButton)`
@@ -67,6 +57,7 @@ const linkProps = {
 const secondaryLinkProps = Object.assign({}, linkProps, { textColor: 'primary' });
 
 const socialLinkProps = {
+	size: 'small',
 	useUnderline: false,
 	textColor: 'type',
 	xs: false,
@@ -77,42 +68,21 @@ const SocialLink = styled(LinkBarLink)`
 	line-height: 1;
 `;
 
-const ArrowBar = styled(ScrollArrowsLinkBar)`
+const SecondaryBar = styled(HorizontalLinkBar)`
 	${(props) => {
-		const blackMagicVariable = '.3rem';
-		const margin = `calc(${logoWidth} + 2*${blackMagicVariable})`;
-		const smMargin = `calc(${smLogoWidth} + ${blackMagicVariable})`;
-
 		return `
-			margin-left: ${margin};
+			margin-left: ${logoWidth};
 
 			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
-				margin-left: ${smMargin};
+				margin-left: ${smLogoWidth};
 			}
 		`;
 	}}
 `;
 
-const StyledBar = styled(HorizontalLinkBar)`
+const TopAlignBar = styled(HorizontalLinkBar)`
 	align-items: flex-start;
 `;
-
-const BrandBar = withTheme(({
-	theme: {
-		colors: {
-			grayTintLight,
-		},
-	},
-	...rest
-}) => <StyledBar background={grayTintLight} {...rest} />);
-const SecondaryBar = withTheme(({
-	theme: {
-		colors: {
-			white,
-		},
-	},
-	...rest
-}) => <ArrowBar background={white} arrowSize="small" {...rest} />);
 
 const SecondaryLinkBarHeading = styled(LinkBarHeading)`
 	border-right: .1rem solid ${getColor('grayTint', 'light')};
@@ -133,15 +103,18 @@ const LogoLink = styled(LargeLinkBarLink)`
 const SeHerMenuRemake = () => (
 	<section>
 		<HugeHeading>SeHer Menu Remake Mockup</HugeHeading>
-		<BrandBar
+		<TopAlignBar
+			backgroundColor="grayTintLight"
 			isTopLevelComponent={false} // Use the full width
 			shouldAdjustForNestedPadding
 			shouldFlexChildren
 			justifyContent="space-between"
 			overflow="visible"
-			zIndex={9}
+			zIndex={5}
 		>
-			<BrandBar
+			<TopAlignBar
+				backgroundColor="transparent"
+				isTopLevelComponent={false}
 				overflow="visible"
 				shouldFlexChildren
 			>
@@ -169,12 +142,11 @@ const SeHerMenuRemake = () => (
 						<LinkBarLink url="/seksjon" {...linkProps}>Kommersiell lenke</LinkBarLink>
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-			</BrandBar>
-			<BrandBar
+			</TopAlignBar>
+			<HorizontalLinkBar
 				isTopLevelComponent // Use the full width
 				shouldFlexChildren
-				justifyContent="space-between"
-				overflow="visible"
+				backgroundColor="transparent"
 			>
 				<SocialLink
 					href="https://www.facebook.com/seoghor/"
@@ -194,15 +166,14 @@ const SeHerMenuRemake = () => (
 				>
 					<FontIcon name="youtube" title="Se og Hør på YouTube" />
 				</SocialLink>
-				<form action="https://www.seher.no/tekstarkiv/">
-					<SearchField
-						type="search"
-						name="q"
-						placeholder="Søk i Se&Hør..."
-						xs={false}
-						md
-					/>
-				</form>
+				<LargeLinkBarSearchField
+					action="https://www.seher.no/tekstarkiv/"
+					placeholder="Søk i Se&Hør..."
+					xs={false}
+					md
+					backgroundColor="white"
+					iconColor="typeLight"
+				/>
 				<LargeLinkBarDropdown
 					{...linkProps}
 					xs
@@ -216,8 +187,8 @@ const SeHerMenuRemake = () => (
 						<LinkBarLink linkText="Eller her?" url="#" {...linkProps} />
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
-			</BrandBar>
-		</BrandBar>
+			</HorizontalLinkBar>
+		</TopAlignBar>
 		<SecondaryBar
 			isTopLevelComponent={false} // Use the full width
 			shouldFlexChildren
