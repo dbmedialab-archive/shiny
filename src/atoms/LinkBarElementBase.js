@@ -46,42 +46,27 @@ export const LinkBarElementBase = styled.a`
 		// cover the entire height of the link bar
 		const insetFactor = inset ? 1/2 : 1;
 
-		let padding;
-		let smPadding;
+		let verticalPadding;
+		let horizontalPadding;
+		let smVerticalPadding;
+
 		if (size === 'xsmall') {
-			padding = `
-				0
-				calc(1/2 * ${horizontalBase})
-			`;
-			smPadding = padding;
+			verticalPadding = '0';
+			smVerticalPadding = verticalPadding;
+			horizontalPadding = `calc(1/2 * ${horizontalBase})`;
 		} else if (size === 'small') {
-			padding = `
-				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiSmallLineHeight}) )
-				calc(1/2 * ${horizontalBase})
-			`;
-			smPadding = `
-				calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiSmallLineHeight}) )
-				calc(1/2 * ${horizontalBase})
-			`;
+			verticalPadding = `calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiSmallLineHeight}) )`;
+			smVerticalPadding = `calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiSmallLineHeight}) )`;
+			horizontalPadding = `calc(1/2 * ${horizontalBase})`;
 		} else if (size === 'large') {
-			padding = `
-				calc(${insetFactor} * 1/2 * (4/2*${verticalBase} - ${uiRegularLineHeight}) )
-				${horizontalBase}
-			`;
-			smPadding = `
-				calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )
-				${horizontalBase}
-			`;
+			verticalPadding = `calc(${insetFactor} * 1/2 * (4/2*${verticalBase} - ${uiRegularLineHeight}) )`;
+			smVerticalPadding = `calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )`;
+			horizontalPadding = horizontalBase;
 		} else {
 			// size === medium
-			padding = `
-				calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )
-				${horizontalBase}
-			`;
-			smPadding = `
-				calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )
-				${horizontalBase};
-			`;
+			verticalPadding = `calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )`;
+			smVerticalPadding =	`calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )`;
+			horizontalPadding = horizontalBase;
 		}
 
 		const fontSize = ['xsmall', 'small'].includes(props.size)
@@ -94,9 +79,11 @@ export const LinkBarElementBase = styled.a`
 		return css`
 			font-size: ${fontSize};
 			line-height: ${lineHeight};
-			padding: ${padding};
+			padding: ${verticalPadding} ${horizontalPadding};
+			margin: ${inset ? `${verticalPadding} 0` : 0};
 			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
-				padding: ${smPadding};
+				padding: ${smVerticalPadding} ${horizontalPadding};
+				margin: ${inset ? `${smVerticalPadding} 0` : 0};
 			}
 		`;
 	}}
