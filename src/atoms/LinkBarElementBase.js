@@ -227,7 +227,7 @@ LinkBarElementBase.propTypes = {
 	/** Color name from theme */
 	textColor: PropTypes.string,
 	/** Shiny theme */
-	theme: () => themePropTypes,
+	theme: PropTypes.shape(themePropTypes),
 	/** Fancy underline feature on hover and focus */
 	useUnderline: PropTypes.bool,
 };

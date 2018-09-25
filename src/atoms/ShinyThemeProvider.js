@@ -36,7 +36,6 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	return (
 		<EmotionThemeProvider theme={mergedTheme}>
 			<div>
-
 				{children}
 			</div>
 		</EmotionThemeProvider>
