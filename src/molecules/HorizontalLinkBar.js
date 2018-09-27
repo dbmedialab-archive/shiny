@@ -48,6 +48,7 @@ const LinkBar = ({
 							sm={child.props.sm}
 							md={child.props.md}
 							lg={child.props.lg}
+							zIndex={child.props.zIndex}
 						>
 							{child}
 						</LinkBarItem>
