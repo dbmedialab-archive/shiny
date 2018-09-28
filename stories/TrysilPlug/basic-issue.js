@@ -1,23 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { withInfo } from '@storybook/addon-info';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { TrysilPlug } from '../../src/molecules/TrysilPlug';
 
-export default () => (
+const TrysilPlugStory = () => (
 	<section>
-		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>
-			A basic plug for linking to stuff we want readers to click on.
-			Written with front page links to news articles in mind. Maybe also suitable for commercial plugs or similar.
-		</p>
-
-		<p>
-			<strong>TODO:</strong> Consider changing the label.color to take a skinColor property name instead of a plain
-			color.
-		</p>
-
-		<Heading>Usage</Heading>
 		<TrysilPlug
 			title="Hva skal vi plugge i dag, da?"
 			subtitle="Det blir vel en nyhetsartikkel igjen, tenker jeg."
@@ -38,3 +26,17 @@ export default () => (
 		/>
 	</section>
 );
+
+export default withInfo({
+	text: `
+<p>
+	A basic plug for linking to stuff we want readers to click on.
+	Written with front page links to news articles in mind. Maybe also suitable for commercial plugs or similar.
+</p>
+
+<p>
+	<strong>TODO:</strong> Consider changing the label.color to take a skinColor property name instead of a plain
+	color.
+</p>
+	`,
+})(TrysilPlugStory);
