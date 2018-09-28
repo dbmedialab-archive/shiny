@@ -36,6 +36,7 @@ const VerticalFlexingList = styled.ul`
 			height: ${getVariable('verticalBase')};
 			background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
 			position: absolute;
+			top: 0;
 			left:  ${props => (props.align === 'left'  ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
 			right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
 			transform: rotate(45deg);
