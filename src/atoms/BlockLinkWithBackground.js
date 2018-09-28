@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 // Utils
 import { getColor, getVariable } from '../utils';
 
 // Atoms
-import { BlockLink } from '../atoms/BlockLink';
+import { BlockLink } from './BlockLink';
 
 const BlockLinkWithBackground = styled(BlockLink)`
 	flex: 1;

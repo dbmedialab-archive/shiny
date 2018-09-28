@@ -7,10 +7,6 @@ import Themes from './Themes';
 import Palette from './Palette';
 import ThemeVariables from './ThemeVariables';
 
-// import { StorybookThemeSwitcher } from '../../src/storybook-decorators/ThemeSwitcher';
-
-// addDecorator(StorybookThemeSwitcher);
-
 export default () => {
 	storiesOf('Welcome', module)
 		.addDecorator(StorybookPaddedGrid)

@@ -1,17 +1,17 @@
 export default {
 	mainFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 	headingsFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-	headingsWeight: '700',
+
+	headingsWeight: 700,
+	uiWeight: 400,
+	uiWeightSemiBold: 600,
+	uiWeightBold: 700,
 
 	horizontalBase: '1.4rem',
 	unitlessHorizontalBase: 1.4,
 
 	verticalBase: '2.4rem',
 	unitlessVerticalBase: 2.4,
-
-	regularWeight: 400,
-	semiBoldWeight: 600,
-	boldWeight: 700,
 
 	largeWidth: '750px', // deprecated, use theme.flexboxgrid.breakpoints.sm instead
 

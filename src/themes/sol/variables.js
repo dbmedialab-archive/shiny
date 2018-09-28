@@ -8,9 +8,9 @@ export default {
 	verticalBase: '2.4rem',
 	unitlessVerticalBase: 2.4,
 
-	regularWeight: 400,
-	semiBoldWeight: 600,
-	boldWeight: 700,
+	uiWeight: 400,
+	uiWeightSemiBold: 600,
+	uiWeightBold: 700,
 
 	largeWidth: '750px',
 

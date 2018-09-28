@@ -1,37 +1,50 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'react-emotion';
 import Sticker from 'react-stickyfill';
 
 import { getColor } from '../utils';
 import { AdWrapper } from '../atoms/AdWrapper';
 
 const LeftAndRight = styled(AdWrapper)`
+	${props => `
 	position: absolute;
 	height: 100%;
 	width: 455px; /* Used for positioning of background ad so we use px */
 
-	top: ${props => props.top};
-  	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em) {
-		${props => (
-		props.left
-			? 'right: 100%;'
-			: 'left: 100%;'
-	)}}
-	${props => ['sm', 'md', 'lg'].map(size => css`
-		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints[size]}em) {
-			${props => (
-		props.left
-			? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-			: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container[size]}rem);`
-	)}}
+	top: ${props.top};
+  	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.xs}em) {
+		z-index: -1;
+		${props.left
+		? 'right: 100%;'
+		: 'left: 100%;'
+}}
+	
+		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
+			${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.sm}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.sm}rem);`
+}}
 
-		`)}
+	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+		${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.md}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.md}rem);`
+}}
+
+	@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.lg}em) {
+		${
+	props.left
+		? `right: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.lg}rem);`
+		: `left: calc(50% + 1/2 * ${props.theme.flexboxgrid.container.lg}rem);`
+}}
 
 	& a {
-		${props => (props.sticky ? 'position:sticky;top:0;' : '')} background-repeat: no-repeat;
-		background-image: url(${props => props.backgroundImage});
-		background-position: ${props => (props.left ? '' : 'right top')};
+		${props.sticky ? 'position:sticky;top:0;' : ''} background-repeat: no-repeat;
+		background-image: url(${props.backgroundImage});
+		background-position: ${props.left ? '' : 'right top'};
 		display: block;
 		height: 1200px; /* Use px instead of rem beause this is used to position */
 		width: 455px; /*  a background image from DFP so we need absolute values */
@@ -40,12 +53,13 @@ const LeftAndRight = styled(AdWrapper)`
 	&&::before {
 		opacity: 1;
 		position: absolute;
-		color: ${getColor('adWrapperBackgroundColor')};
-		background: ${getColor('adWrapperBackgroundColor')};
+		color: ${getColor('adWrapperBackgroundColor')(props)};
+		background: ${getColor('adWrapperBackgroundColor')(props)};
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%) translateY(-2.4rem);
 	}
+	`}
 `;
 
 LeftAndRight.propTypes = {
@@ -118,20 +132,32 @@ class WallpaperAd extends Component {
 
 	render() {
 		const {
-			height, shouldHideAttribution, itemType, itemScope,
+			children,
+			height,
+			itemType,
+			itemScope,
+			shouldHideAttribution,
 		} = this.props;
+
+		const {
+			backgroundImage,
+			href,
+			isWallpaper,
+			top,
+			sticky,
+		} = this.state;
 
 		/* eslint-disable jsx-a11y/anchor-has-content */
 		const left = (
 			<LeftAndRight
 				key={'left'}
-				backgroundImage={this.state.backgroundImage}
-				top={this.state.top}
-				sticky={this.state.sticky}
+				backgroundImage={backgroundImage}
+				top={top}
+				sticky={sticky}
 				left
 			>
 				<Sticker>
-					<a href={this.state.href} />
+					<a href={href} />
 				</Sticker>
 			</LeftAndRight>
 		);
@@ -139,12 +165,12 @@ class WallpaperAd extends Component {
 		const right = (
 			<LeftAndRight
 				key={'right'}
-				backgroundImage={this.state.backgroundImage}
-				top={this.state.top}
-				sticky={this.state.sticky}
+				backgroundImage={backgroundImage}
+				top={top}
+				sticky={sticky}
 			>
 				<Sticker>
-					<a href={this.state.href} />
+					<a href={href} />
 				</Sticker>
 			</LeftAndRight>
 		);
@@ -152,17 +178,17 @@ class WallpaperAd extends Component {
 
 		return (
 			<Fragment>
-				{this.state.isWallpaper && [left, right]}
+				{isWallpaper && [left, right]}
 				<WallpaperWrapper
 					height={height}
-					width={this.state.isWallpaper ? '1010px' : '980px'}
+					width={isWallpaper ? '1010px' : '980px'}
 					shouldHideAttribution={shouldHideAttribution}
 					itemType={itemType}
 					itemScope={itemScope}
 				>
-					{React.cloneElement(this.props.children, {
+					{React.cloneElement(children, {
 						onMediaQueryChange: this.onMediaQueryChange.bind(this),
-						width: this.state.isWallpaper ? '1010px' : '980px',
+						width: isWallpaper ? '1010px' : '980px',
 					})}
 				</WallpaperWrapper>
 			</Fragment>

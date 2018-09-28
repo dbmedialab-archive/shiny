@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'react-emotion';
 
 import {
 	Row,
@@ -55,7 +55,7 @@ const Welcome = () => (
 
 			<p>The ThemeSelector component will look up your theme from the slug,
 				deep merge it with the default theme and then pass it to
-				styled-components&apos; ThemeProvider. This way we can be sure that all
+				emotion&apos;s ThemeProvider. This way we can be sure that all
 				the properties that exist in the default theme is available on every
 				theme - which makes it a lot easier both to write themed components and
 				to create new themes.
@@ -69,7 +69,7 @@ const Welcome = () => (
 			<Code language="jsx">
 				{`
 import React from 'react';
-import { ThemeSelector as ShinyThemeProvider } from 'aller/shiny';
+import { ThemeSelector as ShinyThemeProvider } from '@aller/shiny';
 import { App } from './App';
 
 const AppWithShinyTheme = props => (
@@ -105,6 +105,10 @@ const App = props => (
 export default App;
 				`}
 			</Code>
+		</section>
+
+		<section>
+			Remember to install the peerDependencies (see package.json).
 		</section>
 	</Fragment>
 );

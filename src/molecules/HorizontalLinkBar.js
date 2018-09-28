@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
+import debug from 'debug';
 
-import { HorizontalOverflowGradient } from '..';
-import { HorizontalFlexingList as Bar } from '..';
-import { LinkBarItem } from '..';
-import { NavWithOptionalConstrainer } from '..';
+import { HorizontalOverflowGradient } from '../atoms/HorizontalOverflowGradient';
+import { HorizontalFlexingList as Bar } from '../atoms/HorizontalFlexingList';
+import { LinkBarItem } from '../atoms/LinkBarItem';
+import { NavWithOptionalConstrainer } from './NavWithOptionalConstrainer';
+
+const log = debug('HorizontalLinkBar');
 
 const LinkBar = ({
 	background,
+	backgroundColor,
 	children,
 	shouldFadeOut,
 	width,
@@ -16,14 +20,20 @@ const LinkBar = ({
 	isTopLevelComponent,
 	...rest
 }) => {
+	if (background && !backgroundColor) {
+		log('the \'background\' prop is deprecated. Use the \'backgroundColor\' prop instead. '
+		+ '\'backgroundColor\' takes a color name from the theme instead of an actual css color string.');
+	}
+
 	return (
 		<NavWithOptionalConstrainer
 			background={background}
+			backgroundColor={backgroundColor}
 			width={width}
 			zIndex={zIndex}
 			isTopLevelComponent={isTopLevelComponent}
 		>
-			<Bar background={background} position="static" {...rest}>
+			<Bar background={background} backgroundColor={backgroundColor} position="static" {...rest}>
 				{children && React.Children.map(children, (child, i) => {
 					if (child.props && child.props.isListItem) {
 						return child;
@@ -38,6 +48,7 @@ const LinkBar = ({
 							sm={child.props.sm}
 							md={child.props.md}
 							lg={child.props.lg}
+							zIndex={child.props.zIndex}
 						>
 							{child}
 						</LinkBarItem>
@@ -50,7 +61,8 @@ const LinkBar = ({
 };
 
 LinkBar.propTypes = {
-	background: PropTypes.string,
+	background: PropTypes.string, // Deprecated actual css string
+	backgroundColor: PropTypes.string, // Color name in theme
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -68,6 +80,7 @@ LinkBar.propTypes = {
 
 LinkBar.defaultProps = {
 	background: 'papayawhip', // colors.white,
+	backgroundColor: null, // Color name in theme
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,

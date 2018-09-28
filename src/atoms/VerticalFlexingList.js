@@ -1,7 +1,7 @@
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-import { getVariable } from '../utils';
+import { getColor, getVariable } from '../utils';
 import { LinkBarDropdown } from './LinkBarDropdown';
 
 
@@ -10,8 +10,8 @@ const VerticalFlexingList = styled.ul`
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	font-family: ${props => props.theme.variables.mainFont};
-	background: ${props => props.background};
+	font-family: ${getVariable('mainFont')};
+	background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
 	position: relative;
 
 	width: 100%;
@@ -32,21 +32,26 @@ const VerticalFlexingList = styled.ul`
 		::before {
 			content: '';
 			display: block;
-			width: ${props => props.theme.variables.verticalBase};
-			height: ${props => props.theme.variables.verticalBase};
-			background: ${props => props.background};
+			width: ${getVariable('verticalBase')};
+			height: ${getVariable('verticalBase')};
+			background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
 			position: absolute;
-			left: ${props => (props.align === 'left' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'inital')};
-			right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'inital')};
+			top: 0;
+			left:  ${props => (props.align === 'left'  ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
+			right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
 			transform: rotate(45deg);
 		}
 	}
 `;
 VerticalFlexingList.propTypes = {
 	align: propTypes.oneOf(['left', 'right']),
+	background: propTypes.string, // Deprecated, actual css color string
+	backgroundColor: propTypes.string, // Color name from theme
 };
 VerticalFlexingList.defaultProps = {
 	align: 'left',
+	background: null,
+	backgroundColor: null,
 };
 
 export { VerticalFlexingList };

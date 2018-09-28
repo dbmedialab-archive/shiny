@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
 const StyledPicture = styled.picture`
 	width: 100%;
@@ -10,21 +10,31 @@ const StyledPicture = styled.picture`
 	& img {
 		display: block;
 		max-width: 100%;
-		
+		backface-visibility: hidden;
+		transform: translate3d(0,0,0);
 
 		${props => (!props.preventBlur ? css`
-			backface-visibility: hidden;
 			perspective: 1000;
-			transform: translate3d(0,0,0);
 			transform: translateZ(0);
 			will-change: filter;
 			&.blur-up {
-				
+
 				filter: blur(15px);
 				transition: filter 400ms;
 
 				&.lazyloaded {
 					filter: blur(0.5px);
+				}
+		}` : '')}
+
+		${props => (props.fadeIn ? css`
+			will-change: opacity;
+			&.fade-in {
+				opacity: 0.1;
+				transition: opacity 400ms;
+
+				&.lazyloaded {
+					opacity: 1;
 				}
 		}` : '')}
 	}
@@ -55,13 +65,14 @@ class Picture extends PureComponent {
 	}
 
 	render() {
-		const { alt, preventBlur } = this.props;
+		const {
+			children,
+			...rest
+		} = this.props;
+
 		return (
-			<StyledPicture
-				alt={alt}
-				preventBlur={preventBlur}
-			>
-				{this.props.children}
+			<StyledPicture {...rest}>
+				{children}
 			</StyledPicture>
 		);
 	}

@@ -1,60 +1,64 @@
-import Styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
 import { SvgIcon } from './SvgIcon';
 
-const BylineBlock = Styled.div`
-`;
-const BylineImage = Styled.img.attrs({
-	src: ({ src }) => src,
-})`
-    float: left;
-    width: 4.5rem;
-    height: 4.5rem;
-    overflow: hidden;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: ${getVariable('horizontalBase')};
-`;
-
-const WrapAvatar = Styled.div`
+const BylineImage = styled.img`
 	float: left;
-    width: 4.5rem;
-    height: 4.5rem;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: ${getVariable('horizontalBase')};
-    text-align: center;
+	width: 4.5rem;
+	height: 4.5rem;
+	overflow: hidden;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: ${getVariable('horizontalBase')};
 `;
 
-const TextBlock = Styled.div`
-    float: left;
-    color: ${getColor('type')};
-    font-family: ${getVariable('mainFont')};
+const WrapAvatar = styled.div`
+	float: left;
+	width: 4.5rem;
+	height: 4.5rem;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-right: ${getVariable('horizontalBase')};
+	text-align: center;
 `;
 
-const Name = Styled.div`
-    font-size: ${getVariable('uiRegularSize')};
-    line-height: ${getVariable('uiRegularLineHeight')};
-    font-weight: 300;
+const TextBlock = styled.div`
+	float: left;
+	color: ${getColor('type')};
+	font-family: ${getVariable('mainFont')};
 `;
 
-const Email = Styled.a.attrs({
-	href: ({ email }) => `mailto:${email}`,
-})`
-    font-size: ${getVariable('uiSmallSize')};
-    font-weight: 300;
-    color: ${getColor('type')};
+const Name = styled.div`
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
+	font-weight: 300;
 `;
+
+const A = styled.a`
+	font-size: ${getVariable('uiSmallSize')};
+	font-weight: 300;
+	color: ${getColor('type')};
+`;
+
+const Email = ({ email, ...rest }) => <A href={`mailto:${email}`} {...rest} />;
+
+Email.propTypes = {
+	email: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
+};
+
 
 const BylineWithTwoLines = ({ src, name, email }) => (
-	<BylineBlock>
-		{ src ?  <BylineImage
-			src={src}
-		/> : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
+	<div>
+		{ src ?  (
+			<BylineImage
+				src={src}
+			/>
+		) : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
 			<Name itemProp="author" itemScope itemType="http://schema.org/Person">
 				<span itemProp="name">{name}</span>
@@ -63,7 +67,7 @@ const BylineWithTwoLines = ({ src, name, email }) => (
 				{email}
 			</Email>
 		</TextBlock>
-	</BylineBlock>
+	</div>
 );
 
 BylineWithTwoLines.propTypes = {

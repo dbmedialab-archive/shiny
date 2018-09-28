@@ -5,7 +5,7 @@ import {
 	Heading,
 	HugeHeading,
 	TrysilPlug,
-} from '../../src/';
+} from '../../src';
 
 import { Code } from '../../src/atoms/Code';
 

@@ -1,29 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-import { Row } from '..';
-import { Col } from '..';
-import { IconWithText } from '..';
+import { IconWithText } from '../atoms/IconWithText';
 
-const PaddingLess = styled(Col)`
-	padding: 0;
+const Bar = styled.div`
+	display: flex;
+	justify-content: center;
 `;
 
-const RowBase = styled(Row)`
-	align-items: baseline;
-`;
-
-const IconBar = props => (
-	<RowBase>
+const IconBar = ({
+	entities,
+	iconSize,
+	textSize,
+}) => (
+	<Bar>
 		{
-			props.entities.map((entity, i) => (
-				<PaddingLess xs={2} md={4} key={i}>
-					<IconWithText {...entity} textSize={props.textSize} iconSize={props.iconSize} />
-				</PaddingLess>
+			entities.map((entity, i) => (
+				<IconWithText
+					{...entity}
+					textSize={textSize}
+					iconSize={iconSize}
+				/>
 			))
 		}
-	</RowBase>
+	</Bar>
 );
 
 IconBar.propTypes = {

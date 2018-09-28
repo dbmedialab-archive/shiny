@@ -1,13 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
-import { LinkBarLinkBase } from './LinkBarLinkBase';
+import { LinkBarButton } from './LinkBarButton';
 import { FontIcon } from './FontIcon';
-
-const Button = styled(LinkBarLinkBase.withComponent('button'))`
-	cursor: pointer;
-`;
 
 // I just met you,
 // And this is crazy.
@@ -16,57 +12,21 @@ const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
 `;
 
-const StyledDropdown = styled.div``;
-
 class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
 
+		const { displayInitially } = this.props;
+
 		this.lastFocusTime = 0;
 		this.state = {
-			hide: !this.props.displayInitially,
+			hide: !displayInitially,
 		};
 
 		this.updateLastFocusTime = this.updateLastFocusTime.bind(this);
 		this.hideIfNotRecentlyFocused = this.hideIfNotRecentlyFocused.bind(this);
 		this.toggle = this.toggle.bind(this);
 		this.tryHide = this.tryHide.bind(this);
-	}
-
-	getStandardTrigger() {
-		const { linkText, ...rest } = this.props;
-		const { hide } = this.state;
-		const updown = (hide === true) ? 'down' : 'up';
-
-		return (
-			<Button
-				aria-expanded={hide ? 'false' : 'true'}
-				onClick={this.toggle}
-				{...rest}
-			>
-				{linkText}{' '}
-				<FontIcon name={`arrow-alt-${updown}`} />
-			</Button>
-		);
-	}
-
-	getCustomTrigger() {
-		const { hide } = this.state;
-		const { Trigger, className } = this.props;
-
-		return (
-			<Trigger
-				className={className}
-				aria-expanded={hide ? 'false' : 'true'}
-				onClick={this.toggle}
-			/>
-		);
-	}
-
-	getTrigger() {
-		const { Trigger } = this.props;
-
-		return Trigger ? this.getCustomTrigger() : this.getStandardTrigger();
 	}
 
 	/**
@@ -99,45 +59,74 @@ class Dropdown extends React.Component {
 	}
 
 	tryHide() {
-		if (this.props.hideOnClick) {
+		const { hideOnClick } = this.props;
+
+		if (hideOnClick) {
 			this.hide();
 		}
 	}
 
 	toggle() {
+		const { hide } = this.state;
+
 		this.setState({
-			hide: !this.state.hide,
+			hide: !hide,
 		});
 	}
 
 	render() {
-		const { children } = this.props;
+		const {
+			children, Trigger, ...rest
+		} = this.props;
 		const { hide } = this.state;
 
 		return (
-			<StyledDropdown
+			<div
 				onFocus={this.updateLastFocusTime}
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
-				{this.getTrigger()}
+				<Trigger
+					aria-expanded={hide ? 'false' : 'true'}
+					hide={hide}
+					onClick={this.toggle}
+					{...rest}
+				/>
 				<HideMeMaybe onClick={this.tryHide} hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
-			</StyledDropdown>
+			</div>
 		);
 	}
 }
+
+const StandardTrigger = (props) => {
+	const { linkText, hide, ...rest } = props;
+	const direction = (hide === true) ? 'down' : 'up';
+
+	return (
+		<LinkBarButton {...rest}>
+			{linkText}{' '}
+			<FontIcon name={`arrow-alt-${direction}`} />
+		</LinkBarButton>
+	);
+};
 
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
 		propTypes.node,
 		propTypes.arrayOf(propTypes.node),
 	]).isRequired,
+	/** Expands the menu by default. */
 	displayInitially: propTypes.bool,
+	/** Text to display in the link. Can be overriden with the _children_ prop. */
 	linkText: propTypes.string,
+	/** Sets position: relative on the button. Needed to position dropdowns absolutely. */
 	isRelative: propTypes.bool,
+	/** For providing custom button elements. */
 	Trigger: propTypes.func,
+	/** For providing additional classnames. */
 	className: propTypes.string,
+	/** @TODO: What does this do? */
 	hideOnClick: propTypes.bool,
 };
 Dropdown.defaultProps = {
@@ -145,7 +134,7 @@ Dropdown.defaultProps = {
 	isRelative: true,
 	className: null,
 	linkText: null,
-	Trigger: null,
+	Trigger: StandardTrigger,
 	hideOnClick: false,
 };
 

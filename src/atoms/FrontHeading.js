@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable } from '../utils';
 
 import {
@@ -10,7 +10,7 @@ import {
 } from './Heading';
 
 const FheadStyle = props => css`
-    color: ${getColor(props.textColor)};
+    color: ${getColor(props.textColor)(props)};
     display: block;
     white-space: nowrap;
 	overflow: hidden;
@@ -19,31 +19,31 @@ const FheadStyle = props => css`
     &:after {
 		content: '';
 		width: ${props.lineWidth ? `${props.lineWidth}rem` : '100%'};
-		margin-left: ${getVariable('headingSmallSize')};
+		margin-left: ${getVariable('headingSmallSize')(props)};
 		display: inline-block;
-		border-bottom: .2rem solid ${getColor(props.lineColor)};
+		border-bottom: .2rem solid ${getColor(props.lineColor)(props)};
 		vertical-align: middle;
     }
 `;
 
 const FrontSmallHeading = styled(SmallHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingSmallSize')};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingSmallSize')(props)};
 	}
 `;
 
 const FrontMediumHeading = styled(MediumHeading)`
 	${FheadStyle}
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingMediumSize')};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingMediumSize')(props)};
 	}
 `;
 const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
-	font-size: ${getVariable('headingMediumSize')};
-	@media screen and (min-width: ${getVariable('largeWidth')}) {
-		font-size: ${getVariable('headingLargeSize')};
+	font-size: ${props => getVariable('headingMediumSize')(props)};
+	@media screen and (min-width: ${props => getVariable('largeWidth')(props)}) {
+		font-size: ${props => getVariable('headingLargeSize')(props)};
 	}
 `;
 const FrontXLargeHeading = styled(XLargeHeading)`${FheadStyle}`;

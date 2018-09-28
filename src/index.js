@@ -4,6 +4,7 @@ export { themes                  } from './themes';
 // Atoms
 export {
 	Heading,
+	XSmallHeading,
 	SmallHeading,
 	MediumHeading,
 	LargeHeading,
@@ -48,9 +49,11 @@ export {
 
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
+export { AdSettingsCog           } from './atoms/AdSettingsCog';
 export { BlockLink               } from './atoms/BlockLink';
 export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
 export { BlockQuote              } from './atoms/BlockQuote';
+export { Body                    } from './atoms/Body';
 export { BodyText                } from './atoms/BodyText';
 export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
@@ -96,6 +99,7 @@ export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
 export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
 export { LinkBarNav              } from './atoms/LinkBarNav';
 export { LinkBarItem             } from './atoms/LinkBarItem';
+export { LinkBarElementBase      } from './atoms/LinkBarElementBase';
 export { XSmallLinkBarLink       } from './atoms/LinkBarLink';
 export { SmallLinkBarLink        } from './atoms/LinkBarLink';
 export { LinkBarLink             } from './atoms/LinkBarLink';
@@ -105,15 +109,18 @@ export { XSmallLinkBarHeading    } from './atoms/LinkBarHeading';
 export { SmallLinkBarHeading     } from './atoms/LinkBarHeading';
 export { LinkBarHeading          } from './atoms/LinkBarHeading';
 export { LargeLinkBarHeading     } from './atoms/LinkBarHeading';
-export { LinkBarLinkBase         } from './atoms/LinkBarLinkBase';
 export { LinkBarButton           } from './atoms/LinkBarButton';
-export { SmallLinkBarButton      } from './atoms/LinkBarButton';
 export { XSmallLinkBarButton     } from './atoms/LinkBarButton';
+export { SmallLinkBarButton      } from './atoms/LinkBarButton';
+export { LargeLinkBarButton      } from './atoms/LinkBarButton';
 export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
 export { XSmallLinkBarDropdown   } from './atoms/LinkBarDropdown';
 export { SmallLinkBarDropdown    } from './atoms/LinkBarDropdown';
 export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
 export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
+export { LinkBarSearchField      } from './atoms/LinkBarSearchField';
+export { SmallLinkBarSearchField } from './atoms/LinkBarSearchField';
+export { LargeLinkBarSearchField } from './atoms/LinkBarSearchField';
 export { ShinyLogo               } from './atoms/ShinyLogo';
 export { ShinyThemeProvider      } from './atoms/ShinyThemeProvider';
 export { ThemeSelector           } from './atoms/ThemeSelector';
@@ -134,6 +141,8 @@ export { RoundedButton           } from './atoms/RoundedButtons';
 export { SmallRoundedButton      } from './atoms/RoundedButtons';
 export { TinyRoundedButton       } from './atoms/RoundedButtons';
 export { ArrowBullet 			 } from './atoms/ArrowBullet';
+export { LogiclessModal          } from './atoms/LogiclessModal';
+
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';

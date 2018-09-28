@@ -1,5 +1,4 @@
-import { unshadeColorString } from '.';
-
+import { unshadeColorString } from './unshade-color-string';
 /**
  * Create a function that looks up a color from your theme.
  *

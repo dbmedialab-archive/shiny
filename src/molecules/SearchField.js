@@ -1,19 +1,19 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
-import { LoadingSearchIcon } from '..';
-import { FontIcon } from '..';
+import { LoadingSearchIcon } from '../atoms/loaders/LoadingSearchIcon';
+import { FontIcon } from '../atoms/FontIcon';
 
 const Search = styled.div`
   position: relative;
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom :
-		(`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
+  margin-bottom: ${props => (props.marginBottom ? props.marginBottom
+		: (`${1 / 2 * props.theme.variables.unitlessVerticalBase}rem`))};
   background-color: ${getColor('white')};
   font-size: 1.6rem;
-  box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : css`0 0.3rem 0.3rem ${getColor('grayTint')(props)}`)};
   overflow: hidden;
   box-sizing: border-box;
   border-bottom: ${props => props.borderBottom};
@@ -54,8 +54,10 @@ class SearchField extends React.Component {
 
 		this.state = {
 			searchText: '',
+			isLoading: props.isLoading,
 		};
 	}
+
 	handleTextChange = (event) => {
 		// const {
 		// 	handleSearchTextChange,
@@ -72,7 +74,11 @@ class SearchField extends React.Component {
 			handleUserTypedSearch,
 		} = this.props;
 
-		handleUserTypedSearch(this.state.searchText);
+		const {
+			searchText,
+		} = this.state;
+
+		handleUserTypedSearch(searchText);
 	};
 
 	searchNowIfEnter = (event) => {
@@ -84,24 +90,28 @@ class SearchField extends React.Component {
 	render() {
 		const {
 			searchTextVisible,
-			isLoading,
 			color,
 			backgroundColor,
 			fontSize,
 			shadow,
 			iconSize,
 			marginBottom,
-			searchText,
+			searchText: placeholder,
 		} = this.props;
 
-		const value = (searchTextVisible) ? this.state.searchText : '';
+		const {
+			isLoading,
+			searchText,
+		} = this.state;
+
+		const value = (searchTextVisible) ? searchText : '';
 
 		return (
 			<Search marginBottom={marginBottom}>
 				<SearchFieldInput
 					type="text"
 					value={value}
-					placeholder={searchText}
+					placeholder={placeholder}
 					onChange={this.handleTextChange}
 					onKeyDown={this.searchNowIfEnter}
 					shadow={shadow}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 import { Tag } from '../atoms/Tag';
 
 const TagItemWrapper = styled.span`
@@ -15,7 +15,7 @@ const TagSection = (props) => {
 	return (
 		props.tags.map((tag) => {
 			return (
-				<TagItemWrapper key={tag.title} >
+				<TagItemWrapper key={tag.title}>
 					<Tag {...tag} />
 				</TagItemWrapper>);
 		})

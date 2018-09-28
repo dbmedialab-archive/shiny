@@ -26,11 +26,13 @@ import { Dice } from '@aller/shiny';
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>
-						<th>Prop</th>
-						<th>Description</th>
-						<th>Required/optional</th>
-						<th>Type</th>
-						<th>default</th>
+						<tr>
+							<th>Prop</th>
+							<th>Description</th>
+							<th>Required/optional</th>
+							<th>Type</th>
+							<th>default</th>
+						</tr>
 					</thead>
 					<tbody>
 						<tr>
@@ -83,7 +85,7 @@ import { Dice } from '@aller/shiny';
 						</tr>
 						<tr>
 							<td>theme</td>
-							<td>The theme prop will be provided by styled-components' ThemeProvider.</td>
+							<td>The theme prop will be provided by emotion's ThemeProvider.</td>
 							<td>required</td>
 							<td>object</td>
 							<td>default theme</td>
@@ -114,27 +116,27 @@ import { Dice } from '@aller/shiny';
 		</Row>
 
 		<Row>
-			<Col xs><Dice value={1} color="pink"   size="100%" /></Col>
+			<Col xs><Dice value={1} color="pink" size="100%" /></Col>
 			<Col xs><Dice value={2} color="purple" size="100%" /></Col>
-			<Col xs><Dice value={3} color="blue"   size="100%" /></Col>
-			<Col xs><Dice value={4} color="teal"   size="100%" borderRadius="10%" /></Col>
-			<Col xs><Dice value={5} color="green"  size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={3} color="blue" size="100%" /></Col>
+			<Col xs><Dice value={4} color="teal" size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={5} color="green" size="100%" borderRadius="10%" /></Col>
 			<Col xs><Dice value={6} color="yellow" size="100%" borderRadius="10%" /></Col>
 		</Row>
 
 		<Row>
-			<Col xs><Dice value={2} color="orange"   size="100%" /></Col>
-			<Col xs><Dice value={2} color="navy"     size="100%" /></Col>
+			<Col xs><Dice value={2} color="orange" size="100%" /></Col>
+			<Col xs><Dice value={2} color="navy" size="100%" /></Col>
 			<Col xs><Dice value={2} color="burgundy" size="100%" /></Col>
-			<Col xs><Dice value={2} color="brown"    size="100%" borderRadius="10%" /></Col>
-			<Col xs><Dice value={2} color="sand"     size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={2} color="brown" size="100%" borderRadius="10%" /></Col>
+			<Col xs><Dice value={2} color="sand" size="100%" borderRadius="10%" /></Col>
 			<Col xs><Dice value={2} color="darkness" size="100%" borderRadius="10%" /></Col>
 		</Row>
 
 		<Row>
 			<Col xs><Dice value={2} size="100%" color="yellowLight" faceShade="Lighter" pipColor="purpleDark" /></Col>
-			<Col xs><Dice value={3} size="100%" color="secondary"                       pipColor="primary" /></Col>
-			<Col xs><Dice value={4} size="100%" color="teal"                            pipColor="yellow" /></Col>
+			<Col xs><Dice value={3} size="100%" color="secondary" pipColor="primary" /></Col>
+			<Col xs><Dice value={4} size="100%" color="teal" pipColor="yellow" /></Col>
 		</Row>
 		<Row>
 			<Col xs={6}><Dice value={6} size="100%" borderRadius="10%" /></Col>

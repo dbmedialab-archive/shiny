@@ -1,42 +1,67 @@
 import propTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { getColor } from '../utils';
+import styled, { css } from 'react-emotion';
+import { getColor, getVariable, calculateTextColorFromName } from '../utils';
 
 const Button = styled.button`
 	letter-spacing: .1rem;
 	text-transform: uppercase;
 	background-color: ${props => getColor(props.background)};
 	border-color: #bdbdbd;
-	color: ${props => getColor(props.textColor)};
+	color: ${props => (props.textColor
+		? getColor(props.textColor)
+		: calculateTextColorFromName(props.background, props))
+};
 	border-style: solid;
 	border-width: 0;
 	cursor: pointer;
-	font-weight: 700;
+	font-weight: 400;
+	font-family: inherit;
+	font-size: 1.28rem;
 	line-height: normal;
-	margin: 0 0.25rem 1.25rem;
+	margin: 0 .25rem 1.25rem;
 	position: relative;
 	text-decoration: none;
 	text-align: center;
 	border-radius: ${props => props.borderRadius};
 	display: inline-block;
-	padding-top: 0.7rem;
-	padding-right: 1.4rem;
-	padding-bottom: 0.7625rem;
-	padding-left: 1.4rem;
-	font-size: 0.9rem;
+	padding-top: calc(${getVariable('verticalBase')} / 2);
+	padding-right: calc(${getVariable('horizontalBase')} * 1.5);
+	padding-bottom: calc(${getVariable('verticalBase')} / 2);
+	padding-left: calc(${getVariable('horizontalBase')} * 1.5);
 	transition: background-color 300ms ease-out;
 	${props => (props.ALLCAPS && 'text-transform: uppercase')};
 
+	& a {
+		color: inherit;
+		font-size: inherit;
+		font-weight: inherit;
+		text-decoration: inherit;
+		&:visited {
+			color: inherit;
+		}
+	}
+
 	${props => props.outline && css`
-		border: .1rem solid ${getColor(props.background)};
+		border: .1rem solid ${getColor(props.background)(props)};
 		background: transparent;
-		color: ${getColor(props.background)};
+		color: ${getColor(props.background)(props)};
+		&:hover {
+			background: ${getColor(props.background)(props)};
+			color: ${calculateTextColorFromName(props.background, props)};
+		}
 	`}
+
+	& span {
+		font-size: 2.048rem;
+		line-height: 0;
+		position: relative;
+		top: 0.48rem;
+	}
 `;
 
 Button.defaultProps = {
 	background: 'grayTintLight',
-	textColor: 'type',
+	textColor: null,
 	borderRadius: 0,
 	ALLCAPS: false,
 };

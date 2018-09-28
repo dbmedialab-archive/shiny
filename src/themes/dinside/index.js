@@ -5,6 +5,7 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Open Sans', helvetica, arial, sans-serif",
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
+	headingsWeight: 800,
 
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
@@ -14,14 +15,6 @@ const global = `
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
 
 	${cssReset}
-
-	body {
-		color: ${colors[colors.skinColors.type]};
-		font-family: ${variables.mainFont};
-		font-weight: 400;
-		font-size: ${variables.uiRegularSize};
-		line-height: ${variables.uiRegularLineHeight};
-	}
 
 	a {
 		color: ${colors.skinColors.link};

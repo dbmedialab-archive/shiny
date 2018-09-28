@@ -1,5 +1,7 @@
 import React from 'react';
-import styled, { css, injectGlobal } from 'styled-components';
+import styled, { css, injectGlobal } from 'react-emotion';
+
+import { getColor } from '../utils/get-color';
 
 const FontIcon = (props) => {
 	injectGlobal`
@@ -22,7 +24,7 @@ const Icon = styled.span`
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-	color: ${props => props.color};
+	color: ${props => (props.textColor ? getColor(props.textColor) : props.color)};
 
 	${props => props.size && css`
 		font-size: ${props.size}rem;
@@ -495,7 +497,7 @@ const Icon = styled.span`
 		case 'people': return '\\e7ce';
 		case 'people-alt': return '\\e7cf';
 		case 'pause': return '\\e7d0';
-		case 'pannel-close': return '\\e7d1';
+		case 'panel-close': return '\\e7d1';
 		case 'panel-show': return '\\e7d2';
 		case 'page-restricted': return '\\e7d3';
 		case 'page-remove': return '\\e7d4';

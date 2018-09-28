@@ -1,10 +1,10 @@
 // Originally written for the HorizontalLinkBar molecule
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
-import { DontPushTheAdBoundaries } from '..';
-import { LinkBarNav as Nav } from '..';
+import { DontPushTheAdBoundaries } from '../atoms/DontPushTheAdBoundaries';
+import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 
 const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 	&& {
@@ -16,26 +16,30 @@ const DesktopWidthConstrainer = styled(DontPushTheAdBoundaries)`
 `;
 
 const NavWithOptionalConstrainer = ({
-	width, background, zIndex, isTopLevelComponent, ...props
+	children,
+	isTopLevelComponent,
+	zIndex,
+	...rest
 }) => {
 	if (isTopLevelComponent) {
 		return (
-			<Nav width={width} background={background}>
+			<Nav {...rest}>
 				<DesktopWidthConstrainer zIndex={zIndex}>
-					{props.children}
+					{children}
 				</DesktopWidthConstrainer>
 			</Nav>
 		);
 	}
 	return (
-		<Nav width={width} background={background}>
-			{props.children}
+		<Nav {...rest} zIndex={zIndex}>
+			{children}
 		</Nav>
 	);
 };
 
 NavWithOptionalConstrainer.propTypes = {
-	background: PropTypes.string,
+	background: PropTypes.string, // Deprecated actual css string
+	backgroundColor: PropTypes.string, // Color name from theme
 	width: PropTypes.string.isRequired,
 	zIndex: PropTypes.number.isRequired,
 	isTopLevelComponent: PropTypes.bool.isRequired,
@@ -46,6 +50,7 @@ NavWithOptionalConstrainer.propTypes = {
 };
 NavWithOptionalConstrainer.defaultProps = {
 	background: 'transparent',
+	backgroundColor: null,
 };
 
 export { NavWithOptionalConstrainer };

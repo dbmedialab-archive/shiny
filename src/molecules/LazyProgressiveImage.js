@@ -1,6 +1,6 @@
 import propTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import styled from 'styled-components';
+import styled from 'react-emotion';
 
 import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
@@ -24,8 +24,6 @@ class LazyProgressiveImage extends PureComponent {
 		backgroundColor: propTypes.string,
 		/** Low quality image used for first load */
 		src: propTypes.string.isRequired,
-		/** The image src used for <noscript> */
-		fallbackSrc: propTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
 		alt: propTypes.string,
 		/** Should be <source> tags */
@@ -34,12 +32,15 @@ class LazyProgressiveImage extends PureComponent {
 		ratio: propTypes.number.isRequired,
 		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
 		preventBlur: propTypes.bool,
+		/** Option to fadein the image. */
+		fadeIn: propTypes.bool,
 	}
 
 	static defaultProps = {
-		backgroundColor: '#ececec',
-		alt: 'Artikkelbilde.',
 		preventBlur: false,
+		alt: 'Artikkelbilde.',
+		backgroundColor: '#ececec',
+		fadeIn: false,
 	}
 
 	componentDidMount() {
@@ -49,26 +50,31 @@ class LazyProgressiveImage extends PureComponent {
 
 	render() {
 		const {
-			backgroundColor, src, alt, ratio, preventBlur, fallbackSrc,
+			alt,
+			src,
+			ratio,
+			fadeIn,
+			children,
+			preventBlur,
+			backgroundColor,
 		} = this.props;
-
 
 		return (
 			<Figure
 				backgroundColor={backgroundColor}
 				paddingBottom={ratio * 100}
 			>
-				<Picture alt={alt} preventBlur={preventBlur}>
-					{this.props.children}
+				<Picture alt={alt} preventBlur={preventBlur} fadeIn={fadeIn}>
+					{children}
 					<Image
 						itemProp="image"
 						alt={alt}
 						data-sizes="auto"
 						src={src}
 						data-src={src}
-						className={`lazyload ${preventBlur ? '' : 'blur-up'}`}
+						className={`lazyload ${preventBlur ? '' : 'blur-up'} ${fadeIn ? 'fade-in' : ''}`}
 					/>
-					<noscript><img src={fallbackSrc} alt={alt} itemProp="image" /></noscript>
+					<noscript><img src={src} alt={alt} itemProp="image" /></noscript>
 				</Picture>
 			</Figure>
 		);

@@ -1,5 +1,6 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/dbmedialab/shiny.svg)](https://greenkeeper.io/)
 [![Travis badge](https://api.travis-ci.org/dbmedialab/shiny.svg?branch=master)](https://travis-ci.org/dbmedialab/shiny)
+[![install size](https://packagephobia.now.sh/badge?p=@aller/shiny)](https://packagephobia.now.sh/result?p=@aller/shiny)
 
 _Ev'rythings shiny, cap'n, not to fret!_
 # Shiny
@@ -13,6 +14,8 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
   1. wolverine-fetcher (dumb API layer): Fetches data from backend systems
   
 ## Releasing
+(After you have merged you changes into master)
+
 1. Get the latest version, and checkout a release branch for npm work. The release branch is necessary because the master branch is protected.
 ```sh
 # Replace x.x.x with your new version number
@@ -24,8 +27,7 @@ yarn publish
 ```
 3. yarn publish will have created a commit with your new version number, and tagged your release in git for you. Push both the commit and the tagged release to GitHub.
 ```sh
-git push -u origin release/x.x.x
-git push --tags
+git push --tags -u origin release/x.x.x
 ```
 
 4. Create and merge a pull request for the branch
