@@ -90,22 +90,34 @@ const TrysilPlug = ({
 );
 
 TrysilPlug.propTypes = {
+	/** Text above the image plug. */
 	kicker: PropTypes.string,
+	/** Main link text. */
 	title: PropTypes.string,
+	/** Norwegian: "ingress" */
 	subtitle: PropTypes.string,
+	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
+	/** i.e. keywords, tags, labels, categories */
 	labels: PropTypes.arrayOf(PropTypes.shape({
 		backgroundColor: PropTypes.string,
 		backgroundHoverShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
 		textColor: PropTypes.string,
 		text: PropTypes.string,
 	})),
+	/** The user will be sent here if he clicks on the plug. */
 	url: PropTypes.string.isRequired,
+	/** If given, this image will be displayed before load. If empty, the 'image' prop will be used instead. */
 	placeholderUrl: PropTypes.string,
+	/** How close can the image be to the viewport before it is lazily loaded? */
 	offset: PropTypes.number,
+	/** Set of images to be rendered next to placeholderUrl and image */
 	sources: PropTypes.arrayOf(PropTypes.object),
+	/** Width of the image divided by height of the image */
 	ratio: PropTypes.number.isRequired,
+	/** Component to display the title */
 	Heading: PropTypes.func,
+	/** Props to pass on to the Heading component */
 	headingProps: PropTypes.shape({
 		skin: PropTypes.shape({
 			backgroundColor: PropTypes.string,
@@ -113,6 +125,7 @@ TrysilPlug.propTypes = {
 			needsPadding: PropTypes.bool,
 		}),
 	}),
+	/** Disable the blur effect on lazily loaded images */
 	preventBlur: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
