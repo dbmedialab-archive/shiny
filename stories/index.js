@@ -14,6 +14,7 @@ import forms from './forms';
 import modals from './Modal';
 import images from './Images';
 import footers from './footers';
+import articles from './article';
 
 introduction();
 
@@ -35,3 +36,4 @@ matComponents();
 modals();
 trysilPlug();
 footers();
+articles();
