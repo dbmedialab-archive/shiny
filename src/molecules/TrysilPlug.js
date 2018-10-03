@@ -8,13 +8,19 @@ import {
 	getVariable,
 } from '../utils';
 
-import { Article } from '../atoms/Article';
+import { Article, articleCss } from '../atoms/Article';
 import { Kicker } from '../atoms/Kicker';
 import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
 import { BlockLink } from '../atoms/BlockLink';
 import { Labels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
+import { Col } from '../atoms/Col';
+
+const StyledArticleCol = styled(Col)`
+	${articleCss};
+`;
+const ArticleCol = StyledArticleCol.withComponent('article');
 
 const PlugLink = styled(BlockLink)`
 	&:focus {
@@ -61,11 +67,14 @@ const TrysilPlug = ({
 	preventBlur,
 	headingProps,
 	placeholderUrl,
-}) => (
-	<Article>
-		<PlugLink href={url}>
-			{kicker && <Kicker>{kicker}</Kicker>}
-			{image
+	column,
+}) => {
+	const ArticleComponent = column ? ArticleCol : Article;
+	return (
+		<ArticleComponent {...column}>
+			<PlugLink href={url}>
+				{kicker && <Kicker>{kicker}</Kicker>}
+				{image
 				&& (
 					<LazyProgressiveImage
 						alt={title}
@@ -81,13 +90,14 @@ const TrysilPlug = ({
 						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 					</LazyProgressiveImage>
 				)
-			}
-			<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
-			{subtitle && <Description itemProp="description">{subtitle}</Description>}
-			{labels && <Labels labels={labels} />}
-		</PlugLink>
-	</Article>
-);
+				}
+				<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
+				{subtitle && <Description itemProp="description">{subtitle}</Description>}
+				{labels && <Labels labels={labels} />}
+			</PlugLink>
+		</ArticleComponent>
+	);
+};
 
 TrysilPlug.propTypes = {
 	/** Text above the image plug. */
@@ -117,6 +127,20 @@ TrysilPlug.propTypes = {
 	ratio: PropTypes.number.isRequired,
 	/** Component to display the title */
 	Heading: PropTypes.func,
+	/** Column object to decide wether the article should be a Col or not */
+	column: PropTypes.shape({
+		width: PropTypes.number,
+		reverse: PropTypes.bool,
+		xs: PropTypes.number,
+		sm: PropTypes.number,
+		md: PropTypes.number,
+		lg: PropTypes.number,
+		xsOffset: PropTypes.number,
+		smOffset: PropTypes.number,
+		mdOffset: PropTypes.number,
+		lgOffset: PropTypes.number,
+		children: PropTypes.node,
+	}),
 	/** Props to pass on to the Heading component */
 	headingProps: PropTypes.shape({
 		skin: PropTypes.shape({
@@ -129,6 +153,7 @@ TrysilPlug.propTypes = {
 	preventBlur: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
+	column: null,
 	kicker: '',
 	title: '',
 	subtitle: '',
