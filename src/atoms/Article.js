@@ -1,8 +1,13 @@
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { getVariable } from '../utils';
 
-const Article = styled.article`
+const articleCss = props => css`
 	margin-bottom: ${getVariable('verticalBase')};
+	${props.float ? `float: ${props.float}` : ''}
 `;
 
-export { Article };
+const Article = styled.article`
+	${articleCss};
+`;
+
+export { Article, articleCss };
