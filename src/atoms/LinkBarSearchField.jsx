@@ -31,8 +31,11 @@ const Input = styled(InputBase)`
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const placeholderColor = getColor(props.placeholderColor)(props);
 
-		const smallMarginFactor = size === 'small' ? 1/2 : 1;
-		const horizontalMargin = `calc(${smallMarginFactor} * ${horizontalBase})`;
+		const widthFactor = size === 'small' ? 9 : 13;
+		const marginFactor = size === 'small' ? 1/2 : 1;
+
+		const horizontalMargin = `calc(${marginFactor} * ${horizontalBase})`;
+		const width = `calc(${widthFactor} * ${horizontalBase})`;
 
 		return css`
 			&& {
@@ -40,6 +43,7 @@ const Input = styled(InputBase)`
 				padding-left: ${size === 'small' ? '2.7rem' : '4.4rem'};
 				margin-left: ${horizontalMargin};
 				margin-right: ${horizontalMargin};
+				width: ${width};
 			}
 
 			appearance: none;
