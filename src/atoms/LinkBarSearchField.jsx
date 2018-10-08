@@ -42,6 +42,8 @@ const Input = styled(InputBase)`
 				margin-right: ${horizontalMargin};
 			}
 
+			appearance: none;
+
 			::placeholder {
 				color: ${placeholderColor};
 			}
