@@ -8,7 +8,7 @@ import {
 	getVariable,
 } from '../utils';
 
-import { Article, articleCss } from '../atoms/Article';
+import { Article } from '../atoms/Article';
 import { Kicker } from '../atoms/Kicker';
 import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
 import { BlockLink } from '../atoms/BlockLink';
@@ -17,10 +17,7 @@ import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
 
-const StyledArticleCol = styled(Col)`
-	${articleCss};
-`;
-const ArticleCol = StyledArticleCol.withComponent('article');
+const ArticleCol = Col.withComponent(Article);
 
 const PlugLink = styled(BlockLink)`
 	&:focus {
