@@ -24,7 +24,6 @@ const getFocusBackground = (props) => {
 };
 
 export const LinkBarElementBase = styled.a`
-	&& {
 	display: inline-block;
 
 	/*
@@ -202,7 +201,6 @@ export const LinkBarElementBase = styled.a`
 			}
 		`;
 	}}
-}
 `;
 LinkBarElementBase.propTypes = {
 	/** Display text in capital letters */
