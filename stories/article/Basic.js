@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '../../src/atoms/Grid';
 import { Paragraph } from '../../src/atoms/Paragraph';
-import { Header } from '../../src/molecules/Article/Header';
+import { ArticleHeader } from '../../src/molecules/Article/Header';
 import { TrysilPlug } from '../../src/molecules/TrysilPlug';
 import { FloatImage } from '../../src/molecules/FloatImage';
 import {
@@ -11,7 +11,7 @@ import {
 const basic = () => {
 	return (
 		<Grid fluid={false}>
-			<Header
+			<ArticleHeader
 				intro="Prins Harry og hertuginne Meghan:"
 				title="Harry og Meghan sjarmerte alle i senk"
 				subtitle="Hertugparet delte ut klemmer på sitt offisielle besøk."

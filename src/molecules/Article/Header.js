@@ -18,7 +18,7 @@ const Meta = styled.div`
 	margin-bottom: 3rem;
 `;
 
-const Header = (props) => {
+const ArticleHeader = (props) => {
 	const {
 		intro, imageURL, imageText, title, subtitle, bylines, published, modified,
 	} = props;
@@ -45,7 +45,7 @@ const Header = (props) => {
 	);
 };
 
-Header.propTypes = {
+ArticleHeader.propTypes = {
 	intro: propTypes.string,
 	subtitle: propTypes.string,
 	title: propTypes.string.isRequired,
@@ -56,11 +56,11 @@ Header.propTypes = {
 	bylines: propTypes.instanceOf(Array),
 };
 
-Header.defaultProps = {
+ArticleHeader.defaultProps = {
 	intro: '',
 	subtitle: '',
 	modified: '',
 	bylines: [],
 };
 
-export { Header };
+export { ArticleHeader };

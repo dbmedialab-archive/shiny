@@ -10,4 +10,4 @@ const Article = styled.article`
 	${articleCss};
 `;
 
-export { Article, articleCss };
+export { Article };
