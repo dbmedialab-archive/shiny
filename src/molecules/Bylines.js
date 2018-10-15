@@ -24,8 +24,9 @@ const Author = styled.span`
 
 	:not(:first-child) {
 		:before {
-			content: " og ";
-			margin-left: 1rem;
+			content: "og";
+			margin-left: .75rem;
+			margin-right: .75rem;
 		}
 	}
 `;
