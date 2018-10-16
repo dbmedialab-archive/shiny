@@ -2,7 +2,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'react-emotion';
 import { Image } from '../atoms/Image';
-import { Row } from '../atoms/Row';
 
 const Bylines = styled.div`
 	margin-bottom: 4rem;
@@ -47,7 +46,9 @@ const Byline = (props) => {
 			{bylines.map((byline, key) => {
 				const mailto = `mailto:${byline.email}`;
 				const fullName = `${byline.firstName} ${byline.lastName}`;
-				const image = byline.imageURL === '' ? null : <AuthorImage itemProp="image" src={byline.imageURL} alt={fullName} />;
+				const image = byline.imageURL === ''
+					? null
+					: <AuthorImage itemProp="image" src={byline.imageURL} alt={fullName} />;
 				return (
 					<Author key className="person" itemScope="" itemType="http://schema.org/Person" itemProp="author">
 						{image}

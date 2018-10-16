@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '../../src/atoms/Grid';
 import { Paragraph } from '../../src/atoms/Paragraph';
 import { ArticleHeader } from '../../src/molecules/Article/Header';
 import { TrysilPlug } from '../../src/molecules/TrysilPlug';
@@ -9,24 +8,31 @@ import {
 } from '../../src/atoms/DymoHeading';
 
 const basic = () => {
+	/* eslint max-len: 0 */
 	return (
 		<React.Fragment>
 			<ArticleHeader
 				intro="Prins Harry og hertuginne Meghan:"
 				title="Harry og Meghan sjarmerte alle i senk"
 				subtitle="Hertugparet delte ut klemmer på sitt offisielle besøk."
-				imageText="HILSTE PÅ: Hertuginne Meghan og prins Harry tok seg god tid med folket da de besøkte den engelske byen Sussex. Foto: NTB scanpix"
+				imageText="HILSTE PÅ: Hertuginne Meghan og
+				prins Harry tok seg god tid med folket da de besøkte den engelske byen Sussex. Foto: NTB scanpix"
 				imageURL="//dbstatic.no/70279953.jpg?imageId=70279953&amp;x=4.0835707502374&amp;y=0&amp;cropw=93.06742640076&amp;croph=100&amp;width=980&amp;height=590"
 				published="2018-10-04T05:02:33.000Z"
 				modified="2018-10-04T05:02:33.000Z"
 				bylines={[{
-					firstName: 'Kine', lastName: 'Falch', email: 'kine.falch@aller.com', imageURL: '//dbstatic.no/68661363.jpg?imageId=68661363&x=0&y=0&cropw=100&croph=85.365853658537&width=140&height=140&compression=80',
+					firstName: 'Kine',
+					lastName: 'Falch',
+					email: 'kine.falch@aller.com',
+					imageURL: '//dbstatic.no/68661363.jpg?imageId=68661363&x=0&y=0&cropw=100&croph=85.365853658537&width=140&height=140&compression=80',
 				}, {
 					firstName: 'Ola', lastName: 'Nordmann', email: 'ola.nordmann@aller.com', imageURL: '',
 				}]}
 			/>
 			<Paragraph>
-				Onsdag var <a href="https://www.seher.no/kongelig/disse-bildene-far-fansen-til-a-klo-seg-i-hodet/69993512">prins Harry (34) og hertuginne Meghan (37)</a> på et offisielt besøk i den engelske byen Sussex.
+				Onsdag var
+				<a href="https://www.seher.no/kongelig/disse-bildene-far-fansen-til-a-klo-seg-i-hodet/69993512">prins Harry (34) og hertuginne Meghan (37)</a>
+				på et offisielt besøk i den engelske byen Sussex.
 			</Paragraph>
 			<Paragraph>
 				Hertugparet ankom via helikopter, og startet dagen i Chichester -
@@ -34,7 +40,15 @@ const basic = () => {
 				besøket, og sto på rekke og rad i gatene i håp om å hilse på
 				ekteparet.
 			</Paragraph>
-			<TrysilPlug column={{ xs: 6 }} float="right" title="- Det må ligge misunnelse bak" placeholderUrl="//dbstatic.no/69647879.jpg?imageId=69647879&x=6.5633802816901&y=7.4919959266802&cropw=90.704225352113&croph=32.790224032587&width=202&height=101&compression=80" url="https://www.seher.no/kjendis/det-ma-ligge-misunnelse-bak-kritikken/69647852" image="//dbstatic.no/69647879.jpg?imageId=69647879&x=6.5633802816901&y=7.4919959266802&cropw=90.704225352113&croph=32.790224032587&width=202&height=101&compression=80" ratio={0.5} />
+			<TrysilPlug
+				column={{ xs: 6 }}
+				float="right"
+				title="- Det må ligge misunnelse bak"
+				placeholderUrl="//dbstatic.no/69647879.jpg?imageId=69647879&x=6.5633802816901&y=7.4919959266802&cropw=90.704225352113&croph=32.790224032587&width=202&height=101&compression=80"
+				url="https://www.seher.no/kjendis/det-ma-ligge-misunnelse-bak-kritikken/69647852"
+				image="//dbstatic.no/69647879.jpg?imageId=69647879&x=6.5633802816901&y=7.4919959266802&cropw=90.704225352113&croph=32.790224032587&width=202&height=101&compression=80"
+				ratio={0.5}
+			/>
 			<Paragraph>
 				Hertuginne Meghan var ikledd en grønn bluse, et grønt skinnskjørt av Hugo Boss og en kremfarget kåpe fra Armani. Håret var <a href="https://www.seher.no/kjendis/det-ma-ligge-misunnelse-bak-kritikken/69647852">oppsatt i en løs knute, i kjent stil.</a>
 			</Paragraph>

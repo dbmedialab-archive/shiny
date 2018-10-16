@@ -36,7 +36,14 @@ const ArticleHeader = (props) => {
 			<HugeHeading marginTopFactor={0} marginBottomFactor={0}>- {title}</HugeHeading>
 			<MediumHeading>{subtitle}</MediumHeading>
 			<Meta>
-				<time itemProp="datePublished" dateTime={published} className="published" title="Publisert 4. oktober 2018 kl. 7.02" data-from-now=""> 4. oktober 2018 kl. 7.02</time>
+				<time
+					itemProp="datePublished"
+					dateTime={published}
+					className="published"
+					title="Publisert 4. oktober 2018 kl. 7.02"
+					data-from-now=""
+				> 4. oktober 2018 kl. 7.02
+				</time>
 				{isModified}
 				<a className="facebook-share" href="http://example.com">Del på Facebook</a>
 			</Meta>

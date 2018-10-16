@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
-const Figure = styled.figure``;
+const Figure = styled.figure`
+	margin: 10rem 0 0 0;
+	max-width: 100%;
+	padding: 0;
+`;
 
 class HeaderImage extends React.Component {
 	static propTypes = {
