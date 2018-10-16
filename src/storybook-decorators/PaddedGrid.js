@@ -11,7 +11,9 @@ export const PaddedDiv = styled.div`
 
 const PaddedGrid = ({ children }) => (
 	<Grid>
-		{children}
+		<PaddedDiv>
+			{children}
+		</PaddedDiv>
 	</Grid>
 );
 
