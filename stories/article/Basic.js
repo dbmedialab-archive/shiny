@@ -10,7 +10,7 @@ import {
 
 const basic = () => {
 	return (
-		<Grid fluid={false}>
+		<React.Fragment>
 			<ArticleHeader
 				intro="Prins Harry og hertuginne Meghan:"
 				title="Harry og Meghan sjarmerte alle i senk"
@@ -26,11 +26,7 @@ const basic = () => {
 				}]}
 			/>
 			<Paragraph>
-				Onsdag var
-				<a href="https://www.seher.no/kongelig/disse-bildene-far-fansen-til-a-klo-seg-i-hodet/69993512">
-					{' '}
-					prins Harry (34) og hertuginne Meghan (37)
-				</a> på et offisielt besøk i den engelske byen Sussex.
+				Onsdag var <a href="https://www.seher.no/kongelig/disse-bildene-far-fansen-til-a-klo-seg-i-hodet/69993512">prins Harry (34) og hertuginne Meghan (37)</a> på et offisielt besøk i den engelske byen Sussex.
 			</Paragraph>
 			<Paragraph>
 				Hertugparet ankom via helikopter, og startet dagen i Chichester -
@@ -133,7 +129,7 @@ const basic = () => {
 			</Paragraph>
 			<Paragraph>- Jeg tenker at Meghan med sine sterke feministiske prinsipper garantert er ukomfortabel med at eventuelle døtre ikke har samme rettigheter som eventuelle sønner, sa hun og la til:</Paragraph>
 			<Paragraph>- Hun har blant annet jobbet tett med FNs organ for likestilling og styrking av kvinners rettigheter i flere år, og som 11-åring skrev hun brev til den gang presidentfrue Hillary Clinton for å protestere mot at reklamen for et oppvaskmiddel hevdet at «mødre over hele USA kjemper mot skitne gryter». Det ble endret til: «folk over hele USA».</Paragraph>
-		</Grid>
+		</React.Fragment>
 	);
 };
 

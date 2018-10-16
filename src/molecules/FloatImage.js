@@ -10,12 +10,13 @@ const FigCaption = styled.figcaption`
 	font-weight: 400;
 	border-bottom: 1px solid #f4f4f4;
 	display: block;
-	padding: 1.6rem 0.5rem;
+	padding: 1.6rem .5rem .5rem .5rem;
 	position: relative;
-	bottom: 0;
+	bottom: 1rem;
 	left: 0;
 	z-index: 1;
 	max-width: 100%;
+	margin: 1rem 0;
 `;
 
 const figcaptionType = {

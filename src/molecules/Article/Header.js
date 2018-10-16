@@ -6,7 +6,8 @@ import { MediumHeading, XLargeHeading, HugeHeading } from '../../atoms/Heading';
 import Byline from '../Bylines';
 import { HeaderImage } from './Image';
 
-const HeaderStyled = styled.header``;
+const HeaderStyled = styled.header`
+`;
 
 const Meta = styled.div`
 	* {

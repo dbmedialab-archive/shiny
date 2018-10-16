@@ -70,7 +70,7 @@ const TrysilPlug = ({
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
-		<ArticleComponent {...column} {...attributes} float={float}>
+		<ArticleComponent float={float} {...column} {...attributes}>
 			<PlugLink href={url}>
 				{kicker && <Kicker>{kicker}</Kicker>}
 				{image
