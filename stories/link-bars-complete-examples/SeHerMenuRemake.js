@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { getColor, getVariable } from '../../src';
 
 import {
@@ -48,13 +48,16 @@ const SeHerDropdownButton = (props) => {
 
 const SecondaryBar = styled(HorizontalLinkBar)`
 	${(props) => {
-		return `
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const smBreakpoint = props.theme.flexboxgrid.breakpoints.sm;
+
+		return css`
 			margin-left: ${logoWidth};
 			width: calc(100% - ${logoWidth});
 
-			@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
-				margin-left: ${smLogoWidth};
-				width: calc(100% - ${smLogoWidth});
+			@media screen and (min-width: ${smBreakpoint}em) {
+				margin-left: calc(${smLogoWidth} + ${horizontalBase});
+				width: calc(100% - ${smLogoWidth} - ${horizontalBase});
 			}
 		`;
 	}}
@@ -140,7 +143,6 @@ const SeHerMenuRemake = () => (
 					backgroundColor="transparent"
 					isTopLevelComponent={false}
 					overflow="visible"
-					shouldAdjustForNestedPadding
 					shouldFlexChildren
 				>
 					<LinkBarBleedingLogo isListItem>
