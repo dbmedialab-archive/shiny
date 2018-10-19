@@ -3,8 +3,9 @@ import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 // Stories
+import HorizontalLinkBarStory from './HorizontalLinkBarStory';
+import OverflowStory from './OverflowStory';
 import { VerticalLinkBarStory } from './VerticalLinkBarStory';
-import { HorizontalLinkBarStory } from './HorizontalLinkBarStory';
 import { NestedPaddingStory } from './NestedPaddingStory';
 import { NoPaddingStory } from './NoPaddingStory';
 import { GradientBackgroundStory } from './GradientBackgroundStory';
@@ -19,6 +20,7 @@ export default () => {
 		.addDecorator(StorybookPaddedGrid)
 		.add('VerticalLinkBar', VerticalLinkBarStory)
 		.add('HorizontalLinkBar', HorizontalLinkBarStory)
+		.add('... with overflowing content', OverflowStory)
 		.add('... with nested padding', NestedPaddingStory)
 		.add('... with gradient background', GradientBackgroundStory)
 		.add('... without padding', NoPaddingStory)

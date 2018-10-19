@@ -61,26 +61,37 @@ const LinkBar = ({
 };
 
 LinkBar.propTypes = {
-	background: PropTypes.string, // Deprecated actual css string
-	backgroundColor: PropTypes.string, // Color name in theme
+	/** Deprecated actual css color string. Use activeBackgroundColor instead. */
+	background: PropTypes.string,
+	/** Color name from theme. Color of the background on links that have the isActive flag set. */
+	backgroundColor: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
 	]),
-	overflow: PropTypes.string,
-	shouldAdjustForNestedPadding: PropTypes.bool,
-	shouldFlexChildren: PropTypes.bool,
-	shouldFadeOut: PropTypes.bool,
-	width: PropTypes.string,
-	shouldHavePadding: PropTypes.bool,
-	zIndex: PropTypes.number,
+	/** Top level components include a DesktopWidthConstrainer */
 	isTopLevelComponent: PropTypes.bool,
+	/** This value will be used directly in CSS */
+	overflow: PropTypes.string,
+	/** Set to true to counteract the effect of having nested components which both have padding. */
+	shouldAdjustForNestedPadding: PropTypes.bool,
+	/** Add a transparent to white overlay on the sides */
+	shouldFadeOut: PropTypes.bool,
+	/** Use the flexbox model */
+	shouldFlexChildren: PropTypes.bool,
+	/** The same as shouldAdjustForNestedPadding? */
+	shouldHavePadding: PropTypes.bool,
+	/** Whether flexing link bars with overflowing content should wrap to a new line. */
 	shouldWrap: PropTypes.bool,
+	/** Actual CSS value */
+	width: PropTypes.string,
+	/** Actual CSS value */
+	zIndex: PropTypes.number,
 };
 
 LinkBar.defaultProps = {
-	background: 'papayawhip', // colors.white,
-	backgroundColor: null, // Color name in theme
+	background: 'papayawhip',
+	backgroundColor: null,
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,
@@ -97,5 +108,6 @@ LinkBar.defaultProps = {
 // we can use it in interpoliations,
 // for example in other styled compontents
 const HorizontalLinkBar = styled(LinkBar)``;
+HorizontalLinkBar.propTypes = LinkBar.propTypes;
 
 export { HorizontalLinkBar };
