@@ -140,7 +140,7 @@ export const LinkBarElementBase = styled.a`
 		text-decoration: none;
 	}
 
-	& {
+	&, &:visited {
 		color: ${getTextColor};
 		:hover {
 			background:

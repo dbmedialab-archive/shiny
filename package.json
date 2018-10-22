@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.15.1",
+  "version": "0.16.2",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   "dependencies": {
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "debug": "4.0.1",
+    "debug": "4.1.0",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.0",
     "lazysizes": "4.1.2",
@@ -49,10 +49,10 @@
   },
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
-    "@babel/cli": "7.1.1",
-    "@babel/core": "7.1.1",
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
     "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/plugin-proposal-decorators": "7.1.1",
+    "@babel/plugin-proposal-decorators": "7.1.2",
     "@babel/plugin-proposal-do-expressions": "7.0.0",
     "@babel/plugin-proposal-export-default-from": "7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "7.0.0",
