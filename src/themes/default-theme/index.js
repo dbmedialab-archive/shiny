@@ -1,42 +1,141 @@
-import variables from './variables';
-import colors from './colors';
-import flexboxgrid from './flexboxgrid';
-
-// @TODO: Switch to a proper CSS reset, like this one in utils:
-// import { cssReset } from '../utils';
-const cssReset = `
-	/* Font reset: 1rem = 10px */
-	html {
-		font-size: 62.5%;
-	}
-	body {
-		font-size: 1.6rem;
-	}
-
-	html, body {
-		margin: 0;
-		padding: 0;
-	}
-
-	* { box-sizing: border-box; }
-
-	/* HTML5 display-role reset for older browsers */
-	article, aside, details, figcaption, figure,
-	footer, header, hgroup, menu, nav, section, main {
-    	display: block;
-	}
-`;
-
-const global = `
-	${cssReset}
-`;
-
-const theme = {
-	name: 'Default',
-	global,
-	colors,
-	flexboxgrid,
-	variables,
-};
-
-export default theme;
+module.exports = 
+{ name: 'Default',
+  global: '\n\t\n\t/* Font reset: 1rem = 10px */\n\thtml {\n\t\tfont-size: 62.5%;\n\t}\n\tbody {\n\t\tfont-size: 1.6rem;\n\t}\n\n\thtml, body {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t}\n\n\t* { box-sizing: border-box; }\n\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, menu, nav, section, main {\n    \tdisplay: block;\n\t}\n\n',
+  colors: 
+   { primary: 'teal',
+     primaryDark: '#001a1a',
+     primaryLight: '#00cdcd',
+     primaryLighter: '#1affff',
+     secondary: 'darkgoldenrod',
+     secondaryDark: '#584005',
+     secondaryLight: '#f2b41e',
+     secondaryLighter: '#f6cc66',
+     pink: 'palevioletred',
+     pinkDark: '#b72e5b',
+     pinkLight: '#eaadc1',
+     pinkLighter: '#faeaef',
+     purple: 'darkorchid',
+     purpleDark: '#5c1e7a',
+     purpleLight: '#b86fdc',
+     purpleLighter: '#d6aceb',
+     blue: 'cornflowerblue',
+     blueDark: '#185bd3',
+     blueLight: '#a9c4f5',
+     blueLighter: '#edf3fd',
+     teal: 'teal',
+     tealDark: '#001a1a',
+     tealLight: '#00cdcd',
+     tealLighter: '#1affff',
+     green: 'seagreen',
+     greenDark: '#153e27',
+     greenLight: '#44c17b',
+     greenLighter: '#7ed4a4',
+     yellow: 'darkgoldenrod',
+     yellowDark: '#584005',
+     yellowLight: '#f2b41e',
+     yellowLighter: '#f6cc66',
+     orange: 'chocolate',
+     orangeDark: '#793c11',
+     orangeLight: '#e79256',
+     orangeLighter: '#f0bd99',
+     navy: 'navy',
+     navyDark: '#00001a',
+     navyLight: '#0000cd',
+     navyLighter: '#1a1aff',
+     burgundy: '#9f1d35',
+     burgundyDark: '#490d18',
+     burgundyLight: '#d92f4f',
+     burgundyLighter: '#e57086',
+     brown: 'saddlebrown',
+     brownDark: '#311807',
+     brownLight: '#ce661c',
+     brownLighter: '#e78f50',
+     sand: '#c2b280',
+     sandDark: '#958247',
+     sandLight: '#dbd1b4',
+     sandLighter: '#f4f1e7',
+     white: '#fff',
+     whiteDark: '#ccc',
+     whiteLight: '#fff',
+     whiteLighter: '#fff',
+     darkness: '#222222',
+     darknessDark: '#000',
+     darknessLight: '#555',
+     darknessLighter: '#ccc',
+     grayTint: '#c0c0c0',
+     grayTintDark: '#8d8d8d',
+     grayTintLight: '#ececec',
+     grayTintLighter: '#f3f3f3',
+     skinColors: 
+      { splashBackground: 'primary',
+        splashBorder: 'primary',
+        splashText: 'white',
+        calmBackground: 'grayTintLight',
+        calmBorder: 'grayTintLight',
+        calmText: 'type',
+        adWrapperBackgroundColor: 'grayTintLight',
+        adWrapperFontColor: 'type',
+        adWrapperColor: 'type',
+        background: 'transparent',
+        type: 'darkness',
+        typeLight: 'darknessLight',
+        typeDisabled: 'grayTint',
+        nativeAd: 'orange',
+        sport: 'green',
+        helse: 'blue',
+        reise: 'purple',
+        mat: 'orange',
+        bolig: 'brown',
+        motor: 'yellow',
+        underholdning: 'pink',
+        meninger: 'teal',
+        redaksjonenanbefaler: 'burgundy',
+        anbefalt: 'burgundy',
+        solRed: 'primary',
+        solBlue: 'secondary',
+        primary: 'primary',
+        secondary: 'secondary',
+        transparent: 'transparent',
+        grayTintLightDark: 'grayTint' },
+     buttonColor: '#3768c9',
+     buttonBackground: '#3768c9',
+     transparent: 'transparent',
+     link: 'cornflowerblue' },
+  flexboxgrid: 
+   { gridSize: 12,
+     gutterWidth: 1.4,
+     outerMargin: 1.5,
+     mediaQuery: 'only screen',
+     container: { sm: 49, md: 64, lg: 101 },
+     breakpoints: { xs: 0, sm: 48, md: 64, lg: 75 } },
+  variables: 
+   { mainFont: '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+     headingsFont: '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+     headingsWeight: 700,
+     uiWeight: 400,
+     uiWeightSemiBold: 600,
+     uiWeightBold: 700,
+     horizontalBase: '1.4rem',
+     unitlessHorizontalBase: 1.4,
+     verticalBase: '2.4rem',
+     unitlessVerticalBase: 2.4,
+     largeWidth: '750px',
+     uiRegularSize: '1.6rem',
+     uiRegularLineHeight: '2.4rem',
+     uiSmallSize: '1.3rem',
+     uiSmallLineHeight: '1.9rem',
+     uiTinySize: '1.0rem',
+     uiTinyLineHeight: '1.4rem',
+     headingSmallSize: '1.6rem',
+     headingSmallLineHeight: '2.2rem',
+     headingMediumSize: '1.8rem',
+     headingMediumLineHeight: '2.4rem',
+     headingRegularSize: '2.0rem',
+     headingRegularLineHeight: '2.7rem',
+     headingLargeSize: '2.4rem',
+     headingLargeLineHeight: '3.3rem',
+     headingXlargeSize: '3.8rem',
+     headingXlargeLineHeight: '5.2rem',
+     headingHugeSize: '4.8rem',
+     headingHugeLineHeight: '6.3rem',
+     adWrapperCase: 'uppercase' } }

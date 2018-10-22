@@ -1,77 +1,77 @@
-import { darken, lighten } from 'polished';
-
-import { cssReset } from '../../utils/css-reset';
-
-const variables = {
-	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
-	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
-	headingsWeight: 300,
-
-	uiRegularSize: '1.6rem',
-	uiRegularLineHeight: '2.4rem',
-};
-
-const colorsToShade = {
-	primary: '#333',
-	secondary: '#f8f8f8',
-
-	blue: '#185bd3',
-	type: '#666',
-
-	pink: '#444',
-	purple: '#444',
-	teal: '#444',
-	green: '#444',
-	yellow: '#444',
-	orange: '#444',
-	navy: '#444',
-	burgundy: '#444',
-	brown: '#444',
-	sand: '#444',
-};
-
-// Creates 4 shades of each color in colorsToShade
-// For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
-const shadedColors = Object.keys(colorsToShade).map(color => ({
-	[`${color}`]: colorsToShade[color],
-	[`${color}Dark`]: darken(0.2, colorsToShade[color]),
-	[`${color}Light`]: lighten(0.15, colorsToShade[color]),
-	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
-}));
-
-const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
-
-const skinColors = {
-	splashBackground: 'primary',
-	splashBorder: 'primary',
-	splashText: 'white',
-
-	calmBackground: 'secondary',
-	calmBorder: 'secondary',
-	calmText: 'type',
-
-	heading: 'primary',
-
-	type: 'type',
-};
-
-const colors = {
-	...combinedShadedColors,
-	skinColors,
-	link: '#185bd3',
-};
-
-const global = `
-	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
-
-	${cssReset}
-
-`;
-
-export default {
-	name: 'Light Theme',
-	global,
-	colors,
-	variables,
-	flexboxgrid: {},
-};
+module.exports = 
+{ name: 'Light Theme',
+  global: '\n\t@import url(\'https://fonts.googleapis.com/css?family=Roboto:300,700,800\');\n\n\t\n\thtml, body, div, span, applet, object, iframe,\n\th1, h2, h3, h4, h5, h6, p, blockquote, pre,\n\ta, abbr, acronym, address, big, cite, code,\n\tdel, dfn, em, font, ins, kbd, q, s, samp,\n\tsmall, strike, strong, sub, sup, tt, var,\n\tdl, dt, dd, ol, ul, li,\n\tfieldset, form, label, legend,\n\ttable, caption, tbody, tfoot, thead, tr, th, td {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tborder: 0;\n\t\tfont-size: 100%;\n\t\tfont: inherit;\n\t\tvertical-align: baseline;\n\t\tword-wrap: break-word;\n\t}\n\n\thtml {\n\t\tfont-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */\n\t\t-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */\n\t\t-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */\n\t}\n\n\t*,\n\t*::before,\n\t*::after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */\n\t\tbox-sizing: border-box;\n\t}\n\n\tbody {\n\t\tfont-size: 1.6rem; /* Reset the body text to 16px */\n\t\tline-height: 1;\n\t\tbackground: transparent;\n\t}\n\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, main, menu, nav, section {\n\t\tdisplay: block;\n\t}\n\n\t/* HTML5 hidden-attribute fix for newer browsers */\n\t*[hidden] {\n\t    display: none;\n\t}\n\n\tol, ul {\n\t\tlist-style: none;\n\t}\n\n\t/* tables still need \'cellspacing="0"\' in the markup */\n\ttable {\n\t\tborder-collapse: separate;\n\t\tborder-spacing: 0;\n\t}\n\n\tcaption, th, td {\n\t\tfont-weight: normal;\n\t\ttext-align: left;\n\t}\n\n\tblockquote, q {\n\t\tquotes: none;\n\t}\n\n\tblockquote:before, blockquote:after,\n\tq:before, q:after {\n\t\tcontent: \'\';\n\t\tcontent: none;\n\t}\n\n\ta:focus {\n\t\toutline: thin dotted;\n\t}\n\n\ta:hover,\n\ta:active {\n\t\toutline: 0;\n\t}\n\n\ta {\n\t\timg {\n\t\t\tborder: 0;\n\t\t}\n\t}\n\n\tp {\n\t\tmargin-bottom: 1em;\n\t}\n\n\n',
+  colors: 
+   { primary: '#333',
+     primaryDark: '#000',
+     primaryLight: '#595959',
+     primaryLighter: '#808080',
+     secondary: '#f8f8f8',
+     secondaryDark: '#c5c5c5',
+     secondaryLight: '#fff',
+     secondaryLighter: '#fff',
+     blue: '#185bd3',
+     blueDark: '#0e3477',
+     blueLight: '#4d85eb',
+     blueLighter: '#91b4f3',
+     type: '#666',
+     typeDark: '#333',
+     typeLight: '#8c8c8c',
+     typeLighter: '#b3b3b3',
+     pink: '#444',
+     pinkDark: '#111',
+     pinkLight: '#6a6a6a',
+     pinkLighter: '#919191',
+     purple: '#444',
+     purpleDark: '#111',
+     purpleLight: '#6a6a6a',
+     purpleLighter: '#919191',
+     teal: '#444',
+     tealDark: '#111',
+     tealLight: '#6a6a6a',
+     tealLighter: '#919191',
+     green: '#444',
+     greenDark: '#111',
+     greenLight: '#6a6a6a',
+     greenLighter: '#919191',
+     yellow: '#444',
+     yellowDark: '#111',
+     yellowLight: '#6a6a6a',
+     yellowLighter: '#919191',
+     orange: '#444',
+     orangeDark: '#111',
+     orangeLight: '#6a6a6a',
+     orangeLighter: '#919191',
+     navy: '#444',
+     navyDark: '#111',
+     navyLight: '#6a6a6a',
+     navyLighter: '#919191',
+     burgundy: '#444',
+     burgundyDark: '#111',
+     burgundyLight: '#6a6a6a',
+     burgundyLighter: '#919191',
+     brown: '#444',
+     brownDark: '#111',
+     brownLight: '#6a6a6a',
+     brownLighter: '#919191',
+     sand: '#444',
+     sandDark: '#111',
+     sandLight: '#6a6a6a',
+     sandLighter: '#919191',
+     skinColors: 
+      { splashBackground: 'primary',
+        splashBorder: 'primary',
+        splashText: 'white',
+        calmBackground: 'secondary',
+        calmBorder: 'secondary',
+        calmText: 'type',
+        heading: 'primary',
+        type: 'type' },
+     link: '#185bd3' },
+  variables: 
+   { mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+     headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+     headingsWeight: 300,
+     uiRegularSize: '1.6rem',
+     uiRegularLineHeight: '2.4rem' },
+  flexboxgrid: {} }

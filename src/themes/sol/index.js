@@ -1,29 +1,116 @@
-import { cssReset } from '../../utils/css-reset';
-
-import colors from './colors';
-import variables from './variables';
-
-// TODO: A pemanent solution for the a underline should be made.
-//       se: https://github.com/dbmedialab/wolverine-frontend/issues/460
-const global = `
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
-
-	${cssReset}
-
-	a {
-		text-decoration: none;
-
-		&:active,
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
-`;
-
-export default {
-	name: 'SOL',
-	global,
-	colors,
-	variables,
-};
+module.exports = 
+{ name: 'SOL',
+  global: '\n\t@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:400,700,800\');\n\n\t\n\thtml, body, div, span, applet, object, iframe,\n\th1, h2, h3, h4, h5, h6, p, blockquote, pre,\n\ta, abbr, acronym, address, big, cite, code,\n\tdel, dfn, em, font, ins, kbd, q, s, samp,\n\tsmall, strike, strong, sub, sup, tt, var,\n\tdl, dt, dd, ol, ul, li,\n\tfieldset, form, label, legend,\n\ttable, caption, tbody, tfoot, thead, tr, th, td {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tborder: 0;\n\t\tfont-size: 100%;\n\t\tfont: inherit;\n\t\tvertical-align: baseline;\n\t\tword-wrap: break-word;\n\t}\n\n\thtml {\n\t\tfont-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */\n\t\t-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */\n\t\t-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */\n\t}\n\n\t*,\n\t*::before,\n\t*::after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */\n\t\tbox-sizing: border-box;\n\t}\n\n\tbody {\n\t\tfont-size: 1.6rem; /* Reset the body text to 16px */\n\t\tline-height: 1;\n\t\tbackground: transparent;\n\t}\n\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, main, menu, nav, section {\n\t\tdisplay: block;\n\t}\n\n\t/* HTML5 hidden-attribute fix for newer browsers */\n\t*[hidden] {\n\t    display: none;\n\t}\n\n\tol, ul {\n\t\tlist-style: none;\n\t}\n\n\t/* tables still need \'cellspacing="0"\' in the markup */\n\ttable {\n\t\tborder-collapse: separate;\n\t\tborder-spacing: 0;\n\t}\n\n\tcaption, th, td {\n\t\tfont-weight: normal;\n\t\ttext-align: left;\n\t}\n\n\tblockquote, q {\n\t\tquotes: none;\n\t}\n\n\tblockquote:before, blockquote:after,\n\tq:before, q:after {\n\t\tcontent: \'\';\n\t\tcontent: none;\n\t}\n\n\ta:focus {\n\t\toutline: thin dotted;\n\t}\n\n\ta:hover,\n\ta:active {\n\t\toutline: 0;\n\t}\n\n\ta {\n\t\timg {\n\t\t\tborder: 0;\n\t\t}\n\t}\n\n\tp {\n\t\tmargin-bottom: 1em;\n\t}\n\n\n\ta {\n\t\ttext-decoration: none;\n\n\t\t&:active,\n\t\t&:hover,\n\t\t&:focus {\n\t\t\ttext-decoration: underline;\n\t\t}\n\t}\n',
+  colors: 
+   { primary: '#e20613',
+     primaryDark: '#c00510',
+     primaryLight: '#eb5860',
+     primaryLighter: '#f5aaae',
+     secondary: '#455c7b',
+     secondaryDark: '#2a384b',
+     secondaryLight: '#8291a6',
+     secondaryLighter: '#bfc7d1',
+     type: '#222',
+     typeLight: '#6a6a6a',
+     typeDisabled: '#b3b3b3',
+     grayTint: '#dedede',
+     grayTintLight: '#e9e9e9',
+     grayTintLightDark: '#dedede',
+     grayTintLighter: '#f3f3f3',
+     white: '#fff',
+     darkness: '#30282a',
+     darknessLight: '#453d3f',
+     pink: '#ff5b7f',
+     pinkDark: '#d94d6c',
+     pinkLight: '#ff91a9',
+     pinkLighter: '#ffc7d3',
+     purple: '#9356f3',
+     purpleDark: '#7d49ce',
+     purpleLight: '#b68df6',
+     purpleLighter: '#dac5fa',
+     blue: '#5696f3',
+     blueDark: '#497fce',
+     blueLight: '#8db8f6',
+     blueLighter: '#c5dbfa',
+     teal: '#007b84',
+     tealDark: '#006870',
+     tealLight: '#54a6ac',
+     tealLighter: '#a8d1d5',
+     green: '#1fa975',
+     greenDark: '#1a8f63',
+     greenLight: '#68c5a2',
+     greenLighter: '#b2e1cf',
+     yellow: '#ffd35b',
+     yellowDark: '#d9b34d',
+     yellowLight: '#ffe191',
+     yellowLighter: '#ffefc7',
+     orange: '#ff953a',
+     orangeDark: '#d97e31',
+     orangeLight: '#ffb77a',
+     orangeLighter: '#ffdabb',
+     brown: '#9a663f',
+     brownDark: '#835635',
+     brownLight: '#bb987e',
+     brownLighter: '#dccabd',
+     burgundy: '#85115a',
+     burgundyDark: '#712855',
+     burgundyLight: '#ad7497',
+     burgundyLighter: '#d5b8ca',
+     navy: '#1c1837',
+     link: '#0E6BF5',
+     skinColors: 
+      { type: 'type',
+        typeLight: 'typeLight',
+        typeDisabled: 'typeDisabled',
+        splashBackground: 'secondary',
+        splashText: 'white',
+        calmBackground: 'grayTintLighter',
+        calmBorder: 'grayTintLighter',
+        calmText: 'type',
+        adWrapperBackgroundColor: 'transparent',
+        adWrapperFontColor: 'typeLight',
+        nativeAd: 'pink',
+        sport: 'green',
+        helse: 'blue',
+        reise: 'purple',
+        mat: 'orange',
+        bolig: 'brown',
+        motor: 'yellow',
+        underholdning: 'pink',
+        meninger: 'teal',
+        redaksjonenanbefaler: 'burgundy',
+        anbefalt: 'burgundy',
+        solRed: 'primary',
+        solBlue: 'secondary',
+        primary: 'primary',
+        secondary: 'secondary' } },
+  variables: 
+   { mainFont: '\'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+     headingsFont: '\'Open Sans\', \'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+     horizontalBase: '1.4rem',
+     unitlessHorizontalBase: 1.4,
+     verticalBase: '2.4rem',
+     unitlessVerticalBase: 2.4,
+     uiWeight: 400,
+     uiWeightSemiBold: 600,
+     uiWeightBold: 700,
+     largeWidth: '750px',
+     uiRegularSize: '1.4rem',
+     uiRegularLineHeight: '1.9rem',
+     uiSmallSize: '1.2rem',
+     uiSmallLineHeight: '1.7rem',
+     uiTinySize: '1.0rem',
+     uiTinyLineHeight: '1.4rem',
+     headingSmallSize: '1.6rem',
+     headingSmallLineHeight: '2.2rem',
+     headingMediumSize: '1.8rem',
+     headingMediumLineHeight: '2.4rem',
+     headingRegularSize: '2.0rem',
+     headingRegularLineHeight: '2.7rem',
+     headingLargeSize: '2.4rem',
+     headingLargeLineHeight: '3.3rem',
+     headingXlargeSize: '3.8rem',
+     headingXlargeLineHeight: '5.2rem',
+     headingHugeSize: '4.8rem',
+     headingHugeLineHeight: '6.3rem',
+     adWrapperCase: 'lowercase' } }

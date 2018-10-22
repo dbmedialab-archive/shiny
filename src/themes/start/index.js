@@ -1,17 +1,26 @@
-import { cssReset } from '../../utils/css-reset';
-
-import colors from './colors';
-import variables from './variables';
-
-const global = `
-	@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400');
-
-	${cssReset}
-`;
-
-export default {
-	name: 'Start',
-	global,
-	colors,
-	variables,
-};
+module.exports = 
+{ name: 'Start',
+  global: '\n\t@import url(\'https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400\');\n\n\t\n\thtml, body, div, span, applet, object, iframe,\n\th1, h2, h3, h4, h5, h6, p, blockquote, pre,\n\ta, abbr, acronym, address, big, cite, code,\n\tdel, dfn, em, font, ins, kbd, q, s, samp,\n\tsmall, strike, strong, sub, sup, tt, var,\n\tdl, dt, dd, ol, ul, li,\n\tfieldset, form, label, legend,\n\ttable, caption, tbody, tfoot, thead, tr, th, td {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tborder: 0;\n\t\tfont-size: 100%;\n\t\tfont: inherit;\n\t\tvertical-align: baseline;\n\t\tword-wrap: break-word;\n\t}\n\n\thtml {\n\t\tfont-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */\n\t\t-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */\n\t\t-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */\n\t}\n\n\t*,\n\t*::before,\n\t*::after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */\n\t\tbox-sizing: border-box;\n\t}\n\n\tbody {\n\t\tfont-size: 1.6rem; /* Reset the body text to 16px */\n\t\tline-height: 1;\n\t\tbackground: transparent;\n\t}\n\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, main, menu, nav, section {\n\t\tdisplay: block;\n\t}\n\n\t/* HTML5 hidden-attribute fix for newer browsers */\n\t*[hidden] {\n\t    display: none;\n\t}\n\n\tol, ul {\n\t\tlist-style: none;\n\t}\n\n\t/* tables still need \'cellspacing="0"\' in the markup */\n\ttable {\n\t\tborder-collapse: separate;\n\t\tborder-spacing: 0;\n\t}\n\n\tcaption, th, td {\n\t\tfont-weight: normal;\n\t\ttext-align: left;\n\t}\n\n\tblockquote, q {\n\t\tquotes: none;\n\t}\n\n\tblockquote:before, blockquote:after,\n\tq:before, q:after {\n\t\tcontent: \'\';\n\t\tcontent: none;\n\t}\n\n\ta:focus {\n\t\toutline: thin dotted;\n\t}\n\n\ta:hover,\n\ta:active {\n\t\toutline: 0;\n\t}\n\n\ta {\n\t\timg {\n\t\t\tborder: 0;\n\t\t}\n\t}\n\n\tp {\n\t\tmargin-bottom: 1em;\n\t}\n\n',
+  colors: 
+   { primary: '#7a9a26',
+     primaryDark: '#394812',
+     primaryLight: '#a7cf3d',
+     primaryLighter: '#c3de7b',
+     secondary: '#313131',
+     secondaryDark: '#000',
+     secondaryLight: '#575757',
+     secondaryLighter: '#7e7e7e',
+     darkness: '#222',
+     darknessDark: '#000',
+     darknessLight: '#484848',
+     darknessLighter: '#6f6f6f',
+     pageBackground: '#f9f9f9',
+     pageBackgroundDark: '#c6c6c6',
+     pageBackgroundLight: '#fff',
+     pageBackgroundLighter: '#fff',
+     skinColors: { type: 'darkness', background: 'pageBackground' } },
+  variables: 
+   { mainFont: '\'Open Sans\', \'Helvetica Neue\', \'Helvetica\', \'Arial\', sans-serif',
+     headingsFont: '"Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif',
+     uiRegularSize: '1.4rem',
+     uiRegularLineHeight: '2.4rem' } }

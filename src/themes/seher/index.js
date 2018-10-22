@@ -1,59 +1,65 @@
-import { darken, lighten } from 'polished';
-
-import { cssReset } from '../../utils/css-reset';
-
-import { variables } from './variables';
-import { flexboxgrid } from './flexboxgrid';
-
-const colorsToShade= {
-	primary: '#e3000b',
-	secondary: '#f1ca3f',
-	tertiary: '#222222',
-
-	yellow: '#f1ca3f',
-	black: '#222222',
-	darkness: '#272727',
-};
-// Creates 4 shades of each color in colorsToShade
-// For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
-const shadedColors = Object.keys(colorsToShade).map(color => ({
-	[`${color}`]: colorsToShade[color],
-	[`${color}Dark`]: darken(0.2, colorsToShade[color]),
-	[`${color}Light`]: lighten(0.15, colorsToShade[color]),
-	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
-}));
-
-const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
-
-const colors = {
-	grayTint: '#C0C0C0',
-	grayTintLight: '#ECECEC',
-	grayTintLightDark: '#C0C0C0',
-	grayTintDark: '#767676',
-
-	...combinedShadedColors,
-
-	skinColors: {
-		type: 'darkness',
-		splashBackground: 'primary',
-		splashBorder: 'darkness',
-		splashText: 'white',
-		calmBackground: 'grayTintLight',
-		calmBorder: 'darkness',
-		calmText: 'tertiary',
-	},
-};
-
-const global = `
-	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800');
-
-	${cssReset}
-`;
-
-export default {
-	name: 'SeHer',
-	colors,
-	flexboxgrid,
-	global,
-	variables,
-};
+module.exports = 
+{ name: 'SeHer',
+  colors: 
+   { grayTint: '#C0C0C0',
+     grayTintLight: '#ECECEC',
+     grayTintLightDark: '#C0C0C0',
+     grayTintDark: '#767676',
+     primary: '#e3000b',
+     primaryDark: '#7d0006',
+     primaryLight: '#ff313b',
+     primaryLighter: '#ff7d83',
+     secondary: '#f1ca3f',
+     secondaryDark: '#bc960e',
+     secondaryLight: '#f6de86',
+     secondaryLighter: '#fbf1ce',
+     tertiary: '#222222',
+     tertiaryDark: '#000',
+     tertiaryLight: '#484848',
+     tertiaryLighter: '#6f6f6f',
+     yellow: '#f1ca3f',
+     yellowDark: '#bc960e',
+     yellowLight: '#f6de86',
+     yellowLighter: '#fbf1ce',
+     black: '#222222',
+     blackDark: '#000',
+     blackLight: '#484848',
+     blackLighter: '#6f6f6f',
+     darkness: '#272727',
+     darknessDark: '#000',
+     darknessLight: '#4d4d4d',
+     darknessLighter: '#747474',
+     skinColors: 
+      { type: 'darkness',
+        splashBackground: 'primary',
+        splashBorder: 'darkness',
+        splashText: 'white',
+        calmBackground: 'grayTintLight',
+        calmBorder: 'darkness',
+        calmText: 'tertiary' } },
+  flexboxgrid: { gutterWidth: 1.6, container: { sm: 75.4, md: 75.4 } },
+  global: '\n\t@import url(\'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,800\');\n\n\t\n\thtml, body, div, span, applet, object, iframe,\n\th1, h2, h3, h4, h5, h6, p, blockquote, pre,\n\ta, abbr, acronym, address, big, cite, code,\n\tdel, dfn, em, font, ins, kbd, q, s, samp,\n\tsmall, strike, strong, sub, sup, tt, var,\n\tdl, dt, dd, ol, ul, li,\n\tfieldset, form, label, legend,\n\ttable, caption, tbody, tfoot, thead, tr, th, td {\n\t\tmargin: 0;\n\t\tpadding: 0;\n\t\tborder: 0;\n\t\tfont-size: 100%;\n\t\tfont: inherit;\n\t\tvertical-align: baseline;\n\t\tword-wrap: break-word;\n\t}\n\n\thtml {\n\t\tfont-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */\n\t\t-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */\n\t\t-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */\n\t}\n\n\t*,\n\t*::before,\n\t*::after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */\n\t\tbox-sizing: border-box;\n\t}\n\n\tbody {\n\t\tfont-size: 1.6rem; /* Reset the body text to 16px */\n\t\tline-height: 1;\n\t\tbackground: transparent;\n\t}\n\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, main, menu, nav, section {\n\t\tdisplay: block;\n\t}\n\n\t/* HTML5 hidden-attribute fix for newer browsers */\n\t*[hidden] {\n\t    display: none;\n\t}\n\n\tol, ul {\n\t\tlist-style: none;\n\t}\n\n\t/* tables still need \'cellspacing="0"\' in the markup */\n\ttable {\n\t\tborder-collapse: separate;\n\t\tborder-spacing: 0;\n\t}\n\n\tcaption, th, td {\n\t\tfont-weight: normal;\n\t\ttext-align: left;\n\t}\n\n\tblockquote, q {\n\t\tquotes: none;\n\t}\n\n\tblockquote:before, blockquote:after,\n\tq:before, q:after {\n\t\tcontent: \'\';\n\t\tcontent: none;\n\t}\n\n\ta:focus {\n\t\toutline: thin dotted;\n\t}\n\n\ta:hover,\n\ta:active {\n\t\toutline: 0;\n\t}\n\n\ta {\n\t\timg {\n\t\t\tborder: 0;\n\t\t}\n\t}\n\n\tp {\n\t\tmargin-bottom: 1em;\n\t}\n\n',
+  variables: 
+   { mainFont: '"Source Sans Pro", sans-serif',
+     headingsFont: '"Source Sans Pro", sans-serif',
+     uiWeight: 300,
+     uiRegularSize: '1.8rem',
+     uiRegularLineHeight: '2.7rem',
+     uiSmallSize: '1.2rem',
+     uiSmallLineHeight: '1.7rem',
+     uiTinySize: '1.0rem',
+     uiTinyLineHeight: '1.4rem',
+     horizontalBase: '1.6rem',
+     verticalBase: '2.4rem',
+     headingSmallSize: '1.8rem',
+     headingSmallLineHeight: '2.7rem',
+     headingMediumSize: '1.8rem',
+     headingMediumLineHeight: '2.7rem',
+     headingRegularSize: '2.0rem',
+     headingRegularLineHeight: '2.7rem',
+     headingLargeSize: '2.4rem',
+     headingLargeLineHeight: '3.0rem',
+     headingXlargeSize: '3.8rem',
+     headingXlargeLineHeight: '4.8rem',
+     headingHugeSize: '4.8rem',
+     headingHugeLineHeight: '5.8rem' } }
