@@ -6422,9 +6422,9 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-picturefill@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/picturefill/-/picturefill-3.0.2.tgz#fa3d35fffbef5ab5300fe2ad9dca8f2e36cba27b"
+picturefill@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/picturefill/-/picturefill-3.0.3.tgz#a5c38eeb02d74def38e1790ff61e166166b4f224"
 
 pify@^2.0.0:
   version "2.3.0"
@@ -6466,9 +6466,9 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-polished@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-2.1.1.tgz#767bd417b9df3fa317bc0f3935d1d6b4cb182235"
+polished@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.0.tgz#66c8b66bc666e95d9d12d760dac9df758aed8f8e"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
