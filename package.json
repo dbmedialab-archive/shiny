@@ -82,7 +82,7 @@
     "babel-plugin-emotion": "9.2.6",
     "babel-plugin-react-docgen": "2.0.0",
     "babel-plugin-transform-imports": "^1.5.0",
-    "emotion": "9.2.6",
+    "emotion": "9.2.12",
     "emotion-theming": "9.2.6",
     "eslint": "5.0.1",
     "eslint-plugin-import": "2.13.0",
@@ -92,6 +92,6 @@
     "prop-types": "15.6.2",
     "react": "16.6.0",
     "react-dom": "16.6.0",
-    "react-emotion": "9.2.6"
+    "react-emotion": "9.2.12"
   }
 }
