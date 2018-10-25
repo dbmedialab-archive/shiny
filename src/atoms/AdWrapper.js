@@ -46,6 +46,8 @@ AdWrapper.propTypes = {
 	height: PropTypes.string,
 	shouldHideAttribution: PropTypes.bool,
 	sticky: PropTypes.string,
+	itemType: PropTypes.string,
+	itemScope: PropTypes.bool,
 };
 
 AdWrapper.defaultProps = {
@@ -53,6 +55,8 @@ AdWrapper.defaultProps = {
 	width: '32.0rem',
 	height: '25.0rem',
 	shouldHideAttribution: false,
+	itemType: 'http://schema.org/WPAdBlock',
+	itemScope: true,
 };
 
 export { AdWrapper };
