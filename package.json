@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.15.3",
+  "version": "0.16.2",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -31,14 +31,14 @@
   "dependencies": {
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "debug": "4.0.1",
+    "debug": "4.1.0",
     "get-best-contrast-color": "0.2.2",
-    "intersection-observer": "0.5.0",
+    "intersection-observer": "0.5.1",
     "lazysizes": "4.1.2",
     "lodash.isinteger": "^4.0.4",
     "parse-color": "1.0.0",
-    "picturefill": "3.0.2",
-    "polished": "2.1.1",
+    "picturefill": "3.0.3",
+    "polished": "2.3.0",
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "react-intersection-observer": "5.0.5",
@@ -49,10 +49,10 @@
   },
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
-    "@babel/cli": "7.1.1",
-    "@babel/core": "7.1.1",
+    "@babel/cli": "7.1.2",
+    "@babel/core": "7.1.2",
     "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/plugin-proposal-decorators": "7.1.1",
+    "@babel/plugin-proposal-decorators": "7.1.2",
     "@babel/plugin-proposal-do-expressions": "7.0.0",
     "@babel/plugin-proposal-export-default-from": "7.0.0",
     "@babel/plugin-proposal-export-namespace-from": "7.0.0",
@@ -82,7 +82,7 @@
     "babel-plugin-emotion": "9.2.6",
     "babel-plugin-react-docgen": "2.0.0",
     "babel-plugin-transform-imports": "^1.5.0",
-    "emotion": "9.2.6",
+    "emotion": "9.2.12",
     "emotion-theming": "9.2.6",
     "eslint": "5.0.1",
     "eslint-plugin-import": "2.13.0",
@@ -90,8 +90,8 @@
     "eslint-plugin-react": "7.11.1",
     "pretty-format": "23.6.0",
     "prop-types": "15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
-    "react-emotion": "9.2.6"
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-emotion": "9.2.12"
   }
 }
