@@ -1,14 +1,15 @@
 import defaultTheme from './default-theme';
 import lightTheme from './light-theme';
 
+import aller from './aller';
 import dagbladet from './dagbladet';
 import dinside from './dinside';
 import kk from './kk';
+import mat from './mat';
 import seher from './seher';
 import sol from './sol';
 import start from './start';
 import topp from './topp';
-import mat from './mat';
 
 
 export { themePropTypes } from './theme-prop-types';
@@ -17,6 +18,7 @@ const themes = {
 	defaultTheme,
 	lightTheme,
 
+	aller,
 	dagbladet,
 	dinside,
 	kk,

@@ -5,12 +5,14 @@ import { ShinyStory } from './ShinyStory';
 import { SeHerStory } from './SeHerStory';
 import { DagbladetStory } from './DagbladetStory';
 import { KKStory } from './KKStory';
+import AllerStory from './AllerStory';
 import DinsideStory from './DinsideStory';
 import DinsideStoryTwenty from './DinsideStoryTwenty';
 
 export default () => {
 	storiesOf('Logos', module)
 		.addDecorator(StorybookPaddedGrid)
+		.add('AllerLogo', AllerStory)
 		.add('ShinyLogo', ShinyStory)
 		.add('SeHerLogo', SeHerStory)
 		.add('KKLogo', KKStory)

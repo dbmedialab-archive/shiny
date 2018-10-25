@@ -48,6 +48,8 @@ class ThemeSwitcher extends React.Component {
 			},
 		} = this.state;
 
+		console.log(colors);
+
 		return (
 			<ThemeSelector>
 				<FullWidthLinkBar
@@ -61,6 +63,14 @@ class ThemeSwitcher extends React.Component {
 						value=""
 					>
 						Default
+					</Button>
+					<Button
+						textColor={colors.skinColors.splashText}
+						onClick={e => this.handleButtonClick(e)}
+						isActive={selected === 'aller'}
+						value="aller"
+					>
+						Aller
 					</Button>
 					<Button
 						textColor={colors.skinColors.splashText}
