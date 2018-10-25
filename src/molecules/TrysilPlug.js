@@ -8,7 +8,7 @@ import {
 	getVariable,
 } from '../utils';
 
-import { Article, articleCss } from '../atoms/Article';
+import { Article } from '../atoms/Article';
 import { Kicker } from '../atoms/Kicker';
 import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
 import { BlockLink } from '../atoms/BlockLink';
@@ -17,10 +17,7 @@ import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
 
-const StyledArticleCol = styled(Col)`
-	${articleCss};
-`;
-const ArticleCol = StyledArticleCol.withComponent('article');
+const ArticleCol = Col.withComponent(Article);
 
 const PlugLink = styled(BlockLink)`
 	&:focus {
@@ -68,10 +65,11 @@ const TrysilPlug = ({
 	headingProps,
 	placeholderUrl,
 	column,
+	attributes,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
-		<ArticleComponent {...column}>
+		<ArticleComponent {...column} {...attributes}>
 			<PlugLink href={url}>
 				{kicker && <Kicker>{kicker}</Kicker>}
 				{image
@@ -100,6 +98,8 @@ const TrysilPlug = ({
 };
 
 TrysilPlug.propTypes = {
+	/** Extra attributes you want on the DOM-node. e.g. data-cxense_Tag */
+	attributes: PropTypes.object, // eslint-disable-line
 	/** Text above the image plug. */
 	kicker: PropTypes.string,
 	/** Main link text. */
@@ -153,6 +153,7 @@ TrysilPlug.propTypes = {
 	preventBlur: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
+	attributes: {},
 	column: null,
 	kicker: '',
 	title: '',

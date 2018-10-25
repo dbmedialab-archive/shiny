@@ -10,6 +10,7 @@ const FontIcon = (props) => {
 			font-style: normal;
 			font-weight: normal;
 			src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
+			font-display: block;
 		}
 	`;
 	return <Icon {...props} />;
