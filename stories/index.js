@@ -4,15 +4,17 @@ import loaders from './Loaders';
 import typography from './typography';
 import editorialMarking from './EditorialMarking';
 import linkBars from './link-bars';
+import linkBarElements from './link-bar-elements';
+import linkBarsCompleteExamples from './link-bars-complete-examples';
 import trysilPlug from './TrysilPlug';
-import floatImage from './FloatImage';
 import ads from './Ads';
-import lazyProgressiveImage from './LazyProgressiveImage';
 import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
 import rating from './rating';
 import modals from './Modal';
+import images from './Images';
+import footers from './footers';
 
 introduction();
 
@@ -24,12 +26,14 @@ grid();
 rating();
 
 // Molecules
-linkBars();
-trysilPlug();
-floatImage();
 ads();
-lazyProgressiveImage();
-matComponents();
-logos();
 forms();
+images();
+linkBars();
+linkBarElements();
+linkBarsCompleteExamples();
+logos();
+matComponents();
 modals();
+trysilPlug();
+footers();

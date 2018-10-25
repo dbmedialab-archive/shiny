@@ -9,7 +9,7 @@ import publishedDate from './publishedDate';
 import bodyText from './bodyText';
 import lunchButton from './lunch-button';
 import dice from './dice';
-// import icon from './icon';
+import icon from './icon';
 import underlinedHeading from './underlined-heading';
 import dymoHeading from './dymo-heading';
 import svgIcon from './svgIcon';
@@ -40,7 +40,7 @@ export default () => {
 		.add('Body text', bodyText)
 		.add('LunchButton', lunchButton)
 		.add('Dice', dice)
-		// .add('Font Icon', icon)
+		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
 		.add('Icon with text', iconWithText)
 		.add('Numbered list', numberedList)

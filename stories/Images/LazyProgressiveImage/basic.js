@@ -2,8 +2,8 @@
 import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 
-import { LazyProgressiveImage } from '../../src/molecules/LazyProgressiveImage';
-import { Source } from '../../src/molecules/Source';
+import { LazyProgressiveImage } from '../../../src/molecules/LazyProgressiveImage';
+import { Source } from '../../../src/molecules/Source';
 
 const MultipleLazyProgressiveImagesStory = () => {
 	const ids = [

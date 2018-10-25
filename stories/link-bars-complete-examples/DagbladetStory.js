@@ -25,13 +25,9 @@ import {
 	getVariable,
 } from '../../src';
 
-import theme from '../../src/themes/default-theme';
-
-const { colors } = theme;
-
 const linkProps = {
 	useUnderline: false,
-	activeBackground: '#bd0000',
+	activeBackgroundColor: 'primaryDark',
 	textColor: 'white',
 	ALLCAPS: true,
 };
@@ -70,7 +66,8 @@ const DagbladetStory = () => (
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<VerySpecialLinkBar
-				background="#d60000"
+				isTopLevelComponent={false} // Use the whole width
+				backgroundColor="splashBackground"
 				overflow="visible"
 				shouldFlexChildren
 			>
@@ -78,7 +75,7 @@ const DagbladetStory = () => (
 					<DagbladetLogo background="transparent" />
 				</SmallLinkBarLink>
 				<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg displayInitially>
-					<VerticalLinkBar background={colors.white}>
+					<VerticalLinkBar backgroundColor="white">
 						<LinkBarLink {...dropDownLinkProps} linkText="Nyheter" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Sport" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Kultur" url="#" isActive />
@@ -91,7 +88,7 @@ const DagbladetStory = () => (
 				</LargeLinkBarDropdown>
 				<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} lg />
 				<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} lg>
-					<VerticalLinkBar background={colors.white}>
+					<VerticalLinkBar backgroundColor="white">
 						<LinkBarLink {...dropDownLinkProps} linkText="Forsiden" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="I dag" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Magasinet" url="#" isActive />
@@ -104,7 +101,7 @@ const DagbladetStory = () => (
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
 				<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} lg>
-					<VerticalLinkBar background={colors.white}>
+					<VerticalLinkBar backgroundColor="white">
 						<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Været" url="#" />
 						<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio" url="#" />
@@ -125,7 +122,7 @@ const DagbladetStory = () => (
 					</VerticalLinkBar>
 				</LargeLinkBarDropdown>
 				<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false} displayInitially>
-					<VerticalLinkBar background="white">
+					<VerticalLinkBar backgroundColor="white">
 						<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
 						<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
 						<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>
@@ -183,7 +180,7 @@ import {
 
 const linkProps = {
 	useUnderline: false,
-	activeBackground: '#bd0000',
+	activeBackground: 'primaryDark',
 	textColor: 'white',
 	ALLCAPS: true,
 };
@@ -215,7 +212,7 @@ const FlexCol = styled(Col)\`
 \`;
 
 <VerySpecialLinkBar
-	background="#d60000"
+	backgroundColor="splashColor"
 	overflow="visible"
 	shouldFlexChildren
 >
@@ -223,7 +220,7 @@ const FlexCol = styled(Col)\`
 		<DagbladetLogo background="transparent" />
 	</SmallLinkBarLink>
 	<LargeLinkBarDropdown {...linkProps} linkText="Innhold" xs={false} lg>
-		<VerticalLinkBar background={colors.white}>
+		<VerticalLinkBar backgroundColor="white">
 			<LinkBarLink {...dropDownLinkProps} linkText="Nyheter"  url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Sport"    url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Kultur"   url="#" isActive />
@@ -236,7 +233,7 @@ const FlexCol = styled(Col)\`
 	</LargeLinkBarDropdown>
 	<LargeLinkBarLink {...linkProps} linkText="Video" url="https://example.com" isActive xs={false} lg />
 	<LargeLinkBarDropdown {...linkProps} linkText="Pluss" xs={false} lg>
-		<VerticalLinkBar background={colors.white}>
+		<VerticalLinkBar backgroundColor="white">
 			<LinkBarLink {...dropDownLinkProps} linkText="Forsiden"      url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="I dag"         url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Magasinet"     url="#" isActive />
@@ -249,7 +246,7 @@ const FlexCol = styled(Col)\`
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
 	<LargeLinkBarDropdown {...linkProps} linkText="Snarveier" xs={false} lg>
-		<VerticalLinkBar background={colors.white}>
+		<VerticalLinkBar backgroundColor="white">
 			<LinkBarLink {...dropDownLinkProps} linkText="Tegneserier"                 url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Været"                       url="#" />
 			<LinkBarLink {...dropDownLinkProps} linkText="Fotballstudio"               url="#" />
@@ -270,7 +267,7 @@ const FlexCol = styled(Col)\`
 		</VerticalLinkBar>
 	</LargeLinkBarDropdown>
 	<LargeLinkBarDropdown {...linkProps} position="static" linkText="Meny" xs lg={false}>
-		<VerticalLinkBar background="white">
+		<VerticalLinkBar backgroundColor="white">
 			<PaddedHeading ALLCAPS>Min profil</PaddedHeading>
 			<LinkBarLink {...dropDownLinkProps} href="https://www.dagbladet.no/pluss/logg_inn/" linkText="Logg inn" />
 			<PaddedHeading ALLCAPS>Seksjoner</PaddedHeading>

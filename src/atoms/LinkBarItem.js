@@ -7,8 +7,8 @@ const LinkBarItem = styled.li`
 	vertical-align: middle;
 	line-height: 0;
 	margin: 0;
-	flex: ${props => (props.flex)};
-	z-index: 8;
+	flex: ${props => props.flex};
+	z-index: ${props => props.zIndex};
 
 	/* This whole block deals with hiding the LinkBarItem */
 	/* with syntax from react-emotion-flexboxgrid */
@@ -22,6 +22,7 @@ LinkBarItem.propTypes = {
 	lg: propTypes.bool,
 	flex: propTypes.string,
 	position: propTypes.string,
+	zIndex: propTypes.number,
 };
 
 LinkBarItem.defaultProps = {
@@ -31,6 +32,7 @@ LinkBarItem.defaultProps = {
 	lg: null,
 	flex: '0 0 auto',
 	position: 'relative',
+	zIndex: 8,
 };
 
 export { LinkBarItem };

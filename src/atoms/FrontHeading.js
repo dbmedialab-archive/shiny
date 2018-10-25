@@ -10,20 +10,21 @@ import {
 } from './Heading';
 
 const FheadStyle = props => css`
-    color: ${getColor(props.textColor)(props)};
-    display: block;
-    white-space: nowrap;
+	color: ${getColor(props.textColor)(props)};
+	display: block;
+	white-space: nowrap;
 	overflow: hidden;
 	text-transform: uppercase;
 	letter-spacing: .03125rem;
-    &:after {
+
+	&:after {
 		content: '';
 		width: ${props.lineWidth ? `${props.lineWidth}rem` : '100%'};
 		margin-left: ${getVariable('headingSmallSize')(props)};
 		display: inline-block;
 		border-bottom: .2rem solid ${getColor(props.lineColor)(props)};
 		vertical-align: middle;
-    }
+	}
 `;
 
 const FrontSmallHeading = styled(SmallHeading)`

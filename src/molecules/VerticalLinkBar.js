@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import debug from  'debug';
 
 import { LinkBarItem as Li } from '../atoms/LinkBarItem';
 
 // import { LinkBarNav as Nav } from '../atoms/LinkBarNav';
 import { VerticalFlexingList as Bar } from '../atoms/VerticalFlexingList';
+
+const log = debug('VerticalLinkBar');
 
 const LinkBarItem = styled(Li)`
 	box-sizing: border-box;
@@ -19,46 +22,44 @@ const LinkBarItem = styled(Li)`
 
 const LinkBar = ({
 	background,
+	backgroundColor,
 	children,
 	shouldFadeOut,
 	width,
 	zIndex,
 	isTopLevelComponent,
 	...rest
-}) => (
-	<Bar background={background} {...rest}>
-		{children && children.map((child, i) => {
-			return (
-				<LinkBarItem
-					key={i}
-					position={child.props.position}
-					flex={child.props.flex}
-					xs={child.props.xs}
-					sm={child.props.sm}
-					md={child.props.md}
-					lg={child.props.lg}
-				>
-					{child}
-				</LinkBarItem>
-			);
-		})}
-	</Bar>
-);
-/*
-Wrap it in this?
+}) => {
+	if (background && !backgroundColor) {
+		log('the \'background\' prop is deprecated. Use the \'backgroundColor\' prop instead. '
+		+ '\'backgroundColor\' takes a color name from the theme instead of an actual css color string.');
+	}
 
-<Nav
-	background={background}
-	width={width}
-	zIndex={zIndex}
-	isTopLevelComponent={isTopLevelComponent}
-	isVertical
->
-</Nav>
-*/
+	return (
+		<Bar {...rest} background={background} backgroundColor={backgroundColor}>
+			{children && children.map((child, i) => {
+				return (
+					<LinkBarItem
+						key={i}
+						position={child.props.position}
+						flex={child.props.flex}
+						xs={child.props.xs}
+						sm={child.props.sm}
+						md={child.props.md}
+						lg={child.props.lg}
+						zIndex={child.props.zIndex}
+					>
+						{child}
+					</LinkBarItem>
+				);
+			})}
+		</Bar>
+	);
+};
 
 LinkBar.propTypes = {
-	background: PropTypes.string,
+	background: PropTypes.string, // Deprecated actual css color
+	backgroundColor: PropTypes.string, // Color name from theme
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -74,7 +75,8 @@ LinkBar.propTypes = {
 };
 
 LinkBar.defaultProps = {
-	background: 'papayawhip', // colors.white,
+	background: 'papayawhip', // Deprecated actual css color
+	backgroundColor: null, // Color name from theme
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,

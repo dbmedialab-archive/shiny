@@ -114,12 +114,14 @@ class ScrollArrowsLinkBar extends Component {
 	render() {
 		const {
 			background,
+			backgroundColor,
 			children,
 			width,
 			zIndex,
 			isTopLevelComponent,
 			arrowGradientRgbBackgroundValues,
 			arrowGradientHeight,
+			arrowSize,
 			...rest
 		} = this.props;
 
@@ -130,6 +132,7 @@ class ScrollArrowsLinkBar extends Component {
 		return (
 			<NavWithOptionalConstrainer
 				background={background}
+				backgroundColor={backgroundColor}
 				width={width}
 				zIndex={zIndex}
 				isTopLevelComponent={isTopLevelComponent}
@@ -140,14 +143,17 @@ class ScrollArrowsLinkBar extends Component {
 							<LeftScrollArrow
 								onClick={this.leftClick}
 								background={background}
+								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
+								size={arrowSize}
 							/>
 						)
 					}
 					<Bar
 						innerRef={(input) => { this.content = input; }}
 						background={background}
+						backgroundColor={backgroundColor}
 						{...rest}
 					>
 						{children && React.Children.map(children, (child, i) => {
@@ -160,6 +166,7 @@ class ScrollArrowsLinkBar extends Component {
 									sm={child.props.sm}
 									md={child.props.md}
 									lg={child.props.lg}
+									zIndex={child.props.zIndex}
 								>
 									{child}
 								</LinkBarItem>
@@ -171,8 +178,10 @@ class ScrollArrowsLinkBar extends Component {
 							<RightScrollArrow
 								onClick={this.rightClick}
 								background={background}
+								backgroundColor={backgroundColor}
 								arrowGradientRgbBackgroundValues={arrowGradientRgbBackgroundValues}
 								arrowGradientHeight={arrowGradientHeight}
+								size={arrowSize}
 							/>
 						)
 					}
@@ -183,7 +192,11 @@ class ScrollArrowsLinkBar extends Component {
 }
 
 ScrollArrowsLinkBar.propTypes = {
+	arrowSize: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+	/** Deprecated actual css color string */
 	background: PropTypes.string,
+	/** Color name from theme */
+	backgroundColor: PropTypes.string,
 	children: PropTypes.oneOfType([
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node,
@@ -205,7 +218,9 @@ ScrollArrowsLinkBar.propTypes = {
 };
 
 ScrollArrowsLinkBar.defaultProps = {
-	background: 'papayawhip', // colors.white,
+	arrowSize: 'medium',
+	background: 'papayawhip',
+	backgroundColor: null,
 	children: null,
 	overflow: 'auto',
 	shouldAdjustForNestedPadding: false,

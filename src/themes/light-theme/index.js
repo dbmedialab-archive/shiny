@@ -5,7 +5,7 @@ import { cssReset } from '../../utils/css-reset';
 const variables = {
 	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
-	headingsWeight: '300',
+	headingsWeight: 300,
 
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
@@ -66,13 +66,6 @@ const global = `
 
 	${cssReset}
 
-	body {
-		color: ${colors[colors.skinColors.type]};
-		font-family: ${variables.mainFont};
-		font-size: ${variables.uiRegularSize};
-		line-height: ${variables.uiRegularLineHeight};
-		font-weight: 300;
-	}
 `;
 
 export default {
