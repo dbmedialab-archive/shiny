@@ -43,7 +43,7 @@
     "prismjs": "1.15.0",
     "react-intersection-observer": "5.0.5",
     "react-modal": "3.6.1",
-    "react-rating": "1.4.0",
+    "react-rating": "1.4.1",
     "react-stickyfill": "0.2.3",
     "striptags": "2.2.1"
   },
