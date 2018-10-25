@@ -7090,9 +7090,9 @@ react-inspector@^2.2.2:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
 
-react-intersection-observer@5.0.5:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-5.0.5.tgz#83e33ab3e65de48a26060a0d22b9286a5ad21a37"
+react-intersection-observer@6.2.3:
+  version "6.2.3"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-6.2.3.tgz#42c150d71ef835e5a89a480eed1f07cc416f3700"
   dependencies:
     invariant "^2.2.4"
 
