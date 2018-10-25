@@ -37,8 +37,8 @@
     "lazysizes": "4.1.2",
     "lodash.isinteger": "^4.0.4",
     "parse-color": "1.0.0",
-    "picturefill": "3.0.2",
-    "polished": "2.1.1",
+    "picturefill": "3.0.3",
+    "polished": "2.3.0",
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "react-intersection-observer": "5.0.5",
@@ -90,8 +90,8 @@
     "eslint-plugin-react": "7.11.1",
     "pretty-format": "23.6.0",
     "prop-types": "15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
     "react-emotion": "9.2.6"
   }
 }
