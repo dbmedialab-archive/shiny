@@ -11,8 +11,8 @@ const Svg = styled.svg`
 /* eslint-disable max-len */
 
 /** Aller Main Logo */
-const AllerLogo = ({ fill }) => (
-	<Svg role="img" aria-labelledby="title" id="AllerLogo" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 566.9 283.5" fill={fill}>
+const AllerLogo = ({ fill, ...rest }) => (
+	<Svg role="img" aria-labelledby="title" id="AllerLogo" version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 566.9 283.5" fill={fill} {...rest}>
 		<Fragment>
 			<g>
 				<g>
