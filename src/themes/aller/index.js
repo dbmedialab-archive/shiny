@@ -2,6 +2,7 @@ import { darken, lighten } from 'polished';
 
 import { cssReset } from '../../utils/css-reset';
 
+import { flexboxgrid } from './flexboxgrid';
 import { variables } from './variables';
 
 const colorsToShade= {
@@ -44,6 +45,7 @@ const global = `
 
 export default {
 	name: 'Aller',
+	flexboxgrid,
 	colors,
 	global,
 	variables,
