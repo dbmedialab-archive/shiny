@@ -48,8 +48,6 @@ class ThemeSwitcher extends React.Component {
 			},
 		} = this.state;
 
-		console.log(colors);
-
 		return (
 			<ThemeSelector>
 				<FullWidthLinkBar
