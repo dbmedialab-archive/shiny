@@ -34,3 +34,8 @@ export const XSmallLinkBarButton = props => <LinkBarButton size="xsmall" {...pro
 export const SmallLinkBarButton = props => <LinkBarButton size="small" {...props} />;
 export { LinkBarButton };
 export const LargeLinkBarButton = props => <LinkBarButton size="large" {...props} />;
+
+XSmallLinkBarButton.displayName = 'XSmallLinkBarButton';
+SmallLinkBarButton.displayName = 'SmallLinkBarButton';
+LinkBarButton.displayName = 'LinkBarButton';
+LargeLinkBarButton.displayName = 'LargeLinkBarButton';

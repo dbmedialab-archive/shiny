@@ -294,6 +294,8 @@ const DinsideLogo = ({ twentyYearAnniversary }) => (
 );
 /* eslint-enable max-len */
 
+DinsideLogo.displayName = 'DinsideLogo';
+
 DinsideLogo.propTypes = {
 	/** should we show "20 år" next to the logo */
 	twentyYearAnniversary: PropTypes.bool,

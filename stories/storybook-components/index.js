@@ -14,6 +14,7 @@ export const DemoContainer = styled.article`
 		display: table;
 	}
 `;
+DemoContainer.displayName = 'DemoContainer';
 
 DemoContainer.defaultProps = {
 	background: '#f9f9f9',

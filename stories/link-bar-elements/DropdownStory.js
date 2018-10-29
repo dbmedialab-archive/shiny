@@ -20,6 +20,8 @@ const CustomTrigger = ({ onClick, className }) => (
 	<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>
 );
 
+CustomTrigger.displayName = 'CustomTrigger';
+
 CustomTrigger.propTypes = {
 	onClick: PropTypes.func.isRequired,
 	className: PropTypes.string.isRequired,
