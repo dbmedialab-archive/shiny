@@ -4,6 +4,7 @@ import propTypes from 'prop-types';
 const Source = ({ media, srcSet }) => (
 	<source media={media} data-srcset={srcSet} />
 );
+Source.displayName = 'Source';
 
 Source.propTypes = {
 	/** URL to image */

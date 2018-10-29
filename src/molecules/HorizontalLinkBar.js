@@ -109,5 +109,6 @@ LinkBar.defaultProps = {
 // for example in other styled compontents
 const HorizontalLinkBar = styled(LinkBar)``;
 HorizontalLinkBar.propTypes = LinkBar.propTypes;
+HorizontalLinkBar.displayName = 'HorizontalLinkBar';
 
 export { HorizontalLinkBar };

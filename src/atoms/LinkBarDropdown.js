@@ -111,6 +111,8 @@ const StandardTrigger = (props) => {
 	);
 };
 
+StandardTrigger.displayName = 'StandardTrigger';
+
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
 		propTypes.node,
@@ -148,3 +150,8 @@ export const XSmallLinkBarDropdown = props => <LinkBarDropdown size="xsmall" {..
 export const SmallLinkBarDropdown = props => <LinkBarDropdown size="small" {...props} />;
 export { LinkBarDropdown };
 export const LargeLinkBarDropdown = props => <LinkBarDropdown size="large" {...props} />;
+
+XSmallLinkBarDropdown.displayName = 'XSmallLinkBarDropdown';
+SmallLinkBarDropdown.displayName = 'SmallLinkBarDropdown';
+LinkBarDropdown.displayName = 'LinkBarDropdown';
+LargeLinkBarDropdown.displayName = 'LargeLinkBarDropdown';

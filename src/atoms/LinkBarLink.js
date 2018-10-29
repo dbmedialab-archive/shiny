@@ -56,3 +56,8 @@ export const XSmallLinkBarLink = props => <LinkBarLink size="xsmall" {...props} 
 export const SmallLinkBarLink = props => <LinkBarLink size="small" {...props} />;
 export { LinkBarLink };
 export const LargeLinkBarLink = props => <LinkBarLink size="large" {...props} />;
+
+XSmallLinkBarLink.displayName = 'XSmallLinkBarLink';
+SmallLinkBarLink.displayName = 'SmallLinkBarLink';
+LinkBarLink.displayName = 'LinkBarLink';
+LargeLinkBarLink.displayName = 'LargeLinkBarLink';

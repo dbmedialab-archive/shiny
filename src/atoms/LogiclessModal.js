@@ -75,6 +75,8 @@ const LogiclessModal = ({
 	);
 };
 
+LogiclessModal.displayName = 'LogiclessModal';
+
 LogiclessModal.propTypes = {
 	width: PropTypes.string,
 	appElement: PropTypes.string,

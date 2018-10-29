@@ -102,3 +102,7 @@ LinkBarSearchField.defaultProps ={
 export { LinkBarSearchField };
 export const SmallLinkBarSearchField = props => <LinkBarSearchField size="small" {...props} />;
 export const LargeLinkBarSearchField = props => <LinkBarSearchField size="large" {...props} />;
+
+LinkBarSearchField.displayName = 'LinkBarSearchField';
+SmallLinkBarSearchField.displayName = 'SmallLinkBarSearchField';
+LargeLinkBarSearchField.displayName = 'LargeLinkBarSearchField';

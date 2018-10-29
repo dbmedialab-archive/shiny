@@ -46,6 +46,8 @@ const AllerLogo = ({ fill, ...rest }) => (
 );
 /* eslint-enable max-len */
 
+AllerLogo.displayName = 'AllerLogo';
+
 AllerLogo.propTypes = {
 	/** Custom fill color for the svg */
 	fill: PropTypes.string,

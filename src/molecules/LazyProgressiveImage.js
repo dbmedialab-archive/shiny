@@ -80,5 +80,6 @@ class LazyProgressiveImage extends PureComponent {
 		);
 	}
 }
+LazyProgressiveImage.displayName = 'LazyProgressiveImage';
 
 export { LazyProgressiveImage };

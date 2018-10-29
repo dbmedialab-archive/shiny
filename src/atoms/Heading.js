@@ -88,6 +88,13 @@ const LargeHeading = props => <Heading size="large" {...props} />;
 const XLargeHeading = props => <Heading size="xlarge" {...props} />;
 const HugeHeading = props => <Heading size="huge" {...props} />;
 
+Heading.displayName       = 'Heading';
+SmallHeading.displayName  = 'SmallHeading';
+MediumHeading.displayName = 'MediumHeading';
+LargeHeading.displayName  = 'LargeHeading';
+XLargeHeading.displayName = 'XLargeHeading';
+HugeHeading.displayName   = 'HugeHeading';
+
 SmallHeading.propTypes  = ProtoHeading.propTypes;
 MediumHeading.propTypes = ProtoHeading.propTypes;
 LargeHeading.propTypes  = ProtoHeading.propTypes;

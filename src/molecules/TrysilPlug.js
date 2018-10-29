@@ -97,6 +97,8 @@ const TrysilPlug = ({
 	);
 };
 
+TrysilPlug.displayName = 'TrysilPlug';
+
 TrysilPlug.propTypes = {
 	/** Extra attributes you want on the DOM-node. e.g. data-cxense_Tag */
 	attributes: PropTypes.object, // eslint-disable-line
