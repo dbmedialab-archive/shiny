@@ -71,7 +71,7 @@
     "@babel/preset-env": "7.1.0",
     "@babel/preset-react": "7.0.0",
     "@percy-io/percy-storybook": "2.1.0",
-    "@storybook/addon-actions": "3.4.11",
+    "@storybook/addon-actions": "4.0.0",
     "@storybook/addon-info": "3.4.11",
     "@storybook/addon-links": "3.4.11",
     "@storybook/addon-viewport": "3.4.11",
