@@ -9,7 +9,7 @@
     "deploy": "./deploy.sh",
     "postpublish": "yarn deploy",
     "prepare": "NODE_ENV=\"production\" babel src/ -d lib/ && yarn pregenerate",
-    "pregenerate": "babel-node src/themes/pregenerate.js",
+    "pregenerate": "babel-node src/themes/output-theme.js",
     "snapshot": "build-storybook && percy-storybook --widths=320,414,768,1280 --debug",
     "start": "start-storybook -p 9001 -c .storybook",
     "test": "eslint src stories --max-warnings=0",

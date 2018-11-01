@@ -1,1 +1,58 @@
-module.exports = {"name":"Oppskrift","global":"\n\t@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');\n\n\t\n\t/* Font reset: 1rem = 10px */\n\thtml {\n\t\tfont-size: 62.5%;\n\t}\n\tbody {\n\t\tfont-size: 1.6rem;\n\t\tmargin: 0;\n\t}\n\t/* HTML5 display-role reset for older browsers */\n\tarticle, aside, details, figcaption, figure,\n\tfooter, header, hgroup, menu, nav, section, main {\n    \tdisplay: block;\n\t}\n\n\n\tbody {\n\t\tcolor: #333333;\n\t\tfont-family: \"Cabin\", \"Roboto\",\"Helvetica\",Helvetica,Arial,sans-serif;\n\t\tfont-size: 1.6rem;\n\t\tline-height: 1.9rem;\n\t}\n","colors":{"primary":"#ff790a","primaryDark":"#a34a00","primaryLight":"#ffa357","primaryLighter":"#ffcda3","secondary":"#0096a3","secondaryDark":"#00383d","secondaryLight":"#00dcf0","secondaryLighter":"#3df0ff","grey":"#7a7a7a","greyDark":"#474747","greyLight":"#a0a0a0","greyLighter":"#c7c7c7","darkGrey":"#4a4a4a","darkGreyDark":"#171717","darkGreyLight":"#707070","darkGreyLighter":"#979797","darkness":"#333333","darknessDark":"#000","darknessLight":"#595959","darknessLighter":"#808080","white":"#ffffff","whiteDark":"#ccc","whiteLight":"#fff","whiteLighter":"#fff","red":"#ff5500","redDark":"#930","redLight":"#ff884d","redLighter":"#fb9","sand":"#f8f8f1","sandDark":"#d6d6ad","sandLight":"#fff","sandLighter":"#fff","skinColors":{"type":"darkness","typeLight":"darknessLight","typeLighter":"darknessLighter","typeDark":"darknessDark"}},"variables":{"mainFont":"\"Cabin\", \"Roboto\",\"Helvetica\",Helvetica,Arial,sans-serif","headingsFont":"\"Cabin\",sans-serif","horizontalBase":"1rem","uiRegularSize":"1.6rem","uiRegularLineHeight":"1.9rem","uiSmallSize":"1.2rem","uiSmallLineHeight":"1.7rem","uiTinySize":"1.0rem","uiTinyLineHeight":"1.4rem","headingSmallSize":"1.6rem","headingSmallLineHeight":"2.3rem","headingMediumSize":"1.8rem","headingMediumLineHeight":"2.5rem","headingRegularSize":"2.2rem","headingRegularLineHeight":"2.7rem","headingLargeSize":"2.4rem","headingLargeLineHeight":"3.1rem","headingXlargeSize":"2.8rem","headingXlargeLineHeight":"3.3rem","headingHugeSize":"3.8rem","headingHugeLineHeight":"6.4rem"},"flexboxgrid":{"gutterWidth":1,"outerMargin":2,"container":{"sm":71,"md":100,"lg":101},"breakpoints":{"xs":0,"sm":48,"md":75,"lg":90}}}
+import { stripUnit } from 'polished';
+
+import colors from './colors';
+import variables from './variables';
+
+const cssReset = `
+	/* Font reset: 1rem = 10px */
+	html {
+		font-size: 62.5%;
+	}
+	body {
+		font-size: 1.6rem;
+		margin: 0;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section, main {
+    	display: block;
+	}
+`;
+
+const global = `
+	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
+
+	${cssReset}
+
+	body {
+		color: ${colors[colors.skinColors.type]};
+		font-family: ${variables.mainFont};
+		font-size: ${variables.uiRegularSize};
+		line-height: ${variables.uiRegularLineHeight};
+	}
+`;
+
+const theme = {
+	name: 'Oppskrift',
+	global,
+	colors,
+	variables,
+
+	flexboxgrid: {
+		gutterWidth: stripUnit(variables.horizontalBase), // rem
+		outerMargin: 2, // rem
+		container: {
+			sm: 71, // rem
+			md: 100.0, // rem
+			lg: 101.0,  // rem
+		},
+		breakpoints: {
+			xs: 0,  // em
+			sm: 48, // em 768px
+			md: 75, // em 1200px
+			lg: 90,  // em 1440px
+		},
+	},
+};
+
+export default theme;
