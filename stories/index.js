@@ -11,7 +11,6 @@ import ads from './Ads';
 import matComponents from './MatComponents';
 import logos from './logos';
 import forms from './forms';
-import rating from './rating';
 import modals from './Modal';
 import images from './Images';
 import footers from './footers';
@@ -23,7 +22,6 @@ typography();
 editorialMarking();
 loaders();
 grid();
-rating();
 
 // Molecules
 ads();
