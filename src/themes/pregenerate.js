@@ -8,12 +8,10 @@ const themeNames = Object.keys(themes).filter(theme => !['defaultTheme', 'lightT
 const prefix = 'module.export = ';
 
 themeNames.forEach((name) => {
-	// const indexFile = path.join(__dirname, '..', '..', 'lib', 'themes', name, 'index.js');
-	const indexFile = path.join(__dirname, name, 'index.js');
+	const indexFile = path.join(__dirname, '..', '..', 'lib', 'themes', name, 'index.js');
 	fs.writeFileSync(indexFile, prefix +  JSON.stringify(themes[name]));
 	console.log(`creating a prebuild: ${indexFile}`);
 });
-
 
 const kkIndexFile = path.join(__dirname, 'kk', 'index.js');
 fs.writeFileSync(kkIndexFile, `${prefix}{}`);
