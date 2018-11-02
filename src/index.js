@@ -171,7 +171,6 @@ export {
 	LargeHorizontalHeroUnit,
 } from './molecules/HorizontalHeroUnit';
 export { WallpaperAd             } from './molecules/WallpaperAd';
-export { StarsRating             } from './molecules/StarsRating';
 export { SearchField             } from './molecules/SearchField';
 
 // Organisms

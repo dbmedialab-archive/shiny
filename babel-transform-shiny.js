@@ -69,7 +69,6 @@ function getMapping() {
 		RecipeMetaData: '../molecules/MainRecipe/RecipeMetaData',
 		NumberedList: '../molecules/NumberedList',
 		WallpaperAd: '../molecules/WallpaperAd',
-		StarsRating: '../molecules/StarsRating',
 		SearchField: '../molecules/SearchField',
 		Article: '../atoms/Article',
 		AdWrapper: '../atoms/AdWrapper',
