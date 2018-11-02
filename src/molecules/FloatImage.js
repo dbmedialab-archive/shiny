@@ -1,40 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
-
-import { getColor, getVariable } from '../utils';
 
 import { Figure } from '../atoms/Figure';
 import { Image } from '../atoms/Image';
-
-const FigCaption = styled.figcaption`
-	${(props) => {
-		const { border } = props;
-
-		const grayTintLighter = getColor('grayTintLighter')(props);
-		const uiSmallSize = getVariable('uiSmallSize')(props);
-		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
-		const uiWeight = getVariable('uiWeight')(props);
-		const horizontalBase = getVariable('horizontalBase')(props);
-		const verticalBase = getVariable('verticalBase')(props);
-
-		return css`
-			display: block;
-			margin: calc(1/2 * ${verticalBase} 0;
-			${border && `border-bottom: .1rem solid ${grayTintLighter};`}
-			padding:
-				calc(2/3 * ${verticalBase})
-				calc(1/2 * ${horizontalBase})
-				calc(1/3 * ${verticalBase})
-			;
-			max-width: 100%;
-			font-size: ${uiSmallSize};
-			line-height: ${uiSmallLineHeight};
-			font-weight: ${uiWeight};
-			z-index: 1;
-		`;
-	}}
-`;
+import { FigCaption } from '../atoms/FigCaption';
 
 const FloatImage = ({
 	url,

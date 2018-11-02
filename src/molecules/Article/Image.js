@@ -1,11 +1,9 @@
 import React from 'react';
-import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
-const Figure = styled.figure`
-	margin: 0;
-	max-width: 100%;
-`;
+import { Figure } from '../../atoms/Figure';
+import { Image } from '../../atoms/Image';
+import { FigCaption } from '../../atoms/FigCaption';
 
 class HeaderImage extends React.Component {
 	static propTypes = {
@@ -62,11 +60,10 @@ class HeaderImage extends React.Component {
 
 		return (
 			<Figure itemProp="image" itemScope="" itemType="http://schema.org/ImageObject">
-				<img itemProp="contentUrl url" title={title} alt={alter} src={imageURL} />
-
-				<figcaption className="caption" itemProp="caption" data-expand="">
+				<Image itemProp="contentUrl url" title={title} alt={alter} src={imageURL} />
+				<FigCaption border itemProp="caption">
 					{this.title()} {showMore}
-				</figcaption>
+				</FigCaption>
 				<meta itemProp="representativeOfPage" content="true" />
 				<meta itemProp="width" content="980" />
 				<meta itemProp="height" content="590" />
