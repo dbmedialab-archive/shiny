@@ -172,6 +172,8 @@ export {
 } from './molecules/HorizontalHeroUnit';
 export { WallpaperAd             } from './molecules/WallpaperAd';
 export { SearchField             } from './molecules/SearchField';
+export { ArticleHeader           } from './molecules/Article/Header';
+export { HeaderImage             } from './molecules/Article/Image';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';
