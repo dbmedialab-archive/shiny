@@ -7,14 +7,11 @@ const themeNames = Object.keys(themes).filter(
 );
 
 const prefix = 'module.exports = ';
+const themeLibDir = path.join(__dirname, '..', '..', 'lib', 'themes');
 
 themeNames.forEach((name) => {
 	const indexFile = path.join(
-		__dirname,
-		'..',
-		'..',
-		'lib',
-		'themes',
+		themeLibDir,
 		name,
 		'index.js'
 	);
@@ -23,5 +20,5 @@ themeNames.forEach((name) => {
 	console.log(`creating a prebuild: ${indexFile}`);
 });
 
-const kkIndexFile = path.join(__dirname, 'kk', 'index.js');
+const kkIndexFile = path.join(themeLibDir,  'kk', 'index.js');
 fs.writeFileSync(kkIndexFile, `${prefix}{}`);
