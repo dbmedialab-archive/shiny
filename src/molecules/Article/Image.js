@@ -3,9 +3,8 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
 const Figure = styled.figure`
-	margin: 10rem 0 0 0;
+	margin: 0;
 	max-width: 100%;
-	padding: 0;
 `;
 
 class HeaderImage extends React.Component {
@@ -31,6 +30,7 @@ class HeaderImage extends React.Component {
 
 	trigger() {
 		const { hide } = this.state;
+
 		return (
 			<button type="button" onClick={this.hide} className={hide ? 'hide' : ''}>{hide ? 'Vis mer' : 'Skjul'}</button>
 		);
@@ -38,6 +38,7 @@ class HeaderImage extends React.Component {
 
 	hide() {
 		const { hide } = this.state;
+
 		this.setState({
 			hide: !hide,
 		});
@@ -58,6 +59,7 @@ class HeaderImage extends React.Component {
 		const { alt, imageURL, title } = this.props;
 		const alter = alt === '' ? title : alt;
 		const showMore = title.length >= 200 ? this.trigger() : null;
+
 		return (
 			<Figure itemProp="image" itemScope="" itemType="http://schema.org/ImageObject">
 				<img itemProp="contentUrl url" title={title} alt={alter} src={imageURL} />

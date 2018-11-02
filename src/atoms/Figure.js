@@ -1,9 +1,9 @@
 import styled from 'react-emotion';
 
 const Figure = styled.figure`
-	width: ${props => props.width};
-	padding-bottom: ${props => props.paddingBottom};
 	margin: 0;
+	padding-bottom: ${props => props.paddingBottom};
+	width: ${props => props.width};
 	position: relative;
 	overflow: visible;
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import propTypes from 'prop-types';
 
+import { getVariable } from '../../utils';
 import { MediumHeading, XLargeHeading, HugeHeading } from '../../atoms/Heading';
 import Byline from '../Bylines';
 import { HeaderImage } from './Image';
@@ -11,12 +12,13 @@ const HeaderStyled = styled.header`
 
 const Meta = styled.div`
 	* {
-		margin-right: 1rem;
+		margin-right: ${getVariable('horizontalBase')};
 	}
 
-	font-size: 1.2rem;
+	font-size: ${getVariable('uiSmallSize')};
+	line-height: ${getVariable('uiSmallLineHeight')};
 	text-transform: uppercase;
-	margin-bottom: 3rem;
+	margin-bottom: getVariable('verticalBase');
 `;
 
 const ArticleHeader = (props) => {

@@ -1,43 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
+
+import { getColor, getVariable } from '../utils';
 
 import { Figure } from '../atoms/Figure';
 import { Image } from '../atoms/Image';
 
 const FigCaption = styled.figcaption`
-	font-size: 1.4rem;
-	font-weight: 400;
-	border-bottom: 1px solid #f4f4f4;
-	display: block;
-	padding: 1.6rem .5rem .5rem .5rem;
-	position: relative;
-	bottom: 1rem;
-	left: 0;
-	z-index: 1;
-	max-width: 100%;
-	margin: 1rem 0;
+	${(props) => {
+		const { border } = props;
+
+		const grayTintLighter = getColor('grayTintLighter')(props);
+		const uiSmallSize = getVariable('uiSmallSize')(props);
+		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
+		const uiWeight = getVariable('uiWeight')(props);
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const verticalBase = getVariable('verticalBase')(props);
+
+		return css`
+			display: block;
+			margin: calc(1/2 * ${verticalBase} 0;
+			${border && `border-bottom: .1rem solid ${grayTintLighter};`}
+			padding:
+				calc(2/3 * ${verticalBase})
+				calc(1/2 * ${horizontalBase})
+				calc(1/3 * ${verticalBase})
+			;
+			max-width: 100%;
+			font-size: ${uiSmallSize};
+			line-height: ${uiSmallLineHeight};
+			font-weight: ${uiWeight};
+			z-index: 1;
+		`;
+	}}
 `;
 
-const figcaptionType = {
-	active: false,
-	intro: '',
-	text: '',
-};
-
 const FloatImage = ({
-	float,
-	width,
-	paddingBottom,
 	url,
 	figCaption,
+	...rest
 }) => {
-	let figCaptionElement = null;
-	if (figCaption.intro && figCaption.text) {
-		figCaptionElement = <FigCaption><strong>{figCaption.intro}</strong> {figCaption.text}</FigCaption>;
-	}
+	const figCaptionElement = (!figCaption.intro || !figCaption.text)
+		? null
+		: <FigCaption border><strong>{figCaption.intro}</strong> {figCaption.text}</FigCaption>;
+
 	return (
-		<Figure float={float} width={width} paddingBottom={paddingBottom}>
+		<Figure {...rest}>
 			<Image src={url} />
 			{figCaptionElement}
 		</Figure>
@@ -49,7 +58,11 @@ FloatImage.propTypes = {
 	width: PropTypes.string,
 	paddingBottom: PropTypes.string,
 	url: PropTypes.string.isRequired,
-	figCaption: PropTypes.instanceOf(figcaptionType),
+	figCaption: PropTypes.shape({
+		active: PropTypes.bool,
+		intro: PropTypes.string,
+		text: PropTypes.string,
+	}),
 };
 
 FloatImage.defaultProps = {
