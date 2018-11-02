@@ -1,8 +1,10 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 
 import { getColor, getVariable } from '../utils';
 
-const FigCaption = styled.figcaption`
+const StyledFigCaption = styled.figcaption`
 	${(props) => {
 		const { border } = props;
 
@@ -28,5 +30,20 @@ const FigCaption = styled.figcaption`
 		`;
 	}}
 `;
+
+/**
+ * A styled figcaption element.
+ */
+// The only reason for this 'extra' wrapper is that withInfo cannot handle
+// descriptions from emotion components directly.
+const FigCaption = props => <StyledFigCaption {...props} />;
+
+FigCaption.propTypes = {
+	/** Add a visual marker beneath the caption. */
+	border: PropTypes.bool,
+};
+FigCaption.defaultProps = {
+	border: false,
+};
 
 export { FigCaption };

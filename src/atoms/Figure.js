@@ -1,5 +1,9 @@
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
+/**
+ * A plain Figure element.
+ */
 const Figure = styled.figure`
 	margin: 0;
 	padding-bottom: ${props => props.paddingBottom};
@@ -19,10 +23,15 @@ const Figure = styled.figure`
 		margin-left: ${props => props.theme.variables.horizontalBase};
 	`}
 `;
-
+Figure.propTypes = {
+	float: PropTypes.oneOf(['', 'left', 'right']),
+	paddingBottom: PropTypes.string,
+	width: PropTypes.string,
+};
 Figure.defaultProps = {
-	width: 'auto',
+	float: '',
 	paddingBottom: '0',
+	width: 'auto',
 };
 
 export { Figure };

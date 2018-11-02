@@ -1,5 +1,8 @@
 import styled from 'react-emotion';
 
+/**
+ * A plain image. Uses the full width of its container.
+ */
 const Image = styled.img`
 	display: block;
 	max-width: none;
