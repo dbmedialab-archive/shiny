@@ -24,7 +24,6 @@
   "peerDependencies": {
     "emotion": "^9.2.6",
     "emotion-theming": "^9.2.6",
-    "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-emotion": "^9.2.6"
@@ -42,10 +41,11 @@
     "polished": "2.3.0",
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
+    "prop-types": "15.6.2",
     "react-intersection-observer": "6.2.3",
     "react-modal": "3.6.1",
     "react-stickyfill": "0.2.3",
-    "striptags": "3.1.1"
+    "striptags": "2.2.1"
   },
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
@@ -91,7 +91,6 @@
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
     "pretty-format": "23.6.0",
-    "prop-types": "15.6.2",
     "react": "16.6.0",
     "react-dom": "16.6.0",
     "react-emotion": "9.2.12"
