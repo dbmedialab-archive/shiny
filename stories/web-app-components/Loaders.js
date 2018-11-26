@@ -1,18 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { StorybookPaddedGrid } from '../src/storybook-decorators/PaddedGrid';
-import { DemoContainer } from './storybook-components';
+import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
+import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../src/atoms/Heading';
-import { Code } from '../src/atoms/Code';
+import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { Code } from '../../src/atoms/Code';
 
 // Loaders
-import { DotLoader } from '../src/atoms/loaders/DotLoader';
+import { DotLoader } from '../../src/atoms/loaders/DotLoader';
 // import { NoonLoader } from '../shared-components/NoonLoader/NoonLoader';
-import { LoadingSearchIcon } from '../src/atoms/loaders/LoadingSearchIcon';
+import { LoadingSearchIcon } from '../../src/atoms/loaders/LoadingSearchIcon';
 
 export default () => {
-	storiesOf('Loaders', DotLoader)
+	storiesOf('Web App Components|Loaders', DotLoader)
 		.addDecorator(StorybookPaddedGrid)
 	/*
 	// @TODO Add story for NoonLoader

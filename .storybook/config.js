@@ -6,6 +6,7 @@ import {
 
 import createPercyAddon from '@percy-io/percy-storybook';
 import { setDefaults } from '@storybook/addon-info';
+import { withOptions } from '@storybook/addon-options';
 import { addDecorator } from '@storybook/react';
 
 import { StorybookThemeSwitcher } from '../src/storybook-decorators/ThemeSwitcher';
@@ -44,6 +45,16 @@ setDefaults({
 	})
 })
 
+addDecorator(
+	withOptions(
+		{
+			hierarchyRootSeparator: /\|/,
+			name: 'Shiny',
+			url: 'https://dbmedialab.github.io/shiny/',
+		}
+	)
+)
+
 const { percyAddon, serializeStories } = createPercyAddon();
 setAddon(percyAddon);
 
@@ -54,5 +65,3 @@ function loadStories() {
 configure(loadStories, module);
 
 serializeStories(getStorybook);
-
-

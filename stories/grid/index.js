@@ -10,7 +10,7 @@ import distribution from './distribution';
 import hide from './hide';
 
 export default () => {
-	storiesOf('Grid', module)
+	storiesOf('Grid|FlexboxGrid', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('Basic', basic)
 		.add('Responsive', responsive)

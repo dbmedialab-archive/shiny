@@ -16,15 +16,24 @@ import { ScrollArrowsSubLevelStory } from './ScrollArrowsSubLevelStory';
 import { ScrollArrowsGradientBackground } from './ScrollArrowsGradientBackgroundStory';
 
 export default () => {
-	storiesOf('Link Bars', module)
+	storiesOf('Link Bars|VerticalLinkBar', module)
 		.addDecorator(StorybookPaddedGrid)
-		.add('VerticalLinkBar', VerticalLinkBarStory)
+		.add('VerticalLinkBar', VerticalLinkBarStory);
+
+	storiesOf('Link Bars|HorizontalLinkBar', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('HorizontalLinkBar', HorizontalLinkBarStory)
 		.add('... with overflowing content', OverflowStory)
 		.add('... with nested padding', NestedPaddingStory)
 		.add('... with gradient background', GradientBackgroundStory)
-		.add('... without padding', NoPaddingStory)
-		.add('FullWidthLinkBar', FullWidthStory)
+		.add('... without padding', NoPaddingStory);
+
+	storiesOf('Link Bars|FullWidthLinkBar', module)
+		.addDecorator(StorybookPaddedGrid)
+		.add('FullWidthLinkBar', FullWidthStory);
+
+	storiesOf('Link Bars|ScrollArrowsLinkBar', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('ScrollArrowsLinkBar', ScrollArrowsStory)
 		.add('... which should adjust for nested padding', ScrollArrowsNestedPaddingStory)
 		.add('... which is not a top level component', ScrollArrowsSubLevelStory)

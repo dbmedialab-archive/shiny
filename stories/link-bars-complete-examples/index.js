@@ -9,7 +9,7 @@ import { KKStory } from './KKStory';
 import { DagbladetStory } from './DagbladetStory';
 
 export default () => {
-	storiesOf('Complete Link Bar Examples', module)
+	storiesOf('Link Bars|Complete Link Bar Examples', module)
 		.add('Dagbladet-like bar', DagbladetStory)
 		.add('KK', KKStory)
 		.add('SeHer-like bar', SeHerStory)

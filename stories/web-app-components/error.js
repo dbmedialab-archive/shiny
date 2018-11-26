@@ -11,7 +11,7 @@ import {
 
 import { Error } from '../../src/atoms/Error';
 
-export default () => (
+const DefaultError = () => (
 	<section>
 		<HugeHeading>Error message</HugeHeading>
 		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
@@ -30,6 +30,13 @@ import {
 <Error />
 			`}
 		</Code>
+	</section>
+);
+
+const AdditionalInfoError = () => (
+	<section>
+		<HugeHeading>Error message</HugeHeading>
+		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
 
 		<Heading>With additional information</Heading>
 		<DemoContainer>
@@ -45,6 +52,13 @@ import {
 <Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
 			`}
 		</Code>
+	</section>
+);
+
+const AdditionalInfoAndCallbackError = () => (
+	<section>
+		<HugeHeading>Error message</HugeHeading>
+		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
 
 		<Heading>With additional information and callback</Heading>
 		<DemoContainer>
@@ -66,6 +80,14 @@ import {
 />
 `}
 		</Code>
+	</section>
+);
+
+const SvgAndInfoError = () => (
+	<section>
+		<HugeHeading>Error message</HugeHeading>
+		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
+
 		<Heading>With custom colored svg icon and information</Heading>
 		<DemoContainer>
 			<Error
@@ -94,3 +116,8 @@ import {
 
 	</section>
 );
+
+export { DefaultError };
+export { AdditionalInfoError };
+export { AdditionalInfoAndCallbackError };
+export { SvgAndInfoError };

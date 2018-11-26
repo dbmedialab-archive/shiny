@@ -11,7 +11,7 @@ import figCaption from './fig-caption';
 import figureWithImageAndCaption from './figure-with-image-and-caption';
 
 export default () => {
-	storiesOf('Images', module)
+	storiesOf('Typography|Images', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('Lazyloading', BasicLazyProgressiveImage)
 		.add('Lazyloading without blur', WithoutLazyProgressiveImage)
