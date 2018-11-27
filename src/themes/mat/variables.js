@@ -10,6 +10,8 @@ export default {
 	uiTinySize: '1.0rem',
 	uiTinyLineHeight: '1.4rem',
 
+	uiWeightSemiBold: 500,
+
 	headingSmallSize: '1.6rem',
 	headingSmallLineHeight: '2.3rem',
 	headingMediumSize: '1.8rem',

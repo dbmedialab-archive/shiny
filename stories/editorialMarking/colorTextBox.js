@@ -4,7 +4,7 @@ import {
 	Row, Col, HugeHeading, Heading,
 } from '../../src';
 import { Code } from '../../src/atoms/Code';
-import { ColorTextBox } from '../../src/atoms/MainRecipe/ColorTextBox';
+import { ColorTextBox } from '../../src/atoms/ColorTextBox';
 
 export default () => (
 	<section>
