@@ -6,7 +6,7 @@ import fullscreenAd from './fullscreen-ad';
 import wallpaper from './wallpaper';
 
 export default () => {
-	storiesOf('Ads', module)
+	storiesOf('Ads|Ads', module)
 		.add('Generic Ad', genericAd)
 		.add('Sticky Ad', stickyAd)
 		.add('Fullscreen Ad', fullscreenAd)

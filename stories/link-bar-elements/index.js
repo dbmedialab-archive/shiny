@@ -12,11 +12,14 @@ import SearchFieldStory from './SearchFieldStory';
 import HideStory from './HideStory';
 
 export default () => {
-	storiesOf('Link Bar Elements', module)
+	storiesOf('Link Bars|Link Bar Elements/LinkBarLink', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('LinkBarLink', LinkStory)
 		.add('... with skinned bottom border', SkinnedBorderStory)
-		.add('... with alt. state indication', StateIndicationStory)
+		.add('... with alt. state indication', StateIndicationStory);
+
+	storiesOf('Link Bars|Link Bar Elements', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('LinkBarButton', ButtonStory)
 		.add('LinkBarDropdown', DropdownStory)
 		.add('LinkBarSearchField', SearchFieldStory)

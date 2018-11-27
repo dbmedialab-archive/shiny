@@ -10,7 +10,7 @@ import DinsideStory from './DinsideStory';
 import DinsideStoryTwenty from './DinsideStoryTwenty';
 
 export default () => {
-	storiesOf('Logos', module)
+	storiesOf('Logos|Logos', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('AllerLogo', AllerStory)
 		.add('ShinyLogo', ShinyStory)

@@ -3,7 +3,7 @@ import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 import Basic from './Basic';
 
 export default () => {
-	storiesOf('Articles', module)
+	storiesOf('Articles|Single Article', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('Basic', Basic);
 };

@@ -8,11 +8,19 @@ import Palette from './Palette';
 import ThemeVariables from './ThemeVariables';
 
 export default () => {
-	storiesOf('Welcome', module)
+	storiesOf('Everything\'s shiny|Welcome', module)
 		.addDecorator(StorybookPaddedGrid)
+		.add('Welcome', () => <Welcome />);
 
-		.add('Everything\'s shiny', () => <Welcome />)
-		.add('Themes', () => <Themes />)
-		.add('Palette', () => <Palette />)
+	storiesOf('Everything\'s shiny|Themes', module)
+		.addDecorator(StorybookPaddedGrid)
+		.add('Themes', () => <Themes />);
+
+	storiesOf('Everything\'s shiny|Colors', module)
+		.addDecorator(StorybookPaddedGrid)
+		.add('Palette', () => <Palette />);
+
+	storiesOf('Everything\'s shiny|Theme Variables', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Theme Variables', () => <ThemeVariables />);
 };

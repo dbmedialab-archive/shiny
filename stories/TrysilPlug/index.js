@@ -12,7 +12,7 @@ import textColorOnHover from './text-color-hover';
 import TrysilPlugWithColStory from './with-col';
 
 export default () => {
-	storiesOf('TrysilPlug', module)
+	storiesOf('Editorial Marking|TrysilPlug', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('TrysilPlug', basicIssue)
 		.add('... without blur', TrysilPlugWithoutBlurStory)

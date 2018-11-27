@@ -4,8 +4,11 @@ import oppskriftFooter from './oppskrift';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 export default () => {
-	storiesOf('Footers', module)
+	storiesOf('Site Footers|Dinside', module)
 		.addDecorator(StorybookPaddedGrid)
-		.add('Dinside', dinsideFooter)
+		.add('Dinside', dinsideFooter);
+
+	storiesOf('Site Footers|Oppskrift', module)
+		.addDecorator(StorybookPaddedGrid)
 		.add('Oppskrift', oppskriftFooter);
 };
