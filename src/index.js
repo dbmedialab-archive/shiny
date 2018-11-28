@@ -59,7 +59,7 @@ export { Button                  } from './atoms/Button';
 export { BylineImage             } from './atoms/BylineImage';
 export { BylineName              } from './atoms/BylineName';
 export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
-export { ColorTextBox            } from './atoms/MainRecipe/ColorTextBox';
+export { ColorTextBox            } from './atoms/ColorTextBox';
 export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 export { Caption                 } from './atoms/Caption';
 export { Cite                    } from './atoms/Cite';
