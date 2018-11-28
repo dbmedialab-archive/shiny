@@ -86,7 +86,7 @@
     "babel-plugin-react-docgen": "2.0.0",
     "babel-plugin-transform-imports": "^1.5.0",
     "emotion": "10.0.0",
-    "emotion-theming": "9.2.9",
+    "emotion-theming": "10.0.0",
     "eslint": "5.8.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
