@@ -81,7 +81,7 @@ function getMapping() {
 		BylineImage: '../atoms/BylineImage',
 		BylineName: '../atoms/BylineName',
 		BylineWithTwoLines: '../atoms/BylineWithTwoLines',
-		ColorTextBox: '../atoms/MainRecipe/ColorTextBox',
+		ColorTextBox: '../atoms/ColorTextBox',
 		YoutubeFrame: '../atoms/MainRecipe/youtubeFrame',
 		Caption: '../atoms/Caption',
 		Cite: '../atoms/Cite',

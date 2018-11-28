@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'react-emotion';
 
 import {
 	Row, Col, HugeHeading, Heading,
@@ -6,20 +7,29 @@ import {
 import { Code } from '../../src/atoms/Code';
 import { ColorTextBox } from '../../src/atoms/ColorTextBox';
 
+const TallCol = styled(Col)`
+	height: 60rem;
+`;
+
 export default () => (
 	<section>
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Description</HugeHeading>
 				<Heading>Demo</Heading>
-				<ColorTextBox>
-					<span>
-						Helstekt kalkun er en selvfølge på
-						middagsbordet ved Thanksgiving, jul
-						og nyttår! For en smakfull og saftig
-						kalkun anbefaler vi denne oppskriften.
-					</span>
-				</ColorTextBox>
+
+				<Row>
+					<TallCol xs={8}>I am a column, and so should the colored box be.</TallCol>
+
+					<ColorTextBox column={{ xs: 4 }}>
+						<span>
+							Helstekt kalkun er en selvfølge på
+							middagsbordet ved Thanksgiving, jul
+							og nyttår! For en smakfull og saftig
+							kalkun anbefaler vi denne oppskriften.
+						</span>
+					</ColorTextBox>
+				</Row>
 
 				<Heading>Usage</Heading>
 				<Code language="jsx">
