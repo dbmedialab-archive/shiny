@@ -1,8 +1,11 @@
+import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+
 import { Col } from './Col';
 import { getColor, getVariable } from '../utils';
 
-const ColorTextBox = styled(Col)`
+const Box = styled('div')`
 	padding: calc(3/2 * ${getVariable('verticalBase')}) calc(3 * ${getVariable('horizontalBase')});
 	font-size:   ${getVariable('headingRegularSize')};
 	line-height: ${getVariable('headingRegularLineHeight')};
@@ -12,8 +15,6 @@ const ColorTextBox = styled(Col)`
 	text-align: left;
 	color:            ${props => getColor(props.textColor)};
 	background-color: ${props => getColor(props.bgColor)};
-	width: 100%;
-	height: 100%;
 
 	display: flex;
 	align-items: center;
@@ -23,9 +24,38 @@ const ColorTextBox = styled(Col)`
 	}
 `;
 
+const ColorTextBox = ({ column, ...rest }) => {
+	const Element = column ? Col : 'div';
+	const StyledBox = Box.withComponent(Element);
+
+	return <StyledBox {...column} {...rest} />;
+};
+
+ColorTextBox.propTypes = {
+	/** Color name from theme */
+	bgColor: PropTypes.string,
+	/** Column object to decide whether the article should be a Col or not */
+	column: PropTypes.shape({
+		width: PropTypes.number,
+		reverse: PropTypes.bool,
+		xs: PropTypes.number,
+		sm: PropTypes.number,
+		md: PropTypes.number,
+		lg: PropTypes.number,
+		xsOffset: PropTypes.number,
+		smOffset: PropTypes.number,
+		mdOffset: PropTypes.number,
+		lgOffset: PropTypes.number,
+		children: PropTypes.node,
+	}),
+	/** Color name from theme */
+	textColor: PropTypes.string,
+};
+
 ColorTextBox.defaultProps = {
-	textColor: 'white',
 	bgColor: 'primary',
+	column: null,
+	textColor: 'white',
 };
 
 
