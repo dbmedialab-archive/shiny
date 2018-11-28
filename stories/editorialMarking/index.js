@@ -9,6 +9,7 @@ import label from './label';
 import publishedDate from './publishedDate';
 import tag from './tag';
 import colorTextBox from './colorTextBox';
+import colorTextBoxAsCol from './colorTextBoxAsCol';
 
 export default () => {
 	storiesOf('Editorial Marking|Kicker', module)
@@ -35,5 +36,6 @@ export default () => {
 
 	storiesOf('Editorial Marking|ColorTextBox', module)
 		.addDecorator(StorybookPaddedGrid)
-		.add('ColorTextBox', colorTextBox);
+		.add('ColorTextBox', colorTextBox)
+		.add('... as Col', colorTextBoxAsCol);
 };
