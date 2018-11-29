@@ -2,6 +2,7 @@ import { cssReset } from '../../utils/css-reset';
 
 import colors from './colors';
 import variables from './variables';
+import flexboxgrid from './flexboxgrid';
 
 // TODO: A pemanent solution for the a underline should be made.
 //       se: https://github.com/dbmedialab/wolverine-frontend/issues/460
@@ -26,4 +27,5 @@ export default {
 	global,
 	colors,
 	variables,
+	flexboxgrid,
 };

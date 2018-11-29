@@ -2,11 +2,11 @@ export default {
 	mainFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 	headingsFont: "'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
-	horizontalBase: '1.4rem',
-	unitlessHorizontalBase: 1.4,
+	horizontalBase: '2.0rem',
+	unitlessHorizontalBase: 2.0,
 
-	verticalBase: '2.4rem',
-	unitlessVerticalBase: 2.4,
+	verticalBase: '2.0rem',
+	unitlessVerticalBase: 2.0,
 
 	uiWeight: 400,
 	uiWeightSemiBold: 600,
