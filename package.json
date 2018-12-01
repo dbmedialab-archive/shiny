@@ -75,7 +75,7 @@
     "@storybook/addon-actions": "4.0.10",
     "@storybook/addon-info": "4.0.10",
     "@storybook/addon-links": "4.0.10",
-    "@storybook/addon-options": "4.0.8",
+    "@storybook/addon-options": "4.0.10",
     "@storybook/addon-viewport": "4.0.8",
     "@storybook/addons": "4.0.10",
     "@storybook/react": "4.0.10",
