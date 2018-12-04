@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { Grid as LibGrid } from './Grid';
 
 // This should also fit wallpapers and topbanners.

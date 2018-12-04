@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
 import getBestContrastColor from 'get-best-contrast-color';
 

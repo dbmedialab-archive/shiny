@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 /**
  * A plain image. Uses the full width of its container.

@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { getVariable } from '../utils';
 import { Col } from './Col';
 import { XLargePlugHeading } from './PlugHeading';

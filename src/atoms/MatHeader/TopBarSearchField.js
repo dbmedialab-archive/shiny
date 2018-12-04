@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { hideWithFlexboxgridSyntax } from '../../utils/hide-with-flexboxgrid-syntax';
 
 const TopBarSearchField = styled.input`

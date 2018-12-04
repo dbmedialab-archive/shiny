@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import {
 	Row, Col, HugeHeading, Heading,
@@ -15,7 +15,7 @@ export default () => (
 	<section>
 		<Row>
 			<Col xs={12}>
-				<HugeHeading>Description</HugeHeading>
+				<HugeHeading>ColorTextBox</HugeHeading>
 				<Heading>Demo</Heading>
 
 				<Row>
