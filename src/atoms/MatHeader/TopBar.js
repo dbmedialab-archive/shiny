@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const TopBar = styled.div`
 	background-color: #4a4a4a;

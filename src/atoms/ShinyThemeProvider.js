@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { Fragment } from 'react';
 import propTypes from 'prop-types';
-import { injectGlobal } from 'react-emotion';
+import { Global } from '@emotion/core';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { merge } from 'aurora-deep-slice-merge';
 
@@ -26,7 +26,7 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// console.log('new theme', theme.name);
 
 	// Inject our theme's global styles
-	injectGlobal`${mergedTheme.global}`;
+	const GlobalStyles = () => <Global styles={`${mergedTheme.global}`} />;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
@@ -35,9 +35,10 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	 */
 	return (
 		<EmotionThemeProvider theme={mergedTheme}>
-			<div>
+			<Fragment>
+				<GlobalStyles />
 				{children}
-			</div>
+			</Fragment>
 		</EmotionThemeProvider>
 	);
 };

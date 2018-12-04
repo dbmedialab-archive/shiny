@@ -22,16 +22,16 @@
   },
   "author": "Aller Media",
   "peerDependencies": {
-    "emotion": "^9.2.6",
-    "emotion-theming": "^9.2.6",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-emotion": "^9.2.6"
+    "react-dom": "^16.4.0"
   },
   "dependencies": {
+    "@emotion/core": "10.0.2",
+    "@emotion/styled": "10.0.2",
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "debug": "4.1.0",
+    "emotion-theming": "10.0.2",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.1",
     "lazysizes": "4.1.4",
@@ -85,15 +85,12 @@
     "babel-plugin-emotion": "10.0.2",
     "babel-plugin-react-docgen": "2.0.0",
     "babel-plugin-transform-imports": "^1.5.0",
-    "emotion": "10.0.2",
-    "emotion-theming": "10.0.2",
     "eslint": "5.8.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
     "pretty-format": "23.6.0",
     "react": "16.6.3",
-    "react-dom": "16.6.3",
-    "react-emotion": "10.0.0"
+    "react-dom": "16.6.3"
   }
 }

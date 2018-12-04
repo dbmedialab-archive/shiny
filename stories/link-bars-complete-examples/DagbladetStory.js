@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
@@ -54,8 +54,10 @@ const VerySpecialLinkBar= styled(HorizontalLinkBar)`
 `;
 
 const FlexCol = styled(Col)`
-	display: flex;
-	flex-direction: column;
+	&& {
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 const DagbladetStory = () => (
@@ -207,8 +209,10 @@ const VerySpecialLinkBar= styled(HorizontalLinkBar)\`
 \`;
 
 const FlexCol = styled(Col)\`
-	display: flex;
-	flex-direction: column;
+	&& {
+		display: flex;
+		flex-direction: column;
+	}
 \`;
 
 <VerySpecialLinkBar
