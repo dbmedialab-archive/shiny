@@ -23,6 +23,9 @@ const ArticleCol = Col.withComponent(Article);
 const PlayIcon = props => <AbsolutelyCenteredSvgIcon color="primary" name="play" value={1} size={5} {...props} />;
 
 const PlugLink = styled(BlockLink)`
+	display: flex;
+	flex-direction: column;
+
 	&:focus {
 		outline: none;
 		box-shadow: 0 0 .3rem .1rem #08e;
@@ -46,10 +49,17 @@ const PlugLink = styled(BlockLink)`
 `;
 
 const Description = styled.p`
+	order: ${props => props.order};
 	color: ${getColor('type')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${getVariable('uiRegularLineHeight')};
 `;
+Description.propTypes = {
+	order: PropTypes.number,
+};
+Description.defaultProps = {
+	order: 0,
+};
 
 const TrysilPlug = ({
 	url,
@@ -58,6 +68,7 @@ const TrysilPlug = ({
 	title,
 	fadeIn,
 	Labels,
+	labelsProps,
 	labels,
 	kicker,
 	offset,
@@ -76,10 +87,11 @@ const TrysilPlug = ({
 	return (
 		<ArticleComponent float={float} {...column} {...attributes}>
 			<PlugLink href={url}>
-				{kicker && <Kicker>{kicker}</Kicker>}
+				{kicker && <Kicker order={1}>{kicker}</Kicker>}
 				{image
 				&& (
 					<LazyProgressiveImage
+						order={2}
 						alt={title}
 						ratio={ratio}
 						offset={offset}
@@ -95,9 +107,9 @@ const TrysilPlug = ({
 					</LazyProgressiveImage>
 				)
 				}
-				<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
-				{subtitle && <Description itemProp="description">{subtitle}</Description>}
-				{labels && <Labels labels={labels} />}
+				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
+				{subtitle && <Description order={4} itemProp="description">{subtitle}</Description>}
+				{labels && <Labels {...labelsProps} labels={labels} />}
 			</PlugLink>
 		</ArticleComponent>
 	);
@@ -118,6 +130,10 @@ TrysilPlug.propTypes = {
 	image: PropTypes.string.isRequired,
 	/** Component to display the labels */
 	Labels: PropTypes.func,
+	/** Props to pass on to the Heading component */
+	labelsProps: PropTypes.shape({
+		order: PropTypes.number,
+	}),
 	/** i.e. keywords, tags, labels, categories */
 	labels: PropTypes.arrayOf(PropTypes.shape({
 		backgroundColor: PropTypes.string,
@@ -170,6 +186,9 @@ TrysilPlug.defaultProps = {
 	title: '',
 	subtitle: '',
 	Labels: DefaultLabels,
+	labelsProps: {
+		order: 5,
+	},
 	labels: [],
 	offset: 0,
 	sources: [],
