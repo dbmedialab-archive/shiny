@@ -1,4 +1,4 @@
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 
 const THEME_CONF = 'flexboxgrid';
 export const BASE_CONF = {

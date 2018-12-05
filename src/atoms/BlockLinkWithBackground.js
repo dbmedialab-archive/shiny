@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 // Utils
 import { getColor, getVariable } from '../utils';

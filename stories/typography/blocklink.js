@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { DemoContainer } from '../storybook-components/index';
 import { Code } from '../../src/atoms/Code';

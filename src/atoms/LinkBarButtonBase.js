@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { BlockLink } from './BlockLink';
 import { LinkBarElementBase } from './LinkBarElementBase';

@@ -1,20 +1,29 @@
-import React from 'react';
-import styled, { css, injectGlobal } from 'react-emotion';
+import React, { Fragment } from 'react';
+import styled from '@emotion/styled';
+import { Global, css } from '@emotion/core';
 
 import { getColor } from '../utils/get-color';
 
-const FontIcon = (props) => {
-	injectGlobal`
-		@font-face {
-			font-family: 'Helveticons';
-			font-style: normal;
-			font-weight: normal;
-			src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
-			font-display: block;
-		}
-	`;
-	return <Icon {...props} />;
-};
+const FontIcon = props => (
+	<Fragment>
+		<Helveticons />
+		<Icon {...props} />
+	</Fragment>
+);
+
+const Helveticons = () => (
+	<Global
+		styles={css`
+			@font-face {
+				font-family: 'Helveticons';
+				font-style: normal;
+				font-weight: normal;
+				src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
+				font-display: block;
+			}
+		`}
+	/>
+);
 
 const Icon = styled.span`
 	font-family: "Helveticons";

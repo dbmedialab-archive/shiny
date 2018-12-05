@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { getVariable } from '../utils';
 
 const Article = styled.article`
