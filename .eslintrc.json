@@ -6,6 +6,7 @@
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
     "react/jsx-curly-brace-presence": 0,
+    "react/jsx-no-duplicate-props": [true, {"ignoreCase": "true"}],
     "import/prefer-default-export": 0,
     "import/no-duplicates": 0,
     "react/jsx-no-duplicate-props": [2, { "ignoreCase": false }],
