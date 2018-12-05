@@ -31,7 +31,7 @@
   "dependencies": {
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "debug": "4.1.0",
+    "debug": "3.2.6",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.1",
     "lazysizes": "4.1.4",
