@@ -1,45 +1,9 @@
 /* eslint-disable max-len */
 import React from 'react';
-import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { TrysilPlug } from '../../src/molecules/TrysilPlug';
-
-import { getColor, getVariable } from '../../src/utils';
-
-const SpecialLabel = styled.div`
-	display: inline-block;
-	margin: 0 calc(1/2 * ${getVariable('horizontalBase')});
-	padding: ${getVariable('horizontalBase')};
-	background: ${getColor('primary')};
-	color: ${getColor('white')};
-	font-size: ${getVariable('uiRegularSize')};
-	line-height: ${getVariable('uiRegularLineHeight')};
-
-	&:first-child {
-		margin-left: 0;
-	}
-	&:last-child {
-		margin-right: 0;
-	}
-`;
-const SpecialLabels = ({ labels }) => (
-	<footer>
-		{labels.map(label => (
-			<SpecialLabel>{label.text}</SpecialLabel>
-		))
-		}
-	</footer>
-);
-SpecialLabels.propTypes = {
-	labels: PropTypes.arrayOf(
-		PropTypes.shape({ text: PropTypes.string })
-	),
-};
-SpecialLabels.defaultProps = {
-	labels: [],
-};
+import { OverlayingPlugLabels } from '../../src/molecules/OverlayingPlugLabels';
 
 export default () => (
 	<section>
@@ -48,7 +12,8 @@ export default () => (
 
 		<Heading>Usage</Heading>
 		<TrysilPlug
-			Labels={SpecialLabels}
+			Labels={OverlayingPlugLabels}
+			labelsProps={{ order: 2 }}
 			kicker="Another day, another video"
 			title="What should we plug today?"
 			subtitle="I guess we should plug another video again."

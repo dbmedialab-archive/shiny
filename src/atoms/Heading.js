@@ -13,6 +13,7 @@ const ProtoHeading = styled.h1`
 		const headingUpLineHeight = getVariable(`heading${props.upSize}LineHeight`)(props);
 
 		return css`
+				order: ${props.order};
 				padding: 0;
 				color: ${getColor('heading')(props)};
 				font-weight: ${getVariable('headingsWeight')(props)};
@@ -50,12 +51,14 @@ const ProtoHeading = styled.h1`
 `;
 
 ProtoHeading.propTypes = {
+	order: propTypes.number,
 	marginTopFactor: propTypes.number,
 	marginBottomFactor: propTypes.number,
 	defaultSize: propTypes.string,
 	upSize: propTypes.string,
 };
 ProtoHeading.defaultProps = {
+	order: 0,
 	marginTopFactor: 3/4,
 	marginBottomFactor: 1/2,
 	defaultSize: 'Regular',
