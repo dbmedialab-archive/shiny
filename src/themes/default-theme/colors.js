@@ -12,6 +12,7 @@ const colorsToShade= {
 	orange: 'chocolate',
 	navy: 'navy',
 	burgundy: '#9f1d35',
+	venetianRed: '#d0021b',
 	brown: 'saddlebrown',
 	sand: '#c2b280',
 	white: '#fff',

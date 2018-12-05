@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 import { Label  } from '../atoms/Label';
 
-const Labels = ({ labels }) => (
+const Labels = ({ labels, ...props }) => (
 	<Fragment>
 		{labels.map(label => (
 			<Label
@@ -11,6 +11,8 @@ const Labels = ({ labels }) => (
 				backgroundColor={label.backgroundColor}
 				backgroundHoverShade={label.backgroundHoverShade}
 				textColor={label.textColor}
+				fontSize={label.fontSize}
+				{...props}
 			>{label.text}
 			</Label>
 		))

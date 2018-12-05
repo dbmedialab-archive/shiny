@@ -8,7 +8,7 @@ const Label = styled.span`
 	color: ${props => getColor(props.textColor)};
 	display: inline-block;
 	font-family: ${getVariable('headingsFont')};
-	font-size: 1.1rem;
+	font-size: ${props => (props.fontSize ? props.fontSize : '1.1rem')};
 	font-weight: 300;
 	letter-spacing: .1rem;
 	line-height: 1;
@@ -20,6 +20,9 @@ const Label = styled.span`
 	text-decoration: none;
 	text-transform: uppercase;
 	white-space: nowrap;
+	${props => props.imageLabel
+		&& 'bottom: 1.3rem;'
+}
 `;
 Label.propTypes = {
 	backgroundColor: propTypes.string,

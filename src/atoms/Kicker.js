@@ -6,7 +6,7 @@ const Kicker = styled.h1`
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
-	margin: 0;
+	margin: ${props => (props.kickerMargin ? props.kickerMargin : 0)};
 	padding: calc(1/4 * ${getVariable('verticalBase')}) 0;
 	font-size: ${getVariable('uiSmallSize')};
 	line-height: ${getVariable('uiSmallLineHeight')};

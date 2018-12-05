@@ -9,6 +9,7 @@ import FloatImageRight from './FloatImage/floatRight';
 import image from './image';
 import figCaption from './fig-caption';
 import figureWithImageAndCaption from './figure-with-image-and-caption';
+import multiImage from './multi-image';
 
 export default () => {
 	storiesOf('Typography|Images', module)
@@ -20,5 +21,6 @@ export default () => {
 		.add('Floating right', FloatImageRight)
 		.add('Image', image)
 		.add('FigCaption', figCaption)
-		.add('Figure', figureWithImageAndCaption);
+		.add('Figure', figureWithImageAndCaption)
+		.add('Multi image', multiImage);
 };

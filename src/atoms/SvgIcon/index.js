@@ -32,6 +32,7 @@ import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
 import { YouTube             } from './YouTube';
 import { NotFound            } from './NotFound';
+import { PlayIcon 			 } from './Play';
 
 
 const SvgIcon = (props) => {
@@ -114,6 +115,8 @@ const SvgIcon = (props) => {
 						return <ExclamationMark {...props} />;
 					case 'youtube':
 						return <YouTube {...props} />;
+					case 'play':
+						return <PlayIcon {...props} />;
 					default:
 						return null;
 					}

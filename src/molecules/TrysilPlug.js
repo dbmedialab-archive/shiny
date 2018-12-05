@@ -16,10 +16,22 @@ import { Labels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
+import { SvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
 
+const HoveringKicker = styled(Kicker)`
+    order: 1;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: calc(-1/2 * ${getVariable('headingLargeLineHeight')}); 
+`;
+
 const PlugLink = styled(BlockLink)`
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
 	&:focus {
 		outline: none;
 		box-shadow: 0 0 .3rem .1rem #08e;
@@ -49,6 +61,17 @@ const Description = styled.p`
 	line-height: ${getVariable('uiRegularLineHeight')};
 `;
 
+// const RelativeBlock = styled.div`
+// 	position: relative;
+// 	text-align: center;
+// `;
+
+const StyledPlay = styled(SvgIcon)`
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+`;
+
 const TrysilPlug = ({
 	url,
 	image,
@@ -67,6 +90,10 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
+	iconName,
+	iconSize,
+	imageLabel,
+	hoveringKicker,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -75,19 +102,23 @@ const TrysilPlug = ({
 				{kicker && <Kicker>{kicker}</Kicker>}
 				{image
 				&& (
-					<LazyProgressiveImage
-						alt={title}
-						ratio={ratio}
-						offset={offset}
-						src={placeholderUrl ? placeholderUrl : image}
-						preventBlur={preventBlur}
-						fadeIn={fadeIn}
-					>
-						{sources.length === 0
-						&& <Source srcSet={image} />
-						}
-						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-					</LazyProgressiveImage>
+					<React.Fragment>
+						<LazyProgressiveImage
+							alt={title}
+							ratio={ratio}
+							offset={offset}
+							src={placeholderUrl ? placeholderUrl : image}
+							preventBlur={preventBlur}
+							fadeIn={fadeIn}
+						>
+							{sources.length === 0
+							&& <Source srcSet={image} />
+							}
+							{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+						</LazyProgressiveImage>
+						{iconName && <StyledPlay name={iconName} size={iconSize} />}
+						{hoveringKicker && <HoveringKicker>{hoveringKicker}</HoveringKicker>}
+					</React.Fragment>
 				)
 				}
 				<Heading {...headingProps}>{stripTags(title, ['strong', 'em'])}</Heading>
