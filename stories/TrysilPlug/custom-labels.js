@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { TrysilPlug } from '../../src/molecules/TrysilPlug';
