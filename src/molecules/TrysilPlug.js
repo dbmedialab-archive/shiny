@@ -12,7 +12,7 @@ import { Article } from '../atoms/Article';
 import { Kicker } from '../atoms/Kicker';
 import { PlugHeading as DefaultHeading } from '../atoms/PlugHeading';
 import { BlockLink } from '../atoms/BlockLink';
-import { Labels } from './Labels';
+import { Labels as DefaultLabels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
@@ -50,6 +50,7 @@ const Description = styled.p`
 	color: ${getColor('type')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${getVariable('uiRegularLineHeight')};
+	margin: 0 0 ${getVariable('verticalBase')};
 `;
 
 const TrysilPlug = ({
@@ -58,6 +59,7 @@ const TrysilPlug = ({
 	ratio,
 	title,
 	fadeIn,
+	Labels,
 	labels,
 	kicker,
 	offset,
@@ -116,6 +118,8 @@ TrysilPlug.propTypes = {
 	subtitle: PropTypes.string,
 	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
+	/** Component to display the labels */
+	Labels: PropTypes.func,
 	/** i.e. keywords, tags, labels, categories */
 	labels: PropTypes.arrayOf(PropTypes.shape({
 		backgroundColor: PropTypes.string,
@@ -167,6 +171,7 @@ TrysilPlug.defaultProps = {
 	kicker: '',
 	title: '',
 	subtitle: '',
+	Labels: DefaultLabels,
 	labels: [],
 	offset: 0,
 	sources: [],
