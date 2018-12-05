@@ -16,8 +16,11 @@ import { Labels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
+import { AbsolutelyCenteredSvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
+
+const PlayIcon = props => <AbsolutelyCenteredSvgIcon color="primary" name="play" value={1} size={5} {...props} />;
 
 const PlugLink = styled(BlockLink)`
 	&:focus {
@@ -67,6 +70,7 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
+	displayPlayIcon,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -83,6 +87,7 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
+						{displayPlayIcon && <PlayIcon />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
@@ -154,6 +159,7 @@ TrysilPlug.propTypes = {
 	}),
 	/** Disable the blur effect on lazily loaded images */
 	preventBlur: PropTypes.bool,
+	displayPlayIcon: PropTypes.bool,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -168,6 +174,7 @@ TrysilPlug.defaultProps = {
 	headingProps: {},
 	preventBlur: false,
 	placeholderUrl: '',
+	displayPlayIcon: false,
 };
 
 export { TrysilPlug };
