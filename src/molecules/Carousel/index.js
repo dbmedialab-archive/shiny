@@ -70,20 +70,20 @@ class Carousel extends React.Component {
 				});
 				this.setCarouselLength(carouselContentEl);
 
-				// recalculating dimentions onresize
+				// recalculating dimensions onresize
 				window.addEventListener('resize', () => this.setCarouselLength(carouselContentEl));
 			}
 		);
 	}
 
 	setCarouselLength(carouselContentDom) {
-		const dimentions = carouselContentDom.getBoundingClientRect();
+		const dimensions = carouselContentDom.getBoundingClientRect();
 
 		const { vertical } = this.props;
 
 		this.setState({
 			carouselLength: vertical ? carouselContentDom.scrollHeight : carouselContentDom.scrollWidth,
-			pageLength: vertical ? dimentions.height : dimentions.width,
+			pageLength: vertical ? dimensions.height : dimensions.width,
 		});
 	}
 
