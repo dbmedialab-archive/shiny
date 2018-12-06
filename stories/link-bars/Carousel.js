@@ -55,6 +55,26 @@ const CarouselStory = () => {
 					</Col>
 				</Row>
 			</DemoContainer>
+
+			<Heading>Usage</Heading>
+			<Code language="jsx">
+				{`
+import { 
+	TrysilPlug, 
+	Carousel,
+ } from '@aller/shiny';
+
+<Carousel vertical withMouseEvents={false}>
+	<TrysilPlug
+		title='Test title 1'
+		image='https://via.placeholder.com/250x125'
+		url='www.example.com'
+		ratio={0.5}
+		key='1'
+	/>
+</Carousel>
+			`}
+			</Code>
 		</section>
 	);
 };
