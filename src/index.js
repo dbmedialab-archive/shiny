@@ -174,6 +174,7 @@ export { WallpaperAd             } from './molecules/WallpaperAd';
 export { SearchField             } from './molecules/SearchField';
 export { ArticleHeader           } from './molecules/Article/Header';
 export { HeaderImage             } from './molecules/Article/Image';
+export { Carousel				 } from './molecules/Carousel';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';

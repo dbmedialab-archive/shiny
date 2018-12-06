@@ -249,4 +249,4 @@ Carousel.defaultProps = {
 	withMouseEvents: true,
 };
 
-export default Carousel;
+export { Carousel };
