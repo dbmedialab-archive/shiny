@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 
 import { getColor, getVariable } from '../utils';
