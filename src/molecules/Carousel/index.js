@@ -202,6 +202,7 @@ class Carousel extends React.Component {
 						onScroll={this.onScroll}
 						{...this.props}
 					>
+						{/* div instead of styled-component because we're passing ref */}
 						<div
 							role="presentation"
 							className="carousel-slot-list"
