@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { SmallHeading } from '../../atoms/Heading';
-import { getVariable } from '../../utils';
+import { getVariable, getColor } from '../../utils';
 
 const CarouselContainer = styled.div`
 	${(props) => {
 		const base = css`
 			& .carousel-slot-list {
+				width: 100%;
 				display: flex;
 				scroll-behavior: ${props.pageIsTurning ? 'smooth' : 'auto'};
 				-ms-overflow-style: none;
@@ -26,127 +26,57 @@ const CarouselContainer = styled.div`
 				& img {
 					pointer-events: none;
 				}
-	
-				& h1 {
-					margin-top: 0.5rem;
-					font-size: 1.5rem;
-					line-height: 1.2;
-				}
 			}
 		`;
+
+		let directional;
 
 		if (!props.vertical) {
-			return css`
+			directional = css`
 				& .carousel-slot-list {
-					margin: 0 0 2rem 0;
 					overflow-x: auto;
 					white-space: nowrap;
-					display: flex;
 					flex-wrap: nowrap;
-					scroll-behavior: ${props.pageIsTurning ? 'smooth' : 'auto'};
-					-ms-overflow-style: none;
+				}
+			`;
+		} else {
+			directional = css`
+				& {
+					height: 100%;
 
-					&::-webkit-scrollbar {
-						display: none;
+					& > div {
+						display: flex;
+						height: 100%;
 					}
 				}
-
-				& * {
-					user-select: none;
-					-webkit-app-region: no-drag;
-					-webkit-user-drag: none;
-					cursor: pointer;
-					outline: none;
-				}
-
-				& img {
-					pointer-events: none;
-				}
-
-				& h1 {
-					margin-top: 1.5rem;
-					font-size: 1.5rem;
-					line-height: 1.2;
+				& .carousel-slot-list {
+					height: 100%;
+					top: 0;
+					overflow-y: auto;
+					position: absolute;
+					flex-direction: column;
 				}
 			`;
 		}
+
 		return css`
-			& {
-				height: 100%;
-
-				& > div {
-					display: flex;
-					height: 100%;
-				}
-			}
-			& .carousel-slot-list {
-				height: 100%;
-				top: 0;
-				overflow-y: auto;
-				display: flex;
-				position: absolute;
-				flex-direction: column;
-				scroll-behavior: ${props.pageIsTurning ? 'smooth' : 'auto'};
-				-ms-overflow-style: none;
-
-				&::-webkit-scrollbar {
-					display: none;
-				}
-			}
-
-			& * {
-				user-select: none;
-				-webkit-app-region: no-drag;
-				-webkit-user-drag: none;
-				cursor: pointer;
-				outline: none;
-			}
-
-			& img {
-				pointer-events: none;
-			}
-
-			& h1 {
-				margin-top: 0.5rem;
-				font-size: 1.5rem;
-				line-height: 1.2;
-			}
+			${base};
+			${directional};
 		`;
 	}};
 `;
 
-const CarouselHeading = styled(SmallHeading)`
-	${(props) => {
-		if (props.vertical) {
-			return css`
-				@media screen and (min-width: 768px) {
-					& {
-						background: red;
-						color: white;
-						display: flex;
-						justify-content: center;
-						padding: 0.5rem;
-						font-size: 1.45rem;
-						margin: 0;
-						margin-bottom: 1rem;
-					}
-				}
-			`;
-		}
-
-		return css``;
-	}};
-`;
-
-const CarouselButton = styled.div`
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+const CarouselButton = styled.button`
+	-webkit-tap-highlight-color: transparent;
+	border: none;
+	outline: none;
 	position: absolute;
 	top: ${props => (props.next && props.vertical ? 'auto' : '0')};
 	bottom: ${props => (props.next || !props.vertical ? '0' : 'auto')};
 	left: ${props => (props.next || props.vertical ? 'auto' : '0')};
 	right: ${props => (props.next && !props.vertical ? '0' : 'auto')};
-	width: ${props => (props.vertical ? '100%' : '3rem')};
-	height: ${props => (props.vertical ? '3rem' : '100%')};
+	width: ${props => (props.vertical ? '100%' : `calc(${getVariable('uiRegularSize')(props)} * 2)`)};
+	height: ${props => (props.vertical ? `calc(${getVariable('uiRegularSize')(props)} * 2)` : '100%')};
 	background-color: rgba(255, 255, 255, 0.7);
 	display: flex;
 	align-items: center;
@@ -156,9 +86,9 @@ const CarouselButton = styled.div`
 	span {
 		font-size: 2rem;
 		transform: ${props => (props.vertical ? 'rotate(90deg)' : '')};
-		color: #fff;
+		color: ${getColor('white')};
 		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
-		margin-top: ${props => (props.vertical ? '0' : '-7rem')};
+		margin-top: ${props => (props.vertical ? '0' : '-6rem')};
 	}
 `;
 
@@ -170,27 +100,12 @@ const Wrapper = styled.div`
 	article {
 		margin: 0;
 	}
-	h1 {
-		font-size: 1.4rem;
-		margin: 0 0 0 0.2rem;
-		display: -webkit-box;
-		max-height: 6.2rem;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: normal;
-		-webkit-line-clamp: 2;
-		text-transform: uppercase;
-		@media screen and (min-width: ${getVariable('largeWidth')}) {
-			font-size: 1.8rem;
-		}
-	}
 `;
 
 const CarouselSlot = styled.div`
 	flex: 0;
 	flex-shrink: 0;
-	flex-basis: ${props => (props.vertical ? '17rem' : '25rem')};
+	flex-basis: ${props => (props.vertical ? '17rem' : `calc(${getVariable('verticalBase')(props)} * 10)`)};
 	margin-right: ${props => (props.vertical ? '0' : '0.5rem')};
 `;
 
@@ -199,5 +114,4 @@ export {
 	CarouselButton,
 	Wrapper,
 	CarouselSlot,
-	CarouselHeading,
 };

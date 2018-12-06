@@ -69,6 +69,9 @@ class Carousel extends React.Component {
 					});
 				});
 				this.setCarouselLength(carouselContentEl);
+
+				// recalculating dimentions onresize
+				window.addEventListener('resize', () => this.setCarouselLength(carouselContentEl));
 			}
 		);
 	}
@@ -126,6 +129,12 @@ class Carousel extends React.Component {
 	}
 
 	dragFinished() {
+		const { withMouseEvents } = this.props;
+
+		if (!withMouseEvents) {
+			return;
+		}
+
 		// disable link 'click' after swipe in Chrome
 		window.setTimeout(() => {
 			this.setState({
@@ -135,6 +144,12 @@ class Carousel extends React.Component {
 	}
 
 	dragStarted(e) {
+		const { withMouseEvents } = this.props;
+
+		if (!withMouseEvents) {
+			return;
+		}
+
 		this.setState({
 			mouseX: e.clientX,
 			mouseY: e.clientY,
@@ -142,8 +157,13 @@ class Carousel extends React.Component {
 	}
 
 	drag(e) {
+		const { withMouseEvents, vertical } = this.props;
+
+		if (!withMouseEvents) {
+			return;
+		}
+
 		const { mouseX, mouseY } = this.state;
-		const { vertical } = this.props;
 		const { clientX, clientY, buttons } = e;
 
 		// checking if drag is performed with pressed mouse button
@@ -166,7 +186,9 @@ class Carousel extends React.Component {
 	}
 
 	render() {
-		const { label, children, vertical } = this.props;
+		const {
+			label, children, vertical,
+		} = this.props;
 		const {
 			direction, pageIsTurning, prevArrowVisible, nextArrowVisible,
 		} = this.state;
@@ -213,16 +235,18 @@ class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
-	label: PropTypes.oneOf([
+	label: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.element,
 	]).isRequired,
 	vertical: PropTypes.bool,
+	withMouseEvents: PropTypes.bool,
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 Carousel.defaultProps = {
 	vertical: false,
+	withMouseEvents: true,
 };
 
 export default Carousel;
