@@ -6,12 +6,25 @@ export const CarouselButton = styled.button`
 	border: none;
 	outline: none;
 	position: absolute;
-	top: ${props => (props.next && props.vertical ? 'auto' : '0')};
-	bottom: ${props => (props.next || !props.vertical ? '0' : 'auto')};
-	left: ${props => (props.next || props.vertical ? 'auto' : '0')};
-	right: ${props => (props.next && !props.vertical ? '0' : 'auto')};
-	width: ${props => (props.vertical ? '100%' : `calc(${getVariable('uiRegularSize')(props)} * 2)`)};
-	height: ${props => (props.vertical ? `calc(${getVariable('uiRegularSize')(props)} * 2)` : '100%')};
+	${(props) => {
+		const buttonLength = `calc(${getVariable('uiRegularSize')(props)} * 2)`;
+
+		if (props.vertical) {
+			return `
+				top: ${props.next ? 'auto' : '0'};
+				bottom: ${props.next ? '0' : 'auto'};
+				height: ${buttonLength};
+				width: 100%;
+			`;
+		}
+		return `
+			top: 0;
+			left: ${props.next ? 'auto' : '0'};
+			right: ${props.next ? '0' : 'auto'};
+			height: 100%;
+			width: ${buttonLength};
+		`;
+	}}
 	background-color: rgba(255, 255, 255, 0.7);
 	display: flex;
 	align-items: center;
