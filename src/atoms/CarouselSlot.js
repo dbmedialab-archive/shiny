@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Col } from '../Col';
-import { getVariable } from '../../utils/get-variable';
+import { Col } from './Col';
+import { getVariable } from '../utils/get-variable';
 
 export const CarouselSlot = styled(Col)`
 	${(props) => {
@@ -31,5 +31,5 @@ export const CarouselSlot = styled(Col)`
 			${directional};
 		`;
 	}}
-	
+
 `;
