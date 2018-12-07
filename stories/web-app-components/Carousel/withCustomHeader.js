@@ -40,7 +40,7 @@ const WithCustomHeaderCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel Heading={CustomHeader} heading="Demo carousel (with custom heading">
+					<Carousel Heading={CustomHeader} heading="Demo carousel (with custom heading)">
 						{children}
 					</Carousel>
 				</Row>
