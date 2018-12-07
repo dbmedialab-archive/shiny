@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { FontIcon } from '../../atoms/FontIcon';
 import {
-	CarouselContainer, CarouselSlot, Wrapper, CarouselButton, CarouselSlotList,
+	CarouselContainer, CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
 } from './styles';
 
 class Carousel extends React.Component {
@@ -195,7 +195,7 @@ class Carousel extends React.Component {
 		return (
 			<Fragment>
 				{label}
-				<Wrapper vertical={vertical}>
+				<CarouselSection vertical={vertical}>
 					<CarouselContainer
 						onScroll={this.onScroll}
 						vertical={vertical}
@@ -226,7 +226,7 @@ class Carousel extends React.Component {
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
 					)}
-				</Wrapper>
+				</CarouselSection>
 			</Fragment>
 		);
 	}

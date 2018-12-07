@@ -64,7 +64,7 @@ const CarouselButton = styled.button`
 	}
 `;
 
-const Wrapper = styled.div`
+const CarouselSection = styled.section`
 	width: 100%;
 	position: relative;
 	overflow: hidden;
@@ -122,7 +122,7 @@ const CarouselSlot = styled.div`
 export {
 	CarouselContainer,
 	CarouselButton,
-	Wrapper,
+	CarouselSection,
 	CarouselSlotList,
 	CarouselSlot,
 };
