@@ -1,4 +1,3 @@
-/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -218,12 +217,21 @@ class Carousel extends React.Component {
 						))}
 					</CarouselSlotList>
 					{prevArrowVisible && (
-						<CarouselButton vertical={vertical} onClick={() => this.doSliding('prev')} horizontalArrowOffset={horizontalArrowOffset}>
+						<CarouselButton
+							vertical={vertical}
+							onClick={() => this.doSliding('prev')}
+							horizontalArrowOffset={horizontalArrowOffset}
+						>
 							<FontIcon name="arrow-alt-left" size={3} />
 						</CarouselButton>
 					)}
 					{nextArrowVisible && (
-						<CarouselButton next vertical={vertical} onClick={() => this.doSliding('next')} horizontalArrowOffset={horizontalArrowOffset}>
+						<CarouselButton
+							next
+							vertical={vertical}
+							onClick={() => this.doSliding('next')}
+							horizontalArrowOffset={horizontalArrowOffset}
+						>
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
 					)}
