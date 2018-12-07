@@ -20,8 +20,8 @@ const Box = styled('div')`
 
 		const verticalFactor = isSmall ? 0 : 3/2;
 		const horizontalFactor = isSmall ? 1 : 3;
-		const mdVerticalFactor = isSmall ? 0 : 7;
-		const mdHorizontalFactor = isSmall ? 1 : 4;
+		const mdVerticalFactor = isSmall ? 0 : 4;
+		const mdHorizontalFactor = isSmall ? 1 : 7;
 
 		return `
 			&& {
