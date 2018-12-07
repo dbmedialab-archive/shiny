@@ -32,10 +32,10 @@ export const CarouselButton = styled.button`
 	cursor: pointer;
 
 	span {
-		font-size: 2rem;
+		font-size: ${getVariable('uiLargeSize')};
 		transform: ${props => (props.vertical ? 'rotate(90deg)' : '')};
 		color: ${getColor('white')};
-		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
-		margin-top: ${props => (props.vertical ? '0' : '-6rem')};
+		text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+		margin-top: ${props => (props.vertical ? '0' : props.horizontalArrowOffset)};
 	}
 `;

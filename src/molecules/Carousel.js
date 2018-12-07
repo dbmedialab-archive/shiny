@@ -188,7 +188,7 @@ class Carousel extends React.Component {
 
 	render() {
 		const {
-			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight,
+			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight, horizontalArrowOffset,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -216,12 +216,12 @@ class Carousel extends React.Component {
 						))}
 					</CarouselSlotList>
 					{prevArrowVisible && (
-						<CarouselButton vertical={vertical} onClick={() => this.doSliding('prev')}>
+						<CarouselButton vertical={vertical} onClick={() => this.doSliding('prev')} horizontalArrowOffset={horizontalArrowOffset}>
 							<FontIcon name="arrow-alt-left" size={3} />
 						</CarouselButton>
 					)}
 					{nextArrowVisible && (
-						<CarouselButton next vertical={vertical} onClick={() => this.doSliding('next')}>
+						<CarouselButton next vertical={vertical} onClick={() => this.doSliding('next')} horizontalArrowOffset={horizontalArrowOffset}>
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
 					)}
@@ -240,6 +240,12 @@ Carousel.propTypes = {
 	horizontalSizing: PropTypes.shape({}),
 	verticalHeight: PropTypes.string,
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
+
+	// because carousel slots could be any DOM elements,
+	// often we want to align arrows with offset from center
+	// (for instance, for TrysilPlug we want to align arrows by center of
+	// the image, which is not a vertical center of CarouselBar)
+	horizontalArrowOffset: PropTypes.string,
 };
 
 Carousel.defaultProps = {
@@ -253,6 +259,7 @@ Carousel.defaultProps = {
 		md: 3,
 	},
 	verticalHeight: '64rem',
+	horizontalArrowOffset: '-10rem',
 };
 
 export { Carousel };
