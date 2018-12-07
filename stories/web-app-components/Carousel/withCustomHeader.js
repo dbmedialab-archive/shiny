@@ -32,7 +32,7 @@ const WithCustomHeaderCarouselStory = () => {
 		/>
 	));
 
-	const customHeader = <CustomHeader>Demo carousel (with custom header)</CustomHeader>;
+	const customHeading = <CustomHeader>Demo carousel (with custom heading)</CustomHeader>;
 
 	return (
 		<section>
@@ -41,7 +41,7 @@ const WithCustomHeaderCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel label={customHeader}>
+					<Carousel heading={customHeading}>
 						{children}
 					</Carousel>
 				</Row>

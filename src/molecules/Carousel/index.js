@@ -188,7 +188,7 @@ class Carousel extends React.Component {
 
 	render() {
 		const {
-			label, children, vertical, horizontalSizing,
+			heading, children, vertical, horizontalSizing, verticalHeight,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -197,8 +197,8 @@ class Carousel extends React.Component {
 		const sizing = !vertical && horizontalSizing;
 		return (
 			<Fragment>
-				{label}
-				<CarouselSection vertical={vertical}>
+				{heading}
+				<CarouselSection vertical={vertical} verticalHeight={verticalHeight}>
 					<CarouselSlotList
 						onMouseDown={this.dragStarted}
 						onMouseMove={this.drag}
@@ -241,13 +241,14 @@ const getSizingPropShape = () => {
 };
 
 Carousel.propTypes = {
-	label: PropTypes.oneOfType([
+	heading: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.element,
 	]).isRequired,
 	vertical: PropTypes.bool,
 	withMouseEvents: PropTypes.bool,
 	horizontalSizing: PropTypes.shape(getSizingPropShape()),
+	verticalHeight: PropTypes.string,
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
@@ -258,6 +259,7 @@ Carousel.defaultProps = {
 		xs: 6,
 		md: 3,
 	},
+	verticalHeight: '64rem',
 };
 
 export { Carousel };

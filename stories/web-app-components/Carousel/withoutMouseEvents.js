@@ -33,7 +33,7 @@ const WithoutMouseEventsCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel withMouseEvents={false} label="Demo carousel (without mouse events)">
+					<Carousel withMouseEvents={false} heading="Demo carousel (without mouse events)">
 						{children}
 					</Carousel>
 				</Row>

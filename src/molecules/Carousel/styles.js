@@ -34,7 +34,7 @@ const CarouselSection = styled.section`
 	width: 100%;
 	position: relative;
 	overflow: hidden;
-	height: ${props => (props.vertical ? '64rem' : '')};
+	height: ${props => (props.vertical ? props.verticalHeight : '')};
 	article {
 		margin: 0;
 	}

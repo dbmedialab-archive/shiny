@@ -35,7 +35,7 @@ const VerticalCarouselStory = () => {
 			<DemoContainer>
 				<Row>
 					<Col md={5} xs={12}>
-						<Carousel vertical label="Demo vertical carousel">
+						<Carousel vertical heading="Demo vertical carousel">
 							{children}
 						</Carousel>
 					</Col>

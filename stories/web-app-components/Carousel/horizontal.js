@@ -33,7 +33,7 @@ const HorizontalCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel label="Demo horizontal carousel">
+					<Carousel heading="Demo horizontal carousel">
 						{children}
 					</Carousel>
 				</Row>
