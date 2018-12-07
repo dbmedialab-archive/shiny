@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { FontIcon } from '../../atoms/FontIcon';
 import {
-	CarouselContainer, CarouselSlot, Wrapper, CarouselButton,
+	CarouselContainer, CarouselSlot, Wrapper, CarouselButton, CarouselSlotList,
 } from './styles';
 
 class Carousel extends React.Component {
@@ -190,26 +190,23 @@ class Carousel extends React.Component {
 			label, children, vertical,
 		} = this.props;
 		const {
-			direction, pageIsTurning, prevArrowVisible, nextArrowVisible,
+			prevArrowVisible, nextArrowVisible, pageIsTurning,
 		} = this.state;
 		return (
 			<Fragment>
 				{label}
-				<Wrapper {...this.props}>
+				<Wrapper vertical={vertical}>
 					<CarouselContainer
-						direction={direction}
-						pageIsTurning={pageIsTurning}
 						onScroll={this.onScroll}
-						{...this.props}
+						vertical={vertical}
 					>
-						{/* div instead of styled-component because we're passing ref */}
-						<div
-							role="presentation"
-							className="carousel-slot-list"
+						<CarouselSlotList
 							onMouseDown={this.dragStarted}
 							onMouseMove={this.drag}
 							onMouseUp={this.dragFinished}
 							onMouseLeave={this.dragFinished}
+							pageIsTurning={pageIsTurning}
+							vertical={vertical}
 							ref={this.carouselContentEl}
 						>
 							{children.map((child, i) => (
@@ -217,7 +214,7 @@ class Carousel extends React.Component {
 									{child}
 								</CarouselSlot>
 							))}
-						</div>
+						</CarouselSlotList>
 					</CarouselContainer>
 					{prevArrowVisible && (
 						<CarouselButton vertical={vertical} onClick={() => this.doSliding('prev')}>

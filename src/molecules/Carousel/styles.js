@@ -5,56 +5,28 @@ import { getVariable, getColor } from '../../utils';
 const CarouselContainer = styled.div`
 	${(props) => {
 		const base = css`
-			& .carousel-slot-list {
-				width: 100%;
-				display: flex;
-				scroll-behavior: ${props.pageIsTurning ? 'smooth' : 'auto'};
-				-ms-overflow-style: none;
+			* {
+				user-select: none;
+				-webkit-app-region: no-drag;
+				-webkit-user-drag: none;
+				cursor: pointer;
+				outline: none;
+			}
 
-				&::-webkit-scrollbar {
-					display: none;
-				}
-
-				& * {
-					user-select: none;
-					-webkit-app-region: no-drag;
-					-webkit-user-drag: none;
-					cursor: pointer;
-					outline: none;
-				}
-	
-				& img {
-					pointer-events: none;
-				}
+			img {
+				pointer-events: none;
 			}
 		`;
 
 		let directional;
 
-		if (!props.vertical) {
+		if (props.vertical) {
 			directional = css`
-				& .carousel-slot-list {
-					overflow-x: auto;
-					white-space: nowrap;
-					flex-wrap: nowrap;
-				}
-			`;
-		} else {
-			directional = css`
-				& {
-					height: 100%;
+				height: 100%;
 
-					& > div {
-						display: flex;
-						height: 100%;
-					}
-				}
-				& .carousel-slot-list {
+				& > div {
+					display: flex;
 					height: 100%;
-					top: 0;
-					overflow-y: auto;
-					position: absolute;
-					flex-direction: column;
 				}
 			`;
 		}
@@ -102,6 +74,44 @@ const Wrapper = styled.div`
 	}
 `;
 
+const CarouselSlotList = styled.div`
+	${(props) => {
+		const base = css`
+			width: 100%;
+			display: flex;
+			scroll-behavior: ${props.pageIsTurning ? 'smooth' : 'auto'};
+			-ms-overflow-style: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		`;
+
+		let directional;
+
+		if (props.vertical) {
+			directional = css`
+				height: 100%;
+				top: 0;
+				overflow-y: auto;
+				position: absolute;
+				flex-direction: column;
+			`;
+		} else {
+			directional = css`
+				overflow-x: auto;
+				white-space: nowrap;
+				flex-wrap: nowrap;
+			`;
+		}
+
+		return css`
+			${base};
+			${directional};
+		`;
+	}}
+`;
+
 const CarouselSlot = styled.div`
 	flex: 0;
 	flex-shrink: 0;
@@ -113,5 +123,6 @@ export {
 	CarouselContainer,
 	CarouselButton,
 	Wrapper,
+	CarouselSlotList,
 	CarouselSlot,
 };
