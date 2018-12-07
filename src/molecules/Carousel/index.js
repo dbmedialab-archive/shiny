@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { DIMENSION_NAMES } from '../../utils/grid-config';
+import { SmallPlugHeading as DefaultHeading } from '../../atoms/PlugHeading';
 import { FontIcon } from '../../atoms/FontIcon';
 import {
 	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
@@ -188,7 +189,7 @@ class Carousel extends React.Component {
 
 	render() {
 		const {
-			heading, children, vertical, horizontalSizing, verticalHeight,
+			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -197,7 +198,7 @@ class Carousel extends React.Component {
 		const sizing = !vertical && horizontalSizing;
 		return (
 			<Fragment>
-				{heading}
+				{heading && <Heading {...headingProps}>{heading}</Heading>}
 				<CarouselSection vertical={vertical} verticalHeight={verticalHeight}>
 					<CarouselSlotList
 						onMouseDown={this.dragStarted}
@@ -231,28 +232,21 @@ class Carousel extends React.Component {
 	}
 }
 
-const getSizingPropShape = () => {
-	const result = {};
-	DIMENSION_NAMES.forEach((d) => {
-		result[d] = PropTypes.number;
-	});
-
-	return result;
-};
-
 Carousel.propTypes = {
-	heading: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.element,
-	]).isRequired,
+	Heading: PropTypes.func,
+	headingProps: PropTypes.shape({}),
+	heading: PropTypes.string,
 	vertical: PropTypes.bool,
 	withMouseEvents: PropTypes.bool,
-	horizontalSizing: PropTypes.shape(getSizingPropShape()),
+	horizontalSizing: PropTypes.shape({}),
 	verticalHeight: PropTypes.string,
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 Carousel.defaultProps = {
+	Heading: DefaultHeading,
+	headingProps: {},
+	heading: '',
 	vertical: false,
 	withMouseEvents: true,
 	horizontalSizing: {
