@@ -36,7 +36,7 @@ const Box = styled('div')`
 
 				display: flex;
 				align-items: center;
-
+				justify-content: center;
 				padding: calc(${verticalFactor} * ${verticalBase}) calc(${horizontalFactor} * ${horizontalBase});
 
 				@media screen and (min-width: ${mdBreakpoint}em) {
