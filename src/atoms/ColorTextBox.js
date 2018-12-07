@@ -6,24 +6,45 @@ import { Col } from './Col';
 import { getColor, getVariable } from '../utils';
 
 const Box = styled('div')`
-	&& {
-		padding: calc(3/2 * ${getVariable('verticalBase')}) calc(3 * ${getVariable('horizontalBase')});
-		font-size:   ${getVariable('headingRegularSize')};
-		line-height: ${getVariable('headingRegularLineHeight')};
-		font-weight: ${getVariable('uiWeightSemiBold')};
-		letter-spacing: .05rem;
-		word-wrap: break-word;
-		text-align: left;
-		color:            ${props => getColor(props.textColor)};
-		background-color: ${props => getColor(props.bgColor)};
+	${(props) => {
+		const verticalBase = getVariable('verticalBase')(props);
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const mdBreakpoint = props.theme.flexboxgrid.breakpoints.md;
+		const headingRegularSize = getVariable('headingRegularSize')(props);
+		const headingRegularLineHeight = getVariable('headingRegularLineHeight')(props);
+		const uiWeightSemiBold = getVariable('uiWeightSemiBold')(props);
 
-		display: flex;
-		align-items: center;
+		const textColor = getColor(props.textColor)(props);
+		const bgColor = getColor(props.bgColor)(props);
+		const isSmall = props.size === 'small';
 
-		@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-			padding: calc(4 * ${getVariable('verticalBase')}) calc(7 * ${getVariable('horizontalBase')});
-		}
-	}
+		const verticalFactor = isSmall ? 0 : 3/2;
+		const horizontalFactor = isSmall ? 1 : 3;
+		const mdVerticalFactor = isSmall ? 0 : 7;
+		const mdHorizontalFactor = isSmall ? 1 : 4;
+
+		return `
+			&& {
+				font-size: ${headingRegularSize};
+				line-height: ${headingRegularLineHeight};
+				font-weight: ${uiWeightSemiBold};
+				letter-spacing: .05rem;
+				word-wrap: break-word;
+				text-align: left;
+				color: ${textColor};
+				background-color: ${bgColor};
+
+				display: flex;
+				align-items: center;
+
+				padding: calc(${verticalFactor} * ${verticalBase}) calc(${horizontalFactor} * ${horizontalBase});
+
+				@media screen and (min-width: ${mdBreakpoint}em) {
+					padding: calc(${mdVerticalFactor} * ${verticalBase}) calc(${mdHorizontalFactor} * ${horizontalBase});
+				}
+			}
+		`;
+	}}
 `;
 
 const ColorTextBox = ({ column, ...rest }) => {
@@ -50,6 +71,7 @@ ColorTextBox.propTypes = {
 		lgOffset: PropTypes.number,
 		children: PropTypes.node,
 	}),
+	size: PropTypes.oneOf(['small', '']),
 	/** Color name from theme */
 	textColor: PropTypes.string,
 };
@@ -57,6 +79,7 @@ ColorTextBox.propTypes = {
 ColorTextBox.defaultProps = {
 	bgColor: 'primary',
 	column: null,
+	size: '',
 	textColor: 'white',
 };
 
