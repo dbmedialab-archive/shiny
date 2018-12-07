@@ -6,7 +6,6 @@ import { DemoContainer } from '../../storybook-components';
 import { TrysilPlug } from '../../../src';
 import { Carousel } from '../../../src/molecules/Carousel';
 import { Row } from '../../../src/atoms/Row';
-import { Col } from '../../../src/atoms/Col';
 
 const prototypeItem = {
 	title: 'Item',
