@@ -1,12 +1,11 @@
 /* eslint-disable react/no-multi-comp */
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import { DIMENSION_NAMES } from '../../utils/grid-config';
 import { SmallPlugHeading as DefaultHeading } from '../../atoms/PlugHeading';
 import { FontIcon } from '../../atoms/FontIcon';
 import {
-	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
+	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList, CarouselBar,
 } from './styles';
 
 class Carousel extends React.Component {
@@ -197,9 +196,9 @@ class Carousel extends React.Component {
 
 		const sizing = !vertical && horizontalSizing;
 		return (
-			<Fragment>
+			<CarouselSection vertical={vertical} verticalHeight={verticalHeight}>
 				{heading && <Heading {...headingProps}>{heading}</Heading>}
-				<CarouselSection vertical={vertical} verticalHeight={verticalHeight}>
+				<CarouselBar>
 					<CarouselSlotList
 						onMouseDown={this.dragStarted}
 						onMouseMove={this.drag}
@@ -226,8 +225,8 @@ class Carousel extends React.Component {
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
 					)}
-				</CarouselSection>
-			</Fragment>
+				</CarouselBar>
+			</CarouselSection>
 		);
 	}
 }

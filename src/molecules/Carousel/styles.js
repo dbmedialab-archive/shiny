@@ -33,11 +33,15 @@ const CarouselButton = styled.button`
 const CarouselSection = styled.section`
 	width: 100%;
 	position: relative;
-	overflow: hidden;
 	height: ${props => (props.vertical ? props.verticalHeight : '')};
 	article {
 		margin: 0;
 	}
+`;
+
+const CarouselBar = styled.div`
+	height: 100%;
+	position: relative;
 `;
 
 const CarouselSlotList = styled.div`
@@ -118,6 +122,7 @@ const CarouselSlot = styled(Col)`
 export {
 	CarouselButton,
 	CarouselSection,
+	CarouselBar,
 	CarouselSlotList,
 	CarouselSlot,
 };
