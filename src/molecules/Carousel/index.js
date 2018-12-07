@@ -2,6 +2,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+import { DIMENSION_NAMES } from '../../utils/grid-config';
 import { FontIcon } from '../../atoms/FontIcon';
 import {
 	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
@@ -187,11 +188,13 @@ class Carousel extends React.Component {
 
 	render() {
 		const {
-			label, children, vertical,
+			label, children, vertical, horizontalSizing,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
 		} = this.state;
+
+		const sizing = !vertical && horizontalSizing;
 		return (
 			<Fragment>
 				{label}
@@ -207,7 +210,7 @@ class Carousel extends React.Component {
 						ref={this.carouselContentEl}
 					>
 						{children.map((child, i) => (
-							<CarouselSlot key={i} {...this.props}>
+							<CarouselSlot key={i} vertical={vertical} {...sizing}>
 								{child}
 							</CarouselSlot>
 						))}
@@ -228,6 +231,15 @@ class Carousel extends React.Component {
 	}
 }
 
+const getSizingPropShape = () => {
+	const result = {};
+	DIMENSION_NAMES.forEach((d) => {
+		result[d] = PropTypes.number;
+	});
+
+	return result;
+};
+
 Carousel.propTypes = {
 	label: PropTypes.oneOfType([
 		PropTypes.string,
@@ -235,12 +247,17 @@ Carousel.propTypes = {
 	]).isRequired,
 	vertical: PropTypes.bool,
 	withMouseEvents: PropTypes.bool,
+	horizontalSizing: PropTypes.shape(getSizingPropShape()),
 	children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
 Carousel.defaultProps = {
 	vertical: false,
 	withMouseEvents: true,
+	horizontalSizing: {
+		xs: 6,
+		md: 3,
+	},
 };
 
 export { Carousel };

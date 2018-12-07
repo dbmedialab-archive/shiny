@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { getVariable, getColor } from '../../utils';
+import { Col } from '../../atoms/Col';
 
 
 const CarouselButton = styled.button`
@@ -91,11 +92,27 @@ const CarouselSlotList = styled.div`
 	}}
 `;
 
-const CarouselSlot = styled.div`
-	flex: 0;
-	flex-shrink: 0;
-	flex-basis: ${props => (props.vertical ? '17rem' : `calc(${getVariable('verticalBase')(props)} * 10)`)};
-	margin-right: ${props => (props.vertical ? '0' : '0.5rem')};
+const CarouselSlot = styled(Col)`
+	${(props) => {
+		if (!props.vertical) {
+			return css`
+				padding: 0 0.25rem;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			
+				&:last-child {
+					padding-right: 0;
+				}
+			`;
+		}
+
+		return css`
+			padding: 0;
+		`;
+	}}
+	
 `;
 
 export {

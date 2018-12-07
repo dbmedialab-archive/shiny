@@ -6,7 +6,7 @@ import { WithoutMouseEventsCarouselStory } from './withoutMouseEvents';
 import { WithCustomHeaderCarouselStory } from './withCustomHeader';
 
 export default () => {
-	storiesOf('Web App Components|Carousels')
+	storiesOf('Web App Components|Carousel')
 		.addDecorator(StorybookPaddedGrid)
 		.add('... horizontal', HorizontalCarouselStory)
 		.add('... vertical', VerticalCarouselStory)

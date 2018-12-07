@@ -12,7 +12,7 @@ import {
 } from './error';
 
 import loaders from './Loaders';
-import carousels from './Carousels';
+import carousel from './Carousel';
 
 export default () => {
 	loaders();
@@ -29,5 +29,5 @@ export default () => {
 		.add('AdditionalInfoAndCallbackError', AdditionalInfoAndCallbackError)
 		.add('SvgAndInfoError', SvgAndInfoError);
 
-	carousels();
+	carousel();
 };
