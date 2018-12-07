@@ -32,7 +32,6 @@ const WithCustomHeaderCarouselStory = () => {
 		/>
 	));
 
-	const customHeading = <CustomHeader>Demo carousel (with custom heading)</CustomHeader>;
 
 	return (
 		<section>
@@ -41,7 +40,7 @@ const WithCustomHeaderCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel heading={customHeading}>
+					<Carousel Heading={CustomHeader} heading="Demo carousel (with custom heading">
 						{children}
 					</Carousel>
 				</Row>
@@ -50,13 +49,13 @@ const WithCustomHeaderCarouselStory = () => {
 			<Heading>Usage</Heading>
 			<Code language="jsx">
 				{`
-import { 
-	TrysilPlug, 
+import {
+	TrysilPlug,
 	Carousel,
 	Kicker
  } from '@aller/shiny';
 
-<Carousel label={() => <Kicker>Custom Header</Kicker>}>
+<Carousel Heading={Kicker} heading="Custom Heading"}>
 	<TrysilPlug
 		title='Test title 1'
 		image='https://via.placeholder.com/250x125'
