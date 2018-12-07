@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { getVariable, getColor } from '../../utils';
+import { getVariable, getColor } from '../utils';
 
 export const CarouselButton = styled.button`
 	-webkit-tap-highlight-color: transparent;

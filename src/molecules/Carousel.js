@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 
 import { SmallPlugHeading as DefaultHeading } from '../atoms/PlugHeading';
 import { FontIcon } from '../atoms/FontIcon';
-import {
-	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList, CarouselBar,
-} from '../atoms/carousel';
+import { CarouselSlot } from '../atoms/CarouselSlot';
+import { CarouselSection } from '../atoms/CarouselSection';
+import { CarouselButton } from '../atoms/CarouselButton';
+import { CarouselSlotList } from '../atoms/CarouselSlotList';
+import { CarouselBar } from '../atoms/CarouselBar';
 
 class Carousel extends React.Component {
 	constructor(props) {
