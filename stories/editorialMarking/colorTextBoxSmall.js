@@ -12,7 +12,7 @@ export default () => (
 			<Col xs={12}>
 				<HugeHeading>Description</HugeHeading>
 				<Heading>Demo</Heading>
-				<ColorTextBox>
+				<ColorTextBox size="small">
 					Helstekt kalkun er en selvfølge på
 					middagsbordet ved Thanksgiving, jul
 					og nyttår! For en smakfull og saftig
@@ -24,7 +24,7 @@ export default () => (
 					{`
 import { ColorTextBox } from '@aller/shiny';
 
-<ColorTextBox textColor="white" bgColor="primary">
+<ColorTextBox size="small">
 	Lorem ipsum dolor sit amet,
 	consectetur adipisicing elit.
 	Deserunt doloribus ducimus
