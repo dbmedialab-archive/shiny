@@ -55,7 +55,7 @@ import {
 	Kicker
  } from '@aller/shiny';
 
-<Carousel Heading={Kicker} heading="Custom Heading"}>
+<Carousel Heading={Kicker} heading="Custom Heading">
 	<TrysilPlug
 		title='Test title 1'
 		image='https://via.placeholder.com/250x125'
