@@ -14,7 +14,6 @@ import { ScrollArrowsStory } from './ScrollArrowsStory';
 import { ScrollArrowsNestedPaddingStory } from './ScrollArrowsNestedPaddingStory';
 import { ScrollArrowsSubLevelStory } from './ScrollArrowsSubLevelStory';
 import { ScrollArrowsGradientBackground } from './ScrollArrowsGradientBackgroundStory';
-import { CarouselStory } from './Carousel';
 
 export default () => {
 	storiesOf('Link Bars|VerticalLinkBar', module)
@@ -39,8 +38,4 @@ export default () => {
 		.add('... which should adjust for nested padding', ScrollArrowsNestedPaddingStory)
 		.add('... which is not a top level component', ScrollArrowsSubLevelStory)
 		.add('... which have gradient background', ScrollArrowsGradientBackground);
-
-	storiesOf('Link Bars|Carousel', module)
-		.addDecorator(StorybookPaddedGrid)
-		.add('... which is default', CarouselStory);
 };

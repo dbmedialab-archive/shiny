@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { FontIcon } from '../../atoms/FontIcon';
 import {
-	CarouselContainer, CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
+	CarouselSlot, CarouselSection, CarouselButton, CarouselSlotList,
 } from './styles';
 
 class Carousel extends React.Component {
@@ -196,26 +196,22 @@ class Carousel extends React.Component {
 			<Fragment>
 				{label}
 				<CarouselSection vertical={vertical}>
-					<CarouselContainer
-						onScroll={this.onScroll}
+					<CarouselSlotList
+						onMouseDown={this.dragStarted}
+						onMouseMove={this.drag}
+						onMouseUp={this.dragFinished}
+						onMouseLeave={this.dragFinished}
+						pageIsTurning={pageIsTurning}
 						vertical={vertical}
+						onScroll={this.onScroll}
+						ref={this.carouselContentEl}
 					>
-						<CarouselSlotList
-							onMouseDown={this.dragStarted}
-							onMouseMove={this.drag}
-							onMouseUp={this.dragFinished}
-							onMouseLeave={this.dragFinished}
-							pageIsTurning={pageIsTurning}
-							vertical={vertical}
-							ref={this.carouselContentEl}
-						>
-							{children.map((child, i) => (
-								<CarouselSlot key={i} {...this.props}>
-									{child}
-								</CarouselSlot>
-							))}
-						</CarouselSlotList>
-					</CarouselContainer>
+						{children.map((child, i) => (
+							<CarouselSlot key={i} {...this.props}>
+								{child}
+							</CarouselSlot>
+						))}
+					</CarouselSlotList>
 					{prevArrowVisible && (
 						<CarouselButton vertical={vertical} onClick={() => this.doSliding('prev')}>
 							<FontIcon name="arrow-alt-left" size={3} />

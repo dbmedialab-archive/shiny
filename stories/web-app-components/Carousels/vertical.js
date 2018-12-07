@@ -1,14 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
-import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { DemoContainer } from '../storybook-components';
-import { TrysilPlug } from '../../src';
-import { Carousel } from '../../src/molecules/Carousel';
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
-import { Kicker } from '../../src/atoms/Kicker';
+import { Code } from '../../../src/atoms/Code';
+import { Heading, HugeHeading } from '../../../src/atoms/Heading';
+import { DemoContainer } from '../../storybook-components';
+import { TrysilPlug } from '../../../src';
+import { Carousel } from '../../../src/molecules/Carousel';
+import { Row } from '../../../src/atoms/Row';
+import { Col } from '../../../src/atoms/Col';
 
 const prototypeItem = {
 	title: 'Item',
@@ -16,11 +14,7 @@ const prototypeItem = {
 	url: 'http://www.example.com/',
 };
 
-const CustomHeader = styled(Kicker)`
-	margin-bottom: 1rem;
-`;
-
-const CarouselStory = () => {
+const VerticalCarouselStory = () => {
 	const testItems = Array(10).fill(prototypeItem);
 
 	const children = testItems.map((item, i) => (
@@ -33,8 +27,6 @@ const CarouselStory = () => {
 		/>
 	));
 
-	const customHeader = <CustomHeader>Demo vertical carousel (no mouse events)</CustomHeader>;
-
 	return (
 		<section>
 			<HugeHeading>Carousel</HugeHeading>
@@ -42,14 +34,8 @@ const CarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Carousel label="Demo horizontal carousel (with mouse events)">
-						{children}
-					</Carousel>
-				</Row>
-
-				<Row>
 					<Col md={5} xs={12}>
-						<Carousel vertical withMouseEvents={false} label={customHeader}>
+						<Carousel vertical label="Demo vertical carousel">
 							{children}
 						</Carousel>
 					</Col>
@@ -64,7 +50,7 @@ import {
 	Carousel,
  } from '@aller/shiny';
 
-<Carousel vertical withMouseEvents={false}>
+<Carousel vertical>
 	<TrysilPlug
 		title='Test title 1'
 		image='https://via.placeholder.com/250x125'
@@ -79,4 +65,4 @@ import {
 	);
 };
 
-export { CarouselStory };
+export { VerticalCarouselStory };

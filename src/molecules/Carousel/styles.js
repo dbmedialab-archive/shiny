@@ -2,41 +2,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { getVariable, getColor } from '../../utils';
 
-const CarouselContainer = styled.div`
-	${(props) => {
-		const base = css`
-			* {
-				user-select: none;
-				-webkit-app-region: no-drag;
-				-webkit-user-drag: none;
-				cursor: pointer;
-				outline: none;
-			}
-
-			img {
-				pointer-events: none;
-			}
-		`;
-
-		let directional;
-
-		if (props.vertical) {
-			directional = css`
-				height: 100%;
-
-				& > div {
-					display: flex;
-					height: 100%;
-				}
-			`;
-		}
-
-		return css`
-			${base};
-			${directional};
-		`;
-	}};
-`;
 
 const CarouselButton = styled.button`
 	-webkit-tap-highlight-color: transparent;
@@ -85,6 +50,18 @@ const CarouselSlotList = styled.div`
 			&::-webkit-scrollbar {
 				display: none;
 			}
+
+			* {
+				user-select: none;
+				-webkit-app-region: no-drag;
+				-webkit-user-drag: none;
+				cursor: pointer;
+				outline: none;
+			}
+
+			img {
+				pointer-events: none;
+			}
 		`;
 
 		let directional;
@@ -96,6 +73,8 @@ const CarouselSlotList = styled.div`
 				overflow-y: auto;
 				position: absolute;
 				flex-direction: column;
+				display: flex;
+				height: 100%;
 			`;
 		} else {
 			directional = css`
@@ -120,7 +99,6 @@ const CarouselSlot = styled.div`
 `;
 
 export {
-	CarouselContainer,
 	CarouselButton,
 	CarouselSection,
 	CarouselSlotList,
