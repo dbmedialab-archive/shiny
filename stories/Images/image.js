@@ -5,7 +5,7 @@ import { Image } from '../../src';
 
 const ImageStory = () => {
 	return (
-		<Image src="https://picsum.photos/640/480" />
+		<Image src="https://via.placeholder.com/640x480" />
 	);
 };
 
