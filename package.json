@@ -34,7 +34,7 @@
     "emotion-theming": "10.0.2",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.1",
-    "lazysizes": "4.1.4",
+    "lazysizes": "4.1.5",
     "lodash.isinteger": "^4.0.4",
     "parse-color": "1.0.0",
     "picturefill": "3.0.3",
