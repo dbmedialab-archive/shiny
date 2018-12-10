@@ -21,7 +21,7 @@ export default () => (
 			url="https://example.com"
 			labels={[
 				{
-					text: 'Opinions',
+					text: 'Some label',
 					backgroundColor: 'orange',
 				},
 				{
