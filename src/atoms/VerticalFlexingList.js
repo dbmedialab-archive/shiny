@@ -19,7 +19,7 @@ const VerticalFlexingList = styled.ul`
 		width: auto;
 	}
 
-	${LinkBarDropdown} + div & {
+	${LinkBarDropdown} ~ div & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
 		min-width: calc(14 * ${getVariable('horizontalBase')});
