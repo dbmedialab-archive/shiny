@@ -24,16 +24,18 @@ const Heading = styled.h1`
 `;
 
 const CloseButton = styled(BorderedButton)`
-	font-size: 1.1rem;
-	margin: 0 0 1.28rem 0;
-	background: transparent;
-	border: 1px solid transparent;
-
-	&:focus, &:hover {
-		outline: none;
+	&& {
+		font-size: 1.1rem;
+		margin: 0 0 1.28rem 0;
 		background: transparent;
-		border: 1px solid ${props => getColor('grayTint')};
-		color: inherit;
+		border: 1px solid transparent;
+
+		&:focus, &:hover {
+			outline: none;
+			background: transparent;
+			border: 1px solid ${props => getColor('grayTint')};
+			color: inherit;
+		}
 	}
 `;
 
