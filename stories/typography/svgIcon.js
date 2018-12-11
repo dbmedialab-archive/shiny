@@ -132,6 +132,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="oppskrift-loader" text="oppskrift-loader" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="play" text="play" />
+			</Col>
 		</Row>
 	</section>
 );

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+
 import { SvgIconWrapper } from './SvgIconWrapper';
 
 import { ActivityTime        } from './ActivityTime';
@@ -32,8 +34,7 @@ import { CrossedVideoCamera  } from './CrossedVideoCamera';
 import { ExclamationMark     } from './ExclamationMark';
 import { YouTube             } from './YouTube';
 import { NotFound            } from './NotFound';
-import { PlayIcon 			 } from './Play';
-
+import { Play                } from './Play';
 
 const SvgIcon = (props) => {
 	const {
@@ -116,7 +117,7 @@ const SvgIcon = (props) => {
 					case 'youtube':
 						return <YouTube {...props} />;
 					case 'play':
-						return <PlayIcon {...props} />;
+						return <Play {...props} />;
 					default:
 						return null;
 					}
@@ -140,4 +141,17 @@ SvgIcon.defaultProps = {
 	'className': '',
 };
 
-export { SvgIcon };
+const AbsolutelyCenteredSvgIcon = styled(SvgIcon)`
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+`;
+
+export {
+	AbsolutelyCenteredSvgIcon,
+	SvgIcon,
+};
