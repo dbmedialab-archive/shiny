@@ -19,6 +19,7 @@ before_script:
 script:
   - |
     if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
+      firefox -v
       echo "Sending PR snapshots to Percy";
       npm run snapshot;
     elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
@@ -30,4 +31,3 @@ script:
       echo $TRAVIS_PULL_REQUEST;
     fi
   - npm test
-
