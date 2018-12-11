@@ -15,6 +15,8 @@ export default {
 
 	largeWidth: '750px', // deprecated, use theme.flexboxgrid.breakpoints.sm instead
 
+	uiLargeSize: '2.0rem',
+	uiLargeLineHeight: '2.5rem',
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
 	uiSmallSize: '1.3rem',
