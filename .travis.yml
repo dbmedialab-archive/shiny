@@ -1,3 +1,6 @@
+addons:
+  firefox: "63.0"
+
 language: node_js
 node_js:
   - "node"
