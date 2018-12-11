@@ -6,6 +6,7 @@ import { Picture } from './Picture';
 import { Image } from '../atoms/Image';
 
 const Figure = styled.figure`
+	order: ${props => props.order};
 	position: relative;
 	background-color: ${props => props.backgroundColor};
 	display: block;
@@ -34,6 +35,8 @@ class LazyProgressiveImage extends PureComponent {
 		preventBlur: propTypes.bool,
 		/** Option to fadein the image. */
 		fadeIn: propTypes.bool,
+		/** Customize the flexbox order of the component */
+		order: propTypes.number,
 	}
 
 	static defaultProps = {
@@ -41,6 +44,7 @@ class LazyProgressiveImage extends PureComponent {
 		alt: 'Artikkelbilde.',
 		backgroundColor: '#ececec',
 		fadeIn: false,
+		order: 0,
 	}
 
 	componentDidMount() {
@@ -56,13 +60,13 @@ class LazyProgressiveImage extends PureComponent {
 			fadeIn,
 			children,
 			preventBlur,
-			backgroundColor,
+			...rest
 		} = this.props;
 
 		return (
 			<Figure
-				backgroundColor={backgroundColor}
 				paddingBottom={ratio * 100}
+				{...rest}
 			>
 				<Picture alt={alt} preventBlur={preventBlur} fadeIn={fadeIn}>
 					{children}
