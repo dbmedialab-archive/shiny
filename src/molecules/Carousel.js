@@ -267,7 +267,7 @@ Carousel.defaultProps = {
 		md: 3,
 	},
 	verticalHeight: '64rem',
-	horizontalArrowOffset: '-10rem',
+	horizontalArrowOffset: '-7rem',
 };
 
 export { Carousel };
