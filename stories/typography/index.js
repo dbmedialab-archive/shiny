@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 import heading from './heading';
+import multilineEllipsisHeading from './multilineEllipsisHeading';
 import cite from './cite';
 import bodyText from './bodyText';
 import lunchButton from './lunch-button';
@@ -29,7 +30,8 @@ export default () => {
 		.add('PlugHeading', plugHeading)
 		.add('Underlined Heading', underlinedHeading)
 		.add('DymoHeading', dymoHeading)
-		.add('Front Heading', frontHeading);
+		.add('Front Heading', frontHeading)
+		.add('Multiline ellipsis Heading', multilineEllipsisHeading);
 
 	storiesOf('Typography|Body text', module)
 		.addDecorator(StorybookPaddedGrid)
