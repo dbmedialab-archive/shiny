@@ -35,6 +35,19 @@ const ProtoHeading = styled.h1`
 					calc(${props.marginBottomFactor} * ${headingDefaultLineHeight})
 				;
 
+				${props.maxLines && `
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					white-space: normal;
+					overflow: hidden;
+					-webkit-line-clamp: ${props.maxLines};
+					max-height: calc(${headingDefaultLineHeight} * (${props.maxLines} + 0.1));
+
+					@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}rem) {
+						max-height: calc(${headingUpLineHeight} * (${props.maxLines} + 0.1));
+					}
+				`};
+
 				@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}rem) {
 					font-size: ${headingUpSize};
 					line-height: ${headingUpLineHeight};
@@ -54,12 +67,14 @@ ProtoHeading.propTypes = {
 	marginBottomFactor: propTypes.number,
 	defaultSize: propTypes.string,
 	upSize: propTypes.string,
+	maxLines: propTypes.number,
 };
 ProtoHeading.defaultProps = {
 	marginTopFactor: 3/4,
 	marginBottomFactor: 1/2,
 	defaultSize: 'Regular',
 	upSize: 'Large',
+	maxLines: 0,
 };
 
 const Heading = ({ size, ...rest }) => {
