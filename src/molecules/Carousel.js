@@ -79,13 +79,11 @@ class Carousel extends React.Component {
 	}
 
 	setCarouselLength(carouselContentDom) {
-		const dimensions = carouselContentDom.getBoundingClientRect();
-
 		const { vertical } = this.props;
 
 		this.setState({
 			carouselLength: vertical ? carouselContentDom.scrollHeight : carouselContentDom.scrollWidth,
-			pageLength: vertical ? dimensions.height : dimensions.width,
+			pageLength: vertical ? carouselContentDom.clientHeight : carouselContentDom.clientWidth,
 		});
 	}
 
