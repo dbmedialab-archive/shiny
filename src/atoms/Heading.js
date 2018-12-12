@@ -70,7 +70,7 @@ ProtoHeading.defaultProps = {
 	marginBottomFactor: 1/2,
 	defaultSize: 'Regular',
 	upSize: 'Large',
-	maxLines: null,
+	maxLines: 0,
 };
 
 const Heading = ({ size, ...rest }) => {
