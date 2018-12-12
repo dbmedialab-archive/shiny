@@ -42,7 +42,7 @@ const ProtoHeading = styled.h1`
 					overflow: hidden;
 					-webkit-line-clamp: ${props.maxLines};
 					max-height: calc(${headingDefaultLineHeight} * (${props.maxLines} + 0.1));
-				`}
+				`};
 
 				@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}rem) {
 					font-size: ${headingUpSize};
