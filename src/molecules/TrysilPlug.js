@@ -45,12 +45,10 @@ const PlugLink = styled(BlockLink)`
 	}
 `;
 
-// @TODO Use sizes from theme
 const Description = styled.p`
 	color: ${getColor('type')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${getVariable('uiRegularLineHeight')};
-	margin: 0 0 ${getVariable('verticalBase')};
 `;
 
 const TrysilPlug = ({
