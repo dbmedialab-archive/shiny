@@ -14,8 +14,8 @@ export const variables = {
 	horizontalBase: '1.6rem',
 	verticalBase: '2.4rem',
 
-	headingSmallSize: '1.8rem',
-	headingSmallLineHeight: '2.4rem',
+	headingSmallSize: '1.6rem',
+	headingSmallLineHeight: '2.0rem',
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.4rem',
 	headingRegularSize: '2.0rem',
