@@ -20,7 +20,15 @@ import { AbsolutelyCenteredSvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
 
-const PlayIcon = props => <AbsolutelyCenteredSvgIcon color="primary" name="play" value={1} size={5} {...props} />;
+const PlayIcon = ({ color }, props) => (
+	<AbsolutelyCenteredSvgIcon
+		color={color}
+		name="play"
+		value={1}
+		size={5}
+		{...props}
+	/>
+);
 
 const PlugLink = styled(BlockLink)`
 	display: flex;
@@ -83,6 +91,7 @@ const TrysilPlug = ({
 	attributes,
 	float,
 	displayPlayIcon,
+	playIconColor,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -100,7 +109,7 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
-						{displayPlayIcon && <PlayIcon />}
+						{displayPlayIcon && <PlayIcon color={playIconColor} />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
@@ -179,6 +188,7 @@ TrysilPlug.propTypes = {
 	/** Disable the blur effect on lazily loaded images */
 	preventBlur: PropTypes.bool,
 	displayPlayIcon: PropTypes.bool,
+	playIconColor: PropTypes.string,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -198,6 +208,7 @@ TrysilPlug.defaultProps = {
 	preventBlur: false,
 	placeholderUrl: '',
 	displayPlayIcon: false,
+	playIconColor: 'primary',
 };
 
 export { TrysilPlug };
