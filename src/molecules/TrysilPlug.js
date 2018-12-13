@@ -53,6 +53,7 @@ const Description = styled.p`
 	color: ${getColor('type')};
 	font-size: ${getVariable('uiRegularSize')};
 	line-height: ${getVariable('uiRegularLineHeight')};
+	margin-top: 0;
 `;
 Description.propTypes = {
 	order: PropTypes.number,
