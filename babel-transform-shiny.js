@@ -39,6 +39,7 @@ function getMapping() {
 		UnderlinedHugeHeading: '../atoms/UnderlinedHeading',
 		FrontSmallHeading: '../atoms/FrontHeading',
 		FrontMediumHeading: '../atoms/FrontHeading',
+		FrontRegularHeading: '../atoms/FrontHeading',
 		FrontLargeHeading: '../atoms/FrontHeading',
 		FrontXLargeHeading: '../atoms/FrontHeading',
 		FrontHugeHeading: '../atoms/FrontHeading',

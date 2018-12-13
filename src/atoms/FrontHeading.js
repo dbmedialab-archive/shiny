@@ -41,6 +41,9 @@ const FrontMediumHeading = styled(MediumHeading)`
 		font-size: ${props => getVariable('headingMediumSize')(props)};
 	}
 `;
+
+const FrontRegularHeading = styled(MediumHeading)`${FheadStyle}`;
+
 const FrontLargeHeading = styled(LargeHeading)`
 	${FheadStyle}
 	font-size: ${props => getVariable('headingMediumSize')(props)};
@@ -58,6 +61,7 @@ const defaultProps = {
 
 FrontSmallHeading.defaultProps  = Object.assign({}, SmallHeading.defaultProps, defaultProps);
 FrontMediumHeading.defaultProps = Object.assign({}, MediumHeading.defaultProps, defaultProps);
+FrontRegularHeading.defaultProps = Object.assign({}, FrontRegularHeading.defaultProps, defaultProps);
 FrontLargeHeading.defaultProps  = Object.assign({}, LargeHeading.defaultProps, defaultProps);
 FrontXLargeHeading.defaultProps = Object.assign({}, XLargeHeading.defaultProps, defaultProps);
 FrontHugeHeading.defaultProps   = Object.assign({}, HugeHeading.defaultProps, defaultProps);
@@ -68,4 +72,5 @@ export {
 	FrontLargeHeading,
 	FrontXLargeHeading,
 	FrontHugeHeading,
+	FrontRegularHeading,
 };

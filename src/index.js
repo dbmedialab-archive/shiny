@@ -42,6 +42,7 @@ export {
 export {
 	FrontSmallHeading,
 	FrontMediumHeading,
+	FrontRegularHeading,
 	FrontLargeHeading,
 	FrontXLargeHeading,
 	FrontHugeHeading,
