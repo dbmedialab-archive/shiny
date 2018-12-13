@@ -8,6 +8,7 @@ import { getColor, getVariable } from '../utils';
 import { Heading } from './Heading';
 
 const Hgroup = styled.hgroup`
+	order: ${props => props.order};
 	/* Fixes vertical spacing */
 	display: flex;
 `;
@@ -100,6 +101,7 @@ const DymoHeading = (props) => {
 		children,
 		skin,
 		title,
+		order,
 		...rest
 	} = props;
 
@@ -109,7 +111,7 @@ const DymoHeading = (props) => {
 
 	/* eslint-disable react/no-danger */
 	return (
-		<Hgroup>
+		<Hgroup order={order}>
 			<FormattedHeading {...rest} needsPadding={skin.needsPadding}>
 				<PaddedText
 					skin={{ ...skin }}
@@ -123,6 +125,7 @@ const DymoHeading = (props) => {
 DymoHeading.propTypes = {
 	children: propTypes.node,
 	hasImage: propTypes.bool,
+	order: propTypes.number,
 	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
 	skin: propTypes.shape({
 		backgroundColor: shinyPropTypes.color,
@@ -137,6 +140,7 @@ DymoHeading.propTypes = {
 DymoHeading.defaultProps = {
 	children: null,
 	hasImage: false,
+	order: 0,
 	size: 'large',
 	skin: {
 		backgroundColor: 'transparent',
