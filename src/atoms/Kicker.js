@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { getColor, getVariable } from '../utils';
 
 const Kicker = styled.h1`
+	order: ${props => props.order};
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
@@ -19,10 +21,18 @@ const Kicker = styled.h1`
 		background-color: ${props => getColor((props.backgroundColor || props.color), props.backgroundHoverShade)};
 	}
 `;
+Kicker.propTypes = {
+	color: PropTypes.string,
+	backgroundColor: PropTypes.string,
+	backgroundHoverShade: PropTypes.oneOf(['dark', '', 'light', 'lighter']),
+	order: PropTypes.number,
+	textColor: PropTypes.string,
+};
 Kicker.defaultProps = {
 	color: 'primary', // Deprecated
 	backgroundColor: 'primary', // Deprecated
 	backgroundHoverShade: 'dark',
+	order: 0,
 	textColor: 'white',
 };
 

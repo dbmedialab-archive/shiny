@@ -1,31 +1,40 @@
-import React, { Fragment } from 'react';
-import propTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 import { Label  } from '../atoms/Label';
 
-const Labels = ({ labels, ...props }) => (
-	<Fragment>
+const Footer = styled.footer`
+	order: ${props => props.order};
+`;
+Footer.propTypes = {
+	order: PropTypes.number,
+};
+Footer.defaultProps = {
+	order: 0,
+};
+
+const Labels = ({ labels, ...rest }) => (
+	<Footer {...rest}>
 		{labels.map(label => (
 			<Label
 				key={label.text}
 				backgroundColor={label.backgroundColor}
 				backgroundHoverShade={label.backgroundHoverShade}
 				textColor={label.textColor}
-				fontSize={label.fontSize}
-				{...props}
 			>{label.text}
 			</Label>
 		))
 		}
-	</Fragment>
+	</Footer>
 );
 
 Labels.propTypes = {
-	labels: propTypes.arrayOf(propTypes.shape({
-		backgroundColor: propTypes.string,
-		backgroundHoverShade: propTypes.oneOf(['', 'dark', 'light', 'lighter']),
-		textColor: propTypes.string,
-		text: propTypes.string,
+	labels: PropTypes.arrayOf(PropTypes.shape({
+		backgroundColor: PropTypes.string,
+		backgroundHoverShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
+		textColor: PropTypes.string,
+		text: PropTypes.string,
 	})).isRequired,
 };
 
