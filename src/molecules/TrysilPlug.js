@@ -30,13 +30,6 @@ const PlayIcon = ({ color }, props) => (
 	/>
 );
 
-PlayIcon.propTypes = {
-	color: PropTypes.string,
-};
-PlayIcon.defaultProps = {
-	color: 'primary',
-};
-
 const PlugLink = styled(BlockLink)`
 	display: flex;
 	flex-direction: column;
@@ -195,6 +188,7 @@ TrysilPlug.propTypes = {
 	/** Disable the blur effect on lazily loaded images */
 	preventBlur: PropTypes.bool,
 	displayPlayIcon: PropTypes.bool,
+	playIconColor: PropTypes.string,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -214,6 +208,7 @@ TrysilPlug.defaultProps = {
 	preventBlur: false,
 	placeholderUrl: '',
 	displayPlayIcon: false,
+	playIconColor: 'primary',
 };
 
 export { TrysilPlug };
