@@ -25,7 +25,7 @@ export default {
 	uiTinyLineHeight: '1.4rem',
 
 	headingSmallSize: '1.6rem',
-	headingSmallLineHeight: '2.2rem',
+	headingSmallLineHeight: '2.0rem',
 	headingMediumSize: '1.8rem',
 	headingMediumLineHeight: '2.4rem',
 	headingRegularSize: '2.0rem',
