@@ -20,7 +20,22 @@ import { AbsolutelyCenteredSvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
 
-const PlayIcon = props => <AbsolutelyCenteredSvgIcon color="primary" name="play" value={1} size={5} {...props} />;
+const PlayIcon = ({ color }, props) => (
+	<AbsolutelyCenteredSvgIcon
+		color={color}
+		name="play"
+		value={1}
+		size={5}
+		{...props}
+	/>
+);
+
+PlayIcon.propTypes = {
+	color: PropTypes.string,
+};
+PlayIcon.defaultProps = {
+	color: 'primary',
+};
 
 const PlugLink = styled(BlockLink)`
 	display: flex;
@@ -101,7 +116,7 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
-						{displayPlayIcon && <PlayIcon color={playIconColor ? playIconColor : 'primary'} />}
+						{displayPlayIcon && <PlayIcon color={playIconColor} />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
