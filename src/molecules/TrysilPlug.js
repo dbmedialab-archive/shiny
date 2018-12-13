@@ -83,6 +83,7 @@ const TrysilPlug = ({
 	attributes,
 	float,
 	displayPlayIcon,
+	playIconColor,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -100,7 +101,7 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
-						{displayPlayIcon && <PlayIcon />}
+						{displayPlayIcon && <PlayIcon color={playIconColor ? playIconColor : 'primary'} />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
