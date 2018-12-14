@@ -26,7 +26,7 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "@emotion/core": "10.0.4",
+    "@emotion/core": "10.0.5",
     "@emotion/styled": "10.0.4",
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
