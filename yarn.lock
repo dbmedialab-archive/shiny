@@ -4088,10 +4088,10 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
-emotion-theming@10.0.4:
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.4.tgz#efaf77e71e80793a4e31a116c5520c2ab223b6d2"
-  integrity sha512-pVktvH1rsLuAYAb3Uc2aLJeB/cwPr9otSjU0tj2d2p73QuknH9gZ06vyqIeNY3DAslyKht9zTCdlv5pX1mGnBA==
+emotion-theming@10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.5.tgz#dfd783a4b45c7142cbe1d68d03a0b934a25e452f"
+  integrity sha512-mTXZuSsGVW00HY/rVvBTn9lkwFWVCzJZymx52c4UtVIKbj0xVNfjuTZARYmOqbJDK3QZm7aBIbTgyTj/IJ2s2g==
   dependencies:
     "@emotion/weak-memoize" "0.2.2"
     hoist-non-react-statics "^2.3.1"
