@@ -1563,6 +1563,17 @@
     "@emotion/utils" "0.11.1"
     csstype "^2.5.7"
 
+"@emotion/serialize@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.3.tgz#c4af2d96e3ddb9a749b7b567daa7556bcae45af2"
+  integrity sha512-6Q+XH/7kMdHwtylwZvdkOVMydaGZ989axQ56NF7urTR7eiDMLGun//pFUy31ha6QR4C6JB+KJVhZ3AEAJm9Z1g==
+  dependencies:
+    "@emotion/hash" "0.7.1"
+    "@emotion/memoize" "0.7.1"
+    "@emotion/unitless" "0.7.3"
+    "@emotion/utils" "0.11.1"
+    csstype "^2.5.7"
+
 "@emotion/serialize@^0.9.1":
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.9.1.tgz#a494982a6920730dba6303eb018220a2b629c145"
@@ -1588,23 +1599,23 @@
     "@emotion/serialize" "^0.9.1"
     "@emotion/utils" "^0.8.2"
 
-"@emotion/styled-base@^10.0.4":
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.4.tgz#7b8243755a9757f4a0f5504b6b3431c84a0008e2"
-  integrity sha512-GQl1nv31ASgjCt0FVR/0NyjXXZXuYVDjgrpNi1bPNosSwAKKAMddqJtt6X/f6A2KhmCfresDjscXs5NrdgKAGA==
+"@emotion/styled-base@^10.0.5":
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.5.tgz#3bc29e7efc4c04190de4f84fda9dc7e6dc18a885"
+  integrity sha512-rnz0cg+gZttd4zWb6efH7jZojozou1OtcqhjSvd79v2Iu36zJcD0USzefy9k9nVtPmvyLXYpM+zxqFJXtnKiCQ==
   dependencies:
     "@emotion/is-prop-valid" "0.7.3"
-    "@emotion/serialize" "^0.11.2"
+    "@emotion/serialize" "^0.11.3"
     "@emotion/utils" "0.11.1"
     object-assign "^4.1.1"
 
-"@emotion/styled@10.0.4":
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.4.tgz#354d5cac90a4ead45c7d6566f3257b5117d7e30f"
-  integrity sha512-0iatvVUrgNjU8rl3cl2iMvPqc7lqyHw45dUwfSGHJIV13l1xO8+32IV/AQ34/oOlZlG8U7NDCG8qSzos2pAy+w==
+"@emotion/styled@10.0.5":
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.5.tgz#f742dd6f9f5f4b2fde275534771f69419a7549bd"
+  integrity sha512-aCBYANdi57jG0Zqk1EfbpHkOTvl9iftd1uGc4GyFaBzviWfWSsKu7pdkJ6vNwhpSn7TEj32WM1D4Z4SRk3GHfQ==
   dependencies:
-    "@emotion/styled-base" "^10.0.4"
-    babel-plugin-emotion "^10.0.4"
+    "@emotion/styled-base" "^10.0.5"
+    babel-plugin-emotion "^10.0.5"
 
 "@emotion/styled@^0.10.6":
   version "0.10.6"
@@ -2655,6 +2666,22 @@ babel-plugin-emotion@10.0.4, babel-plugin-emotion@^10.0.4:
     "@emotion/hash" "0.7.1"
     "@emotion/memoize" "0.7.1"
     "@emotion/serialize" "^0.11.2"
+    babel-plugin-macros "^2.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
+    convert-source-map "^1.5.0"
+    escape-string-regexp "^1.0.5"
+    find-root "^1.1.0"
+    source-map "^0.5.7"
+
+babel-plugin-emotion@^10.0.5:
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.5.tgz#05ec47cde94f984b0b2aebdd41f81876cf9cbb24"
+  integrity sha512-ezct2vKACg4juSV0/A/4QIDJu2+5Sjna/8rX/LXY8D0qG8YEP3fu8pe5FqZ9yFGa8WOJ1sivf3/QKM/5C8naIg==
+  dependencies:
+    "@babel/helper-module-imports" "^7.0.0"
+    "@emotion/hash" "0.7.1"
+    "@emotion/memoize" "0.7.1"
+    "@emotion/serialize" "^0.11.3"
     babel-plugin-macros "^2.0.0"
     babel-plugin-syntax-jsx "^6.18.0"
     convert-source-map "^1.5.0"
