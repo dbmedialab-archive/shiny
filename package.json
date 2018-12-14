@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@emotion/core": "10.0.4",
-    "@emotion/styled": "10.0.4",
+    "@emotion/styled": "10.0.5",
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
     "debug": "3.2.6",
