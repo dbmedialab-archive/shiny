@@ -10,7 +10,7 @@ export default {
 
 	uiWeight: 400,
 	uiWeightSemiBold: 600,
-	uiWeightBold: 700,
+	uiWeightBold: 800,
 
 	largeWidth: '750px',
 

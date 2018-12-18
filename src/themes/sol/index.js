@@ -6,7 +6,7 @@ import variables from './variables';
 // TODO: A pemanent solution for the a underline should be made.
 //       se: https://github.com/dbmedialab/wolverine-frontend/issues/460
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800');
 
 	${cssReset}
 
