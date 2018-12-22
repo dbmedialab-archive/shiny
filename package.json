@@ -30,7 +30,7 @@
     "@emotion/styled": "10.0.5",
     "@maji/react-prism": "1.0.1",
     "aurora-deep-slice-merge": "github:soldotno/aurora-deep-slice-merge",
-    "debug": "3.2.6",
+    "debug": "4.1.1",
     "emotion-theming": "10.0.5",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.1",
