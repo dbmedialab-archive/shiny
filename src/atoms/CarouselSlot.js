@@ -14,17 +14,12 @@ export const CarouselSlot = styled(Col)`
 			}
 		`;
 
-		let directional;
-
-		if (!props.vertical) {
-			directional = css`
+		const directional = (!props.vertical)
+			? css`
 				margin-right: calc(1/2 * ${getVariable('horizontalBase')(props)});
-			`;
-		} else {
-			directional = css`
+			` : css`
 				margin-bottom: calc(1/2 * ${getVariable('verticalBase')(props)});
 			`;
-		}
 
 		return css`
 			${base};
