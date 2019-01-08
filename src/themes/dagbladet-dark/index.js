@@ -13,6 +13,9 @@ const colors = merge(dagbladet.colors, {
 
 		splashBackground: 'primaryDark',
 		splashText: 'white',
+
+		calmBackground: 'darknessLight',
+		calmText: 'type',
 	}),
 });
 
