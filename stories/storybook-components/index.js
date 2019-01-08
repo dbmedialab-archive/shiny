@@ -2,11 +2,12 @@
 
 import styled from '@emotion/styled';
 import propTypes from 'prop-types';
+import { getColor, getVariable } from '../../src/utils';
 
 export const DemoContainer = styled.article`
-	padding: 3rem;
-	background: ${props => props.background};
-	margin-bottom: 2rem;
+	padding: calc(1/2 * ${getVariable('verticalBase')}) ${getVariable('horizontalBase')};
+	margin: 0 0 ${getVariable('verticalBase')};
+	background: ${getColor('calmBackground')};
 
 	&:after {
 		content: " ";
@@ -17,9 +18,9 @@ export const DemoContainer = styled.article`
 DemoContainer.displayName = 'DemoContainer';
 
 DemoContainer.defaultProps = {
-	background: '#f9f9f9',
+	backgroundColor: 'calmBackground',
 };
 
 DemoContainer.propTypes = {
-	background: propTypes.string,
+	backgroundColor: propTypes.string,
 };
