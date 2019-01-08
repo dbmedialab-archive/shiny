@@ -3,6 +3,7 @@ import lightTheme from './light-theme';
 
 import aller from './aller';
 import dagbladet from './dagbladet';
+import dagbladetDark from './dagbladet-dark';
 import dinside from './dinside';
 import kk from './kk';
 import mat from './mat';
@@ -20,6 +21,7 @@ const themes = {
 
 	aller,
 	dagbladet,
+	dagbladetDark,
 	dinside,
 	kk,
 	seher,
