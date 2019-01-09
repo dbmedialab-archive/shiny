@@ -7050,9 +7050,10 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
-polished@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.1.tgz#557ea07e5bcb1b9c7d71935a01d0315831234d48"
+polished@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.2.tgz#7b879a65ab2c89ccefac2b306efdf40d5251e7f9"
+  integrity sha512-rEU+rAGjCw9mve3uOtkjfZqCDfLtCp4YC9Y/xIfYkkcAB5nb8pGXx23UQlWDwlWcHTasb1w9XYAebQw8XWHstQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
