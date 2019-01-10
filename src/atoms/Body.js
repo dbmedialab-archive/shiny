@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { getColor, getVariable } from '../utils';
 
 const Body = styled.body`
+	background: ${getColor('background')};
 	color: ${getColor('type')};
 	font-family: ${getVariable('mainFont')};
 	font-size: ${getVariable('uiRegularSize')};

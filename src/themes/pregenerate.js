@@ -3,10 +3,10 @@ import path from 'path';
 import { themes } from './index';
 
 const themeNames = Object.keys(themes).filter(
-	theme => !['defaultTheme', 'lightTheme'].includes(theme)
+	theme => !['defaultTheme', 'lightTheme', 'dagbladetDark'].includes(theme)
 );
 
-const themeFolderNames = [...themeNames, 'default-theme', 'light-theme'];
+const themeFolderNames = [...themeNames, 'default-theme', 'light-theme', 'dagbladet-dark'];
 
 const prefix = 'module.exports = ';
 const themeLibDir = path.join(__dirname, '..', '..', 'lib', 'themes');
@@ -25,6 +25,9 @@ function getThemeName(folder) {
 	}
 	if (folder === 'light-theme') {
 		return 'lightTheme';
+	}
+	if (folder === 'dagbladet-dark') {
+		return 'dagbladetDark';
 	}
 	return folder;
 }
