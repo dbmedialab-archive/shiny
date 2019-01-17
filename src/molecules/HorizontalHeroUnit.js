@@ -180,8 +180,10 @@ HeroUnit.propTypes = {
 	verticalPadding: PropTypes.bool,
 };
 
+const DefaultHeading = styled.h1``;
+
 HeroUnit.defaultProps = {
-	Heading: ({ children, ...rest }) => <h1 {...rest}>{children}</h1>,
+	Heading: DefaultHeading,
 	image: {},
 	video: {},
 	type: 'image',
