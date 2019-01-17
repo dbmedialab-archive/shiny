@@ -25,6 +25,12 @@ const TagA = styled(TagSpanItem.withComponent('a'))`
 `;
 
 const TagAItem = ({ url, ...rest }) => <TagA href={url} {...rest} />;
+TagAItem.propTypes = {
+	url: PropTypes.string,
+};
+TagAItem.defaultProps = {
+	url: '#',
+};
 
 const Tag = ({ url, title }) => (
 	<React.Fragment>

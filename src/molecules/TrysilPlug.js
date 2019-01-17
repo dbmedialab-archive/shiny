@@ -29,6 +29,13 @@ const PlayIcon = ({ color }, props) => (
 		{...props}
 	/>
 );
+PlayIcon.propTypes = {
+	/** A color name from your theme */
+	color: PropTypes.string,
+};
+PlayIcon.defaultProps = {
+	color: 'type',
+};
 
 const PlugLink = styled(BlockLink)`
 	display: flex;
@@ -130,6 +137,10 @@ TrysilPlug.displayName = 'TrysilPlug';
 TrysilPlug.propTypes = {
 	/** Extra attributes you want on the DOM-node. e.g. data-cxense_Tag */
 	attributes: PropTypes.object, // eslint-disable-line
+	/** Option to fadein the image. */
+	fadeIn: PropTypes.bool,
+	/** Will be passed through to ArticleComponent */
+	float: PropTypes.oneOf(['left', 'right', 'none', 'inline-start', 'inline-end', 'inherit', 'initial', 'unset']),
 	/** Text above the image plug. */
 	kicker: PropTypes.string,
 	/** Main link text. */
@@ -193,6 +204,8 @@ TrysilPlug.propTypes = {
 TrysilPlug.defaultProps = {
 	attributes: {},
 	column: null,
+	fadeIn: false,
+	float: 'initial',
 	kicker: '',
 	title: '',
 	subtitle: '',
