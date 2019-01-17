@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { getColor, getVariable } from '../../src';
@@ -45,6 +46,14 @@ const SeHerDropdownButton = (props) => {
 			<FontIcon name={icon} />
 		</SeHerButton>
 	);
+};
+SeHerDropdownButton.propTypes = {
+	linkText: PropTypes.string,
+	hide: PropTypes.bool,
+};
+SeHerDropdownButton.defaultProps = {
+	linkText: '',
+	hide: false,
 };
 
 const SecondaryBar = styled(HorizontalLinkBar)`
@@ -115,6 +124,20 @@ const SocialItem = styled(LinkBarItem)`
 	align-self: center;
 `;
 const SocialLink = ({ xs, md, ...props }) => <SocialItem {...{ xs, md }}><StyledSocialLink {...props} /></SocialItem>;
+SocialLink.propTypes = {
+	xs: PropTypes.oneOfType(
+		PropTypes.number,
+		PropTypes.bool,
+	),
+	md: PropTypes.oneOfType(
+		PropTypes.number,
+		PropTypes.bool,
+	),
+};
+SocialLink.defaultProps = {
+	xs: null,
+	md: null,
+};
 const MobileMenu = styled(LargeLinkBarDropdown)`
 	margin-right: calc(-1/2 * ${getVariable('horizontalBase')});
 `;

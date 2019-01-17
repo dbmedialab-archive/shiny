@@ -95,9 +95,14 @@ const Heading = ({ size, ...rest }) => {
 	case 'huge':
 		return <ProtoHeading {...rest} defaultSize="Large" upSize="Huge" />;
 	default:
-		// Same as 'large'
 		return <ProtoHeading {...rest} defaultSize="Regular" upSize="Large" />;
 	}
+};
+Heading.propTypes = {
+	size: propTypes.oneOf(['', 'xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
+};
+Heading.defaultProps = {
+	size: 'large',
 };
 
 const XSmallHeading = props => <Heading size="xsmall" {...props} />;

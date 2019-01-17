@@ -55,23 +55,25 @@ const IconWithText = ({
 };
 
 IconWithText.propTypes = {
-	iconSize: PropTypes.number,
-	textSize: PropTypes.number,
-	name: PropTypes.string,
-	text: PropTypes.node,
 	circleText: PropTypes.string,
-	textColor: PropTypes.string,
 	fill: PropTypes.string,
+	iconSize: PropTypes.number,
+	name: PropTypes.string,
+	position: PropTypes.oneOf(['right', 'left']),
+	text: PropTypes.node,
+	textColor: PropTypes.string,
+	textSize: PropTypes.number,
 };
 
 IconWithText.defaultProps = {
-	iconSize: 5,
-	textSize: 1.6,
-	name: '',
-	text: '',
 	circleText: '',
-	textColor: 'black',
 	fill: 'transparent',
+	iconSize: 5,
+	name: '',
+	position: 'left',
+	text: '',
+	textColor: 'black',
+	textSize: 1.6,
 };
 
 export { IconWithText };
