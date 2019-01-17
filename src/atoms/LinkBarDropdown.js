@@ -111,8 +111,15 @@ const StandardTrigger = (props) => {
 		</LinkBarButton>
 	);
 };
-
 StandardTrigger.displayName = 'StandardTrigger';
+StandardTrigger.propTypes = {
+	hide: propTypes.bool,
+	linkText: propTypes.string,
+};
+StandardTrigger.defaultProps = {
+	hide: false,
+	linkText: '',
+};
 
 Dropdown.propTypes = {
 	children: propTypes.oneOfType([
