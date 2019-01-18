@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { merge } from 'aurora-deep-slice-merge';
+import merge from 'deepmerge';
 
 import defaultTheme from '../themes/default-theme';
 import { themePropTypes } from '../themes/theme-prop-types';
