@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -64,12 +64,12 @@ const ProtoHeading = styled.h1`
 `;
 
 ProtoHeading.propTypes = {
-	order: propTypes.number,
-	marginTopFactor: propTypes.number,
-	marginBottomFactor: propTypes.number,
-	defaultSize: propTypes.string,
-	upSize: propTypes.string,
-	maxLines: propTypes.number,
+	order: PropTypes.number,
+	marginTopFactor: PropTypes.number,
+	marginBottomFactor: PropTypes.number,
+	defaultSize: PropTypes.string,
+	upSize: PropTypes.string,
+	maxLines: PropTypes.number,
 };
 ProtoHeading.defaultProps = {
 	order: 0,
@@ -99,7 +99,7 @@ const Heading = ({ size, ...rest }) => {
 	}
 };
 Heading.propTypes = {
-	size: propTypes.oneOf(['', 'xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
+	size: PropTypes.oneOf(['', 'xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
 };
 Heading.defaultProps = {
 	size: 'large',

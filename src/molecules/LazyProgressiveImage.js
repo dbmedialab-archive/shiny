@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import styled from '@emotion/styled';
 
@@ -22,21 +22,21 @@ const Figure = styled.figure`
 class LazyProgressiveImage extends PureComponent {
 	static propTypes = {
 		/** Background color used on the <figure> tag */
-		backgroundColor: propTypes.string,
+		backgroundColor: PropTypes.string,
 		/** Low quality image used for first load */
-		src: propTypes.string.isRequired,
+		src: PropTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
-		alt: propTypes.string,
+		alt: PropTypes.string,
 		/** Should be <source> tags */
-		children: propTypes.node.isRequired,
+		children: PropTypes.node.isRequired,
 		/** Aspect ratio of the image, used to reserve space */
-		ratio: propTypes.number.isRequired,
+		ratio: PropTypes.number.isRequired,
 		/** Prevents using the blur-up technique (https://jmperezperez.com/medium-image-progressive-loading-placeholder/) when true */
-		preventBlur: propTypes.bool,
+		preventBlur: PropTypes.bool,
 		/** Option to fadein the image. */
-		fadeIn: propTypes.bool,
+		fadeIn: PropTypes.bool,
 		/** Customize the flexbox order of the component */
-		order: propTypes.number,
+		order: PropTypes.number,
 	}
 
 	static defaultProps = {

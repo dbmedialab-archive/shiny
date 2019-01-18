@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { ShinyThemeProvider } from './ShinyThemeProvider';
 import { themes } from '../themes';
@@ -27,11 +27,11 @@ const ThemeSelector = ({ children, themeSlug }) => {
 	);
 };
 ThemeSelector.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.arrayOf(propTypes.node),
-		propTypes.node,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
 	]),
-	themeSlug: propTypes.string,
+	themeSlug: PropTypes.string,
 };
 ThemeSelector.defaultProps = {
 	children: null,

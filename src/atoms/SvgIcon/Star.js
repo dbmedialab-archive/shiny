@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Star = ({ color, ...rest }) => (
 	<svg width="100%" height="100%" viewBox="0 0 31 29" {...rest}>
@@ -18,7 +18,7 @@ const Star = ({ color, ...rest }) => (
 );
 
 Star.propTypes = {
-	color: propTypes.string.isRequired,
+	color: PropTypes.string.isRequired,
 };
 
 export { Star };

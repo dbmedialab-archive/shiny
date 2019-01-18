@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { LinkBarButtonBase } from './LinkBarButtonBase';
 
@@ -14,12 +14,12 @@ const LinkBarButton = ({ children, ...rest }) => {
 };
 
 LinkBarButton.propTypes = {
-	isActive: propTypes.bool,
-	children: propTypes.node.isRequired,
-	activeBackground: propTypes.string, // Deprecated actual css color string
-	activeBackgroundColor: propTypes.string, // Color name from theme
-	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
-	useUnderline: propTypes.bool,
+	isActive: PropTypes.bool,
+	children: PropTypes.node.isRequired,
+	activeBackground: PropTypes.string, // Deprecated actual css color string
+	activeBackgroundColor: PropTypes.string, // Color name from theme
+	size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large']),
+	useUnderline: PropTypes.bool,
 };
 
 LinkBarButton.defaultProps = {

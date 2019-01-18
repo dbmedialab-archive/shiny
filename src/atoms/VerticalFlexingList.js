@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import { getColor, getVariable } from '../utils';
@@ -44,9 +44,9 @@ const VerticalFlexingList = styled.ul`
 	}
 `;
 VerticalFlexingList.propTypes = {
-	align: propTypes.oneOf(['left', 'right']),
-	background: propTypes.string, // Deprecated, actual css color string
-	backgroundColor: propTypes.string, // Color name from theme
+	align: PropTypes.oneOf(['left', 'right']),
+	background: PropTypes.string, // Deprecated, actual css color string
+	backgroundColor: PropTypes.string, // Color name from theme
 };
 VerticalFlexingList.defaultProps = {
 	align: 'left',
