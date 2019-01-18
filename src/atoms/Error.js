@@ -51,7 +51,10 @@ const Error = ({
 
 Error.propTypes = {
 	message: PropTypes.string,
-	AdditionalInfo: PropTypes.func,
+	AdditionalInfo: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	onRetryButtonClick: PropTypes.func,
 	icon: PropTypes.string,
 	iconColor: PropTypes.string,

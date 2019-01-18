@@ -132,8 +132,11 @@ Dropdown.propTypes = {
 	linkText: PropTypes.string,
 	/** Sets position: relative on the button. Needed to position dropdowns absolutely. */
 	isRelative: PropTypes.bool,
-	/** For providing custom button elements. */
-	Trigger: PropTypes.func,
+	/** Component for providing custom button elements. */
+	Trigger: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** For providing additional classnames. */
 	className: PropTypes.string,
 	/** @TODO: What does this do? */
