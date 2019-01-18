@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/core';
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { getColor } from '../../utils';
 
 const transition = keyframes`
@@ -35,7 +35,7 @@ LoadingSearchIcon.defaultProps = {
 };
 
 LoadingSearchIcon.propTypes = {
-	color: propTypes.string,
+	color: PropTypes.string,
 };
 
 export { LoadingSearchIcon };

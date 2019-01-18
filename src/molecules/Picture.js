@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -46,11 +46,11 @@ const StyledPicture = styled.picture`
  */
 class Picture extends PureComponent {
 	static propTypes = {
-		children: propTypes.node.isRequired,
+		children: PropTypes.node.isRequired,
 		/** The alt text for the <img> tag */
-		alt: propTypes.string,
+		alt: PropTypes.string,
 		/** Turns off blur transition when true */
-		preventBlur: propTypes.bool.isRequired,
+		preventBlur: PropTypes.bool.isRequired,
 	}
 
 	static defaultProps = {

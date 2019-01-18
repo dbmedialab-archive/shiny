@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import shinyPropTypes from '../prop-types';
@@ -78,10 +78,10 @@ const PaddedText = styled.span`
 `;
 
 PaddedText.propTypes = {
-	skin: propTypes.shape({
+	skin: PropTypes.shape({
 		backgroundColor: shinyPropTypes.color,
 		backgroundHoverShade: shinyPropTypes.shade,
-		needsPadding: propTypes.bool,
+		needsPadding: PropTypes.bool,
 		textColor: shinyPropTypes.color,
 		textHoverShade: shinyPropTypes.shade,
 	}),
@@ -123,18 +123,18 @@ const DymoHeading = (props) => {
 };
 
 DymoHeading.propTypes = {
-	children: propTypes.node,
-	hasImage: propTypes.bool,
-	order: propTypes.number,
-	size: propTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
-	skin: propTypes.shape({
+	children: PropTypes.node,
+	hasImage: PropTypes.bool,
+	order: PropTypes.number,
+	size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'huge']),
+	skin: PropTypes.shape({
 		backgroundColor: shinyPropTypes.color,
 		backgroundHoverShade: shinyPropTypes.shade,
-		needsPadding: propTypes.bool,
+		needsPadding: PropTypes.bool,
 		textColor: shinyPropTypes.color,
 		textHoverShade: shinyPropTypes.shade,
 	}),
-	title: propTypes.string,
+	title: PropTypes.string,
 };
 
 DymoHeading.defaultProps = {

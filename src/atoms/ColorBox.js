@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
 import getBestContrastColor from 'get-best-contrast-color';
@@ -35,7 +35,7 @@ const ColorBox = withTheme(({ displayColor, theme, ...rest }) => {
 });
 
 ColorBox.propTypes = {
-	displayColor: propTypes.string.isRequired,
+	displayColor: PropTypes.string.isRequired,
 };
 
 export { ColorBox };

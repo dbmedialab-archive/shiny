@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React, { Fragment } from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { merge } from 'aurora-deep-slice-merge';
@@ -43,10 +43,10 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	);
 };
 ShinyThemeProvider.propTypes = {
-	theme: propTypes.shape(themePropTypes),
-	children: propTypes.oneOfType([
-		propTypes.arrayOf(propTypes.node),
-		propTypes.node,
+	theme: PropTypes.shape(themePropTypes),
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node,
 	]),
 };
 ShinyThemeProvider.defaultProps = {

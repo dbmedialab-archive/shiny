@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import { getColor, getVariable } from '../utils';
@@ -131,16 +131,16 @@ class SearchField extends React.Component {
 }
 
 SearchField.propTypes = {
-	searchText: propTypes.string.isRequired,
-	handleUserTypedSearch: propTypes.func.isRequired,
-	searchTextVisible: propTypes.bool.isRequired,
-	isLoading: propTypes.bool.isRequired,
-	color: propTypes.string,
-	backgroundColor: propTypes.string,
-	shadow: propTypes.string,
-	fontSize: propTypes.string,
-	iconSize: propTypes.string,
-	marginBottom: propTypes.string,
+	searchText: PropTypes.string.isRequired,
+	handleUserTypedSearch: PropTypes.func.isRequired,
+	searchTextVisible: PropTypes.bool.isRequired,
+	isLoading: PropTypes.bool.isRequired,
+	color: PropTypes.string,
+	backgroundColor: PropTypes.string,
+	shadow: PropTypes.string,
+	fontSize: PropTypes.string,
+	iconSize: PropTypes.string,
+	marginBottom: PropTypes.string,
 };
 
 SearchField.defaultProps = {

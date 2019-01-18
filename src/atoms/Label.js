@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { getColor, getVariable } from '../utils';
 
@@ -22,9 +22,9 @@ const Label = styled.span`
 	white-space: nowrap;
 `;
 Label.propTypes = {
-	backgroundColor: propTypes.string,
-	backgroundHoverShade: propTypes.oneOf(['', 'dark', 'light', 'lighter']),
-	textColor: propTypes.string,
+	backgroundColor: PropTypes.string,
+	backgroundHoverShade: PropTypes.oneOf(['', 'dark', 'light', 'lighter']),
+	textColor: PropTypes.string,
 };
 Label.defaultProps = {
 	backgroundColor: 'primary',

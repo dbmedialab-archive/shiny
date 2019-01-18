@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const NumberedListItem = styled.li`
 	list-style: none;
@@ -24,7 +24,7 @@ const NumberedListItem = styled.li`
 `;
 
 NumberedListItem.propTypes = {
-	children: propTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
 };
 
 export { NumberedListItem };

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { getColor } from '../utils/get-color';
 
@@ -47,11 +47,11 @@ HorizontalFlexingList.defaultProps = {
 	shouldWrap: false,
 };
 HorizontalFlexingList.propTypes = {
-	background: propTypes.string, // Deprecated, actual css color string
-	backgroundColor: propTypes.string, // Color name from theme
-	shouldWrap: propTypes.bool,
-	justifyContent: propTypes.string,
-	shouldFlexChildren: propTypes.bool,
+	background: PropTypes.string, // Deprecated, actual css color string
+	backgroundColor: PropTypes.string, // Color name from theme
+	shouldWrap: PropTypes.bool,
+	justifyContent: PropTypes.string,
+	shouldFlexChildren: PropTypes.bool,
 };
 
 export { HorizontalFlexingList };
