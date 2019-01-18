@@ -89,12 +89,14 @@ const DefaultButton = ({
 
 DefaultButton.propTypes = {
 	children: PropTypes.node.isRequired,
-	PrefixIcon: PropTypes.func,
+	PrefixIcon: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	prefixIconColor: PropTypes.string,
 	SuffixIcon: PropTypes.oneOfType([
 		PropTypes.func,
-		PropTypes.object,
-		PropTypes.node,
+		PropTypes.shape({ render: PropTypes.func }),
 	]),
 	suffixIconColor: PropTypes.string,
 	type: PropTypes.string,

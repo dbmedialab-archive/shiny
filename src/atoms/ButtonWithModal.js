@@ -6,7 +6,10 @@ import { FontIcon  } from './FontIcon';
 
 class ButtonWithModal extends Component {
 	static propTypes = {
-		Button: PropTypes.func.isRequired,
+		Button: PropTypes.oneOfType([
+			PropTypes.func,
+			PropTypes.shape({ render: PropTypes.func }),
+		]).isRequired,
 		children: PropTypes.oneOfType([
 			PropTypes.arrayOf(PropTypes.node),
 			PropTypes.node,

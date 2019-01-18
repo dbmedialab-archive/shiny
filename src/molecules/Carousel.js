@@ -240,7 +240,10 @@ class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
-	Heading: PropTypes.shape({}),
+	Heading: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	headingProps: PropTypes.shape({}),
 	heading: PropTypes.string,
 	vertical: PropTypes.bool,

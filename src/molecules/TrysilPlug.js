@@ -150,7 +150,10 @@ TrysilPlug.propTypes = {
 	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
 	/** Component to display the labels */
-	Labels: PropTypes.func,
+	Labels: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** Props to pass on to the Heading component */
 	labelsProps: PropTypes.shape({
 		order: PropTypes.number,
@@ -173,7 +176,10 @@ TrysilPlug.propTypes = {
 	/** Width of the image divided by height of the image */
 	ratio: PropTypes.number.isRequired,
 	/** Component to display the title */
-	Heading: PropTypes.func,
+	Heading: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** Column object to decide wether the article should be a Col or not */
 	column: PropTypes.shape({
 		width: PropTypes.number,
