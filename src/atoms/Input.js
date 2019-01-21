@@ -1,70 +1,63 @@
-import styled, {css} from "react-emotion"
+import styled, { css } from '@emotion/styled';
+
+import { getColor, getVariable } from '../utils';
 
 const Input = styled.input`
-	padding: 0 0 0.8rem 0;
-    width: ${p => (p.width ? p.width : "100%")};
+  border: none;
+	margin: 0 0 ${getVariable('verticalBase')};
+	padding: 0 0 calc(1/4 * ${getVariable('verticalBase')}) 0;
+  width: ${p => (p.width ? p.width : '100%')};
 	background: transparent;
-    border: none;
-    font-size: 1.6rem;
-	line-height: 1.2;
-    border-bottom: 1px solid ${p => p.theme.color.lightGrey};
-    color: ${p => p.theme.color.black};;
-    font-weight: 600;
-    /* margin-bottom: ${p => p.theme.grid.gutter / 2}rem; */
+  font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
+  border-bottom: .1rem solid ${getColor('lightGrey')};
+  color: ${getColor('type')};
+  font-weight: ${getVariable('uiWeight')};
+
 	&:hover {
 		transition: border 0.2s;
-        border-color: ${p => p.theme.color.primary};
+		border-color: ${getColor('primary')};
 	}
 
-    &:focus {
+  &:focus {
 		transition: box-shadow 0.2s, border-color .2s;
-        outline: none;
-		border-color: ${p => p.theme.color.primary};
-		box-shadow: 0 1px 0 ${p => p.theme.color.primary};
-    }
+    outline: none;
+		border-color: ${getColor('primary')};
+		box-shadow: 0 .1rem 0 ${getColor('primary')};
+  }
 
-    &::-webkit-input-placeholder {
-		font-size: 1.4rem;
-		font-weight: 300;
+  &::-webkit-input-placeholder {
+		font-size: ${getVariable('uiSmallSize')};
+		font-weight: ${getVariable('uiWeight')};
 		letter-spacing: .05rem;
-    }
+  }
 	&:-webkit-autofill,
 	&:-webkit-autofill:hover,
 	&:-webkit-autofill:focus,
 	&:-webkit-autofill:active {
 		transition: background-color 5000s ease-in-out 0s;
 	}
-	${({ large }) =>
-		large &&
-		css`
-			font-size: 1.8rem;
-		`}
-	${({ widget }) =>
-		widget &&
-		css`
-			font-weight: 300;
-			font-size: 1.2rem;
-			letter-spacing: 0.5px;
-		`}
+	${({ large }) => large && css`
+		font-size: ${getVariable('uiLargeSize')};
+		line-height: ${getVariable('uiLargeLineHeight')};
+	`}
 
-	${({ bodyText }) =>
-		bodyText &&
-		css`
-			font-weight: 400;
-		`}
+	${({ widget }) => widget && css`
+		font-size: ${getVariable('uiSmallSize')};
+		font-weight: ${getVariable('uiWeight')};
+		letter-spacing: .05rem;
+	`}
 
+	${({ disabled }) => disabled && css`
+		border-color: transparent;
+		opacity: 0.7;
+		background: transparent;
 
-	${({ disabled, theme }) =>
-		disabled &&
-		css`
-			border: none;
-			opacity: 0.7;
-			background: transparent;
-			&:hover {
-				transition: none;
-				border-color: transparent;
-			}
-		`}
+		&:hover {
+			transition: none;
+			border-color: transparent;
+		}
+	`}
 `;
 
 export default Input;
