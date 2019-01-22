@@ -7,14 +7,11 @@ import { getVariable } from '../utils/get-variable';
 export const CarouselSlot = styled(Col)`
 	${(props) => {
 		const horizontalBase = getVariable('horizontalBase')(props);
-		const verticalBase = getVariable('verticalBase')(props);
-
 		const marginRight = (!props.vertical) ? `calc(1/2 * ${horizontalBase})` : '0';
-		const marginBottom = (props.vertical) ? `calc(1/2 * ${verticalBase})` : '0';
 
 		return css`
 			margin-right: ${marginRight};
-			margin-bottom: ${marginBottom};
+			margin-bottom: 0;
 			padding: 0;
 
 			&:last-child {
