@@ -85,7 +85,7 @@ const StateIndicationStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>LinkBarLink with alternative state indication</Paragraph>
-<Paragraph>You can remove the underline and change the active background with props.</Paragraph>
+<p>LinkBarLink with alternative state indication</p>
+<p>You can remove the underline and change the active background with props.</p>
 	`,
 })(StateIndicationStory);

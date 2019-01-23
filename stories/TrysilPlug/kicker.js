@@ -1,8 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
+import {
+	Heading, HugeHeading,
+	TrysilPlug,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>

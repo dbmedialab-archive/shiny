@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
 
 import { Code } from '../../src/atoms/Code';
-import { HugeHeading, Heading } from '../../src/atoms/Heading';
-// Typography
+
 import {
+	HugeHeading, Heading,
+	Row, Col,
+	Paragraph,
+
 	UnderlinedHeading,
 	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
@@ -15,7 +16,7 @@ import {
 	UnderlinedLargeHeading,
 	UnderlinedXLargeHeading,
 	UnderlinedHugeHeading,
-} from '../../src/atoms/UnderlinedHeading';
+} from '../../src';
 
 export default () => (
 	<section>

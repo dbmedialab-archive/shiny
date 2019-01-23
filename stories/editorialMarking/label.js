@@ -2,8 +2,12 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { Label } from '../../src/atoms/Label';
+import {
+	Heading,
+	HugeHeading,
+	Label,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>

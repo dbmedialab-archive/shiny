@@ -3,6 +3,7 @@ import React from 'react';
 import {
 	HugeHeading,
 	ThemeName,
+	Paragraph,
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';

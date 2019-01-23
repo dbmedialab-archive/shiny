@@ -1,10 +1,13 @@
 import React from 'react';
 
-import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { DemoContainer } from '../storybook-components';
+import { Code } from '../../src/atoms/Code';
 
-import { ArrowBullet } from '../../src/atoms/ArrowBullet';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+	ArrowBullet,
+} from '../../src';
 
 
 export default () => (

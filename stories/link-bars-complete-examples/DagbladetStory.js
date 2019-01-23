@@ -20,6 +20,7 @@ import {
 	SmallHeading,
 	Row,
 	Col,
+	Paragraph,
 
 	getColor,
 	getVariable,

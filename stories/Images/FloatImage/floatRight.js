@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../../src/atoms/Heading';
+import { Code } from '../../../src/atoms/Code';
 import { DemoContainer } from '../../storybook-components';
 
-import { Code } from '../../../src/atoms/Code';
-
-import { FloatImage } from '../../../src/molecules/FloatImage';
+import {
+	Heading,
+	HugeHeading,
+	FloatImage,
+	Paragraph,
+} from '../../../src';
 
 export default () => (
 	<section>

@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import { withInfo } from '@storybook/addon-info';
 
 import {
-	 LargeHeading,
+	LargeHeading,
 	LogiclessModal,
-		 BodyText,
-	  Button,
+	BodyText,
+	Button,
 } from '../../src';
 
 const Title = () => (

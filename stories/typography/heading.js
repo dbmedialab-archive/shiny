@@ -4,8 +4,9 @@ import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
 
-// Typography
 import {
+	Paragraph,
+
 	Heading,
 	XSmallHeading,
 	SmallHeading,
@@ -13,7 +14,7 @@ import {
 	LargeHeading,
 	XLargeHeading,
 	HugeHeading,
-} from '../../src/atoms/Heading';
+} from '../../src';
 
 export default () => (
 	<section>

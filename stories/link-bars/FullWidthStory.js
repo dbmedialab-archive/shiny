@@ -8,6 +8,7 @@ import {
 	// For the story
 	Heading,
 	HugeHeading,
+	Paragraph,
 
 	// For this component specifically
 	FullWidthLinkBar,

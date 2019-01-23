@@ -2,14 +2,17 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { DemoContainer } from '../storybook-components';
-
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// Loaders
-import { DotLoader } from '../../src/atoms/loaders/DotLoader';
-// import { NoonLoader } from '../shared-components/NoonLoader/NoonLoader';
-import { LoadingSearchIcon } from '../../src/atoms/loaders/LoadingSearchIcon';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+
+	// Loaders
+	DotLoader,
+	// NoonLoader
+	LoadingSearchIcon,
+} from '../../src';
 
 export default () => {
 	storiesOf('Web App Components|Loaders', DotLoader)

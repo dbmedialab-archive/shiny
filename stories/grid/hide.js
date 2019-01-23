@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
+import {
+	Heading,
+	HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (

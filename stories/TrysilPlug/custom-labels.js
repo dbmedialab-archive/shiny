@@ -1,9 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
-import { OverlayingPlugLabels } from '../../src/molecules/OverlayingPlugLabels';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+	TrysilPlug,
+	OverlayingPlugLabels,
+} from '../../src';
 
 export default () => (
 	<section>

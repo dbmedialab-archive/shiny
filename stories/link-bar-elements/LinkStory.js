@@ -37,7 +37,7 @@ const LinkStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>Provides links (<code>&lt;a&gt;</code> tags) for HorizontalLinkBar.</Paragraph>
-<Paragraph>You can remove the underline and change the active background with props.</Paragraph>
+<p>Provides links (<code>&lt;a&gt;</code> tags) for HorizontalLinkBar.</p>
+<p>You can remove the underline and change the active background with props.</p>
 	`,
 })(LinkStory);

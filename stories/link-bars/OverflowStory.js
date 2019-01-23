@@ -32,6 +32,6 @@ const HorizontalLinkBarStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>Here is another link bar, with enough content to overflow the allotted space.</Paragraph>
+<p>Here is another link bar, with enough content to overflow the allotted space.</p>
 	`,
 })(HorizontalLinkBarStory);

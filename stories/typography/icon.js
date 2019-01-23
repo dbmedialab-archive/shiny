@@ -3,11 +3,14 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
+import {
+	HugeHeading, SmallHeading,
+	Row, Col,
+	Paragraph,
 
-import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { FontIcon } from '../../src/atoms/FontIcon';
+	FontIcon,
+} from '../../src';
+
 
 const icons = [
 	{ name: 'dagbladet', code: 'e883' },

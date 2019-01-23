@@ -2,11 +2,10 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	DagbladetLogo,
-	Row,
-	Col,
+	Row, Col,
 	ThemeSelector as ShinyThemeProvider,
 } from '../../src';
 

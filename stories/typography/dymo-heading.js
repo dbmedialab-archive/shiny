@@ -6,17 +6,18 @@ import { DemoContainer } from '../storybook-components';
 import { Code } from '../../src/atoms/Code';
 
 import {
-	Heading,
-	HugeHeading,
-} from '../../src';
+	Heading, HugeHeading,
+	Paragraph,
 
-// Typography
-import {
 	SmallDymoHeading,
 	MediumDymoHeading,
 	LargeDymoHeading,
 	XLargeDymoHeading,
 	HugeDymoHeading,
+} from '../../src';
+
+// Typography
+import {
 } from '../../src/atoms/DymoHeading';
 
 const skin = {

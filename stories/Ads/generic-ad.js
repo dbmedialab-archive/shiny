@@ -2,9 +2,13 @@
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { GenericAd } from '../../src/molecules/GenericAd';
-import { Grid } from '../../src/atoms/Grid';
+import {
+	Heading,
+	HugeHeading,
+	GenericAd,
+	Grid,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>

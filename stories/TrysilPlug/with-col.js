@@ -58,16 +58,16 @@ const TrysilPlugStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>
+<p>
 	A basic plug for linking to stuff we want readers to click on.
 	Written with front page links to news articles in mind. Maybe also suitable for commercial plugs or similar.
 
 	This specific plug is a column disguised as an article tag.
-</Paragraph>
+</p>
 
-<Paragraph>
+<p>
 	<strong>TODO:</strong> Consider changing the label.color to take a skinColor property name instead of a plain
 	color.
-</Paragraph>
+</p>
 	`,
 })(TrysilPlugStory);

@@ -2,10 +2,14 @@
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { FullscreenAd } from '../../src/molecules/FullscreenAd';
-import { Col } from '../../src/atoms/Col';
-import { Grid } from '../../src/atoms/Grid';
+import {
+	Heading,
+	HugeHeading,
+	FullscreenAd,
+	Col,
+	Grid,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<div>

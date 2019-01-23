@@ -5,13 +5,10 @@ import { DemoContainer } from '../storybook-components/index';
 import { Code } from '../../src/atoms/Code';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading, SmallHeading,
+	Row, Col,
+	Paragraph,
 	BlockLink,
-	SmallHeading,
-	Row,
-	Col,
-	BodyText,
 } from '../../src';
 
 const Img = styled.img`
@@ -35,25 +32,25 @@ export default () => (
 					<BlockLink href="https://example.com">
 						<SmallHeading>BlockLink</SmallHeading>
 						<Img src={imgUrl} alt="Alternative text" />
-						<BodyText>This is text, and the text is long enough to span over several lines. This text is closer to the
+						<Paragraph>This is text, and the text is long enough to span over several lines. This text is closer to the
 							image.
-						</BodyText>
+						</Paragraph>
 					</BlockLink>
 				</Col>
 				<Col xs>
 					<a href="https://example.com">
 						<SmallHeading>Regular link</SmallHeading>
 						<Img src={imgUrl} alt="Alternative text" />
-						<BodyText>This is text, and the text is long enough to span over several lines. This text is further from
+						<Paragraph>This is text, and the text is long enough to span over several lines. This text is further from
 							the image.
-						</BodyText>
+						</Paragraph>
 					</a>
 				</Col>
 			</Row>
 			<Row>
 				<Col xs>
 					<SmallHeading>Two BlockLinks</SmallHeading>
-					<BodyText>There is no whitespace between the blocks.</BodyText>
+					<Paragraph>There is no whitespace between the blocks.</Paragraph>
 					<BlockLink href="https://example.com">
 						<Img src={imgUrl} alt="Alternative text" />
 					</BlockLink>
@@ -63,7 +60,7 @@ export default () => (
 				</Col>
 				<Col xs>
 					<SmallHeading>Two regular links</SmallHeading>
-					<BodyText>There is whitespace from an implicit line around the images.</BodyText>
+					<Paragraph>There is whitespace from an implicit line around the images.</Paragraph>
 					<a href="https://example.com">
 						<Img src={imgUrl} alt="Alternative text" />
 					</a>

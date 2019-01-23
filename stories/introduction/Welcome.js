@@ -8,6 +8,7 @@ import {
 	Heading,
 	HugeHeading,
 	ShinyLogo,
+	Paragraph,
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';

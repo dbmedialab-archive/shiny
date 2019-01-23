@@ -6,6 +6,7 @@ import {
 	HugeHeading,
 	Row,
 	Col,
+	Paragraph,
 } from '../../src';
 import { StickyAd } from '../../src/molecules/StickyAd';
 import { Grid } from '../../src/atoms/Grid';

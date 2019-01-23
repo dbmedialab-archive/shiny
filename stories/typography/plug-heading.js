@@ -9,6 +9,8 @@ import {
 	LargePlugHeading,
 	XLargePlugHeading,
 	HugePlugHeading,
+
+	Paragraph,
 } from '../../src';
 
 export default () => (

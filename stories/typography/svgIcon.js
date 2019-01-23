@@ -3,11 +3,12 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
-
-import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { IconWithText } from '../../src/atoms/IconWithText';
+import {
+	HugeHeading, SmallHeading,
+	Row, Col,
+	Paragraph,
+	IconWithText,
+} from '../../src';
 
 export default () => (
 	<section>

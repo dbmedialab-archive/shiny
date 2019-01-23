@@ -5,6 +5,7 @@ import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
 
 import {
+	Paragraph,
 	LinkBarLink,
 	HorizontalLinkBar,
 } from '../../src';

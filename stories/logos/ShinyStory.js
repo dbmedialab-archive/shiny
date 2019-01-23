@@ -2,8 +2,8 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	ShinyLogo,
 } from '../../src';
 

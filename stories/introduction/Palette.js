@@ -6,6 +6,7 @@ import {
 	SmallHeading,
 	ThemeName,
 	ColorBox,
+	Paragraph,
 } from '../../src';
 
 import { Code } from '../../src/atoms/Code';

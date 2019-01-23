@@ -3,9 +3,12 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { Kicker } from '../../src/atoms/Kicker';
-import { NativeAdKicker } from '../../src/atoms/NativeAdKicker';
+import {
+	Heading, HugeHeading,
+	Kicker,
+	NativeAdKicker,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>

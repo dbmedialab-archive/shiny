@@ -20,6 +20,6 @@ const HorizontalLinkBarStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</Paragraph>
+<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
 	`,
 })(HorizontalLinkBarStory);

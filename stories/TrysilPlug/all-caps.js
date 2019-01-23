@@ -2,8 +2,8 @@
 import React from 'react';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	TrysilPlug,
 } from '../../src';
 

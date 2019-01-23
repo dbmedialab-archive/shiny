@@ -39,12 +39,12 @@ const SearchFieldStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>LinkBarSearchField is a search field for link bars.</Paragraph>
+<p>LinkBarSearchField is a search field for link bars.</p>
 
-<Paragraph>LinkBar elements match each other in height and horizontal spacing. Therefore,
+<p>LinkBar elements match each other in height and horizontal spacing. Therefore,
 	they go well alongside each other inside a --LinkBar element, like
 	HorizontalLinkBar or VerticalLinkBar. They also share most of their props.
-</Paragraph>
+</p>
 
         `,
 })(SearchFieldStory);

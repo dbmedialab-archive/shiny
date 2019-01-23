@@ -43,13 +43,13 @@ const HideStory = () => (
 
 export default withInfo({
 	text: `
-<Paragraph>Hidden LinkBar elements</Paragraph>
-<Paragraph>Elements in VerticalLinkBar and HorizontalLinkBar can be hidden with
+<p>Hidden LinkBar elements</p>
+<p>Elements in VerticalLinkBar and HorizontalLinkBar can be hidden with
 	props that resemble the Col props.
-</Paragraph>
-<Paragraph>Set xs, sm, md or lg to false, and the element will be
+</p>
+<p>Set xs, sm, md or lg to false, and the element will be
 	hidden from that breakpoint and up.
-</Paragraph>
-<Paragraph>Override with a higher breakpoint.</Paragraph>
+</p>
+<p>Override with a higher breakpoint.</p>
 	`,
 })(HideStory);

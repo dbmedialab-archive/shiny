@@ -1,15 +1,14 @@
 import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
-
 import { Code } from '../../src/atoms/Code';
 
 import {
-	Heading,
-	HugeHeading,
-} from '../../src/atoms/Heading';
+	Heading, HugeHeading,
+	Paragraph,
 
-import { Error } from '../../src/atoms/Error';
+	Error,
+} from '../../src';
 
 const DefaultError = () => (
 	<section>
