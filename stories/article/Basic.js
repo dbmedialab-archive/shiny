@@ -1,11 +1,12 @@
 import React from 'react';
-import { Paragraph } from '../../src/atoms/Paragraph';
-import { ArticleHeader } from '../../src/molecules/Article/Header';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
-import { FloatImage } from '../../src/molecules/FloatImage';
+
 import {
+	Paragraph,
+	ArticleHeader,
+	TrysilPlug,
+	FloatImage,
 	MediumDymoHeading,
-} from '../../src/atoms/DymoHeading';
+} from '../../src';
 
 const basic = () => {
 	/* eslint max-len: 0 */

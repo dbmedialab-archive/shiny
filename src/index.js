@@ -2,6 +2,57 @@
 export { themes                  } from './themes';
 
 // Atoms
+export { Article                 } from './atoms/Article';
+export { AdWrapper               } from './atoms/AdWrapper';
+export { AdSettingsCog           } from './atoms/AdSettingsCog';
+export { ArrowBullet             } from './atoms/ArrowBullet';
+export { BlockLink               } from './atoms/BlockLink';
+export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
+export { BlockQuote              } from './atoms/BlockQuote';
+export { Body                    } from './atoms/Body';
+export { BodyText                } from './atoms/BodyText';
+export { BorderedButton          } from './atoms/BorderedButton';
+export { Button                  } from './atoms/Button';
+export { ButtonWithModal         } from './atoms/ButtonWithModal';
+export { BylineImage             } from './atoms/BylineImage';
+export { BylineName              } from './atoms/BylineName';
+export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
+export { ColorTextBox            } from './atoms/ColorTextBox';
+export { Caption                 } from './atoms/Caption';
+export { Cite                    } from './atoms/Cite';
+export { CarouselBar             } from './atoms/CarouselBar';
+export { CarouselSlot            } from './atoms/CarouselSlot';
+export { CarouselSlotList        } from './atoms/CarouselSlotList';
+export { CarouselButton          } from './atoms/CarouselButton';
+export { CarouselSection         } from './atoms/CarouselSection';
+export { Col                     } from './atoms/Col';
+export { ColorBox                } from './atoms/ColorBox';
+export { DagbladetLogo           } from './atoms/DagbladetLogo';
+export { DinsideLogo             } from './atoms/DinsideLogo';
+export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
+export { DotLoader               } from './atoms/loaders/DotLoader';
+export { Dropdown                } from './atoms/Dropdown';
+export {
+	DymoHeading,
+	SmallDymoHeading,
+	MediumDymoHeading,
+	LargeDymoHeading,
+	XLargeDymoHeading,
+	HugeDymoHeading,
+}                                  from './atoms/DymoHeading';
+export { Error                   } from './atoms/Error';
+export { Figure                  } from './atoms/Figure';
+export { FigCaption              } from './atoms/FigCaption';
+export { FontIcon                } from './atoms/FontIcon';
+export {
+	FrontSmallHeading,
+	FrontMediumHeading,
+	FrontLargeHeading,
+	FrontXLargeHeading,
+	FrontHugeHeading,
+}                                  from './atoms/FrontHeading';
+export { GlobalStyle             } from './atoms/GlobalStyle';
+export { Grid                    } from './atoms/Grid';
 export {
 	Heading,
 	XSmallHeading,
@@ -11,16 +62,61 @@ export {
 	XLargeHeading,
 	HugeHeading,
 }                                  from './atoms/Heading';
+export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
+export { NoPaddingGrid           } from './atoms/NoPaddingGrid';
+export { Header                  } from './atoms/Header';
+export { HorizontalOverflowGradient } from './atoms/HorizontalOverflowGradient';
+export { IconWithText            } from './atoms/IconWithText';
+export { Image                   } from './atoms/Image';
+export { Kicker                  } from './atoms/Kicker';
+export { KKLogo                  } from './atoms/KKLogo';
+export { Label                   } from './atoms/Label';
+export { LeetTextarea            } from './atoms/LeetTextarea';
+export { Link                    } from './atoms/Link';
+export { LinkBarNav              } from './atoms/LinkBarNav';
+export { LinkBarItem             } from './atoms/LinkBarItem';
+export { LinkBarElementBase      } from './atoms/LinkBarElementBase';
+export {
+	XSmallLinkBarLink,
+	SmallLinkBarLink,
+	LinkBarLink,
+	LargeLinkBarLink,
+}                                  from './atoms/LinkBarLink';
+export {
+	XSmallLinkBarHeading,
+	SmallLinkBarHeading,
+	LinkBarHeading,
+	LargeLinkBarHeading,
+}                                  from './atoms/LinkBarHeading';
+export {
+	LinkBarButton,
+	XSmallLinkBarButton,
+	SmallLinkBarButton,
+	LargeLinkBarButton,
+}                                  from './atoms/LinkBarButton';
+export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
+export {
+	XSmallLinkBarDropdown,
+	SmallLinkBarDropdown,
+	LinkBarDropdown,
+	LargeLinkBarDropdown,
+}                                  from './atoms/LinkBarDropdown';
 
 export {
-	DymoHeading,
-	SmallDymoHeading,
-	MediumDymoHeading,
-	LargeDymoHeading,
-	XLargeDymoHeading,
-	HugeDymoHeading,
-}                                  from './atoms/DymoHeading';
-
+	LinkBarSearchField,
+	SmallLinkBarSearchField,
+	LargeLinkBarSearchField,
+}                                  from './atoms/LinkBarSearchField';
+export { ListItem                } from './atoms/ListItem';
+export { LoadingSearchIcon       } from './atoms/loaders/LoadingSearchIcon';
+export { LogiclessModal          } from './atoms/LogiclessModal';
+export { LunchKicker             } from './atoms/LunchKicker';
+export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
+export { NativeAdKicker          } from './atoms/NativeAdKicker';
+export { NumberedListItem        } from './atoms/NumberedListItem';
+export { OverlayingPlugLabel     } from './atoms/OverlayingPlugLabel';
+export { Paragraph               } from './atoms/Paragraph';
+export { Pips                    } from './atoms/Pips';
 export {
 	PlugHeading,
 	SmallPlugHeading,
@@ -29,7 +125,29 @@ export {
 	XLargePlugHeading,
 	HugePlugHeading,
 }                                  from './atoms/PlugHeading';
-
+export { PublishedDate           } from './atoms/PublishedDate';
+export { Quote                   } from './atoms/Quote';
+export {
+	RoundedButton,
+	SmallRoundedButton,
+	TinyRoundedButton,
+}                                  from './atoms/RoundedButtons';
+export { Row                     } from './atoms/Row';
+export { SvgIcon                 } from './atoms/SvgIcon';
+export { ActivityTime            } from './atoms/SvgIcon/ActivityTime';
+export { Difficulty              } from './atoms/SvgIcon/Difficulty';
+export { TotalTime               } from './atoms/SvgIcon/TotalTime';
+export {
+	LeftScrollArrow,
+	RightScrollArrow,
+}                                  from './atoms/ScrollArrow';
+export { ShinyLogo               } from './atoms/ShinyLogo';
+export { ShinyThemeProvider      } from './atoms/ShinyThemeProvider';
+export { Standfirst              } from './atoms/Standfirst';
+export { SeHerLogo               } from './atoms/SeHerLogo';
+export { Tag                     } from './atoms/Tag';
+export { ThemeSelector           } from './atoms/ThemeSelector';
+export { ThemeName               } from './atoms/ThemeName';
 export {
 	UnderlinedHeading,
 	UnderlinedXSmallHeading,
@@ -39,115 +157,9 @@ export {
 	UnderlinedXLargeHeading,
 	UnderlinedHugeHeading,
 }                                  from './atoms/UnderlinedHeading';
-export {
-	FrontSmallHeading,
-	FrontMediumHeading,
-	FrontLargeHeading,
-	FrontXLargeHeading,
-	FrontHugeHeading,
-}                                  from './atoms/FrontHeading';
-
-export { Article                 } from './atoms/Article';
-export { AdWrapper               } from './atoms/AdWrapper';
-export { AdSettingsCog           } from './atoms/AdSettingsCog';
-export { BlockLink               } from './atoms/BlockLink';
-export { BlockLinkWithBackground } from './atoms/BlockLinkWithBackground';
-export { BlockQuote              } from './atoms/BlockQuote';
-export { Body                    } from './atoms/Body';
-export { BodyText                } from './atoms/BodyText';
-export { Button                  } from './atoms/Button';
-export { BylineImage             } from './atoms/BylineImage';
-export { BylineName              } from './atoms/BylineName';
-export { BylineWithTwoLines      } from './atoms/BylineWithTwoLines';
-export { ColorTextBox            } from './atoms/ColorTextBox';
-export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
-export { Caption                 } from './atoms/Caption';
-export { Cite                    } from './atoms/Cite';
-export { Tag                     } from './atoms/Tag';
-export { CarouselBar             } from './atoms/CarouselBar';
-export { CarouselSlot            } from './atoms/CarouselSlot';
-export { CarouselSlotList        } from './atoms/CarouselSlotList';
-export { CarouselButton          } from './atoms/CarouselButton';
-export { CarouselSection         } from './atoms/CarouselSection';
-export { Col                     } from './atoms/Col';
-export { ColorBox                } from './atoms/ColorBox';
-export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
-export { DotLoader               } from './atoms/loaders/DotLoader';
-export { Dropdown                } from './atoms/Dropdown';
-export { Error                   } from './atoms/Error';
-export { Figure                  } from './atoms/Figure';
-export { FigCaption              } from './atoms/FigCaption';
-export { FontIcon                } from './atoms/FontIcon';
-export { SvgIcon                 } from './atoms/SvgIcon';
-export { IconWithText            } from './atoms/IconWithText';
-export { GlobalStyle             } from './atoms/GlobalStyle';
-export { Grid                    } from './atoms/Grid';
-export { NoPaddingGrid           } from './atoms/NoPaddingGrid';
-export { Header                  } from './atoms/Header';
-export { HorizontalOverflowGradient } from './atoms/HorizontalOverflowGradient';
-export { Image                   } from './atoms/Image';
-export { Kicker                  } from './atoms/Kicker';
-export { Label                   } from './atoms/Label';
-export { LeetTextarea            } from './atoms/LeetTextarea';
-export { Link                    } from './atoms/Link';
-export { ListItem                } from './atoms/ListItem';
-export { LoadingSearchIcon       } from './atoms/loaders/LoadingSearchIcon';
-export { LunchKicker             } from './atoms/LunchKicker';
-export { NativeAdKicker          } from './atoms/NativeAdKicker';
-export { Pips                    } from './atoms/Pips';
-export { PublishedDate           } from './atoms/PublishedDate';
-export { Quote                   } from './atoms/Quote';
-export { Row                     } from './atoms/Row';
-export { Standfirst              } from './atoms/Standfirst';
-export { ThemeName               } from './atoms/ThemeName';
-export { HorizontalFlexingList   } from './atoms/HorizontalFlexingList';
-export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
-export { LinkBarNav              } from './atoms/LinkBarNav';
-export { LinkBarItem             } from './atoms/LinkBarItem';
-export { LinkBarElementBase      } from './atoms/LinkBarElementBase';
-export { XSmallLinkBarLink       } from './atoms/LinkBarLink';
-export { SmallLinkBarLink        } from './atoms/LinkBarLink';
-export { LinkBarLink             } from './atoms/LinkBarLink';
-export { BorderedButton          } from './atoms/BorderedButton';
-export { LargeLinkBarLink        } from './atoms/LinkBarLink';
-export { XSmallLinkBarHeading    } from './atoms/LinkBarHeading';
-export { SmallLinkBarHeading     } from './atoms/LinkBarHeading';
-export { LinkBarHeading          } from './atoms/LinkBarHeading';
-export { LargeLinkBarHeading     } from './atoms/LinkBarHeading';
-export { LinkBarButton           } from './atoms/LinkBarButton';
-export { XSmallLinkBarButton     } from './atoms/LinkBarButton';
-export { SmallLinkBarButton      } from './atoms/LinkBarButton';
-export { LargeLinkBarButton      } from './atoms/LinkBarButton';
-export { LinkBarButtonBase       } from './atoms/LinkBarButtonBase';
-export { XSmallLinkBarDropdown   } from './atoms/LinkBarDropdown';
-export { SmallLinkBarDropdown    } from './atoms/LinkBarDropdown';
-export { LinkBarDropdown         } from './atoms/LinkBarDropdown';
-export { LargeLinkBarDropdown    } from './atoms/LinkBarDropdown';
-export { LinkBarSearchField      } from './atoms/LinkBarSearchField';
-export { SmallLinkBarSearchField } from './atoms/LinkBarSearchField';
-export { LargeLinkBarSearchField } from './atoms/LinkBarSearchField';
-export { ShinyLogo               } from './atoms/ShinyLogo';
-export { ShinyThemeProvider      } from './atoms/ShinyThemeProvider';
-export { ThemeSelector           } from './atoms/ThemeSelector';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
-export { LeftScrollArrow         } from './atoms/ScrollArrow';
-export { RightScrollArrow        } from './atoms/ScrollArrow';
-export { SeHerLogo               } from './atoms/SeHerLogo';
-export { DagbladetLogo           } from './atoms/DagbladetLogo';
-export { DinsideLogo             } from './atoms/DinsideLogo';
-export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
-export { KKLogo                  } from './atoms/KKLogo';
-export { ButtonWithModal         } from './atoms/ButtonWithModal';
-export { NumberedListItem        } from './atoms/NumberedListItem';
-export { ActivityTime            } from './atoms/SvgIcon/ActivityTime';
-export { Difficulty              } from './atoms/SvgIcon/Difficulty';
-export { TotalTime               } from './atoms/SvgIcon/TotalTime';
-export { RoundedButton           } from './atoms/RoundedButtons';
-export { SmallRoundedButton      } from './atoms/RoundedButtons';
-export { TinyRoundedButton       } from './atoms/RoundedButtons';
-export { ArrowBullet 			 } from './atoms/ArrowBullet';
-export { LogiclessModal          } from './atoms/LogiclessModal';
-
+export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
+export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -161,6 +173,7 @@ export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { Labels                  } from './molecules/Labels';
 export { LunchButton             } from './molecules/LunchButton';
+export { OverlayingPlugLabels    } from './molecules/OverlayingPlugLabels';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
 export { GenericAd               } from './molecules/GenericAd';
@@ -174,7 +187,7 @@ export {
 	SmallHorizontalHeroUnit,
 	MediumHorizontalHeroUnit,
 	LargeHorizontalHeroUnit,
-} from './molecules/HorizontalHeroUnit';
+}                                  from './molecules/HorizontalHeroUnit';
 export { WallpaperAd             } from './molecules/WallpaperAd';
 export { SearchField             } from './molecules/SearchField';
 export { ArticleHeader           } from './molecules/Article/Header';

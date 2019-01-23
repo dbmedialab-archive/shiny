@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { DemoContainer } from '../storybook-components';
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
 
 import { Code } from '../../src/atoms/Code';
-import { HugeHeading, Heading } from '../../src/atoms/Heading';
-// Typography
+
 import {
+	HugeHeading, Heading,
+	Row, Col,
+	Paragraph,
+
 	UnderlinedHeading,
 	UnderlinedXSmallHeading,
 	UnderlinedSmallHeading,
@@ -15,13 +16,13 @@ import {
 	UnderlinedLargeHeading,
 	UnderlinedXLargeHeading,
 	UnderlinedHugeHeading,
-} from '../../src/atoms/UnderlinedHeading';
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>Underlined heading</HugeHeading>
-		<p>Also called headline, overskrift.</p>
-		<p>There are four sizes of underlined headings:</p>
+		<Paragraph>Also called headline, overskrift.</Paragraph>
+		<Paragraph>There are four sizes of underlined headings:</Paragraph>
 		<ul>
 			<li>XSmall</li>
 			<li>Small</li>
@@ -30,7 +31,7 @@ export default () => (
 			<li>XLarge</li>
 			<li>Huge</li>
 		</ul>
-		<p>The font-sizes will increase on large screens.</p>
+		<Paragraph>The font-sizes will increase on large screens.</Paragraph>
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Row>

@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
+import {
+	Heading,
+	HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
@@ -26,7 +30,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Basic</Heading>
-		<p>
+		<Paragraph>
 			The <code>&lt;Row&gt;</code> and <code>&lt;Col&gt;</code> components are provided by
 			<code>react-emotion-flexboxgrid, but we have copy pasted the code to our Grid, Row and Col component</code>.
 			(
@@ -34,11 +38,11 @@ export default () => (
 			<a href="https://www.npmjs.com/package/react-emotion-flexboxgrid">npm</a>/
 			<a href="https://loicmahieu.github.io/react-styled-flexboxgrid/demo/index.html">docs</a>
 			).
-		</p>
-		<p>
+		</Paragraph>
+		<Paragraph>
 			The interface resembles the grid from popular frameworks such as Bootstrap and Foundation. Coming from
 			a traditional grid, you should quickly feel at home.
-		</p>
+		</Paragraph>
 		<Row>
 			<Col xs={12}>xs-12</Col>
 		</Row>

@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
+import {
+	Heading,
+	HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
@@ -26,9 +30,9 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Hide</Heading>
-		<p>
+		<Paragraph>
 			You can simply hide some elements for a given breakpoint by passing `false` to the breakpoint properties.
-		</p>
+		</Paragraph>
 		<Row>
 			<Col xs={12} md={6}>xs-12 md-6</Col>
 			<Col xs={false} md={6}>xs-false md-6</Col>

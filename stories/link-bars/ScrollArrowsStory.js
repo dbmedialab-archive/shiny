@@ -1,11 +1,12 @@
 import React from 'react';
-import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
+import { DemoContainer } from '../storybook-components';
 import { Code } from '../../src/atoms/Code';
 
-// HorizontalLinkBar
 import {
+	Heading, HugeHeading,
+	Paragraph,
+
 	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '../../src';
@@ -13,8 +14,8 @@ import {
 const ScrollArrowsStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
-		<p>It will also scroll by touch.</p>
+		<Paragraph>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</Paragraph>
+		<Paragraph>It will also scroll by touch.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

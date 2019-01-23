@@ -4,8 +4,9 @@ import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
 
-// Typography
 import {
+	Paragraph,
+
 	Heading,
 	XSmallHeading,
 	SmallHeading,
@@ -13,13 +14,13 @@ import {
 	LargeHeading,
 	XLargeHeading,
 	HugeHeading,
-} from '../../src/atoms/Heading';
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>Heading</HugeHeading>
-		<p>Also called headline, overskrift.</p>
-		<p>There are four sizes of headings:</p>
+		<Paragraph>Also called headline, overskrift.</Paragraph>
+		<Paragraph>There are four sizes of headings:</Paragraph>
 		<ul>
 			<li>XSmall</li>
 			<li>Small</li>
@@ -28,34 +29,34 @@ export default () => (
 			<li>XLarge</li>
 			<li>Huge</li>
 		</ul>
-		<p>The font-sizes will increase on large screens.</p>
+		<Paragraph>The font-sizes will increase on large screens.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<XSmallHeading>This is an X small heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning
 			</XSmallHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 			<SmallHeading>This is a small heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning
 			</SmallHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 			<MediumHeading>This is a medium heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning
 			</MediumHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 			<LargeHeading>This is a large heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning (default size)
 			</LargeHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 			<XLargeHeading>This is an X large heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning
 			</XLargeHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 			<HugeHeading>This is a huge heading that is long enough to cover two
 				lines, as it has many words in it to convey loads of meaning
 			</HugeHeading>
-			<p>Paragraph</p>
+			<Paragraph>Paragraph</Paragraph>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
