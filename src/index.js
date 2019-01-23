@@ -124,6 +124,7 @@ export { LunchKicker             } from './atoms/LunchKicker';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { NumberedListItem        } from './atoms/NumberedListItem';
+export { Paragraph               } from './atoms/Paragraph';
 export { Pips                    } from './atoms/Pips';
 export { PublishedDate           } from './atoms/PublishedDate';
 export { Quote                   } from './atoms/Quote';
