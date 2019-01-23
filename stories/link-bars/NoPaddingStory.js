@@ -14,7 +14,7 @@ const NoPaddingStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar without padding</HugeHeading>
 		<Heading>Remove the padding</Heading>
-		<p>Use the <code>shouldHavePadding</code> prop to remove the left and right padding in the link bar.</p>
+		<Paragraph>Use the <code>shouldHavePadding</code> prop to remove the left and right padding in the link bar.</Paragraph>
 		<DemoContainer>
 			<HorizontalLinkBar shouldHavePadding={false}>
 				<LinkBarLink linkText="Siste nytt" />
@@ -33,10 +33,10 @@ const NoPaddingStory = () => (
 		</Code>
 
 		<Heading>.3rem ad adjustment</Heading>
-		<p>In addition, we have by default added a .3rem padding adjustment to help our grid align with common ad
+		<Paragraph>In addition, we have by default added a .3rem padding adjustment to help our grid align with common ad
 			formats. You can remove this extra padding by setting the <code>isTopLevelComponent</code> prop
 			to <code>false</code>.
-		</p>
+		</Paragraph>
 		<DemoContainer>
 			<HorizontalLinkBar
 				shouldHavePadding={false}
@@ -68,7 +68,7 @@ const NoPaddingStory = () => (
 		</Code>
 
 		<Heading>Without props</Heading>
-		<p>This section is here just to help you compare the effects of the props.</p>
+		<Paragraph>This section is here just to help you compare the effects of the props.</Paragraph>
 		<DemoContainer>
 			<HorizontalLinkBar>
 				<LinkBarLink linkText="Siste nytt" />

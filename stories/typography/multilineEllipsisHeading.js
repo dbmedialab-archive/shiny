@@ -13,7 +13,7 @@ import {
 export default () => (
 	<section>
 		<Heading>Heading</Heading>
-		<p>Heading with multiline ellipsis</p>
+		<Paragraph>Heading with multiline ellipsis</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

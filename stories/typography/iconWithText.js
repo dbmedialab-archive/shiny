@@ -14,7 +14,7 @@ export default () => (
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Icon with text</HugeHeading>
-				<p>SVG ICONS WITH BOTTOM TEXT</p>
+				<Paragraph>SVG ICONS WITH BOTTOM TEXT</Paragraph>
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`

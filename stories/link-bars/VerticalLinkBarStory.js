@@ -12,7 +12,7 @@ import {
 const VerticalLinkBarStory = () => (
 	<section>
 		<HugeHeading>VerticalLinkBar</HugeHeading>
-		<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+		<Paragraph>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

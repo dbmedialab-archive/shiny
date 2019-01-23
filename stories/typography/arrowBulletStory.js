@@ -13,9 +13,9 @@ export default () => (
 			Arrow Bullet
 		</HugeHeading>
 
-		<p>
+		<Paragraph>
 			A button-style link with decorated arrow with offset animation on hover
-		</p>
+		</Paragraph>
 
 		<Heading>
 			Demo

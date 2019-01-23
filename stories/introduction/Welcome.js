@@ -38,8 +38,8 @@ const Welcome = () => (
 			<Row between="sm">
 				<Col>
 					<HugeHeading>Shiny!</HugeHeading>
-					<p>You have arrived at Shiny, a storybook of visual components.
-					</p>
+					<Paragraph>You have arrived at Shiny, a storybook of visual components.
+					</Paragraph>
 				</Col>
 				<Col xs sm={3}>
 					<Spinning><ShinyLogo /></Spinning>
@@ -48,24 +48,24 @@ const Welcome = () => (
 		</section>
 		<section>
 			<Heading>Get started using shiny components</Heading>
-			<p>Wrap your app in shiny&apos;s ThemeSelector, and pass it the slug of the
+			<Paragraph>Wrap your app in shiny&apos;s ThemeSelector, and pass it the slug of the
 				theme you&apos;d like to use. (In the future, you will also be allowed to
 				pass a theme object instead, allowing you to use a theme not defined in
 				shiny itself.)
-			</p>
+			</Paragraph>
 
-			<p>The ThemeSelector component will look up your theme from the slug,
+			<Paragraph>The ThemeSelector component will look up your theme from the slug,
 				deep merge it with the default theme and then pass it to
 				emotion&apos;s ThemeProvider. This way we can be sure that all
 				the properties that exist in the default theme is available on every
 				theme - which makes it a lot easier both to write themed components and
 				to create new themes.
-			</p>
+			</Paragraph>
 
-			<p>ThemeSelector will also inject globally the styles in the{' '}
+			<Paragraph>ThemeSelector will also inject globally the styles in the{' '}
 				<code>global</code> property of your selected theme - allowing you to
 				define font definitions and other global styles.
-			</p>
+			</Paragraph>
 
 			<Code language="jsx">
 				{`
@@ -83,9 +83,9 @@ export default AppWithShinyTheme;
 				`}
 			</Code>
 
-			<p>After this initial setup, you are good to go and can use shiny
+			<Paragraph>After this initial setup, you are good to go and can use shiny
 				components directly.
-			</p>
+			</Paragraph>
 
 			<Code language="jsx">
 				{`

@@ -8,7 +8,7 @@ import { DymoHeading } from '../../src/atoms/DymoHeading';
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</p>
+		<Paragraph>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

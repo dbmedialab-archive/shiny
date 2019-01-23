@@ -22,9 +22,9 @@ import { PublishedDate } from '@aller/shiny';
 <PublishedDate color="primary">Publisert 21. november 2017</PublishedDate>
    `}
 		</Code>
-		<p>
+		<Paragraph>
 			The <code>hide</code> prop hides the date.
 			The <code>color</code> prop can be any of the color names in the palette. Defaults to <code>typeLight</code>
-		</p>
+		</Paragraph>
 	</section>
 );

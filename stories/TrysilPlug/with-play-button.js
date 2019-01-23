@@ -7,7 +7,7 @@ import { TrysilPlug } from '../../src/molecules/TrysilPlug';
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>A play icon over the image is often used to denote that the plug links to a video page.</p>
+		<Paragraph>A play icon over the image is often used to denote that the plug links to a video page.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

@@ -12,10 +12,10 @@ export default () => (
 		<HugeHeading>Float image (left)</HugeHeading>
 
 		<Heading>Demo</Heading>
-		<p>
+		<Paragraph>
 			Images can be floated left or right with the <code>float</code> prop
 			but must be accompanied by a <code>width</code> prop with % units.
-		</p>
+		</Paragraph>
 
 		<DemoContainer>
 			<FloatImage float="left" width="50%" url="http://styleguide.dagbladet.no/assets/test/978x.jpg" />

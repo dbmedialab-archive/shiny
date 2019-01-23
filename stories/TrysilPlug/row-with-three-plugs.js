@@ -10,7 +10,7 @@ export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
 
-		<p>A row with three TrysilPlugs.</p>
+		<Paragraph>A row with three TrysilPlugs.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<Row>

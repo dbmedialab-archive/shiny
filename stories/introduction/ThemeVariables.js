@@ -11,7 +11,7 @@ const ThemeVariables = () => {
 	return (
 		<section>
 			<HugeHeading>Variables</HugeHeading>
-			<p>These theme variables are available for you to parameterize the components you write.</p>
+			<Paragraph>These theme variables are available for you to parameterize the components you write.</Paragraph>
 
 			<Heading>Variables</Heading>
 

@@ -13,8 +13,8 @@ import {
 const ScrollArrowsStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
-		<p>It will also scroll by touch.</p>
+		<Paragraph>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</Paragraph>
+		<Paragraph>It will also scroll by touch.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

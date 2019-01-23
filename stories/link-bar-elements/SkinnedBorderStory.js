@@ -46,9 +46,9 @@ const SkinnedBorderStory = () => (
 
 export default withInfo({
 	text: `
-<p>If the <code>linkText</code> prop corresponds with a property that exists in your theme
+<Paragraph>If the <code>linkText</code> prop corresponds with a property that exists in your theme
 			under <code>colors.skinColors</code>, then that color will be used for the default state indicating bottom
 			border. Hover inactive items for an animated effect.
-</p>
+</Paragraph>
 	`,
 })(SkinnedBorderStory);

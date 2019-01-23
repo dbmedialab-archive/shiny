@@ -12,9 +12,9 @@ import {
 const NestedPaddingStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar with adjustment for nested padding</HugeHeading>
-		<p>The shouldAdjustForNestedPadding prop will add a negative margin to the left and right. This can make it
+		<Paragraph>The shouldAdjustForNestedPadding prop will add a negative margin to the left and right. This can make it
 			easier to put a menu line inside a grid.
-		</p>
+		</Paragraph>
 		<DemoContainer>
 			<HorizontalLinkBar shouldAdjustForNestedPadding>
 				<LinkBarLink

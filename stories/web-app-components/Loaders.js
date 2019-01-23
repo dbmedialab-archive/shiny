@@ -20,7 +20,7 @@ export default () => {
         return (
           <section>
             <HugeHeading>NoonLoader</HugeHeading>
-            <p>Should be used when loading content that will add to the height</p>
+            <Paragraph>Should be used when loading content that will add to the height</Paragraph>
 
             <Heading>Usage</Heading>
             <DemoContainer>
@@ -34,7 +34,7 @@ export default () => {
 			return (
 				<section>
 					<HugeHeading>DotLoader</HugeHeading>
-					<p>Should be used when loading content that will fill a already defined space</p>
+					<Paragraph>Should be used when loading content that will fill a already defined space</Paragraph>
 
 					<Heading>Demo</Heading>
 					<DemoContainer>
@@ -56,10 +56,10 @@ import { DotLoader } from '@aller/shiny';
 			return (
 				<section>
 					<HugeHeading>LoadingSearchIcon</HugeHeading>
-					<p>
+					<Paragraph>
 						This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
 						Color defaults to primary.
-					</p>
+					</Paragraph>
 
 					<Heading>Usage</Heading>
 					<DemoContainer>

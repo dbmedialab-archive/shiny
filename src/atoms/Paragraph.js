@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
-import { getVariable } from '../utils/get-variable';
+import { getColor, getVariable } from '../utils';
 
 const Paragraph = styled.p`
-	font-size: ${getVariable('uiRegularSize')};
-	font-weight: ${getVariable('uiWeight')};
 	margin-bottom: ${getVariable('verticalBase')};
+	font-size: ${getVariable('uiRegularSize')};
+	line-height: ${getVariable('uiRegularLineHeight')};
+	font-weight: ${getVariable('uiWeight')};
+	color: ${getColor('type')};
 	text-rendering: optimizeLegibility;
-	width: 100%;
 
 	strong {
 		font-weight: ${getVariable('uiWeightBold')};

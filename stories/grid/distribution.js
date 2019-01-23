@@ -26,7 +26,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Distribution</Heading>
-		<p>Add props to distribute the contents of a row or column.</p>
+		<Paragraph>Add props to distribute the contents of a row or column.</Paragraph>
 
 		<Row around="xs">
 			<Col xs={2}>around-row</Col>

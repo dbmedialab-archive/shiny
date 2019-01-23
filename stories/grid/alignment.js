@@ -34,9 +34,9 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Alignment</Heading>
-		<p>
+		<Paragraph>
 			Add props to align elements to the start or end of row as well as the top, bottom, or center of a column.
-		</p>
+		</Paragraph>
 		<Row>
 			<MotherCol xs={12}>
 				<Row start="xs">

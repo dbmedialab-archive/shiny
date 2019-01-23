@@ -77,14 +77,14 @@ const ButtonStory = () => (
 
 export default withInfo({
 	text: `
-<p>
+<Paragraph>
 	Provides buttons (<code>&lt;button&gt;</code> tags) that can contain a child (e.g. img) for
 	HorizontalLinkBar.
-</p>
-<p>
+</Paragraph>
+<Paragraph>
 	Similar to LinkBarLink, but allows using <code>onClick</code> instead of
 	<code>href=&quot;&quot;</code>.
-</p>
-<p>Comes in two sizes, regular and small.</p>
+</Paragraph>
+<Paragraph>Comes in two sizes, regular and small.</Paragraph>
 	`,
 })(ButtonStory);

@@ -14,7 +14,7 @@ import {
 export default () => (
 	<section>
 		<HugeHeading>PlugHeading</HugeHeading>
-		<p>Like a regular <em>Heading</em>, but with adjusted margin to fit nicely beneath images, like in a plug.</p>
+		<Paragraph>Like a regular <em>Heading</em>, but with adjusted margin to fit nicely beneath images, like in a plug.</Paragraph>
 
 		<DemoContainer>
 			<SmallPlugHeading>This is a small plug heading</SmallPlugHeading>

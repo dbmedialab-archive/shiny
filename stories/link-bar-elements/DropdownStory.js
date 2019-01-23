@@ -120,9 +120,9 @@ const DropdownStory = () => {
 
 export default withInfo({
 	text: `
-<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
-<p>The dropdowns will be collapsed if focus leaves the dropdown, most often on a click or keypress (tab)
+<Paragraph>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</Paragraph>
+<Paragraph>The dropdowns will be collapsed if focus leaves the dropdown, most often on a click or keypress (tab)
 	event.
-</p>
+</Paragraph>
 	`,
 })(DropdownStory);

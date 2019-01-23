@@ -19,11 +19,11 @@ const Palette = () => {
 	return (
 		<section>
 			<HugeHeading>Colors</HugeHeading>
-			<p>
+			<Paragraph>
             When you set out to create a component, you probably want to use some color, whether that is a background
             color to fill your space or a text color to make your type visible.
-			</p>
-			<p>We use colors all the time. Here is how you can use the colors of your brand:</p>
+			</Paragraph>
+			<Paragraph>We use colors all the time. Here is how you can use the colors of your brand:</Paragraph>
 
 			<SmallHeading>Using colors</SmallHeading>
 			<Code language="jsx">

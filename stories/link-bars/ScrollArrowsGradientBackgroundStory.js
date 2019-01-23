@@ -17,8 +17,8 @@ const { colors } = theme;
 const ScrollArrowsGradientBackground = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>... which have gradient background</p>
-		<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
+		<Paragraph>... which have gradient background</Paragraph>
+		<Paragraph>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

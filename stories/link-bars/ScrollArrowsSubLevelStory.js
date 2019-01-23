@@ -13,8 +13,8 @@ import {
 const ScrollArrowsSubLevelStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>... which is not a top level component</p>
-		<p>This will not center the LinkBar as is done on top level compontents.</p>
+		<Paragraph>... which is not a top level component</Paragraph>
+		<Paragraph>This will not center the LinkBar as is done on top level compontents.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

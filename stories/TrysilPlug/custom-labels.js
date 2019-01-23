@@ -8,7 +8,7 @@ import { OverlayingPlugLabels } from '../../src/molecules/OverlayingPlugLabels';
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>The Labels component in TrysilPlug can be swapped out by sending in another component in the Labels prop.</p>
+		<Paragraph>The Labels component in TrysilPlug can be swapped out by sending in another component in the Labels prop.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

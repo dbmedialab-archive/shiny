@@ -14,7 +14,7 @@ import { Error } from '../../src/atoms/Error';
 const DefaultError = () => (
 	<section>
 		<HugeHeading>Error message</HugeHeading>
-		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
+		<Paragraph>Optional attributes can be specified: detailed message and callback on Retry button click</Paragraph>
 
 		<Heading>Default</Heading>
 		<DemoContainer>
@@ -36,11 +36,11 @@ import {
 const AdditionalInfoError = () => (
 	<section>
 		<HugeHeading>Error message</HugeHeading>
-		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
+		<Paragraph>Optional attributes can be specified: detailed message and callback on Retry button click</Paragraph>
 
 		<Heading>With additional information</Heading>
 		<DemoContainer>
-			<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
+			<Error AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>} />
 		</DemoContainer>
 
 		<Code language="jsx">
@@ -49,7 +49,7 @@ import {
 	Error
 } from '@aller/shiny';
 
-<Error AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>} />
+<Error AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>} />
 			`}
 		</Code>
 	</section>
@@ -58,12 +58,12 @@ import {
 const AdditionalInfoAndCallbackError = () => (
 	<section>
 		<HugeHeading>Error message</HugeHeading>
-		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
+		<Paragraph>Optional attributes can be specified: detailed message and callback on Retry button click</Paragraph>
 
 		<Heading>With additional information and callback</Heading>
 		<DemoContainer>
 			<Error
-				AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>}
+				AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -75,7 +75,7 @@ import {
 } from '@aller/shiny';
 
 <Error
-	AdditionalInfo={() => <p>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</p>
+	AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>
 	onRetryButtonClick={() => {}}
 />
 `}
@@ -86,7 +86,7 @@ import {
 const SvgAndInfoError = () => (
 	<section>
 		<HugeHeading>Error message</HugeHeading>
-		<p>Optional attributes can be specified: detailed message and callback on Retry button click</p>
+		<Paragraph>Optional attributes can be specified: detailed message and callback on Retry button click</Paragraph>
 
 		<Heading>With custom colored svg icon and information</Heading>
 		<DemoContainer>
@@ -94,7 +94,7 @@ const SvgAndInfoError = () => (
 				iconColor="primary"
 				message="Fant ingen videoer"
 				icon="crossed-video-camera"
-				AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
+				AdditionalInfo={() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -109,7 +109,7 @@ import {
 	iconColor="primary"
 	message="Fant ingen videoer"
 	icon="crossed-video-camera"
-	AdditionalInfo={() => <p>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</p>}
+	AdditionalInfo={() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>}
 />
 `}
 		</Code>

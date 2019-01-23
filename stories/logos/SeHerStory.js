@@ -12,9 +12,9 @@ import { Code } from '../../src/atoms/Code';
 const SeHerStory = () => (
 	<section>
 		<HugeHeading>SeHerLogo</HugeHeading>
-		<p>This svg beauty grabs all the space it can get, before displaying the SeHer logo in all its outwards exploding
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying the SeHer logo in all its outwards exploding
 			glory.
-		</p>
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
@@ -22,7 +22,7 @@ const SeHerStory = () => (
 		</DemoContainer>
 
 		<Heading>Props</Heading>
-		<p>There are none.</p>
+		<Paragraph>There are none.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<Code language="jsx">

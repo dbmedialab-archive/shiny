@@ -13,7 +13,7 @@ import {
 const ScrollArrowsNestedPaddingStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>...which should adjust for nested padding.</p>
+		<Paragraph>...which should adjust for nested padding.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

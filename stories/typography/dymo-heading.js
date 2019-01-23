@@ -28,8 +28,8 @@ const skin = {
 export default () => (
 	<section>
 		<HugeHeading>DymoHeading</HugeHeading>
-		<p>A variant of the <button type="button" onClick={linkTo('Typography', 'Heading')}>Heading</button> component.</p>
-		<p>There are four sizes of headings:</p>
+		<Paragraph>A variant of the <button type="button" onClick={linkTo('Typography', 'Heading')}>Heading</button> component.</Paragraph>
+		<Paragraph>There are four sizes of headings:</Paragraph>
 		<ul>
 			<li>Small</li>
 			<li>Medium</li>
@@ -37,7 +37,7 @@ export default () => (
 			<li>XLarge</li>
 			<li>Huge</li>
 		</ul>
-		<p>The font-sizes will increase on large screens.</p>
+		<Paragraph>The font-sizes will increase on large screens.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

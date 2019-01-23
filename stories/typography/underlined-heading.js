@@ -20,8 +20,8 @@ import {
 export default () => (
 	<section>
 		<HugeHeading>Underlined heading</HugeHeading>
-		<p>Also called headline, overskrift.</p>
-		<p>There are four sizes of underlined headings:</p>
+		<Paragraph>Also called headline, overskrift.</Paragraph>
+		<Paragraph>There are four sizes of underlined headings:</Paragraph>
 		<ul>
 			<li>XSmall</li>
 			<li>Small</li>
@@ -30,7 +30,7 @@ export default () => (
 			<li>XLarge</li>
 			<li>Huge</li>
 		</ul>
-		<p>The font-sizes will increase on large screens.</p>
+		<Paragraph>The font-sizes will increase on large screens.</Paragraph>
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Row>

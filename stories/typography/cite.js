@@ -9,17 +9,17 @@ export default () => (
 	<section>
 		<HugeHeading>Cite</HugeHeading>
 		<Heading>Preview</Heading>
-		<p>
+		<Paragraph>
 			I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
 			er det krystallklare opplysninger om omfattende juks og svindel av offentlige.
-		</p>
+		</Paragraph>
 
 		<Heading>Usage</Heading>
 		<Code language="jsx">{`
 import { Cite } from '@aller/shiny';
 
-<p>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
-er det krystallklare opplysninger om omfattende juks og svindel av offentlige.</p>
+<Paragraph>I rapporten <Cite>Trondheim kommunes tilskudd til SOS Rasisme</Cite>
+er det krystallklare opplysninger om omfattende juks og svindel av offentlige.</Paragraph>
    `}
 		</Code>
 	</section>

@@ -11,14 +11,14 @@ import { Code } from '../../src/atoms/Code';
 const Themes = () => (
 	<section>
 		<HugeHeading>Themes</HugeHeading>
-		<p>In shiny, we use themes to make our components look a little different
+		<Paragraph>In shiny, we use themes to make our components look a little different
 			for each brand. Currently, you are browsing Shiny with
 			the <ThemeName /> theme enabled.
-		</p>
+		</Paragraph>
 
-		<p>A theme is basically an object that contains settings. It looks like
+		<Paragraph>A theme is basically an object that contains settings. It looks like
 			this:
-		</p>
+		</Paragraph>
 
 		<Code language="jsx">
 			{`
@@ -74,9 +74,9 @@ themeslug = {
 				</td>
 			</tr>
 		</table>
-		<p>In the following sections we will have a look at each of these
+		<Paragraph>In the following sections we will have a look at each of these
 			theme properties.
-		</p>
+		</Paragraph>
 	</section>
 );
 

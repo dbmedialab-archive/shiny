@@ -10,7 +10,7 @@ export default () => (
 	<section>
 		<Grid>
 			<HugeHeading>Generic Ad</HugeHeading>
-			<p>This is a component to be used with dumb ads. E.g. medium-rectangle, banner, netboard etc. Smart ads should be in an own component (e.g. sticky right)</p>
+			<Paragraph>This is a component to be used with dumb ads. E.g. medium-rectangle, banner, netboard etc. Smart ads should be in an own component (e.g. sticky right)</Paragraph>
 
 			<Heading>Demo medium-rectangle</Heading>
 			<GenericAd

@@ -26,7 +26,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Offsets</Heading>
-		<p>We all need some air from time to time.</p>
+		<Paragraph>We all need some air from time to time.</Paragraph>
 		<Row>
 			<Col xsOffset={11} xs={1}>offset-11 xs-1</Col>
 			<Col xsOffset={10} xs={2}>offset-10 xs-2</Col>

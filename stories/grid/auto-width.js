@@ -26,7 +26,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Auto Width</Heading>
-		<p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
+		<Paragraph>Add any number of auto sizing columns to a row. Let the grid figure it out.</Paragraph>
 
 		<Row>
 			<Col xs>xs</Col>

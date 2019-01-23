@@ -22,11 +22,11 @@ const imgUrl = 'https://images.pexels.com/photos/60006/spring-tree-flowers-meado
 export default () => (
 	<section>
 		<HugeHeading>BlockLink</HugeHeading>
-		<p>A block-level link element. The BlockLink is an <code>&lt;a&gt;</code> tag.</p>
-		<p>By default, links are inline elements. BlockLink is a block-level element.</p>
-		<p>Note: Please be aware that due to setting line-height to 0 in BlockLink,
+		<Paragraph>A block-level link element. The BlockLink is an <code>&lt;a&gt;</code> tag.</Paragraph>
+		<Paragraph>By default, links are inline elements. BlockLink is a block-level element.</Paragraph>
+		<Paragraph>Note: Please be aware that due to setting line-height to 0 in BlockLink,
 			children should always specify line-height of their own.
-		</p>
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
@@ -81,7 +81,7 @@ import { BlockLink } from '@aller/shiny';
 
 <BlockLink href="#">
 	<img src={imgUrl} alt="Alternative text" />
-	<p>This is text</p>
+	<Paragraph>This is text</Paragraph>
 </BlockLink>
 			`}
 		</Code>

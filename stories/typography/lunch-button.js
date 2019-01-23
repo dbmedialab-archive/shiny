@@ -9,7 +9,7 @@ export default () => (
 	<section>
 		<HugeHeading>LunchButton</HugeHeading>
 
-		<p>A button-style link with background and border. In a grid, it behaves like a grid cell.</p>
+		<Paragraph>A button-style link with background and border. In a grid, it behaves like a grid cell.</Paragraph>
 
 		<Row>
 			<LunchButton
