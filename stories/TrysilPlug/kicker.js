@@ -1,13 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
+import {
+	Heading, HugeHeading,
+	TrysilPlug,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>The kicker «ny dag, ny nyhet» is used as an introduction to breaking news and commercial plugs.</p>
+		<Paragraph>The kicker «ny dag, ny nyhet» is used as an introduction to breaking news and commercial plugs.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

@@ -2,8 +2,8 @@
 import React from 'react';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	TrysilPlug,
 } from '../../src';
 
@@ -12,8 +12,8 @@ import { Code } from '../../src/atoms/Code';
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug with ALL CAPS</HugeHeading>
-		<p>Sometimes editors will prefer it if we scream out the news. Online, we do that with ALL CAPS.</p>
-		<p>Set the <var>headingProps.ALLCAPS</var> prop, and you will achieve what you want.</p>
+		<Paragraph>Sometimes editors will prefer it if we scream out the news. Online, we do that with ALL CAPS.</Paragraph>
+		<Paragraph>Set the <var>headingProps.ALLCAPS</var> prop, and you will achieve what you want.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

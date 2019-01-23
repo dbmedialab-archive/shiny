@@ -2,8 +2,12 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { Label } from '../../src/atoms/Label';
+import {
+	Heading,
+	HugeHeading,
+	Label,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>
@@ -23,11 +27,11 @@ import { Label } from '@aller/shiny';
 <Label>Default</Label>
 			`}
 		</Code>
-		<p>The <var>backgroundColor</var> prop can be any of the color names in the palette.
+		<Paragraph>The <var>backgroundColor</var> prop can be any of the color names in the palette.
 			Defaults to &quot;splashBackground&quot;.
-		</p>
-		<p>The <var>textColor</var> prop can be any of the color names in the palette.
+		</Paragraph>
+		<Paragraph>The <var>textColor</var> prop can be any of the color names in the palette.
 			Defaults to &quot;splashText&quot;.
-		</p>
+		</Paragraph>
 	</section>
 );

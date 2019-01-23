@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
+import {
+	Heading,
+	HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 import BlueBox from './blue-box';
 
 const Col = ({ children = null, ...rest }) => (
@@ -26,7 +30,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Distribution</Heading>
-		<p>Add props to distribute the contents of a row or column.</p>
+		<Paragraph>Add props to distribute the contents of a row or column.</Paragraph>
 
 		<Row around="xs">
 			<Col xs={2}>around-row</Col>

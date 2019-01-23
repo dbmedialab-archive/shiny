@@ -2,11 +2,10 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	DagbladetLogo,
-	Row,
-	Col,
+	Row, Col,
 	ThemeSelector as ShinyThemeProvider,
 } from '../../src';
 
@@ -15,8 +14,12 @@ import { Code } from '../../src/atoms/Code';
 const DagbladetStory = () => (
 	<section>
 		<HugeHeading>DagbladetLogo</HugeHeading>
-		<p>This svg beauty grabs all the space it can get, before displaying the Dagladet logo in all its red glory.</p>
-		<p>To use Dagbladet colors even on a non-Dagbladet site, you can wrap the logo in a Dagbladet theme provider.</p>
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying
+			the Dagladet logo in all its red glory.
+		</Paragraph>
+		<Paragraph>To use Dagbladet colors even on a non-Dagbladet site, you can
+			wrap the logo in a Dagbladet theme provider.
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

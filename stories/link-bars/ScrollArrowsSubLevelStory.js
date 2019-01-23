@@ -1,11 +1,11 @@
 import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// HorizontalLinkBar
 import {
+	Heading, HugeHeading,
+	Paragraph,
 	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '../../src';
@@ -13,8 +13,8 @@ import {
 const ScrollArrowsSubLevelStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>... which is not a top level component</p>
-		<p>This will not center the LinkBar as is done on top level compontents.</p>
+		<Paragraph>... which is not a top level component</Paragraph>
+		<Paragraph>This will not center the LinkBar as is done on top level compontents.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

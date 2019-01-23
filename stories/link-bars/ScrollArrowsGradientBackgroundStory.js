@@ -1,11 +1,11 @@
 import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// HorizontalLinkBar
 import {
+	Heading, HugeHeading,
+	Paragraph,
 	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '../../src';
@@ -17,8 +17,8 @@ const { colors } = theme;
 const ScrollArrowsGradientBackground = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>... which have gradient background</p>
-		<p>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</p>
+		<Paragraph>... which have gradient background</Paragraph>
+		<Paragraph>A ScrollArrowsLinkBar is a HorizontalLinkBar with clickable arrows for scrolling.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
