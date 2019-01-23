@@ -14,7 +14,9 @@ const NoPaddingStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar without padding</HugeHeading>
 		<Heading>Remove the padding</Heading>
-		<Paragraph>Use the <code>shouldHavePadding</code> prop to remove the left and right padding in the link bar.</Paragraph>
+		<Paragraph>Use the <code>shouldHavePadding</code> prop to remove the left
+			and right padding in the link bar.
+		</Paragraph>
 		<DemoContainer>
 			<HorizontalLinkBar shouldHavePadding={false}>
 				<LinkBarLink linkText="Siste nytt" />

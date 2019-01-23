@@ -12,8 +12,8 @@ import { Code } from '../../src/atoms/Code';
 const SeHerStory = () => (
 	<section>
 		<HugeHeading>SeHerLogo</HugeHeading>
-		<Paragraph>This svg beauty grabs all the space it can get, before displaying the SeHer logo in all its outwards exploding
-			glory.
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying
+			the SeHer logo in all its outwards exploding glory.
 		</Paragraph>
 
 		<Heading>Demo</Heading>

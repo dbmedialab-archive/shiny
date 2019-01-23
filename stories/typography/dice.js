@@ -16,7 +16,9 @@ export default () => (
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Dice</HugeHeading>
-				<Paragraph>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphor.</Paragraph>
+				<Paragraph>A dice with 1-6 pips. In Norwegian newspapers, the dice is
+					often used as a rating metaphor.
+				</Paragraph>
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`

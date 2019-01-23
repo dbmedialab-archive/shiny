@@ -12,7 +12,9 @@ import { Code } from '../../src/atoms/Code';
 const KKStory = () => (
 	<section>
 		<HugeHeading>KKLogo</HugeHeading>
-		<Paragraph>This svg beauty grabs all the space it can get, before displaying the Shiny logo in all its spiraly glory.</Paragraph>
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying
+			the Shiny logo in all its spiraly glory.
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

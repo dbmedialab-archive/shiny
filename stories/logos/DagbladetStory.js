@@ -14,8 +14,12 @@ import { Code } from '../../src/atoms/Code';
 const DagbladetStory = () => (
 	<section>
 		<HugeHeading>DagbladetLogo</HugeHeading>
-		<Paragraph>This svg beauty grabs all the space it can get, before displaying the Dagladet logo in all its red glory.</Paragraph>
-		<Paragraph>To use Dagbladet colors even on a non-Dagbladet site, you can wrap the logo in a Dagbladet theme provider.</Paragraph>
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying
+			the Dagladet logo in all its red glory.
+		</Paragraph>
+		<Paragraph>To use Dagbladet colors even on a non-Dagbladet site, you can
+			wrap the logo in a Dagbladet theme provider.
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

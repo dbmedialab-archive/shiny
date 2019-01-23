@@ -39,7 +39,9 @@ const AdditionalInfoError = () => (
 
 		<Heading>With additional information</Heading>
 		<DemoContainer>
-			<Error AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>} />
+			<Error AdditionalInfo={
+				() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>}
+			/>
 		</DemoContainer>
 
 		<Code language="jsx">
@@ -48,7 +50,9 @@ import {
 	Error
 } from '@aller/shiny';
 
-<Error AdditionalInfo={() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>} />
+<Error AdditionalInfo={
+	() => <Paragraph>Vi kunne dessverre ikke laste inn relaterte oppskrifter akkurat nå</Paragraph>
+} />
 			`}
 		</Code>
 	</section>
@@ -93,7 +97,9 @@ const SvgAndInfoError = () => (
 				iconColor="primary"
 				message="Fant ingen videoer"
 				icon="crossed-video-camera"
-				AdditionalInfo={() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>}
+				AdditionalInfo={
+					() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>
+				}
 				onRetryButtonClick={() => {}}
 			/>
 		</DemoContainer>
@@ -108,7 +114,9 @@ import {
 	iconColor="primary"
 	message="Fant ingen videoer"
 	icon="crossed-video-camera"
-	AdditionalInfo={() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>}
+	AdditionalInfo={
+		() => <Paragraph>Vi fant dessverre ingen videoer merket med pizza. Prøv en annen kategori.</Paragraph>
+	}
 />
 `}
 		</Code>
