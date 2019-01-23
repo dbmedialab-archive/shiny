@@ -80,6 +80,8 @@ export { FigCaption              } from './atoms/FigCaption';
 export { FontIcon                } from './atoms/FontIcon';
 export { SvgIcon                 } from './atoms/SvgIcon';
 export { IconWithText            } from './atoms/IconWithText';
+export { Input                   } from './atoms/Input';
+export { TextInput               } from './atoms/TextInput';
 export { GlobalStyle             } from './atoms/GlobalStyle';
 export { Grid                    } from './atoms/Grid';
 export { NoPaddingGrid           } from './atoms/NoPaddingGrid';
