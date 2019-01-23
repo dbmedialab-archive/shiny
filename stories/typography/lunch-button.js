@@ -1,15 +1,19 @@
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
-import { Row } from '../../src/atoms/Row';
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { LunchButton } from '../../src/molecules/LunchButton';
+
+import {
+	Heading, HugeHeading,
+	Row,
+	Paragraph,
+	LunchButton,
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>LunchButton</HugeHeading>
 
-		<p>A button-style link with background and border. In a grid, it behaves like a grid cell.</p>
+		<Paragraph>A button-style link with background and border. In a grid, it behaves like a grid cell.</Paragraph>
 
 		<Row>
 			<LunchButton

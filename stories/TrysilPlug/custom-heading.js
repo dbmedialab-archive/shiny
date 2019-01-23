@@ -1,14 +1,18 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
-import { DymoHeading } from '../../src/atoms/DymoHeading';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+
+	TrysilPlug,
+	DymoHeading,
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</p>
+		<Paragraph>The Heading component in TrysilPlug can be swapped out by sending in another component in the Heading prop.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

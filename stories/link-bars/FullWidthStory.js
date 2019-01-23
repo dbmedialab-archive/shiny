@@ -8,6 +8,7 @@ import {
 	// For the story
 	Heading,
 	HugeHeading,
+	Paragraph,
 
 	// For this component specifically
 	FullWidthLinkBar,
@@ -17,11 +18,11 @@ import {
 const FullWidthStory = () => (
 	<section>
 		<HugeHeading>FullWidthLinkBar</HugeHeading>
-		<p>A FullWidthLinkBar is a HorizontalLinkBar that uses 100% of the available space.</p>
-		<p>
+		<Paragraph>A FullWidthLinkBar is a HorizontalLinkBar that uses 100% of the available space.</Paragraph>
+		<Paragraph>
 			By default, it is positioned absolutely. If you add a truthy <code>fixed</code> prop, it is
 			positioned fixed instead.
-		</p>
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

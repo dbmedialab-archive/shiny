@@ -1,14 +1,17 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
-import { DymoHeading } from '../../src/atoms/DymoHeading';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+	TrysilPlug,
+	DymoHeading,
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>DymoHeading with shade on hover</HugeHeading>
-		<p>DymoHeading does not have any hover effect by default, but if you pass the skin.textHoverShade prop, it will add that shade to the textColor on hover.</p>
+		<Paragraph>DymoHeading does not have any hover effect by default, but if you pass the skin.textHoverShade prop, it will add that shade to the textColor on hover.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

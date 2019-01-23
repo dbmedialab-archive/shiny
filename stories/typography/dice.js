@@ -3,18 +3,22 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
+import {
+	HugeHeading, SmallHeading,
+	Row, Col,
+	Paragraph,
+	Dice,
+} from '../../src';
 
-import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { Dice } from '../../src/molecules/Dice';
 
 export default () => (
 	<section>
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Dice</HugeHeading>
-				<p>A dice with 1-6 pips. In Norwegian newspapers, the dice is often used as a rating metaphor.</p>
+				<Paragraph>A dice with 1-6 pips. In Norwegian newspapers, the dice is
+					often used as a rating metaphor.
+				</Paragraph>
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`

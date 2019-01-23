@@ -1,21 +1,24 @@
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../../src/atoms/Heading';
+import { Code } from '../../../src/atoms/Code';
 import { DemoContainer } from '../../storybook-components';
 
-import { Code } from '../../../src/atoms/Code';
-
-import { FloatImage } from '../../../src/molecules/FloatImage';
+import {
+	Heading,
+	HugeHeading,
+	FloatImage,
+	Paragraph,
+} from '../../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>Float image (right)</HugeHeading>
 
 		<Heading>Demo</Heading>
-		<p>
+		<Paragraph>
 			Images can be floated left or right with the <code>float</code> prop
 			but must be accompanied by a <code>width</code> prop with % units.
-		</p>
+		</Paragraph>
 
 		<DemoContainer>
 			<FloatImage float="right" width="50%" url="http://styleguide.dagbladet.no/assets/test/978x.jpg" />

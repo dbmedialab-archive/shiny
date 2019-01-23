@@ -1,13 +1,16 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
-import { TrysilPlug } from '../../src/molecules/TrysilPlug';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+	TrysilPlug,
+} from '../../src';
 
 export default () => (
 	<section>
 		<HugeHeading>TrysilPlug</HugeHeading>
-		<p>A play icon over the image is often used to denote that the plug links to a video page.</p>
+		<Paragraph>A play icon over the image is often used to denote that the plug links to a video page.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<TrysilPlug

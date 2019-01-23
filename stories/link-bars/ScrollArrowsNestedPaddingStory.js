@@ -1,11 +1,11 @@
 import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// HorizontalLinkBar
 import {
+	Heading, HugeHeading,
+	Paragraph,
 	ScrollArrowsLinkBar,
 	LinkBarLink,
 } from '../../src';
@@ -13,7 +13,7 @@ import {
 const ScrollArrowsNestedPaddingStory = () => (
 	<section>
 		<HugeHeading>ScrollArrowsLinkBar</HugeHeading>
-		<p>...which should adjust for nested padding.</p>
+		<Paragraph>...which should adjust for nested padding.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
