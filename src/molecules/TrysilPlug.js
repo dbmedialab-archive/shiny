@@ -126,7 +126,7 @@ const TrysilPlug = ({
 				}
 				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
 				{subtitle && <Description order={4} itemProp="description">{subtitle}</Description>}
-				{labels && <Labels {...labelsProps} labels={labels} />}
+				{labels.length && <Labels {...labelsProps} labels={labels} />}
 			</PlugLink>
 		</ArticleComponent>
 	);
