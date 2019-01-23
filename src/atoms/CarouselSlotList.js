@@ -36,7 +36,6 @@ ${(props) => {
 			position: absolute;
 			flex-direction: column;
 			display: flex;
-			height: 100%;
 		`;
 		} else {
 			directional = css`
