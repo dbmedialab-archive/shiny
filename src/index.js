@@ -114,6 +114,7 @@ export { LunchKicker             } from './atoms/LunchKicker';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { NumberedListItem        } from './atoms/NumberedListItem';
+export { OverlayingPlugLabel     } from './atoms/OverlayingPlugLabel';
 export { Paragraph               } from './atoms/Paragraph';
 export { Pips                    } from './atoms/Pips';
 export {
@@ -172,6 +173,7 @@ export { FloatImage              } from './molecules/FloatImage';
 export { IconBar                 } from './molecules/IconBar';
 export { Labels                  } from './molecules/Labels';
 export { LunchButton             } from './molecules/LunchButton';
+export { OverlayingPlugLabels    } from './molecules/OverlayingPlugLabels';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
 export { GenericAd               } from './molecules/GenericAd';
