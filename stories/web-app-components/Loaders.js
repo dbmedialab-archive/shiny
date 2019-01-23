@@ -2,14 +2,17 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 import { DemoContainer } from '../storybook-components';
-
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
 
-// Loaders
-import { DotLoader } from '../../src/atoms/loaders/DotLoader';
-// import { NoonLoader } from '../shared-components/NoonLoader/NoonLoader';
-import { LoadingSearchIcon } from '../../src/atoms/loaders/LoadingSearchIcon';
+import {
+	Heading, HugeHeading,
+	Paragraph,
+
+	// Loaders
+	DotLoader,
+	// NoonLoader
+	LoadingSearchIcon,
+} from '../../src';
 
 export default () => {
 	storiesOf('Web App Components|Loaders', DotLoader)
@@ -20,7 +23,7 @@ export default () => {
         return (
           <section>
             <HugeHeading>NoonLoader</HugeHeading>
-            <p>Should be used when loading content that will add to the height</p>
+            <Paragraph>Should be used when loading content that will add to the height</Paragraph>
 
             <Heading>Usage</Heading>
             <DemoContainer>
@@ -34,7 +37,7 @@ export default () => {
 			return (
 				<section>
 					<HugeHeading>DotLoader</HugeHeading>
-					<p>Should be used when loading content that will fill a already defined space</p>
+					<Paragraph>Should be used when loading content that will fill a already defined space</Paragraph>
 
 					<Heading>Demo</Heading>
 					<DemoContainer>
@@ -56,10 +59,10 @@ import { DotLoader } from '@aller/shiny';
 			return (
 				<section>
 					<HugeHeading>LoadingSearchIcon</HugeHeading>
-					<p>
+					<Paragraph>
 						This is used by the NewsSearch component when loading articles. Works well with the SearchIcon.
 						Color defaults to primary.
-					</p>
+					</Paragraph>
 
 					<Heading>Usage</Heading>
 					<DemoContainer>

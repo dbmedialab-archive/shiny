@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
-
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
 import BlueBox from './blue-box';
+
+import {
+	Heading, HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 
 const Col = ({ children = null, ...rest }) => (
 	<GridCol {...rest}>
@@ -26,11 +29,11 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Responsive</Heading>
-		<p>
+		<Paragraph>
 			Responsive modifiers enable specifying different column sizes, offsets, alignment and distribution at xs,
 			sm, md & lg viewport widths.
-		</p>
-		<p>The break points can be customised in the emotion theme.</p>
+		</Paragraph>
+		<Paragraph>The break points can be customised in the emotion theme.</Paragraph>
 		<Row>
 			<Col xs={12} sm={3} md={2} lg={1}>xs-12 sm-3 md-2 lg-1</Col>
 			<Col xs={6} sm={6} md={8} lg={10}>xs-6 sm-6 md-8 lg-10</Col>

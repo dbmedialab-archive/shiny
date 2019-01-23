@@ -3,7 +3,6 @@ import { withInfo } from '@storybook/addon-info';
 
 import { LogiclessModal } from '../../src';
 
-
 const LogiclessModalStory = () => (
 	<LogiclessModal title="This is a title" closeModal={() => null} appElement="#root">
 			This is the children.

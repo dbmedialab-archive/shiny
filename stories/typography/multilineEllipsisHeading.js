@@ -4,16 +4,15 @@ import { DemoContainer } from '../storybook-components';
 
 import { Code } from '../../src/atoms/Code';
 
-// Typography
 import {
-	Heading,
-	XSmallHeading,
-} from '../../src/atoms/Heading';
+	Heading, XSmallHeading,
+	Paragraph,
+} from '../../src';
 
 export default () => (
 	<section>
 		<Heading>Heading</Heading>
-		<p>Heading with multiline ellipsis</p>
+		<Paragraph>Heading with multiline ellipsis</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

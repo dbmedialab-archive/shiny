@@ -20,6 +20,7 @@ import {
 	SmallHeading,
 	Row,
 	Col,
+	Paragraph,
 
 	getColor,
 	getVariable,
@@ -63,7 +64,7 @@ const FlexCol = styled(Col)`
 const DagbladetStory = () => (
 	<section>
 		<HugeHeading>HorizontalLinkBar</HugeHeading>
-		<p>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</p>
+		<Paragraph>A horizontal navbar that can contain items such as links, buttons, dropdowns or other stuff.</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>

@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Heading, HugeHeading } from '../../src/atoms/Heading';
 import { Code } from '../../src/atoms/Code';
-
-import { Row } from '../../src/atoms/Row';
-import { Col as GridCol } from '../../src/atoms/Col';
 import BlueBox from './blue-box';
+
+import {
+	Heading,
+	HugeHeading,
+	Row,
+	Col as GridCol,
+	Paragraph,
+} from '../../src';
 
 const Col = ({ children = null, ...rest }) => (
 	<GridCol {...rest}>
@@ -26,7 +30,7 @@ export default () => (
 	<section>
 		<HugeHeading>Grid</HugeHeading>
 		<Heading>Auto Width</Heading>
-		<p>Add any number of auto sizing columns to a row. Let the grid figure it out.</p>
+		<Paragraph>Add any number of auto sizing columns to a row. Let the grid figure it out.</Paragraph>
 
 		<Row>
 			<Col xs>xs</Col>
