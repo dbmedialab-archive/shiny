@@ -11,8 +11,10 @@ export const CarouselSlot = styled(Col)`
 
 		return css`
 			margin-right: ${marginRight};
-			margin-bottom: 0;
 			padding: 0;
+			&& > * {
+				margin-bottom: 0;
+			}
 
 			&:last-child {
 				margin: 0;
