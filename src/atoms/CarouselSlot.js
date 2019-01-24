@@ -12,7 +12,7 @@ export const CarouselSlot = styled(Col)`
 		return css`
 			margin-right: ${marginRight};
 			padding: 0;
-			article {
+			& > * {
 				margin-bottom: 0;
 			}
 
