@@ -43,7 +43,7 @@ class Carousel extends React.Component {
 		const { vertical } = this.props;
 
 		const scrollOffset = vertical ? scrollTop : scrollLeft;
-
+		this.setContentEl(this.carouselContentEl.current);
 		this.setState({
 			nextArrowVisible: scrollOffset + pageLength < carouselLength && this.enoughItemsForScroll,
 			prevArrowVisible: scrollOffset > 0 && this.enoughItemsForScroll,
