@@ -26,7 +26,7 @@ export const CarouselButton = styled.button`
 		`;
 	}}
 	background-color: rgba(255, 255, 255, 0.7);
-	display: flex;
+	display: ${props => (props.hide ? 'none' : 'flex')};
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
