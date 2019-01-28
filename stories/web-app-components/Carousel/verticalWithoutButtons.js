@@ -19,7 +19,7 @@ const FullHeightCol = styled(Col)`
 	height: 64rem;
 `;
 
-const VerticalWithoutButton = () => {
+const VerticalWithoutButtons = () => {
 	const testItems = Array(10).fill(prototypeItem);
 
 	const children = testItems.map((item, i) => (
@@ -40,7 +40,7 @@ const VerticalWithoutButton = () => {
 			<DemoContainer>
 				<Row>
 					<FullHeightCol md={5} xs={12}>
-						<Carousel vertical hideButton heading="Demo vertical carousel without buttons">
+						<Carousel vertical hideButtons heading="Demo vertical carousel without buttons">
 							{children}
 						</Carousel>
 					</FullHeightCol>
@@ -70,4 +70,4 @@ import {
 	);
 };
 
-export { VerticalWithoutButton };
+export { VerticalWithoutButtons };
