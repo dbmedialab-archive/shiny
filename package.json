@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.23.4-0",
+  "version": "0.24.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -42,7 +42,7 @@
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "prop-types": "15.6.2",
-    "react-intersection-observer": "6.4.1",
+    "react-intersection-observer": "6.4.2",
     "react-modal": "3.8.1",
     "react-stickyfill": "0.2.3",
     "striptags": "3.1.1"
@@ -86,10 +86,10 @@
     "babel-plugin-react-docgen": "2.0.0",
     "babel-plugin-transform-imports": "^1.5.0",
     "eslint": "5.12.1",
-    "eslint-plugin-import": "2.15.0",
-    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.0",
     "eslint-plugin-react": "7.12.4",
-    "pretty-format": "23.6.0",
+    "pretty-format": "24.0.0",
     "react": "16.7.0",
     "react-dom": "16.7.0"
   }
