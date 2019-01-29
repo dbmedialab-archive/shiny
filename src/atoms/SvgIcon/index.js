@@ -35,6 +35,8 @@ import { ExclamationMark     } from './ExclamationMark';
 import { YouTube             } from './YouTube';
 import { NotFound            } from './NotFound';
 import { Play                } from './Play';
+import { DagbladetVideoIcon  } from './DagbladetVideo';
+import { BackNavIcon         } from './BackNav';
 
 const SvgIcon = (props) => {
 	const {
@@ -118,6 +120,10 @@ const SvgIcon = (props) => {
 						return <YouTube {...props} />;
 					case 'play':
 						return <Play {...props} />;
+					case 'dagbladetVideo':
+						return <DagbladetVideoIcon {...props} />;
+					case 'backNav':
+						return <BackNavIcon {...props} />;
 					default:
 						return null;
 					}
