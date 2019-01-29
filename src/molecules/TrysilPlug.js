@@ -78,7 +78,7 @@ const TrysilPlug = ({
 	placeholderUrl,
 	column,
 	attributes,
-	float
+	float,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
