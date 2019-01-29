@@ -188,6 +188,7 @@ class Carousel extends React.Component {
 	render() {
 		const {
 			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight, horizontalArrowOffset,
+			hideButtons,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -219,6 +220,7 @@ class Carousel extends React.Component {
 							vertical={vertical}
 							onClick={() => this.doSliding('prev')}
 							horizontalArrowOffset={horizontalArrowOffset}
+							hide={hideButtons}
 						>
 							<FontIcon name="arrow-alt-left" size={3} />
 						</CarouselButton>
@@ -229,6 +231,7 @@ class Carousel extends React.Component {
 							vertical={vertical}
 							onClick={() => this.doSliding('next')}
 							horizontalArrowOffset={horizontalArrowOffset}
+							hide={hideButtons}
 						>
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
@@ -247,6 +250,7 @@ Carousel.propTypes = {
 	headingProps: PropTypes.shape({}),
 	heading: PropTypes.string,
 	vertical: PropTypes.bool,
+	hideButtons: PropTypes.bool,
 	withMouseEvents: PropTypes.bool,
 	horizontalSizing: PropTypes.shape({}),
 	verticalHeight: PropTypes.string,
@@ -264,6 +268,7 @@ Carousel.defaultProps = {
 	headingProps: {},
 	heading: '',
 	vertical: false,
+	hideButtons: false,
 	withMouseEvents: true,
 	horizontalSizing: {
 		xs: 6,
