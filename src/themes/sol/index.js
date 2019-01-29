@@ -24,7 +24,6 @@ const global = `
 export default {
 	name: 'SOL',
 	flexboxgrid: {
-		outerMargin: 1.5, // rem
 		container: {
 			sm: 75.3, // rem
 			md: 101.0, // rem
