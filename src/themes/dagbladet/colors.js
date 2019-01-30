@@ -46,6 +46,7 @@ const colors = {
 	...combinedShadedColors,
 
 	skinColors: {
+		background: 'white',
 		type: 'darkness',
 		nativeAd: 'green',
 		splashBackground: 'primary',
