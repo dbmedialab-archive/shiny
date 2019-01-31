@@ -55,7 +55,7 @@ import {
 	Carousel,
  } from '@aller/shiny';
 
-<Carousel vertical>
+<Carousel vertical hideButtons>
 	<TrysilPlug
 		title='Test title 1'
 		image='https://via.placeholder.com/250x125'
