@@ -3,6 +3,7 @@ import React from 'react';
 const DagbladetVideoIcon = () => (
 	/* eslint-disable max-len */
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.06 65.5">
+		<title>Dagbladet Video</title>
 		<g>
 			<g>
 				<rect width="207.52" height="65.5" fill="#d60000" />
