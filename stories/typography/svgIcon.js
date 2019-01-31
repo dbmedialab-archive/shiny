@@ -136,6 +136,12 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="play" text="play" />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="backNav" text="tilback" color="type" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="dagbladetVideo" text="DB Video" iconSize={15} />
+			</Col>
 		</Row>
 	</section>
 );

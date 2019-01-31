@@ -25,11 +25,14 @@ export const CarouselButton = styled.button`
 			width: ${buttonLength};
 		`;
 	}}
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: ${getColor('transparent')};
 	display: ${props => (props.hide ? 'none' : 'flex')};
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	@media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.sm}rem) {
+		background-color: ${getColor('background')};
+	}
 
 	span {
 		font-size: ${getVariable('uiLargeSize')};
