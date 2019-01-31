@@ -8,6 +8,7 @@ import { KKStory } from './KKStory';
 import AllerStory from './AllerStory';
 import DinsideStory from './DinsideStory';
 import DinsideStoryTwenty from './DinsideStoryTwenty';
+import Elbil24Logo from './Elbil24Story';
 
 export default () => {
 	storiesOf('Logos|Logos', module)
@@ -18,5 +19,6 @@ export default () => {
 		.add('KKLogo', KKStory)
 		.add('DagbladetLogo', DagbladetStory)
 		.add('DinsideLogo', DinsideStory)
-		.add('... with twenty year anniversary marking', DinsideStoryTwenty);
+		.add('... with twenty year anniversary marking', DinsideStoryTwenty)
+		.add('Elbil24Logo', Elbil24Logo);
 };
