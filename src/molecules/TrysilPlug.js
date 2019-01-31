@@ -16,8 +16,26 @@ import { Labels as DefaultLabels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
+import { AbsolutelyCenteredSvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
+
+const PlayIcon = ({ color }, props) => (
+	<AbsolutelyCenteredSvgIcon
+		color={color}
+		name="play"
+		value={1}
+		size={5}
+		{...props}
+	/>
+);
+PlayIcon.propTypes = {
+	/** A color name from your theme */
+	color: PropTypes.string,
+};
+PlayIcon.defaultProps = {
+	color: 'type',
+};
 
 const PlugLink = styled(BlockLink)`
 	display: flex;
@@ -79,6 +97,8 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
+	displayPlayIcon,
+	playIconColor,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -96,6 +116,7 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
+						{displayPlayIcon && <PlayIcon color={playIconColor} />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
