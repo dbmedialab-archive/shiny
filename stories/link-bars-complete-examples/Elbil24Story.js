@@ -71,7 +71,7 @@ const ProLink = styled(Link)`
 	color: #fff;
 	text-align: right;
 	margin-top: -138px;
-	margin-left: -50px;
+	margin-left: -55px;
 	width: 5rem;
 `;
 
