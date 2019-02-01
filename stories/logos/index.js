@@ -8,7 +8,7 @@ import { KKStory } from './KKStory';
 import AllerStory from './AllerStory';
 import DinsideStory from './DinsideStory';
 import DinsideStoryTwenty from './DinsideStoryTwenty';
-import Elbil24Logo from './Elbil24Story';
+import Elbil24Logo from './Elbil24LogoStory';
 
 export default () => {
 	storiesOf('Logos|Logos', module)
