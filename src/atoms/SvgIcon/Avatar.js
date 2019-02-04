@@ -31,4 +31,4 @@ const User = props => (
 	</svg>
 );
 
-export { User };
+export default User;

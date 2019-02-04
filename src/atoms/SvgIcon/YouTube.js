@@ -9,4 +9,4 @@ const YouTube = () => (
 );
 /* eslint-enable max-len */
 
-export { YouTube };
+export default YouTube;

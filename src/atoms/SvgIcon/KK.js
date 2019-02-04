@@ -16,4 +16,4 @@ const KK = props => (
 	</svg>
 );
 
-export { KK };
+export default KK;

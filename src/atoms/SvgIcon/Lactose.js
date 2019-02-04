@@ -19,4 +19,4 @@ const Lactose = props => (
 	</svg>
 );
 
-export { Lactose };
+export default Lactose;
