@@ -4,55 +4,68 @@ import styled from '@emotion/styled';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
-/* eslint-disable global-require */
 const icons = {
-	'activity': () => require('./ActivityTime').default,
-	'difficulty': () => require('./Difficulty').default,
-	'nut': () => require('./Nut').default,
-	'fish': () => require('./Fish').default,
-	'gluten': () => require('./Gluten').default,
-	'pork': () => require('./Pork').default,
-	'total-time': () => require('./TotalTime').default,
-	'vegan': () => require('./Vegan').default,
-	'vegetarian': () => require('./Vegetarian').default,
-	'star': () => require('./Star').default,
-	'laktose': () => require('./Lactose').default,
-	'egg': () => require('./Egg').default,
-	'skalldyr': () => require('./ShellFish').default,
-	'mail': () => require('./Mail').default,
-	'twitter': () => require('./Twitter').default,
-	'double-arrow': () => require('./DoubleArrow').default,
-	'pinterest': () => require('./Pinterest').default,
-	'circle-with-text': () => require('./CircleWithText').default,
-	'facebook': () => require('./FaceBook').default,
-	'user': () => require('./Avatar').default,
-	'kk': () => require('./KK').default,
-	'aller': () => require('./Aller').default,
-	'dagbladet': () => require('./Dagbladet').default,
-	'oppskrift-logo': () => require('./OppskriftLogo').default,
-	'oppskrift-mobile-logo': () => require('./OppskriftMobileLogo').default,
-	'oppskrift-loader': () => require('./OppskriftLoader').default,
-	'crossed-video-camera': () => require('./CrossedVideoCamera').default,
-	'exclamation': () => require('./ExclamationMark').default,
-	'youtube': () => require('./YouTube').default,
-	'play': () => require('./Play').default,
-	'dagbladetVideo': () => require('./DagbladetVideo').default,
-	'backNav': () => require('./BackNav').default,
-	'not-found': () => require('./NotFound').default,
-	'elseDiff': () => () => <div />,
+	'activity': () => import('./ActivityTime'),
+	'difficulty': () => import('./Difficulty'),
+	'nut': () => import('./Nut'),
+	'fish': () => import('./Fish'),
+	'gluten': () => import('./Gluten'),
+	'pork': () => import('./Pork'),
+	'total-time': () => import('./TotalTime'),
+	'vegan': () => import('./Vegan'),
+	'vegetarian': () => import('./Vegetarian'),
+	'star': () => import('./Star'),
+	'laktose': () => import('./Lactose'),
+	'egg': () => import('./Egg'),
+	'skalldyr': () => import('./ShellFish'),
+	'mail': () => import('./Mail'),
+	'twitter': () => import('./Twitter'),
+	'double-arrow': () => import('./DoubleArrow'),
+	'pinterest': () => import('./Pinterest'),
+	'circle-with-text': () => import('./CircleWithText'),
+	'facebook': () => import('./FaceBook'),
+	'user': () => import('./Avatar'),
+	'kk': () => import('./KK'),
+	'aller': () => import('./Aller'),
+	'dagbladet': () => import('./Dagbladet'),
+	'oppskrift-logo': () => import('./OppskriftLogo'),
+	'oppskrift-mobile-logo': () => import('./OppskriftMobileLogo'),
+	'oppskrift-loader': () => import('./OppskriftLoader'),
+	'crossed-video-camera': () => import('./CrossedVideoCamera'),
+	'exclamation': () => import('./ExclamationMark'),
+	'youtube': () => import('./YouTube'),
+	'play': () => import('./Play'),
+	'dagbladetVideo': () => import('./DagbladetVideo'),
+	'backNav': () => import('./BackNav'),
+	'not-found': () => import('./NotFound'),
+	'elseDiff': () => () => <span />,
 };
-/* eslint-enable global-require */
 
-const SvgIcon = ({ name, ...props }) => {
-	const resolveIcon = icons[name] || icons.elseDiff;
-	const Icon = resolveIcon();
+class SvgIcon extends React.PureComponent {
+	constructor(props) {
+		super(props);
+		this.state = { module: null };
+	}
 
-	return (
-		<SvgIconWrapper {...props}>
-			<Icon {...props} />
-		</SvgIconWrapper>
-	);
-};
+	async componentDidMount() {
+		const { name } = this.props;
+		const resolveIcon = icons[name] || icons.elseDiff;
+		const response = await resolveIcon();
+		return Promise.resolve(this.setState({ module: response.default }));
+	}
+
+	render() {
+		const { module: Icon } = this.state;
+		const {
+			size, color, className, ...rest
+		} = this.props;
+		return (
+			<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
+				{ Icon ? <Icon {...this.props} /> : icons.elseDiff}
+			</SvgIconWrapper>
+		);
+	}
+}
 
 SvgIcon.propTypes = {
 	'size': PropTypes.number,
