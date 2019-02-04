@@ -38,7 +38,7 @@ const icons = {
 	'dagbladetVideo': () => import('./DagbladetVideo'),
 	'backNav': () => import('./BackNav'),
 	'not-found': () => import('./NotFound'),
-	'elseDiff': () => () => <span />,
+	'default': () => null,
 };
 
 class SvgIcon extends React.PureComponent {
@@ -47,7 +47,7 @@ class SvgIcon extends React.PureComponent {
 		this.state = { module: null };
 	}
 
-	async componentDidMount() {
+	async componentWillMount() {
 		const { name } = this.props;
 		const resolveIcon = icons[name] || icons.elseDiff;
 		const response = await resolveIcon();
@@ -61,7 +61,7 @@ class SvgIcon extends React.PureComponent {
 		} = this.props;
 		return (
 			<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
-				{ Icon ? <Icon {...this.props} /> : icons.elseDiff}
+				{ Icon ? <Icon {...this.props} /> : icons.default}
 			</SvgIconWrapper>
 		);
 	}
