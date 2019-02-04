@@ -35,7 +35,7 @@ export default () => (
 					{`
 						import { SvgIcon } from '@aller/shiny';
 
-						<SvgIcon color="primary" name="exclamation" value={1} size={5} />
+						<SvgIcon color="primary" name="exclamation-mark" value={1} size={5} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
