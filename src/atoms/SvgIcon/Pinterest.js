@@ -13,4 +13,4 @@ const Pinterest = props => (
 	</svg>
 );
 
-export { Pinterest };
+export default Pinterest;

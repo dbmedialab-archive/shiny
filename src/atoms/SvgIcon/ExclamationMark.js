@@ -10,4 +10,4 @@ const ExclamationMark = props => (
 	</svg>
 );
 
-export { ExclamationMark };
+export default ExclamationMark;

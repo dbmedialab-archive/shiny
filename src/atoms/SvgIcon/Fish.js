@@ -12,4 +12,4 @@ const Fish = props => (
 	</svg>
 );
 
-export { Fish };
+export default Fish;

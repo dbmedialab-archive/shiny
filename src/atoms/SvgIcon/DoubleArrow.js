@@ -21,4 +21,4 @@ DoubleArrow.defaultProps = {
 	color: '#000',
 };
 
-export { DoubleArrow };
+export default DoubleArrow;

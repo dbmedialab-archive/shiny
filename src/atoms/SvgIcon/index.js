@@ -4,133 +4,72 @@ import styled from '@emotion/styled';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
-import { ActivityTime        } from './ActivityTime';
-import { Difficulty          } from './Difficulty';
-import { Nut                 } from './Nut';
-import { Fish                } from './Fish';
-import { Gluten              } from './Gluten';
-import { Pork                } from './Pork';
-import { TotalTime           } from './TotalTime';
-import { Vegan               } from './Vegan';
-import { Vegetarian          } from './Vegetarian';
-import { DoubleArrow         } from './DoubleArrow';
-import { Star                } from './Star';
-import { Lactose             } from './Lactose';
-import { Egg                 } from './Egg';
-import { ShellFish           } from './ShellFish';
-import { Mail                } from './Mail';
-import { Pinterest           } from './Pinterest';
-import { FaceBook            } from './FaceBook';
-import { Twitter             } from './Twitter';
-import { User                } from './Avatar';
-import { KK                  } from './KK';
-import { Aller               } from './Aller';
-import { Dagbladet           } from './Dagbladet';
-import { OppskriftLogo       } from './OppskriftLogo';
-import { OppskriftMobileLogo } from './OppskriftMobileLogo';
-import { OppskriftLoader     } from './OppskriftLoader';
-import { CircleWithText      } from './CircleWithText';
-import { CrossedVideoCamera  } from './CrossedVideoCamera';
-import { ExclamationMark     } from './ExclamationMark';
-import { YouTube             } from './YouTube';
-import { NotFound            } from './NotFound';
-import { Play                } from './Play';
-import { DagbladetVideoIcon  } from './DagbladetVideo';
-import { BackNavIcon         } from './BackNav';
-
-const SvgIcon = (props) => {
-	const {
-		className,
-		color,
-		name,
-		size,
-		...rest
-	} = props;
-
-	// @TODO camelCase the prop "size-sm" so that we can use it just like other props
-	return (
-		<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
-			{
-				(() => {
-					switch (name) {
-					case 'pinterest':
-						return <Pinterest {...props} />;
-					case 'mail':
-						return <Mail {...props} />;
-					case 'skalldyr':
-						return <ShellFish {...props} />;
-					case 'egg':
-						return <Egg {...props} />;
-					case 'laktose':
-						return <Lactose {...props} />;
-					case 'activity':
-						return <ActivityTime {...props} />;
-					case 'difficulty':
-						return <Difficulty {...props} />;
-					case 'nut':
-						return <Nut {...props} />;
-					case 'fish':
-					case 'fisk':
-						return <Fish {...props} />;
-					case 'gluten':
-						return <Gluten {...props} />;
-					case 'pork':
-					case 'uten-svinekjott':
-						return <Pork {...props} />;
-					case 'total-time':
-						return <TotalTime {...props} />;
-					case 'vegan':
-						return <Vegan {...props} />;
-					case 'vegetar':
-					case 'vegetarian':
-						return <Vegetarian {...props} />;
-					case 'double-arrow':
-						return <DoubleArrow {...props} />;
-					case 'star':
-						return <Star {...props} />;
-					case 'user':
-						return <User {...props} />;
-					case 'facebook':
-						return <FaceBook {...props} />;
-					case 'twitter':
-						return <Twitter {...props} />;
-					case 'kk':
-						return <KK {...props} />;
-					case 'aller':
-						return <Aller {...props} />;
-					case 'dagbladet':
-						return <Dagbladet {...props} />;
-					case 'oppskrift-logo':
-						return <OppskriftLogo {...props} />;
-					case 'oppskrift-mobile-logo':
-						return <OppskriftMobileLogo {...props} />;
-					case 'oppskrift-loader':
-						return <OppskriftLoader {...props} />;
-					case 'circle-with-text':
-						return <CircleWithText {...props} />;
-					case 'crossed-video-camera':
-						return <CrossedVideoCamera {...props} />;
-					case 'not-found':
-						return <NotFound {...props} />;
-					case 'exclamation-mark':
-					case 'exclamation-point':
-					case 'exclamation':
-						return <ExclamationMark {...props} />;
-					case 'youtube':
-						return <YouTube {...props} />;
-					case 'play':
-						return <Play {...props} />;
-					case 'dagbladetVideo':
-						return <DagbladetVideoIcon {...props} />;
-					case 'backNav':
-						return <BackNavIcon {...props} />;
-					default:
-						return null;
-					}
-				})()}
-		</SvgIconWrapper>
-	);
+const icons = {
+	'activity': () => import('./ActivityTime'),
+	'difficulty': () => import('./Difficulty'),
+	'nut': () => import('./Nut'),
+	'fish': () => import('./Fish'),
+	'gluten': () => import('./Gluten'),
+	'pork': () => import('./Pork'),
+	'total-time': () => import('./TotalTime'),
+	'vegan': () => import('./Vegan'),
+	'vegetarian': () => import('./Vegetarian'),
+	'star': () => import('./Star'),
+	'laktose': () => import('./Lactose'),
+	'egg': () => import('./Egg'),
+	'skalldyr': () => import('./ShellFish'),
+	'mail': () => import('./Mail'),
+	'twitter': () => import('./Twitter'),
+	'double-arrow': () => import('./DoubleArrow'),
+	'pinterest': () => import('./Pinterest'),
+	'circle-with-text': () => import('./CircleWithText'),
+	'facebook': () => import('./FaceBook'),
+	'user': () => import('./Avatar'),
+	'kk': () => import('./KK'),
+	'aller': () => import('./Aller'),
+	'dagbladet': () => import('./Dagbladet'),
+	'oppskrift-logo': () => import('./OppskriftLogo'),
+	'oppskrift-mobile-logo': () => import('./OppskriftMobileLogo'),
+	'oppskrift-loader': () => import('./OppskriftLoader'),
+	'crossed-video-camera': () => import('./CrossedVideoCamera'),
+	'exclamation-mark': () => import('./ExclamationMark'),
+	'youtube': () => import('./YouTube'),
+	'play': () => import('./Play'),
+	'dagbladetVideo': () => import('./DagbladetVideo'),
+	'backNav': () => import('./BackNav'),
+	'not-found': () => import('./NotFound'),
+	'default': () => <div />,
 };
+
+class SvgIcon extends React.PureComponent {
+	constructor(props) {
+		super(props);
+		this.state = { module: icons.default };
+	}
+
+	async componentWillMount() {
+		try {
+			const { name } = this.props;
+			const resolveIcon = icons[name] || icons.default();
+			const response = await resolveIcon();
+			return Promise.resolve(this.setState({ module: response.default }));
+		} catch (error) {
+			return error;
+		}
+	}
+
+	render() {
+		const { module: Icon } = this.state;
+		const {
+			size, color, className, ...rest
+		} = this.props;
+		return (
+			<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
+				{ Icon ? <Icon {...this.props} /> : icons.default}
+			</SvgIconWrapper>
+		);
+	}
+}
 
 SvgIcon.propTypes = {
 	'size': PropTypes.number,

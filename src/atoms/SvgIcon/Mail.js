@@ -23,4 +23,4 @@ const Mail = props => (
 	</svg>
 );
 
-export { Mail };
+export default Mail;

@@ -12,4 +12,4 @@ const Vegetarian = props => (
 	</svg>
 );
 
-export { Vegetarian };
+export default Vegetarian;

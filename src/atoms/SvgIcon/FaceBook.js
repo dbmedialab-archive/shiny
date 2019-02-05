@@ -13,4 +13,4 @@ const FaceBook = props => (
 	/* eslint-enable no-mixed-spaces-and-tabs */
 );
 
-export { FaceBook };
+export default FaceBook;

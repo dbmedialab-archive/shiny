@@ -47,4 +47,4 @@ const Egg = props => (
 	</svg>
 );
 
-export { Egg };
+export default Egg;

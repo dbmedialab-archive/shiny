@@ -136,9 +136,9 @@ export {
 }                                  from './atoms/RoundedButtons';
 export { Row                     } from './atoms/Row';
 export { SvgIcon                 } from './atoms/SvgIcon';
-export { ActivityTime            } from './atoms/SvgIcon/ActivityTime';
-export { Difficulty              } from './atoms/SvgIcon/Difficulty';
-export { TotalTime               } from './atoms/SvgIcon/TotalTime';
+export   ActivityTime              from './atoms/SvgIcon/ActivityTime';
+export   Difficulty                from './atoms/SvgIcon/Difficulty';
+export   TotalTime                 from './atoms/SvgIcon/TotalTime';
 export {
 	LeftScrollArrow,
 	RightScrollArrow,

@@ -18,4 +18,4 @@ const OppskriftMobileLogo = props => (
 );
 /* eslint-enable max-len */
 
-export { OppskriftMobileLogo };
+export default OppskriftMobileLogo;

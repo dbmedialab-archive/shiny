@@ -35,6 +35,7 @@ const colors = {
 
 	skinColors: {
 		type: 'darkness',
+		background: 'white',
 		splashBackground: 'primary',
 		splashBorder: 'darkness',
 		splashText: 'white',

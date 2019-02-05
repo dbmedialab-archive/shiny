@@ -21,4 +21,4 @@ const ShellFish = props => (
 	</svg>
 );
 
-export { ShellFish };
+export default ShellFish;
