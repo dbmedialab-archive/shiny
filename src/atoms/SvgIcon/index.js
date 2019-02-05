@@ -38,20 +38,24 @@ const icons = {
 	'dagbladetVideo': () => import('./DagbladetVideo'),
 	'backNav': () => import('./BackNav'),
 	'not-found': () => import('./NotFound'),
-	'default': () => null,
+	'default': () => <div />,
 };
 
 class SvgIcon extends React.PureComponent {
 	constructor(props) {
 		super(props);
-		this.state = { module: null };
+		this.state = { module: icons.default };
 	}
 
 	async componentWillMount() {
-		const { name } = this.props;
-		const resolveIcon = icons[name] || icons.elseDiff;
-		const response = await resolveIcon();
-		return Promise.resolve(this.setState({ module: response.default }));
+		try {
+			const { name } = this.props;
+			const resolveIcon = icons[name] || icons.default();
+			const response = await resolveIcon();
+			return Promise.resolve(this.setState({ module: response.default }));
+		} catch (error) {
+			return error;
+		}
 	}
 
 	render() {
