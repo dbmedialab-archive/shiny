@@ -129,7 +129,7 @@ export default () => (
 				<IconWithText name="circle-with-text" text="kk" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText color="primary" name="exclamation" text="exclamation" />
+				<IconWithText color="primary" name="exclamation-mark" text="exclamation" />
 			</Col>
 		</Row>
 		<Row>
