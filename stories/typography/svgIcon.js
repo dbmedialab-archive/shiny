@@ -3,18 +3,19 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 
-import { Row } from '../../src/atoms/Row';
-import { Col } from '../../src/atoms/Col';
-
-import { HugeHeading, SmallHeading } from '../../src/atoms/Heading';
-import { IconWithText } from '../../src/atoms/IconWithText';
+import {
+	HugeHeading, SmallHeading,
+	Row, Col,
+	Paragraph,
+	IconWithText,
+} from '../../src';
 
 export default () => (
 	<section>
 		<Row>
 			<Col xs={12}>
 				<HugeHeading>Icon</HugeHeading>
-				<p>ICONS.</p>
+				<Paragraph>ICONS.</Paragraph>
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
@@ -34,7 +35,7 @@ export default () => (
 					{`
 						import { SvgIcon } from '@aller/shiny';
 
-						<SvgIcon color="primary" name="exclamation" value={1} size={5} />
+						<SvgIcon color="primary" name="exclamation-mark" value={1} size={5} />
 					`}
 				</Code>
 				<SmallHeading>Props</SmallHeading>
@@ -90,6 +91,8 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="pork" text="pork (uten-svinekjott)" />
 			</Col>
+		</Row>
+		<Row>
 			<Col xs={2}>
 				<IconWithText name="total-time" text="total-time" />
 			</Col>
@@ -100,13 +103,21 @@ export default () => (
 				<IconWithText name="vegetarian" text="vegetarian" />
 			</Col>
 			<Col xs={2}>
+				<IconWithText name="skalldyr" text="skalldyr" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="egg" text="egg" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="laktose" text="laktose" iconSize={5} />
+			</Col>
+		</Row>
+		<Row>
+			<Col xs={2}>
 				<IconWithText name="double-arrow" text="double-arrow" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="star" text="star" color="red" />
-			</Col>
-			<Col xs={2}>
-				<IconWithText name="oppskrift" text="oppskrift" />
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="aller" text="aller" />
@@ -118,8 +129,10 @@ export default () => (
 				<IconWithText name="circle-with-text" text="kk" />
 			</Col>
 			<Col xs={2}>
-				<IconWithText color="primary" name="exclamation" text="exclamation" />
+				<IconWithText color="primary" name="exclamation-mark" text="exclamation" />
 			</Col>
+		</Row>
+		<Row>
 			<Col xs={2}>
 				<IconWithText color="primary" name="crossed-video-camera" text="crossed-video-camera" />
 			</Col>
@@ -134,6 +147,37 @@ export default () => (
 			</Col>
 			<Col xs={2}>
 				<IconWithText name="play" text="play" />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="backNav" text="tilback" color="type" />
+			</Col>
+		</Row>
+		<Row>
+			<Col xs={2}>
+				<IconWithText name="dagbladetVideo" text="DB Video" iconSize={15} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="pinterest" text="pinterest" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="mail" text="mail" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="user" text="user" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="facebook" text="facebook" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="twitter" text="twitter" iconSize={5} />
+			</Col>
+		</Row>
+		<Row>
+			<Col xs={2}>
+				<IconWithText name="oppskrift-logo" text="oppskrift-logo" iconSize={5} />
+			</Col>
+			<Col xs={2}>
+				<IconWithText name="oppskrift-mobile-logo" text="oppskrift-mobile-logo" iconSize={5} />
 			</Col>
 		</Row>
 	</section>

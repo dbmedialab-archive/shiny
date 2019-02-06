@@ -43,7 +43,7 @@ class Carousel extends React.Component {
 		const { vertical } = this.props;
 
 		const scrollOffset = vertical ? scrollTop : scrollLeft;
-
+		this.setContentEl(this.carouselContentEl.current);
 		this.setState({
 			nextArrowVisible: scrollOffset + pageLength < carouselLength && this.enoughItemsForScroll,
 			prevArrowVisible: scrollOffset > 0 && this.enoughItemsForScroll,
@@ -188,6 +188,7 @@ class Carousel extends React.Component {
 	render() {
 		const {
 			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight, horizontalArrowOffset,
+			hideButtons,
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -219,6 +220,7 @@ class Carousel extends React.Component {
 							vertical={vertical}
 							onClick={() => this.doSliding('prev')}
 							horizontalArrowOffset={horizontalArrowOffset}
+							hide={hideButtons}
 						>
 							<FontIcon name="arrow-alt-left" size={3} />
 						</CarouselButton>
@@ -229,6 +231,7 @@ class Carousel extends React.Component {
 							vertical={vertical}
 							onClick={() => this.doSliding('next')}
 							horizontalArrowOffset={horizontalArrowOffset}
+							hide={hideButtons}
 						>
 							<FontIcon name="arrow-alt-right" size={3} />
 						</CarouselButton>
@@ -240,10 +243,14 @@ class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
-	Heading: PropTypes.func,
+	Heading: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	headingProps: PropTypes.shape({}),
 	heading: PropTypes.string,
 	vertical: PropTypes.bool,
+	hideButtons: PropTypes.bool,
 	withMouseEvents: PropTypes.bool,
 	horizontalSizing: PropTypes.shape({}),
 	verticalHeight: PropTypes.string,
@@ -261,12 +268,13 @@ Carousel.defaultProps = {
 	headingProps: {},
 	heading: '',
 	vertical: false,
+	hideButtons: false,
 	withMouseEvents: true,
 	horizontalSizing: {
 		xs: 6,
 		md: 3,
 	},
-	verticalHeight: '64rem',
+	verticalHeight: 'calc(100% - 1rem)',
 	horizontalArrowOffset: '-7rem',
 };
 

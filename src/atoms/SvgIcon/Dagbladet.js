@@ -12,4 +12,4 @@ const Dagbladet = props => (
 	</svg>
 );
 
-export { Dagbladet };
+export default Dagbladet;

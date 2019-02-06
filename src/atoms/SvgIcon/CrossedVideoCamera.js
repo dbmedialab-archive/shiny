@@ -8,4 +8,4 @@ const CrossedVideoCamera = props => (
 	</svg>
 );
 
-export { CrossedVideoCamera };
+export default CrossedVideoCamera;

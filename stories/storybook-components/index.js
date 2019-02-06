@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { getColor, getVariable } from '../../src/utils';
 
 export const DemoContainer = styled.article`
@@ -22,5 +22,5 @@ DemoContainer.defaultProps = {
 };
 
 DemoContainer.propTypes = {
-	backgroundColor: propTypes.string,
+	backgroundColor: PropTypes.string,
 };

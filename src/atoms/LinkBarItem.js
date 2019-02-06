@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { hideWithFlexboxgridSyntax } from '../utils/hide-with-flexboxgrid-syntax';
 
 const LinkBarItem = styled.li`
@@ -16,13 +16,13 @@ const LinkBarItem = styled.li`
 	`;
 
 LinkBarItem.propTypes = {
-	xs: propTypes.bool,
-	sm: propTypes.bool,
-	md: propTypes.bool,
-	lg: propTypes.bool,
-	flex: propTypes.string,
-	position: propTypes.string,
-	zIndex: propTypes.number,
+	xs: PropTypes.bool,
+	sm: PropTypes.bool,
+	md: PropTypes.bool,
+	lg: PropTypes.bool,
+	flex: PropTypes.string,
+	position: PropTypes.string,
+	zIndex: PropTypes.number,
 };
 
 LinkBarItem.defaultProps = {

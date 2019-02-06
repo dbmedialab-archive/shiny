@@ -13,4 +13,4 @@ const Pork = props => (
 	</svg>
 );
 
-export { Pork };
+export default Pork;

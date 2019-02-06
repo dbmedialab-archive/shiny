@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import {
@@ -55,6 +56,15 @@ const SeHerDropdownButton = (props) => {
 		</SeHerButton>
 	);
 };
+SeHerDropdownButton.propTypes = {
+	linkText: PropTypes.string,
+	hide: PropTypes.bool,
+};
+SeHerDropdownButton.defaultProps = {
+	linkText: '',
+	hide: false,
+};
+
 
 const linkProps = {
 	useUnderline: true,

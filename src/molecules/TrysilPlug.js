@@ -16,19 +16,8 @@ import { Labels as DefaultLabels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
-import { AbsolutelyCenteredSvgIcon } from '../atoms/SvgIcon';
 
 const ArticleCol = Col.withComponent(Article);
-
-const PlayIcon = ({ color }, props) => (
-	<AbsolutelyCenteredSvgIcon
-		color={color}
-		name="play"
-		value={1}
-		size={5}
-		{...props}
-	/>
-);
 
 const PlugLink = styled(BlockLink)`
 	display: flex;
@@ -90,8 +79,6 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
-	displayPlayIcon,
-	playIconColor,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -109,7 +96,6 @@ const TrysilPlug = ({
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
 					>
-						{displayPlayIcon && <PlayIcon color={playIconColor} />}
 						{sources.length === 0
 						&& <Source srcSet={image} />
 						}
@@ -119,7 +105,7 @@ const TrysilPlug = ({
 				}
 				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
 				{subtitle && <Description order={4} itemProp="description">{subtitle}</Description>}
-				{labels && <Labels {...labelsProps} labels={labels} />}
+				{!!labels.length && <Labels {...labelsProps} labels={labels} />}
 			</PlugLink>
 		</ArticleComponent>
 	);
@@ -130,6 +116,10 @@ TrysilPlug.displayName = 'TrysilPlug';
 TrysilPlug.propTypes = {
 	/** Extra attributes you want on the DOM-node. e.g. data-cxense_Tag */
 	attributes: PropTypes.object, // eslint-disable-line
+	/** Option to fadein the image. */
+	fadeIn: PropTypes.bool,
+	/** Will be passed through to ArticleComponent */
+	float: PropTypes.oneOf(['left', 'right', 'none', 'inline-start', 'inline-end', 'inherit', 'initial', 'unset']),
 	/** Text above the image plug. */
 	kicker: PropTypes.string,
 	/** Main link text. */
@@ -139,7 +129,10 @@ TrysilPlug.propTypes = {
 	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
 	/** Component to display the labels */
-	Labels: PropTypes.func,
+	Labels: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** Props to pass on to the Heading component */
 	labelsProps: PropTypes.shape({
 		order: PropTypes.number,
@@ -162,7 +155,10 @@ TrysilPlug.propTypes = {
 	/** Width of the image divided by height of the image */
 	ratio: PropTypes.number.isRequired,
 	/** Component to display the title */
-	Heading: PropTypes.func,
+	Heading: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** Column object to decide wether the article should be a Col or not */
 	column: PropTypes.shape({
 		width: PropTypes.number,
@@ -193,6 +189,8 @@ TrysilPlug.propTypes = {
 TrysilPlug.defaultProps = {
 	attributes: {},
 	column: null,
+	fadeIn: false,
+	float: 'initial',
 	kicker: '',
 	title: '',
 	subtitle: '',

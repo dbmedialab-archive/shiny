@@ -2,8 +2,8 @@ import React from 'react';
 import { DemoContainer } from '../storybook-components';
 
 import {
-	Heading,
-	HugeHeading,
+	Heading, HugeHeading,
+	Paragraph,
 	ShinyLogo,
 } from '../../src';
 
@@ -12,7 +12,9 @@ import { Code } from '../../src/atoms/Code';
 const ShinyStory = () => (
 	<section>
 		<HugeHeading>ShinyLogo</HugeHeading>
-		<p>This svg beauty grabs all the space it can get, before displaying the Shiny logo in all its spiraly glory.</p>
+		<Paragraph>This svg beauty grabs all the space it can get, before displaying
+			the Shiny logo in all its spiraly glory.
+		</Paragraph>
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
@@ -20,7 +22,7 @@ const ShinyStory = () => (
 		</DemoContainer>
 
 		<Heading>Props</Heading>
-		<p>There are none.</p>
+		<Paragraph>There are none.</Paragraph>
 
 		<Heading>Usage</Heading>
 		<Code language="jsx">

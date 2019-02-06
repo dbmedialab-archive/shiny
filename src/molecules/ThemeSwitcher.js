@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import { merge } from 'aurora-deep-slice-merge';
+import merge from 'deepmerge';
 
 import { themes } from '../themes';
 
@@ -27,7 +27,7 @@ class ThemeSwitcher extends React.Component {
 	componentWillMount() {
 		this.setState({
 			selected: window.localStorage.getItem('theme') || null,
-			theme: merge(themes.defaultTheme, themes[window.localStorage.getItem('theme')]) || themes.defaultTheme,
+			theme: merge(themes.defaultTheme, themes[window.localStorage.getItem('theme')] || {}),
 		});
 	}
 
@@ -35,7 +35,7 @@ class ThemeSwitcher extends React.Component {
 		window.localStorage.setItem('theme', e.target.value);
 		this.setState({
 			selected: (e.target.value || null),
-			theme: (merge(themes.defaultTheme, themes[e.target.value]) || themes.defaultTheme),
+			theme: merge(themes.defaultTheme, themes[e.target.value] || {}),
 		});
 	}
 
@@ -101,6 +101,14 @@ class ThemeSwitcher extends React.Component {
 						value="dinside"
 					>
 						Dinside
+					</Button>
+					<Button
+						textColor={colors.skinColors.splashText}
+						onClick={e => this.handleButtonClick(e)}
+						isActive={selected === 'elbil24'}
+						value="elbil24"
+					>
+						Elbil24
 					</Button>
 					<Button
 						textColor={colors.skinColors.splashText}

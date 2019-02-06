@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { getVariable } from '../utils';
 import { Col } from './Col';
@@ -50,11 +50,14 @@ const Error = ({
 };
 
 Error.propTypes = {
-	message: propTypes.string,
-	AdditionalInfo: propTypes.func,
-	onRetryButtonClick: propTypes.func,
-	icon: propTypes.string,
-	iconColor: propTypes.string,
+	message: PropTypes.string,
+	AdditionalInfo: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
+	onRetryButtonClick: PropTypes.func,
+	icon: PropTypes.string,
+	iconColor: PropTypes.string,
 };
 
 Error.defaultProps = {

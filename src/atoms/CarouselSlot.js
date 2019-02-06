@@ -6,30 +6,19 @@ import { getVariable } from '../utils/get-variable';
 
 export const CarouselSlot = styled(Col)`
 	${(props) => {
-		const base = css`
+		const horizontalBase = getVariable('horizontalBase')(props);
+		const marginRight = (!props.vertical) ? `calc(1/2 * ${horizontalBase})` : '0';
+
+		return css`
+			margin-right: ${marginRight};
 			padding: 0;
+			&& > * {
+				margin-bottom: 0;
+			}
 
 			&:last-child {
 				margin: 0;
 			}
 		`;
-
-		let directional;
-
-		if (!props.vertical) {
-			directional = css`
-				margin-right: calc(1/2 * ${getVariable('horizontalBase')(props)});
-			`;
-		} else {
-			directional = css`
-				margin-bottom: calc(1/2 * ${getVariable('verticalBase')(props)});
-			`;
-		}
-
-		return css`
-			${base};
-			${directional};
-		`;
 	}}
-
 `;

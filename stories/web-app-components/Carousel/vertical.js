@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import { Code } from '../../../src/atoms/Code';
 import { Heading, HugeHeading } from '../../../src/atoms/Heading';
@@ -13,6 +14,10 @@ const prototypeItem = {
 	image: 'https://via.placeholder.com/250x125',
 	url: 'http://www.example.com/',
 };
+
+const FullHeightCol = styled(Col)`
+	height: 64rem;
+`;
 
 const VerticalCarouselStory = () => {
 	const testItems = Array(10).fill(prototypeItem);
@@ -34,11 +39,11 @@ const VerticalCarouselStory = () => {
 
 			<DemoContainer>
 				<Row>
-					<Col md={5} xs={12}>
+					<FullHeightCol md={5} xs={12}>
 						<Carousel vertical heading="Demo vertical carousel">
 							{children}
 						</Carousel>
-					</Col>
+					</FullHeightCol>
 				</Row>
 			</DemoContainer>
 

@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { getColor, getVariable, calculateTextColorFromName } from '../utils';
@@ -69,9 +69,9 @@ Button.defaultProps = {
 
 
 Button.propTypes = {
-	background: propTypes.string,
-	textColor: propTypes.string,
-	ALLCAPS: propTypes.bool,
+	background: PropTypes.string,
+	textColor: PropTypes.string,
+	ALLCAPS: PropTypes.bool,
 };
 
 export { Button };

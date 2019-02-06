@@ -158,7 +158,10 @@ const HeroUnit = ({
 };
 
 HeroUnit.propTypes = {
-	Heading: PropTypes.func,
+	Heading: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	image: PropTypes.shape({
 		src: PropTypes.string,
 		ratio: PropTypes.number,
@@ -180,8 +183,10 @@ HeroUnit.propTypes = {
 	verticalPadding: PropTypes.bool,
 };
 
+const DefaultHeading = styled.h1``;
+
 HeroUnit.defaultProps = {
-	Heading: ({ children, ...rest }) => <h1 {...rest}>{children}</h1>,
+	Heading: DefaultHeading,
 	image: {},
 	video: {},
 	type: 'image',

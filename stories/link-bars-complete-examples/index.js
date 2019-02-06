@@ -7,6 +7,7 @@ import { SeHerMenuRemake } from './SeHerMenuRemake';
 import { MatStory } from './MatStory';
 import { KKStory } from './KKStory';
 import { DagbladetStory } from './DagbladetStory';
+import { Elbil24Story } from './Elbil24Story';
 
 export default () => {
 	storiesOf('Link Bars|Complete Link Bar Examples', module)
@@ -14,5 +15,6 @@ export default () => {
 		.add('KK', KKStory)
 		.add('SeHer-like bar', SeHerStory)
 		.add('SeHer menu remake', SeHerMenuRemake)
+		.add('Elbil24-like bar', Elbil24Story)
 		.add('MatStory link bar', MatStory);
 };

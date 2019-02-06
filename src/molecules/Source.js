@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Source = ({ media, srcSet }) => (
 	<source media={media} data-srcset={srcSet} />
@@ -8,9 +8,9 @@ Source.displayName = 'Source';
 
 Source.propTypes = {
 	/** URL to image */
-	srcSet: propTypes.string.isRequired,
+	srcSet: PropTypes.string.isRequired,
 	/** Media query string, e.g. (max-width: 75em) */
-	media: propTypes.string,
+	media: PropTypes.string,
 };
 
 Source.defaultProps = {

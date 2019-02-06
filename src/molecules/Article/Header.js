@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { getVariable } from '../../utils';
 import { MediumHeading, XLargeHeading, HugeHeading } from '../../atoms/Heading';
@@ -56,14 +56,14 @@ const ArticleHeader = (props) => {
 };
 
 ArticleHeader.propTypes = {
-	intro: propTypes.string,
-	subtitle: propTypes.string,
-	title: propTypes.string.isRequired,
-	imageURL: propTypes.string.isRequired,
-	imageText: propTypes.string.isRequired,
-	published: propTypes.string.isRequired,
-	modified: propTypes.string,
-	bylines: propTypes.instanceOf(Array),
+	intro: PropTypes.string,
+	subtitle: PropTypes.string,
+	title: PropTypes.string.isRequired,
+	imageURL: PropTypes.string.isRequired,
+	imageText: PropTypes.string.isRequired,
+	published: PropTypes.string.isRequired,
+	modified: PropTypes.string,
+	bylines: PropTypes.instanceOf(Array),
 };
 
 ArticleHeader.defaultProps = {

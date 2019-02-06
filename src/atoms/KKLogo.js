@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { getColor } from '../utils';
 
 const Svg = styled.svg`
@@ -34,8 +34,8 @@ const KKLogo = withTheme(props => (
 ));
 
 KKLogo.propTypes={
-	backgroundColor: propTypes.string,
-	hasCircle: propTypes.bool,
+	backgroundColor: PropTypes.string,
+	hasCircle: PropTypes.bool,
 };
 
 KKLogo.defaultProps={

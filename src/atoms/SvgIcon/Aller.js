@@ -12,4 +12,4 @@ const Aller = props => (
 	</svg>
 );
 
-export { Aller };
+export default Aller;

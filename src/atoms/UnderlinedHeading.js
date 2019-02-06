@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -31,7 +31,7 @@ const UnderlinedHeading = ({ size, ...rest }) => (
 	</CenteredContent>
 );
 UnderlinedHeading.propTypes = {
-	size: propTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
+	size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
 };
 UnderlinedHeading.defaultProps = {
 	size: 'large',

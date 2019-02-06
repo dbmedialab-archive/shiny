@@ -20,4 +20,4 @@ const OppskriftLoader = () => (
 	</svg>
 );
 
-export { OppskriftLoader };
+export default OppskriftLoader;

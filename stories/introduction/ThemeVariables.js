@@ -3,7 +3,10 @@ import prettyFormat from 'pretty-format';
 
 import defaultTheme from '../../src/themes/default-theme';
 
-import { Heading, HugeHeading, SmallHeading } from '../../src/atoms/Heading';
+import {
+	Heading, HugeHeading, SmallHeading,
+	Paragraph,
+} from '../../src';
 
 import { Code } from '../../src/atoms/Code';
 
@@ -11,7 +14,7 @@ const ThemeVariables = () => {
 	return (
 		<section>
 			<HugeHeading>Variables</HugeHeading>
-			<p>These theme variables are available for you to parameterize the components you write.</p>
+			<Paragraph>These theme variables are available for you to parameterize the components you write.</Paragraph>
 
 			<Heading>Variables</Heading>
 

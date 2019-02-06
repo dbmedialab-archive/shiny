@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
@@ -88,21 +88,23 @@ const DefaultButton = ({
 };
 
 DefaultButton.propTypes = {
-	children: propTypes.node.isRequired,
-	PrefixIcon: propTypes.func,
-	prefixIconColor: propTypes.string,
-	SuffixIcon: propTypes.oneOfType([
-		propTypes.func,
-		propTypes.object,
-		propTypes.node,
+	children: PropTypes.node.isRequired,
+	PrefixIcon: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
 	]),
-	suffixIconColor: propTypes.string,
-	type: propTypes.string,
-	size: propTypes.string,
-	theme: propTypes.shape({
-		colors: propTypes.shape({
-			skinColors: propTypes.shape({
-				nativeAd: propTypes.string.isRequired,
+	prefixIconColor: PropTypes.string,
+	SuffixIcon: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
+	suffixIconColor: PropTypes.string,
+	type: PropTypes.string,
+	size: PropTypes.string,
+	theme: PropTypes.shape({
+		colors: PropTypes.shape({
+			skinColors: PropTypes.shape({
+				nativeAd: PropTypes.string.isRequired,
 			}).isRequired,
 		}).isRequired,
 	}).isRequired,

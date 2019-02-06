@@ -46,4 +46,4 @@ Difficulty.propTypes = {
 	value: PropsTypes.number.isRequired,
 };
 
-export { Difficulty };
+export default Difficulty;

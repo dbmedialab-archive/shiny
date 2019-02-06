@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -111,26 +111,36 @@ const StandardTrigger = (props) => {
 		</LinkBarButton>
 	);
 };
-
 StandardTrigger.displayName = 'StandardTrigger';
+StandardTrigger.propTypes = {
+	hide: PropTypes.bool,
+	linkText: PropTypes.string,
+};
+StandardTrigger.defaultProps = {
+	hide: false,
+	linkText: '',
+};
 
 Dropdown.propTypes = {
-	children: propTypes.oneOfType([
-		propTypes.node,
-		propTypes.arrayOf(propTypes.node),
+	children: PropTypes.oneOfType([
+		PropTypes.node,
+		PropTypes.arrayOf(PropTypes.node),
 	]).isRequired,
 	/** Expands the menu by default. */
-	displayInitially: propTypes.bool,
+	displayInitially: PropTypes.bool,
 	/** Text to display in the link. Can be overriden with the _children_ prop. */
-	linkText: propTypes.string,
+	linkText: PropTypes.string,
 	/** Sets position: relative on the button. Needed to position dropdowns absolutely. */
-	isRelative: propTypes.bool,
-	/** For providing custom button elements. */
-	Trigger: propTypes.func,
+	isRelative: PropTypes.bool,
+	/** Component for providing custom button elements. */
+	Trigger: PropTypes.oneOfType([
+		PropTypes.func,
+		PropTypes.shape({ render: PropTypes.func }),
+	]),
 	/** For providing additional classnames. */
-	className: propTypes.string,
+	className: PropTypes.string,
 	/** @TODO: What does this do? */
-	hideOnClick: propTypes.bool,
+	hideOnClick: PropTypes.bool,
 };
 Dropdown.defaultProps = {
 	displayInitially: false,

@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import { getVariable } from '../utils';
@@ -68,12 +68,12 @@ const Byline = (props) => {
 };
 
 Byline.propTypes = {
-	bylines: propTypes.arrayOf(
-		propTypes.shape({
-			email: propTypes.string,
-			firstName: propTypes.string,
-			lastName: propTypes.string,
-			imageURL: propTypes.string,
+	bylines: PropTypes.arrayOf(
+		PropTypes.shape({
+			email: PropTypes.string,
+			firstName: PropTypes.string,
+			lastName: PropTypes.string,
+			imageURL: PropTypes.string,
 		})
 	),
 };
