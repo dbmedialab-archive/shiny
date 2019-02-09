@@ -7547,10 +7547,10 @@ react-inspector@^2.3.0:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
 
-react-intersection-observer@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-7.0.0.tgz#7f6e1fbbc978b84020844cfeb821f53633d3308d"
-  integrity sha512-JnqILJNftURPk+xJ/KLXxSSQXyBYH97SfThywjEkC1UAAlfofkCEc4Z/v2WEjHuRJQq8uvVWBtO+JmCJ1ptwDg==
+react-intersection-observer@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-7.1.0.tgz#2a2aac5fad7f5db2581a99af96df902e15da874b"
+  integrity sha512-AZYZZhNRhLNnI7+cyRulnixnyQSIWgy1MyFC+4U7PwkJAiHAJX/tTUmaW8L6ZJq+QlPOkz0n84zm6Hdo5LRE3w==
   dependencies:
     "@babel/runtime" "^7.2.0"
     invariant "^2.2.4"
