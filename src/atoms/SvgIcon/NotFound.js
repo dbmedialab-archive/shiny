@@ -17,4 +17,4 @@ const NotFound = props => (
 	</svg>
 );
 
-export { NotFound };
+export default NotFound;

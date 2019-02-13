@@ -21,4 +21,4 @@ Star.propTypes = {
 	color: PropTypes.string.isRequired,
 };
 
-export { Star };
+export default Star;

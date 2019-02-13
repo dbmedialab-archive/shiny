@@ -56,4 +56,4 @@ CircleWithText.defaultProps = {
 
 };
 
-export { CircleWithText };
+export default CircleWithText;

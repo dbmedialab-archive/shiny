@@ -15,4 +15,4 @@ const ActivityTime = props => (
 	</svg>
 );
 
-export { ActivityTime };
+export default ActivityTime;

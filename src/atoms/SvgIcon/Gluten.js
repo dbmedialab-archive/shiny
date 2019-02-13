@@ -13,4 +13,4 @@ const Gluten = props => (
 	</svg>
 );
 
-export { Gluten };
+export default Gluten;
