@@ -22,4 +22,4 @@ const Play = () => (
 	</svg>
 );
 
-export { Play };
+export default Play;

@@ -15,4 +15,4 @@ const TotalTime = props => (
 	</svg>
 );
 
-export { TotalTime };
+export default TotalTime;

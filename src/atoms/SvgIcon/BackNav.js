@@ -29,4 +29,4 @@ BackNavIcon.defaultProps = {
 };
 
 
-export { BackNavIcon };
+export default BackNavIcon;

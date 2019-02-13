@@ -1,6 +1,6 @@
 export default {
 	mainFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-	headingsFont: "'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+	headingsFont: "'Barlow', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
 	horizontalBase: '1.4rem',
 	unitlessHorizontalBase: 1.4,
@@ -9,7 +9,7 @@ export default {
 	unitlessVerticalBase: 2.4,
 
 	uiWeight: 400,
-	uiWeightSemiBold: 600,
+	uiWeightSemiBold: 700,
 	uiWeightBold: 800,
 
 	largeWidth: '750px',

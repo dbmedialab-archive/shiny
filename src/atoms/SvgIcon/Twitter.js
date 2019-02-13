@@ -17,4 +17,4 @@ const Twitter = props => (
 	/* eslint-enable no-mixed-spaces-and-tabs */
 );
 
-export { Twitter };
+export default Twitter;

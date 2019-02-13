@@ -12,4 +12,4 @@ const Nut = props => (
 	</svg>
 );
 
-export { Nut };
+export default Nut;

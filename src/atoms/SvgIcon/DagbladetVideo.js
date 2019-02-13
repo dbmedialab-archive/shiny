@@ -55,4 +55,4 @@ const DagbladetVideoIcon = () => (
 	/* eslint-enable max-len */
 );
 
-export { DagbladetVideoIcon };
+export default DagbladetVideoIcon;
