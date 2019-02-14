@@ -26,7 +26,7 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "@emotion/core": "10.0.6",
+    "@emotion/core": "10.0.7",
     "@emotion/styled": "10.0.6",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
