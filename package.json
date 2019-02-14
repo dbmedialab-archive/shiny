@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@emotion/core": "10.0.6",
-    "@emotion/styled": "10.0.6",
+    "@emotion/styled": "10.0.7",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
     "deepmerge": "3.1.0",
