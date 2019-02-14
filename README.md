@@ -1,4 +1,4 @@
-[![Greenkeeper badge](https://badges.greenkeeper.io/dbmedialab/shiny.svg)](https://greenkeeper.io/)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=dbmedialab/shiny)](https://dependabot.com)
 [![Travis badge](https://api.travis-ci.org/dbmedialab/shiny.svg?branch=master)](https://travis-ci.org/dbmedialab/shiny)
 [![install size](https://packagephobia.now.sh/badge?p=@aller/shiny)](https://packagephobia.now.sh/result?p=@aller/shiny)
 
