@@ -41,7 +41,7 @@
     "polished": "2.3.3",
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
-    "prop-types": "15.6.2",
+    "prop-types": "15.7.2",
     "react-intersection-observer": "7.0.0",
     "react-modal": "3.8.1",
     "react-stickyfill": "0.2.3",
@@ -64,7 +64,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.2.0",
     "@babel/plugin-proposal-numeric-separator": "7.2.0",
     "@babel/plugin-proposal-optional-chaining": "7.2.0",
-    "@babel/plugin-proposal-pipeline-operator": "7.3.0",
+    "@babel/plugin-proposal-pipeline-operator": "7.3.2",
     "@babel/plugin-proposal-throw-expressions": "7.2.0",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
@@ -90,7 +90,7 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "pretty-format": "24.0.0",
-    "react": "16.7.0",
-    "react-dom": "16.7.0"
+    "react": "16.8.2",
+    "react-dom": "16.8.2"
   }
 }
