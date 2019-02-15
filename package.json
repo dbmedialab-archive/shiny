@@ -91,6 +91,6 @@
     "eslint-plugin-react": "7.12.4",
     "pretty-format": "24.0.0",
     "react": "16.8.2",
-    "react-dom": "16.7.0"
+    "react-dom": "16.8.2"
   }
 }
