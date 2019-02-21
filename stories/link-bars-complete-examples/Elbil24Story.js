@@ -36,7 +36,7 @@ const LogoContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 30rem;
-	padding: 2rem;
+	padding: 3.2rem;
 	
 	@media only screen and (min-width: 60rem) {
 		width: 35rem;
