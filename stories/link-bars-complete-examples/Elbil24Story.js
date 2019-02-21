@@ -27,17 +27,28 @@ const TopNavigation = styled.div`
 	font-family: 'barlow', sans-serif;
 `;
 
-const Logo = styled.div`
+const LogoLink = styled(Link)`
+	text-decoration: none;
+`;
+
+const LogoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 30rem;
 	padding: 2rem;
+	
+	@media only screen and (min-width: 60rem) {
+		width: 35rem;
+	}
 `;
 
-const LogoLink = styled(Link)`
-	padding-top: 2rem;
-	width: 18rem;
+const Logo = styled(Elbil24Logo)`
+	width: 19rem;
+	
+	@media only screen and (min-width: 60rem) {
+		width: 23rem;
+	}
 `;
 
 const Slogan = styled(Paragraph)`
@@ -45,6 +56,10 @@ const Slogan = styled(Paragraph)`
 	font-size: 1.4rem;
 	font-weight: 400;
 	margin-top: .4rem;
+	
+	@media only screen and (min-width: 60rem) {
+		font-size: 1.6rem;
+	}
 `;
 
 const Branding = styled.div`
@@ -53,6 +68,10 @@ const Branding = styled.div`
 
 const Pro = styled.div`
 	align-self: flex-end;
+	
+	@media only screen and (min-width: 60rem) {
+		margin: .5rem;
+	}
 `;
 
 const ProLink = styled(Link)`
@@ -64,6 +83,10 @@ const ProLink = styled(Link)`
 	margin-top: -13rem;
 	margin-left: -5.5rem;
 	white-space: nowrap;
+	
+	@media only screen and (min-width: 60rem) {
+		margin-top: -12.5rem;
+	}
 `;
 
 const ProButton = styled(Elbil24ProButton)`
@@ -86,7 +109,6 @@ const MenuScroll = styled.div`
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
 	height: 5rem;
-	font-family: 'barlow', sans-serif;
 	z-index: 9999;
 
 	@media only screen and (min-width: 60rem) {
@@ -103,8 +125,7 @@ const Menu = styled(HorizontalLinkBar)`
 	max-width: 128rem;
 	
 	@media only screen and (min-width: 60rem) {
- 		//justify-content: center;
-		padding-top: 2px;
+		padding-top: .2rem;
 		-webkit-overflow-scrolling: unset;
 		-ms-overflow-style: none;
 	}
@@ -123,13 +144,15 @@ const MenuLink = styled(LinkBarLink)`
 	font-size: 1.8rem;
 	
 	transition: all .2s ease-out;
-	border-bottom: 2px solid transparent;
+	border-bottom: .2rem solid transparent;
+
+	font-family: 'barlow', sans-serif;
 	
 	:hover {
 		font-weight: bold;
 		color: #dfdfdf;
     transition: all .2s ease-out;
-    border-bottom: 2px solid ${getColor('white')};
+    border-bottom: .2rem solid ${getColor('white')};
 	}
 `;
 
@@ -141,12 +164,12 @@ const Elbil24Story = () => (
 		<DemoContainer>
 			<TopNavigation>
 				<Branding>
-					<Logo>
-						<LogoLink href="/">
-							<Elbil24Logo pro />
-						</LogoLink>
-						<Slogan>Norges ledende nettavis om elbiler</Slogan>
-					</Logo>
+					<LogoLink href="/">
+						<LogoContainer>
+							<Logo pro />
+							<Slogan>Norges ledende nettavis om elbiler</Slogan>
+						</LogoContainer>
+					</LogoLink>
 				</Branding>
 				<Pro>
 					<ProLink href="/pro">
