@@ -42,7 +42,7 @@
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "prop-types": "15.7.2",
-    "react-intersection-observer": "7.0.0",
+    "react-intersection-observer": "8.0.5",
     "react-modal": "3.8.1",
     "react-stickyfill": "0.2.3",
     "striptags": "3.1.1"
