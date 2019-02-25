@@ -30,7 +30,7 @@
     "@emotion/styled": "10.0.6",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
-    "deepmerge": "3.1.0",
+    "deepmerge": "3.2.0",
     "emotion-theming": "10.0.6",
     "get-best-contrast-color": "0.2.2",
     "intersection-observer": "0.5.1",
