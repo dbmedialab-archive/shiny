@@ -55,7 +55,7 @@ const Slogan = styled(Paragraph)`
 	color: ${getColor('white')};
 	font-size: 1.4rem;
 	font-weight: 400;
-	margin-top: .4rem;
+	margin-top: 0.4rem;
 	
 	@media only screen and (min-width: 60rem) {
 		font-size: 1.6rem;
@@ -70,7 +70,7 @@ const Pro = styled.div`
 	align-self: flex-end;
 	
 	@media only screen and (min-width: 60rem) {
-		margin: .5rem;
+		margin: 0.5rem;
 	}
 `;
 
@@ -91,7 +91,6 @@ const ProLink = styled(Link)`
 
 const ProButton = styled(Elbil24ProButton)`
 	width: 4rem;
-	margin-bottom: -.8rem;
 `;
 
 const MenuScroll = styled.div`
@@ -125,9 +124,13 @@ const Menu = styled(HorizontalLinkBar)`
 	max-width: 128rem;
 	
 	@media only screen and (min-width: 60rem) {
-		padding-top: .2rem;
+		padding-top: 0.2rem;
 		-webkit-overflow-scrolling: unset;
 		-ms-overflow-style: none;
+	}
+	
+	> li {
+		padding: 0 2rem;
 	}
 `;
 
@@ -143,16 +146,17 @@ const MenuLink = styled(LinkBarLink)`
 	font-style: italic;
 	font-size: 1.8rem;
 	
-	transition: all .2s ease-out;
-	border-bottom: .2rem solid transparent;
-
+	transition: all 0.2s ease-out;
+	border-bottom: 0.2rem solid transparent;
+	padding: 0 !important;
+	
 	font-family: 'barlow', sans-serif;
 	
 	:hover {
 		font-weight: bold;
 		color: #dfdfdf;
-    transition: all .2s ease-out;
-    border-bottom: .2rem solid ${getColor('white')};
+		transition: all 0.2s ease-out;
+		border-bottom-color: ${getColor('white')};
 	}
 `;
 
