@@ -1876,14 +1876,14 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.11.tgz#50e782eba46de3aac91f05a26ca92e2a5d13aa19"
-  integrity sha512-aMmOjx3bp4x/TcAthlTc0ULGHMrq9eff1/2Ij9IZzqOi56fXygXpK/yiw/c9AHFFfP1r4v+RObz5pS46rvoCtg==
+"@storybook/addon-links@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.13.tgz#3f7de0676f242ea2a812695b2e0ae40f951a0945"
+  integrity sha512-bQ9lAYUbkmnstluKojCN3pRmYnwEtkhnn8jUdBJiLiTFGpZxFbk5m3QjMVOtJEQ06ezKK+OV0Q/3WP63TN4r+Q==
   dependencies:
-    "@storybook/addons" "4.1.11"
-    "@storybook/components" "4.1.11"
-    "@storybook/core-events" "4.1.11"
+    "@storybook/addons" "4.1.13"
+    "@storybook/components" "4.1.13"
+    "@storybook/core-events" "4.1.13"
     core-js "^2.5.7"
     global "^4.3.2"
     prop-types "^15.6.2"
@@ -1925,6 +1925,16 @@
   version "4.1.13"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.13.tgz#801cbb6bf7f7b4d494ae20df43b4b8c406b32e19"
   integrity sha512-5WqXwFOc5Oj/ccem7I5FXTWJlCxfgzCgUlWGwkut/ahfuKkcvAPFKuRslReCWLT0sBZl8iap49HgYSNGDztAbA==
+  dependencies:
+    "@storybook/channels" "4.1.13"
+    "@storybook/components" "4.1.13"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/channel-postmessage@4.1.11":
+  version "4.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-4.1.11.tgz#3320a5f3e05652466eff1c53843205c262a92dfb"
+  integrity sha512-/9p4I5CZWVl6mszY5AR5XPRdQ88LUaAt4iyhdxMIaqNRiVo3Rq4ptMXiw35eCr+sLQuG2KO2SiPIwaA4/FgQuw==
   dependencies:
     "@storybook/channels" "4.1.13"
     "@storybook/components" "4.1.13"
