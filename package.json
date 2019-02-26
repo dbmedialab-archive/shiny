@@ -26,6 +26,7 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
+    "@babel/runtime": "7.3.4",
     "@emotion/core": "10.0.6",
     "@emotion/styled": "10.0.6",
     "@maji/react-prism": "1.0.1",
@@ -69,6 +70,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/plugin-transform-object-assign": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.3.4",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
     "@percy-io/percy-storybook": "2.1.0",
