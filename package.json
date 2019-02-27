@@ -39,7 +39,7 @@
     "lodash.isinteger": "^4.0.4",
     "parse-color": "1.0.0",
     "picturefill": "3.0.3",
-    "polished": "2.3.3",
+    "polished": "3.0.0",
     "prism-themes": "1.0.1",
     "prismjs": "1.15.0",
     "prop-types": "15.7.2",
