@@ -37,7 +37,7 @@ const LogoContainer = styled.div`
 	align-items: center;
 	width: 30rem;
 	padding: 3.2rem;
-	
+
 	@media only screen and (min-width: 60rem) {
 		width: 35rem;
 	}
@@ -45,7 +45,7 @@ const LogoContainer = styled.div`
 
 const Logo = styled(Elbil24Logo)`
 	width: 19rem;
-	
+
 	@media only screen and (min-width: 60rem) {
 		width: 23rem;
 	}
@@ -56,7 +56,7 @@ const Slogan = styled(Paragraph)`
 	font-size: 1.4rem;
 	font-weight: 400;
 	margin-top: 0.4rem;
-	
+
 	@media only screen and (min-width: 60rem) {
 		font-size: 1.6rem;
 	}
@@ -68,7 +68,7 @@ const Branding = styled.div`
 
 const Pro = styled.div`
 	align-self: flex-end;
-	
+
 	@media only screen and (min-width: 60rem) {
 		margin: 0.5rem;
 	}
@@ -83,7 +83,7 @@ const ProLink = styled(Link)`
 	margin-top: -13rem;
 	margin-left: -5.5rem;
 	white-space: nowrap;
-	
+
 	@media only screen and (min-width: 60rem) {
 		margin-top: -12.5rem;
 	}
@@ -122,13 +122,13 @@ const Menu = styled(HorizontalLinkBar)`
 	justify-content: space-around;
 	min-width: 80rem;
 	max-width: 128rem;
-	
+
 	@media only screen and (min-width: 60rem) {
 		padding-top: 0.2rem;
 		-webkit-overflow-scrolling: unset;
 		-ms-overflow-style: none;
 	}
-	
+
 	> li {
 		padding: 0 2rem;
 	}
@@ -145,13 +145,13 @@ const MenuLink = styled(LinkBarLink)`
 	font-weight: 800;
 	font-style: italic;
 	font-size: 1.8rem;
-	
+
 	transition: all 0.2s ease-out;
 	border-bottom: 0.2rem solid transparent;
 	padding: 0 !important;
-	
+
 	font-family: 'barlow', sans-serif;
-	
+
 	:hover {
 		font-weight: bold;
 		color: #dfdfdf;
