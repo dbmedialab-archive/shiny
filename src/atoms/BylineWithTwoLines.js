@@ -60,8 +60,8 @@ const BylineWithTwoLines = ({ src, name, email }) => (
 			/>
 		) : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
-			<Name itemProp="author" itemScope itemType="http://schema.org/Person">
-				<span itemProp="name">{name}</span>
+			<Name>
+				<span>{name}</span>
 			</Name>
 			<Email email={email}>
 				{email}
