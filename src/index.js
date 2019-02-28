@@ -41,6 +41,7 @@ export {
 	HugeDymoHeading,
 }                                  from './atoms/DymoHeading';
 export { Elbil24Logo             } from './atoms/Elbil24Logo';
+export { Elbil24ProLogo          } from './atoms/Elbil24ProLogo';
 export { Elbil24ProButton        } from './atoms/Elbil24ProButton';
 export { Error                   } from './atoms/Error';
 export { Figure                  } from './atoms/Figure';

@@ -5,100 +5,129 @@ import { DemoContainer } from '../storybook-components';
 
 import {
 	HugeHeading,
-
 	Link,
 	LinkBarLink,
 	HorizontalLinkBar,
 	Paragraph,
 
-	Elbil24Logo,
-	Elbil24ProButton,
+	Elbil24ProLogo,
 
 	getColor,
 } from '../../src';
 
-const linkProps = {
-	useUnderline: false,
-	activeBackgroundColor: getColor('secondary'),
-	textColor: 'white',
-	ALLCAPS: true,
-};
-
-// const TopNavigation = styled(HorizontalLinkBar)`
 const TopNavigation = styled.div`
 	background: ${getColor('primary')};
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: 145px;
+	height: 14.5rem;
 	font-family: 'barlow', sans-serif;
 `;
 
-const Logo = styled.div`
+const LogoLink = styled(Link)`
+	text-decoration: none;
+`;
+
+const LogoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2rem;
+	padding: 0.9rem;
+	
+	@media only screen and (min-width: 60rem) {
+		padding: 0.1rem;
+	}
 `;
 
-const LogoLink = styled(Link)`
-	display: block;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 2rem;
-	width: 18rem;
+const Logo = styled(Elbil24ProLogo)`
+	width: 30rem;
+
+	@media only screen and (min-width: 60rem) {
+		width: 35rem;
+	}
 `;
 
 const Slogan = styled(Paragraph)`
 	color: ${getColor('white')};
-	font-style: italic;
-	font-size: 13px;
+	font-size: 1.4rem;
+	font-weight: 400;
+	margin-top: -3rem;
+
+	@media only screen and (min-width: 60rem) {
+		font-size: 1.6rem;
+	}
 `;
 
 const Branding = styled.div`
 	display: flex;
 `;
 
-const Pro = styled.div`
-	align-self: flex-end;
-`;
-
-const ProLink = styled(Link)`
-	position: absolute;
-	font-size: 12px;
-	text-decoration: none;
-	color: #fff;
-	text-align: right;
-	margin-top: -138px;
-	margin-left: -55px;
-	width: 5rem;
-`;
-
-
-const Menu = styled(HorizontalLinkBar)`
+const MenuScroll = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	background: ${getColor('secondary')};
+	color:${getColor('white')};
 	width: 100%;
 	scroll-behavior: smooth;
 	overflow-y: hidden;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
-	height: 50px;
-	font-family: 'barlow', sans-serif;        
+	height: 5rem;
+	z-index: 9999;
 
-	@media only screen and (max-width: 600px) {
-		justify-content: flex-start;
+	@media only screen and (min-width: 60rem) {
+		justify-content: center;
+	}
+`;
+
+const Menu = styled(HorizontalLinkBar)`
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: space-around;
+	min-width: 80rem;
+	max-width: 128rem;
+
+	@media only screen and (min-width: 60rem) {
+		padding-top: 0.2rem;
+		-webkit-overflow-scrolling: unset;
+		-ms-overflow-style: none;
 	}
 
-	::-webkit-scrollbar {
-		width: 0; 
-		background: transparent;
+	> li {
+		padding: 0 2rem;
 	}
-	
-	justify-content: center;
-	min-width: 600px;
+`;
+
+const linkProps = {
+	useUnderline: false,
+	activeBackgroundColor: 'transparent',
+	textColor: 'white',
+	ALLCAPS: true,
+};
+
+const MenuLink = styled(LinkBarLink)`
+	font-weight: 800;
+	font-style: italic;
+	font-size: 1.8rem;
+
+	transition: all 0.2s ease-out;
+	border-bottom: 0.2rem solid transparent;
+	padding: 0 !important;
+
+	font-family: 'barlow', sans-serif;
+
+	:hover {
+		font-weight: bold;
+		color: #dfdfdf;
+		transition: all 0.2s ease-out;
+		border-bottom-color: ${getColor('white')};
+	}
 `;
 
 
@@ -109,34 +138,30 @@ const Elbil24Story = () => (
 		<DemoContainer>
 			<TopNavigation>
 				<Branding>
-					<Logo>
-						<LogoLink href="/">
-							<Elbil24Logo pro />
-						</LogoLink>
-						<Slogan>Norges ledende nettavis om elbiler!</Slogan>
-					</Logo>
+					<LogoLink href="/">
+						<LogoContainer>
+							<Logo />
+							<Slogan>Norges ledende nettavis om elbiler</Slogan>
+						</LogoContainer>
+					</LogoLink>
 				</Branding>
-				<Pro>
-					<ProLink href="/pro">
-						<Elbil24ProButton />
-						<br />
-						Logg inn
-					</ProLink>
-				</Pro>
 			</TopNavigation>
-			<Menu
-				isTopLevelComponent={false} // Use the whole width
-				backgroundColor="secondary"
-				overflow="visible"
-				shouldFlexChildren
-			>
-				<LinkBarLink {...linkProps} linkText="Forsiden" url="/" />
-				<LinkBarLink {...linkProps} linkText="Nyheter" url="/nyheter" />
-				<LinkBarLink {...linkProps} linkText="Tester" url="/tester" />
-				<LinkBarLink {...linkProps} linkText="Biler" url="/biler" />
-				<LinkBarLink {...linkProps} linkText="Lading" url="/lading" />
-				<LinkBarLink {...linkProps} linkText="Nyttig" url="/nyttig" />
-			</Menu>
+			<MenuScroll>
+				<Menu
+					isTopLevelComponent // Use the whole width
+					backgroundColor="secondary"
+					overflow="visible"
+					shouldFlexChildren
+				>
+					<MenuLink {...linkProps} linkText="Nyheter" url="/nyheter" />
+					<MenuLink {...linkProps} linkText="Tester" url="/tester" />
+					<MenuLink {...linkProps} linkText="Biler" url="/biler" />
+					<MenuLink {...linkProps} linkText="Nyttig" url="/nyttig" />
+					<MenuLink {...linkProps} linkText="Lading" url="/lading" />
+					<MenuLink {...linkProps} linkText="Nyhetsbrev" url="/nyhetsbrev" />
+					<MenuLink {...linkProps} linkText="Medlemsfordeler" url="/medlemsfordeler" />
+				</Menu>
+			</MenuScroll>
 		</DemoContainer>
 	</section>
 );
