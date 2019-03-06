@@ -52,7 +52,7 @@ Email.propTypes = {
 };
 
 
-const BylineWithTwoLines = ({ src, name, email }) => (
+const BylineWithTwoLines = ({ src, name, email }, noSchema) => (
 	<div>
 		{ src ?  (
 			<BylineImage
@@ -60,9 +60,15 @@ const BylineWithTwoLines = ({ src, name, email }) => (
 			/>
 		) : <WrapAvatar><SvgIcon name="user" /></WrapAvatar>}
 		<TextBlock primaryText={name}>
-			<Name>
-				<span>{name}</span>
-			</Name>
+			{ noSchema ? (
+				<Name>
+					<span>{name}</span>
+				</Name>
+			) : (
+				<Name itemProp="author" itemScope itemType="http://schema.org/Person">
+					<span itemProp="name">{name}</span>
+				</Name>
+			)}
 			<Email email={email}>
 				{email}
 			</Email>
