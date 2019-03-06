@@ -1465,17 +1465,18 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@4.1.13":
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.13.tgz#3f7de0676f242ea2a812695b2e0ae40f951a0945"
-  integrity sha512-bQ9lAYUbkmnstluKojCN3pRmYnwEtkhnn8jUdBJiLiTFGpZxFbk5m3QjMVOtJEQ06ezKK+OV0Q/3WP63TN4r+Q==
+"@storybook/addon-links@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.0.0.tgz#ee38087cdfdc79389c87f86a6d3783495b362149"
+  integrity sha512-tmITiU+GA76M0yuGgJcx0EHevWfiznLvpO9H92Fs4xQmoDZ5e0ILFKTVL9bRW1k2J5B2UHerwPyhE82cGGYmkg==
   dependencies:
-    "@storybook/addons" "4.1.13"
-    "@storybook/components" "4.1.13"
-    "@storybook/core-events" "4.1.13"
-    core-js "^2.5.7"
+    "@storybook/addons" "5.0.0"
+    "@storybook/core-events" "5.0.0"
+    common-tags "^1.8.0"
+    core-js "^2.6.2"
     global "^4.3.2"
     prop-types "^15.6.2"
+    qs "^6.5.2"
 
 "@storybook/addon-options@5.0.0":
   version "5.0.0"
@@ -1611,11 +1612,6 @@
     reactjs-popup "^1.3.2"
     recompose "^0.30.0"
     render-fragment "^0.1.1"
-
-"@storybook/core-events@4.1.13":
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.13.tgz#f919062bf1ffa9f90ab53138262e06d75e8f0d85"
-  integrity sha512-nRado+I9Jxv9CSH/u0qECbaTQpuoBCJ6+9sJm2lg04jjBvczqmjCi7RoY0NTlVp2VbVeAjht74KMOAfPQ2D+IA==
 
 "@storybook/core-events@5.0.0":
   version "5.0.0"
