@@ -1486,17 +1486,19 @@
     core-js "^2.5.7"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-viewport@4.1.13":
-  version "4.1.13"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-4.1.13.tgz#6a9bd03505db54d5ff05c7f7bbe3dc443e149786"
-  integrity sha512-BRjbRas0EoMjUHKGMBBAW9qk9c6c9kOtzQNT524P2zx+00K5u7C8yLSy0S249gUImw9yZdjjxrJN8CM458YFzg==
+"@storybook/addon-viewport@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.0.0.tgz#7033daf3041116d7d960a3fd4ecfc1994de6f791"
+  integrity sha512-ksi6Svm7NhPXwVTkeAOf/aJ8d3DN1P9TGwsF/6ZyfSBKscTtz8rJ0AIlpxQhiAVwpixLojXZXNH+1UM+C1L/PQ==
   dependencies:
-    "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.13"
-    "@storybook/components" "4.1.13"
-    "@storybook/core-events" "4.1.13"
-    core-js "^2.5.7"
+    "@storybook/addons" "5.0.0"
+    "@storybook/client-logger" "5.0.0"
+    "@storybook/components" "5.0.0"
+    "@storybook/core-events" "5.0.0"
+    "@storybook/theming" "5.0.0"
+    core-js "^2.6.2"
     global "^4.3.2"
+    memoizerific "^1.11.3"
     prop-types "^15.6.2"
     util-deprecate "^1.0.2"
 
@@ -7408,7 +7410,14 @@ react-hotkeys@2.0.0-pre4:
   dependencies:
     prop-types "^15.6.1"
 
-react-inspector@^2.3.0, react-inspector@^2.3.1:
+react-inspector@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-2.3.0.tgz#fc9c1d38ab687fc0d190dcaf133ae40158968fc8"
+  dependencies:
+    babel-runtime "^6.26.0"
+    is-dom "^1.0.9"
+
+react-inspector@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/react-inspector/-/react-inspector-2.3.1.tgz#f0eb7f520669b545b441af9d38ec6d706e5f649c"
   integrity sha512-tUUK7t3KWgZEIUktOYko5Ic/oYwvjEvQUFAGC1UeMeDaQ5za2yZFtItJa2RTwBJB//NxPr000WQK6sEbqC6y0Q==
