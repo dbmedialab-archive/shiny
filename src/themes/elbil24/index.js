@@ -9,6 +9,7 @@ const variables = {
 
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+	@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800');
 
 	${cssReset}
 `;
