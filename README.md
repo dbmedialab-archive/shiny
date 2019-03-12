@@ -14,6 +14,12 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
   1. wolverine-fetcher (dumb API layer): Fetches data from backend systems
   
 ## Releasing
+### Primary way ([np](https://github.com/sindresorhus/np))
+1. Make sure your changes are in master
+2. Run `yarn release`
+3. Follow the interactive release guide
+
+### Alternate way (vanilla)
 (After you have merged you changes into master)
 
 1. Get the latest version, and checkout a release branch for npm work. The release branch is necessary because the master branch is protected.
