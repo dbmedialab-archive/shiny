@@ -9,7 +9,9 @@ const variables = {
 	uiWeight: 300,
 
 	uiRegularSize: '1.6rem',
-	uiRegularLineHeight: '2.4rem',
+	verticalBase: '2.5rem',
+	uiRegularLineHeight: '5rem',
+	uiSmallLineHeight: '3rem'
 };
 
 const global = `
