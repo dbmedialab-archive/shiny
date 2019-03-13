@@ -10,8 +10,6 @@ const variables = {
 
 	uiRegularSize: '1.6rem',
 	verticalBase: '2.5rem',
-	uiRegularLineHeight: '5rem',
-	uiSmallLineHeight: '3rem'
 };
 
 const global = `

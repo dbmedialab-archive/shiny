@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
-import { getColor, getVariable } from '../utils'
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+import { getColor, getVariable } from '../utils';
 
-const getBackgroundColor = ({ backgroundColor }) =>
-	backgroundColor ? getColor(backgroundColor) : getColor('primary')
+const getBackgroundColor = ({ backgroundColor }) => (backgroundColor ? getColor(backgroundColor) : getColor('primary'));
 const MenuLayer = styled.div`
 	display: block;
 	margin: 0;
@@ -29,13 +28,13 @@ const MenuLayer = styled.div`
 			opacity: 1;
 		}
 	}
-`
+`;
 MenuLayer.propTypes = {
 	backgroundColor: PropTypes.string, // Color name from theme,
-	width: PropTypes.string
-}
+	width: PropTypes.string,
+};
 MenuLayer.defaultProps = {
-	backgroundColor: null
-}
+	backgroundColor: null,
+};
 
-export { MenuLayer }
+export { MenuLayer };

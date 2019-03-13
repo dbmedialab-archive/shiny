@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { getVariable } from '../utils/get-variable'
+import styled from '@emotion/styled';
+import { getVariable } from '../utils/get-variable';
 
 export const Truncate = styled.span`
 	height: 100%;
@@ -13,4 +13,4 @@ export const Truncate = styled.span`
 	@media screen and (max-width: ${({ theme }) => theme.flexboxgrid.breakpoints.xs}rem) {
 		max-width: calc(${getVariable('horizontalBase')} * 5);
 	}
-`
+`;
