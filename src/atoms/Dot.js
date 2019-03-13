@@ -32,7 +32,7 @@ const Dot = styled.div`
 `
 
 Dot.defaultProps = {
-	size: '.9rem'
+	size: 'medium'
 }
 
 Dot.propTypes = {
