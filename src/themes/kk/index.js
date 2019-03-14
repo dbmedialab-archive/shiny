@@ -1,7 +1,6 @@
 import { cssReset } from '../../utils/css-reset';
 
 import colors from './colors';
-import { fontSpecs } from './font-specs';
 
 const variables = {
 	mainFont: '"Open Sans", Helvetica, Arial, sans-serif',
@@ -13,7 +12,8 @@ const variables = {
 };
 
 const global = `
-	${fontSpecs}
+	@import url('https://fonts.googleapis.com/css?family=GFS+Didot');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
 
 	${cssReset}
 `;
