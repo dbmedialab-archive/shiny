@@ -12,7 +12,17 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=GFS+Didot');
+	@font-face {
+		font-family: 'Didot';
+		src: url('./fonts/didot-16a-300-italic') format('woff),
+			 url('./fonts/didot-16a-300-normal') format('woff'),
+			 url('./fonts/didot-16a-700-italic') format('woff'),
+			 url('./fonts/didot-16a-700-normal') format('woff'),
+			 url('./fonts/didot-16b-300-italic') format('woff),
+			 url('./fonts/didot-16b-300-normal') format('woff'),
+			 url('./fonts/didot-16b-700-italic') format('woff'),
+			 url('./fonts/didot-16b-700-normal') format('woff');
+	}
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
 
 	${cssReset}
