@@ -27,7 +27,7 @@ export default {
 			md: 101.0, // rem
 		},
 	},
-	outermargin: 0.7,
+	outerMargin: 0.7,
 	global,
 	colors,
 	variables,
