@@ -8,7 +8,7 @@ const getRatio = ({ size }) => {
 	case 'xsmall':
 		return 0.5;
 	case 'small':
-		return 0.7;
+		return 0.8;
 	case 'large':
 		return 1.5;
 	default:
