@@ -5,7 +5,7 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Open Sans', helvetica, arial, sans-serif",
 	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
-	headingsWeight: 800,
+	headingsWeight: 700,
 
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
