@@ -163,6 +163,9 @@ export {
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
 export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
+export { Truncate            	 } from './atoms/Truncate';
+export { Dot	            	 } from './atoms/Dot';
+export { MenuLayer	           	 } from './atoms/MenuLayer';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
