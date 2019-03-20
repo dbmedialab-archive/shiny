@@ -46,7 +46,7 @@ const colors = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Lato:300,700');
+	@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
 	${cssReset}
 `;
