@@ -13,6 +13,9 @@ const Row = styled.div`
   flex-wrap: wrap;
   margin-right: ${p => config(p).gutterWidth / 2 * -1}rem;
   margin-left: ${p => config(p).gutterWidth / 2 * -1}rem;
+	${p => p.nowrap && `
+    flex-wrap: nowrap;
+  `}
   ${p => p.reverse && `
     flex-direction: row-reverse;
   `}
@@ -51,6 +54,7 @@ const Row = styled.div`
 Row.displayName = 'Row';
 
 Row.propTypes = {
+	nowrap: PropTypes.bool,
 	reverse: PropTypes.bool,
 	start: ModificatorType,
 	center: ModificatorType,
