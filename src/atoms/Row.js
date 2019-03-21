@@ -54,6 +54,7 @@ const Row = styled.div`
 Row.displayName = 'Row';
 
 Row.propTypes = {
+	nowrap: PropTypes.bool,
 	reverse: PropTypes.bool,
 	start: ModificatorType,
 	center: ModificatorType,
