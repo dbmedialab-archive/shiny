@@ -10,6 +10,7 @@ import ButtonStory from './ButtonStory';
 import DropdownStory from './DropdownStory';
 import SearchFieldStory from './SearchFieldStory';
 import HideStory from './HideStory';
+import MenuLayerStory from './MenuLayerStory';
 
 export default () => {
 	storiesOf('Link Bars|Link Bar Elements/LinkBarLink', module)
@@ -23,5 +24,6 @@ export default () => {
 		.add('LinkBarButton', ButtonStory)
 		.add('LinkBarDropdown', DropdownStory)
 		.add('LinkBarSearchField', SearchFieldStory)
-		.add('Hidden LinkBar elements', HideStory);
+		.add('Hidden LinkBar elements', HideStory)
+		.add('MenuLayer', MenuLayerStory);
 };
