@@ -10,6 +10,7 @@ const colorsToShade= {
 	navy: '#0064b4',
 	red: '#2664AC',
 	purple: '#609',
+	floralWhite: '#fbf8f3',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -28,6 +29,7 @@ const colors = {
 	skinColors: {
 		splashBackground: 'sand',
 		splashText: 'navy',
+		background: 'floralWhite',
 
 		calmBackground: 'sand',
 		calmBorder: 'sand',
