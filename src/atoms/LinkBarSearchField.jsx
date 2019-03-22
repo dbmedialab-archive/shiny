@@ -28,7 +28,7 @@ const AbsoluteFontIcon = styled(FontIconBase)`
 const InputBase = LinkBarElementBase.withComponent('input');
 const Input = styled(InputBase)`
 	${(props) => {
-		const { size } = props;
+		const { size, icon } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const placeholderColor = getColor(props.placeholderColor)(props);
 
@@ -37,11 +37,14 @@ const Input = styled(InputBase)`
 
 		const horizontalMargin = `calc(${marginFactor} * ${horizontalBase})`;
 		const width = `calc(${widthFactor} * ${horizontalBase})`;
-
+		let paddingLeft = '1rem';
+		if (icon) {
+			paddingLeft = size === 'small' ? '2.7rem' : '4.4rem';
+		}
 		return css`
 			&& {
 				/* Magic number: width of the AbsoluteFontIcon */
-				padding-left: ${size === 'small' ? '2.7rem' : '4.4rem'};
+				padding-left: ${paddingLeft};
 				margin-left: ${horizontalMargin};
 				margin-right: ${horizontalMargin};
 				width: ${width};
@@ -62,12 +65,13 @@ const LinkBarSearchField = ({
 	inputName,
 	formName,
 	size,
+	icon,
 	...rest
 }) => (
 	<Fragment>
-		<AbsoluteFontIcon name="search" size={size} textColor={iconColor} inset />
+		{icon && <AbsoluteFontIcon name={icon} size={size} textColor={iconColor} inset />}
 		<form id={formName} name={formName} action={action}>
-			<Input id={inputName} name={inputName} size={size} type="search" inset rounded required {...rest} />
+			<Input id={inputName} name={inputName} size={size} type="search" inset rounded required icon={icon} {...rest} />
 		</form>
 	</Fragment>
 );
@@ -88,6 +92,8 @@ LinkBarSearchField.propTypes = {
 	size: PropTypes.oneOf(['small', 'medium', 'large']),
 	/** Color name from theme */
 	textColor: PropTypes.string,
+	/** Icon's name, for example "search", if empty(by default) icon will not render */
+	icon: PropTypes.string,
 };
 LinkBarSearchField.defaultProps ={
 	activeBackgroundColor: null,
@@ -98,6 +104,7 @@ LinkBarSearchField.defaultProps ={
 	placeholderColor: 'typeDisabled',
 	size: 'medium',
 	textColor: 'type',
+	icon: "",
 };
 
 export { LinkBarSearchField };
