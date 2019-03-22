@@ -17,7 +17,7 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<SmallLinkBarLink linkText="One" url="https://example.com" isActive />
 			<SmallLinkBarLink linkText="Two" url="https://example.com" />
-			<SmallLinkBarSearchField placeholder="Search My Shoe" backgroundColor="white" />
+			<SmallLinkBarSearchField icon="info" placeholder="Search My Shoe" backgroundColor="white" />
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
@@ -32,7 +32,7 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<LargeLinkBarLink linkText="One" url="https://example.com" isActive />
 			<LargeLinkBarLink linkText="Two" url="https://example.com" />
-			<LargeLinkBarSearchField placeholder="Search My Shoe" backgroundColor="white" />
+			<LargeLinkBarSearchField icon="search" placeholder="Search My Shoe" backgroundColor="white" />
 		</HorizontalLinkBar>
 	</section>
 );

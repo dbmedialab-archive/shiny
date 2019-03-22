@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.26.4",
+  "version": "0.27.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -52,10 +52,10 @@
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
     "@babel/cli": "7.2.3",
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.4.0",
     "@babel/node": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "7.3.4",
-    "@babel/plugin-proposal-decorators": "7.3.0",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-decorators": "7.4.0",
     "@babel/plugin-proposal-do-expressions": "7.2.0",
     "@babel/plugin-proposal-export-default-from": "7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "7.2.0",
@@ -72,7 +72,7 @@
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/plugin-transform-object-assign": "7.2.0",
     "@babel/plugin-transform-runtime": "7.3.4",
-    "@babel/preset-env": "7.3.4",
+    "@babel/preset-env": "7.4.2",
     "@babel/preset-react": "7.0.0",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "4.1.13",
@@ -88,13 +88,13 @@
     "babel-plugin-emotion": "10.0.7",
     "babel-plugin-react-docgen": "2.0.2",
     "babel-plugin-transform-imports": "^1.5.0",
-    "eslint": "5.15.1",
+    "eslint": "5.15.3",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "np": "^4.0.2",
     "pretty-format": "24.0.0",
-    "react": "16.8.3",
-    "react-dom": "16.8.3"
+    "react": "16.8.4",
+    "react-dom": "16.8.4"
   }
 }
