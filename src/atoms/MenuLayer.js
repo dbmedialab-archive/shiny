@@ -39,13 +39,13 @@ MenuLayer.propTypes = {
 	/** Width of layer, can be set in px, em, rem, %, "auto" */
 	width: PropTypes.string,
 	/** equal to css rule "left" */
-	left: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+	left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	/** equal to css rule "right" */
-	right: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+	right: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	/** equal to css rule "top" */
-	top: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+	top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	/** equal to css rule "bottom" */
-	bottom: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+	bottom: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MenuLayer.defaultProps = {
