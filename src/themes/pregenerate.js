@@ -31,7 +31,3 @@ function getThemeName(folder) {
 	}
 	return folder;
 }
-
-// kk index file is big, for performance reasons we create a fake empty index file
-const kkIndexFile = path.join(themeLibDir, 'kk', 'index.js');
-fs.writeFileSync(kkIndexFile, `${prefix}{}`);
