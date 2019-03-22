@@ -20,10 +20,6 @@ const global = `
 		color: ${colors.skinColors.link};
 		text-decoration: underline;
 		line-height: inherit;
-
-		&:visited {
-			color: ${colors.skinColors.linkVisited};
-		}
 	}
 `;
 

@@ -19,6 +19,8 @@ import buttons from './buttons';
 import blocklink from './blocklink';
 import arrowBullet from './arrowBulletStory';
 import moreComponent from './mat-more-component';
+import truncate from './truncate';
+import dot from './dot';
 
 // @TODO: Create story for LargeScreenText;
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';
@@ -36,7 +38,8 @@ export default () => {
 	storiesOf('Typography|Body text', module)
 		.addDecorator(StorybookPaddedGrid)
 		.add('Body text', bodyText)
-		.add('Cite', cite);
+		.add('Cite', cite)
+		.add('Truncate', truncate);
 
 	storiesOf('Typography|Links', module)
 		.addDecorator(StorybookPaddedGrid)
@@ -58,5 +61,6 @@ export default () => {
 		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
 		.add('Icon with text', iconWithText)
-		.add('Dice', dice);
+		.add('Dice', dice)
+		.add('Dot', dot);
 };
