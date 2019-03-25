@@ -7,7 +7,8 @@ const StyledPicture = styled.picture`
 	width: 100%;
 	display: block;
 	position: absolute;
-
+	height: 100%;
+	
 	& img {
 		display: block;
 		max-width: 100%;
