@@ -33,7 +33,7 @@ const StyledPicture = styled.picture`
 			will-change: opacity;
 			&.fade-in {
 				opacity: 0.1;
-				transition: opacity 400ms;
+				transition: opacity ${props.fadeInTime}ms;
 
 				&.lazyloaded {
 					opacity: 1;
@@ -52,10 +52,13 @@ class Picture extends PureComponent {
 		alt: PropTypes.string,
 		/** Turns off blur transition when true */
 		preventBlur: PropTypes.bool.isRequired,
+		/** Transition time for the image in ms */
+		fadeInTime: PropTypes.number,
 	}
 
 	static defaultProps = {
 		alt: 'Et bilde',
+		fadeInTime: 400,
 	}
 
 	componentDidMount() {

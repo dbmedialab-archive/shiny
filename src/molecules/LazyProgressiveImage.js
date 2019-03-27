@@ -37,11 +37,14 @@ class LazyProgressiveImage extends PureComponent {
 		fadeIn: PropTypes.bool,
 		/** Customize the flexbox order of the component */
 		order: PropTypes.number,
+		/** Time in ms for image to fade in */
+		fadeInTime: PropTypes.number,
 	}
 
 	static defaultProps = {
 		preventBlur: false,
 		alt: 'Artikkelbilde.',
+		fadeInTime: 400,
 		backgroundColor: '#ececec',
 		fadeIn: false,
 		order: 0,
@@ -58,6 +61,7 @@ class LazyProgressiveImage extends PureComponent {
 			src,
 			ratio,
 			fadeIn,
+			fadeInTime,
 			children,
 			preventBlur,
 			...rest
@@ -68,7 +72,7 @@ class LazyProgressiveImage extends PureComponent {
 				paddingBottom={ratio * 100}
 				{...rest}
 			>
-				<Picture alt={alt} preventBlur={preventBlur} fadeIn={fadeIn}>
+				<Picture alt={alt} preventBlur={preventBlur} fadeIn={fadeIn} fadeInTime={fadeInTime}>
 					{children}
 					<Image
 						itemProp="image"
