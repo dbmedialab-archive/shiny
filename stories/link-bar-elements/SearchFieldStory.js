@@ -23,6 +23,10 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<LinkBarLink linkText="One" url="https://example.com" isActive />
 			<LinkBarLink linkText="Two" url="https://example.com" />
+			<LinkBarSearchField
+				placeholder="Search My Shoe"
+				backgroundColor="white"
+			/>
 
 		</HorizontalLinkBar>
 		<div>-</div>
