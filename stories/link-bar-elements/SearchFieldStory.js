@@ -27,7 +27,6 @@ const SearchFieldStory = () => (
 				placeholder="Search My Shoe"
 				backgroundColor="white"
 			/>
-
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
