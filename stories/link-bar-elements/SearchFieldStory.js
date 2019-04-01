@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 // HorizontalLinkBar
 import {
 	HorizontalLinkBar,
+	LinkBarLink,
 	SmallLinkBarLink,
 	LargeLinkBarLink,
 	LinkBarSearchField,
@@ -20,18 +21,25 @@ const SearchFieldStory = () => (
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
-			<LinkBarSearchField
-				isListItem
-				fullWidth
-				placeholder="Search My Shoe"
-				backgroundColor="white"
-			/>
+			<LinkBarLink linkText="One" url="https://example.com" isActive />
+			<LinkBarLink linkText="Two" url="https://example.com" />
+
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<LargeLinkBarLink linkText="One" url="https://example.com" isActive />
 			<LargeLinkBarLink linkText="Two" url="https://example.com" />
 			<LargeLinkBarSearchField icon="search" placeholder="Search My Shoe" backgroundColor="white" />
+		</HorizontalLinkBar>
+		<div>-</div>
+		<HorizontalLinkBar backgroundColor="grayTintLighter">
+			<LinkBarSearchField
+				isListItem
+				fullWidth
+				icon="search"
+				placeholder="Search My Shoe"
+				backgroundColor="white"
+			/>
 		</HorizontalLinkBar>
 	</section>
 );
