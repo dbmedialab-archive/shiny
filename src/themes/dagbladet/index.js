@@ -1,5 +1,5 @@
 import { cssReset } from '../../utils/css-reset';
-
+import flexboxgrid from './flexboxgrid';
 import colors from './colors';
 
 const variables = {
@@ -23,6 +23,7 @@ const theme = {
 	global,
 	colors,
 	variables,
+	flexboxgrid,
 };
 
 export default theme;
