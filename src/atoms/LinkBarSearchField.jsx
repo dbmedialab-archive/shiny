@@ -28,7 +28,7 @@ const AbsoluteFontIcon = styled(FontIconBase)`
 const InputBase = LinkBarElementBase.withComponent('input');
 const Input = styled(InputBase)`
 	${(props) => {
-		const { size, icon } = props;
+		const { size, icon, fullWidth } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const placeholderColor = getColor(props.placeholderColor)(props);
 
@@ -36,7 +36,7 @@ const Input = styled(InputBase)`
 		const marginFactor = size === 'small' ? 1/2 : 1;
 
 		const horizontalMargin = `calc(${marginFactor} * ${horizontalBase})`;
-		const width = `calc(${widthFactor} * ${horizontalBase})`;
+		const width = fullWidth ? `calc(100% - calc(2 * ${horizontalMargin}))` : `calc(${widthFactor} * ${horizontalBase})`;
 		let paddingLeft = '1rem';
 		if (icon) {
 			paddingLeft = size === 'small' ? '2.7rem' : '4.4rem';
@@ -58,7 +58,11 @@ const Input = styled(InputBase)`
 		`;
 	}}
 `;
-
+const Form = styled.form`
+	${({ fullWidth }) => fullWidth && css(`
+		width: 100%;
+	`)}
+`
 const LinkBarSearchField = ({
 	action,
 	iconColor,
@@ -66,13 +70,14 @@ const LinkBarSearchField = ({
 	formName,
 	size,
 	icon,
+	fullWidth,
 	...rest
 }) => (
 	<Fragment>
 		{icon && <AbsoluteFontIcon name={icon} size={size} textColor={iconColor} inset />}
-		<form id={formName} name={formName} action={action}>
-			<Input id={inputName} name={inputName} size={size} type="search" inset rounded required icon={icon} {...rest} />
-		</form>
+		<Form id={formName} name={formName} action={action} fullWidth={fullWidth}>
+			<Input id={inputName} name={inputName} size={size} type="search" inset rounded required icon={icon} fullWidth={fullWidth} {...rest} />
+		</Form>
 	</Fragment>
 );
 LinkBarSearchField.propTypes = {
@@ -94,8 +99,10 @@ LinkBarSearchField.propTypes = {
 	textColor: PropTypes.string,
 	/** Icon's name, for example "search", if empty(by default) icon will not render */
 	icon: PropTypes.string,
+	/** If true will change width to 100% except calculated margins, which depends on size and horizontalBase */
+	fullWidth: PropTypes.bool,
 };
-LinkBarSearchField.defaultProps ={
+LinkBarSearchField.defaultProps = {
 	activeBackgroundColor: null,
 	backgroundColor: 'grayTintLighter',
 	iconColor: 'link',
@@ -105,6 +112,7 @@ LinkBarSearchField.defaultProps ={
 	size: 'medium',
 	textColor: 'type',
 	icon: "",
+	fullWidth: false,
 };
 
 export { LinkBarSearchField };

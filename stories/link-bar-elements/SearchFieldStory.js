@@ -34,6 +34,16 @@ const SearchFieldStory = () => (
 			<LargeLinkBarLink linkText="Two" url="https://example.com" />
 			<LargeLinkBarSearchField icon="search" placeholder="Search My Shoe" backgroundColor="white" />
 		</HorizontalLinkBar>
+		<div>-</div>
+		<HorizontalLinkBar backgroundColor="grayTintLighter">
+			<LinkBarSearchField
+				isListItem
+				fullWidth
+				icon="search"
+				placeholder="Search My Shoe"
+				backgroundColor="white"
+			/>
+		</HorizontalLinkBar>
 	</section>
 );
 
