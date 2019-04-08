@@ -6,6 +6,7 @@ import linkBars from './link-bars';
 import linkBarElements from './link-bar-elements';
 import linkBarsCompleteExamples from './link-bars-complete-examples';
 import trysilPlug from './TrysilPlug';
+import articlePreview from './ArticlePreview';
 import ads from './Ads';
 import logos from './logos';
 import forms from './forms';
@@ -31,6 +32,7 @@ images();
 // Editorial elements
 editorialMarking();
 trysilPlug();
+articlePreview();
 
 // Link Bars
 linkBars();

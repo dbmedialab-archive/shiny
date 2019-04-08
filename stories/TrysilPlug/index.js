@@ -14,7 +14,7 @@ import TrysilPlugWithColStory from './with-col';
 
 export default () => {
 	storiesOf('Editorial Marking|TrysilPlug', module)
-		.addDecorator(StorybookPaddedGrid)
+	.addDecorator(StorybookPaddedGrid)
 		.add('TrysilPlug', basicIssue)
 		.add('... without blur', TrysilPlugWithoutBlurStory)
 		.add('... with fadein', TrysilPlugWithFadeInStory)
