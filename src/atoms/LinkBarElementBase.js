@@ -21,7 +21,7 @@ const getFocusBackground = (props) => {
 		props.activeBackgroundColor ? getColor(props.activeBackgroundColor)(props) : props.activeBackground
 	);
 
-	return (props.activeBackground === 'transparent' ? 'rgba(0,0,0,.04)' : activeBackgroundFromProps);
+	return (activeBackgroundFromProps === 'transparent' ? 'rgba(0,0,0,.04)' : activeBackgroundFromProps);
 };
 
 export const LinkBarElementBase = styled.a`
