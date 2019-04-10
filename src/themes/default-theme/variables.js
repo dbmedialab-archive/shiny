@@ -13,6 +13,8 @@ export default {
 	verticalBase: '2.4rem',
 	unitlessVerticalBase: 2.4,
 
+	spacing: '1.6rem',
+
 	largeWidth: '750px', // deprecated, use theme.flexboxgrid.breakpoints.sm instead
 
 	uiLargeSize: '2.0rem',
