@@ -27,6 +27,8 @@ class LazyProgressiveImage extends PureComponent {
 		src: PropTypes.string.isRequired,
 		/** The alt attribute for the <img> and <picture> tags */
 		alt: PropTypes.string,
+		/** Figcaption, text content */
+		caption: PropTypes.string,
 		/** Should be <source> tags */
 		children: PropTypes.node.isRequired,
 		/** Aspect ratio of the image, used to reserve space */
@@ -40,6 +42,7 @@ class LazyProgressiveImage extends PureComponent {
 	}
 
 	static defaultProps = {
+		caption: null,
 		preventBlur: false,
 		alt: 'Artikkelbilde.',
 		backgroundColor: '#ececec',
@@ -60,6 +63,7 @@ class LazyProgressiveImage extends PureComponent {
 			fadeIn,
 			children,
 			preventBlur,
+			caption,
 			...rest
 		} = this.props;
 
@@ -80,6 +84,7 @@ class LazyProgressiveImage extends PureComponent {
 					/>
 					<noscript><img src={src} alt={alt} itemProp="image" /></noscript>
 				</Picture>
+				{caption && <figcaption>{caption}</figcaption>}
 			</Figure>
 		);
 	}
