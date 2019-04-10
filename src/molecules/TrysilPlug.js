@@ -118,7 +118,7 @@ const TrysilPlug = ({
 							}
 							{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 						</LazyProgressiveImage>
-						{iconUrl && <TrysilIcon src={iconUrl} width={iconWidth} />}
+						{iconUrl && <TrysilIcon src={iconUrl} width={iconWidth} alt="" />}
 					</Relative>
 				)
 				}
