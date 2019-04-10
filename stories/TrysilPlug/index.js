@@ -11,6 +11,7 @@ import TrysilPlugWithoutBlurStory from './without-blur';
 import TrysilPlugWithFadeInStory from './with-fadein';
 import textColorOnHover from './text-color-hover';
 import TrysilPlugWithColStory from './with-col';
+import TrysilPlugWithIconStory from './with-icon';
 
 export default () => {
 	storiesOf('Editorial Marking|TrysilPlug', module)
@@ -24,5 +25,6 @@ export default () => {
 		.add('DymoHeading with hover shade', textColorOnHover)
 		.add('With Kicker', kicker)
 		.add('All caps', allCaps)
-		.add('Row with three plugs', rowWithThreePlugs);
+		.add('Row with three plugs', rowWithThreePlugs)
+		.add('... with icon', TrysilPlugWithIconStory);
 };

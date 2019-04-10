@@ -16,6 +16,7 @@ import { Labels as DefaultLabels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
+import { Image } from '../atoms/Image';
 
 const ArticleCol = Col.withComponent(Article);
 
@@ -52,6 +53,19 @@ const Description = styled.p`
 	line-height: ${getVariable('uiRegularLineHeight')};
 	margin-top: 0;
 `;
+
+const Relative = styled.div`
+	position: relative;
+`;
+
+const TrysilIcon = styled(Image)`
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: ${props => `${props.width}rem`};
+	object-fit: cover;
+`;
+
 Description.propTypes = {
 	order: PropTypes.number,
 };
@@ -79,6 +93,8 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
+	iconUrl,
+	iconWidth,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -87,20 +103,23 @@ const TrysilPlug = ({
 				{kicker && <Kicker order={1}>{kicker}</Kicker>}
 				{image
 				&& (
-					<LazyProgressiveImage
-						order={2}
-						alt={title}
-						ratio={ratio}
-						offset={offset}
-						src={placeholderUrl ? placeholderUrl : image}
-						preventBlur={preventBlur}
-						fadeIn={fadeIn}
-					>
-						{sources.length === 0
-						&& <Source srcSet={image} />
-						}
-						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-					</LazyProgressiveImage>
+					<Relative>
+						<LazyProgressiveImage
+							order={2}
+							alt={title}
+							ratio={ratio}
+							offset={offset}
+							src={placeholderUrl ? placeholderUrl : image}
+							preventBlur={preventBlur}
+							fadeIn={fadeIn}
+						>
+							{sources.length === 0
+							&& <Source srcSet={image} />
+							}
+							{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+						</LazyProgressiveImage>
+						{iconUrl && <TrysilIcon src={iconUrl} width={iconWidth} />}
+					</Relative>
 				)
 				}
 				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
@@ -185,6 +204,8 @@ TrysilPlug.propTypes = {
 	preventBlur: PropTypes.bool,
 	displayPlayIcon: PropTypes.bool,
 	playIconColor: PropTypes.string,
+	iconUrl: PropTypes.string,
+	iconWidth: PropTypes.number,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -207,6 +228,8 @@ TrysilPlug.defaultProps = {
 	placeholderUrl: '',
 	displayPlayIcon: false,
 	playIconColor: 'primary',
+	iconUrl: null,
+	iconWidth: 3,
 };
 
 export { TrysilPlug };
