@@ -52,7 +52,6 @@ const Description = styled.p`
 	line-height: ${getVariable('uiRegularLineHeight')};
 	margin-top: 0;
 `;
-
 Description.propTypes = {
 	order: PropTypes.number,
 };
@@ -87,22 +86,22 @@ const TrysilPlug = ({
 			<PlugLink href={url}>
 				{kicker && <Kicker order={1}>{kicker}</Kicker>}
 				{image
-					&& (
-						<LazyProgressiveImage
-							order={2}
-							alt={title}
-							ratio={ratio}
-							offset={offset}
-							src={placeholderUrl ? placeholderUrl : image}
-							preventBlur={preventBlur}
-							fadeIn={fadeIn}
-						>
-							{sources.length === 0
-								&& <Source srcSet={image} />
-							}
-							{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
-						</LazyProgressiveImage>
-					)
+				&& (
+					<LazyProgressiveImage
+						order={2}
+						alt={title}
+						ratio={ratio}
+						offset={offset}
+						src={placeholderUrl ? placeholderUrl : image}
+						preventBlur={preventBlur}
+						fadeIn={fadeIn}
+					>
+						{sources.length === 0
+							&& <Source srcSet={image} />
+						}
+						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
+					</LazyProgressiveImage>
+				)
 				}
 				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
 				{subtitle && <Description order={4} itemProp="description">{subtitle}</Description>}
