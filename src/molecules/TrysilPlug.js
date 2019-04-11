@@ -97,7 +97,7 @@ const TrysilPlug = ({
 						fadeIn={fadeIn}
 					>
 						{sources.length === 0
-							&& <Source srcSet={image} />
+						&& <Source srcSet={image} />
 						}
 						{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 					</LazyProgressiveImage>
