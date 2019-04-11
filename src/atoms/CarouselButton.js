@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
 import { getVariable, getColor } from '../utils';
 
+// z-index: 1 - for overlaying over elements with same z-index
 export const CarouselButton = styled.button`
 	-webkit-tap-highlight-color: transparent;
 	border: none;
 	outline: none;
+	z-index: 1;
 	position: absolute;
 	${(props) => {
 		const buttonLength = `calc(${getVariable('uiRegularSize')(props)} * 2)`;
