@@ -20,6 +20,12 @@ const global = `
 
 const theme = {
 	name: 'Dagbladet',
+	flexboxgrid: {
+		container: {
+			sm: 75.3, // rem
+			md: 101.0, // rem
+		},
+	},
 	global,
 	colors,
 	variables,
