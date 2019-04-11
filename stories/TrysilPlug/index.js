@@ -7,11 +7,11 @@ import kicker from './kicker';
 import allCaps from './all-caps';
 import customHeading from './custom-heading';
 import customLabels from './custom-labels';
+import customLabelsAsImages from './custom-labels-images';
 import TrysilPlugWithoutBlurStory from './without-blur';
 import TrysilPlugWithFadeInStory from './with-fadein';
 import textColorOnHover from './text-color-hover';
 import TrysilPlugWithColStory from './with-col';
-import TrysilPlugWithIconStory from './with-icon';
 
 export default () => {
 	storiesOf('Editorial Marking|TrysilPlug', module)
@@ -22,9 +22,9 @@ export default () => {
 		.add('... as Col', TrysilPlugWithColStory)
 		.add('Custom Heading', customHeading)
 		.add('Custom Labels', customLabels)
+		.add('... as images', customLabelsAsImages)
 		.add('DymoHeading with hover shade', textColorOnHover)
 		.add('With Kicker', kicker)
 		.add('All caps', allCaps)
-		.add('Row with three plugs', rowWithThreePlugs)
-		.add('... with icon', TrysilPlugWithIconStory);
+		.add('Row with three plugs', rowWithThreePlugs);
 };

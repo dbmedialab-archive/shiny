@@ -16,7 +16,6 @@ import { Labels as DefaultLabels } from './Labels';
 import { LazyProgressiveImage } from './LazyProgressiveImage';
 import { Source } from './Source';
 import { Col } from '../atoms/Col';
-import { Image } from '../atoms/Image';
 
 const ArticleCol = Col.withComponent(Article);
 
@@ -54,18 +53,6 @@ const Description = styled.p`
 	margin-top: 0;
 `;
 
-const Relative = styled.div`
-	position: relative;
-`;
-
-const TrysilIcon = styled(Image)`
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: ${props => `${props.width}rem`};
-	object-fit: cover;
-`;
-
 Description.propTypes = {
 	order: PropTypes.number,
 };
@@ -93,8 +80,6 @@ const TrysilPlug = ({
 	column,
 	attributes,
 	float,
-	iconUrl,
-	iconWidth,
 }) => {
 	const ArticleComponent = column ? ArticleCol : Article;
 	return (
@@ -102,8 +87,7 @@ const TrysilPlug = ({
 			<PlugLink href={url}>
 				{kicker && <Kicker order={1}>{kicker}</Kicker>}
 				{image
-				&& (
-					<Relative>
+					&& (
 						<LazyProgressiveImage
 							order={2}
 							alt={title}
@@ -114,13 +98,11 @@ const TrysilPlug = ({
 							fadeIn={fadeIn}
 						>
 							{sources.length === 0
-							&& <Source srcSet={image} />
+								&& <Source srcSet={image} />
 							}
 							{sources.map((source, i) => <Source srcSet={source.url} media={source.media} key={`source-${i}`} />)}
 						</LazyProgressiveImage>
-						{iconUrl && <TrysilIcon src={iconUrl} width={iconWidth} alt="" />}
-					</Relative>
-				)
+					)
 				}
 				<Heading {...headingProps} order={3}>{stripTags(title, ['strong', 'em'])}</Heading>
 				{subtitle && <Description order={4} itemProp="description">{subtitle}</Description>}
@@ -204,8 +186,6 @@ TrysilPlug.propTypes = {
 	preventBlur: PropTypes.bool,
 	displayPlayIcon: PropTypes.bool,
 	playIconColor: PropTypes.string,
-	iconUrl: PropTypes.string,
-	iconWidth: PropTypes.number,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -228,8 +208,6 @@ TrysilPlug.defaultProps = {
 	placeholderUrl: '',
 	displayPlayIcon: false,
 	playIconColor: 'primary',
-	iconUrl: null,
-	iconWidth: 3,
 };
 
 export { TrysilPlug };
