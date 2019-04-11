@@ -7,7 +7,8 @@ import { LinkBarDropdown } from './LinkBarDropdown';
 
 // Originally written for the VerticalLinkBar molecule
 const VerticalFlexingList = styled.ul`
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 0;
 	font-family: ${getVariable('mainFont')};

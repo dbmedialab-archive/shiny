@@ -19,7 +19,28 @@ const LinkBarItem = styled(Li)`
 		width: 100%;
 	}
 `;
-
+const RenderChildren = ({ children }) => {
+	console.warn(children);
+	if (children && children.map) {
+		return children.map((child, i) => <RenderChildren key={i}>{child}</RenderChildren>);
+	}
+	return (
+		<LinkBarItem
+			position={children.props.position}
+			flex={children.props.flex}
+			xs={children.props.xs}
+			sm={children.props.sm}
+			md={children.props.md}
+			lg={children.props.lg}
+			zIndex={children.props.zIndex}
+		>
+			{children}
+		</LinkBarItem>
+	);
+};
+RenderChildren.propTypes = {
+	children: PropTypes.node.isRequired,
+};
 const LinkBar = ({
 	background,
 	backgroundColor,
@@ -37,22 +58,7 @@ const LinkBar = ({
 
 	return (
 		<Bar {...rest} background={background} backgroundColor={backgroundColor}>
-			{children && children.map((child, i) => {
-				return (
-					<LinkBarItem
-						key={i}
-						position={child.props.position}
-						flex={child.props.flex}
-						xs={child.props.xs}
-						sm={child.props.sm}
-						md={child.props.md}
-						lg={child.props.lg}
-						zIndex={child.props.zIndex}
-					>
-						{child}
-					</LinkBarItem>
-				);
-			})}
+			<RenderChildren>{children}</RenderChildren>
 		</Bar>
 	);
 };

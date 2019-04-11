@@ -2,12 +2,13 @@ import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
 import { DemoContainer } from '../storybook-components';
-
 import {
 	Heading, HugeHeading,
 	Paragraph,
 	LinkBarLink,
 	VerticalLinkBar,
+	HorizontalLinkBar,
+	SmallLinkBarHeading,
 } from '../../src';
 
 const VerticalLinkBarStory = () => (
@@ -17,11 +18,16 @@ const VerticalLinkBarStory = () => (
 
 		<Heading>Demo</Heading>
 		<DemoContainer>
-			<VerticalLinkBar>
-				<LinkBarLink linkText="One" url="https://example.com" isActive />
-				<LinkBarLink linkText="Two" url="https://example.com" />
-				<LinkBarLink linkText="Buckle My Shoe" url="https://example.com" />
-			</VerticalLinkBar>
+			<HorizontalLinkBar backgroundColor="white">
+				<VerticalLinkBar key={1}>
+					<SmallLinkBarHeading key={0} position={1}>Some head</SmallLinkBarHeading>
+					{[
+						{ linkText: 'One', url: 'https://example.com' },
+						{ linkText: 'Two', url: 'https://example.com' },
+						{ linkText: 'Buckle My Shoe', url: 'https://example.com' },
+					].map(({ linkText, url }, i) => <LinkBarLink position={i} key={linkText} linkText={linkText} url={url} />)}
+				</VerticalLinkBar>
+			</HorizontalLinkBar>
 		</DemoContainer>
 
 		<Heading>Usage</Heading>
