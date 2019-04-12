@@ -14,7 +14,7 @@ const MenuLayer = styled.div`
 	right: ${({ right }) => right || 'inherit'};
 	top: ${({ top }) => top || 'inherit'};
 	bottom: ${({ bottom }) => bottom || 'inherit'};
-	box-shadow: 0 2rem 2rem 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4);
 	width: ${({ width }) => width};
 	justify-content: space-between;
 	animation: fadeSlideDown 0.2s;
