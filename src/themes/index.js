@@ -1,5 +1,6 @@
 import defaultTheme from './default-theme';
 import lightTheme from './light-theme';
+import future from './future';
 
 import aller from './aller';
 import dagbladet from './dagbladet';
@@ -13,12 +14,12 @@ import sol from './sol';
 import start from './start';
 import topp from './topp';
 
-
 export { themePropTypes } from './theme-prop-types';
 
 const themes = {
 	defaultTheme,
 	lightTheme,
+	future,
 
 	aller,
 	dagbladet,
