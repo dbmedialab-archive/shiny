@@ -89,7 +89,7 @@
     "babel-plugin-react-docgen": "3.0.0",
     "babel-plugin-transform-imports": "1.5.1",
     "eslint": "5.16.0",
-    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-import": "2.17.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "np": "^4.0.2",
