@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
+import Hamburger from './SvgIcon/Hamburger';
 import { LinkBarButton } from './LinkBarButton';
 import { FontIcon } from './FontIcon';
 
@@ -11,6 +11,24 @@ import { FontIcon } from './FontIcon';
 // Here's my Dropdown... so
 const HideMeMaybe = styled.div`
 	${props => (props.hide ? css`display: none;` : '')}
+`;
+
+const SvgTransformContainer = styled.div`
+	&& {
+		& *[aria-expanded='true'] {
+			${Hamburger} {
+				& rect:nth-child(1) {
+					transform: rotate(45deg) scale(1.17, 1) translateY(-2.5px) translateX(2.5px);
+				}
+				& rect:nth-child(2) {
+					transform: scale(0.2, 1) translateX(47px);
+				}
+				& rect:nth-child(3) {
+					transform: rotate(-45deg) scale(1.17, 1) translateY(-4px) translateX(-11.5px);
+				}
+			}
+		}
+	}
 `;
 
 class Dropdown extends React.Component {
@@ -82,7 +100,7 @@ class Dropdown extends React.Component {
 		const { hide } = this.state;
 
 		return (
-			<div
+			<SvgTransformContainer
 				onFocus={this.updateLastFocusTime}
 				onBlur={this.hideIfNotRecentlyFocused}
 			>
@@ -95,7 +113,7 @@ class Dropdown extends React.Component {
 				<HideMeMaybe onClick={this.tryHide} hide={hide} tabIndex={-1}>
 					{children}
 				</HideMeMaybe>
-			</div>
+			</SvgTransformContainer>
 		);
 	}
 }
