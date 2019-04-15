@@ -5,7 +5,11 @@ const SvgIconWrapper = styled.div`
 	display: inline-block;
 	text-align: center;
 	width: ${props => props.size}rem;
-
+	& svg {
+		& rect {
+			transition: .1s transform;
+		}
+	}
 	${props => (props['size-sm'] && `
 	@media (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
 		width: ${props['size-sm']}rem;
@@ -13,7 +17,7 @@ const SvgIconWrapper = styled.div`
 
  	${props => props.color && `
 		svg{
-			path {
+			path, rect {
 				fill: ${getColor(props.color)(props)};
 			}
 			stroke: ${getColor(props.color)(props)}
