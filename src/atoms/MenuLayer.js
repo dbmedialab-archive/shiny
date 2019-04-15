@@ -14,9 +14,33 @@ const MenuLayer = styled.div`
 	right: ${({ right }) => right || 'inherit'};
 	top: ${({ top }) => top || 'inherit'};
 	bottom: ${({ bottom }) => bottom || 'inherit'};
-	box-shadow: 0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4);
 	width: ${({ width }) => width};
 	justify-content: space-between;
+	overflow-y: unset;
+	overflow-x: unset;
+	& :after {
+		content: '';
+		position: absolute;
+		height: 3.5rem;
+		bottom: -3.5rem;
+		width: 100%;
+		background: -moz-linear-gradient(
+			top,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(229, 229, 229, 0) 100%
+		);
+		background: -webkit-linear-gradient(
+			top,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(229, 229, 229, 0) 100%
+		);
+		background: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(229, 229, 229, 0) 100%
+		);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00e5e5e5',GradientType=0 );
+	}
 	animation: fadeSlideDown 0.2s;
 	@keyframes fadeSlideDown {
 		0% {
