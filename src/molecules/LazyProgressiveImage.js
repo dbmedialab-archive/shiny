@@ -37,6 +37,8 @@ class LazyProgressiveImage extends PureComponent {
 		fadeIn: PropTypes.bool,
 		/** Customize the flexbox order of the component */
 		order: PropTypes.number,
+		/** Setting the browser native lazyload flag */
+		loading: PropTypes.oneOf(['auto', 'lazy', 'eager']),
 	}
 
 	static defaultProps = {
@@ -45,6 +47,7 @@ class LazyProgressiveImage extends PureComponent {
 		backgroundColor: '#ececec',
 		fadeIn: false,
 		order: 0,
+		loading: 'auto',
 	}
 
 	componentDidMount() {
@@ -60,6 +63,7 @@ class LazyProgressiveImage extends PureComponent {
 			fadeIn,
 			children,
 			preventBlur,
+			loading,
 			...rest
 		} = this.props;
 
@@ -76,6 +80,7 @@ class LazyProgressiveImage extends PureComponent {
 						data-sizes="auto"
 						src={src}
 						data-src={src}
+						loading={loading}
 						className={`lazyload ${preventBlur ? '' : 'blur-up'} ${fadeIn ? 'fade-in' : ''}`}
 					/>
 					<noscript><img src={src} alt={alt} itemProp="image" /></noscript>

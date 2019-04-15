@@ -7,7 +7,8 @@ import { LinkBarDropdown } from './LinkBarDropdown';
 
 // Originally written for the VerticalLinkBar molecule
 const VerticalFlexingList = styled.ul`
-	display: inline-block;
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 	font-family: ${getVariable('mainFont')};
@@ -19,7 +20,7 @@ const VerticalFlexingList = styled.ul`
 		width: auto;
 	}
 
-	${LinkBarDropdown} ~ div & {
+	${LinkBarDropdown} ~ div > & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
 		min-width: calc(14 * ${getVariable('horizontalBase')});
