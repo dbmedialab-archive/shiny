@@ -9,4 +9,18 @@ const Hamburger = props => (
 	</svg>
 );
 
-export default styled(Hamburger)``;
+export default styled(Hamburger)`
+	&& {
+		*[aria-expanded='true'] {
+			& rect:nth-child(1) {
+				transform: rotate(45deg) scale(1.17, 1) translateY(-2.5px) translateX(2.5px);
+			}
+			& rect:nth-child(2) {
+				transform: scale(0.2, 1) translateX(47px);
+			}
+			& rect:nth-child(3) {
+				transform: rotate(-45deg) scale(1.17, 1) translateY(-4px) translateX(-11.5px);
+			}
+		}
+	}
+`;
