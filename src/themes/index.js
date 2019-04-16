@@ -6,6 +6,7 @@ import dagbladet from './dagbladet';
 import dagbladetDark from './dagbladet-dark';
 import dinside from './dinside';
 import elbil24 from './elbil24';
+import elbil24Dark from './elbil24-dark';
 import kk from './kk';
 import mat from './mat';
 import seher from './seher';
@@ -25,6 +26,7 @@ const themes = {
 	dagbladetDark,
 	dinside,
 	elbil24,
+	elbil24Dark,
 	kk,
 	seher,
 	sol,
