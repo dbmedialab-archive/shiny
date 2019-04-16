@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { getColor } from '../../utils';
 
 const Hamburger = props => (
 	<svg width="100%" height="100%" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -11,6 +12,9 @@ const Hamburger = props => (
 
 export default styled(Hamburger)`
 	&& {
+		rect {
+			fill: ${props => getColor(props.color)(props)};
+		}
 		*[aria-expanded='true'] {
 			& rect {
 				transition: .1s transform;

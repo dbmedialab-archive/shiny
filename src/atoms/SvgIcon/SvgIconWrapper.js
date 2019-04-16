@@ -12,7 +12,7 @@ const SvgIconWrapper = styled.div`
 
  	${props => props.color && `
 		svg{
-			path, rect {
+			path {
 				fill: ${getColor(props.color)(props)};
 			}
 			stroke: ${getColor(props.color)(props)}
