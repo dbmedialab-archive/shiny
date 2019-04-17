@@ -10,6 +10,7 @@ const icons = {
 	'nut': () => import('./Nut'),
 	'fish': () => import('./Fish'),
 	'gluten': () => import('./Gluten'),
+	'hamburger': () => import('./Hamburger'),
 	'pork': () => import('./Pork'),
 	'total-time': () => import('./TotalTime'),
 	'vegan': () => import('./Vegan'),
