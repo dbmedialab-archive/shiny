@@ -12,6 +12,8 @@ import {
 	SmallLinkBarDropdown,
 	LargeLinkBarDropdown,
 	VerticalLinkBar,
+	LinkBarButton,
+	SvgIcon,
 } from '../../src';
 
 import { DemoContainer } from '../storybook-components';
@@ -20,6 +22,7 @@ const CustomTrigger = ({ onClick, className }) => (
 	<button type="button" onClick={onClick} className={className}>This dropdown has custom trigger</button>
 );
 
+
 CustomTrigger.displayName = 'CustomTrigger';
 
 CustomTrigger.propTypes = {
@@ -27,6 +30,12 @@ CustomTrigger.propTypes = {
 	className: PropTypes.string.isRequired,
 };
 
+const CustomTriggerWithMenuButton = ({ hide, ...rest }) => (
+	<LinkBarButton {...rest}>
+		This Trigger has SvgIcon `hamburger` <SvgIcon name="hamburger" size={2} opened={!hide} />
+	</LinkBarButton>
+);
+CustomTriggerWithMenuButton.propTypes = { hide: PropTypes.bool.isRequired };
 const DropdownStory = () => {
 	return (
 		<section>
@@ -51,6 +60,12 @@ const DropdownStory = () => {
 						</VerticalLinkBar>
 					</SmallLinkBarDropdown>
 					<SmallLinkBarDropdown Trigger={CustomTrigger} displayInitially>
+						<VerticalLinkBar backgroundColor="white">
+							<LinkBarLink linkText="One" url="https://example.com" isActive />
+							<LinkBarLink linkText="Two" url="https://example.com" />
+						</VerticalLinkBar>
+					</SmallLinkBarDropdown>
+					<SmallLinkBarDropdown Trigger={CustomTriggerWithMenuButton} displayInitially>
 						<VerticalLinkBar backgroundColor="white">
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
 							<LinkBarLink linkText="Two" url="https://example.com" />
