@@ -12,7 +12,7 @@ const Svg = styled.svg`
 	}
 
 	& .secondary {
-		fill: ${props => (props.pro ?getColor('secondary') : getColor('primary'))}
+		fill: ${props => (props.pro ?getColor('secondary') : getColor('white'))}
 	}
 `;
 
