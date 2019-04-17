@@ -39,7 +39,8 @@ const MenuLayer = styled.div`
 			rgba(0, 0, 0, 0.4) 0%,
 			rgba(229, 229, 229, 0) 100%
 		);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00e5e5e5',GradientType=0 );
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00e5e5e5',
+		GradientType=0 );
 	}
 	animation: fadeSlideDown 0.2s;
 	@keyframes fadeSlideDown {
