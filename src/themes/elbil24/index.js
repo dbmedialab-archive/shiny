@@ -3,8 +3,8 @@ import { cssReset } from '../../utils/css-reset';
 import colors from './colors';
 
 const variables = {
-	mainFont: "'Open Sans', helvetica, arial, sans-serif",
-	headingsFont: "'Open Sans', helvetica, arial, sans-serif",
+	mainFont: "'Barlow', helvetica, arial, sans-serif",
+	headingsFont: "'Barlow', helvetica, arial, sans-serif",
 };
 
 const global = `
