@@ -14,20 +14,26 @@ const Story = () => {
 			<HorizontalLinkBar>
 				<LinkBarDropdown linkText="Under Button" url="https://example.com">
 					<MenuLayer left="inherit" backgroundColor="primary">
-						<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
-						<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
+						<HorizontalLinkBar backgroundColor="primary">
+							<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
+							<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
+						</HorizontalLinkBar>
 					</MenuLayer>
 				</LinkBarDropdown>
 				<LinkBarDropdown linkText="Full width" url="https://example.com">
 					<MenuLayer backgroundColor="primary">
-						<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
-						<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
+						<HorizontalLinkBar backgroundColor="primary">
+							<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
+							<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
+						</HorizontalLinkBar>
 					</MenuLayer>
 				</LinkBarDropdown>
 				<LinkBarDropdown linkText="On the right side" url="https://example.com">
 					<MenuLayer width="auto" left="inherit" right="0" backgroundColor="primaryLighter">
-						<LinkBarLink useUnderline={false} linkText="One" url="https://example.com" isActive />
-						<LinkBarLink useUnderline={false} linkText="Two" url="https://example.com" />
+						<HorizontalLinkBar backgroundColor="primary">
+							<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
+							<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
+						</HorizontalLinkBar>
 					</MenuLayer>
 				</LinkBarDropdown>
 			</HorizontalLinkBar>
