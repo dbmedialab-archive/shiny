@@ -12,29 +12,41 @@ const CenteredContent = styled.div`
 `;
 
 const StyledLine = styled.div`
-	width: 80%;
-	border-bottom: 0.1rem solid ${getColor('primary')};
+${props => css`
+	width: ${props.lineWidth};
+	border-bottom: ${props.lineHeight}rem solid ${getColor(props.lineColor)(props)};
+	text-transform: ${props.ALLCAPS ? 'uppercase' : 'initial'};
 	margin-left: auto;
 	margin-right: auto;
-	${props => props.thick && css`border-width: .2rem`}
 	@media only screen
-	 and (min-width: ${props => props.theme.flexboxgrid.breakpoints.xs}em)
-	 and (max-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
-        border-bottom: none;
+	and (min-width: ${props.theme.flexboxgrid.breakpoints.xs}em)
+	and (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+		border-bottom: none;
+	}`
 }
 `;
 
-const UnderlinedHeading = ({ size, ...rest }) => (
+const UnderlinedHeading = ({
+	size, lineWidth, ALLCAPS, lineHeight, lineColor, ...rest
+}) => (
 	<CenteredContent>
-		<Heading size={size} {...rest} />
-		<StyledLine />
+		<Heading size={size} ALLCAPS={ALLCAPS} {...rest} />
+		<StyledLine lineWidth={lineWidth} lineHeight={lineHeight} lineColor={lineColor} />
 	</CenteredContent>
 );
 UnderlinedHeading.propTypes = {
 	size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge', 'huge']),
+	lineWidth: PropTypes.string,
+	lineHeight: PropTypes.string,
+	lineColor: PropTypes.string,
+	ALLCAPS: PropTypes.bool,
 };
 UnderlinedHeading.defaultProps = {
 	size: 'large',
+	lineWidth: '80%',
+	lineHeight: '0.1',
+	lineColor: 'primary',
+	ALLCAPS: false,
 };
 
 export { UnderlinedHeading };
