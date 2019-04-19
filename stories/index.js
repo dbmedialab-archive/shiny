@@ -12,6 +12,7 @@ import forms from './forms';
 import images from './Images';
 import footers from './footers';
 import articles from './article';
+import interactive from './interactive';
 import webAppComponents from './web-app-components';
 
 // Everything's shiny
@@ -48,3 +49,6 @@ footers();
 
 // Ads
 ads();
+
+// Interactive components
+interactive();

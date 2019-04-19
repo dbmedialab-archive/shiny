@@ -163,6 +163,7 @@ export {
 }                                  from './atoms/UnderlinedHeading';
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
+export { Voter				     } from './atoms/Voter';
 export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
 export { Truncate            	 } from './atoms/Truncate';
 export { Dot	            	 } from './atoms/Dot';

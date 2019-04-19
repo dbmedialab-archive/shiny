@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Nut = props => (
-	<svg width="100%" height="100%" viewBox="-7 -10 50 50">
+	<svg width="100%" height="100%" viewBox="-7 -10 50 50" {...props}>
 		{/* eslint-disable max-len */}
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g id="info/allergi/nøtter" fill="#333333">
