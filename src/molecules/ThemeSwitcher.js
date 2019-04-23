@@ -121,6 +121,14 @@ class ThemeSwitcher extends React.Component {
 					<Button
 						textColor={colors.skinColors.splashText}
 						onClick={e => this.handleButtonClick(e)}
+						isActive={selected === 'elbil24Dark'}
+						value="elbil24Dark"
+					>
+						Elbil24 Dark
+					</Button>
+					<Button
+						textColor={colors.skinColors.splashText}
+						onClick={e => this.handleButtonClick(e)}
 						isActive={selected === 'kk'}
 						value="kk"
 					>

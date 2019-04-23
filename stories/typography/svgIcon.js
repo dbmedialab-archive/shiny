@@ -179,6 +179,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText name="oppskrift-mobile-logo" text="oppskrift-mobile-logo" iconSize={5} />
 			</Col>
+			<Col xs={2}>
+				<IconWithText color="primary" name="hamburger" text="hamburger" iconSize={5} />
+			</Col>
 		</Row>
 	</section>
 );

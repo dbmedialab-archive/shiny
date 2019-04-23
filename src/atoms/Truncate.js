@@ -7,10 +7,7 @@ export const Truncate = styled.span`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: calc(${getVariable('horizontalBase')} * 15);
-	@media screen and (max-width: ${({ theme }) => theme.flexboxgrid.breakpoints.sm}rem) {
-		max-width: calc(${getVariable('horizontalBase')} * 10);
-	}
-	@media screen and (max-width: ${({ theme }) => theme.flexboxgrid.breakpoints.xs}rem) {
+	@media screen and (max-width: 27rem) {
 		max-width: calc(${getVariable('horizontalBase')} * 5);
 	}
 `;

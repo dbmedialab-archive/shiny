@@ -22,6 +22,7 @@ const colors = {
 	skinColors: {
 		splashBackground: 'white',
 		splashText: 'primary',
+		background: 'white',
 
 		calmBackground: 'white',
 		calmBorder: 'primary',

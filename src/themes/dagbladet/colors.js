@@ -45,7 +45,7 @@ const colors = {
 
 	...combinedShadedColors,
 
-	primaryDark: '#bd0000', // redefine shaded color primaryDark
+	primaryDark: '#ab0000', // redefine shaded color primaryDark
 
 	skinColors: {
 		background: 'white',
