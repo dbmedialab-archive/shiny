@@ -27,7 +27,7 @@ export default () => (
 				<Dot size="large" color="primaryLighter" />
 				<Dot size="small" color="primaryDark" />
 				<Dot size="xsmall" color="secondaryLight" />
-				<Dot size="not correct size" color="secondaryLighter" />
+				<Dot color="secondaryLighter" />
 				<Dot size="large" color="secondaryDark" />
 				<Dot color="secondary" />
 			</Row>

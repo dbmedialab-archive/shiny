@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { SvgIcon } from './SvgIcon';
+import { RatingSymbol } from './RatingSymbol';
 
-const StyledSvgIcon = styled(SvgIcon)``;
+const StyledRatingSymbol = styled(RatingSymbol)``;
 const Container = styled.div`
 	display: flex;
 	flex-direction: ${({ direction }) => direction};
-	${StyledSvgIcon} {
-		& :hover {
-			cursor: pointer;
-		}
-	}
+	position: ${({ position }) => position || 'static'};
 }`;
 
 export class Voter extends Component {
@@ -59,21 +55,30 @@ export class Voter extends Component {
 			maxValue, editable, icon: name, primaryColor, secondaryColor, direction,
 		} = this.props;
 		const elements = [];
-		for (let i = 0; i < maxValue; i += 1) {
+		for (let key = 0; key < maxValue; key += 1) {
+			let percent = 100;
+			const diff = value - key;
+			if (diff < 1 && diff > 0) {
+				percent = diff * 100;
+			} else if (diff < 0) {
+				percent = 0;
+			}
 			elements.push({
-				key: i,
+				key,
 				name,
-				color: value > i ? primaryColor : secondaryColor,
+				editable,
+				color: value > key ? primaryColor : secondaryColor,
+				percent,
+				// eslint-disable-next-line no-loop-func
+				onClick: () => editable && this.onChange(key),
 			});
 		}
 		return (
 			<Container direction={direction}>
-				{elements.map((props, key) => (
-					<StyledSvgIcon
-						{...props}
-						onClick={() => editable && this.onChange(key)}
-					/>
-				))}
+				{elements.map(props => <StyledRatingSymbol {...props} color={secondaryColor} percent={100} />)}
+				<Container direction={direction} position="absolute">
+					{elements.map(props => <StyledRatingSymbol {...props} />)}
+				</Container>
 			</Container>
 		);
 	}
