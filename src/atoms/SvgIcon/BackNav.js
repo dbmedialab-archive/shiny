@@ -6,7 +6,6 @@ const BackNavIcon = (props) => {
 	/* eslint-disable max-len */
 	return (
 		<svg width="100%" height="100%" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg">
-			<title>Back</title>
 			<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g transform="translate(-1217.000000, -27.000000)" fill={color}>
 					<path
