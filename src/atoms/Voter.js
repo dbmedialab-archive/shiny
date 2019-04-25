@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { RatingSymbol } from './RatingSymbol';
 
-const StyledRatingSymbol = styled(RatingSymbol)``;
 const Container = styled.div`
 	display: flex;
 	flex-direction: ${({ direction }) => direction};
@@ -12,25 +11,29 @@ const Container = styled.div`
 
 export class Voter extends Component {
 	static propTypes = {
-		value: PropTypes.number,
-		maxValue: PropTypes.number,
-		editable: PropTypes.bool,
-		onChange: PropTypes.func,
-		primaryColor: PropTypes.string,
-		secondaryColor: PropTypes.string,
-		icon: PropTypes.string,
-		direction: PropTypes.string,
+		'value': PropTypes.number,
+		'maxValue': PropTypes.number,
+		'editable': PropTypes.bool,
+		'onChange': PropTypes.func,
+		'primaryColor': PropTypes.string,
+		'secondaryColor': PropTypes.string,
+		'icon': PropTypes.string,
+		'direction': PropTypes.string,
+		'size': PropTypes.number,
+		'size-sm': PropTypes.number,
 	}
 
 	static defaultProps = {
-		value: 0,
-		maxValue: 5,
-		editable: true,
-		onChange: value => value,
-		primaryColor: 'primary',
-		secondaryColor: 'secondary',
-		icon: 'star',
-		direction: 'row',
+		'value': 0,
+		'maxValue': 5,
+		'editable': true,
+		'onChange': value => value,
+		'primaryColor': 'primary',
+		'secondaryColor': 'secondary',
+		'icon': 'star',
+		'direction': 'row',
+		'size': 3.2,
+		'size-sm': null,
 	}
 
 	constructor(props) {
@@ -52,7 +55,7 @@ export class Voter extends Component {
 	render() {
 		const { value } = this.state;
 		const {
-			maxValue, editable, icon: name, primaryColor, secondaryColor, direction,
+			maxValue, editable, icon: name, primaryColor, secondaryColor, direction, size, 'size-sm': sizeSm,
 		} = this.props;
 		const elements = [];
 		for (let key = 0; key < maxValue; key += 1) {
@@ -67,17 +70,20 @@ export class Voter extends Component {
 				key,
 				name,
 				editable,
-				color: value > key ? primaryColor : secondaryColor,
+				direction,
 				percent,
+				size,
+				'color': value > key ? primaryColor : secondaryColor,
+				'size-sm': sizeSm,
 				// eslint-disable-next-line no-loop-func
-				onClick: () => editable && this.onChange(key),
+				'onClick': () => editable && this.onChange(key),
 			});
 		}
 		return (
 			<Container direction={direction}>
-				{elements.map(props => <StyledRatingSymbol {...props} color={secondaryColor} percent={100} />)}
+				{elements.map(props => <RatingSymbol {...props} color={secondaryColor} percent={100} />)}
 				<Container direction={direction} position="absolute">
-					{elements.map(props => <StyledRatingSymbol {...props} />)}
+					{elements.map(props => <RatingSymbol {...props} />)}
 				</Container>
 			</Container>
 		);

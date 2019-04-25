@@ -4,9 +4,24 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { SvgIcon } from './SvgIcon';
 
+const direction = ({ direction }) => {
+	switch (direction) {
+	case 'column-reverse': return 'rotate(270deg)';
+	case 'column': return 'rotate(90deg)';
+	case 'row-reverse': return 'scale(-1, 1)';
+	default: return 'rotate(0deg)';
+	}
+};
+
 const Container = styled.span`
 	cursor: ${({ editable }) => (editable ? 'pointer' : 'inherit')};
 	display: inline-block;
+	transform:${direction};
+	width: ${props => props.size}rem;
+	${props => (props['size-sm'] && `
+	@media (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
+		width: ${props['size-sm']}rem;
+ 	}`)}
 `;
 
 const FilledContainer = styled.span`
@@ -22,6 +37,7 @@ class RatingSymbol extends React.PureComponent {
 			percent,
 			onClick,
 			editable,
+			direction,
 			...props
 		} = this.props;
 
@@ -34,8 +50,12 @@ class RatingSymbol extends React.PureComponent {
 
 		return (
 			<Container
+				direction={direction}
+				role="button"
 				editable={editable}
 				onClick={handleMouseClick}
+				size={props.size}
+				size-sm={props['size-sm']}
 			>
 				<FilledContainer percent={percent}>
 					<SvgIcon
@@ -47,12 +67,18 @@ class RatingSymbol extends React.PureComponent {
 	}
 }
 RatingSymbol.propTypes = {
-	editable: PropTypes.bool.isRequired,
-	percent: PropTypes.number.isRequired,
-	onClick: PropTypes.func,
+	'editable': PropTypes.bool.isRequired,
+	'percent': PropTypes.number.isRequired,
+	'onClick': PropTypes.func,
+	'direction': PropTypes.string,
+	'size': PropTypes.number,
+	'size-sm': PropTypes.number,
 };
 
 RatingSymbol.defaultProps = {
-	onClick: () => undefined,
+	'direction': 'row',
+	'onClick': () => undefined,
+	'size': 3.2,
+	'size-sm': null,
 };
 export { RatingSymbol };
