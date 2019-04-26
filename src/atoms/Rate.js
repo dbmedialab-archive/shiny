@@ -9,7 +9,7 @@ const Container = styled.div`
 	position: ${({ position }) => position || 'static'};
 }`;
 
-export class Voter extends Component {
+export class Rate extends Component {
 	static propTypes = {
 		'value': PropTypes.number,
 		'maxValue': PropTypes.number,
