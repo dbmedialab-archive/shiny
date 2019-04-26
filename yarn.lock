@@ -8263,10 +8263,10 @@ react-inspector@^2.3.1:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
-react-intersection-observer@8.22.5:
-  version "8.22.5"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.22.5.tgz#831a7a4d6a470c428fff40a9da6d947141979776"
-  integrity sha512-iVPLXpg2tPIuKTyFodK+QZlNtLv5XC89yzzsWwTsPIPGOhbbbabo9RhNeUypc+miq5Iri+35/eRrSYGUl/79bA==
+react-intersection-observer@8.22.6:
+  version "8.22.6"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.22.6.tgz#b03ad27a612bdbb5510f5fd21e997bdfc012d784"
+  integrity sha512-xhQK9jqU4yUUCQPne4rXt21ExnWTpbC3fhXlJlWOchFH2S9kaf0CJU5pTyCds2HKs43QE1+y4sGkBAoktnpdGg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     invariant "^2.0.0"
