@@ -8,6 +8,7 @@ import { MatStory } from './MatStory';
 import { KKStory } from './KKStory';
 import { DagbladetStory } from './DagbladetStory';
 import { Elbil24Story } from './Elbil24Story';
+import { UserDropDownExample } from './UserDropDown';
 
 export default () => {
 	storiesOf('Link Bars|Complete Link Bar Examples', module)
@@ -16,5 +17,6 @@ export default () => {
 		.add('SeHer-like bar', SeHerStory)
 		.add('SeHer menu remake', SeHerMenuRemake)
 		.add('Elbil24-like bar', Elbil24Story)
+		.add('user drop down', UserDropDownExample)
 		.add('MatStory link bar', MatStory);
 };
