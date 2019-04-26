@@ -21,7 +21,7 @@ const Story = () => {
 					</MenuLayer>
 				</LinkBarDropdown>
 				<LinkBarDropdown linkText="Full width" url="https://example.com">
-					<MenuLayer backgroundColor="primary">
+					<MenuLayer left={0} backgroundColor="primary">
 						<HorizontalLinkBar backgroundColor="primary">
 							<LinkBarLink useUnderline={false} textColor="white" linkText="One" url="https://example.com" isActive />
 							<LinkBarLink useUnderline={false} textColor="white" linkText="Two" url="https://example.com" />
