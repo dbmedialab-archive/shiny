@@ -39,6 +39,7 @@ const icons = {
 	'dagbladetVideo': () => import('./DagbladetVideo'),
 	'backNav': () => import('./BackNav'),
 	'not-found': () => import('./NotFound'),
+	'gears': () => import('./gears'),
 	'default': () => <div />,
 };
 

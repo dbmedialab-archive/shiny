@@ -31,6 +31,7 @@ export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { DinsideLogo             } from './atoms/DinsideLogo';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
+export { GearsLoader 			 } from './atoms/loaders/GearsLoader';
 export { Dropdown                } from './atoms/Dropdown';
 export {
 	DymoHeading,
