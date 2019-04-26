@@ -16,7 +16,6 @@ export default () => (
 	<section>
 		<HugeHeading>Truncate</HugeHeading>
 		<Paragraph>Simple component for Truncating text</Paragraph>
-		<Paragraph>Max-width based on theme variable "horizontalBase"</Paragraph>
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<Row between="xs">
@@ -120,7 +119,13 @@ export default () => (
 					Nam fringilla vitae sapien et euismod.
 					Donec viverra consectetur justo et luctus.
 				</Truncate>
-				<Truncate>
+				<Truncate
+					maxWidth="10rem"
+					custom={[
+						{ screenWidth: '72.8rem', maxWidth: '6rem' },
+						{ screenWidth: '44rem', maxWidth: '4rem' },
+					]}
+				>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Nullam in quam nec enim congue convallis eu nec odio.
 					Integer faucibus id neque nec suscipit.
@@ -134,7 +139,7 @@ export default () => (
 					Nam fringilla vitae sapien et euismod.
 					Donec viverra consectetur justo et luctus.
 				</Truncate>
-				<Truncate>
+				<Truncate maxWidth="25rem">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Nullam in quam nec enim congue convallis eu nec odio.
 					Integer faucibus id neque nec suscipit.
