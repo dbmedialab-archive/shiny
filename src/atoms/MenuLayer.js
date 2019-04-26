@@ -4,31 +4,33 @@ import { getColor, getVariable } from '../utils';
 
 const getBackgroundColor = ({ backgroundColor }) => getColor(backgroundColor);
 const MenuLayer = styled.div`
-	display: block;
-	margin: 0;
-	padding: 0;
-	font-family: ${getVariable('mainFont')};
-	background: ${getBackgroundColor};
-	position: fixed;
-	left: ${({ left }) => left || 0};
-	right: ${({ right }) => right || 'inherit'};
-	top: ${({ top }) => top || 'inherit'};
-	bottom: ${({ bottom }) => bottom || 'inherit'};
-	box-shadow: 0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4);
-	width: ${({ width }) => width};
-	justify-content: space-between;
-	animation: fadeSlideDown 0.2s;
-	@keyframes fadeSlideDown {
-		0% {
-			display: block;
-			opacity: 0;
-			transform: translateY(1rem);
-		}
-		10% {
-			opacity: 0.25;
-		}
-		100% {
-			opacity: 1;
+	&& {
+		display: block;
+		margin: 0;
+		padding: 0;
+		font-family: ${getVariable('mainFont')};
+		background: ${getBackgroundColor};
+		position: fixed;
+		left: ${({ left }) => left};
+		right: ${({ right }) => right};
+		top: ${({ top }) => top};
+		bottom: ${({ bottom }) => bottom};
+		box-shadow: 0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4);
+		width: ${({ width }) => width};
+		justify-content: space-between;
+		animation: fadeSlideDown 0.2s;
+		@keyframes fadeSlideDown {
+			0% {
+				display: block;
+				opacity: 0;
+				transform: translateY(1rem);
+			}
+			10% {
+				opacity: 0.25;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 	}
 `;
@@ -51,7 +53,7 @@ MenuLayer.propTypes = {
 MenuLayer.defaultProps = {
 	backgroundColor: 'primary',
 	width: '100%',
-	left: 0,
+	left: 'inherit',
 	right: 'inherit',
 	top: 'inherit',
 	bottom: 'inherit',
