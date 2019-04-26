@@ -7,6 +7,7 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: ${({ direction }) => direction};
 	position: ${({ position }) => position || 'static'};
+	cursor: ${({ editable }) => (editable ? 'pointer' : 'inherit')};
 }`;
 
 export class Rate extends Component {
@@ -39,21 +40,28 @@ export class Rate extends Component {
 	constructor(props) {
 		super(props);
 		const { value } = props;
-		this.state = { value };
+		this.state = { value, current: 0 };
 	}
 
-	onChange = (val) => {
-		const newValue = val + 1;
+	onChange = (newValue) => {
+		const { editable } = this.props;
 		const { value } = this.state;
-		if (value !== newValue) {
+		if (value !== newValue && editable) {
 			const { onChange } = this.props;
 			onChange(newValue);
 			this.setState({ value: newValue });
 		}
 	}
 
+	onMouseMove = (current) => {
+		const { editable } = this.props;
+		editable && this.setState({ current });
+	};
+
+	onMouseLeave = () => this.setState({ current: 0 });
+
 	render() {
-		const { value } = this.state;
+		const { value, current } = this.state;
 		const {
 			maxValue, editable, icon: name, primaryColor, secondaryColor, direction, size, 'size-sm': sizeSm,
 		} = this.props;
@@ -66,6 +74,9 @@ export class Rate extends Component {
 			} else if (diff < 0) {
 				percent = 0;
 			}
+			if (key < current) {
+				percent = 100;
+			}
 			elements.push({
 				key,
 				name,
@@ -73,17 +84,21 @@ export class Rate extends Component {
 				direction,
 				percent,
 				size,
-				'color': value > key ? primaryColor : secondaryColor,
+				'onMouseMove': () => this.onMouseMove(key + 1),
 				'size-sm': sizeSm,
 				// eslint-disable-next-line no-loop-func
-				'onClick': () => editable && this.onChange(key),
+				'onClick': () => this.onChange(key + 1),
 			});
 		}
 		return (
 			<Container direction={direction}>
 				{elements.map(props => <RatingSymbol {...props} color={secondaryColor} percent={100} />)}
 				<Container direction={direction} position="absolute">
-					{elements.map(props => <RatingSymbol {...props} />)}
+					{elements.map(
+						props => (
+							props.key < value || props.key < current
+						) && <RatingSymbol color={primaryColor} onMouseLeave={this.onMouseLeave} {...props} />
+					)}
 				</Container>
 			</Container>
 		);

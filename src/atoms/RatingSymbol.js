@@ -38,6 +38,8 @@ class RatingSymbol extends React.PureComponent {
 			onClick,
 			editable,
 			direction,
+			onMouseLeave,
+			onMouseMove,
 			...props
 		} = this.props;
 
@@ -54,6 +56,8 @@ class RatingSymbol extends React.PureComponent {
 				role="button"
 				editable={editable}
 				onClick={handleMouseClick}
+				onMouseMove={onMouseMove}
+				onMouseLeave={onMouseLeave}
 				size={props.size}
 				size-sm={props['size-sm']}
 			>
@@ -70,6 +74,8 @@ RatingSymbol.propTypes = {
 	'editable': PropTypes.bool.isRequired,
 	'percent': PropTypes.number.isRequired,
 	'onClick': PropTypes.func,
+	'onMouseLeave': PropTypes.func,
+	'onMouseMove': PropTypes.func,
 	'direction': PropTypes.string,
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
@@ -78,6 +84,8 @@ RatingSymbol.propTypes = {
 RatingSymbol.defaultProps = {
 	'direction': 'row',
 	'onClick': () => undefined,
+	'onMouseLeave': () => undefined,
+	'onMouseMove': () => undefined,
 	'size': 3.2,
 	'size-sm': null,
 };
