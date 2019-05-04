@@ -46,20 +46,18 @@ const VerticalFlexingList = styled.ul`
 				}
 			}
 		`}
-		${({ hideArrow }) => !hideArrow && css`
-			::before {
-				content: '';
-				display: block;
-				width: ${getVariable('verticalBase')};
-				height: ${getVariable('verticalBase')};
-				background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
-				position: absolute;
-				top: 0;
-				left:  ${props => (props.align === 'left'  ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
-				right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
-				transform: rotate(45deg);
-			}
-		`}
+		::before {
+			content: '';
+			display: ${({ hideArrow }) => (hideArrow? 'none' : 'block')};
+			width: ${getVariable('verticalBase')};
+			height: ${getVariable('verticalBase')};
+			background: ${props => (props.backgroundColor ? getColor(props.backgroundColor) : props.background)};
+			position: absolute;
+			top: 0;
+			left:  ${props => (props.align === 'left'  ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
+			right: ${props => (props.align === 'right' ? `calc(1/4 * ${props.theme.variables.verticalBase})` : 'initial')};
+			transform: rotate(45deg);
+		}
 	}
 `;
 VerticalFlexingList.propTypes = {
