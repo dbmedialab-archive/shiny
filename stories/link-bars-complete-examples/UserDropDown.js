@@ -42,7 +42,7 @@ const UserDropDownExample = () => (
 				>
 					<MenuLayer width="25rem">
 						<UserDropDown
-							fontSize="uiSmallSize"
+							uiSize="small"
 							position="static"
 							user={{ name: 'User Name' }}
 						/>
@@ -57,7 +57,7 @@ const UserDropDownExample = () => (
 				>
 					<MenuLayer width="20rem">
 						<UserDropDown
-							fontSize="uiTinySize"
+							uiSize="tiny"
 							position="static"
 							user={{ name: 'User Name' }}
 						/>
@@ -94,7 +94,7 @@ const UserDropDownExample = () => (
 				>
 					<MenuLayer width="25rem">
 						<UserDropDown
-							fontSize="uiSmallSize"
+							uiSize="small"
 							position="static"
 							user={{ name: 'User Name' }}
 						/>
@@ -109,7 +109,7 @@ const UserDropDownExample = () => (
 				>
 					<MenuLayer width="20rem">
 						<UserDropDown
-							fontSize="uiTinySize"
+							uiSize="tiny"
 							position="static"
 							user={{ name: 'User Name' }}
 						/>
