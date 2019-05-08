@@ -8,15 +8,29 @@ import { getVariable } from '../utils/get-variable';
 import { VerticalLinkBar } from '../molecules/VerticalLinkBar';
 import { getColor } from '../utils/get-color';
 
+const getFontLineSize = (fontSize) => {
+	switch (fontSize) {
+	case 'small':
+		return { fontSize: 'uiSmallSize', lineHeight: 'uiSmallLineHeight' };
+	case 'tiny':
+		return { fontSize: 'uiTinySize', lineHeight: 'uiTinyLineHeight' };
+	case 'regular':
+	default:
+		return { fontSize: 'uiRegularSize', lineHeight: 'uiRegularLineHeight' };
+	}
+};
+
 const LinkBarButtonProfile = styled(LinkBarLink)`
 	${(props) => {
-		const { secondary } = props;
+		const { secondary, fontSize, lineHeight } = props;
 		const background = secondary ? getColor('secondary')(props) : 'transparent';
 		return css`
 			&& {
 				background: ${background};
 				text-align: center;
 				font-weight: ${getVariable('uiWeightBold')(props)};
+				font-size: ${getVariable(fontSize)(props)};
+				line-height: ${getVariable(lineHeight)(props)};
 				& :hover {
 					background: ${getColor('grayTint')(props)};
 				}
@@ -47,6 +61,8 @@ const linkProps = {
 
 const StyledText = styled(LinkBarHeading)`
 	&& {
+		font-size: ${({ fontSize, ...rest }) => getVariable(fontSize)(rest)};
+		line-height: ${({ lineHeight, ...rest }) => getVariable(lineHeight)(rest)};
 		padding: 0;
 	}
 `;
@@ -68,28 +84,42 @@ const SpanWithAIDIcon = styled.span`
 		transform: translate(120%, -25%);
 	}
 `;
-const UserDropDown = ({ user, ...rest }) => (
-	<StyledVerticalLinkBar boxShadow="0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4)" {...rest} background="white">
-		<StyledText marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
-			{user.name}
-		</StyledText>
-		<LinkBarButtonProfile
-			secondary
-			{...linkProps}
-			linkText="Min Side"
-			url="//www.dagbladet.no/app/minside-front"
-		/>
-		<LinkBarButtonProfile {...linkProps} url="//www.dagbladet.no/app/dug/v1/client/logout">
-			<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
-		</LinkBarButtonProfile>
-	</StyledVerticalLinkBar>
-);
+const UserDropDown = ({ user, uiSize, ...rest }) => {
+	const { fontSize, lineHeight } = getFontLineSize(uiSize);
+	return (
+		<StyledVerticalLinkBar boxShadow="0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4)" {...rest} background="white">
+			<StyledText fontSize={fontSize} lineHeight={lineHeight} marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
+				{user.name}
+			</StyledText>
+			<LinkBarButtonProfile
+				secondary
+				{...linkProps}
+				lineHeight={lineHeight}
+				fontSize={fontSize}
+				linkText="Min Side"
+				url="//www.dagbladet.no/app/minside-front"
+			/>
+			<LinkBarButtonProfile
+				{...linkProps}
+				lineHeight={lineHeight}
+				fontSize={fontSize}
+				url="//www.dagbladet.no/app/dug/v1/client/logout"
+			>
+				<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
+			</LinkBarButtonProfile>
+		</StyledVerticalLinkBar>
+	);
+};
 
 UserDropDown.propTypes = {
 	user: PropTypes.shape({
 		user_id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 		name: PropTypes.string.isRequired,
 	}).isRequired,
+	uiSize: PropTypes.oneOf(['small', 'regular', 'tiny']),
+};
+UserDropDown.defaultProps = {
+	uiSize: 'regular',
 };
 
 export default styled(UserDropDown)``;

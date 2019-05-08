@@ -17,6 +17,6 @@ export default () => {
 		.add('SeHer-like bar', SeHerStory)
 		.add('SeHer menu remake', SeHerMenuRemake)
 		.add('Elbil24-like bar', Elbil24Story)
-		.add('user drop down', UserDropDownExample)
+		.add('User Drop Down', UserDropDownExample)
 		.add('MatStory link bar', MatStory);
 };
