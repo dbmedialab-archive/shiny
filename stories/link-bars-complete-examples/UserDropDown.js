@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import {
 	HorizontalLinkBar,
 	LinkBarDropdown,
+	MenuLayer,
 	Heading,
 	HugeHeading,
 	Paragraph,
@@ -24,7 +25,7 @@ const StyledHorizontalLinkBar = styled(HorizontalLinkBar)`
 const UserDropDownExample = () => (
 	<section>
 		<HugeHeading>User Dropdown Example</HugeHeading>
-		<Paragraph>Position fixed, configurable by props: left, right, top, bottom</Paragraph>
+		<Paragraph>ManuLayer has position fixed, configurable by props: left, right, top, bottom</Paragraph>
 		<Heading>Demo</Heading>
 		<DemoContainer>
 			<StyledHorizontalLinkBar
@@ -34,11 +35,33 @@ const UserDropDownExample = () => (
 			>
 				<LinkBarDropdown
 					{...linkProps}
+					isListItem
 					textColor="white"
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown fontSize="uiSmallSize" user={{ name: 'User Name' }} />
+					<MenuLayer width="25rem">
+						<UserDropDown
+							fontSize="uiSmallSize"
+							position="static"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
+				</LinkBarDropdown>
+				<LinkBarDropdown
+					{...linkProps}
+					isListItem
+					textColor="white"
+					activeTextColor="white"
+					linkText={'Test dropddown'}
+				>
+					<MenuLayer width="20rem">
+						<UserDropDown
+							fontSize="uiTinySize"
+							position="static"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
 				</LinkBarDropdown>
 				<LinkBarDropdown
 					{...linkProps}
@@ -46,7 +69,12 @@ const UserDropDownExample = () => (
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown user={{ name: 'User Name' }} />
+					<MenuLayer right={0} width="30rem">
+						<UserDropDown
+							align="right"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
 				</LinkBarDropdown>
 			</StyledHorizontalLinkBar>
 		</DemoContainer>
@@ -59,11 +87,33 @@ const UserDropDownExample = () => (
 			>
 				<LinkBarDropdown
 					{...linkProps}
+					isListItem
 					textColor="white"
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown fontSize="uiSmallSize" user={{ name: 'User Name' }} />
+					<MenuLayer width="25rem">
+						<UserDropDown
+							fontSize="uiSmallSize"
+							position="static"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
+				</LinkBarDropdown>
+				<LinkBarDropdown
+					{...linkProps}
+					isListItem
+					textColor="white"
+					activeTextColor="white"
+					linkText={'Test dropddown'}
+				>
+					<MenuLayer width="20rem">
+						<UserDropDown
+							fontSize="uiTinySize"
+							position="static"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
 				</LinkBarDropdown>
 				<LinkBarDropdown
 					{...linkProps}
@@ -71,7 +121,12 @@ const UserDropDownExample = () => (
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown user={{ name: 'User Name' }} />
+					<MenuLayer right={0} width="30rem">
+						<UserDropDown
+							align="right"
+							user={{ name: 'User Name' }}
+						/>
+					</MenuLayer>
 				</LinkBarDropdown>
 			</StyledHorizontalLinkBar>
 			`}
