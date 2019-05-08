@@ -12,7 +12,7 @@ const variables = {
 	uiRegularLineHeight: '2.4rem',
 	uiSmallSize: '1.4rem',
 	uiSmallLineHeight: '1.6rem',
-}
+};
 
 const global = `
 	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
