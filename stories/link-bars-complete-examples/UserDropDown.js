@@ -38,7 +38,7 @@ const UserDropDownExample = () => (
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown user={{ name: 'User Name' }} />
+					<UserDropDown fontSize="uiSmallSize" user={{ name: 'User Name' }} />
 				</LinkBarDropdown>
 				<LinkBarDropdown
 					{...linkProps}
@@ -46,27 +46,34 @@ const UserDropDownExample = () => (
 					activeTextColor="white"
 					linkText={'Test dropddown'}
 				>
-					<UserDropDown right={0} user={{ name: 'User Name' }} />
+					<UserDropDown user={{ name: 'User Name' }} />
 				</LinkBarDropdown>
 			</StyledHorizontalLinkBar>
 		</DemoContainer>
 		<Code language="jsx">
 			{`
-				<HorizontalLinkBar
-					backgroundColor="primary"
-					shouldFlexChildren
-					isTopLevelComponent={false}
+			<StyledHorizontalLinkBar
+				backgroundColor="primary"
+				shouldFlexChildren
+				isTopLevelComponent={false}
+			>
+				<LinkBarDropdown
+					{...linkProps}
+					textColor="white"
+					activeTextColor="white"
+					linkText={'Test dropddown'}
 				>
-					<LinkBarDropdown
-						{...linkProps}
-						textColor="white"
-						activeTextColor="white"
-						id="dagbladet-user-dropdown"
-						linkText={'Test dropddown'}
-					>
-						<UserDropDown user={{ name: 'User Name' }} />
-					</LinkBarDropdown>
-				</HorizontalLinkBar>
+					<UserDropDown fontSize="uiSmallSize" user={{ name: 'User Name' }} />
+				</LinkBarDropdown>
+				<LinkBarDropdown
+					{...linkProps}
+					textColor="white"
+					activeTextColor="white"
+					linkText={'Test dropddown'}
+				>
+					<UserDropDown user={{ name: 'User Name' }} />
+				</LinkBarDropdown>
+			</StyledHorizontalLinkBar>
 			`}
 		</Code>
 	</section>
