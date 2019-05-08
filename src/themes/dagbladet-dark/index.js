@@ -18,6 +18,7 @@ const colors = {
 		typeLighter: 'grayTintDark',
 		typeDisabled: 'darknessLighter',
 
+		adWrapperFontColor: 'grayTintDark',
 		splashBackground: 'primaryDark',
 		splashText: 'white',
 

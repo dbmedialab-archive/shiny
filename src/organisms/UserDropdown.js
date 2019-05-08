@@ -5,7 +5,6 @@ import { css } from '@emotion/core';
 import { LinkBarHeading } from '../atoms/LinkBarHeading';
 import { LinkBarLink } from '../atoms/LinkBarLink';
 import { getVariable } from '../utils/get-variable';
-import { MenuLayer } from '../atoms/MenuLayer';
 import { VerticalLinkBar } from '../molecules/VerticalLinkBar';
 import { getColor } from '../utils/get-color';
 
@@ -26,9 +25,7 @@ const LinkBarButtonProfile = styled(LinkBarLink)`
 	}}
 `;
 // display: flex, because by default it is inline-block
-const StyledVerticalLinkBar = styled(VerticalLinkBar)`
-	display: flex;
-	flex-direction: column;
+export const StyledVerticalLinkBar = styled(VerticalLinkBar)`
 	& > li {
 		padding: calc(${getVariable('verticalBase')} / 2) ${getVariable('horizontalBase')};
 	}
@@ -37,15 +34,6 @@ const StyledVerticalLinkBar = styled(VerticalLinkBar)`
 	}
 	& > li:last-child {
 		padding-top: 0;
-	}
-`;
-
-const ProfileMenuLayer = styled(MenuLayer)`
-	&& {
-		width: calc(${getVariable('horizontalBase')} * 20);
-		@media screen and (max-width: ${props => props.theme.flexboxgrid.breakpoints.sm}em) {
-			width: 100%;
-		}
 	}
 `;
 
@@ -81,22 +69,20 @@ const SpanWithAIDIcon = styled.span`
 	}
 `;
 const UserDropDown = ({ user, ...rest }) => (
-	<ProfileMenuLayer backgroundColor="white" {...rest}>
-		<StyledVerticalLinkBar background="white">
-			<StyledText marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
-				{user.name}
-			</StyledText>
-			<LinkBarButtonProfile
-				secondary
-				{...linkProps}
-				linkText="Min Side"
-				url="//www.dagbladet.no/app/minside-front"
-			/>
-			<LinkBarButtonProfile {...linkProps} url="//www.dagbladet.no/app/dug/v1/client/logout">
-				<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
-			</LinkBarButtonProfile>
-		</StyledVerticalLinkBar>
-	</ProfileMenuLayer>
+	<StyledVerticalLinkBar boxShadow="0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4)" {...rest} background="white">
+		<StyledText marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
+			{user.name}
+		</StyledText>
+		<LinkBarButtonProfile
+			secondary
+			{...linkProps}
+			linkText="Min Side"
+			url="//www.dagbladet.no/app/minside-front"
+		/>
+		<LinkBarButtonProfile {...linkProps} url="//www.dagbladet.no/app/dug/v1/client/logout">
+			<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
+		</LinkBarButtonProfile>
+	</StyledVerticalLinkBar>
 );
 
 UserDropDown.propTypes = {
@@ -106,4 +92,4 @@ UserDropDown.propTypes = {
 	}).isRequired,
 };
 
-export default UserDropDown;
+export default styled(UserDropDown)``;

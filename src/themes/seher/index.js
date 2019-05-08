@@ -38,6 +38,7 @@ const colors = {
 		background: 'white',
 		splashBackground: 'primary',
 		splashBorder: 'darkness',
+		adWrapperFontColor: 'grayTintDark',
 		splashText: 'white',
 		calmBackground: 'grayTintLight',
 		calmBorder: 'darkness',
