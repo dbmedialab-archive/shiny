@@ -11,7 +11,7 @@ const variables = {
 	uiRegularSize: '1.6rem',
 	uiRegularLineHeight: '2.4rem',
 	uiSmallSize: '1.4rem',
-	uiSmallLineHeight: '1.9rem',
+	uiSmallLineHeight: '1.6rem',
 }
 
 const global = `
