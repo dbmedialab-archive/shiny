@@ -10,13 +10,14 @@ import { getColor } from '../utils/get-color';
 
 const LinkBarButtonProfile = styled(LinkBarLink)`
 	${(props) => {
-		const { secondary } = props;
+		const { secondary, fontSize } = props;
 		const background = secondary ? getColor('secondary')(props) : 'transparent';
 		return css`
 			&& {
 				background: ${background};
 				text-align: center;
 				font-weight: ${getVariable('uiWeightBold')(props)};
+				font-size: ${getVariable(fontSize)(props)};
 				& :hover {
 					background: ${getColor('grayTint')(props)};
 				}
@@ -47,6 +48,7 @@ const linkProps = {
 
 const StyledText = styled(LinkBarHeading)`
 	&& {
+		font-size: ${({ fontSize, ...rest }) => getVariable(fontSize)(rest)};
 		padding: 0;
 	}
 `;
@@ -68,18 +70,23 @@ const SpanWithAIDIcon = styled.span`
 		transform: translate(120%, -25%);
 	}
 `;
-const UserDropDown = ({ user, ...rest }) => (
+const UserDropDown = ({ user, fontSize, ...rest }) => (
 	<StyledVerticalLinkBar boxShadow="0 3.5rem 5rem 0 rgba(0, 0, 0, 0.4)" {...rest} background="white">
-		<StyledText marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
+		<StyledText fontSize={fontSize} marginBottomFactor={1 / 2} marginTopFactor={1 / 2}>
 			{user.name}
 		</StyledText>
 		<LinkBarButtonProfile
 			secondary
 			{...linkProps}
+			fontSize={fontSize}
 			linkText="Min Side"
 			url="//www.dagbladet.no/app/minside-front"
 		/>
-		<LinkBarButtonProfile {...linkProps} url="//www.dagbladet.no/app/dug/v1/client/logout">
+		<LinkBarButtonProfile
+			{...linkProps}
+			fontSize={fontSize}
+			url="//www.dagbladet.no/app/dug/v1/client/logout"
+		>
 			<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
 		</LinkBarButtonProfile>
 	</StyledVerticalLinkBar>
@@ -90,6 +97,10 @@ UserDropDown.propTypes = {
 		user_id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 		name: PropTypes.string.isRequired,
 	}).isRequired,
+	fontSize: PropTypes.oneOf(['uiSmallSize', 'uiRegularSize', 'uiTinySize']),
+};
+UserDropDown.defaultProps = {
+	fontSize: 'uiRegularSize',
 };
 
 export default styled(UserDropDown)``;
