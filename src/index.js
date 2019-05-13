@@ -29,6 +29,7 @@ export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { DinsideLogo             } from './atoms/DinsideLogo';
+export { ViLogo                  } from './atoms/ViLogo';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
 export { Dropdown                } from './atoms/Dropdown';
