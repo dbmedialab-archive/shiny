@@ -10,7 +10,7 @@ const colorsToShade= {
 	teal: '#077F8C',
 	dark: '#666666',
 	green: '#839d63',
-	black: '#333333',
+	darkness: '#333333',
 };
 
 // Creates 4 shades of each color in colorsToShade
@@ -28,9 +28,10 @@ const colors = {
 	...combinedShadedColors,
 	skinColors: {
 		splashBackground: 'primary',
-		splashText: 'navy',
+		splashText: 'secondary',
 		background: 'white',
 		link: 'secondary',
+		type: 'darkness',
 	},
 };
 
