@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { withInfo } from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
@@ -12,11 +12,9 @@ const Background = styled.div`
 `;
 
 const ViLogoStory = () => (
-	<Fragment>
-		<Background color="primary">
-			<ViLogo />
-		</Background>
-	</Fragment>
+	<Background color="primary">
+		<ViLogo />
+	</Background>
 );
 
 export default withInfo('Vi logo.')(ViLogoStory);
