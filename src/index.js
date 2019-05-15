@@ -2,6 +2,7 @@
 export { themes                  } from './themes';
 
 // Atoms
+export { Arrow                   } from './atoms/Arrow';
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { AdSettingsCog           } from './atoms/AdSettingsCog';
