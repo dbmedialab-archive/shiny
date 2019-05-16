@@ -28,6 +28,7 @@ export { CarouselButton          } from './atoms/CarouselButton';
 export { CarouselSection         } from './atoms/CarouselSection';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
+export { Cross                   } from './atoms/Cross';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { DinsideLogo             } from './atoms/DinsideLogo';
 export { ViLogo                  } from './atoms/ViLogo';
