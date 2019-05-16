@@ -10,6 +10,7 @@ import DinsideStory from './DinsideStory';
 import DinsideStoryTwenty from './DinsideStoryTwenty';
 import Elbil24Logo from './Elbil24LogoStory';
 import Elbil24ProLogo from './Elbil24ProLogoStory';
+import ViLogoStory from './ViLogoStory';
 
 export default () => {
 	storiesOf('Logos|Logos', module)
@@ -22,5 +23,6 @@ export default () => {
 		.add('DinsideLogo', DinsideStory)
 		.add('... with twenty year anniversary marking', DinsideStoryTwenty)
 		.add('Elbil24Logo', Elbil24Logo)
-		.add('Elbil24ProLogo', Elbil24ProLogo);
+		.add('Elbil24ProLogo', Elbil24ProLogo)
+		.add('ViLogoStory', ViLogoStory);
 };

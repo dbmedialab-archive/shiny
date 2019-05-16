@@ -13,6 +13,7 @@ import seher from './seher';
 import sol from './sol';
 import start from './start';
 import topp from './topp';
+import vi from './vi';
 
 
 export { themePropTypes } from './theme-prop-types';
@@ -33,6 +34,7 @@ const themes = {
 	start,
 	mat,
 	topp,
+	vi,
 };
 
 export { themes };
