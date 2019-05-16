@@ -39,8 +39,6 @@ export const cssReset = `
 		font-size: 1.6rem; /* Reset the body text to 16px */
 		line-height: 1;
 		background: transparent;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
 	}
 
 	/* HTML5 display-role reset for older browsers */
