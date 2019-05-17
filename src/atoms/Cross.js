@@ -2,11 +2,17 @@ import styled from '@emotion/styled';
 import { getColor } from '../utils/get-color';
 
 const Cross = styled.i`
-	margin-left: 1rem;
+		position: relative;
+		height: ${p => p.size}rem;
+		width: ${p => p.size}rem;
+		display: inline-block;
+		vertical-align: middle;
 
 	:before, :after {
 		position: absolute;
 		content: "";
+		display: inline-block;
+		left: 50%;
 		height: ${p => p.size}rem;
 		width: ${p => p.layer}rem;
 		background-color: ${p => getColor(p.color)};
