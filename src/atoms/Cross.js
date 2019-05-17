@@ -4,11 +4,7 @@ import { getColor } from '../utils/get-color';
 
 const StyledCross = styled.i`
 	position: absolute;
-	opacity: 0.3;
-  
-	:hover {
-		opacity: 1;
-	}
+
 	:before, :after {
 		position: absolute;
 		left: 1.5rem;
