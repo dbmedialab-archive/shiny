@@ -1,13 +1,11 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { getColor } from '../utils/get-color';
 
-const StyledCross = styled.i`
-	position: absolute;
+const Cross = styled.i`
+	margin-left: 1rem;
 
 	:before, :after {
 		position: absolute;
-		left: 1.5rem;
 		content: "";
 		height: ${p => p.size}rem;
 		width: ${p => p.layer}rem;
@@ -21,7 +19,6 @@ const StyledCross = styled.i`
 	}
 `;
 
-const Cross = props => <StyledCross {...props} />;
 
 Cross.defaultProps = {
 	size: 2.5,
