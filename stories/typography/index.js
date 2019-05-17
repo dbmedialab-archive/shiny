@@ -21,6 +21,7 @@ import arrowBullet from './arrowBulletStory';
 import moreComponent from './mat-more-component';
 import truncate from './truncate';
 import dot from './dot';
+import pureIcons from './pureIcons';
 
 // @TODO: Create story for LargeScreenText;
 // import LargeScreenText from '../shared-components/Typography/LargeScreenText';
@@ -62,5 +63,6 @@ export default () => {
 		.add('Svg Icon', svgIcon)
 		.add('Icon with text', iconWithText)
 		.add('Dice', dice)
-		.add('Dot', dot);
+		.add('Dot', dot)
+		.add('Pure Icons', pureIcons);
 };

@@ -1,13 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 import { SmallPlugHeading as DefaultHeading } from '../atoms/PlugHeading';
-import { FontIcon } from '../atoms/FontIcon';
 import { CarouselSlot } from '../atoms/CarouselSlot';
 import { CarouselSection } from '../atoms/CarouselSection';
 import { CarouselButton } from '../atoms/CarouselButton';
 import { CarouselSlotList } from '../atoms/CarouselSlotList';
 import { CarouselBar } from '../atoms/CarouselBar';
+import { Arrow } from '../atoms/Arrow';
+
+const CarouselArrow = styled(Arrow)`
+	position: absolute;
+    top: 20%;
+    box-shadow: 0.2rem 0.2rem rgba(0,0,0,0.3);
+    @media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
+    	top: 30%;
+    }
+`;
 
 class Carousel extends React.Component {
 	constructor(props) {
@@ -222,7 +232,7 @@ class Carousel extends React.Component {
 							horizontalArrowOffset={horizontalArrowOffset}
 							hide={hideButtons}
 						>
-							<FontIcon name="arrow-alt-left" size={3} />
+							<CarouselArrow direction={vertical ? 'up' : 'left'} color="white" />
 						</CarouselButton>
 					)}
 					{nextArrowVisible && (
@@ -233,7 +243,7 @@ class Carousel extends React.Component {
 							horizontalArrowOffset={horizontalArrowOffset}
 							hide={hideButtons}
 						>
-							<FontIcon name="arrow-alt-right" size={3} />
+							<CarouselArrow direction={vertical ? 'down' : 'right'} color="white" />
 						</CarouselButton>
 					)}
 				</CarouselBar>
