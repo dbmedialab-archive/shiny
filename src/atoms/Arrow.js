@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { getColor } from '../utils';
 
-const ArrowIcon = styled.i`
+const Arrow = styled.i`
 	border: solid ${p => getColor(p.color)};
 	border-width: 0 ${p => p.layer}rem ${p => p.layer}rem 0;
 	display: inline-block;
@@ -13,10 +13,6 @@ const ArrowIcon = styled.i`
 	${p => p.direction === 'down' && 'transform: rotate(45deg);'}
 	box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.3);
 `;
-
-const Arrow = props => (
-	<ArrowIcon {...props} />
-);
 
 Arrow.defaultProps = {
 	direction: 'right',
