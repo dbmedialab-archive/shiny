@@ -12,7 +12,7 @@ import { Arrow } from '../atoms/Arrow';
 
 const CarouselArrow = styled(Arrow)`
 	position: absolute;
-    top: 20%;
+    top: 25%;
     box-shadow: 0.2rem 0.2rem rgba(0,0,0,0.3);
     @media screen and (min-width: ${props => props.theme.flexboxgrid.breakpoints.md}em) {
     	top: 30%;
