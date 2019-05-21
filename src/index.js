@@ -31,7 +31,7 @@ export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { DinsideLogo             } from './atoms/DinsideLogo';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
-export { GearsLoader 			 } from './atoms/loaders/GearsLoader';
+export { GearsLoader             } from './atoms/loaders/GearsLoader';
 export { Dropdown                } from './atoms/Dropdown';
 export {
 	DymoHeading,
@@ -118,7 +118,7 @@ export { LunchKicker             } from './atoms/LunchKicker';
 export { MoreComponent           } from './atoms/MainRecipe/MoreLine';
 export { NativeAdKicker          } from './atoms/NativeAdKicker';
 export { NumberedListItem        } from './atoms/NumberedListItem';
-export { OverlayingImageLabel 	 } from './atoms/OverlayingImageLabel';
+export { OverlayingImageLabel    } from './atoms/OverlayingImageLabel';
 export { OverlayingPlugLabel     } from './atoms/OverlayingPlugLabel';
 export { Paragraph               } from './atoms/Paragraph';
 export { Pips                    } from './atoms/Pips';
@@ -165,9 +165,9 @@ export {
 export { TopBarSearchField       } from './atoms/MatHeader/TopBarSearchField';
 export { VerticalFlexingList     } from './atoms/VerticalFlexingList';
 export { YoutubeFrame            } from './atoms/MainRecipe/youtubeFrame';
-export { Truncate            	 } from './atoms/Truncate';
-export { Dot	            	 } from './atoms/Dot';
-export { MenuLayer	           	 } from './atoms/MenuLayer';
+export { Truncate                } from './atoms/Truncate';
+export { Dot                     } from './atoms/Dot';
+export { MenuLayer               } from './atoms/MenuLayer';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -182,7 +182,7 @@ export { IconBar                 } from './molecules/IconBar';
 export { Labels                  } from './molecules/Labels';
 export { LunchButton             } from './molecules/LunchButton';
 export { OverlayingPlugLabels    } from './molecules/OverlayingPlugLabels';
-export { OverlayingImageLabels } from './molecules/OverlayingImageLabels';
+export { OverlayingImageLabels   } from './molecules/OverlayingImageLabels';
 export { TrysilPlug              } from './molecules/TrysilPlug';
 export { ThemeSwitcher           } from './molecules/ThemeSwitcher';
 export { GenericAd               } from './molecules/GenericAd';
