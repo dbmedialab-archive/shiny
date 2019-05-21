@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.29.0",
+  "version": "0.32.1",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.4.3",
+    "@babel/runtime": "7.4.4",
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.10",
     "@maji/react-prism": "1.0.1",
@@ -51,11 +51,11 @@
   },
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
-    "@babel/cli": "7.4.3",
-    "@babel/core": "7.4.3",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
     "@babel/node": "7.2.2",
-    "@babel/plugin-proposal-class-properties": "7.4.0",
-    "@babel/plugin-proposal-decorators": "7.4.0",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-proposal-decorators": "7.4.4",
     "@babel/plugin-proposal-do-expressions": "7.2.0",
     "@babel/plugin-proposal-export-default-from": "7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "7.2.0",
@@ -63,7 +63,7 @@
     "@babel/plugin-proposal-function-sent": "7.2.0",
     "@babel/plugin-proposal-json-strings": "7.2.0",
     "@babel/plugin-proposal-logical-assignment-operators": "7.2.0",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "7.4.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.4.4",
     "@babel/plugin-proposal-numeric-separator": "7.2.0",
     "@babel/plugin-proposal-optional-chaining": "7.2.0",
     "@babel/plugin-proposal-pipeline-operator": "7.3.2",
@@ -71,8 +71,8 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/plugin-transform-object-assign": "7.2.0",
-    "@babel/plugin-transform-runtime": "7.4.3",
-    "@babel/preset-env": "7.4.3",
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/preset-env": "7.4.4",
     "@babel/preset-react": "7.0.0",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.0.10",

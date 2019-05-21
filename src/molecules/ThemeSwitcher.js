@@ -166,6 +166,14 @@ class ThemeSwitcher extends React.Component {
 					>
 						Oppskrift
 					</Button>
+					<Button
+						textColor={colors.skinColors.splashText}
+						onClick={e => this.handleButtonClick(e)}
+						isActive={selected === 'vi'}
+						value="vi"
+					>
+						Vi
+					</Button>
 				</FullWidthLinkBar>
 				<div>{children}</div>
 			</ThemeSelector>

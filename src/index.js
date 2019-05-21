@@ -2,6 +2,7 @@
 export { themes                  } from './themes';
 
 // Atoms
+export { Arrow                   } from './atoms/Arrow';
 export { Article                 } from './atoms/Article';
 export { AdWrapper               } from './atoms/AdWrapper';
 export { AdSettingsCog           } from './atoms/AdSettingsCog';
@@ -27,8 +28,10 @@ export { CarouselButton          } from './atoms/CarouselButton';
 export { CarouselSection         } from './atoms/CarouselSection';
 export { Col                     } from './atoms/Col';
 export { ColorBox                } from './atoms/ColorBox';
+export { Cross                   } from './atoms/Cross';
 export { DagbladetLogo           } from './atoms/DagbladetLogo';
 export { DinsideLogo             } from './atoms/DinsideLogo';
+export { ViLogo                  } from './atoms/ViLogo';
 export { DontPushTheAdBoundaries } from './atoms/DontPushTheAdBoundaries';
 export { DotLoader               } from './atoms/loaders/DotLoader';
 export { GearsLoader             } from './atoms/loaders/GearsLoader';
