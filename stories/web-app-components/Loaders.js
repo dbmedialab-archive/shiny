@@ -10,6 +10,7 @@ import {
 
 	// Loaders
 	DotLoader,
+	GearsLoader,
 	// NoonLoader
 	LoadingSearchIcon,
 } from '../../src';
@@ -73,5 +74,25 @@ import { DotLoader } from '@aller/shiny';
 					</DemoContainer>
 				</section>
 			);
-		});
+		})
+		.add('Gears Loader', () => (
+			<section>
+				<HugeHeading>Gears Loader</HugeHeading>
+				<Paragraph>
+					We can use this loader when waiting the response from server.
+				</Paragraph>
+
+				<Heading>Usage</Heading>
+				<DemoContainer>
+					<GearsLoader />
+				</DemoContainer>
+				<Code language="jsx">
+					{`
+						import { GearsLoader } from '@aller/shiny';
+
+						<GearsLoader />
+					`}
+				</Code>
+			</section>
+		));
 };
