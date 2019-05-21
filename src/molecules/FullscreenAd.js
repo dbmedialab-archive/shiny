@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
@@ -55,16 +55,16 @@ const StyledWrapper = styled.div`
 `;
 
 
-const FullscreenAd = (props) => {
+const FullscreenAd = forwardRef((props, ref) => {
 	const { shouldHide } = props;
 
 	return (
-		<StyledReserveSpacer shouldHide={shouldHide}>
+		<StyledReserveSpacer shouldHide={shouldHide} ref={ref}>
 			<AdWrapper width="100%" />
 			<StyledWrapper {...props}  />
 		</StyledReserveSpacer>
 	);
-};
+});
 
 FullscreenAd.propTypes = {
 	shouldHide: PropTypes.bool.isRequired,
