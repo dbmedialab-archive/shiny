@@ -63,24 +63,19 @@ const linkBarElementSizes =	(props) => {
 
 	let verticalPadding;
 	let horizontalPadding;
-	let smVerticalPadding;
 
 	if (size === 'xsmall') {
 		verticalPadding = '0';
-		smVerticalPadding = verticalPadding;
 		horizontalPadding = `calc(1/2 * ${horizontalBase})`;
 	} else if (size === 'small') {
-		verticalPadding = `calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiSmallLineHeight}) )`;
-		smVerticalPadding = `calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiSmallLineHeight}) )`;
+		verticalPadding = `calc(${insetFactor} * 1/2 * ( 3/2*${verticalBase} - ${uiSmallLineHeight}) )`;
 		horizontalPadding = `calc(1/2 * ${horizontalBase})`;
 	} else if (size === 'large') {
-		verticalPadding = `calc(${insetFactor} * 1/2 * (4/2*${verticalBase} - ${uiRegularLineHeight}) )`;
-		smVerticalPadding = `calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )`;
+		verticalPadding = `calc(${insetFactor} * 1/2 * ( 5/2*${verticalBase} - ${uiRegularLineHeight}) )`;
 		horizontalPadding = horizontalBase;
 	} else {
 		// size === medium
-		verticalPadding = `calc(${insetFactor} * 1/2 * (3/2*${verticalBase} - ${uiRegularLineHeight}) )`;
-		smVerticalPadding =	`calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )`;
+		verticalPadding =	`calc(${insetFactor} * 1/2 * ( 2*${verticalBase} - ${uiRegularLineHeight}) )`;
 		horizontalPadding = horizontalBase;
 	}
 
@@ -91,18 +86,11 @@ const linkBarElementSizes =	(props) => {
 		? uiSmallLineHeight
 		: uiRegularLineHeight;
 
-	const smBreakpoint = props.theme.flexboxgrid.breakpoints.sm;
-
 	return css`
+		margin: ${inset ? `${verticalPadding} 0` : 0};
+		padding: ${verticalPadding} ${horizontalPadding};
 		font-size: ${fontSize};
 		line-height: ${lineHeight};
-		padding: ${verticalPadding} ${horizontalPadding};
-		margin: ${inset ? `${verticalPadding} 0` : 0};
-
-		@media screen and (min-width: ${smBreakpoint}em) {
-			padding: ${smVerticalPadding} ${horizontalPadding};
-			margin: ${inset ? `${smVerticalPadding} 0` : 0};
-		}
 	`;
 };
 
@@ -229,7 +217,6 @@ export const LinkBarElementBase = styled.a`
 	text-decoration: none;
 	font-family: ${getVariable('headingsFont')};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
-	transition: padding .2s;
 
 	:hover {
 		text-decoration: none;
