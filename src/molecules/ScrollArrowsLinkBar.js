@@ -137,7 +137,7 @@ class ScrollArrowsLinkBar extends Component {
 				zIndex={zIndex}
 				isTopLevelComponent={isTopLevelComponent}
 			>
-				<Container innerRef={(input) => { this.container = input; }}>
+				<Container ref={(input) => { this.container = input; }}>
 					{shouldDrawLeftArrow
 						&& (
 							<LeftScrollArrow
@@ -151,7 +151,7 @@ class ScrollArrowsLinkBar extends Component {
 						)
 					}
 					<Bar
-						innerRef={(input) => { this.content = input; }}
+						ref={(input) => { this.content = input; }}
 						background={background}
 						backgroundColor={backgroundColor}
 						{...rest}
