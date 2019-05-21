@@ -18,7 +18,7 @@ const LeftAndRight = styled(AdWrapper)`
 		? 'right: 100%;'
 		: 'left: 100%;'
 }}
-	
+
 		@media screen and (min-width: ${props.theme.flexboxgrid.breakpoints.sm}em) {
 			${
 	props.left
@@ -91,13 +91,6 @@ class WallpaperAd extends Component {
 		window.removeEventListener('message', this.handlePostMessage.bind(this));
 	}
 
-	onMediaQueryChange(data) {
-		if (data.media === '(min-width: 1280px)' && !data.matches) {
-			this.setState({
-				isWallpaper: false,
-			});
-		}
-	}
 
 	setWallpaper(data) {
 		const frame = document.querySelector(`iframe[name="${data.frame}"]`);
@@ -182,7 +175,6 @@ class WallpaperAd extends Component {
 					shouldHideAttribution={shouldHideAttribution}
 				>
 					{React.cloneElement(children, {
-						onMediaQueryChange: this.onMediaQueryChange.bind(this),
 						width: isWallpaper ? '1010px' : '980px',
 					})}
 				</WallpaperWrapper>
