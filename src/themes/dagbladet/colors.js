@@ -40,8 +40,7 @@ const colors = {
 	darknessLighter: '#342c2e',
 	darknessDark: '#111111',
 
-	buttonBackground: '#ececec',
-	buttonColor: '#3768c9',
+	link: '#3768c9',
 
 	...combinedShadedColors,
 
@@ -49,6 +48,8 @@ const colors = {
 
 	skinColors: {
 		background: 'white',
+		buttonBackground: 'grayTintLight',
+		buttonColor: 'link',
 		type: 'darkness',
 		nativeAd: 'green',
 		splashBackground: 'primary',

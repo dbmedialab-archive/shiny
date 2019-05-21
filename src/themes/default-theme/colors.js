@@ -47,6 +47,9 @@ const skinColors = {
 	typeLight: 'darknessLight',
 	typeDisabled: 'grayTint',
 
+	buttonColor: 'link',
+	buttonBackground: 'link',
+
 	nativeAd: 'orange',
 	sport: 'green',
 	helse: 'blue',
@@ -72,15 +75,12 @@ const colors = {
 	...combinedShadedColors,
 	skinColors,
 
-	buttonColor: '#3768c9',
-	buttonBackground: '#3768c9',
-
 	transparent: 'transparent',
 	grayTintLight: '#ececec',
 	grayTintLighter: '#f3f3f3',
 	darknessLight: '#555',
 	darknessLighter: '#ccc',
-	link: 'cornflowerblue',
+	link: '#3768c9',
 };
 
 export default colors;
