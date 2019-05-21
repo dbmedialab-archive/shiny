@@ -227,6 +227,7 @@ class Carousel extends React.Component {
 					</CarouselSlotList>
 					{prevArrowVisible && (
 						<CarouselButton
+							aria-label="Scroll to previous items"
 							vertical={vertical}
 							onClick={() => this.doSliding('prev')}
 							horizontalArrowOffset={horizontalArrowOffset}
@@ -238,6 +239,7 @@ class Carousel extends React.Component {
 					{nextArrowVisible && (
 						<CarouselButton
 							next
+							aria-label="Scroll to next items"
 							vertical={vertical}
 							onClick={() => this.doSliding('next')}
 							horizontalArrowOffset={horizontalArrowOffset}
