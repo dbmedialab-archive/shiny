@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { getColor, getVariable } from '../utils';
+import { getColor, getVariable, media } from '../utils';
 
 const setTextAlign = (sticky) => {
 	if (sticky === 'right') return 'left';
@@ -38,6 +38,10 @@ const AdWrapperBase = styled.div`
 		opacity: ${props => (props.shouldHideAttribution ? '0' : '1')};
 		transition: opacity .3s;
 		will-change: opacity;
+	}
+
+	div iframe {
+		${media.small`width: inherit;`}
 	}
 `;
 
