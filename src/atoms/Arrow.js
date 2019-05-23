@@ -10,14 +10,15 @@ const Arrow = styled.i`
 	${p => p.direction === 'left' && 'transform: rotate(135deg);'}
 	${p => p.direction === 'up' && 'transform: rotate(-135deg);'}
 	${p => p.direction === 'down' && 'transform: rotate(45deg);'}
-	box-shadow: 0.1rem 0.1rem rgba(0,0,0,0.3);
+	box-shadow: ${p => p.shadow}rem ${p => p.shadow}rem rgba(0,0,0,0.3);
 `;
 
 Arrow.defaultProps = {
 	direction: 'right',
 	size: 0.65,
 	layer: 0.15,
-	color: 'type',
+	shadow: 0.2,
+	color: 'white',
 };
 
 export { Arrow };
