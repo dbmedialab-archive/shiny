@@ -35,13 +35,13 @@ const IconTextRight = styled.div`
 `;
 
 const IconWithText = ({
-	text, iconSize, textSize, circleText, position, fill, textColor, ...rest
+	text, iconSize, textSize, circleText, position, textColor, ...rest
 }) => {
 	switch (position) {
 	case 'right':
 		return (
 			<IconBlockTextRight>
-				<SvgIcon size={iconSize} {...rest} text={circleText || text} fill={fill} textColor={textColor} />
+				<SvgIcon size={iconSize} {...rest} text={circleText || text} textColor={textColor} />
 				<IconTextRight textSize={textSize}>{text}</IconTextRight>
 			</IconBlockTextRight>
 		);
@@ -49,7 +49,7 @@ const IconWithText = ({
 	default:
 		return (
 			<IconBlock>
-				<SvgIcon size={iconSize} {...rest} text={circleText || text} fill={fill} />
+				<SvgIcon size={iconSize} {...rest} text={circleText || text} />
 				<IconText textSize={textSize}>{text}</IconText>
 			</IconBlock>
 		);

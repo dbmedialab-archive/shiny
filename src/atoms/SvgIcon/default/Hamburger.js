@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { getColor } from '../../utils';
+import { getColor } from '../../../utils';
 
 const Hamburger = ({ opened, ...props }) => (
 	<svg width="100%" height="100%" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" {...props}>
