@@ -11,6 +11,7 @@ import icon from './icon';
 import underlinedHeading from './underlined-heading';
 import dymoHeading from './dymo-heading';
 import svgIcon from './svgIcon';
+import svgIconDoris from './svgIconDoris';
 import iconWithText from './iconWithText';
 import plugHeading from './plug-heading';
 import frontHeading from './front-heading';
@@ -61,6 +62,7 @@ export default () => {
 		.addDecorator(StorybookPaddedGrid)
 		.add('Font Icon', icon)
 		.add('Svg Icon', svgIcon)
+		.add('Svg Icon - Doris', svgIconDoris)
 		.add('Icon with text', iconWithText)
 		.add('Dice', dice)
 		.add('Dot', dot)
