@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
@@ -9,7 +10,7 @@ const setTextAlign = (sticky) => {
 	return 'center';
 };
 
-const AdWrapper = styled.div`
+const AdWrapperBase = styled.div`
 	width: ${props => props.width};
 	height: auto;
 	min-height: calc(${props => props.height} + ${getVariable('verticalBase')});
@@ -41,7 +42,7 @@ const AdWrapper = styled.div`
 `;
 
 
-AdWrapper.propTypes = {
+AdWrapperBase.propTypes = {
 	width: PropTypes.string,
 	height: PropTypes.string,
 	shouldHideAttribution: PropTypes.bool,
@@ -50,7 +51,7 @@ AdWrapper.propTypes = {
 	itemScope: PropTypes.bool,
 };
 
-AdWrapper.defaultProps = {
+AdWrapperBase.defaultProps = {
 	sticky: '',
 	width: '32.0rem',
 	height: '25.0rem',
@@ -58,5 +59,7 @@ AdWrapper.defaultProps = {
 	itemType: 'http://schema.org/WPAdBlock',
 	itemScope: true,
 };
+
+const AdWrapper = forwardRef((props, ref) => <AdWrapperBase ref={ref} {...props} />);
 
 export { AdWrapper };

@@ -12,7 +12,18 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Avenir:400,700');
+	@font-face {
+		font-family: 'Avenir';
+		font-style: normal;
+		font-weight: 400;
+		src: url('https://styleguide.vi.no/fonts/363CCF_2_0.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: 'Avenir';
+		font-style: normal;
+		font-weight: 700;
+		src: url('https://styleguide.vi.no/fonts/363CCF_4_0.woff2') format('woff2');
+	}
 
 	${cssReset}
 `;
