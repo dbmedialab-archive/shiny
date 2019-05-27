@@ -21,7 +21,7 @@ const dorisIcons = {
 	// Kategorier
 	Anbefalt: () => import('./Recommended'),
 	Bolig: () => import('./Bolig'),
-	Forbrukertester: import('./Forbrukertester'),
+	Forbrukertester: () => import('./Forbrukertester'),
 	Helse: () => import('./Health'),
 	Horoskop: () => import('./Horoscope'),
 	Mat: () => import('./Food.js'),

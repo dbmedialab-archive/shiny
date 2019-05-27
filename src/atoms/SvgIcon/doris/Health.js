@@ -3,7 +3,7 @@ import React from 'react';
 import Svg from './Svg';
 
 const Health = props => (
-	<Svg viewBox="0 0 35 30" strokeWidth="1.5" {...props}>
+	<Svg viewBox="0 0 35 32" strokeWidth="1.5" {...props}>
 		<g transform="translate(0.000000, 1.000000)">
 			<path d="M17.8,4 C19.5,2 21.9,0.7 24.7,0.7 C32.9,0.7 36.2,10.4 31,16.1 C26.9,20.6 22.2,24.7 17.8,29"  />
 			<path d="M6.6,18.2 C10.2,21.9 14.1,25.4 17.8,29"  />

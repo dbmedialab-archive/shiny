@@ -3,7 +3,7 @@ import React from 'react';
 import Svg from './Svg';
 
 const Motor = props => (
-	<Svg viewBox="0 0 35 28" strokeWidth="1.5" {...props}>
+	<Svg viewBox="0 0 36 32" strokeWidth="1.5" {...props}>
 		<path d="M5.6,10.4 L7.7,2.3 C7.7,2.3 12.1,0.7 18.1,0.8" id="Shape" />
 		<path d="M18.1,22.6 L2.5,22.6 L2.5,15.4 C2.5,12.4 4.9,9.9 8,9.9 L18.1,9.9" id="Shape" />
 		<path d="M5.8,28 L5.3,28 C3.7,28 2.5,26.7 2.5,25.2 L2.5,22.6 L8.6,22.6 L8.6,25.2 C8.6,26.7 7.3,28 5.8,28 Z" id="Shape" />

@@ -3,7 +3,7 @@ import React from 'react';
 import Svg from './Svg';
 
 const Bolig = props => (
-	<Svg viewBox="0 0 31 29" {...props}>
+	<Svg viewBox="0 0 32 32" {...props}>
 		<rect x="3.2" y="15.3" width="25.8" height="13.9" />
 		<polygon points="28.4,5.9 25.4,5.9 6.8,5.9 3.8,5.9 0.8,15.3 6.8,15.3 25.4,15.3 31.5,15.3" />
 		<rect x="9.3" y="18.5" width="6.4" height="10.8" />

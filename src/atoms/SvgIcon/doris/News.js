@@ -3,7 +3,7 @@ import React from 'react';
 import Svg from './Svg';
 
 const News = props => (
-	<Svg viewBox="0 0 37 30" strokeWidth="1.5" {...props}>
+	<Svg viewBox="0 0 37 32" strokeWidth="1.5" {...props}>
 		<g transform="translate(1.000000, 0.000000)">
 			<path d="M3.4,25.1 L3.4,0.8 L34.9,0.8 L34.9,26 C34.9,28.2 33.1,30 30.9,30 L3.4,30" />
 			<path d="M7,5.6 L30.8,5.6" />

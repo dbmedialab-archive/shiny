@@ -3,7 +3,7 @@ import React from 'react';
 import Svg from './Svg';
 
 const Notifications = props => (
-	<Svg viewBox="0 0 25 33" {...props}>
+	<Svg viewBox="0 0 32 33" {...props}>
 		<path d="M3.9,11.9c0-4.9,3.9-8.8,8.8-8.8c4.9,0,8.8,3.9,8.8,8.8" />
 		<polyline points="21.6,11.9 21.6,24.7 3.9,24.7 3.9,11.9 " />
 		<rect x="0.5" y="24.7" width="24.5" height="4.5" />
