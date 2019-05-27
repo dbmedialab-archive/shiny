@@ -1,6 +1,5 @@
 import React  from 'react';
 import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
 
 import { getColor } from '../utils';
 
@@ -8,11 +7,11 @@ const Svg = styled.svg`
   box-sizing: border-box;
 	
 	& .primary {
-		fill: ${props => (props.pro ? getColor('white') : getColor('secondary'))}
+		fill: ${getColor('white')}
 	}
 
 	& .secondary {
-		fill: ${props => (props.pro ?getColor('secondary') : getColor('white'))}
+		fill: ${getColor('secondary')}
 	}
 `;
 
@@ -65,14 +64,5 @@ const Elbil24Logo = props => (
 /* eslint-enable max-len */
 
 Elbil24Logo.displayName = 'Elbil24Logo';
-
-Elbil24Logo.propTypes = {
-	pro: PropTypes.bool,
-};
-
-Elbil24Logo.defaultProps = {
-	pro: false,
-};
-
 
 export { Elbil24Logo };
