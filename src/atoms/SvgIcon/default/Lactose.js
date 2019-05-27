@@ -1,8 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
 
 const Lactose = props => (
-	<svg width="19px" height="30px" viewBox="0 0 19 30">
+	<Svg width="19px" height="30px" viewBox="0 0 19 30">
 		<g stroke="none" fill="none">
 			<g transform="translate(-636.000000, -194.000000)" fill="#767676">
 				<g transform="translate(216.000000, 121.000000)">
@@ -16,7 +17,7 @@ const Lactose = props => (
 				</g>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default Lactose;

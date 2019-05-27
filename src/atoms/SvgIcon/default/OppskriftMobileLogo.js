@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const Svg = styled.svg`
+import StandardSvg from './Svg';
+
+const Svg = styled(StandardSvg)`
 	stroke-opacity: 0;
 `;
 

@@ -1,12 +1,12 @@
 import React from 'react';
+import Svg from './Svg';
 
 const User = props => (
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
+	<Svg
 		x="0px"
 		y="0px"
 		viewBox="0 0 53 53"
-		xmlSpace="preserve"
+		stroke="none"
 	>
 		{/* eslint-disable max-len */}
 		<path
@@ -28,7 +28,7 @@ const User = props => (
 		c0.508,0.254,0.967,0.575,1.39,0.932c5.71-4.762,9.399-11.882,9.536-19.9C53.246,12.32,41.587,0.254,26.953,0.004z"
 		/>
 		{/* eslint-enable max-len */}
-	</svg>
+	</Svg>
 );
 
 export default User;

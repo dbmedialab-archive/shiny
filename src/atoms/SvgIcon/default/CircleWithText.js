@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import StandardSvg from './Svg';
 
-const Svg = styled.svg`
+const Svg = styled(StandardSvg)`
 	font-size: ${props => props.fontSize};
 	font-family: Times New Roman,"serif";
 	text-transform: capitalize;

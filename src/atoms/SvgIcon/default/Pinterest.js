@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const Pinterest = props => (
-	<svg width="100%" height="100%" viewBox="0 0 37 34">
+	<Svg width="100%" height="100%" viewBox="0 0 37 34">
 		<g stroke="none" fill="none">
 			<g transform="translate(2.000000, 0.000000)">
 				<g />
@@ -10,7 +12,7 @@ const Pinterest = props => (
 				{/* eslint-disable max-len */}
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default Pinterest;

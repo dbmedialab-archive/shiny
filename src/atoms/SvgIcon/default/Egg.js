@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const Egg = props => (
-	<svg width="25px" height="30px" viewBox="0 0 25 23" version="1.1">
+	<Svg width="25px" height="30px" viewBox="0 0 25 23" version="1.1">
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g transform="translate(-443.000000, -250.000000)" fill="#767676">
 				<g transform="translate(216.000000, 121.000000)">
@@ -44,7 +46,7 @@ const Egg = props => (
 				</g>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default Egg;

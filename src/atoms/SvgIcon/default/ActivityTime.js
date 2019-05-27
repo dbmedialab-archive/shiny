@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const ActivityTime = props => (
-	<svg width="100%" height="100%" viewBox="-7 -10 50 50">
+	<Svg width="100%" height="100%" viewBox="-7 -10 50 50">
 		<g fill="none" fillRule="evenodd">
 			<g fill="#000000">
 				<g transform="translate(5.000000, 8.000000)" stroke="none">
@@ -12,7 +14,7 @@ const ActivityTime = props => (
 				</g>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default ActivityTime;

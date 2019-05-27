@@ -1,8 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
 
 const Vegetar = props => (
-	<svg width="21px" height="26px" viewBox="0 0 21 26">
+	<Svg width="21px" height="26px" viewBox="0 0 21 26">
 		<g stroke="none" fill="none">
 			<g transform="translate(-841.000000, -196.000000)" fill="#767676">
 				<g transform="translate(216.000000, 121.000000)">
@@ -20,7 +21,7 @@ const Vegetar = props => (
 				</g>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export { Vegetar };

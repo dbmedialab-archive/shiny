@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Svg from './Svg';
 
 const Star = ({ color, ...rest }) => (
-	<svg width="100%" height="100%" viewBox="0 0 31 29" {...rest}>
+	<Svg width="100%" height="100%" viewBox="0 0 31 29" color={color} {...rest}>
 		{/* eslint-disable max-len */}
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g transform="translate(-755.000000, -541.000000)" fill={color || '#333333'}>
@@ -14,7 +15,7 @@ const Star = ({ color, ...rest }) => (
 			</g>
 		</g>
 		{/* eslint-enable max-len */}
-	</svg>
+	</Svg>
 );
 
 Star.propTypes = {

@@ -33,10 +33,10 @@ class SvgIcon extends React.PureComponent {
 	render() {
 		const { module: Icon } = this.state;
 		const {
-			size, color, className, ...rest
+			size, className, ...rest
 		} = this.props;
 		return (
-			<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
+			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
 				<Icon {...rest} />
 			</SvgIconWrapper>
 		);
@@ -48,7 +48,6 @@ SvgIcon.propTypes = {
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
-	'color': PropTypes.string,
 	'className': PropTypes.string,
 };
 SvgIcon.defaultProps = {
@@ -56,7 +55,6 @@ SvgIcon.defaultProps = {
 	'size': 3.2,
 	'size-sm': null,
 	'name': '',
-	'color': undefined,
 	'className': '',
 };
 

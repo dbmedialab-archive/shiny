@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Svg from './Svg';
+
 const DoubleArrow = ({ color, ...rest }) => (
-	<svg width="100%" height="100%" viewBox="0 0 16 16" {...rest}>
+	<Svg width="100%" height="100%" viewBox="0 0 16 16" {...rest}>
 		{/* eslint-disable max-len */}
 		<g stroke="none" strokeWidth="1" fill="none">
 			<g fill={color}>
@@ -10,7 +12,7 @@ const DoubleArrow = ({ color, ...rest }) => (
 			</g>
 		</g>
 		{/* eslint-enable max-len */}
-	</svg>
+	</Svg>
 );
 
 DoubleArrow.propTypes = {

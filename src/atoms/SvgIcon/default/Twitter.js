@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const Twitter = props => (
 	/* eslint-disable no-mixed-spaces-and-tabs */
-	<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="#4a4a4a">
+	<Svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="#4a4a4a" stroke="none">
 		<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239
 		 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139
 		  9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475
@@ -13,7 +15,7 @@ const Twitter = props => (
 		       1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443
 		        1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"
 		/>
-	</svg>
+	</Svg>
 	/* eslint-enable no-mixed-spaces-and-tabs */
 );
 

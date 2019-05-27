@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const ShellFish = props => (
-	<svg width="25px" height="30px" viewBox="0 0 25 20">
+	<Svg width="25px" height="30px" viewBox="0 0 25 20">
 		<g stroke="none" fill="none">
 			<g transform="translate(-442.000000, -200.000000)" fill="#767676">
 				<g transform="translate(216.000000, 121.000000)">
@@ -18,7 +20,7 @@ const ShellFish = props => (
 				</g>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default ShellFish;

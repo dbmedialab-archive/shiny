@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const Play = () => (
-	<svg
+	<Svg
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1"
 		viewBox="0 0 415.346 415.346"
@@ -9,6 +11,7 @@ const Play = () => (
 		xmlSpace="preserve"
 		width="100%"
 		height="100%"
+		stroke="none"
 	>
 		<g>
 			<g>
@@ -19,7 +22,7 @@ const Play = () => (
 				/>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 export default Play;

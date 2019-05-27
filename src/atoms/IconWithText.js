@@ -58,7 +58,6 @@ const IconWithText = ({
 
 IconWithText.propTypes = {
 	circleText: PropTypes.string,
-	fill: PropTypes.string,
 	iconSize: PropTypes.number,
 	name: PropTypes.string,
 	position: PropTypes.oneOf(['right', 'left']),
@@ -69,7 +68,6 @@ IconWithText.propTypes = {
 
 IconWithText.defaultProps = {
 	circleText: '',
-	fill: 'transparent',
 	iconSize: 5,
 	name: '',
 	position: 'left',

@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const DagbladetVideoIcon = () => (
 	/* eslint-disable max-len */
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.06 65.5">
+	<Svg viewBox="0 0 269.06 65.5" stroke="none">
 		<title>Dagbladet Video</title>
 		<g>
 			<g>
@@ -51,7 +53,7 @@ const DagbladetVideoIcon = () => (
 				<path fill="#222" d="M244.74,38.84l3.94-14.28h5.91l-7.15,21.2H242l-7.16-21.2h5.92Z" />
 			</g>
 		</g>
-	</svg>
+	</Svg>
 	/* eslint-enable max-len */
 );
 

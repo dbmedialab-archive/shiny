@@ -1,8 +1,10 @@
 import React from 'react';
-import PropsTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
+import Svg from './Svg';
 
 const Difficulty = ({ value, ...rest }) => (
-	<svg width="100%" height="100%" viewBox="-10 -20 50 50" {...rest}>
+	<Svg width="100%" height="100%" viewBox="-10 -20 50 50" {...rest}>
 		<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 			<g
 				transform="translate(12.500000, 11.000000) scale(-1, 1) translate(-12.500000, -11.000000) "
@@ -39,11 +41,11 @@ const Difficulty = ({ value, ...rest }) => (
 				/>
 			</g>
 		</g>
-	</svg>
+	</Svg>
 );
 
 Difficulty.propTypes = {
-	value: PropsTypes.number.isRequired,
+	value: PropTypes.number.isRequired,
 };
 
 export default Difficulty;

@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Svg from './Svg';
+
 const TotalTime = props => (
-	<svg width="100%" height="100%" viewBox="-1 -10 50 50">
+	<Svg width="100%" height="100%" viewBox="-1 -10 50 50">
 		{/* eslint-disable max-len */}
 		<g fill="none" fillRule="evenodd">
 			<g fill="#333333">
@@ -12,7 +14,7 @@ const TotalTime = props => (
 			</g>
 		</g>
 		{/* eslint-enable max-len */}
-	</svg>
+	</Svg>
 );
 
 export default TotalTime;

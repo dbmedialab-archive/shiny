@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Gears = () => (
-	<svg
+import Svg from './Svg';
+
+const Gears = props => (
+	<Svg
 		viewBox="0 0 217.794 217.794"
 		width="100%"
 		height="100%"
+		{...props}
 	>
 		<title>Gears</title>
 		<path
@@ -64,7 +67,7 @@ const Gears = () => (
 			1.019,0.022
 			c12.844,0.551,22.846,11.448,22.295,24.292C183.898,174.511,173.106,184.497,160.157,183.953z"
 		/>
-	</svg>
+	</Svg>
 );
 
 export default Gears;
