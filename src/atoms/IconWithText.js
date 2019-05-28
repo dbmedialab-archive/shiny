@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import { getVariable } from '../utils/get-variable';
+
 import { SvgIcon } from './SvgIcon';
 
 const IconBlock = styled.div`
 	text-align: center;
-	display: inline-block;
+	margin-bottom: ${getVariable('verticalBase')};
 `;
 
 const IconText = styled.div`
