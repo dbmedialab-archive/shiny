@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { withInfo } from '@storybook/addon-info';
 import styled from '@emotion/styled';
 
@@ -12,9 +12,14 @@ const Background = styled.div`
 `;
 
 const Elbil24LogoStory = () => (
-	<Background color="primary">
-		<Elbil24Logo />
-	</Background>
+	<Fragment>
+		<Background color="primary">
+			<Elbil24Logo />
+		</Background>
+		<Background color="primary">
+			<Elbil24Logo inverted />
+		</Background>
+	</Fragment>
 );
 
 export default withInfo('Elbil24 logo.')(Elbil24LogoStory);
