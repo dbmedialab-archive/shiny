@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { withTheme } from 'emotion-theming';
 
 import { FontIcon } from './FontIcon';
 import { BorderedButton } from './BorderedButton';
@@ -39,8 +40,8 @@ const CloseButton = styled(BorderedButton)`
 	}
 `;
 
-const LogiclessModal = ({
-	isOpen, closeModal, children, title, appElement, width, zIndex,
+const LogiclessModal = withTheme(({
+	isOpen, closeModal, children, title, appElement, width, zIndex, theme: { flexboxgrid: { breakpoints: { sm } } },
 }) => {
 	const [viewPortWidth, setViewPortWidth] = useState(null);
 	Modal.setAppElement(appElement);
@@ -49,8 +50,10 @@ const LogiclessModal = ({
 		const { innerWidth } = window;
 		setViewPortWidth(innerWidth);
 	}, []);
-
-	const isMobile = viewPortWidth && viewPortWidth <= 700;
+	// The breakpoints is in em, while the window inner width we check is in px
+	// so calculate the px value of the em
+	const breakpoint = sm * 16;
+	const isSmallScreen = viewPortWidth && viewPortWidth <= breakpoint;
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -66,13 +69,13 @@ const LogiclessModal = ({
 					zIndex,
 				},
 				content: {
-					width: isMobile ? '100%' : width,
-					top: isMobile ? '0' : '50%',
-					left: isMobile ? '0' : '50%',
+					width: isSmallScreen ? '100%' : width,
+					top: isSmallScreen ? '0' : '50%',
+					left: isSmallScreen ? '0' : '50%',
 					right: 'auto',
 					bottom: 'auto',
-					marginRight: isMobile ? '0' : '50%',
-					transform: isMobile ? '' : 'translate(-50%, -50%)',
+					marginRight: isSmallScreen ? '0' : '50%',
+					transform: isSmallScreen ? '' : 'translate(-50%, -50%)',
 					maxHeight: '100vh',
 				},
 			}}
@@ -84,7 +87,7 @@ const LogiclessModal = ({
 			{children}
 		</Modal>
 	);
-};
+});
 
 LogiclessModal.displayName = 'LogiclessModal';
 
