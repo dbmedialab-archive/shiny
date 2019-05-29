@@ -6671,10 +6671,10 @@ lazy-universal-dotenv@^2.0.0:
     dotenv "^6.0.0"
     dotenv-expand "^4.2.0"
 
-lazysizes@4.1.8:
-  version "4.1.8"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.1.8.tgz#f1cb1e803f7a8441122ec1be6f7333bc8977f632"
-  integrity sha512-qxBMQZKdR3cwydyyBOoGVBtN2T1nyrozhnEstV2H3M6UE/mivSh7U+n7N7DtBV2L07Uw442QRwtwf0E2IntJZg==
+lazysizes@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.0.0.tgz#b3f14f006940085f2c56b8b0d302da9e8d4aed75"
+  integrity sha512-igrN2RCmK7YBjy6w4PfKk+lfi52VrniM0jxChsCGBs8hGNv6P1RPCvMnl4kTuWIzwnTBfPlK8krxu6Mppc9fgA==
 
 lcid@^1.0.0:
   version "1.0.0"
