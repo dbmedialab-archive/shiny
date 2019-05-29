@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
@@ -42,7 +42,15 @@ const CloseButton = styled(BorderedButton)`
 const LogiclessModal = ({
 	isOpen, closeModal, children, title, appElement, width, zIndex,
 }) => {
+	const [viewPortWidth, setViewPortWidth] = useState(null);
 	Modal.setAppElement(appElement);
+
+	useEffect(() => {
+		const { innerWidth } = window;
+		setViewPortWidth(innerWidth);
+	}, []);
+
+	const isMobile = viewPortWidth && viewPortWidth <= 700;
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -58,13 +66,14 @@ const LogiclessModal = ({
 					zIndex,
 				},
 				content: {
-					width,
-					top: '50%',
-					left: '50%',
+					width: isMobile ? '100%' : width,
+					top: isMobile ? '0' : '50%',
+					left: isMobile ? '0' : '50%',
 					right: 'auto',
 					bottom: 'auto',
-					marginRight: '-50%',
-					transform: 'translate(-50%, -50%)',
+					marginRight: isMobile ? '0' : '50%',
+					transform: isMobile ? '' : 'translate(-50%, -50%)',
+					maxHeight: '100vh',
 				},
 			}}
 		>
