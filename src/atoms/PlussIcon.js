@@ -9,19 +9,19 @@ const PlussIcon = styled.i`
 	font-style: normal;
 	vertical-align: middle;
 	color: #2D2D2D;
-	
+
 	:after {
-	content: 'pluss';
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-    line-height: 0;
-    font-size: 1.2rem;
-    position: absolute;
-	bottom: 50%;
-	left: 28%;
+		content: 'pluss';
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 0.2rem;
+		line-height: 0;
+		font-size: 1.2rem;
+		position: absolute;
+		bottom: 50%;
+		left: 28%;
 	}
-	
+
 	:before {
 		content: '+';
 		font-family: Arial, sans-serif;
