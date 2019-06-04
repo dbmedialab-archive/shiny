@@ -44,7 +44,7 @@ class SvgIcon extends React.PureComponent {
 }
 
 SvgIcon.propTypes = {
-	'set': PropTypes.oneOf(['default', 'doris']),
+	'set': PropTypes.oneOf(['default']),
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
