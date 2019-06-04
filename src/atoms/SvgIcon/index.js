@@ -4,56 +4,26 @@ import styled from '@emotion/styled';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
-const icons = {
-	'activity': () => import('./ActivityTime'),
-	'aller': () => import('./Aller'),
-	'backNav': () => import('./BackNav'),
-	'circle-with-text': () => import('./CircleWithText'),
-	'crossed-video-camera': () => import('./CrossedVideoCamera'),
-	'dagbladet': () => import('./Dagbladet'),
-	'dagbladetVideo': () => import('./DagbladetVideo'),
-	'difficulty': () => import('./Difficulty'),
-	'double-arrow': () => import('./DoubleArrow'),
-	'egg': () => import('./Egg'),
-	'exclamation-mark': () => import('./ExclamationMark'),
-	'facebook': () => import('./FaceBook'),
-	'fish': () => import('./Fish'),
-	'gears': () => import('./Gears'),
-	'gluten': () => import('./Gluten'),
-	'hamburger': () => import('./Hamburger'),
-	'kk': () => import('./KK'),
-	'laktose': () => import('./Lactose'),
-	'mail': () => import('./Mail'),
-	'not-found': () => import('./NotFound'),
-	'nut': () => import('./Nut'),
-	'oppskrift-loader': () => import('./OppskriftLoader'),
-	'oppskrift-logo': () => import('./OppskriftLogo'),
-	'oppskrift-mobile-logo': () => import('./OppskriftMobileLogo'),
-	'pinterest': () => import('./Pinterest'),
-	'play': () => import('./Play'),
-	'pork': () => import('./Pork'),
-	'skalldyr': () => import('./ShellFish'),
-	'star': () => import('./Star'),
-	'total-time': () => import('./TotalTime'),
-	'twitter': () => import('./Twitter'),
-	'user': () => import('./Avatar'),
-	'vegan': () => import('./Vegan'),
-	'vegetarian': () => import('./Vegetarian'),
-	'youtube': () => import('./YouTube'),
-	'default': () => <div />,
+const iconSets = {
+	default: () => import('./default').then(c => c.default),
 };
 
 class SvgIcon extends React.PureComponent {
 	constructor(props) {
 		super(props);
-		this.state = { module: icons.default };
+		this.state = { module: () => null };
 	}
 
 	async componentWillMount() {
 		try {
-			const { name } = this.props;
+			const { name, set } = this.props;
+
+			const resolveIconSet = iconSets[set] || iconSets.default;
+			const icons = await resolveIconSet();
+
 			const resolveIcon = icons[name] || icons.default();
 			const response = await resolveIcon();
+
 			return Promise.resolve(this.setState({ module: response.default }));
 		} catch (error) {
 			return error;
@@ -63,28 +33,28 @@ class SvgIcon extends React.PureComponent {
 	render() {
 		const { module: Icon } = this.state;
 		const {
-			size, color, className, ...rest
+			size, className, ...rest
 		} = this.props;
 		return (
-			<SvgIconWrapper size={size} size-sm={rest['size-sm']} color={color} className={className}>
-				{ Icon ? <Icon {...this.props} /> : icons.default}
+			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
+				<Icon {...rest} />
 			</SvgIconWrapper>
 		);
 	}
 }
 
 SvgIcon.propTypes = {
+	'set': PropTypes.oneOf(['default']),
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
-	'color': PropTypes.string,
 	'className': PropTypes.string,
 };
 SvgIcon.defaultProps = {
+	'set': 'default',
 	'size': 3.2,
 	'size-sm': null,
 	'name': '',
-	'color': undefined,
 	'className': '',
 };
 
