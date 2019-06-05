@@ -1,12 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withTheme } from 'emotion-theming';
 
-const Svg = props => (<svg
-	fill="none"
-	stroke="#485D7B"
-	strokeLinecap="round"
-	strokeLinejoin="round"
-	strokeMiterlimit={10}
-	{...props}
-/>);
+import { getColor } from '../../../utils/get-color';
 
-export default Svg;
+const Svg = ({ color, ...rest }) => {
+	const stroke = getColor(color)(rest);
+
+	return (<svg
+		fill="none"
+		stroke={stroke}
+		strokeLinecap="round"
+		strokeLinejoin="round"
+		strokeMiterlimit={10}
+		{...rest}
+	/>);
+};
+Svg.propTypes = {
+	color: PropTypes.string,
+};
+Svg.defaultProps = {
+	color: 'splashBackground',
+};
+
+export default withTheme(Svg);
