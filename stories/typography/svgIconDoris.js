@@ -78,15 +78,15 @@ export default () => (
 			<Col xs={12}>
 				<SmallHeading>Diverse</SmallHeading>
 			</Col>
-			<Col xs={2}><IconWithText set="doris" name="sok" text="sok" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="search" text="search" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="trash" text="trash" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="verticalEllipse" text="verticalEllipse" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="horizontalEllipse" text="horizontalEllipse" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="vertical-ellipse" text="vertical-ellipse" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="horizontal-ellipse" text="horizontal-ellipse" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="ellipse" text="ellipse" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="bookmark" text="bookmark" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="del" text="del" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="sisteNytt" text="sisteNytt" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="lignendeSaker" text="lignendeSaker" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="share" text="share" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="breaking" text="breaking" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="similar-stories" text="similar-stories" /></Col>
 		</Row>
 
 		<Row>
@@ -95,47 +95,46 @@ export default () => (
 			</Col>
 			<Col xs={2}><IconWithText set="doris" name="home" text="home" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="heart" text="heart" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="myFeed" text="myFeed" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="my-feed" text="my-feed" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="category" text="category" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="categoryIcon" text="categoryIcon" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Settings" text="Settings" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="settings" text="settings" /></Col>
 		</Row>
 
 		<Row>
 			<Col xs={12}>
 				<SmallHeading>Categories</SmallHeading>
 			</Col>
-			<Col xs={2}><IconWithText set="doris" name="Anbefalt" text="Anbefalt" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Bolig" text="Bolig" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Forbrukertester" text="Forbrukertester" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Helse" text="Helse" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Horoskop" text="Horoskop" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Mat" text="Mat" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Medalje" text="Medalje" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Meninger" text="Meninger" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Motor" text="Motor" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Nyheter" text="Nyheter" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="OLRinger" text="OLRinger" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Politikk" text="Politikk" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Quiz" text="Quiz" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Reise" text="Reise" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Sport" text="Sport" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Underholdning" text="Underholdning" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Utenriks" text="Utenriks" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Økonomi" text="Økonomi" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="recommendation" text="recommendation" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="home-alt" text="home-alt" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="review" text="review" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="health" text="health" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="horoscope" text="horoscope" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="food" text="food" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="medal" text="medal" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="opinion" text="opinion" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="motor" text="motor" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="news" text="news" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="olympic-rings" text="olympic-rings" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="politics" text="politics" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="quiz" text="quiz" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="travel" text="travel" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="sports" text="sports" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="entertainment" text="entertainment" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="world" text="world" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="finance" text="finance" /></Col>
 		</Row>
 
 		<Row>
 			<Col xs={12}>
 				<SmallHeading>Innstillingssiden</SmallHeading>
 			</Col>
-			<Col xs={2}><IconWithText set="doris" name="Andreinnstillinger" text="Andreinnstillinger" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="MinProfil" text="MinProfil" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Personvern" text="Personvern" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Posisjon" text="Posisjon" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Tilbakemeldinger" text="Tilbakemeldinger" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="Varsler" text="Varsler" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="iBrowser" text="iBrowser" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="settings-alt" text="settings-alt" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="profile" text="profile" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="privacy" text="privacy" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="position" text="position" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="feedback" text="feedback" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="notification" text="notification" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="new-tab" text="new-tab" /></Col>
 		</Row>
 	</section>
 );
