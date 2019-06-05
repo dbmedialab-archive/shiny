@@ -95,7 +95,6 @@ export default () => (
 			</Col>
 			<Col xs={2}><IconWithText set="doris" name="home" text="home" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="heart" text="heart" /></Col>
-			<Col xs={2}><IconWithText set="doris" name="my-feed" text="my-feed" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="category" text="category" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="settings" text="settings" /></Col>
 		</Row>

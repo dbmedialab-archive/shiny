@@ -13,7 +13,6 @@ const dorisIcons = {
 	// tabNav
 	'home': () => import('./Home'),
 	'heart': () => import('./Heart'),
-	'my-feed': () => import('./Heart'),
 	'category': () => import('./Category'),
 	'settings': () => import('./Settings'),
 
