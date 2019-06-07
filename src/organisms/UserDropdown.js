@@ -97,13 +97,13 @@ const UserDropDown = ({ user, uiSize, ...rest }) => {
 				lineHeight={lineHeight}
 				fontSize={fontSize}
 				linkText="Min Side"
-				url="//www.dagbladet.no/app/minside-front"
+				url="/app/minside"
 			/>
 			<LinkBarButtonProfile
 				{...linkProps}
 				lineHeight={lineHeight}
 				fontSize={fontSize}
-				url="//www.dagbladet.no/app/dug/v1/client/logout"
+				url="/app/dug/v1/client/logout"
 			>
 				<SpanWithAIDIcon>Logg Ut</SpanWithAIDIcon>
 			</LinkBarButtonProfile>
