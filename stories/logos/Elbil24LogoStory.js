@@ -13,11 +13,11 @@ const Background = styled.div`
 
 const Elbil24LogoStory = () => (
 	<Fragment>
-		<Background color="grayTint">
+		<Background color="primary">
 			<Elbil24Logo />
 		</Background>
 		<Background color="primary">
-			<Elbil24Logo pro />
+			<Elbil24Logo inverted />
 		</Background>
 	</Fragment>
 );

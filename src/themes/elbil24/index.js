@@ -3,12 +3,13 @@ import { cssReset } from '../../utils/css-reset';
 import colors from './colors';
 
 const variables = {
-	mainFont: "'Barlow', helvetica, arial, sans-serif",
-	headingsFont: "'Barlow', helvetica, arial, sans-serif",
+	mainFont: "'Barlow', sans-serif",
+	headingsFont: "'Barlow', sans-serif",
+	uiWeightBold: 800,
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800');
+	@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800,800i');
 
 	${cssReset}
 `;

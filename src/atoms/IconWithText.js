@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import { getVariable } from '../utils/get-variable';
+
 import { SvgIcon } from './SvgIcon';
 
 const IconBlock = styled.div`
 	text-align: center;
-	display: inline-block;
+	margin-bottom: ${getVariable('verticalBase')};
 `;
 
 const IconText = styled.div`
@@ -33,13 +35,13 @@ const IconTextRight = styled.div`
 `;
 
 const IconWithText = ({
-	text, iconSize, textSize, circleText, position, fill, textColor, ...rest
+	text, iconSize, textSize, circleText, position, textColor, ...rest
 }) => {
 	switch (position) {
 	case 'right':
 		return (
 			<IconBlockTextRight>
-				<SvgIcon size={iconSize} {...rest} text={circleText || text} fill={fill} textColor={textColor} />
+				<SvgIcon size={iconSize} {...rest} text={circleText || text} textColor={textColor} />
 				<IconTextRight textSize={textSize}>{text}</IconTextRight>
 			</IconBlockTextRight>
 		);
@@ -47,7 +49,7 @@ const IconWithText = ({
 	default:
 		return (
 			<IconBlock>
-				<SvgIcon size={iconSize} {...rest} text={circleText || text} fill={fill} />
+				<SvgIcon size={iconSize} {...rest} text={circleText || text} />
 				<IconText textSize={textSize}>{text}</IconText>
 			</IconBlock>
 		);
@@ -56,7 +58,6 @@ const IconWithText = ({
 
 IconWithText.propTypes = {
 	circleText: PropTypes.string,
-	fill: PropTypes.string,
 	iconSize: PropTypes.number,
 	name: PropTypes.string,
 	position: PropTypes.oneOf(['right', 'left']),
@@ -67,7 +68,6 @@ IconWithText.propTypes = {
 
 IconWithText.defaultProps = {
 	circleText: '',
-	fill: 'transparent',
 	iconSize: 5,
 	name: '',
 	position: 'left',

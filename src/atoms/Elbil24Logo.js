@@ -1,6 +1,6 @@
-import React  from 'react';
-import styled from '@emotion/styled';
+import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 import { getColor } from '../utils';
 
@@ -8,11 +8,11 @@ const Svg = styled.svg`
   box-sizing: border-box;
 	
 	& .primary {
-		fill: ${props => (props.pro ? getColor('white') : getColor('secondary'))}
+		fill: ${props => (props.inverted ? getColor('secondary') : getColor('white'))}
 	}
 
 	& .secondary {
-		fill: ${props => (props.pro ?getColor('secondary') : getColor('white'))}
+		fill: ${props => (props.inverted ?getColor('white') : getColor('secondary'))}
 	}
 `;
 
@@ -67,12 +67,11 @@ const Elbil24Logo = props => (
 Elbil24Logo.displayName = 'Elbil24Logo';
 
 Elbil24Logo.propTypes = {
-	pro: PropTypes.bool,
+	inverted: PropTypes.bool,
 };
 
 Elbil24Logo.defaultProps = {
-	pro: false,
+	inverted: false,
 };
-
 
 export { Elbil24Logo };
