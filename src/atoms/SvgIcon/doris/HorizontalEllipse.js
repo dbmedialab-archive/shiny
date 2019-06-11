@@ -3,10 +3,10 @@ import React from 'react';
 import Svg from './Svg';
 
 const HorizontalEllipse = props => (
-	<Svg viewBox="0 0 36 9" fillRule="nonzero" {...props}>
-		<circle cx="4.5" cy="4.5" r="4.5" />
-		<circle cx="17.5" cy="4.5" r="4.5" />
-		<circle cx="31.5" cy="4.5" r="4.5" />
+	<Svg {...props}>
+		<circle cx="4.7" cy="16" r="3.8" />
+		<circle cx="16.5" cy="16" r="3.8" />
+		<circle cx="28.3" cy="16" r="3.8" />
 	</Svg>
 );
 

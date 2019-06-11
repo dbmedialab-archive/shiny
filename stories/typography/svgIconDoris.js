@@ -84,7 +84,6 @@ export default () => (
 			<Col xs={2}><IconWithText set="doris" name="document-alt" text={<><div>document-alt</div><div>newspaper</div><div>news</div></>} /></Col>
 			<Col xs={2}><IconWithText set="doris" name="document" text={<><div>document</div><div>privacy</div></>} /></Col>
 			<Col xs={2}><IconWithText set="doris" name="documents" text={<><div>documents</div><div>copy</div><div>similar-stories</div></>} /></Col>
-			<Col xs={2}><IconWithText set="doris" name="ellipse" text="ellipse" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="food" text="food" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="gear" text={<><div>gear</div><div>settings</div></>} /></Col>
 			<Col xs={2}><IconWithText set="doris" name="globe" text={<><div>globe</div><div>world</div></>} /></Col>
@@ -95,9 +94,11 @@ export default () => (
 			<Col xs={2}><IconWithText set="doris" name="home" text="home" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="horizontal-ellipse" text="horizontal-ellipse" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="horoscope" text="horoscope" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="lightning" text="lightning" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="magnifier" text={<><div>magnifier</div><div>magnifying-glass</div><div>search</div></>} /></Col>
 			<Col xs={2}><IconWithText set="doris" name="medal" text="medal" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="new-tab" text="new-tab" /></Col>
+			<Col xs={2}><IconWithText set="doris" name="olympic-flame" text="olympic-flame" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="olympic-rings" text="olympic-rings" /></Col>
 			<Col xs={2}><IconWithText set="doris" name="pin" text={<><div>pin</div><div>position</div></>} /></Col>
 			<Col xs={2}><IconWithText set="doris" name="running" text={<><div>running</div><div>athletics</div><div>exit</div><div>sports</div></>} /></Col>

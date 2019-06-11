@@ -8,8 +8,10 @@ const Svg = ({ color, ...rest }) => {
 	const stroke = getColor(color)(rest);
 
 	return (<svg
+		viewBox="0 0 33 33"
 		fill="none"
 		stroke={stroke}
+		strokeWidth={1.5}
 		strokeLinecap="round"
 		strokeLinejoin="round"
 		strokeMiterlimit={10}

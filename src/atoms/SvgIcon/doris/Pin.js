@@ -3,10 +3,11 @@ import React from 'react';
 import Svg from './Svg';
 
 const Position = props => (
-	<Svg viewBox="0 0 32 33" {...props}>
-		<rect fill="none" stroke="none" x="0" y="0" width="33" height="34" />
-		<path d="M26.3,11.5 C26.3,12.1 26.2,12.8 26.1,13.4 C25.3,17.7 22.7,21.8 20.5,25.6 C19.2,27.9 16.4,32.4 16.4,32.4 C16.4,32.4 13.5,27.7 13.2,27.3 C11.4,24.3 9.7,21.2 8.2,18 C6.6,14.2 5.6,10.3 7.7,6.6 C9.5,3.5 12.9,1.5 16.4,1.5 C22.1,1.5 26.4,6.2 26.3,11.5 Z" strokeLinecap="round" strokeLinejoin="round" />
-		<circle strokeLinecap="round" strokeLinejoin="round" cx="16.4" cy="11.8" r="5.2" />
+	<Svg {...props}>
+		<path
+			d="M25.9,11.1c0,0.6-0.1,1.3-0.2,1.9c-0.8,4.3-3.4,8.4-5.6,12.2c-1.3,2.3-4.1,6.8-4.1,6.8s-2.9-4.7-3.2-5.1 c-1.8-3-3.5-6.1-5-9.3C6.2,13.8,5.2,9.9,7.3,6.2c1.8-3.1,5.2-5.1,8.7-5.1C21.7,1.1,26,5.8,25.9,11.1z"
+		/>
+		<circle cx="16" cy="11.4" r="5.2" />
 	</Svg>
 );
 
