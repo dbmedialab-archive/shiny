@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Privacy = props => (
+const Document = props => (
 	<Svg {...props}>
 		<path d="M6.4,27.5V0.9h23.8v27.4c0,2.1-1.7,3.9-3.9,3.9H6.4" />
 		<path
@@ -18,4 +18,4 @@ const Privacy = props => (
 	</Svg>
 );
 
-export default Privacy;
+export default Document;

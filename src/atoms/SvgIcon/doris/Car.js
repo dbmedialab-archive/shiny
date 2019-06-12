@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Motor = props => (
+const Car = props => (
 	<Svg {...props}>
 		<path d="M5.2,13.9l0.4-1.6l1.5-5.7c0,0,3.9-1.4,9.3-1.4c0.1,0,0.1,0,0.2,0" />
 		<path d="M16.6,25h-0.2H8H2.4v-6.6c0-1.2,0.4-2.3,1.1-3.2c0.9-1.1,2.3-1.8,3.9-1.8h9h0.2" />
@@ -19,4 +19,4 @@ const Motor = props => (
 	</Svg>
 );
 
-export default Motor;
+export default Car;

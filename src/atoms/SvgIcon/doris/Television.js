@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Entertainment = props => (
+const Television = props => (
 	<Svg {...props}>
 		<path
 			d="M22.5,27.3H6.4c-0.8,0-1.4-0.6-1.4-1.4V13.7c0-0.8,0.6-1.4,1.4-1.4h16.3c0.8,0,1.4,0.6,1.4,1.4V26 C24.1,26.7,23.4,27.3,22.5,27.3z"
@@ -18,4 +18,4 @@ const Entertainment = props => (
 	</Svg>
 );
 
-export default Entertainment;
+export default Television;

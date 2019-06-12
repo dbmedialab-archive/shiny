@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Politics = props => (
+const Scale = props => (
 	<Svg {...props}>
 		<line x1="16.5" y1="27.8" x2="16.5" y2="2.3" />
 		<line x1="1.2" y1="6.4" x2="31.9" y2="6.4" />
@@ -14,4 +14,4 @@ const Politics = props => (
 	</Svg>
 );
 
-export default Politics;
+export default Scale;

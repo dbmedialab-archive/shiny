@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const InBrowser = props => (
+const NewTab = props => (
 	<Svg viewBox="0 0 31 26" {...props}>
 		<line x1="0.5" y1="8.9" x2="0.5" y2="0.5" />
 		<polyline points="29.6,0.5 29.6,24.7 16.6,24.7 " />
@@ -13,4 +13,4 @@ const InBrowser = props => (
 	</Svg>
 );
 
-export default InBrowser;
+export default NewTab;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const News = props => (
+const DocumentAlt = props => (
 	<Svg {...props}>
 		<path d="M3.3,14.3H0.9v12.8c0,1.5,1.2,2.8,2.8,2.8h25.7c1.5,0,2.8-1.2,2.8-2.8v-24H3.3V14.3v10.9" />
 		<line x1="6.6" y1="7.5" x2="28.4" y2="7.5" />
@@ -15,4 +15,4 @@ const News = props => (
 	</Svg>
 );
 
-export default News;
+export default DocumentAlt;

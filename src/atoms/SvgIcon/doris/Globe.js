@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Utenriks = props => (
+const Globe = props => (
 	<Svg {...props}>
 		<circle cx="16.5" cy="16.5" r="14.9" />
 		<path
@@ -16,4 +16,4 @@ const Utenriks = props => (
 	</Svg>
 );
 
-export default Utenriks;
+export default Globe;

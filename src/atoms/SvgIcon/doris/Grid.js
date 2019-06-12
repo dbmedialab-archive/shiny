@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Category = props => (
+const Grid = props => (
 	<Svg {...props}>
 		<path
 			d="M12.4,14H3c-0.8,0-1.5-0.6-1.5-1.5V3.1c0-0.8,0.6-1.5,1.5-1.5h9.4c0.8,0,1.5,0.6,1.5,1.5v9.4 C13.9,13.4,13.2,14,12.4,14z"
@@ -19,4 +19,4 @@ const Category = props => (
 	</Svg>
 );
 
-export default Category;
+export default Grid;

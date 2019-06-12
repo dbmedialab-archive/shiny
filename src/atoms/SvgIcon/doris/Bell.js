@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Notifications = props => (
+const Bell = props => (
 	<Svg {...props}>
 		<path d="M7.9,12c0-4.8,3.8-8.6,8.6-8.6S25,7.3,25,12v12.5H7.9V12" />
 		<rect x="4.6" y="24.5" width="23.8" height="4.4" />
@@ -11,4 +11,4 @@ const Notifications = props => (
 	</Svg>
 );
 
-export default Notifications;
+export default Bell;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Economy = props => (
+const Coins = props => (
 	<Svg {...props}>
 		<ellipse cx="20.3" cy="6" rx="11.6" ry="4.9" />
 		<path d="M17.9,16.6c0.8,0.1,1.5,0.1,2.4,0.1c3.9,0,7.3-0.9,9.5-2c1.4-0.9,2.3-1.8,2.3-2.9" />
@@ -22,4 +22,4 @@ const Economy = props => (
 	</Svg>
 );
 
-export default Economy;
+export default Coins;

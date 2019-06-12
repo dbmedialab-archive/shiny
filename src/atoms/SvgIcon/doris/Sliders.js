@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const SettingsAlt = props => (
+const Sliders = props => (
 	<Svg {...props}>
 		<circle cx="25.7" cy="5.7" r="4" />
 		<circle cx="25.7" cy="27" r="4" />
@@ -16,4 +16,4 @@ const SettingsAlt = props => (
 	</Svg>
 );
 
-export default SettingsAlt;
+export default Sliders;

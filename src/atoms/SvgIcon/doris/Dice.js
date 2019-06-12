@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Forbrukertester = props => (
+const Dice= props => (
 	<Svg {...props}>
 		<path
 			d="M30.6,31.7H2.4c-0.6,0-1.1-0.5-1.1-1.1V2.4c0-0.6,0.5-1.1,1.1-1.1h28.2c0.6,0,1.1,0.5,1.1,1.1v28.2
@@ -16,4 +16,4 @@ const Forbrukertester = props => (
 	</Svg>
 );
 
-export default Forbrukertester;
+export default Dice;

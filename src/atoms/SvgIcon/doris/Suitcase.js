@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Travel = props => (
+const Suitcase = props => (
 	<Svg {...props}>
 		<path d="M23.2,31H4.5c-1.7,0-3.1-1.6-3.1-3.5V10.2c0-1.9,1.4-3.5,3.1-3.5h23.9c1.7,0,3.1,1.6,3.1,3.5v17.4v0 c0,1.9-1.5,3.4-3.4,3.4H23.2z" />
 		<path d="M9.8,6.7V4.1c0-1.2,1-2.1,2.1-2.1h9.3c1.2,0,2.1,1,2.1,2.1v2.6v4.9" />
@@ -11,4 +11,4 @@ const Travel = props => (
 	</Svg>
 );
 
-export default Travel;
+export default Suitcase;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Svg from './Svg';
 
-const Bolig = props => (
+const HomeAlt = props => (
 	<Svg {...props}>
 		<rect x="3.3" y="16.8" width="26.4" height="14.2" />
 		<polygon points="29,7.1 26,7.1 6.9,7.1 3.9,7.1 0.8,16.8 6.9,16.8 26,16.8 32.2,16.8 " />
@@ -12,4 +12,4 @@ const Bolig = props => (
 	</Svg>
 );
 
-export default Bolig;
+export default HomeAlt;
