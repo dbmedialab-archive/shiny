@@ -16,30 +16,15 @@ export default () => (
 			<Col xs={12}>
 				<HugeHeading>SvgIcon</HugeHeading>
 				<Paragraph>The Dorris iconset, designed by Liselotte Hauer Kind at Aller Media.</Paragraph>
-				{/*
 				<SmallHeading>Usage</SmallHeading>
 				<Code language="jsx">
 					{`
-						import { SvgIcon } from '@aller/shiny';
+import { SvgIcon } from '@aller/shiny';
 
-						<SvgIcon name="nut" size={5} />
+<SvgIcon name="bell" set="dorris" size={5} color="primary" />
 					`}
 				</Code>
-				<Code language="jsx">
-					{`
-						import { SvgIcon } from '@aller/shiny';
 
-						<SvgIcon name="difficulty" value={1} size={5} />
-					`}
-				</Code>
-				<Code language="jsx">
-					{`
-						import { SvgIcon } from '@aller/shiny';
-
-						<SvgIcon color="primary" name="exclamation-mark" value={1} size={5} />
-					`}
-				</Code>
-				*/}
 				<SmallHeading>Props</SmallHeading>
 				<table>
 					<thead>
@@ -59,11 +44,25 @@ export default () => (
 							<td>string</td>
 						</tr>
 						<tr>
+							<td>set</td>
+							<td>Which icon set to use</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"default"</td>
+						</tr>
+						<tr>
 							<td>size</td>
 							<td>The size of the Icon in rem</td>
 							<td>optional</td>
 							<td>int</td>
 							<td>5</td>
+						</tr>
+						<tr>
+							<td>color</td>
+							<td>Which color to use.</td>
+							<td>optional</td>
+							<td>A valid theme color name (string)</td>
+							<td>"splashBackground"</td>
 						</tr>
 					</tbody>
 				</table>

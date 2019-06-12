@@ -57,6 +57,13 @@ export default () => (
 							<td>string</td>
 						</tr>
 						<tr>
+							<td>set</td>
+							<td>Which icon set to use</td>
+							<td>optional</td>
+							<td>string</td>
+							<td>"default"</td>
+						</tr>
+						<tr>
 							<td>size</td>
 							<td>The size of the Icon in rem</td>
 							<td>optional</td>
