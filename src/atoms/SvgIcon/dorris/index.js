@@ -1,4 +1,4 @@
-const dorisIcons = {
+const dorrisIcons = {
 	'bell': () => import('./Bell'),
 	'bookmark': () => import('./Bookmark'),
 	'car': () => import('./Car'),
@@ -86,4 +86,4 @@ const dorisIcons = {
 	'new-tab': () => import('./NewTab'),
 };
 
-export default dorisIcons;
+export default dorrisIcons;

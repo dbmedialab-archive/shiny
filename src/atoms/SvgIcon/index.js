@@ -6,7 +6,7 @@ import { SvgIconWrapper } from './SvgIconWrapper';
 
 const iconSets = {
 	default: () => import('./default').then(c => c.default),
-	doris: () => import('./doris').then(c => c.default),
+	dorris: () => import('./dorris').then(c => c.default),
 };
 
 class SvgIcon extends React.PureComponent {
@@ -45,7 +45,7 @@ class SvgIcon extends React.PureComponent {
 }
 
 SvgIcon.propTypes = {
-	'set': PropTypes.oneOf(['default', 'doris']),
+	'set': PropTypes.oneOf(['default', 'dorris']),
 	'size': PropTypes.number,
 	'size-sm': PropTypes.number,
 	'name': PropTypes.string,
