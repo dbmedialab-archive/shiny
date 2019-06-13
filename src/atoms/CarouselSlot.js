@@ -10,6 +10,7 @@ export const CarouselSlot = styled(Col)`
 		const marginRight = (!props.vertical) ? `calc(1/2 * ${horizontalBase})` : '0';
 
 		return css`
+			position: relative;
 			margin-right: ${marginRight};
 			padding: 0;
 			&& > * {
