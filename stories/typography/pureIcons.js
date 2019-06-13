@@ -3,7 +3,7 @@ import React from 'react';
 import { Code } from '../../src/atoms/Code';
 
 import {
-	Arrow, Cross, PlussIcon, Heading, Paragraph,
+	Arrow, Cross, Heading, Paragraph,
 } from '../../src';
 
 export default () => (
@@ -15,7 +15,6 @@ export default () => (
 		<Paragraph>Down Arrow: <Arrow direction="down" /></Paragraph>
 
 		<Paragraph>Close icon: <Cross /></Paragraph>
-		<Paragraph>Pluss icon: <PlussIcon /></Paragraph>
 		<Heading>Usage</Heading>
 		<Code language="jsx">{`
 			import { Arrow } from '@aller/shiny';
@@ -36,8 +35,6 @@ export default () => (
 			size: number;
 			layer: thickness of arrow | number;
 			color: color from themes | string;
-
-			import { PlussIcon } from '@aller/shiny';
 		`}
 		</Code>
 	</section>

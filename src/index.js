@@ -133,7 +133,7 @@ export {
 	XLargePlugHeading,
 	HugePlugHeading,
 }                                  from './atoms/PlugHeading';
-export { PlussIcon               } from './atoms/PlussIcon';
+export { PlussLabel               } from './atoms/PlussLabel';
 export { PublishedDate           } from './atoms/PublishedDate';
 export { Quote                   } from './atoms/Quote';
 export {

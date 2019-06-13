@@ -1,14 +1,16 @@
 import styled from '@emotion/styled';
 
-const PlussIcon = styled.i`
+const PlussLabel = styled.i`
 	width: 7rem;
 	height: 2rem;
-	position: relative;
 	background-color: #FFFFFF;
 	display: inline-block;
 	font-style: normal;
 	vertical-align: middle;
 	color: #2D2D2D;
+	position: ${p => (p.absolute ? 'absolute' : 'relative')};
+	top: ${p => p.top};
+	left: ${p => p.left};
 
 	:after {
 		content: 'pluss';
@@ -33,4 +35,4 @@ const PlussIcon = styled.i`
 	}
 `;
 
-export { PlussIcon };
+export { PlussLabel };
