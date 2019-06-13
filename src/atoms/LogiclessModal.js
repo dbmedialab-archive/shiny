@@ -82,7 +82,7 @@ const LogiclessModal = withTheme(({
 		>
 			<Header>
 				<Heading>{title}</Heading>
-				<CloseButton onClick={closeModal}><FontIcon name="close" size={1.8} /> LUKK</CloseButton>
+				<CloseButton onClick={closeModal}><FontIcon name="close" size={1.8} verticallyAligned /> LUKK</CloseButton>
 			</Header>
 			{children}
 		</Modal>

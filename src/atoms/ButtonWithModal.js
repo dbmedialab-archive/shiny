@@ -36,6 +36,8 @@ class ButtonWithModal extends Component {
 		this.state = {
 			modalIsOpen: false,
 		};
+
+		this.toggleModal = this.toggleModal.bind(this);
 	}
 
 	componentDidMount() {
@@ -66,7 +68,7 @@ class ButtonWithModal extends Component {
 		return (
 			<React.Fragment>
 				<Button onClick={this.toggleModal}>
-					<FontIcon name={icon} size="2" />
+					<FontIcon name={icon} size="2" verticallyAligned />
 					{text}
 				</Button>
 				<Modal

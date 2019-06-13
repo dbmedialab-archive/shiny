@@ -51,13 +51,6 @@ const Button = styled.button`
 			color: ${calculateTextColorFromName(props.background, props)};
 		}
 	`}
-
-	& span {
-		font-size: 2.048rem;
-		line-height: 0;
-		position: relative;
-		top: 0.48rem;
-	}
 `;
 
 Button.defaultProps = {
