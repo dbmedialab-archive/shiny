@@ -5,7 +5,6 @@ import { getColor, getVariable, calculateTextColorFromName } from '../utils';
 
 const Button = styled.button`
 	letter-spacing: .1rem;
-	text-transform: uppercase;
 	background-color: ${props => getColor(props.background)};
 	border-color: #bdbdbd;
 	color: ${props => (props.textColor
@@ -64,9 +63,8 @@ Button.defaultProps = {
 	background: 'grayTintLight',
 	textColor: null,
 	borderRadius: 0,
-	ALLCAPS: false,
+	ALLCAPS: true,
 };
-
 
 Button.propTypes = {
 	background: PropTypes.string,
