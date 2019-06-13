@@ -183,8 +183,6 @@ TrysilPlug.propTypes = {
 	}),
 	/** Disable the blur effect on lazily loaded images */
 	preventBlur: PropTypes.bool,
-	displayPlayIcon: PropTypes.bool,
-	playIconColor: PropTypes.string,
 };
 TrysilPlug.defaultProps = {
 	attributes: {},
@@ -205,8 +203,6 @@ TrysilPlug.defaultProps = {
 	headingProps: {},
 	preventBlur: false,
 	placeholderUrl: '',
-	displayPlayIcon: false,
-	playIconColor: 'primary',
 };
 
 export { TrysilPlug };
