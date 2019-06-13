@@ -43,7 +43,7 @@ const Icon = styled.span`
 	${props => props.verticallyAligned && css`
 			vertical-align: middle;
 			display: inline-block;
-			transform: translateY(-0.15em); // compensating offset at the top of Helveticons
+			transform: translateY(-0.12em); // compensating offset at the top of Helveticons
 	`}
 
 	&::before {
