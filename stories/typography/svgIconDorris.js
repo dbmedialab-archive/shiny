@@ -84,7 +84,7 @@ import { SvgIcon } from '@aller/shiny';
 			<Col xs={2}><IconWithText set="dorris" name="document" text={<><div>document</div><div>privacy</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="documents" text={<><div>documents</div><div>copy</div><div>similar-stories</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="food" text="food" /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="gear" text={<><div>gear</div><div>settings</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="gear" text={<><div>gear</div><div>cog</div><div>settings</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="globe" text={<><div>globe</div><div>world</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="grid" text={<><div>grid</div><div>categories</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="heart-line" text={<><div>heart-line</div><div>cardio</div><div>health</div></>} /></Col>
@@ -96,9 +96,9 @@ import { SvgIcon } from '@aller/shiny';
 			<Col xs={2}><IconWithText set="dorris" name="lightning" text="lightning" /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="magnifier" text={<><div>magnifier</div><div>magnifying-glass</div><div>search</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="medal" text="medal" /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="new-tab" text="new-tab" /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="olympic-flame" text="olympic-flame" /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="olympic-rings" text="olympic-rings" /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="new-tab" text={<><div>new-tab</div><div>external-link</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="olympic-flame" text={<><div>olympic-flame</div><div>olympics-alt</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="olympic-rings" text={<><div>olympic-rings</div><div>olympics</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="pin" text={<><div>pin</div><div>position</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="running" text={<><div>running</div><div>athletics</div><div>exit</div><div>sports</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="scale" text={<><div>scale</div><div>politics</div></>} /></Col>
