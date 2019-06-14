@@ -80,15 +80,15 @@ import { SvgIcon } from '@aller/shiny';
 			<Col xs={2}><IconWithText set="dorris" name="coins" text={<><div>coins</div><div>money</div><div>finance</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="concentric-circles" text={<><div>concentric-circles</div><div>breaking</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="dice" text={<><div>dice</div><div>review</div></>} /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="document-alt" text={<><div>document-alt</div><div>newspaper</div><div>news</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="document" text={<><div>document</div><div>privacy</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="document-alt" text={<><div>document-alt</div><div>newspaper</div><div>news</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="documents" text={<><div>documents</div><div>copy</div><div>similar-stories</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="food" text="food" /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="gear" text={<><div>gear</div><div>cog</div><div>settings</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="globe" text={<><div>globe</div><div>world</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="grid" text={<><div>grid</div><div>categories</div></>} /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="heart-line" text={<><div>heart-line</div><div>cardio</div><div>health</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="heart" text={<><div>heart</div><div>favorite</div><div>favourite</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="heart-line" text={<><div>heart-line</div><div>cardio</div><div>health</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="home-alt" text="home-alt" /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="home" text="home" /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="horizontal-ellipse" text="horizontal-ellipse" /></Col>
@@ -105,8 +105,8 @@ import { SvgIcon } from '@aller/shiny';
 			<Col xs={2}><IconWithText set="dorris" name="share" text="share" /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="silhouette" text={<><div>silhouette</div><div>user</div><div>profile</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="sliders" text={<><div>sliders</div><div>settings-alt</div></>} /></Col>
-			<Col xs={2}><IconWithText set="dorris" name="speech-bubble-question" text={<><div>speech-bubble-question</div><div>question</div><div>quiz</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="speech-bubble" text={<><div>speech-bubble</div><div>comment</div><div>opinion</div></>} /></Col>
+			<Col xs={2}><IconWithText set="dorris" name="speech-bubble-question" text={<><div>speech-bubble-question</div><div>question</div><div>quiz</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="speech-bubbles" text={<><div>speech-bubbles</div><div>comments</div><div>feedback</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="star" text={<><div>star</div><div>recommendation</div></>} /></Col>
 			<Col xs={2}><IconWithText set="dorris" name="suitcase" text={<><div>suitcase</div><div>travel</div></>} /></Col>
