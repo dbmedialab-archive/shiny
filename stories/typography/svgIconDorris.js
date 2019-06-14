@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/no-unescaped-entities, max-len */
 import React from 'react';
 
 import { Code } from '../../src/atoms/Code';
