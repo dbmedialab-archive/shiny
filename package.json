@@ -27,7 +27,7 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.4.4",
+    "@babel/runtime": "7.4.5",
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.10",
     "@maji/react-prism": "1.0.1",
