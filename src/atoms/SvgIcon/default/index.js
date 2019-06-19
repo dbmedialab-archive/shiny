@@ -34,6 +34,7 @@ const defaultIconSet = {
 	'vegan': () => import('./Vegan'),
 	'vegetarian': () => import('./Vegetarian'),
 	'youtube': () => import('./YouTube'),
+	'no-sound': () => import('./NoSound'),
 	'default': () => null,
 };
 
