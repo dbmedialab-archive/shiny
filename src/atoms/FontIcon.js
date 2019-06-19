@@ -40,6 +40,12 @@ const Icon = styled.span`
 		font-size: ${props.size}rem;
 	`}
 
+	${props => props.verticallyAligned && css`
+			vertical-align: middle;
+			display: inline-block;
+			transform: translateY(-0.12em); // compensating offset at the top of Helveticons
+	`}
+
 	&::before {
 		content: "${(props) => {
 		switch (props.name) {
