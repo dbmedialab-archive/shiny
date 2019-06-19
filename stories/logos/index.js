@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react';
 import { StorybookPaddedGrid } from '../../src/storybook-decorators/PaddedGrid';
 
 import { ShinyStory } from './ShinyStory';
-import { SeHerStory } from './SeHerStory';
+import SeHerStory from './SeHerStory';
 import { DagbladetStory } from './DagbladetStory';
 import { KKStory } from './KKStory';
 import AllerStory from './AllerStory';
