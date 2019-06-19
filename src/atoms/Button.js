@@ -63,7 +63,7 @@ Button.defaultProps = {
 	background: 'grayTintLight',
 	textColor: null,
 	borderRadius: 0,
-	ALLCAPS: true,
+	ALLCAPS: false,
 };
 
 Button.propTypes = {
