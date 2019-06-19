@@ -192,6 +192,9 @@ export default () => (
 			<Col xs={2}>
 				<IconWithText color="primary" name="gears" text="gears" iconSize={5} />
 			</Col>
+			<Col xs={2}>
+				<IconWithText name="no-sound" text="no sound" />
+			</Col>
 		</Row>
 	</section>
 );
