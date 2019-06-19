@@ -61,7 +61,9 @@ export default withInfo({
 <p>
 	A basic plug for linking to stuff we want readers to click on.
 	Written with front page links to news articles in mind. Maybe also suitable for commercial plugs or similar.
+</p>
 
+<p>
 	This specific plug is a column disguised as an article tag.
 </p>
 
