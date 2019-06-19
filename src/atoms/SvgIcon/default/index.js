@@ -32,6 +32,7 @@ const defaultIconSet = {
 	'twitter': () => import('./Twitter'),
 	'user': () => import('./Avatar'),
 	'vegan': () => import('./Vegan'),
+	'no-sound': () => import('./NoSound'),
 	'vegetarian': () => import('./Vegetarian'),
 	'youtube': () => import('./YouTube'),
 	'default': () => null,
