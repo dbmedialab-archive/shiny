@@ -5,7 +5,7 @@ const now = new Date();
 
 const variantPeriods = [{
 	start: new Date('2019-06-14'),
-	end: new Date('2019-06-23 23:59:59'),
+	end: new Date('2019-06-23T23:59:59'),
 	variant: 'pride',
 }];
 
