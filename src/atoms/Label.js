@@ -7,7 +7,7 @@ const Label = styled.span`
 	background-color: ${props => getColor(props.backgroundColor)};
 	color: ${props => getColor(props.textColor)};
 	display: inline-block;
-	font-family: ${getVariable('headingsFont')};
+	font-family: ${getVariable('uiFont')};
 	font-size: 1.1rem;
 	font-weight: 300;
 	letter-spacing: .1rem;

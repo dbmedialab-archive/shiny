@@ -1,6 +1,7 @@
 export default {
 	mainFont: '"Cabin", "Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Cabin",sans-serif',
+	uiFont: '"Cabin",sans-serif',
 	horizontalBase: '1rem',
 
 	uiRegularSize: '1.6rem',
