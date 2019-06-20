@@ -5,6 +5,8 @@ import { cssReset } from '../../utils/css-reset';
 const variables = {
 	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+	uiFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+
 	headingsWeight: 300,
 
 	uiRegularSize: '1.6rem',

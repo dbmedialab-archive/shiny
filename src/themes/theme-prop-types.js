@@ -126,6 +126,7 @@ export const themePropTypes = {
 		horizontalBase: PropTypes.string,
 		largeWidth: PropTypes.string,
 		mainFont: PropTypes.string,
+		uiFont: PropTypes.string,
 		uiRegularLineHeight: PropTypes.string,
 		uiRegularSize: PropTypes.string,
 		uiSmallLineHeight: PropTypes.string,

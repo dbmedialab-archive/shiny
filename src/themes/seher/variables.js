@@ -1,6 +1,7 @@
 export const variables = {
 	mainFont: 'Lato, sans-serif',
 	headingsFont: 'Lato, sans-serif',
+	uiFont: 'Lato, sans-serif',
 
 	uiWeight: 300,
 
