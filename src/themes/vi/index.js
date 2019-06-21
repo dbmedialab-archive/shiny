@@ -5,6 +5,8 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Avenir', helvetica, arial, sans-serif",
 	headingsFont: "'Avenir', helvetica, arial, sans-serif",
+	uiFont: "'Avenir', helvetica, arial, sans-serif",
+
 	headingsWeight: 700,
 
 	uiRegularSize: '1.6rem',

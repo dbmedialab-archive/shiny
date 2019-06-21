@@ -5,6 +5,7 @@ import colors from './colors';
 const variables = {
 	mainFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 	headingsFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
+	uiFont: '"Roboto","Helvetica",Helvetica,Arial,sans-serif',
 
 	uiWeight: 300,
 

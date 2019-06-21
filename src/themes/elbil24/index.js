@@ -5,6 +5,7 @@ import colors from './colors';
 const variables = {
 	mainFont: "'Barlow', sans-serif",
 	headingsFont: "'Barlow', sans-serif",
+	uiFont: "'Barlow', sans-serif",
 	uiWeightBold: 800,
 };
 

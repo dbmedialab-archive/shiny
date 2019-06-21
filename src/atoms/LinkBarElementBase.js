@@ -215,7 +215,7 @@ export const LinkBarElementBase = styled.a`
 	${props => props.rounded && 'border-radius: .3rem;'}
 	outline: none;
 	text-decoration: none;
-	font-family: ${getVariable('headingsFont')};
+	font-family: ${getVariable('uiFont')};
 	font-weight: ${props => (props.isActive ? '600' : '400')};
 
 	:hover {
