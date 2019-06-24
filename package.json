@@ -34,7 +34,7 @@
     "debug": "3.2.6",
     "deepmerge": "3.3.0",
     "emotion-theming": "10.0.10",
-    "get-best-contrast-color": "0.2.2",
+    "get-best-contrast-color": "0.3.0",
     "intersection-observer": "0.5.1",
     "lazysizes": "4.1.8",
     "lodash.isinteger": "^4.0.4",
