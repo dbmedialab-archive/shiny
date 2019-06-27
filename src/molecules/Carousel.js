@@ -179,7 +179,12 @@ class Carousel extends React.Component {
 			return;
 		}
 
-		const { mouseX, mouseY, initialMouseX, initialMouseY } = this.state;
+		const {
+			mouseX,
+			mouseY,
+			initialMouseX,
+			initialMouseY,
+		} = this.state;
 		const { clientX, clientY, buttons } = e;
 
 		// checking if drag is performed with pressed mouse button
@@ -201,11 +206,11 @@ class Carousel extends React.Component {
 
 		// considering a swipe only after swipe reached threashold
 		// otherwise link can not be clicked if user 'slightly' moved carousel
-		if (Math.abs(clientX - initialMouseX) > clickThreshold ||
-			Math.abs(clientY - initialMouseY) > clickThreshold) {
+		if (Math.abs(clientX - initialMouseX) > clickThreshold
+			|| Math.abs(clientY - initialMouseY) > clickThreshold) {
 			this.setState({
 				isSwiping: true,
-			})
+			});
 		}
 	}
 
