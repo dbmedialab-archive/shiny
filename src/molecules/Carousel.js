@@ -10,6 +10,8 @@ import { CarouselSlotList } from '../atoms/CarouselSlotList';
 import { CarouselBar } from '../atoms/CarouselBar';
 import { Arrow } from '../atoms/Arrow';
 
+const clickThreshold = 10;
+
 const CarouselArrow = styled(Arrow)`
 	position: absolute;
     top: 25%;
@@ -24,6 +26,8 @@ class Carousel extends React.Component {
 		super(props);
 		this.state = {
 			pageIsTurning: false,
+			initialMouseX: 0,
+			initialMouseY: 0,
 			mouseX: 0,
 			mouseY: 0,
 			isSwiping: false,
@@ -163,6 +167,8 @@ class Carousel extends React.Component {
 		this.setState({
 			mouseX: e.clientX,
 			mouseY: e.clientY,
+			initialMouseX: e.clientX,
+			initialMouseY: e.clientY,
 		});
 	}
 
@@ -173,7 +179,7 @@ class Carousel extends React.Component {
 			return;
 		}
 
-		const { mouseX, mouseY } = this.state;
+		const { mouseX, mouseY, initialMouseX, initialMouseY } = this.state;
 		const { clientX, clientY, buttons } = e;
 
 		// checking if drag is performed with pressed mouse button
@@ -191,8 +197,16 @@ class Carousel extends React.Component {
 		this.setState({
 			mouseX: clientX,
 			mouseY: clientY,
-			isSwiping: true,
 		});
+
+		// considering a swipe only after swipe reached threashold
+		// otherwise link can not be clicked if user 'slightly' moved carousel
+		if (Math.abs(clientX - initialMouseX) > clickThreshold ||
+			Math.abs(clientY - initialMouseY) > clickThreshold) {
+			this.setState({
+				isSwiping: true,
+			})
+		}
 	}
 
 	render() {
