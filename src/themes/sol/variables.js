@@ -1,5 +1,5 @@
 export default {
-	mainFont: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+	mainFont: "'Barlow', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 	headingsFont: "'Barlow', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 	uiFont: "'Barlow', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
