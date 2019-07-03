@@ -39,6 +39,10 @@ class LazyProgressiveImage extends PureComponent {
 		order: PropTypes.number,
 		/** Setting the browser native lazyload flag */
 		loading: PropTypes.oneOf(['auto', 'lazy', 'eager']),
+		/** Overriding lazysizes data-expand:
+		 * offset from viewport
+		 * from which image loading is triggered */
+		expand: PropTypes.number,
 	}
 
 	static defaultProps = {
@@ -48,6 +52,7 @@ class LazyProgressiveImage extends PureComponent {
 		fadeIn: false,
 		order: 0,
 		loading: 'auto',
+		expand: 370,
 	}
 
 	componentDidMount() {
@@ -63,6 +68,7 @@ class LazyProgressiveImage extends PureComponent {
 			fadeIn,
 			children,
 			preventBlur,
+			expand,
 			loading,
 			...rest
 		} = this.props;
@@ -81,6 +87,7 @@ class LazyProgressiveImage extends PureComponent {
 						src={src}
 						data-src={src}
 						loading={loading}
+						data-expand={expand}
 						className={`lazyload ${preventBlur ? '' : 'blur-up'} ${fadeIn ? 'fade-in' : ''}`}
 					/>
 					<noscript><img src={src} alt={alt} itemProp="image" /></noscript>
