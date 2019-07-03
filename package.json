@@ -24,16 +24,16 @@
   "author": "Aller Media",
   "peerDependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "emotion-theming": "^10.0.10",
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.12"
   },
   "dependencies": {
     "@babel/runtime": "7.4.5",
-    "@emotion/core": "10.0.10",
-    "@emotion/styled": "10.0.12",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
     "deepmerge": "3.3.0",
-    "emotion-theming": "10.0.10",
     "get-best-contrast-color": "0.3.0",
     "intersection-observer": "0.7.0",
     "lazysizes": "4.1.8",
@@ -74,6 +74,8 @@
     "@babel/plugin-transform-runtime": "7.4.4",
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.12",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.1.9",
     "@storybook/addon-info": "5.1.9",
@@ -88,6 +90,7 @@
     "babel-plugin-emotion": "10.0.13",
     "babel-plugin-react-docgen": "3.1.0",
     "babel-plugin-transform-imports": "1.5.1",
+    "emotion-theming": "10.0.10",
     "eslint": "5.16.0",
     "eslint-plugin-import": "2.18.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
