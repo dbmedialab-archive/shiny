@@ -62,6 +62,7 @@ Description.defaultProps = {
 const TrysilPlug = ({
 	url,
 	image,
+	imageProps,
 	ratio,
 	title,
 	fadeIn,
@@ -95,6 +96,7 @@ const TrysilPlug = ({
 						src={placeholderUrl ? placeholderUrl : image}
 						preventBlur={preventBlur}
 						fadeIn={fadeIn}
+						{...imageProps}
 					>
 						{sources.length === 0
 						&& <Source srcSet={image} />
@@ -128,6 +130,12 @@ TrysilPlug.propTypes = {
 	subtitle: PropTypes.string,
 	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
+	imageProps: PropTypes.shape({
+		/** Overriding lazysizes data-expand: 
+		 * offset from viewport
+		 * from which image loading is triggered */
+		expand: PropTypes.number,
+	}),
 	/** Component to display the labels */
 	Labels: PropTypes.oneOfType([
 		PropTypes.func,
@@ -192,6 +200,7 @@ TrysilPlug.defaultProps = {
 	kicker: '',
 	title: '',
 	subtitle: '',
+	imageProps: {},
 	Labels: DefaultLabels,
 	labelsProps: {
 		order: 5,
