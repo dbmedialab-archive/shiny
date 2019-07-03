@@ -131,7 +131,7 @@ TrysilPlug.propTypes = {
 	/** Primary source URL for the plug image. If it is empty, no image will be displayed. */
 	image: PropTypes.string.isRequired,
 	imageProps: PropTypes.shape({
-		/** Overriding lazysizes data-expand: 
+		/** Overriding lazysizes data-expand:
 		 * offset from viewport
 		 * from which image loading is triggered */
 		expand: PropTypes.number,
