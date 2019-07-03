@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -23,11 +23,11 @@
   },
   "author": "Aller Media",
   "peerDependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "emotion-theming": "^10.0.10",
     "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.12"
+    "@emotion/styled": "^10.0.12",
+    "emotion-theming": "^10.0.10",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   },
   "dependencies": {
     "@babel/runtime": "7.4.5",
