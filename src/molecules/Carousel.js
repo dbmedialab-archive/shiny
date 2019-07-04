@@ -305,7 +305,7 @@ Carousel.defaultProps = {
 		xs: 6,
 		md: 3,
 	},
-	verticalHeight: 'calc(100% - 1rem)',
+	verticalHeight: '100%',
 	horizontalArrowOffset: '-7rem',
 };
 
