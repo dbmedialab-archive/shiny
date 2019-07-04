@@ -8,4 +8,5 @@ export const CarouselSection = styled.section`
 	flex-direction: column;
 	/* important for determining height (IOS 10) */
 	flex: 1;
+	flex-basis: auto;
 `;
