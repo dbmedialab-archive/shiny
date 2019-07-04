@@ -2,7 +2,7 @@
 [![Travis badge](https://api.travis-ci.org/dbmedialab/shiny.svg?branch=master)](https://travis-ci.org/dbmedialab/shiny)
 [![install size](https://packagephobia.now.sh/badge?p=@aller/shiny)](https://packagephobia.now.sh/result?p=@aller/shiny)
 
-_Ev'rythings shiny, cap'n, not to fret!_ 
+_Ev'rythings shiny, cap'n, not to fret!_
 # Shiny
 
 Shiny components for your React application. Check out the [storybook](https://dbmedialab.github.com/shiny/)!
