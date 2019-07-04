@@ -20,7 +20,7 @@ In Aller Media, we use shiny as part of a four-layered frontend system:
 3. Follow the interactive release guide
 
 ### Alternate way (vanilla)
-(After you have merged you changes into master) 
+(After you have merged you changes into master)
 
 1. Get the latest version, and checkout a release branch for npm work. The release branch is necessary because the master branch is protected.
 ```sh
