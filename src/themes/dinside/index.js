@@ -14,7 +14,7 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=optional');
 
 	${cssReset}
 

@@ -20,7 +20,7 @@ const cssReset = `
 `;
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700');
+	@import url('https://fonts.googleapis.com/css?family=Ubuntu|Cabin:400,700&display=optional');
 
 	${cssReset}
 

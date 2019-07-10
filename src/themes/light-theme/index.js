@@ -64,7 +64,7 @@ const colors = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800');
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,800&display=optional');
 
 	${cssReset}
 
