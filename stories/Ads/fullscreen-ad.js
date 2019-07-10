@@ -177,7 +177,7 @@ export default () => (
 			position: 'relative',
 		}}
 		>
-			<FullscreenAd isIE11={false}>
+			<FullscreenAd isIE11={false} width="300px" isBannerAdInFullscreenSlot>
 				<div>
 					<img src="https://via.placeholder.com/300x250" alt="placeholder" />
 				</div>
@@ -260,7 +260,7 @@ export default () => (
 			position: 'relative',
 		}}
 		>
-			<FullscreenAd isIE11={false}>
+			<FullscreenAd isIE11={false} width="300px" isBannerAdInFullscreenSlot>
 				<div>
 					<iframe src="https://via.placeholder.com/300x250" title="i-am-an-iframe-ad" />
 				</div>
