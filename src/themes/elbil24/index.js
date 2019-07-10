@@ -10,7 +10,7 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800,800i');
+	@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800,800i&display=optional');
 
 	${cssReset}
 `;
