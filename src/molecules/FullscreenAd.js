@@ -84,7 +84,7 @@ const FullscreenAd = forwardRef((props, ref) => {
 			width={width}
 			height={height}
 		>
-			<AdWrapper width="100%" />
+			<AdWrapper width="100%" height={height} />
 			<AdUnitWrapper {...props} isBannerAdInFullscreenSlot={isBannerAdInFullscreenSlot} />
 		</StyledReserveSpacer>
 	);
