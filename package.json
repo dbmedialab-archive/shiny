@@ -33,7 +33,7 @@
     "@babel/runtime": "7.5.4",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
-    "deepmerge": "3.3.0",
+    "deepmerge": "4.0.0",
     "get-best-contrast-color": "0.3.0",
     "intersection-observer": "0.7.0",
     "lazysizes": "4.1.8",
