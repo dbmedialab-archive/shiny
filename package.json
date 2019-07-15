@@ -45,7 +45,7 @@
     "prismjs": "1.16.0",
     "prop-types": "15.7.2",
     "react-intersection-observer": "8.23.0",
-    "react-modal": "3.8.2",
+    "react-modal": "3.9.1",
     "react-stickyfill": "0.2.3",
     "striptags": "3.1.1"
   },
