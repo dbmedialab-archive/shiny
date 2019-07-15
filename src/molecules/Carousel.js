@@ -217,7 +217,7 @@ class Carousel extends React.Component {
 	render() {
 		const {
 			heading, Heading, headingProps, children, vertical, horizontalSizing, verticalHeight, horizontalArrowOffset,
-			hideButtons,
+			hideButtons, ...rest
 		} = this.props;
 		const {
 			prevArrowVisible, nextArrowVisible, pageIsTurning,
@@ -225,7 +225,7 @@ class Carousel extends React.Component {
 
 		const sizing = !vertical && horizontalSizing;
 		return (
-			<CarouselSection vertical={vertical} verticalHeight={verticalHeight}>
+			<CarouselSection vertical={vertical} verticalHeight={verticalHeight} {...rest}>
 				{heading && <Heading {...headingProps}>{heading}</Heading>}
 				<CarouselBar>
 					<CarouselSlotList
