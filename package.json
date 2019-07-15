@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.42.0",
+  "version": "0.44.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -30,10 +30,10 @@
     "react-dom": "^16.4.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.4.5",
+    "@babel/runtime": "7.5.4",
     "@maji/react-prism": "1.0.1",
     "debug": "3.2.6",
-    "deepmerge": "3.3.0",
+    "deepmerge": "4.0.0",
     "get-best-contrast-color": "0.3.0",
     "intersection-observer": "0.7.0",
     "lazysizes": "4.1.8",
@@ -52,12 +52,12 @@
   "devDependencies": {
     "@aller/eslint-config-aller": "0.7.0",
     "@babel/cli": "7.5.0",
-    "@babel/core": "7.4.5",
+    "@babel/core": "7.5.4",
     "@babel/node": "7.5.0",
     "@babel/plugin-proposal-class-properties": "7.5.0",
     "@babel/plugin-proposal-decorators": "7.4.4",
     "@babel/plugin-proposal-do-expressions": "7.5.0",
-    "@babel/plugin-proposal-export-default-from": "7.2.0",
+    "@babel/plugin-proposal-export-default-from": "7.5.2",
     "@babel/plugin-proposal-export-namespace-from": "7.5.2",
     "@babel/plugin-proposal-function-bind": "7.2.0",
     "@babel/plugin-proposal-function-sent": "7.5.0",
@@ -71,7 +71,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
     "@babel/plugin-transform-object-assign": "7.2.0",
-    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/plugin-transform-runtime": "7.5.0",
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
     "@emotion/core": "10.0.10",

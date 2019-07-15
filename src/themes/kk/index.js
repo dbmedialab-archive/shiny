@@ -4,7 +4,7 @@ import colors from './colors';
 
 const variables = {
 	mainFont: '"Open Sans", Helvetica, Arial, sans-serif',
-	headingsFont: '"Didot 16 A", "Didot 16 B", Didot, "GFS Didot", Georgia, serif',
+	headingsFont: '"Playfair Display", Georgia, serif',
 	uiFont: '"Open Sans", Helvetica, Arial, sans-serif',
 
 	uiWeight: 300,
@@ -13,7 +13,7 @@ const variables = {
 };
 
 const global = `
-	@import url('https://cloud.typography.com/7308714/6266192/css/fonts.css');
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=optional');
 	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=optional');
 
 	${cssReset}
