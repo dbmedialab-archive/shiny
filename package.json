@@ -36,7 +36,7 @@
     "deepmerge": "4.0.0",
     "get-best-contrast-color": "0.3.0",
     "intersection-observer": "0.7.0",
-    "lazysizes": "4.1.8",
+    "lazysizes": "5.1.0",
     "lodash.isinteger": "^4.0.4",
     "parse-color": "1.0.0",
     "picturefill": "3.0.3",
