@@ -65,7 +65,7 @@ const AdUnitWrapper = styled.div`
 		text-align: center;
 		${p => !p.isBannerAdInFullscreenSlot && css`
 			width: 100% !important;
-			height: 100% !important;
+			height: 100vh !important;
 		`}
 	}
 `;
