@@ -1,14 +1,16 @@
 import { storiesOf } from '@storybook/react';
 
-import genericAd from './generic-ad';
-import stickyAd from './sticky-right';
-import fullscreenAd from './fullscreen-ad';
-import wallpaper from './wallpaper';
+import adSettingsCogStory from './ad-settings-cog';
+import genericAdStory from './generic-ad';
+import stickyAdStory from './sticky-right';
+import fullscreenAdStory from './fullscreen-ad';
+import wallpaperStory from './wallpaper';
 
 export default () => {
 	storiesOf('Ads|Ads', module)
-		.add('Generic Ad', genericAd)
-		.add('Sticky Ad', stickyAd)
-		.add('Fullscreen Ad', fullscreenAd)
-		.add('Wallpaper Ad', wallpaper);
+		.add('AdSettingsCog', adSettingsCogStory)
+		.add('Generic Ad', genericAdStory)
+		.add('Sticky Ad', stickyAdStory)
+		.add('Fullscreen Ad', fullscreenAdStory)
+		.add('Wallpaper Ad', wallpaperStory);
 };
