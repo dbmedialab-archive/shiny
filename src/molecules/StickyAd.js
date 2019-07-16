@@ -39,7 +39,12 @@ const StickyAd = forwardRef(({
 }, ref) => (
 	<StickyWrapper sticky={sticky} ref={ref} {...rest}>
 		<Sticker>
-			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution} topOffset={topOffset}>
+			<StyledAdWrapper
+				height={height}
+				width={width}
+				shouldHideAttribution={shouldHideAttribution}
+				topOffset={topOffset}
+			>
 				{children}
 			</StyledAdWrapper>
 		</Sticker>
