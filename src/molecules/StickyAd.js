@@ -8,7 +8,7 @@ import { AdWrapper } from '../atoms/AdWrapper';
 
 const StyledAdWrapper = styled(AdWrapper)`
 	position: sticky;
-	top: 0;
+	top: ${props => props.topOffset};
 	margin-left: 0;
 	margin-right: 0;
 `;
@@ -35,11 +35,11 @@ const StickyWrapper = styled.div`
 `;
 
 const StickyAd = forwardRef(({
-	children, width, height, sticky, shouldHideAttribution,
+	children, width, height, sticky, shouldHideAttribution, topOffset, ...rest
 }, ref) => (
-	<StickyWrapper sticky={sticky} ref={ref}>
+	<StickyWrapper sticky={sticky} ref={ref} {...rest}>
 		<Sticker>
-			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution}>
+			<StyledAdWrapper height={height} width={width} shouldHideAttribution={shouldHideAttribution} topOffset={topOffset}>
 				{children}
 			</StyledAdWrapper>
 		</Sticker>
@@ -48,6 +48,7 @@ const StickyAd = forwardRef(({
 
 StickyAd.propTypes = {
 	width: PropTypes.string,
+	topOffset: PropTypes.string,
 	height: PropTypes.string,
 	sticky: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired,
@@ -57,6 +58,7 @@ StickyAd.propTypes = {
 StickyAd.defaultProps = {
 	width: '32.0rem',
 	height: '25.0rem',
+	topOffset: '0',
 };
 
 export { StickyAd };
