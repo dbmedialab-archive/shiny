@@ -108,7 +108,15 @@ const DropdownStory = () => {
 					<LargeLinkBarDropdown linkText="Drop Down My Shoe" url="https://example.com" displayInitially>
 						<VerticalLinkBar backgroundColor="white">
 							<LinkBarLink linkText="One" url="https://example.com" isActive />
-							<LinkBarLink linkText="Two" url="https://example.com" />
+							<LinkBarDropdown linkText="Nested Dropdown!" url="https://example.com" displayInitially zIndex={9}>
+								<VerticalLinkBar backgroundColor="white">
+									<LinkBarLink linkText="One" url="https://example.com" isActive />
+									<LinkBarLink linkText="Two" url="https://example.com" />
+								</VerticalLinkBar>
+							</LinkBarDropdown>
+							<LinkBarLink linkText="Three" url="https://example.com" />
+							<LinkBarLink linkText="Four" url="https://example.com" />
+							<LinkBarLink linkText="Five" url="https://example.com" />
 						</VerticalLinkBar>
 					</LargeLinkBarDropdown>
 					<LargeLinkBarDropdown

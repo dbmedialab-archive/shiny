@@ -21,7 +21,7 @@ const VerticalFlexingList = styled.ul`
 		width: auto;
 	}
 
-	${LinkBarDropdown} ~ div > & {
+	${LinkBarDropdown} ~ div & {
 		display: ${props => (props.hide ? 'none' : 'flex')};
 		flex-direction: column;
 		min-width: calc(14 * ${getVariable('horizontalBase')});
@@ -30,6 +30,7 @@ const VerticalFlexingList = styled.ul`
 		left: ${props => (props.align === 'left' ? 0 : 'initial')};
 		right: ${props => (props.align === 'right' ? 0 : 'initial')};
 		box-shadow: ${({ boxShadow }) => boxShadow};
+
 		${({ shouldFadeOut }) => shouldFadeOut && css`
 			animation: fadeSlideDown 0.2s;
 			@keyframes fadeSlideDown {
@@ -46,6 +47,7 @@ const VerticalFlexingList = styled.ul`
 				}
 			}
 		`}
+
 		::before {
 			content: '';
 			display: ${({ hideArrow }) => (hideArrow? 'none' : 'block')};
