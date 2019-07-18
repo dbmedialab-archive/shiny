@@ -1,3 +1,5 @@
+import './utils/polyfills'
+
 // Themes
 export { themes                  } from './themes';
 

@@ -32,6 +32,7 @@
   "dependencies": {
     "@babel/runtime": "7.5.4",
     "@maji/react-prism": "1.0.1",
+    "core-js": "^3.1.4",
     "debug": "3.2.6",
     "deepmerge": "4.0.0",
     "get-best-contrast-color": "0.3.1",
