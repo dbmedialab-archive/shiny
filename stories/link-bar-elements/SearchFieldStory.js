@@ -17,7 +17,7 @@ const SearchFieldStory = () => (
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
 			<SmallLinkBarLink linkText="One" url="https://example.com" isActive />
 			<SmallLinkBarLink linkText="Two" url="https://example.com" />
-			<SmallLinkBarSearchField icon="info" placeholder="Search My Shoe" backgroundColor="white" />
+			<SmallLinkBarSearchField icon="magnifier" placeholder="Search My Shoe" backgroundColor="white" />
 		</HorizontalLinkBar>
 		<div>-</div>
 		<HorizontalLinkBar backgroundColor="grayTintLighter">
