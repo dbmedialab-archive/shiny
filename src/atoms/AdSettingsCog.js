@@ -1,29 +1,24 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { getVariable } from '../utils';
-import { FontIcon } from './FontIcon';
+import { getColor, getVariable } from '../utils';
+import { SvgIcon } from './SvgIcon';
 
 const StyledCog = styled.div`
 	position: absolute;
 	left: 0;
 	top: ${getVariable('verticalBase')};
-	height: 3rem !important;
-	width: 3rem !important;
-	background-color: white;
+	padding: calc(1/2 * ${getVariable('horizontalBase')});
+	background-color: ${getColor('white')};
 	opacity: 0.5;
 	filter: alpha(opacity=50);
-	border-bottom-right-radius: 1.5rem;
+	line-height: 0;
+	border-bottom-right-radius: 50%;
 	cursor: pointer;
-
-	& span {
-		opacity: 0.5;
-		filter: alpha(opacity=50);
-	}
 `;
 
 const AdSettingsCog = props => (
 	<StyledCog {...props}>
-		<FontIcon name="settings-alt-2" size={2.4} />
+		<SvgIcon name="settings" set="dorris" color="type" size={1.6} fill="currentColor" />
 	</StyledCog>
 );
 

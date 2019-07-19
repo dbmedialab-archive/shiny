@@ -9,6 +9,7 @@ const Svg = ({ color, ...rest }) => {
 
 	return (<svg
 		viewBox="0 0 33 33"
+		color={stroke}
 		fill="none"
 		stroke={stroke}
 		strokeWidth={1.5}
