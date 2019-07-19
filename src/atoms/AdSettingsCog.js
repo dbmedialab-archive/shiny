@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { getColor, getVariable } from '../utils';
+import { getVariable } from '../utils';
 import { SvgIcon } from './SvgIcon';
 
 const StyledCog = styled.div`
@@ -8,11 +8,9 @@ const StyledCog = styled.div`
 	left: 0;
 	top: ${getVariable('verticalBase')};
 	padding: calc(1/2 * ${getVariable('horizontalBase')});
-	background-color: ${getColor('white')};
+	background-color: rgba(255,255,255,0.5);
 	line-height: 0;
 	border-bottom-right-radius: 50%;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
 	cursor: pointer;
 `;
 
