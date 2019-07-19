@@ -5,11 +5,11 @@ import { withTheme } from 'emotion-theming';
 
 import { getColor } from '../../../utils/get-color';
 
-const StyledSvg = styled(svg)`
+const StyledSvg = styled('svg')`
 	/* Workaround for old webkit browsers */
 	/* https://bugs.webkit.org/show_bug.cgi?id=82489 */
 	max-height: 100%;
-`
+`;
 
 const Svg = ({ color, ...rest }) => {
 	const stroke = getColor(color)(rest);
