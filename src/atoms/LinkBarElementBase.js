@@ -41,13 +41,6 @@ const getFocusBackground = (props) => {
 	return (activeBackgroundFromProps === 'transparent' ? 'rgba(0,0,0,.04)' : activeBackgroundFromProps);
 };
 
-/*
- * With the 'xsmall', 'small', 'medium' (default) and 'large' variants,
- * LinkBar items like LinkBarLinks, LinkBarButtons and LinkBarDropdowns
- * all take up the same vertical space. That way, you can stuff in
- * another item without changing the height of your LinkBar.
- */
-
 const allcaps = props => props.ALLCAPS && css`
 	text-transform: uppercase;
 	letter-spacing: .1rem;

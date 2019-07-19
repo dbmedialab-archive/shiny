@@ -1,6 +1,12 @@
 import { css } from '@emotion/core';
 import { getVariable } from './get-variable';
 
+/*
+ * With the 'xsmall', 'small', 'medium' (default) and 'large' variants,
+ * LinkBar items like LinkBarLinks, LinkBarButtons and LinkBarDropdowns
+ * all take up the same vertical space. That way, you can stuff in
+ * another item without changing the height of your LinkBar.
+ */
 export const linkBarElementSizes = (props) => {
 	const { size, inset } = props;
 	const horizontalBase = getVariable('horizontalBase')(props);
