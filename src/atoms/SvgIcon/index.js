@@ -4,9 +4,11 @@ import styled from '@emotion/styled';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
+const isClient = typeof window !== 'undefined';
+
 const iconSets = {
-	default: () => import('./default').then(c => c.default),
-	dorris: () => import('./dorris').then(c => c.default),
+	default: () => (isClient ? import('./default').then(c => c.default) : require('./default').default), // eslint-disable-line global-require
+	dorris: () => (isClient ? import('./dorris').then(c => c.default) : require('./dorris').default), // eslint-disable-line global-require
 };
 
 class SvgIcon extends React.PureComponent {
