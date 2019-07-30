@@ -8240,9 +8240,10 @@ react-resize-detector@^4.0.5:
     raf-schd "^4.0.0"
     resize-observer-polyfill "^1.5.1"
 
-react-stickyfill@0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.3.tgz#a1241a16b8d6fd39f77832d9cc69fa2998e58d44"
+react-stickyfill@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/react-stickyfill/-/react-stickyfill-0.2.4.tgz#0a9002e1424e3a2bf36b56630279bb85e604034e"
+  integrity sha512-iVfDxm2mAgDCfc3KjUkGTmEB8umUswgpuTHZUH2FlbkPPFvZuXtV+viCxhPl1rU4NMpvY9zdexvl/tTguzo/nw==
   dependencies:
     Stickyfill "git+https://github.com/seleckis/stickyfill.git"
     prop-types "^15.5.10"
