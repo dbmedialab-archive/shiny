@@ -18,7 +18,7 @@ const StyledCog = styled.div`
 
 const AdSettingsCog = props => (
 	<StyledCog {...props}>
-		<SvgIcon name="settings" set="dorris" color="type" size={1.6} fill="currentColor" />
+		<SvgIcon name="settings" set="dorris" color="darkness" size={1.6} fill="currentColor" />
 	</StyledCog>
 );
 
