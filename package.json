@@ -78,7 +78,7 @@
     "@emotion/styled": "10.0.12",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.1.10",
-    "@storybook/addon-info": "5.1.9",
+    "@storybook/addon-info": "5.1.10",
     "@storybook/addon-links": "5.1.10",
     "@storybook/addon-options": "5.1.10",
     "@storybook/addon-viewport": "5.1.10",
