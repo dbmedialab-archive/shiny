@@ -41,8 +41,9 @@ const CloseButton = styled(BorderedButton)`
 `;
 
 const LogiclessModal = withTheme(({
-	isOpen, closeModal, children, title, appElement, width, zIndex, theme: { flexboxgrid: { breakpoints: { sm } } },
+	isOpen, closeModal, children, title, appElement, width, zIndex, theme,
 }) => {
+	const { flexboxgrid: { breakpoints: { sm } } } = theme;
 	const [viewPortWidth, setViewPortWidth] = useState(null);
 	Modal.setAppElement(appElement);
 
@@ -77,6 +78,7 @@ const LogiclessModal = withTheme(({
 					marginRight: isSmallScreen ? '0' : '50%',
 					transform: isSmallScreen ? '' : 'translate(-50%, -50%)',
 					maxHeight: '100vh',
+					color: getColor('darkness')({ theme }),
 				},
 			}}
 		>

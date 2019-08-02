@@ -8,7 +8,7 @@ const StyledCog = styled.div`
 	left: 0;
 	top: ${getVariable('verticalBase')};
 	padding: calc(1/2 * ${getVariable('horizontalBase')});
-	background-color: ${getColor('white')};
+	background-color: ${getColor('background')};
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	line-height: 0;
