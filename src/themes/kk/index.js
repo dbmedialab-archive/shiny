@@ -13,8 +13,8 @@ const variables = {
 };
 
 const global = `
-	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=optional');
-	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=optional');
+	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=fallback');
+	@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=fallback');
 
 	${cssReset}
 `;
