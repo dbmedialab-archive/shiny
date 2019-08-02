@@ -74,7 +74,7 @@
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
-    "@emotion/core": "10.0.10",
+    "@emotion/core": "10.0.14",
     "@emotion/styled": "10.0.12",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.1.10",
