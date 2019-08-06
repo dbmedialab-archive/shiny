@@ -17,6 +17,7 @@ class SvgIcon extends React.PureComponent {
 
 	async componentWillMount() {
 		try {
+			console.log('will mount start')
 			const { name, set } = this.props;
 
 			const resolveIconSet = iconSets[set] || iconSets.default;
@@ -24,7 +25,8 @@ class SvgIcon extends React.PureComponent {
 
 			const resolveIcon = icons[name] || icons.default();
 			const response = await resolveIcon();
-
+			console.log(response.default)
+			console.log('will mount end')
 			return Promise.resolve(this.setState({ module: response.default }));
 		} catch (error) {
 			return error;
@@ -33,9 +35,11 @@ class SvgIcon extends React.PureComponent {
 
 	render() {
 		const { module: Icon } = this.state;
+		console.log('render')
 		const {
 			size, className, ...rest
 		} = this.props;
+		console.log(Icon({ ...rest }))
 		return (
 			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
 				<Icon {...rest} />
