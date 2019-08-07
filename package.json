@@ -38,6 +38,7 @@
     "intersection-observer": "0.7.0",
     "lazysizes": "5.1.0",
     "lodash.isinteger": "^4.0.4",
+    "next": "^9.0.3",
     "parse-color": "1.0.0",
     "picturefill": "3.0.3",
     "polished": "3.4.1",
