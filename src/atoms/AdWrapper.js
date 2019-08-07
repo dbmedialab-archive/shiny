@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import { getColor, getVariable } from '../utils';
@@ -33,7 +34,13 @@ const AdWrapperBase = styled.div`
 		width: 100%;
 		background: ${props => getColor(props.sticky ? 'white' : 'adWrapperBackgroundColor')};
 		color: ${getColor('adWrapperFontColor')};
-		padding: ${props => (props.sticky ? '0.35rem 1.0rem' : '0.35rem 0')};
+		padding: ${props => (
+		`calc(1/2 * (${getVariable('verticalBase')(props)} - ${getVariable('uiSmallLineHeight')(props)})) 0`
+	)};
+		${props => props.sticky && css`
+			padding-left: 1.0rem;
+			padding-right: 1.0rem;
+		`}
 		box-sizing: border-box;
 		opacity: ${props => (props.shouldHideAttribution ? '0' : '1')};
 		transition: opacity .3s;

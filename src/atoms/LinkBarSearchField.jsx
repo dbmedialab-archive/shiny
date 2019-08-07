@@ -1,45 +1,62 @@
-import React, { Fragment } from 'react';
+/* eslint-disable jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control */
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { getColor, getVariable } from '../utils';
+import { getColor, getVariable, linkBarElementSizes } from '../utils';
 import { LinkBarElementBase } from './LinkBarElementBase';
-import { FontIcon } from './FontIcon';
+import { SvgIcon } from './SvgIcon';
 
-const FontIconBase = LinkBarElementBase.withComponent(FontIcon);
-const AbsoluteFontIcon = styled(FontIconBase)`
+const AbsoluteIcon = styled(SvgIcon)`
+	${linkBarElementSizes}
+
 	${(props) => {
-		const { size } = props;
+		const { fullWidth, size } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
+		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
+		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
 
 		const smallMarginFactor = size === 'small' ? 1/2 : 1;
-		const horizontalMargin = `calc(${smallMarginFactor} * ${horizontalBase})`;
+		const fullWidthFactor = 3/2;
+		const horizontalMargin = fullWidth
+			? `calc(${fullWidthFactor} * ${horizontalBase})`
+			: `calc(${smallMarginFactor} * ${horizontalBase})`;
+
+		const width = ['xsmall', 'small'].includes(props.size)
+			? uiSmallLineHeight
+			: uiRegularLineHeight;
 
 		return css`
 			position: absolute;
 			left: ${horizontalMargin};
-			font-family: "Helveticons";
+
+			svg {
+				width: ${width};
+			}
 		`;
 	}}
 `;
-
 
 const InputBase = LinkBarElementBase.withComponent('input');
 const Input = styled(InputBase)`
 	${(props) => {
 		const { size, icon, fullWidth } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
+		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
+		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
 		const placeholderColor = getColor(props.placeholderColor)(props);
 
-		const widthFactor = size === 'small' ? 9 : 13;
+		const widthFactor = size === 'small' ? 11 : 15;
 		const marginFactor = size === 'small' ? 1/2 : 1;
 
 		const horizontalMargin = `calc(${marginFactor} * ${horizontalBase})`;
 		const width = fullWidth ? `calc(100% - calc(2 * ${horizontalMargin}))` : `calc(${widthFactor} * ${horizontalBase})`;
 		let paddingLeft = '1rem';
 		if (icon) {
-			paddingLeft = size === 'small' ? '2.7rem' : '4.4rem';
+			paddingLeft = size === 'small'
+				? `calc((1 * ${horizontalBase}) + ${uiSmallLineHeight})`
+				: `calc((2 * ${horizontalBase}) + ${uiRegularLineHeight})`;
 		}
 		return css`
 			&& {
@@ -62,7 +79,7 @@ const Form = styled.form`
 	${({ fullWidth }) => fullWidth && css(`
 		width: 100%;
 	`)}
-`
+`;
 const LinkBarSearchField = ({
 	action,
 	iconColor,
@@ -70,16 +87,40 @@ const LinkBarSearchField = ({
 	formName,
 	size,
 	icon,
+	iconSet,
 	fullWidth,
 	...rest
-}) => (
-	<Fragment>
-		{icon && <AbsoluteFontIcon name={icon} size={size} textColor={iconColor} inset />}
+}) => {
+	const basicInput = (
+		<Input
+			id={inputName}
+			name={inputName}
+			size={size}
+			type="search"
+			inset
+			rounded
+			required
+			icon={icon}
+			fullWidth={fullWidth}
+			{...rest}
+		/>
+	);
+
+	const maybeLabelledInput = icon
+		? (
+			<label>
+				<AbsoluteIcon name={icon} set={iconSet} size={size} color={iconColor} inset fullWidth={fullWidth} />
+				{basicInput}
+			</label>
+		)
+		: basicInput;
+
+	return (
 		<Form id={formName} name={formName} action={action} fullWidth={fullWidth}>
-			<Input id={inputName} name={inputName} size={size} type="search" inset rounded required icon={icon} fullWidth={fullWidth} {...rest} />
+			{maybeLabelledInput}
 		</Form>
-	</Fragment>
-);
+	);
+};
 LinkBarSearchField.propTypes = {
 	/** Color name from theme. Will be used on hover or focus */
 	activeBackgroundColor: PropTypes.string,
@@ -99,6 +140,8 @@ LinkBarSearchField.propTypes = {
 	textColor: PropTypes.string,
 	/** Icon's name, for example "search", if empty(by default) icon will not render */
 	icon: PropTypes.string,
+	/** Which icon set to use. */
+	iconSet: PropTypes.string,
 	/** If true will change width to 100% except calculated margins, which depends on size and horizontalBase */
 	fullWidth: PropTypes.bool,
 };
@@ -111,7 +154,8 @@ LinkBarSearchField.defaultProps = {
 	placeholderColor: 'typeDisabled',
 	size: 'medium',
 	textColor: 'type',
-	icon: "",
+	icon: '',
+	iconSet: 'dorris',
 	fullWidth: false,
 };
 

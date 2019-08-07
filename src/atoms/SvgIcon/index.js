@@ -4,9 +4,12 @@ import styled from '@emotion/styled';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
+import defaultIconSet from './default';
+import dorris from './dorris';
+
 const iconSets = {
-	default: () => import('./default').then(c => c.default),
-	dorris: () => import('./dorris').then(c => c.default),
+	default: defaultIconSet,
+	dorris,
 };
 
 class SvgIcon extends React.PureComponent {
@@ -20,8 +23,7 @@ class SvgIcon extends React.PureComponent {
 			console.log('will mount start')
 			const { name, set } = this.props;
 
-			const resolveIconSet = iconSets[set] || iconSets.default;
-			const icons = await resolveIconSet();
+			const icons = iconSets[set];
 
 			const resolveIcon = icons[name] || icons.default();
 			const response = await resolveIcon();
