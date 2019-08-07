@@ -12,7 +12,6 @@ const iconSets = {
 };
 
 class SvgIcon extends React.PureComponent {
-
 	constructor(props) {
 		super(props);
 		this.state = { LazyIcon: () => null };
