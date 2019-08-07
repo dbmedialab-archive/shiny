@@ -23,8 +23,6 @@ class SvgIcon extends React.PureComponent {
 		const setName = set || 'default';
 		const iconName = name || 'default';
 		const LazyIcon = iconSets[setName][iconName];
-		console.log('will mount')
-		console.log(LazyIcon)
 		return this.setState({ LazyIcon });
 	}
 
@@ -33,9 +31,6 @@ class SvgIcon extends React.PureComponent {
 		const {
 			size, className, ...rest
 		} = this.props;
-		console.log('render')
-		console.log(LazyIcon)
-		console.log(new LazyIcon({ ...rest }))
 		return (
 			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
 				<LazyIcon {...rest} />
