@@ -1,46 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import dorrisIcons from './dorris';
+import defaultIconSet from './default';
 
 import { SvgIconWrapper } from './SvgIconWrapper';
 
-import defaultIconSet from './default';
-import dorris from './dorris';
-
 const iconSets = {
 	default: defaultIconSet,
-	dorris,
+	dorris: dorrisIcons,
 };
 
 class SvgIcon extends React.PureComponent {
 	constructor(props) {
 		super(props);
-		this.state = { module: () => null };
+		this.state = { LazyIcon: () => null };
 	}
 
-	async componentWillMount() {
-		try {
-			const { name, set } = this.props;
-
-			const icons = iconSets[set];
-
-			const resolveIcon = icons[name] || icons.default();
-			const response = await resolveIcon();
-
-			return Promise.resolve(this.setState({ module: response.default }));
-		} catch (error) {
-			return error;
-		}
+	componentWillMount() {
+		const { set, name } = this.props;
+		const setName = set || 'default';
+		const iconName = name || 'default';
+		const LazyIcon = iconSets[setName][iconName];
+		return this.setState({ LazyIcon });
 	}
 
 	render() {
-		const { module: Icon } = this.state;
+		const { LazyIcon } = this.state;
 		const {
 			size, className, ...rest
 		} = this.props;
 		return (
 			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
-				<Icon {...rest} />
+				<LazyIcon {...rest} />
 			</SvgIconWrapper>
 		);
 	}
