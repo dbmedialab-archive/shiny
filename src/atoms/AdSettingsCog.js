@@ -6,13 +6,12 @@ import { SvgIcon } from './SvgIcon';
 const StyledCog = styled.div`
 	position: absolute;
 	left: 0;
-	top: ${getVariable('verticalBase')};
-	padding: calc(1/2 * ${getVariable('horizontalBase')});
+	top: 0;
+	padding: calc(${getVariable('horizontalBase')} / 4);
 	background-color: ${getColor('background')};
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	line-height: 0;
-	border-bottom-right-radius: 50%;
 	cursor: pointer;
 `;
 
