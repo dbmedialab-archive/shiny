@@ -1,16 +1,20 @@
 import merge from 'deepmerge';
-import { darken, lighten } from 'polished';
 import elbil24 from '../elbil24';
 
-const darkness = '#212325';
+import { shadeColors } from '../../utils/shade-colors';
 
-const colors = {
+const colorsToShade = { darkness: '#212325' };
+
+const shadeScheme = {
+	dark: 0.2,
+	light: 0.15,
+	lighter: 0.3,
+};
+
+const shadedColors = shadeColors(colorsToShade, shadeScheme);
+
+const colorsBase = {
 	type: '#ffffff',
-	darkness,
-	darknessDark: darken(0.2, darkness),
-	darknessLight: lighten(0.15, darkness),
-	darknessLighter: lighten(0.3, darkness),
-
 	skinColors: {
 		background: 'darkness',
 		type: 'type',
@@ -26,6 +30,8 @@ const colors = {
 		link: 'type',
 	},
 };
+
+const colors = Object.assign(shadedColors, colorsBase);
 
 const darkOverrides = {
 	name: 'Elbil24 Dark',

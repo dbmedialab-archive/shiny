@@ -1,16 +1,20 @@
 import merge from 'deepmerge';
-import { darken, lighten } from 'polished';
 import dagbladet from '../dagbladet';
 
-const darkness = '#1c1d25';
+import { shadeColors } from '../../utils/shade-colors';
 
-const colors = {
+const colorsToShade = { darkness: '#1c1d25' };
+
+const shadeScheme = {
+	dark: 0.2,
+	light: 0.15,
+	lighter: 0.3,
+};
+
+const shadedColors = shadeColors(colorsToShade, shadeScheme);
+
+const colorsBase = {
 	type: '#ffffff',
-	darkness,
-	darknessDark: darken(0.2, darkness),
-	darknessLight: lighten(0.15, darkness),
-	darknessLighter: lighten(0.3, darkness),
-
 	skinColors: {
 		background: 'darkness',
 		type: 'type',
@@ -27,6 +31,8 @@ const colors = {
 		link: 'type',
 	},
 };
+
+const colors = Object.assign(shadedColors, colorsBase);
 
 const darkOverrides = {
 	name: 'Dagbladet Dark',
