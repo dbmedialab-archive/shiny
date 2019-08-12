@@ -5,13 +5,7 @@ import { shadeColors } from '../../utils/shade-colors';
 
 const colorsToShade = { darkness: '#1c1d25' };
 
-const shadeScheme = {
-	dark: 0.2,
-	light: 0.15,
-	lighter: 0.3,
-};
-
-const shadedColors = shadeColors(colorsToShade, shadeScheme);
+const shadedColors = shadeColors(colorsToShade);
 
 const colorsBase = {
 	type: '#ffffff',

@@ -7,13 +7,7 @@ const colorsToShade = {
 	pageBackground: '#f9f9f9',
 };
 
-const shadeScheme = {
-	dark: 0.2,
-	light: 0.15,
-	lighter: 0.3,
-};
-
-const combinedShadedColors = shadeColors(colorsToShade, shadeScheme);
+const combinedShadedColors = shadeColors(colorsToShade);
 
 const skinColors = {
 	type: 'darkness',
