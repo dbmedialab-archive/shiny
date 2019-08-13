@@ -7,7 +7,7 @@ import { darken, lighten } from 'polished';
  * @param shadeScheme object {dark: amount, light: amount, lighter: amount}, where amount - amount of lightening or darkening
  * @returns object {colorName: 'hex color', colorNameDark: 'hex color', colorNameLight: 'hex color', colorNameLighter: 'hex color'... }
  */
-const defaultShadeScheme = {
+export const defaultShadeScheme = {
 	dark: 0.2,
 	light: 0.15,
 	lighter: 0.3,
