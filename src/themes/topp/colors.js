@@ -1,20 +1,17 @@
-import { darken, lighten } from 'polished';
+import { shadeColors, defaultShadeScheme } from '../../utils/shade-colors';
 
 const colorsToShade= {
 	primary: '#ff1c56',
 	secondary: '#0000ff',
 };
 
-// Creates 4 shades of each color in colorsToShade
-// For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
-const shadedColors = Object.keys(colorsToShade).map(color => ({
-	[`${color}`]: colorsToShade[color],
-	[`${color}Dark`]: darken(0.1, colorsToShade[color]),
-	[`${color}Light`]: lighten(0.15, colorsToShade[color]),
-	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
-}));
+const shadeScheme = {
+	dark: 0.1,
+};
 
-const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
+const shades = Object.assign({}, defaultShadeScheme, shadeScheme);
+
+const combinedShadedColors = shadeColors(colorsToShade, shades);
 
 const colors = {
 	...combinedShadedColors,

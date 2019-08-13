@@ -1,4 +1,4 @@
-import { darken, lighten } from 'polished';
+import { shadeColors } from '../../utils/shade-colors';
 
 import { cssReset } from '../../utils/css-reset';
 
@@ -32,16 +32,7 @@ const colorsToShade = {
 	sand: '#444',
 };
 
-// Creates 4 shades of each color in colorsToShade
-// For example: primary becomes primary, primaryDark, primaryLight and primaryLighter
-const shadedColors = Object.keys(colorsToShade).map(color => ({
-	[`${color}`]: colorsToShade[color],
-	[`${color}Dark`]: darken(0.2, colorsToShade[color]),
-	[`${color}Light`]: lighten(0.15, colorsToShade[color]),
-	[`${color}Lighter`]: lighten(0.3, colorsToShade[color]),
-}));
-
-const combinedShadedColors = shadedColors.reduce((acc, cur) => Object.assign(acc, cur), {});
+const combinedShadedColors = shadeColors(colorsToShade);
 
 const skinColors = {
 	splashBackground: 'primary',
