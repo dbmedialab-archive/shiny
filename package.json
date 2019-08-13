@@ -23,7 +23,7 @@
   },
   "author": "Aller Media",
   "peerDependencies": {
-    "@emotion/core": "10.0.14",
+    "@emotion/core": "10.0.15",
     "@emotion/styled": "10.0.14",
     "emotion-theming": "10.0.14",
     "react": "^16.4.0",
@@ -75,7 +75,7 @@
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
-    "@emotion/core": "10.0.14",
+    "@emotion/core": "10.0.15",
     "@emotion/styled": "10.0.14",
     "@percy-io/percy-storybook": "2.1.0",
     "@storybook/addon-actions": "5.1.11",
