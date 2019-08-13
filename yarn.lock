@@ -1666,12 +1666,12 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
-"@storybook/addon-options@5.1.10":
-  version "5.1.10"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.10.tgz#ae6cf58744cee4ed161ffc537bc7e29a7c7337d0"
-  integrity sha512-DA6r84JYMJ5zACGdPQ7utpig8pUU1wywMMZt43k2IhxKBFcamw0Nmc80vvlTMM4mUu+mevH1ZiuzWxTZU7IcxA==
+"@storybook/addon-options@5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.11.tgz#c93249359f4c3586dc707611392cd342df911125"
+  integrity sha512-sqquPt/5FBroqsqFrAmHacxS2Bjh9ZmVLJgN7tCBR0be99q5cAJA3o0QNLIG9dS22NRR2qhG3HHOtwUqj+nXpA==
   dependencies:
-    "@storybook/addons" "5.1.10"
+    "@storybook/addons" "5.1.11"
     core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
