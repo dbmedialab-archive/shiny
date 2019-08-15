@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const IconsBarWrapper = styled.div`
 	width: 20.0rem;

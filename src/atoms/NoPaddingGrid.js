@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { Grid as LibGrid } from './Grid';
 
 // This should also fit wallpapers and topbanners.

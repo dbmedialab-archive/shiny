@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { withTheme } from 'emotion-theming';
+import styled from 'styled-components';
+import { withTheme } from 'styled-components';
 
 import { FontIcon } from './FontIcon';
 import { BorderedButton } from './BorderedButton';

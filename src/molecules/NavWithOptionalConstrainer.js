@@ -1,7 +1,7 @@
 // Originally written for the HorizontalLinkBar molecule
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { DontPushTheAdBoundaries } from '../atoms/DontPushTheAdBoundaries';
 import { LinkBarNav as Nav } from '../atoms/LinkBarNav';

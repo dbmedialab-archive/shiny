@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
-import { Global, css } from '@emotion/core';
+import styled from 'styled-components';
+import { css } from 'styled-components';
+
+import { Global } from '@emotion/core';
 
 import { getColor } from '../utils/get-color';
 

@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { getColor, getVariable } from '../../src/utils';
 

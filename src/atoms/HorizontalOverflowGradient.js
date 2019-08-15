@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const HorizontalOverflowGradient = styled.div`
 	background: linear-gradient(to right, rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 70%);

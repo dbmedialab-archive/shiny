@@ -1,5 +1,5 @@
 import React from 'react';
-import { withTheme } from 'emotion-theming';
+import { withTheme } from 'styled-components';
 
 const ThemeName = withTheme(props => <span>{props.theme.name}</span>);
 

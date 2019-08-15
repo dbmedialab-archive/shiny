@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { getVariable, getColor } from '../utils';
 
 // z-index: 1 - for overlaying over elements with same z-index

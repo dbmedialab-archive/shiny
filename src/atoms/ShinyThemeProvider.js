@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import merge from 'deepmerge';
 
 import defaultTheme from '../themes/default-theme';
@@ -34,12 +34,12 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	 * aurora-frontend is still not on Fiber. ThemeProvider expects an only child.
 	 */
 	return (
-		<EmotionThemeProvider theme={mergedTheme}>
+		<StyledComponentsThemeProvider theme={mergedTheme}>
 			<Fragment>
 				<GlobalStyles />
 				{children}
 			</Fragment>
-		</EmotionThemeProvider>
+		</StyledComponentsThemeProvider>
 	);
 };
 ShinyThemeProvider.propTypes = {

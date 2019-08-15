@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from 'styled-components';
 
 const sizes = {
 	xlarge: 1920,

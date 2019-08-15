@@ -2,7 +2,7 @@
 
 import { default as React } from 'react';
 import { default as PropTypes } from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Prism from '@maji/react-prism';
 import 'prismjs';

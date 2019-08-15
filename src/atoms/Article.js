@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { getVariable } from '../utils';
 
 const Article = styled.article`

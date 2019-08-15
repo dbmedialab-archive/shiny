@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
-import styled from '@emotion/styled';
+import { css } from 'styled-components';
+import styled from 'styled-components';
 import debug from 'debug';
 
 import { themePropTypes } from '../themes/theme-prop-types';

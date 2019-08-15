@@ -1,5 +1,4 @@
-import { keyframes } from '@emotion/core';
-import styled from '@emotion/styled';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import { getColor } from '../../utils';
 
