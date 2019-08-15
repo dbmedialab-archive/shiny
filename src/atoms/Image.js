@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 /**
  * A plain image. Uses the full width of its container.

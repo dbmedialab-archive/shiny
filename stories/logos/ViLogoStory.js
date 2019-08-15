@@ -1,6 +1,6 @@
 import React from 'react';
 import { withInfo } from '@storybook/addon-info';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import {
 	ViLogo,

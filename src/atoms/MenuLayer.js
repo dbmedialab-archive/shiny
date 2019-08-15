@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { getColor, getVariable } from '../utils';
 
 const getBackgroundColor = ({ backgroundColor }) => getColor(backgroundColor);

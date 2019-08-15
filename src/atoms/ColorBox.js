@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { withTheme } from 'emotion-theming';
+import styled from 'styled-components';
+import { withTheme } from 'styled-components';
 import getBestContrastColor from 'get-best-contrast-color';
 
 import { getColor, getVariable } from '../utils';

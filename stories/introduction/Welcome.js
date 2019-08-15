@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
-import  { keyframes } from '@emotion/core';
-import styled from '@emotion/styled';
+import styled, { keyframes } from 'styled-components';
 
 import {
 	Row,
