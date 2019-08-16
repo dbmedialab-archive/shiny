@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Global } from '@emotion/core';
+import { createGlobalStyle } from 'styled-components';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import merge from 'deepmerge';
 
@@ -26,7 +26,7 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// console.log('new theme', theme.name);
 
 	// Inject our theme's global styles
-	const GlobalStyles = () => <Global styles={`${mergedTheme.global}`} />;
+	const GlobalStyles = createGlobalStyle`${mergedTheme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
