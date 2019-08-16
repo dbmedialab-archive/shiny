@@ -1,6 +1,10 @@
 {
   "name": "@aller/shiny",
+<<<<<<< HEAD
   "version": "0.45.6",
+=======
+  "version": "0.46.0-0",
+>>>>>>> v0.46.0-0
   "description": "",
   "main": "lib/index.js",
   "scripts": {
