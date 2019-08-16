@@ -97,7 +97,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
     "np": "^5.0.3",
-    "pretty-format": "24.8.0",
+    "pretty-format": "24.9.0",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   }
