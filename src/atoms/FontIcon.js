@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
-
-import { Global } from '@emotion/core';
+import { createGlobalStyle } from 'styled-components';
 
 import { getColor } from '../utils/get-color';
 
@@ -13,19 +12,15 @@ const FontIcon = props => (
 	</Fragment>
 );
 
-const Helveticons = () => (
-	<Global
-		styles={css`
-			@font-face {
-				font-family: 'Helveticons';
-				font-style: normal;
-				font-weight: normal;
-				src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
-				font-display: block;
-			}
-		`}
-	/>
-);
+const Helveticons = createGlobalStyle`
+	@font-face {
+		font-family: 'Helveticons';
+		font-style: normal;
+		font-weight: normal;
+		src: url('https://styleguide.dagbladet.no/fonts/helveticons.woff') format('woff');
+		font-display: block;
+	}
+	`;
 
 const Icon = styled.span`
 	font-family: "Helveticons";
