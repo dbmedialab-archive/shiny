@@ -1,10 +1,12 @@
 name: shiny ci
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - !master
 
 jobs:
-  build:
-
+  matrix-test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,10 +20,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --frozen-lockfile
-    - name: storybook and test
-      run: |
-        if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
-        then
-          yarn chromatic
-        fi
-        yarn test
+    - run: yarn test
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: yarn install --frozen-lockfile
+      - run: yarn chromatic
