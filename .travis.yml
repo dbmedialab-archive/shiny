@@ -13,16 +13,8 @@ before_install:
 
 script:
   - |
-    if [[ $TRAVIS_PULL_REQUEST != "false" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
-      firefox -v
-      echo "Sending PR snapshots to Percy";
-      npm run snapshot;
-    elif [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]] && [[ $TRAVIS_NODE_VERSION == "node" ]]; then
-      echo "Sending master build snapshots to Percy";
-      npm run snapshot;
-    else
-      echo "Skipping snapshot. Node version and pull request:";
-      echo $TRAVIS_NODE_VERSION;
-      echo $TRAVIS_PULL_REQUEST;
+    if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
+    then
+      npm run chromatic
     fi
   - npm test
