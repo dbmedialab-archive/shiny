@@ -12,25 +12,17 @@ const iconSets = {
 };
 
 class SvgIcon extends React.PureComponent {
-	constructor(props) {
-		super(props);
-		this.state = { LazyIcon: () => null };
-	}
-
-	/* eslint-disable camelcase */
-	UNSAFE_componentWillMount() {
-		const { set, name } = this.props;
+	render() {
+		const {
+			set,
+			name,
+			className,
+			size,
+			...rest
+		} = this.props;
 		const setName = set || 'default';
 		const iconName = name || 'default';
 		const LazyIcon = iconSets[setName][iconName];
-		return this.setState({ LazyIcon });
-	}
-
-	render() {
-		const { LazyIcon } = this.state;
-		const {
-			size, className, ...rest
-		} = this.props;
 		return (
 			<SvgIconWrapper size={size} size-sm={rest['size-sm']} className={className}>
 				<LazyIcon {...rest} />
