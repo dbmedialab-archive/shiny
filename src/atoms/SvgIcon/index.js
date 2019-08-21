@@ -17,6 +17,7 @@ class SvgIcon extends React.PureComponent {
 		this.state = { LazyIcon: () => null };
 	}
 
+	/* eslint-disable camelcase */
 	UNSAFE_componentWillMount() {
 		const { set, name } = this.props;
 		const setName = set || 'default';
