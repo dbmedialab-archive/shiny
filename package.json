@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "build-storybook",
-    "build-storybook": "npm run build",
     "clean": "rm -rf storybook-static lib",
     "deploy": "./deploy.sh",
     "postpublish": "yarn deploy",
@@ -16,7 +15,7 @@
     "test": "eslint src stories --max-warnings=0",
     "dev": "babel src/ -w -d lib/",
     "release": "np",
-    "chromatic": "chromatic test"
+    "chromatic": "chromatic test --build-script-name=build "
   },
   "sideEffects": false,
   "repository": {
