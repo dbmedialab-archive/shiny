@@ -7,7 +7,7 @@ const SvgIconWrapper = styled('div', {
 	text-align: center;
 	width: ${(props) => {
 		const { size } = props;
-		return typeof props.size === 'function' ? size : String(size).concat('rem');
+		return  typeof size === 'function' ? size(props) : String(size).concat('rem');
 	}};
 	${props => (props['size-sm'] && `
 	@media (max-width: ${props.theme.flexboxgrid.breakpoints.md}em) {
