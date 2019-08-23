@@ -1,9 +1,6 @@
 name: shiny ci
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
 
 jobs:
@@ -21,7 +18,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install --frozen-lockfile
+      if: github.event.action == 'opened' || github.event.action == 'synchronize'
     - run: yarn test
+      if: github.event.action == 'opened' || github.event.action == 'synchronize'
 
   chromatic:
     runs-on: ubuntu-latest
@@ -31,6 +30,8 @@ jobs:
         with:
           node-version: 12
       - run: yarn install --frozen-lockfile
-      - run: yarn chromatic
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
+      - run: yarn chromatic --exit-zero-on-changes
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
         env:
           CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
