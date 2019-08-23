@@ -31,7 +31,7 @@ jobs:
           node-version: 12
       - run: yarn install --frozen-lockfile
         if: github.event.action == 'opened' || github.event.action == 'synchronize'
-      - run: yarn chromatic --exit-zero-on-changes
+      - run: CI=true yarn chromatic --exit-zero-on-changes
         if: github.event.action == 'opened' || github.event.action == 'synchronize'
         env:
           CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
