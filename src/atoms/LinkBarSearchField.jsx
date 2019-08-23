@@ -8,22 +8,37 @@ import { getColor, getVariable, linkBarElementSizes } from '../utils';
 import { LinkBarElementBase } from './LinkBarElementBase';
 import { SvgIcon } from './SvgIcon';
 
-const AbsoluteIcon = styled(SvgIcon)`
-	${linkBarElementSizes}
+const getIconSize = (size) => {
+	const sizeMap = {
+		small: getVariable('uiSmallLineHeight'),
+		medium: getVariable('uiRegularLineHeight'),
+		large: getVariable('uiLargeLineHeight'),
+	};
+	return sizeMap[size] || sizeMap.large;
+}
+
+const AbsoluteIcon = styled(SvgIcon, {
+	shouldForwardProp: prop => !['sizeFactor', 'fullWidth', 'inset'].includes(prop),
+})`
+	${(props) => {
+		const { sizeFactor } = props;
+		props.size = sizeFactor;
+		return linkBarElementSizes;
+	}}
 
 	${(props) => {
-		const { fullWidth, size } = props;
+		const { fullWidth, sizeFactor } = props;
 		const horizontalBase = getVariable('horizontalBase')(props);
 		const uiSmallLineHeight = getVariable('uiSmallLineHeight')(props);
 		const uiRegularLineHeight = getVariable('uiRegularLineHeight')(props);
 
-		const smallMarginFactor = size === 'small' ? 1/2 : 1;
+		const smallMarginFactor = sizeFactor === 'small' ? 1/2 : 1;
 		const fullWidthFactor = 3/2;
 		const horizontalMargin = fullWidth
 			? `calc(${fullWidthFactor} * ${horizontalBase})`
 			: `calc(${smallMarginFactor} * ${horizontalBase})`;
 
-		const width = ['xsmall', 'small'].includes(props.size)
+		const width = ['xsmall', 'small'].includes(sizeFactor)
 			? uiSmallLineHeight
 			: uiRegularLineHeight;
 
@@ -109,7 +124,7 @@ const LinkBarSearchField = ({
 	const maybeLabelledInput = icon
 		? (
 			<label>
-				<AbsoluteIcon name={icon} set={iconSet} size={size} color={iconColor} inset fullWidth={fullWidth} />
+				<AbsoluteIcon name={icon} set={iconSet} sizeFactor={size} size={getIconSize(size)} color={iconColor} inset fullWidth={fullWidth} />
 				{basicInput}
 			</label>
 		)
