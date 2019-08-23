@@ -3,8 +3,8 @@ import {
 	getStorybook,
 	setAddon,
  } from '@storybook/react';
+ import 'storybook-chromatic';
 
-import createPercyAddon from '@percy-io/percy-storybook';
 import { setDefaults } from '@storybook/addon-info';
 import { withOptions } from '@storybook/addon-options';
 import { addDecorator } from '@storybook/react';
@@ -55,8 +55,6 @@ addDecorator(
 	)
 )
 
-const { percyAddon, serializeStories } = createPercyAddon();
-setAddon(percyAddon);
 
 function loadStories() {
   require('../stories');
@@ -64,4 +62,3 @@ function loadStories() {
 
 configure(loadStories, module);
 
-serializeStories(getStorybook);

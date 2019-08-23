@@ -1,0 +1,36 @@
+name: shiny ci
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  matrix-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn install --frozen-lockfile
+    - run: yarn test
+
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install --frozen-lockfile
+      - run: yarn chromatic
+        env:
+          CHROMATIC_APP_CODE: ${{ secrets.CHROMATIC_APP_CODE }}
