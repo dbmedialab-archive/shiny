@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-const SvgIconWrapper = styled('div', {
+const SvgIconWrapper = styled('span', {
 	shouldForwardProp: prop => prop !== 'size',
 })`
 	display: inline-block;
