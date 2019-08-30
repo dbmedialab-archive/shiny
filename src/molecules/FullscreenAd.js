@@ -45,7 +45,7 @@ const AdUnitWrapper = styled.div`
 		clip: rect(2.4rem, 100vw, 100vh, 0);
 	`}
 
-	& > div {
+	& > .adunit {
 		z-index: 1;
 		top: ${props => (props.isIE11 ? '2.4rem' : '0')};
 		right: 0;

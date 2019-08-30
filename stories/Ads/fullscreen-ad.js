@@ -184,7 +184,7 @@ export default () => (
 			}}
 		>
 			<FullscreenAd isIE11={false}>
-				<div>
+				<div className="adunit">
 					<img
 						src="https://via.placeholder.com/1920x1080"
 						alt="placeholder"
@@ -353,7 +353,7 @@ export default () => (
 				height="250px"
 				isBannerAdInFullscreenSlot
 			>
-				<div>
+				<div className="adunit">
 					<img
 						src="https://via.placeholder.com/300x250"
 						alt="placeholder"
@@ -523,7 +523,7 @@ export default () => (
 				height="250px"
 				isBannerAdInFullscreenSlot
 			>
-				<div>
+				<div className="adunit">
 					<iframe
 						src="https://via.placeholder.com/300x250"
 						title="i-am-an-iframe-ad"
@@ -693,7 +693,7 @@ export default () => (
 				height="250px"
 				isBannerAdInFullscreenSlot
 			>
-				<div>
+				<div className="adunit">
 					<iframe
 						src="https://via.placeholder.com/300x250"
 						title="i-am-an-iframe-ad"
@@ -711,7 +711,7 @@ export default () => (
 			}}
 		>
 			<FullscreenAd isIE11>
-				<div>
+				<div className="adunit">
 					<iframe
 						src="https://via.placeholder.com/1920x1080"
 						title="i-am-an-iframe-ad"
