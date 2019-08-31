@@ -24,7 +24,7 @@
   },
   "author": "Aller Media",
   "peerDependencies": {
-    "@emotion/core": "10.0.14",
+    "@emotion/core": "10.0.17",
     "@emotion/styled": "10.0.14",
     "emotion-theming": "10.0.14",
     "react": "^16.4.0",
@@ -76,7 +76,7 @@
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
-    "@emotion/core": "10.0.14",
+    "@emotion/core": "10.0.17",
     "@emotion/styled": "10.0.14",
     "@storybook/addon-actions": "5.1.11",
     "@storybook/addon-info": "5.1.11",
