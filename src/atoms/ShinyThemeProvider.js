@@ -8,6 +8,8 @@ import merge from 'deepmerge';
 import defaultTheme from '../themes/default-theme';
 import { themePropTypes } from '../themes/theme-prop-types';
 
+const GlobalStyles = createGlobalStyle`${props => props.theme.global}`;
+
 /**
  * An extension of styled-component's ThemeProvider.
  *
@@ -26,7 +28,6 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	// console.log('new theme', theme.name);
 
 	// Inject our theme's global styles
-	const GlobalStyles = createGlobalStyle`${mergedTheme.global}`;
 
 	/**
 	 * TODO: Make that inner div a React.Fragment
@@ -36,7 +37,7 @@ const ShinyThemeProvider = ({ children, theme }) => {
 	return (
 		<StyledComponentsThemeProvider theme={mergedTheme}>
 			<Fragment>
-				<GlobalStyles />
+				<GlobalStyles theme={mergedTheme} />
 				{children}
 			</Fragment>
 		</StyledComponentsThemeProvider>
