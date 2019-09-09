@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.46.0-2",
+  "version": "0.46.0-4",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
