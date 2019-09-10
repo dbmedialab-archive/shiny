@@ -5,22 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import merge from 'deepmerge';
 
-import { getColor, getVariable } from '../utils';
 import defaultTheme from '../themes/default-theme';
 import { themePropTypes } from '../themes/theme-prop-types';
 
-const GlobalStyles = createGlobalStyle`
-	${props => props.theme.global}
-
-	body {
-		background: ${props => getColor('background')(props)};
-		color: ${props => getColor('type')(props)};
-		font-family: ${props => getVariable('mainFont')(props)};
-		font-size: ${props => getVariable('uiRegularSize')(props)};
-		line-height: ${props => getVariable('uiRegularLineHeight')(props)};
-		font-weight: ${props => getVariable('uiWeight')(props)};
-	}
-`;
+const GlobalStyles = createGlobalStyle`${props => props.theme.global}`;
 
 /**
  * An extension of styled-component's ThemeProvider.
