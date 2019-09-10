@@ -13,12 +13,12 @@ const GlobalStyles = createGlobalStyle`
 	${props => props.theme.global}
 
 	body {
-		background: ${getColor('background')};
-		color: ${getColor('type')};
-		font-family: ${getVariable('mainFont')};
-		font-size: ${getVariable('uiRegularSize')};
-		line-height: ${getVariable('uiRegularLineHeight')};
-		font-weight: ${getVariable('uiWeight')};
+		background: ${props => getColor('background')(props)};
+		color: ${props => getColor('type')(props)};
+		font-family: ${props => getVariable('mainFont')(props)};
+		font-size: ${props => getVariable('uiRegularSize')(props)};
+		line-height: ${props => getVariable('uiRegularLineHeight')(props)};
+		font-weight: ${props => getVariable('uiWeight')(props)};
 	}
 `;
 
