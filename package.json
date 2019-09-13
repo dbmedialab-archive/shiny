@@ -26,7 +26,7 @@
   "peerDependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "styled-components": "5.0.0-beta.8"
+    "styled-components": "5.0.0-5.canary-sheet"
   },
   "dependencies": {
     "@babel/runtime": "7.5.5",
@@ -96,6 +96,6 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "storybook-chromatic": "^2.1.1",
-    "styled-components": "5.0.0-beta.8"
+    "styled-components": "5.0.0-5.canary-sheet"
   }
 }
