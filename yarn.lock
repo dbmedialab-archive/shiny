@@ -7423,10 +7423,10 @@ nested-object-assign@^1.0.3:
   resolved "https://registry.yarnpkg.com/nested-object-assign/-/nested-object-assign-1.0.3.tgz#5aca69390d9affe5a612152b5f0843ae399ac597"
   integrity sha512-kgq1CuvLyUcbcIuTiCA93cQ2IJFSlRwXcN+hLcb2qLJwC2qrePHGZZa7IipyWqaWF6tQjdax2pQnVxdq19Zzwg==
 
-next-server@9.0.5-canary.1:
-  version "9.0.5-canary.1"
-  resolved "https://registry.yarnpkg.com/next-server/-/next-server-9.0.5-canary.1.tgz#44616a33dc3ec2a718c114d289bc15a676883774"
-  integrity sha512-Exx0DYpk51W3fY9FTrNZIKydCuMdJ7yKqDuOw65X/mjHAY5w556MqxA/7byHzj/99aYntYwaxXJKGDSzTURIZg==
+next-server@9.0.5:
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/next-server/-/next-server-9.0.5.tgz#4b7fe976d0900dd865b3c5777287ccd4df200794"
+  integrity sha512-99+2QXbB0WDw0Oec1LQRVMAsnqcPR7UdJgcMMGrxql/o9w/E4i0lQu7ucEU7ageVnyVqzfjfoNJNhyODyRyOJA==
   dependencies:
     "@ampproject/toolbox-optimizer" "1.0.1"
     compression "1.7.4"
@@ -7444,9 +7444,9 @@ next-server@9.0.5-canary.1:
     url "0.11.0"
 
 next@^9.0.5-canary.0:
-  version "9.0.5-canary.1"
-  resolved "https://registry.yarnpkg.com/next/-/next-9.0.5-canary.1.tgz#9a98db5085ae6c2fc63be3c22f1b01e6427cf501"
-  integrity sha512-PlUHZ8Tb+DsHDDRfBrgC2nVM8jQC82SVlmQg1y+C/dU0nsWb+kaP3zSAI3jbeZsngmigPQ+iqH41+ZFPzxXYnw==
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/next/-/next-9.0.5.tgz#854db5c485d81857f69eb3cfd076fc1bd8ef7fc3"
+  integrity sha512-DpG6SSzZkREPW6pZhuJOXzR6XY5XOfFOiwVBhOXzmlSifJviHpmkGRsMlJxP3WejfKH/Gzhjs2Ar+//EGRQtGA==
   dependencies:
     "@babel/core" "7.4.5"
     "@babel/plugin-proposal-class-properties" "7.4.4"
@@ -7475,7 +7475,7 @@ next@^9.0.5-canary.0:
     launch-editor "2.2.1"
     loader-utils "1.2.3"
     mkdirp "0.5.1"
-    next-server "9.0.5-canary.1"
+    next-server "9.0.5"
     prop-types "15.7.2"
     prop-types-exact "1.2.0"
     react-error-overlay "5.1.6"
