@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import styled from 'styled-components';
+import { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 

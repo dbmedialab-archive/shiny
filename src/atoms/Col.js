@@ -1,6 +1,6 @@
 /* eslint-disable no-bitwise, no-nested-ternary */
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import isInteger from 'lodash.isinteger';
 
 import config, { DIMENSION_NAMES } from '../utils/grid-config';

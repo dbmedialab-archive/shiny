@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-for, jsx-a11y/label-has-associated-control */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import styled from 'styled-components';
+import { css } from 'styled-components';
 
 import { getColor, getVariable, linkBarElementSizes } from '../utils';
 import { LinkBarElementBase } from './LinkBarElementBase';

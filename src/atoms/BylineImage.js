@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const BylineImage = styled.img`
 	width: calc(3 * ${props => props.theme.variables.headingSmallLineHeight});

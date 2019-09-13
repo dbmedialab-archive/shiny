@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { getColor } from '../utils/get-color';
 
 const Cross = styled.i`

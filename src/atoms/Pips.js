@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { withTheme } from 'emotion-theming';
+import { withTheme } from 'styled-components';
 import { getColor } from '../utils';
 
 /**

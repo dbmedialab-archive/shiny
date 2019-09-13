@@ -1,6 +1,6 @@
 {
   "name": "@aller/shiny",
-  "version": "0.45.6",
+  "version": "0.46.0-8",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -24,11 +24,9 @@
   },
   "author": "Aller Media",
   "peerDependencies": {
-    "@emotion/core": "10.0.14",
-    "@emotion/styled": "10.0.14",
-    "emotion-theming": "10.0.14",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "styled-components": "5.0.0-beta.8"
   },
   "dependencies": {
     "@babel/runtime": "7.5.5",
@@ -76,8 +74,6 @@
     "@babel/plugin-transform-runtime": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
-    "@emotion/core": "10.0.14",
-    "@emotion/styled": "10.0.14",
     "@storybook/addon-actions": "5.1.11",
     "@storybook/addon-info": "5.1.11",
     "@storybook/addon-links": "5.1.11",
@@ -88,10 +84,9 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.2",
     "babel-loader": "8.0.6",
-    "babel-plugin-emotion": "10.0.15",
     "babel-plugin-react-docgen": "3.1.0",
+    "babel-plugin-styled-components": "^1.10.6",
     "babel-plugin-transform-imports": "1.5.1",
-    "emotion-theming": "10.0.14",
     "eslint": "5.16.0",
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
@@ -100,6 +95,7 @@
     "pretty-format": "24.9.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "storybook-chromatic": "^2.1.1"
+    "storybook-chromatic": "^2.1.1",
+    "styled-components": "5.0.0-beta.8"
   }
 }

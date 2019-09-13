@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { getColor, getVariable } from '../utils';
 
 const Paragraph = styled.p`

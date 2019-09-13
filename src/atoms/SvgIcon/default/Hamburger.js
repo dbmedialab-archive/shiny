@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import styled from 'styled-components';
+import { css } from 'styled-components';
 
 import Svg from './Svg';
 import { getColor } from '../../../utils';
