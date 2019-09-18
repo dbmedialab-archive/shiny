@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { getColor, getVariable } from '../utils';
 import { SvgIcon } from './SvgIcon';
 
-const StyledCog = styled.div`
+const StyledCog = styled.button`
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -13,6 +13,7 @@ const StyledCog = styled.div`
 	filter: alpha(opacity=50);
 	line-height: 0;
 	cursor: pointer;
+	border-width: 0px;
 `;
 
 const AdSettingsCog = props => (
